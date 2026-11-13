@@ -1,0 +1,236 @@
+{
+  "verification_date": "2026-11-13",
+  "source_head_before_completion": "4f96ec297a5e8302eebf15e744b37e50c41ec78a",
+  "build_summary": {
+    "hull": {
+      "closed_shell_volume_m3": 284.289,
+      "nonmanifold_edges": 0,
+      "deck_length_m": 21.0,
+      "beam_m": 6.45,
+      "scaled_rabbet_depth_midship_m": 2.47
+    },
+    "triangles": [
+      59570,
+      39506,
+      15304
+    ],
+    "collision_objects": 25,
+    "rope_canvas_passed": true,
+    "minimum_canvas_boom_clearance_m": 2.4248
+  },
+  "deck_access": {
+    "scope": "Plan-view connectivity on the closed working deck; closed hatches are walkable 0.185 m steps. No engine navmesh or dynamic obstacles.",
+    "crew_radius_m": 0.28,
+    "grid_spacing_m": 0.15,
+    "reachable_grid_cells": 2929,
+    "stations": {
+      "helm": true,
+      "main_halyards": true,
+      "cargo": true,
+      "anchor": true,
+      "gun_starboard_1": true,
+      "gun_starboard_2": true,
+      "gun_port_1": true,
+      "gun_port_2": true,
+      "jib_sheets": true
+    },
+    "passed": true
+  },
+  "export_validation": {
+    "blender": "4.3.2",
+    "models": {
+      "lod0": {
+        "sha256": "7840bf39fce4883e2fabe3593f212c540475328f99849f4fe7b1f8f02d1871d7",
+        "triangles": 59570,
+        "embedded_images": 33,
+        "minimum_headroom_m": 2.4248,
+        "audit_frames": [
+          0,
+          12,
+          24,
+          36,
+          48,
+          60,
+          72,
+          84,
+          96
+        ],
+        "result": "passed"
+      },
+      "lod1": {
+        "sha256": "8fe39744e1b9c4e39ab5a66a575074af58a2c273e2596dab8a870c07e822a015",
+        "triangles": 39506,
+        "embedded_images": 33,
+        "minimum_headroom_m": 2.4325,
+        "audit_frames": [
+          0
+        ],
+        "result": "passed"
+      },
+      "lod2": {
+        "sha256": "b92ff1729669b335be6948fdbe37745f1e7ecd209c95a1b6191648b10bc9dc20",
+        "triangles": 15304,
+        "embedded_images": 33,
+        "minimum_headroom_m": 2.4325,
+        "audit_frames": [
+          0
+        ],
+        "result": "passed"
+      },
+      "collision": {
+        "sha256": "d23da08733140926bbe2145fe0e6fdb1042bcc89f4de37c6fcc92a2fac401556",
+        "triangles": 3778,
+        "result": "passed"
+      }
+    },
+    "scope": "Authored sail trim and wind morph loop only. No full boom rotation or dynamic rope simulation.",
+    "source_file_sha256": {
+      "model/snow.glb": "9a2cb1d7a9c00b978ae82d2864be3d9d5438fc04bf50a85eb8bda1a414eedb04",
+      "blender/arkusze_kadlub.py": "af1df1fee8cef7c12e72b07b217a8e53ada714b71d908b98996a4e21d5b328c0",
+      "blender/arkusze_konstrukcja.py": "9150db3175aaa5806e6f6ab486bbf48da79af2a7a5e431426f8644b9391ab436",
+      "blender/arkusze_poklad.py": "9568cc4b5cace549c42d31c8f67e912b7e9cf2bb2ef2b1cbc4c71ae429beffa8",
+      "blender/arkusze_takielunek.py": "c02ffe0d1f792c9f69a8a063e996bfd103a1b3b1c0850d81dcd0143733e6a65f",
+      "blender/arkusze_wyposazenie.py": "9e27e8964728a51e476364f97f7f1a79d7ea5380f5625640bf59f271008670b0",
+      "blender/buduj.py": "2edf828549a70cb101bfee47aa593faee42c84bd27d5b68b925c4d6e958f4f35",
+      "blender/chodzenie.py": "304a724e04de510226a1a3244da87059b1f324db5d746d1a2d13f7f7034c181c",
+      "blender/dane_publiczne.py": "4c2c089cc0bea8cbb7fbdd168c012f1611b525d84e8ff6332bb0ffa481b049d1",
+      "blender/dane_schemat.py": "3fa34f7d17801f17666d604c50c3ca514844458005abf93b8d592775c8de66a7",
+      "blender/deski.py": "588f9a33a8648291373160dd80e95f1c660461185180631d3536b4984ed1cefc",
+      "blender/drzewca.py": "c8dad43cfd0eb5205308508e49005980b51ea9adf9cc899e4faa20566be06932",
+      "blender/eksport.py": "09840f164ed4ba78a0852431eb47c8164e075e23a1290aba4d59283793a32c62",
+      "blender/geometria.py": "51025aee36d329b8bf5a95420f393a52b5b2638a34ec384310d7752f317ecb17",
+      "blender/kadlub.py": "2dcf54c92ac6cae31d9c3a90946d4221188953f2b46360f893667b3e1a47e6d1",
+      "blender/konsola.py": "35e31943ee23276afb5cef1eae47f291a8375d6650da51db71e0c4130e71cec2",
+      "blender/kontrola.py": "8c827a3ffdf5cd3882ac6d17d70f79c55ce9571275939c7d6c96086dcd9988cb",
+      "blender/kontrola_glb.py": "f5ce251fc5b19f79d3da6b3f9f85980693e39e5a230962f203d2b9ab5595e811",
+      "blender/kontrola_publiczna.py": "94376331fe30e46a5073c5afedc4bf23105122a6a600d234a8ca5d4e41d150ca",
+      "blender/lod.py": "d9fc7e158fac841d63e8a88ebbe3645cc0ca8187850d28f4218ea48ba7dd7c66",
+      "blender/materialy.py": "e44ef683900a511d9f311d9df7012d052d9781630211289b7989e59ccfeb9c8a",
+      "blender/model_rysunkowy.py": "b6de296a604f97d808e840170f2887d37bdf0c9fde87066adf0ec84aa7c831e1",
+      "blender/narzedzia.py": "97ab6930d11cd27cbfcf0d1336da347a646171ec7d8751be363f4b55eb429659",
+      "blender/narzedzia_math.py": "5fd2206e0deef90f915919508536ba31e5f4792883df94b4b91d4b6818524ed5",
+      "blender/nazwy_na_angielskie.py": "6b6622139bb7795a8e7fd70bd9a3280fb9adf37fed74432475169b00a0bd3f00",
+      "blender/nazwy_publiczne.py": "eabc171d6bc442627d364e277a86262563192d2fbe32efff8e5b4926f8fea6be",
+      "blender/olinowanie.py": "ac0f51a9331fcf8dc7df63373ae1e6f82acc6dc4e9d2f0ff5e762e3619f39fd4",
+      "blender/parametry.py": "8c4570feb43cff020bec380863980b76b68b42d0655cce8b665010726cb8e2de",
+      "blender/plan_pokladu.py": "48377e9ae1c89ba6dae508a4ac32bc385776e07bec1f2ed2f3f5ff2f61f27ee4",
+      "blender/plansza.py": "de28c763e2db6139a02b2c7cd6b69d7e8782578b57d37ae0b5e4272620401a93",
+      "blender/poklad.py": "d1f9aee73483a066e52ed315c2c3cf5598869d4888d3ffd8a4d1a489bae909d9",
+      "blender/praktyki.py": "8809978b31beea03c41fa129eee5368d9032beb4144f020a69a60bc243b0b10e",
+      "blender/projekt_rzednych.py": "99137d5180a09f17297b16d85659d24e005b968317a68bf8aba3869c8961b0c8",
+      "blender/przenikanie.py": "04d9a355a70038e307ae685730709a70eee452f698f143a260cac6833d4d348b",
+      "blender/rendery.py": "e678a6b640b37648bee51528f4240add899cba2b916f9e8fa3059577ae9b70ef",
+      "blender/ruchome.py": "a7e202b3a41a930013244e8de3334ad47007cd89ee57b7085d2af799e9f6623f",
+      "blender/rufa_dziob.py": "657d74dc7e95e9c3b24a6f61e629052b9dd92ab2eea88da273d66f7618b2bc1a",
+      "blender/rysunki.py": "f7186a4519182f82dd8a3b293bbd3d8e5dc98c6ac4918f095cca460c0d025bf7",
+      "blender/rysunki_svg.py": "b46f44b728ae77f0de50ebb527df71fd7a11794f8c080cad3f7c3e7ad1df0d78",
+      "blender/rzedne.py": "5dcc82113caa73e296cdbf6f1b1fa9c241392e04a0d8db856a159f5be5b57200",
+      "blender/slownik_rysunkow.py": "529682e851d4e5c2b4cbe1a6a98e6860d4dec21e96288a87c756693df14550e8",
+      "blender/sterowanie.py": "163db2ca7e9f49e39221f9ba8eb0a224e2e7ce70a7c9e8dd3fb0409213688633",
+      "blender/tekstury.py": "eae7dceba47a336393552e59952a05ab3ba38069d97b39f70226fd37a8ba2430",
+      "blender/tekstury_cc0.py": "4bebbcf04abcb08f4da181cf42f75234a509e403b69197f100b6ceb973bdf336",
+      "blender/tekstury_deski.py": "25d3302535d6e3877e3c2e6add61a34659ad46ab56b045194423e88a8a1f7b2d",
+      "blender/wyposazenie.py": "6c0fc58bb6b35197ac50cdf07202b9d8d39d14a9aa3d3a9e13c0d725491d79bc",
+      "blender/zagle.py": "e37f5498bd2645d97fc6dae31de19873b90a9bef767c4c8039fca32e9e088237",
+      "sloop_asset/audit.py": "b8fe30900c07f3d27c84645d7536b9c661297ac43166750f479c2a436a5de2c2",
+      "sloop_asset/build_sloop.py": "869e4e0b4df18a53986a3881d5d1f06b966ad5d3cbc15d098fbb6a110fdecd04",
+      "sloop_asset/check_asset.py": "b44f46afc677b9b6d52b1989438d71937c4248c0225cbd0128757c268a24e980",
+      "sloop_asset/geometry.py": "cc2cabe917e5ec629dd43237042c3f39ccd8f480c76955928ef701f701a61c9c",
+      "sloop_asset/glb_io.py": "ec96924c0c238d41e44fbb1c66afc0e328c7ad5d0d536c1f1b3f70af19bfc073",
+      "sloop_asset/render_previews.py": "9866d48a79a55f63f2e57150b55471d5f2efc9eb68338839ddf3e8c3d3a2c989",
+      "sloop_asset/verify_exports.py": "cf5f12d6ec36e2ae848702bbdcb61ef8caf2e24cbbe71ea6bde2111464e160da"
+    },
+    "wind_animation_weights": {
+      "0": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "24": [
+        0.95,
+        0.95,
+        0.95
+      ],
+      "72": [
+        0.95,
+        0.95,
+        0.95
+      ],
+      "96": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "result": "passed",
+    "data_file_sha256": {
+      "asset_manifest.json": "94b23e04b913b9783e0667793d2aebcc2823160ec1f8a0520867e1576e52c71a",
+      "deck_access.json": "5a2eaa4c465bcd32f184aff059aff75575792c61da58b584d576116a7d684c2f",
+      "deck_layout.json": "2ce7a5a53994a51bb686eaf9e3e2e06a1c685a03f56670c85c6bb857acb15df8",
+      "workstations.json": "0fe720d8987ee1c4c11121613a2748ba8c45f91f0c89ad5d3ee7f1a2cc14decf",
+      "rigging_paths.json": "2c8d2d2ea1eb8b378f823cc54ec838ca031e6e13b3931e5a734a22e11b0eaade",
+      "sail_measurements.json": "bbc33e82e802de615ba9c00c61d1a221d672e204ce08a1906506a84c45ce8609",
+      "build_summary.json": "294f2fa89d23873a7b02153a61c147043e1850c20a129bcfb7a4e48117d85f17",
+      "export_rigging_lod0.json": "b60a89497c46ebfd51c8dd659f49585e271ee40840b70dac4e0eebda74896eed",
+      "export_rigging_lod1.json": "ef2db6e6f262da696c2d1f4a4d8c7f9970db2e5f3314cf8d6aa49179a18af277",
+      "export_rigging_lod2.json": "5928c207a056651445ade6421f870097e94990c577f59791ddcddf5a395574e9",
+      "export_clearance_lod0.json": "d369d0342971e2507e5e048fd5cd2f930a78f524bdd27121f4fe5f2a810bd789",
+      "export_clearance_lod1.json": "25861f0d0dc8557992a081eb94dcc9a3ddf0f89e183e5c7fa42faecbac02b05a",
+      "export_clearance_lod2.json": "c3cfacf33d70aea7443fc95cf0af0276a03e9b6f06778280c1e7d34e1587137f"
+    }
+  },
+  "negative_controls": {
+    "changed_glb_rejected": "stale export audit: sloop_1715.glb",
+    "changed_station_data_rejected": "stale data audit: workstations.json",
+    "changed_source_rejected": "stale source audit"
+  },
+  "standalone_check": {
+    "result": "passed",
+    "models": 4,
+    "stations": 9,
+    "checked_repository_and_bundled_source": true
+  },
+  "render_settings": {
+    "engine": "Cycles",
+    "resolution": [
+      960,
+      720
+    ],
+    "samples": 16,
+    "denoising": false,
+    "geometry": "The actual saved scene from this build; presentation camera and lighting from geometry.render_setup",
+    "input_scene_sha256": "fe87fdd4d5288ee97f62d30f29c3c62dec28dd78fafc3d397cc86adaf4715e2e",
+    "settings_override_sha256": "4e55827d0bf3a036b46289f5fe8998a81c77231ab4e6afd3bc6cf3eca64c6a47",
+    "settings_override_file": "render_provenance.py.txt",
+    "visually_inspected_shots": [
+      "hero",
+      "stern",
+      "deck",
+      "side"
+    ]
+  },
+  "scope": "Authored sail trim and sampled four-second cloth loop. Deck access is plan-view connectivity. No full boom rotation, runtime character-controller test, sailing physics or dynamic rope simulation.",
+  "result": "passed",
+  "presentation_files": {
+    "previews/deck.png": {
+      "sha256": "7a748e3825d7c0442d2e466191e507aeb1b4f1749534649b2377b26d10fb9dbc",
+      "bytes": 1499786
+    },
+    "previews/hero.png": {
+      "sha256": "c15512e95fd8f3340b458e0169b190c21de8ddae4b560dea94072e8a74be7046",
+      "bytes": 1408196
+    },
+    "previews/side.png": {
+      "sha256": "ed3210d08432fad32d88460855a018dfe5ee34ac45058224ed5e444f2a3a0562",
+      "bytes": 1297297
+    },
+    "previews/stern.png": {
+      "sha256": "b00edaa3cd5faed1bd43eca7510d4f023f8df8257ad5228cc546a93e15f11fec",
+      "bytes": 1401343
+    },
+    "sloop_1715.blend": {
+      "sha256": "9397ea668ac0a4469976da492bf91b5e344b89128786026fc9a5f8e78c36e511",
+      "bytes": 23358885
+    }
+  }
+}
