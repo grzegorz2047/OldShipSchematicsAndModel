@@ -19,6 +19,7 @@ import numpy as np
 from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(Path(__file__).resolve().parent))
 SOURCE = ROOT/'blender'
 if not SOURCE.exists(): SOURCE = ROOT/'upstream'/'blender'
 sys.path.insert(0,str(SOURCE))
@@ -122,13 +123,19 @@ def tube(name,points,d,mat,parent=None,sides=8,kind='fitting',physics=False,scal
             a=i*sides+j;b=i*sides+(j+1)%sides;fs.append((a,b,b+sides,a+sides))
     fs += [tuple(range(sides-1,-1,-1)),tuple((len(pts)-1)*sides+j for j in range(sides))]
     o=mesh(name,vs,fs,mat,parent,kind,'solid' if physics else 'none')
-    layer=o.data.uv_layers[0]
-    # u follows the timber/rope axis. Rope repeat is two 3.3d lay pitches.
-    repeat=6.6*d if kind=='rope' else 2.0
-    for poly in o.data.polygons:
-        for li in poly.loop_indices:
-            vi=o.data.loops[li].vertex_index;ringid=vi//sides;j=vi%sides
-            layer.data[li].uv=(lengths[min(ringid,len(lengths)-1)]/repeat,j/sides)
+    if kind=='rope':
+        layer=o.data.uv_layers[0]
+        # Rope lay is diameter-based, as required by guide chapter 08.
+        repeat=6.6*d
+        for poly in o.data.polygons:
+            for li in poly.loop_indices:
+                vi=o.data.loops[li].vertex_index;ringid=vi//sides;j=vi%sides
+                layer.data[li].uv=(lengths[min(ringid,len(lengths)-1)]/repeat,j/sides)
+    else:
+        # Metric projection gives wood/iron the same 1024 px/m in both axes;
+        # a normalized circumference previously stretched every narrow tube.
+        uv_project(o,2.0,pts[-1]-pts[0])
+        o['grain_path_json']=json.dumps({'axes':'object_local','points':[list(q) for q in pts]})
     if physics:col(o)
     return o
 
@@ -182,8 +189,11 @@ def pbr(name,texture,color=(1,1,1),tile=2.0,metal=False,double=False):
         tx=nt.nodes.new('ShaderNodeTexImage');tx.image=im
         if suffix=='kolor':
             if color!=(1,1,1):
-                mx=nt.nodes.new('ShaderNodeMixRGB');mx.blend_type='MULTIPLY';mx.inputs[0].default_value=1;mx.inputs[2].default_value=(*color,1)
-                nt.links.new(tx.outputs['Color'],mx.inputs[1]);nt.links.new(mx.outputs[0],bs.inputs[socket])
+                # glTF exports the modern colour Mix as texture * baseColorFactor.
+                # The legacy MixRGB renders correctly in Blender but loses tint.
+                mx=nt.nodes.new('ShaderNodeMix');mx.data_type='RGBA';mx.blend_type='MULTIPLY'
+                mx.inputs['Factor'].default_value=1;mx.inputs[7].default_value=(*color,1)
+                nt.links.new(tx.outputs['Color'],mx.inputs[6]);nt.links.new(mx.outputs[2],bs.inputs[socket])
             else:nt.links.new(tx.outputs['Color'],bs.inputs[socket])
         elif suffix=='normalne':
             nm=nt.nodes.new('ShaderNodeNormalMap');nt.links.new(tx.outputs['Color'],nm.inputs['Color']);nt.links.new(nm.outputs[0],bs.inputs['Normal'])
@@ -282,7 +292,7 @@ def shaped_cavity(name,s0,s1,floor,ceiling):
     return mesh(name,vs,fs,M['wood'])
 
 
-HOLES=[(-1.02,1.02,-6.30,-4.15),(-.64,.64,-4.16,-2.45),(-.77,.77,2.65,4.85)]
+HOLES=[(-.94,.94,-6.30,-4.15),(-.64,.64,-4.16,-2.45),(-.77,.77,2.65,4.85)]
 
 
 def carve(target):
@@ -369,8 +379,8 @@ def sloped(name,x,s0,s1,z0,z1,width):
 
 
 def cabin_and_hold():
-    floor=.30;front=-4.15;back=-6.30;roof=2.56;cw=1.96
-    o=box('cabin_sole',P(0,(front+back)/2,floor-.06),(cw,front-back,.12),M['deck'],physics=True,kind='surface')
+    floor=.30;front=-4.15;back=-6.30;roof=2.56;cw=1.80
+    o=box('cabin_sole',P(0,(front+back)/2,floor-.06),(cw+.18,front-back+.10,.12),M['deck'],physics=True,kind='surface')
     # Actual hollow deckhouse: four walls with an absent doorway, never a solid box.
     for side in(-1,1):
         box('cabin_side',P(side*(cw/2+.045),(front+back)/2,(floor+roof)/2),(.09,front-back,roof-floor),M['wood'],physics=True)
@@ -386,13 +396,13 @@ def cabin_and_hold():
         box('rear_window_glass',P(x,back-.086,1.78),(.45,.025,.52),M['glass'])
         box('window_mullion',P(x,back-.102,1.78),(.026,.03,.52),M['ochre'])
     # Period-sized berth lies athwartships at the back, leaving a standing entry.
-    box('captain_berth',P(0,back+.48,floor+.26),(1.90,.68,.50),M['wood'],physics=True)
-    box('berth_mattress',P(0,back+.48,floor+.55),(1.82,.64,.10),M['canvas'],physics=True)
-    box('chart_table',P(.72,-4.95,floor+.72),(.43,.68,.08),M['deck'],physics=True)
-    for s in(-4.71,-5.19):tube('table_leg',[P(.72,s,floor),P(.72,s,floor+.68)],.07,M['wood'])
+    box('captain_berth',P(0,back+.48,floor+.26),(1.68,.68,.50),M['wood'],physics=True)
+    box('berth_mattress',P(0,back+.48,floor+.55),(1.60,.64,.10),M['canvas'],physics=True)
+    box('chart_table',P(.63,-4.95,floor+.72),(.43,.68,.08),M['deck'],physics=True)
+    for s in(-4.71,-5.19):tube('table_leg',[P(.63,s,floor),P(.63,s,floor+.68)],.07,M['wood'])
     top_s=-2.45;bottom_s=front-.10
     top_z=float(DECK.heights(0,top_s))+.025
-    sloped('cabin_companionway',0,top_s,bottom_s,top_z,floor,1.20)
+    sloped('cabin_companionway',0,top_s,bottom_s,top_z,floor,1.04)
     # Enclosed hold floor follows the hollow's available width.
     vs=[];fs=[];rings=[]
     for s in np.linspace(-2.20,5.35,30):
@@ -454,18 +464,18 @@ def fittings():
     # Removable bars are stowed in a proper rack; operating them is an engine state.
     # Keeping a deployed eight-bar circle here would block the ladder's landing.
     for k in range(8):
-        x=float(DECK.width(6.2))-.24+(k%2)*.065
+        x=float(DECK.width(6.85))-.40+(k%2)*.065
         h=float(DECK.heights(x,6.2))+.16+(k//2)*.06
         tube('capstan_bar_stowed',[P(x,5.65,h),P(x,6.85,h)],.05,M['wood'])
     for s in(5.82,6.68):
-        x=float(DECK.width(6.2))-.20
+        x=float(DECK.width(6.85))-.36
         box('bar_rack',P(x,s,float(DECK.heights(x,s))+.10),(.24,.09,.18),M['dark'])
     for side in(-1,1):
         s=6.9;x=side*.65;z=float(DECK.heights(x,s))
         box('bow_bitt',P(x,s,z+.4),(.18,.18,.8),M['dark'],physics=True)
         tube('bitt_crosspiece',[P(x-.25,s,z+.64),P(x+.25,s,z+.64)],.11,M['wood'])
         # Anchor stocks remain outside the walking corridor; tied to real bitts.
-        x=side*(float(DECK.width(6.4))+.16);z=float(DECK.heights(0,6.4))-.1
+        x=side*(float(DECK.width(6.4))+.62);z=float(DECK.heights(0,6.4))-.1
         tube('anchor_shank',[P(x,6.4,z),P(x,6.4,z-1.05)],.075,M['iron'])
         tube('anchor_stock',[P(x-.38,6.4,z-.16),P(x+.38,6.4,z-.16)],.13,M['wood'])
         tube('anchor_arms',[P(x-.38,6.4,z-.80),P(x,6.4,z-1.05),P(x+.38,6.4,z-.80)],.075,M['iron'])
@@ -479,23 +489,23 @@ def fittings():
 def navigation():
     routes=[]
     def walk(name,points):routes.append({'name':name,'mode':'walk','points':[[x,float(DECK.heights(x,s))+.025,s] for x,s in points]})
-    walk('main_deck_starboard',[(-1.45,-3.0),(-1.45,-.3),(-1.45,1.0),(-.7,2.1),(-1.45,2.3),(-1.45,5.25),(-.85,5.3)])
-    walk('main_deck_port',[(1.45,-3.0),(1.45,-.2),(1.45,1.8),(1.45,2.1)])
+    walk('main_deck_starboard',[(-1.45,-3.0),(-1.45,-.3),(-1.45,1.0),(-.7,1.85),(-1.45,2.3),(-1.45,5.25),(-.85,5.3)])
+    walk('main_deck_port',[(1.45,-3.0),(1.45,-.2),(1.45,1.8),(1.45,1.9)])
     walk('working_deck_crossing',[(-1.45,-2.0),(0,-2.0),(1.45,-2.0)])
-    walk('foredeck_crossing',[(-1.45,2.1),(0,2.25),(1.45,2.1)])
+    walk('foredeck_crossing',[(-1.45,1.9),(0,2.0),(1.45,1.9)])
     walk('aft_helm_access',[(-1.45,-3.0),(-1.47,-4.3),(-1.47,-5.8),(-1.47,-6.2),(-1.35,-6.75),(-.55,-7.3)])
     # Direct approach to the lowered cabin entrance avoids the helm and stays.
     top=float(DECK.heights(0,-2.45))+.025
     routes.append({'name':'captains_cabin','mode':'walk','points':[[0,float(DECK.heights(0,-2.0))+.025,-2.0],[0,top,-2.25],[0,top,-2.45],[0,.30,-4.25],[0,.30,-4.65],[0,.30,-5.0]]})
-    walk('hatch_approach',[(1.45,2.1),(0,2.25)])
+    walk('hatch_approach',[(1.45,1.9),(0,2.0)])
     top=float(DECK.heights(0,2.85))+.025
-    routes.append({'name':'hold_ladder','mode':'climb','points':[[0,float(DECK.heights(0,2.25))+.025,2.25],[0,top+.25,2.59],[0,top,3.15],[0,-1.18,3.88]],'requires':'ladder_controller','handhold_offset_m':.30})
-    routes.append({'name':'hold_aisle','mode':'walk','points':[[0,-1.18,3.88],[-.65,-1.18,3.88],[-.65,-1.18,1.3],[-.65,-1.18,-.1],[-.65,-1.18,-1.7]]})
+    routes.append({'name':'hold_ladder','mode':'climb','points':[[0,float(DECK.heights(0,2.0))+.025,2.0],[0,top+.25,2.59],[0,top,3.15],[0,-1.18,3.88]],'requires':'ladder_controller','handhold_offset_m':.30})
+    routes.append({'name':'hold_aisle','mode':'walk','points':[[0,-1.18,3.88],[-.94,-1.18,3.88],[-.94,-1.18,1.3],[-.94,-1.18,-.1],[-.94,-1.18,-1.7]]})
     empty('asset_origin',P(0,0,0),kind='origin')
     empty('bow_direction',P(0,1,0),kind='axis_marker')
     empty('station_helm',P(-.55,-7.3,float(DECK.heights(-.55,-7.3))+.025),kind='station')
     empty('station_captain',P(0,-5.0,.3),kind='station')
-    empty('station_hold',P(-.65,-1.2,-1.18),kind='station')
+    empty('station_hold',P(-.94,-1.2,-1.18),kind='station')
     return {'schema':2,'units':'metres','axes':'glTF X port Y up Z bow',
             'player':{'radius':.38,'height':1.85,'max_slope_deg':35},'routes':routes,
             'source_commit':SPEC['source_commit'],'climb_controller_required':True}
@@ -602,7 +612,9 @@ def main():
     export(OUT/'model'/'ship.glb',VIS+MARKERS);export(OUT/'model'/'collision.glb',COL)
     for o in COL:o.hide_set(True)
     lod(1);lod(2)
-    design={'schema':2,'id':SPEC['id'],'type':'single_masted_merchant_sloop','period':'illustrative circa 1715',
+    from v2_integrity import inspect_glb
+    triangles={name:inspect_glb(OUT/'model'/filename)[0]['triangles'] for name,filename in [('lod0','ship.glb'),('lod1','ship_lod1.glb'),('lod2','ship_lod2.glb'),('collision','collision.glb')]}
+    design={'schema':2,'id':SPEC['id'],'triangles':triangles,'type':'single_masted_merchant_sloop','period':'illustrative circa 1715',
             'reference_repository':'https://github.com/grzegorz2047/OldShipSchematicsAndModel',
             'chapters':['01-ship-type-and-era','02-hull-lines-and-offsets','03-hull-construction','04-decks-bulwarks-stern-head','05-masts-and-spars','06-standing-rigging','07-running-rigging-and-belaying','08-ropes-blocks-and-sails','09-deck-machinery','12-designing-other-ships','13-3d-quality-checklist','14-using-the-model-in-a-game'],
             'hull_method':'original rzedne.Kadlub PCHIP and kadlub.Poszycie offset family; independent L/B/draft profile; closed hollow shell with actual openings',
@@ -614,11 +626,40 @@ def main():
             'sails':3,'rig_source':'audited PR2 authored static rig, reconstructed around recalculated new mast and target hull; not a scaled finished model',
             'deviations':['The game used a .6-scaled brig; replaced with actual single-mast sloop profile.',
                           'Original reference does not supply interiors: lowered cabin sole .30m and hold sole -1.18m are gameplay inferences.',
+                          'The legacy deck/sole scalar fields in spec.json preserve the game profile; the authored deck follows the guide offset sheer and the exact delivered floors are recorded in navigation.json.',
+                          'Deckhouse clear width is 1.80m; berth and table are resized independently to retain a verified 0.80m exterior crew corridor.',
                           'Hold ladder requires climb controller, rather than pretending a steep historical ladder is a walkable35deg ramp.',
                           'Authored boom/gaff are shortened approximately4%/2% from the tabulated maximum to keep the working pose over the hull.',
                           'Static authored sailing pose only; arbitrary spar trimming requires rerouted runtime ropes.',
                           'Original source procedural PBR set is used, not the optional photographic CC0 set.'],
             'intended_joints':[
+                {'a': 'shroud_channel*', 'b': 'deadeye*', 'reason': 'Deadeyes seat in the outboard shroud channel, secured by their chainplates.'},
+                {'a': 'shroud_channel*', 'b': 'merchant_bulwark*', 'reason': 'The timber channel is fastened against the outer bulwark.'},
+                {'a': 'shroud_channel*', 'b': 'frame_head*', 'reason': 'Channel ends house into the bulwark frame supports.'},
+                {'a': 'merchant_bulwark*', 'b': 'sloop_hull*', 'reason': 'Bulwark heels are housed into the continuous hull/deck edge.'},
+                {'a': 'cabin_*', 'b': 'sloop_hull*', 'reason': 'Deckhouse wall heels and companionway landing are housed into the edge of the real cabin opening.'},
+                {'a': 'cargo_hatch_side*', 'b': 'sloop_hull*', 'reason': 'Hatch coaming heels are housed into the deck aperture sides.'},
+                {'a': 'bow_bitt*', 'b': 'sloop_hull*', 'reason': 'Bitts are stepped through the deck into the hull framing.'},
+                {'a': 'capstan*', 'b': 'sloop_hull*', 'reason': 'Capstan spindle is stepped through the supporting deck cap.'},
+                {'a': 'merchant_bulwark*', 'b': 'individual_deck_boards*', 'reason': 'Deck-board ends are trapped beneath the bulwark heel.'},
+                {'a': 'frame_head*', 'b': 'individual_deck_boards*', 'reason': 'Frame heads pass through the deck edge to support the caprail.'},
+                {'a': 'cabin_*', 'b': 'individual_deck_boards*', 'reason': 'Deckhouse walls are housed through the planked opening perimeter.'},
+                {'a': 'cargo_hatch_*', 'b': 'individual_deck_boards*', 'reason': 'Hatch coamings and open lid hinge bear on the planked aperture perimeter.'},
+                {'a': 'bow_bitt*', 'b': 'individual_deck_boards*', 'reason': 'Bitts are through-deck timbers.'},
+                {'a': 'capstan*', 'b': 'individual_deck_boards*', 'reason': 'Capstan heel passes through its deck bearing.'},
+                {'a': 'main_mast_timber*', 'b': 'individual_deck_boards*', 'reason': 'Mast passes through its planked deck partners.'},
+                {'a': 'stem*', 'b': 'individual_deck_boards*', 'reason': 'Stem head meets the end of the foredeck planking.'},
+                {'a': 'elm_pump*', 'b': 'individual_deck_boards*', 'reason': 'Pump barrel passes through the deck to the bilge.'},
+                {'a': 'bar_rack*', 'b': 'individual_deck_boards*', 'reason': 'Stowage racks are fixed into the planking beside the bulwark.'},
+                {'a': 'hold_ladder_stringer*', 'b': 'hold_sole*', 'reason': 'Ladder stringer feet are housed into the hold floor.'},
+                {'a': 'hold_ladder_rung*', 'b': 'hold_sole*', 'reason': 'Lowest ladder rung sits against the floor at the ladder foot.'},
+                {'a': 'rear_window_frame*', 'b': 'rear_window_glass*', 'reason': 'Glazing is retained within the timber window rebate.'},
+                {'a': 'cargo_hatch_end*', 'b': 'cargo_hatch_side*', 'reason': 'Hatch coaming corners use housed joints.'},
+                {'a': 'hold_ladder_rung*', 'b': 'ladder_handhold*', 'reason': 'The upper rung meets the grab rail at the ladder head.'},
+                {'a': 'bowsprit_timber*', 'b': 'jibboom_timber*', 'reason': 'Jibboom heel laps the bowsprit head in its fitted saddle.'},
+                {'a': 'elm_pump*', 'b': 'pump_handle*', 'reason': 'Pump handle is pivoted in the barrel head.'},
+                {'a': 'bar_rack*', 'b': 'frame_head*', 'reason': 'Rack ends are mounted to the adjacent bulwark frame.'},
+
                 {'a':'keel*','b':'sloop_hull*','reason':'Chapter03 keel rabbet is a structural planking joint.'},
                 {'a':'stem*','b':'sloop_hull*','reason':'Chapter03 stem rabbet receives the bow planking.'},
                 {'a':'sternpost_deadwood*','b':'sloop_hull*','reason':'Aft deadwood and sternpost are structural timbers joined to the hull.'},
