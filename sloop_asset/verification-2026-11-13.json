@@ -58,7 +58,7 @@
         "result": "passed"
       },
       "lod1": {
-        "sha256": "2f01e1e544741db3afa914b08216e9d0d7d1ce23b1218f02e84a9f5ddafba82d",
+        "sha256": "8fe39744e1b9c4e39ab5a66a575074af58a2c273e2596dab8a870c07e822a015",
         "triangles": 39506,
         "embedded_images": 33,
         "minimum_headroom_m": 2.4325,
@@ -68,7 +68,7 @@
         "result": "passed"
       },
       "lod2": {
-        "sha256": "ed26a7763da671d4c6079bf50152ca4025f9f7ccc4a6b65a993b56c077214035",
+        "sha256": "b92ff1729669b335be6948fdbe37745f1e7ecd209c95a1b6191648b10bc9dc20",
         "triangles": 15304,
         "embedded_images": 33,
         "minimum_headroom_m": 2.4325,
@@ -78,7 +78,7 @@
         "result": "passed"
       },
       "collision": {
-        "sha256": "396233c0e49a76b72563b9e5ee294b1a2850c277f323de576bf13091b5864c63",
+        "sha256": "d23da08733140926bbe2145fe0e6fdb1042bcc89f4de37c6fcc92a2fac401556",
         "triangles": 3778,
         "result": "passed"
       }
@@ -134,7 +134,7 @@
       "blender/zagle.py": "e37f5498bd2645d97fc6dae31de19873b90a9bef767c4c8039fca32e9e088237",
       "sloop_asset/audit.py": "b8fe30900c07f3d27c84645d7536b9c661297ac43166750f479c2a436a5de2c2",
       "sloop_asset/build_sloop.py": "869e4e0b4df18a53986a3881d5d1f06b966ad5d3cbc15d098fbb6a110fdecd04",
-      "sloop_asset/check_asset.py": "6652130133789ade199234cf781df4c8b92d1922cc445a2bee30d1148ef48824",
+      "sloop_asset/check_asset.py": "b44f46afc677b9b6d52b1989438d71937c4248c0225cbd0128757c268a24e980",
       "sloop_asset/geometry.py": "cc2cabe917e5ec629dd43237042c3f39ccd8f480c76955928ef701f701a61c9c",
       "sloop_asset/glb_io.py": "ec96924c0c238d41e44fbb1c66afc0e328c7ad5d0d536c1f1b3f70af19bfc073",
       "sloop_asset/render_previews.py": "9866d48a79a55f63f2e57150b55471d5f2efc9eb68338839ddf3e8c3d3a2c989",
@@ -164,7 +164,7 @@
     },
     "result": "passed",
     "data_file_sha256": {
-      "asset_manifest.json": "98d1c84b12fd90a010c0f531bd801705efc00b2721a8c3ec41ffdbc9e119efdb",
+      "asset_manifest.json": "94b23e04b913b9783e0667793d2aebcc2823160ec1f8a0520867e1576e52c71a",
       "deck_access.json": "5a2eaa4c465bcd32f184aff059aff75575792c61da58b584d576116a7d684c2f",
       "deck_layout.json": "2ce7a5a53994a51bb686eaf9e3e2e06a1c685a03f56670c85c6bb857acb15df8",
       "workstations.json": "0fe720d8987ee1c4c11121613a2748ba8c45f91f0c89ad5d3ee7f1a2cc14decf",
@@ -172,11 +172,11 @@
       "sail_measurements.json": "bbc33e82e802de615ba9c00c61d1a221d672e204ce08a1906506a84c45ce8609",
       "build_summary.json": "294f2fa89d23873a7b02153a61c147043e1850c20a129bcfb7a4e48117d85f17",
       "export_rigging_lod0.json": "b60a89497c46ebfd51c8dd659f49585e271ee40840b70dac4e0eebda74896eed",
-      "export_rigging_lod1.json": "669c73b7d3a394c214292baac05b242116320a589796de004eb725731b1e3bea",
-      "export_rigging_lod2.json": "e840ea8864cf652bd9f5ccf32127f9b97030d22cd1cd413a04381c4dd6a7cddb",
+      "export_rigging_lod1.json": "ef2db6e6f262da696c2d1f4a4d8c7f9970db2e5f3314cf8d6aa49179a18af277",
+      "export_rigging_lod2.json": "5928c207a056651445ade6421f870097e94990c577f59791ddcddf5a395574e9",
       "export_clearance_lod0.json": "d369d0342971e2507e5e048fd5cd2f930a78f524bdd27121f4fe5f2a810bd789",
-      "export_clearance_lod1.json": "e46aa51e144c158706f67cc80e91ea8d19dc18a77e5ad1bd2af211d9b211e12c",
-      "export_clearance_lod2.json": "64a8724a64292063a79e38f25ebf31d3e28d2ba7db057131944f5750c3c59cb6"
+      "export_clearance_lod1.json": "25861f0d0dc8557992a081eb94dcc9a3ddf0f89e183e5c7fa42faecbac02b05a",
+      "export_clearance_lod2.json": "c3cfacf33d70aea7443fc95cf0af0276a03e9b6f06778280c1e7d34e1587137f"
     }
   },
   "negative_controls": {
@@ -196,10 +196,41 @@
       960,
       720
     ],
-    "samples": 24,
+    "samples": 16,
     "denoising": false,
-    "geometry": "The actual saved scene from this build; presentation camera and lighting from geometry.render_setup"
+    "geometry": "The actual saved scene from this build; presentation camera and lighting from geometry.render_setup",
+    "input_scene_sha256": "fe87fdd4d5288ee97f62d30f29c3c62dec28dd78fafc3d397cc86adaf4715e2e",
+    "settings_override_sha256": "4e55827d0bf3a036b46289f5fe8998a81c77231ab4e6afd3bc6cf3eca64c6a47",
+    "settings_override_file": "render_provenance.py.txt",
+    "visually_inspected_shots": [
+      "hero",
+      "stern",
+      "deck",
+      "side"
+    ]
   },
   "scope": "Authored sail trim and sampled four-second cloth loop. Deck access is plan-view connectivity. No full boom rotation, runtime character-controller test, sailing physics or dynamic rope simulation.",
-  "result": "passed"
+  "result": "passed",
+  "presentation_files": {
+    "previews/deck.png": {
+      "sha256": "7a748e3825d7c0442d2e466191e507aeb1b4f1749534649b2377b26d10fb9dbc",
+      "bytes": 1499786
+    },
+    "previews/hero.png": {
+      "sha256": "c15512e95fd8f3340b458e0169b190c21de8ddae4b560dea94072e8a74be7046",
+      "bytes": 1408196
+    },
+    "previews/side.png": {
+      "sha256": "ed3210d08432fad32d88460855a018dfe5ee34ac45058224ed5e444f2a3a0562",
+      "bytes": 1297297
+    },
+    "previews/stern.png": {
+      "sha256": "b00edaa3cd5faed1bd43eca7510d4f023f8df8257ad5228cc546a93e15f11fec",
+      "bytes": 1401343
+    },
+    "sloop_1715.blend": {
+      "sha256": "9397ea668ac0a4469976da492bf91b5e344b89128786026fc9a5f8e78c36e511",
+      "bytes": 23358885
+    }
+  }
 }

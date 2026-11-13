@@ -9,7 +9,11 @@ To ilustracyjna rekonstrukcja oparta na [wariancie slupa z rozdziału 12](../doc
 
 Gałąź zaczyna się bezpośrednio od `main` (`2e6f7e9`). Nie wymaga PR #1 i nie zmienia jego snowa.
 
-## Gotowe pliki
+## Pierwotne pliki z Library
+
+Poniższe odnośniki wskazują pierwotne wydanie opisane w
+`validated-reference.json`. Nowa lokalna budowa ma własne skróty i raport
+`verification-2026-11-13.json`; jej LOD-y i plik kolizji mogą mieć inne skróty.
 
 - [Sloop_1715_Game_Asset.zip](https://chatgpt.com/library?file_id=libfile_fde3_f-7e876056f1848191868dcac00b130733_3e6905c6fccc819193bbe72238597acd&account_id=personal)
 - [Sloop_1715.glb](https://chatgpt.com/library?file_id=libfile_fde3_f-eb3adb58f41c8191a761853cdd34f58c_3e6905c6fccc819193bbe72238597acd&account_id=personal)

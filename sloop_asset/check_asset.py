@@ -28,7 +28,7 @@ def source_hashes(root):
     paths = [root / "model/snow.glb"]
     paths += sorted((root / "blender").glob("*.py"))
     paths += sorted((root / "sloop_asset").glob("*.py"))
-    return {str(p.relative_to(root)): sha256(p) for p in paths}
+    return {p.relative_to(root).as_posix(): sha256(p) for p in paths}
 
 
 def check(folder, source_root=None):
