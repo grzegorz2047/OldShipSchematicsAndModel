@@ -1,0 +1,371 @@
+{
+ "opis": "Textures from Poly Haven (polyhaven.com), all CC0 1.0 (public domain). Download each asset used by the generator ('uzywany': true) at 2K resolution in JPG format (maps: Diffuse, Normal (OpenGL) 'nor_gl', AO/Rough/Metal 'arm') and place the three files in a folder named after the asset id, e.g. <folder>/wood_planks_grey/wood_planks_grey_diff_2k.jpg. File names must match 'pliki'. 'kafel_m' is the real-world size of one tile in metres (from the asset page). The textures are not part of this repository.",
+ "opis_pl": "Tekstury z Poly Haven (polyhaven.com), wszystkie na licencji CC0 1.0 (domena publiczna). Zasoby, których używa generator ('uzywany': true), pobierz w rozdzielczości 2K w formacie JPG (mapy: Diffuse, Normal (OpenGL) 'nor_gl', AO/Rough/Metal 'arm') i połóż trzy pliki w katalogu o nazwie identyfikatora zasobu, np. <katalog>/wood_planks_grey/wood_planks_grey_diff_2k.jpg. Nazwy plików muszą się zgadzać z 'pliki'. 'kafel_m' to rzeczywisty rozmiar kafla w metrach (ze strony zasobu). Tekstur nie ma w repozytorium.",
+ "licencja": "CC0 1.0 Universal (https://creativecommons.org/publicdomain/zero/1.0/)",
+ "zasoby": [
+  {
+   "id": "wood_planks_grey",
+   "nazwa": "Wood Planks Grey",
+   "strona": "https://polyhaven.com/a/wood_planks_grey",
+   "licencja": "CC0",
+   "autorzy": [
+    "Rob Tuytel"
+   ],
+   "kafel_m": [
+    1.5,
+    1.5
+   ],
+   "rozdzielczosc": "2k",
+   "pliki": {
+    "diff": "wood_planks_grey_diff_2k.jpg",
+    "nor_gl": "wood_planks_grey_nor_gl_2k.jpg",
+    "arm": "wood_planks_grey_arm_2k.jpg"
+   },
+   "uzywany": true
+  },
+  {
+   "id": "wood_floor_deck",
+   "nazwa": "Wood Floor Deck",
+   "strona": "https://polyhaven.com/a/wood_floor_deck",
+   "licencja": "CC0",
+   "autorzy": [
+    "Dimitrios Savva"
+   ],
+   "kafel_m": [
+    1.8,
+    1.8
+   ],
+   "rozdzielczosc": "2k",
+   "pliki": {
+    "diff": "wood_floor_deck_diff_2k.jpg",
+    "nor_gl": "wood_floor_deck_nor_gl_2k.jpg",
+    "arm": "wood_floor_deck_arm_2k.jpg"
+   },
+   "uzywany": false
+  },
+  {
+   "id": "old_wood_floor",
+   "nazwa": "Old Wood Floor",
+   "strona": "https://polyhaven.com/a/old_wood_floor",
+   "licencja": "CC0",
+   "autorzy": [
+    "Guillaume Monsergent"
+   ],
+   "kafel_m": [
+    3,
+    3
+   ],
+   "rozdzielczosc": "2k",
+   "pliki": {
+    "diff": "old_wood_floor_diff_2k.jpg",
+    "nor_gl": "old_wood_floor_nor_gl_2k.jpg",
+    "arm": "old_wood_floor_arm_2k.jpg"
+   },
+   "uzywany": false
+  },
+  {
+   "id": "brown_planks_03",
+   "nazwa": "Brown Planks 03",
+   "strona": "https://polyhaven.com/a/brown_planks_03",
+   "licencja": "CC0",
+   "autorzy": [
+    "Rob Tuytel"
+   ],
+   "kafel_m": [
+    1,
+    1
+   ],
+   "rozdzielczosc": "2k",
+   "pliki": {
+    "diff": "brown_planks_03_diff_2k.jpg",
+    "nor_gl": "brown_planks_03_nor_gl_2k.jpg",
+    "arm": "brown_planks_03_arm_2k.jpg"
+   },
+   "uzywany": true
+  },
+  {
+   "id": "brown_planks_09",
+   "nazwa": "Brown Planks 09",
+   "strona": "https://polyhaven.com/a/brown_planks_09",
+   "licencja": "CC0",
+   "autorzy": [
+    "Rob Tuytel"
+   ],
+   "kafel_m": [
+    1,
+    1
+   ],
+   "rozdzielczosc": "2k",
+   "pliki": {
+    "diff": "brown_planks_09_diff_2k.jpg",
+    "nor_gl": "brown_planks_09_nor_gl_2k.jpg",
+    "arm": "brown_planks_09_arm_2k.jpg"
+   },
+   "uzywany": true
+  },
+  {
+   "id": "dark_wooden_planks",
+   "nazwa": "Dark Wooden Planks",
+   "strona": "https://polyhaven.com/a/dark_wooden_planks",
+   "licencja": "CC0",
+   "autorzy": [
+    "Amal Kumar"
+   ],
+   "kafel_m": [
+    2,
+    2
+   ],
+   "rozdzielczosc": "2k",
+   "pliki": {
+    "diff": "dark_wooden_planks_diff_2k.jpg",
+    "nor_gl": "dark_wooden_planks_nor_gl_2k.jpg",
+    "arm": "dark_wooden_planks_arm_2k.jpg"
+   },
+   "uzywany": false
+  },
+  {
+   "id": "black_painted_planks",
+   "nazwa": "Black Painted Planks",
+   "strona": "https://polyhaven.com/a/black_painted_planks",
+   "licencja": "CC0",
+   "autorzy": [
+    "Dimitrios Savva"
+   ],
+   "kafel_m": [
+    1.6,
+    1.6
+   ],
+   "rozdzielczosc": "2k",
+   "pliki": {
+    "diff": "black_painted_planks_diff_2k.jpg",
+    "nor_gl": "black_painted_planks_nor_gl_2k.jpg",
+    "arm": "black_painted_planks_arm_2k.jpg"
+   },
+   "uzywany": true
+  },
+  {
+   "id": "distressed_painted_planks",
+   "nazwa": "Distressed Painted Planks",
+   "strona": "https://polyhaven.com/a/distressed_painted_planks",
+   "licencja": "CC0",
+   "autorzy": [
+    "Rob Tuytel"
+   ],
+   "kafel_m": [
+    1.6,
+    1.6
+   ],
+   "rozdzielczosc": "2k",
+   "pliki": {
+    "diff": "distressed_painted_planks_diff_2k.jpg",
+    "nor_gl": "distressed_painted_planks_nor_gl_2k.jpg",
+    "arm": "distressed_painted_planks_arm_2k.jpg"
+   },
+   "uzywany": false
+  },
+  {
+   "id": "white_planks_clean",
+   "nazwa": "White Planks Clean",
+   "strona": "https://polyhaven.com/a/white_planks_clean",
+   "licencja": "CC0",
+   "autorzy": [
+    "Rob Tuytel"
+   ],
+   "kafel_m": [
+    1.8,
+    1.8
+   ],
+   "rozdzielczosc": "2k",
+   "pliki": {
+    "diff": "white_planks_clean_diff_2k.jpg",
+    "nor_gl": "white_planks_clean_nor_gl_2k.jpg",
+    "arm": "white_planks_clean_arm_2k.jpg"
+   },
+   "uzywany": true
+  },
+  {
+   "id": "oak_veneer_01",
+   "nazwa": "Oak Veneer 01",
+   "strona": "https://polyhaven.com/a/oak_veneer_01",
+   "licencja": "CC0",
+   "autorzy": [
+    "Jenelle van Heerden"
+   ],
+   "kafel_m": [
+    1.83,
+    1.83
+   ],
+   "rozdzielczosc": "2k",
+   "pliki": {
+    "diff": "oak_veneer_01_diff_2k.jpg",
+    "nor_gl": "oak_veneer_01_nor_gl_2k.jpg",
+    "arm": "oak_veneer_01_arm_2k.jpg"
+   },
+   "uzywany": true
+  },
+  {
+   "id": "fine_grained_wood",
+   "nazwa": "Fine Grained Wood",
+   "strona": "https://polyhaven.com/a/fine_grained_wood",
+   "licencja": "CC0",
+   "autorzy": [
+    "Rob Tuytel"
+   ],
+   "kafel_m": [
+    0.6,
+    0.6
+   ],
+   "rozdzielczosc": "2k",
+   "pliki": {
+    "diff": "fine_grained_wood_col_2k.jpg",
+    "nor_gl": "fine_grained_wood_nor_gl_2k.jpg",
+    "arm": "fine_grained_wood_arm_2k.jpg"
+   },
+   "uzywany": false
+  },
+  {
+   "id": "wood_table_worn",
+   "nazwa": "Wood Table Worn",
+   "strona": "https://polyhaven.com/a/wood_table_worn",
+   "licencja": "CC0",
+   "autorzy": [
+    "Dimitrios Savva",
+    "Rico Cilliers"
+   ],
+   "kafel_m": [
+    0.55,
+    0.55
+   ],
+   "rozdzielczosc": "2k",
+   "pliki": {
+    "diff": "wood_table_worn_diff_2k.jpg",
+    "nor_gl": "wood_table_worn_nor_gl_2k.jpg",
+    "arm": "wood_table_worn_arm_2k.jpg"
+   },
+   "uzywany": false
+  },
+  {
+   "id": "cotton_jersey",
+   "nazwa": "Cotton Jersey",
+   "strona": "https://polyhaven.com/a/cotton_jersey",
+   "licencja": "CC0",
+   "autorzy": [
+    "colormass",
+    "Rico Cilliers"
+   ],
+   "kafel_m": [
+    0.264,
+    0.264
+   ],
+   "rozdzielczosc": "2k",
+   "pliki": {
+    "diff": "cotton_jersey_diff_2k.jpg",
+    "nor_gl": "cotton_jersey_nor_gl_2k.jpg",
+    "arm": "cotton_jersey_arm_2k.jpg"
+   },
+   "uzywany": false
+  },
+  {
+   "id": "rough_linen",
+   "nazwa": "Rough Linen",
+   "strona": "https://polyhaven.com/a/rough_linen",
+   "licencja": "CC0",
+   "autorzy": [
+    "colormass",
+    "Rico Cilliers"
+   ],
+   "kafel_m": [
+    0.271,
+    0.271
+   ],
+   "rozdzielczosc": "2k",
+   "pliki": {
+    "diff": "rough_linen_diff_2k.jpg",
+    "nor_gl": "rough_linen_nor_gl_2k.jpg",
+    "arm": "rough_linen_arm_2k.jpg"
+   },
+   "uzywany": true
+  },
+  {
+   "id": "hessian_380",
+   "nazwa": "Hessian 380",
+   "strona": "https://polyhaven.com/a/hessian_380",
+   "licencja": "CC0",
+   "autorzy": [
+    "colormass",
+    "Rico Cilliers"
+   ],
+   "kafel_m": [
+    0.274,
+    0.274
+   ],
+   "rozdzielczosc": "2k",
+   "pliki": {
+    "diff": "hessian_380_diff_2k.jpg",
+    "nor_gl": "hessian_380_nor_gl_2k.jpg",
+    "arm": "hessian_380_arm_2k.jpg"
+   },
+   "uzywany": false
+  },
+  {
+   "id": "rusty_metal_04",
+   "nazwa": "Rusty Metal 04",
+   "strona": "https://polyhaven.com/a/rusty_metal_04",
+   "licencja": "CC0",
+   "autorzy": [
+    "Amal Kumar"
+   ],
+   "kafel_m": [
+    2,
+    2
+   ],
+   "rozdzielczosc": "2k",
+   "pliki": {
+    "diff": "rusty_metal_04_diff_2k.jpg",
+    "nor_gl": "rusty_metal_04_nor_gl_2k.jpg",
+    "arm": "rusty_metal_04_arm_2k.jpg"
+   },
+   "uzywany": true
+  },
+  {
+   "id": "metal_plate_02",
+   "nazwa": "Metal Plate 02",
+   "strona": "https://polyhaven.com/a/metal_plate_02",
+   "licencja": "CC0",
+   "autorzy": [
+    "Rob Tuytel"
+   ],
+   "kafel_m": [
+    2,
+    2
+   ],
+   "rozdzielczosc": "2k",
+   "pliki": {
+    "diff": "metal_plate_02_diff_2k.jpg",
+    "nor_gl": "metal_plate_02_nor_gl_2k.jpg",
+    "arm": "metal_plate_02_arm_2k.jpg"
+   },
+   "uzywany": false
+  },
+  {
+   "id": "wooden_barrel",
+   "nazwa": "Wooden Barrel",
+   "strona": "https://polyhaven.com/a/wooden_barrel",
+   "licencja": "CC0",
+   "autorzy": [
+    "Dimitrios Savva"
+   ],
+   "kafel_m": [
+    1.29,
+    1.29
+   ],
+   "rozdzielczosc": "2k",
+   "pliki": {
+    "diff": "wooden_barrel_diff_2k.jpg",
+    "nor_gl": "wooden_barrel_nor_gl_2k.jpg",
+    "arm": "wooden_barrel_arm_2k.jpg"
+   },
+   "uzywany": false
+  }
+ ]
+}

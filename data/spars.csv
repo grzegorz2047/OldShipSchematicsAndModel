@@ -1,0 +1,20 @@
+# coordinates: metres; x athwartships (+ port), s fore and aft (+ forward, 0 at mid deck length), z up (0 at design waterline)
+# glTF (X, Y, Z) = (x, z, s); Blender (X, Y, Z) = (x, -s, z)
+spar,kind,length_m,d_max_m,d_mid_m,d_end_m,start_x_m,start_s_m,start_z_m,end_x_m,end_s_m,end_z_m,angle_deg,angle_ref,deck_s_m,deck_z_m,top_platform_z_m,masthead_from_z_m,crosstrees_z_m,cap_z_m,truck_z_m,lowered_z_m,hoisted_z_m,working_height_dz_m,note
+fore_mast,lower_mast,15.822,0.445,0.415,0.278,0,10.093,-2.205,0,10.037,13.617,0.2,rake aft from vertical,10.08,1.391,11.725,11.42,,13.617,,,,,"d_max at the partners, d_end at the top of the head"
+fore_topmast,topmast,9.493,0.264,0.246,0.144,0,10.346,11.47,0,10.313,20.963,0.2,rake aft from vertical,,,,19.908,19.908,20.963,,,,,"stands forward of the lower masthead, heel above the trestle trees"
+fore_topgallant_mast,topgallant_mast,5.747,0.132,0.102,0.073,0,10.485,19.958,0,10.465,25.705,0.2,rake aft from vertical,,,,,,,25.705,,,,rule length + 1.0 m pole
+main_mast,lower_mast,17.8,0.494,0.461,0.309,0,-1.328,-2.41,0,-1.701,15.386,1.2,rake aft from vertical,-1.4,1.036,13.219,12.914,,15.386,,,,,"d_max at the partners, d_end at the top of the head"
+main_topmast,topmast,10.68,0.297,0.277,0.162,0,-1.317,12.964,0,-1.541,23.642,1.2,rake aft from vertical,,,,22.456,22.456,23.642,,,,,"stands forward of the lower masthead, heel above the trestle trees"
+main_topgallant_mast,topgallant_mast,6.34,0.148,0.115,0.082,0,-1.33,22.506,0,-1.462,28.844,1.2,rake aft from vertical,,,,,,,28.844,,,,rule length + 1.0 m pole
+snow_mast,snow_mast,11.954,0.173,0.16,0.147,0,-1.85,0.941,0,-2.098,12.894,1.2,rake aft from vertical,,,,,,,,,,,from the deck to the underside of the main trestle trees
+bowsprit,bowsprit,10.68,0.494,0.451,0.307,0,10.498,1.727,0,19.747,7.067,30.0,steeve above horizontal,,,,,,,,,,,"full diameter to 0.35 of the length, then tapers"
+jib_boom,jib_boom,7.629,0.185,0.148,0.111,-0.02,15.754,5.083,-0.02,22.361,8.897,30.0,steeve above horizontal,,,,,,,,,,,heel at 0.62 of the bowsprit length
+fore_yard,yard,13.844,0.269,0.236,0.115,6.922,10.396,10.67,-6.922,10.396,10.67,0.0,square (not braced),,,,,,,,10.67,10.67,0.0,start = port yardarm; d_mid at 1/2 of the half-length
+fore_topsail_yard,yard,9.889,0.172,0.15,0.074,4.944,10.574,14.224,-4.944,10.574,14.224,0.0,square (not braced),,,,,,,,14.224,19.008,4.784,start = port yardarm; d_mid at 1/2 of the half-length
+fore_topgallant_yard,yard,5.933,0.099,0.087,0.042,2.967,10.625,21.403,-2.967,10.625,21.403,0.0,square (not braced),,,,,,,,21.403,24.305,2.902,start = port yardarm; d_mid at 1/2 of the half-length
+main_yard,yard,15.822,0.308,0.269,0.132,7.911,-1.247,12.164,-7.911,-1.247,12.164,0.0,square (not braced),,,,,,,,12.164,12.164,0.0,start = port yardarm; d_mid at 1/2 of the half-length
+main_topsail_yard,yard,11.302,0.196,0.172,0.084,5.651,-1.117,16.022,-5.651,-1.117,16.022,0.0,square (not braced),,,,,,,,16.022,21.556,5.534,start = port yardarm; d_mid at 1/2 of the half-length
+main_topgallant_yard,yard,6.781,0.113,0.099,0.048,3.39,-1.203,24.082,-3.39,-1.203,24.082,0.0,square (not braced),,,,,,,,24.082,27.444,3.362,start = port yardarm; d_mid at 1/2 of the half-length
+spritsail_yard,yard,9.889,0.172,0.15,0.074,4.944,17.698,5.277,-4.944,17.698,5.277,0.0,square (not braced),,,,,,,,5.277,5.277,0.0,start = port yardarm; d_mid at 1/2 of the half-length
+gaff,gaff,7.4,0.176,0.155,0.114,0.0,-2.274,12.014,0.0,-8.106,16.57,38.0,above horizontal,,,,,,,,,,,jaws on the snow mast

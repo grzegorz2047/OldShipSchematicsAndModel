@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297">
+<title>frame-construction-arcs</title>
+<rect x="0" y="0" width="420.0" height="297.0" fill="#fff" stroke="none"/>
+<text x="30.00" y="20.00" font-family="Arial, Helvetica, sans-serif" font-size="3.20" text-anchor="start" fill="#000" font-weight="bold">Wręg owręża (s = +1,96) wykreślony łukami, po wręgach  1:25</text>
+<path d="M30.00 21.20 L134.64 21.20" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M109.00 238.00 L373.00 238.00" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="375.00" y="238.70" font-family="Arial, Helvetica, sans-serif" font-size="1.90" text-anchor="start" fill="#000">WL −3,0</text>
+<path d="M109.00 218.00 L373.00 218.00" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="375.00" y="218.70" font-family="Arial, Helvetica, sans-serif" font-size="1.90" text-anchor="start" fill="#000">WL −2,5</text>
+<path d="M109.00 198.00 L373.00 198.00" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="375.00" y="198.70" font-family="Arial, Helvetica, sans-serif" font-size="1.90" text-anchor="start" fill="#000">WL −2,0</text>
+<path d="M109.00 178.00 L373.00 178.00" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="375.00" y="178.70" font-family="Arial, Helvetica, sans-serif" font-size="1.90" text-anchor="start" fill="#000">WL −1,5</text>
+<path d="M109.00 158.00 L373.00 158.00" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="375.00" y="158.70" font-family="Arial, Helvetica, sans-serif" font-size="1.90" text-anchor="start" fill="#000">WL −1,0</text>
+<path d="M109.00 138.00 L373.00 138.00" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="375.00" y="138.70" font-family="Arial, Helvetica, sans-serif" font-size="1.90" text-anchor="start" fill="#000">WL −0,5</text>
+<path d="M109.00 118.00 L373.00 118.00" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="375.00" y="118.70" font-family="Arial, Helvetica, sans-serif" font-size="1.90" text-anchor="start" fill="#000">WL 0,0</text>
+<path d="M109.00 98.00 L373.00 98.00" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="375.00" y="98.70" font-family="Arial, Helvetica, sans-serif" font-size="1.90" text-anchor="start" fill="#000">WL 0,5</text>
+<path d="M109.00 78.00 L373.00 78.00" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="375.00" y="78.70" font-family="Arial, Helvetica, sans-serif" font-size="1.90" text-anchor="start" fill="#000">WL 1,0</text>
+<path d="M109.00 58.00 L373.00 58.00" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="375.00" y="58.70" font-family="Arial, Helvetica, sans-serif" font-size="1.90" text-anchor="start" fill="#000">WL 1,5</text>
+<path d="M109.00 38.00 L373.00 38.00" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="375.00" y="38.70" font-family="Arial, Helvetica, sans-serif" font-size="1.90" text-anchor="start" fill="#000">WL 2,0</text>
+<path d="M225.00 238.00 L225.00 34.00" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="225.00" y="241.20" font-family="Arial, Helvetica, sans-serif" font-size="1.90" text-anchor="middle" fill="#000">0,5</text>
+<path d="M245.00 238.00 L245.00 34.00" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="245.00" y="241.20" font-family="Arial, Helvetica, sans-serif" font-size="1.90" text-anchor="middle" fill="#000">1,0</text>
+<path d="M265.00 238.00 L265.00 34.00" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="265.00" y="241.20" font-family="Arial, Helvetica, sans-serif" font-size="1.90" text-anchor="middle" fill="#000">1,5</text>
+<path d="M285.00 238.00 L285.00 34.00" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="285.00" y="241.20" font-family="Arial, Helvetica, sans-serif" font-size="1.90" text-anchor="middle" fill="#000">2,0</text>
+<path d="M305.00 238.00 L305.00 34.00" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="305.00" y="241.20" font-family="Arial, Helvetica, sans-serif" font-size="1.90" text-anchor="middle" fill="#000">2,5</text>
+<path d="M325.00 238.00 L325.00 34.00" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="325.00" y="241.20" font-family="Arial, Helvetica, sans-serif" font-size="1.90" text-anchor="middle" fill="#000">3,0</text>
+<path d="M345.00 238.00 L345.00 34.00" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="345.00" y="241.20" font-family="Arial, Helvetica, sans-serif" font-size="1.90" text-anchor="middle" fill="#000">3,5</text>
+<path d="M365.00 238.00 L365.00 34.00" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="365.00" y="241.20" font-family="Arial, Helvetica, sans-serif" font-size="1.90" text-anchor="middle" fill="#000">4,0</text>
+<path d="M205.00 250.00 L205.00 26.00" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7,1.2,1,1.2"/>
+<path d="M252.68 208.08 L255.95 209.83 L259.33 211.36 L262.80 212.67 L266.35 213.75 L269.96 214.59 L273.62 215.19 L277.32 215.56 L281.02 215.68 L284.73 215.56 L288.42 215.19 L292.09 214.59 L295.70 213.75 L299.25 212.67 L302.72 211.36 L306.10 209.83 L309.37 208.08 L312.52 206.12 L315.54 203.96 L318.41 201.61 L321.11 199.07 L323.65 196.37 L326.00 193.50 L328.17 190.48 L330.12 187.33 L331.87 184.06 L333.40 180.68 L334.71 177.21 L335.79 173.66 L336.63 170.04 L337.24 166.38 L337.60 162.69 L337.72 158.98 L337.60 155.28 L337.24 151.58 L336.63 147.92 L335.79 144.31 L334.71 140.76 L333.40 137.29 L331.87 133.91 L330.12 130.64 L328.17 127.48 L326.00 124.47 L323.65 121.60 L321.11 118.89 L318.41 116.36 L315.54 114.00 L312.52 111.84 L309.37 109.88" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M119.21 239.67 L128.25 244.50 L137.59 248.73 L147.18 252.35 L156.99 255.32 L166.98 257.65 L177.09 259.32 L187.29 260.32 L197.54 260.66 L207.79 260.32 L217.99 259.32 L228.10 257.65 L228.60 257.53 L229.10 257.42 L229.60 257.30 M245.93 252.94 L246.43 252.79 L246.92 252.64 L247.41 252.49 L247.90 252.35 L257.49 248.73 L266.83 244.50 L275.87 239.67 L284.58 234.26 L292.91 228.29 L300.83 221.78 L308.32 214.78 L315.32 207.29 L321.83 199.37 L327.80 191.04 L333.21 182.33 L338.04 173.29 L342.27 163.95 L345.89 154.36 L348.86 144.55 L351.19 134.56 L352.86 124.45 L353.86 114.25 L354.20 104.00 L353.86 93.75 L352.86 83.55 L351.19 73.44 L348.86 63.45 L345.89 53.64 L342.27 44.05 L338.04 34.71 L333.21 25.67 L327.80 16.96 L327.50 16.55 L327.20 16.13 L326.90 15.71 L326.60 15.30 L326.31 14.88 L326.01 14.46 L325.71 14.05 L325.41 13.63 L325.11 13.21 L324.81 12.80 L324.51 12.38 L324.22 11.96 L323.92 11.55 L323.62 11.13 L323.32 10.71 L323.02 10.30" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M210.20 232.00 L366.70 198.73" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.6,0.8"/>
+<path d="M210.20 232.00 L292.81 214.44" stroke="#000" stroke-width="0.500" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M292.81 214.44 L293.71 214.24 L294.61 214.03 L295.50 213.80 L296.38 213.56 L297.27 213.30 L298.15 213.03 L299.02 212.75 L299.89 212.45 L300.76 212.13 L301.62 211.81 L302.47 211.47 L303.32 211.11 L304.16 210.74 L305.00 210.36 L305.83 209.96 L306.66 209.55 L307.47 209.13 L308.28 208.70 L309.09 208.25 L309.88 207.79 L310.67 207.31 L311.45 206.82 L312.22 206.32 L312.99 205.81 L313.74 205.29 L314.49 204.75 L315.23 204.20 L315.96 203.64 L316.68 203.07 L317.39 202.48 L318.09 201.89 L318.78 201.28 L319.46 200.66 L320.13 200.03 L320.79 199.39 L321.44 198.74 L322.08 198.08 L322.71 197.41 L323.33 196.73 L323.94 196.04 L324.53 195.33 L325.12 194.62 L325.69 193.90 L326.25 193.17 L326.80 192.44 L327.34 191.69 L327.86 190.93 L328.37 190.17" stroke="#000" stroke-width="0.500" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M328.37 190.17 L329.41 188.57 L330.43 186.97 L331.42 185.35 L332.40 183.72 L333.36 182.08 L334.29 180.42 L335.21 178.76 L336.11 177.08 L336.99 175.40 L337.84 173.70 L338.68 171.99 L339.49 170.27 L340.28 168.55 L341.06 166.81 L341.81 165.06 L342.54 163.31 L343.25 161.55 L343.94 159.77 L344.60 157.99 L345.25 156.20 L345.87 154.41 L346.47 152.61 L347.05 150.79 L347.60 148.98 L348.14 147.15 L348.65 145.32 L349.14 143.49 L349.61 141.64 L350.06 139.80 L350.48 137.94 L350.88 136.09 L351.26 134.22 L351.61 132.35 L351.95 130.48 L352.26 128.61 L352.54 126.73 L352.81 124.85 L353.05 122.96 L353.27 121.07 L353.46 119.18 L353.64 117.29 L353.79 115.39 L353.91 113.50 L354.02 111.60 L354.10 109.70 L354.15 107.80 L354.19 105.90 L354.20 104.00" stroke="#000" stroke-width="0.500" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M354.20 104.00 L354.20 102.65 L354.18 101.30 L354.17 99.95 L354.14 98.60 L354.10 97.25 L354.06 95.90 L354.01 94.55 L353.95 93.20 L353.89 91.85 L353.82 90.51 L353.74 89.16 L353.65 87.81 L353.55 86.47 L353.45 85.12 L353.34 83.77 L353.22 82.43 L353.09 81.08 L352.96 79.74 L352.81 78.40 L352.66 77.06 L352.51 75.72 L352.34 74.38 L352.17 73.04 L351.99 71.70 L351.80 70.36 L351.61 69.03 L351.40 67.69 L351.19 66.36 L350.98 65.03 L350.75 63.69 L350.52 62.36 L350.28 61.04 L350.03 59.71 L349.77 58.38 L349.51 57.06 L349.24 55.74 L348.96 54.42 L348.67 53.10 L348.38 51.78 L348.08 50.46 L347.77 49.15 L347.45 47.84 L347.13 46.52 L346.80 45.22 L346.46 43.91 L346.11 42.60 L345.76 41.30 L345.40 40.00" stroke="#000" stroke-width="0.500" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M205.00 242.00 L210.20 242.00" stroke="#000" stroke-width="0.350" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M210.20 242.00 L210.20 232.00" stroke="#000" stroke-width="0.350" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M277.82 158.98 L284.22 158.98" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M281.02 162.18 L281.02 155.78" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="279.52" y="157.48" font-family="Arial, Helvetica, sans-serif" font-size="2.40" text-anchor="end" fill="#000" font-weight="bold">C_f</text>
+<path d="M194.34 104.00 L200.74 104.00" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M197.54 107.20 L197.54 100.80" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="196.04" y="102.50" font-family="Arial, Helvetica, sans-serif" font-size="2.40" text-anchor="end" fill="#000" font-weight="bold">C_b</text>
+<path d="M113.87 104.00 L120.27 104.00" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M117.07 107.20 L117.07 100.80" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="115.57" y="102.50" font-family="Arial, Helvetica, sans-serif" font-size="2.40" text-anchor="end" fill="#000" font-weight="bold">C_u</text>
+<path d="M281.02 158.98 L307.64 209.04" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M307.64 209.04 L306.02 206.96 L306.82 206.54 Z" fill="#000" fill-opacity="1.00" stroke="none"/>
+<text x="295.22" y="183.54" font-family="Arial, Helvetica, sans-serif" font-size="2.30" text-anchor="middle" fill="#000" transform="rotate(62.00 295.22 183.54)">R_f = 1,42</text>
+<path d="M197.54 104.00 L344.75 157.58" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M344.75 157.58 L342.16 157.11 L342.46 156.27 Z" fill="#000" fill-opacity="1.00" stroke="none"/>
+<text x="271.49" y="129.85" font-family="Arial, Helvetica, sans-serif" font-size="2.30" text-anchor="middle" fill="#000" transform="rotate(20.00 271.49 129.85)">R_b = 3,92</text>
+<path d="M117.07 104.00 L353.88 91.59" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M353.88 91.59 L351.30 92.18 L351.26 91.28 Z" fill="#000" fill-opacity="1.00" stroke="none"/>
+<text x="235.42" y="96.80" font-family="Arial, Helvetica, sans-serif" font-size="2.30" text-anchor="middle" fill="#000" transform="rotate(-3.00 235.42 96.80)">R_u = 5,93</text>
+<circle cx="210.20" cy="232.00" r="1.40" stroke="#000" stroke-width="0.250" fill="#000" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M210.20 232.00 L207.16 234.88" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="210.20" cy="232.00" r="0.45" stroke="#000" stroke-width="0.180" fill="#000" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="188.58" y="235.54" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="start" fill="#000">R0 (0,13; −2,85)</text>
+<circle cx="292.81" cy="214.44" r="1.40" stroke="#000" stroke-width="0.250" fill="#000" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M292.81 214.44 L295.85 217.32" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="292.81" cy="214.44" r="0.45" stroke="#000" stroke-width="0.180" fill="#000" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="296.35" y="217.98" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="start" fill="#000">F (2,20; −2,41)</text>
+<circle cx="328.37" cy="190.17" r="1.40" stroke="#000" stroke-width="0.250" fill="#000" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M328.37 190.17 L332.16 192.08" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="328.37" cy="190.17" r="0.45" stroke="#000" stroke-width="0.180" fill="#000" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="332.66" y="192.74" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="start" fill="#000">T (3,08; −1,80)</text>
+<circle cx="354.20" cy="104.00" r="1.40" stroke="#000" stroke-width="0.250" fill="#000" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M354.20 104.00 L358.70 103.34" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="354.20" cy="104.00" r="0.45" stroke="#000" stroke-width="0.180" fill="#000" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="359.20" y="104.00" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="start" fill="#000">B (3,73; 0,35)</text>
+<circle cx="345.40" cy="40.00" r="1.40" stroke="#000" stroke-width="0.250" fill="#000" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M345.40 40.00 L348.44 35.80" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="345.40" cy="40.00" r="0.45" stroke="#000" stroke-width="0.180" fill="#000" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="348.94" y="36.46" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="start" fill="#000">N (3,51; 1,95)</text>
+<path d="M210.20 232.00 L274.20 232.00" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M266.20 232.00 L266.20 231.63 L266.20 231.27 L266.19 230.90 L266.18 230.53 L266.17 230.17 L266.16 229.80 L266.14 229.44 L266.12 229.07 L266.10 228.70 L266.08 228.34 L266.05 227.97 L266.03 227.61 L266.00 227.24 L265.97 226.88 L265.93 226.51 L265.89 226.15 L265.85 225.78 L265.81 225.42 L265.77 225.05 L265.72 224.69 L265.67 224.33 L265.62 223.96 L265.57 223.60 L265.51 223.24 L265.45 222.88 L265.39 222.52 L265.33 222.16 L265.26 221.79 L265.19 221.43 L265.12 221.07 L265.05 220.72 L264.98 220.36" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M266.20 232.00 L265.79 230.00 L266.59 230.00 Z" fill="#000" fill-opacity="1.00" stroke="none"/>
+<path d="M264.98 220.36 L265.78 222.23 L264.99 222.40 Z" fill="#000" fill-opacity="1.00" stroke="none"/>
+<rect x="262.84" y="224.51" width="13.07" height="2.76" fill="#fff" stroke="none"/>
+<text x="269.37" y="226.58" font-family="Arial, Helvetica, sans-serif" font-size="2.30" text-anchor="middle" fill="#000">α = 12,00°</text>
+<path d="M274.20 220.00 L278.20 216.00" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M274.20 216.00 L278.20 220.00" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M320.20 200.00 L324.20 196.00" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M320.20 196.00 L324.20 200.00" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M333.80 180.00 L337.80 176.00" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M333.80 176.00 L337.80 180.00" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M342.60 160.00 L346.60 156.00" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M342.60 156.00 L346.60 160.00" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M348.60 140.00 L352.60 136.00" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M348.60 136.00 L352.60 140.00" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M351.40 120.00 L355.40 116.00" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M351.40 116.00 L355.40 120.00" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M352.20 100.00 L356.20 96.00" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M352.20 96.00 L356.20 100.00" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M210.20 232.00 L210.55 231.94 L211.25 231.83 L212.21 231.67 L213.38 231.47 L214.73 231.24 L216.24 230.99 L217.89 230.70 L219.69 230.39 L221.63 230.06 L223.70 229.70 L225.89 229.33 L228.17 228.93 L230.53 228.51 L233.00 228.07 L235.56 227.61 L238.19 227.13 L240.88 226.63 L243.59 226.12 L246.32 225.59 L249.13 225.04 L252.00 224.47 L254.88 223.89 L257.76 223.29 L260.60 222.68 L263.34 222.05 L266.00 221.41 L268.61 220.75 L271.19 220.07 L273.73 219.38 L276.24 218.68 L278.73 217.96 L281.18 217.23 L283.61 216.49 L286.02 215.73 L288.42 214.96 L290.79 214.17 L293.13 213.37 L295.44 212.56 L297.71 211.73 L299.93 210.90 L302.09 210.05 L304.22 209.18 L306.38 208.31 L308.52 207.42 L310.62 206.52 L312.67 205.61 L314.62 204.68 L316.44 203.75 L318.11 202.80 L319.59 201.84 L320.95 200.87 L322.24 199.89 L323.47 198.89 L324.64 197.89 L325.74 196.87 L326.79 195.85 L327.78 194.81 L328.72 193.76 L329.61 192.70 L330.45 191.63 L331.24 190.54 L332.00 189.45 L332.72 188.35 L333.40 187.23 L334.06 186.11 L334.70 184.97 L335.32 183.83 L335.94 182.67 L336.56 181.51 L337.18 180.33 L337.82 179.15 L338.45 177.95 L339.07 176.74 L339.70 175.53 L340.31 174.30 L340.92 173.07 L341.52 171.82 L342.11 170.56 L342.69 169.30 L343.25 168.03 L343.81 166.74 L344.35 165.45 L344.89 164.14 L345.42 162.83 L345.95 161.51 L346.47 160.18 L346.98 158.84 L347.48 157.49 L347.97 156.13 L348.45 154.76 L348.91 153.38 L349.36 151.99 L349.78 150.60 L350.19 149.19 L350.60 147.78 L351.00 146.36 L351.39 144.92 L351.77 143.48 L352.14 142.03 L352.51 140.57 L352.85 139.11 L353.19 137.63 L353.51 136.15 L353.80 134.65 L354.08 133.15 L354.34 131.64 L354.58 130.12 L354.81 128.59 L355.02 127.06 L355.22 125.51 L355.41 123.96 L355.59 122.40 L355.76 120.83 L355.91 119.25 L356.06 117.66 L356.19 116.07 L356.32 114.47 L356.43 112.85 L356.53 111.24 L356.62 109.61 L356.70 107.97 L356.76 106.33 L356.77 104.67 L356.79 103.01 L356.80 101.35 L356.80 99.67 L356.78 97.99 L356.75 96.29 L356.70 94.59 L356.63 92.88 L356.50 91.17 L356.34 89.44 L356.17 87.71 L356.01 85.97 L355.84 84.23 L355.65 82.47 L355.45 80.71 L355.22 78.94 L354.97 77.16 L354.69 75.37 L354.39 73.58 L354.08 71.78 L353.75 69.97 L353.41 68.15 L353.03 66.33 L352.64 64.49 L352.23 62.65 L351.83 60.81 L351.43 58.95 L351.06 57.09 L350.67 55.22 L350.28 53.34 L349.89 51.46 L349.51 49.57 L349.15 47.67 L348.83 45.76 L348.54 43.85 L348.28 41.93 L348.04 40.00" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2.4,1.2"/>
+<path d="M323.47 198.89 L326.51 201.77" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="323.47" cy="198.89" r="0.45" stroke="#000" stroke-width="0.180" fill="#000" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="327.01" y="202.43" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="start" fill="#000">wręg generatora, po poszyciu</text>
+<path d="M205.00 104.80 L205.00 113.50" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M354.20 104.80 L354.20 113.50" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M205.00 112.00 L354.20 112.00" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M354.20 112.00 L351.60 112.45 L351.60 111.55 Z" fill="#000" fill-opacity="1.00" stroke="none"/>
+<path d="M205.00 112.00 L207.60 111.55 L207.60 112.45 Z" fill="#000" fill-opacity="1.00" stroke="none"/>
+<text x="279.60" y="111.00" font-family="Arial, Helvetica, sans-serif" font-size="2.30" text-anchor="middle" fill="#000">b = 3,73</text>
+<path d="M355.00 118.00 L377.70 118.00" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M355.00 104.00 L377.70 104.00" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M376.20 118.00 L376.20 104.00" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M376.20 104.00 L376.65 106.60 L375.75 106.60 Z" fill="#000" fill-opacity="1.00" stroke="none"/>
+<path d="M376.20 118.00 L375.75 115.40 L376.65 115.40 Z" fill="#000" fill-opacity="1.00" stroke="none"/>
+<text x="375.20" y="111.00" font-family="Arial, Helvetica, sans-serif" font-size="2.30" text-anchor="middle" fill="#000" transform="rotate(-90.00 375.20 111.00)">h_b = 0,35</text>
+<path d="M345.40 39.20 L345.40 32.50" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M354.20 39.20 L354.20 32.50" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M345.40 34.00 L354.20 34.00" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M354.20 34.00 L351.60 34.45 L351.60 33.55 Z" fill="#000" fill-opacity="1.00" stroke="none"/>
+<path d="M345.40 34.00 L348.00 33.55 L348.00 34.45 Z" fill="#000" fill-opacity="1.00" stroke="none"/>
+<text x="361.17" y="33.00" font-family="Arial, Helvetica, sans-serif" font-size="2.30" text-anchor="middle" fill="#000">Δ = 0,22</text>
+<text x="26.00" y="162.00" font-family="Arial, Helvetica, sans-serif" font-size="2.80" text-anchor="start" fill="#000" font-weight="bold">Dane łuków (m)</text>
+<text x="26.00" y="168.00" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="start" fill="#000">α</text>
+<text x="88.00" y="168.00" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="end" fill="#000">12,00°</text>
+<path d="M26.00 169.30 L88.00 169.30" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="26.00" y="172.60" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="start" fill="#000">R0</text>
+<text x="88.00" y="172.60" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="end" fill="#000">(0,13; −2,85)</text>
+<path d="M26.00 173.90 L88.00 173.90" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="26.00" y="177.20" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="start" fill="#000">F</text>
+<text x="88.00" y="177.20" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="end" fill="#000">(2,20; −2,41)</text>
+<path d="M26.00 178.50 L88.00 178.50" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="26.00" y="181.80" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="start" fill="#000">R_f = 0.38 b</text>
+<text x="88.00" y="181.80" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="end" fill="#000">1,42</text>
+<path d="M26.00 183.10 L88.00 183.10" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="26.00" y="186.40" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="start" fill="#000">C_f</text>
+<text x="88.00" y="186.40" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="end" fill="#000">(1,90; −1,02)</text>
+<path d="M26.00 187.70 L88.00 187.70" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="26.00" y="191.00" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="start" fill="#000">R_b = 1.05 b</text>
+<text x="88.00" y="191.00" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="end" fill="#000">3,92</text>
+<path d="M26.00 192.30 L88.00 192.30" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="26.00" y="195.60" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="start" fill="#000">C_b</text>
+<text x="88.00" y="195.60" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="end" fill="#000">(−0,19; 0,35)</text>
+<path d="M26.00 196.90 L88.00 196.90" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="26.00" y="200.20" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="start" fill="#000">T</text>
+<text x="88.00" y="200.20" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="end" fill="#000">(3,08; −1,80)</text>
+<path d="M26.00 201.50 L88.00 201.50" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="26.00" y="204.80" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="start" fill="#000">R_u</text>
+<text x="88.00" y="204.80" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="end" fill="#000">5,93</text>
+<path d="M26.00 206.10 L88.00 206.10" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="26.00" y="209.40" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="start" fill="#000">C_u</text>
+<text x="88.00" y="209.40" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="end" fill="#000">(−2,20; 0,35)</text>
+<path d="M26.00 210.70 L88.00 210.70" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="26.00" y="214.00" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="start" fill="#000">błąd śr. kw. wobec tabeli</text>
+<text x="88.00" y="214.00" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="end" fill="#000">0,003</text>
+<path d="M26.00 215.30 L88.00 215.30" stroke="#000" stroke-width="0.130" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M110.00 260.00 L126.00 260.00 L126.00 262.00 L110.00 262.00 Z" fill="#000" fill-opacity="1.00" stroke="none"/>
+<path d="M142.00 260.00 L158.00 260.00 L158.00 262.00 L142.00 262.00 Z" fill="#000" fill-opacity="1.00" stroke="none"/>
+<path d="M174.00 260.00 L190.00 260.00 L190.00 262.00 L174.00 262.00 Z" fill="#000" fill-opacity="1.00" stroke="none"/>
+<path d="M110.00 260.00 L190.00 260.00 L190.00 262.00 L110.00 262.00 Z" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="110.00" y="265.20" font-family="Arial, Helvetica, sans-serif" font-size="2.00" text-anchor="middle" fill="#000">0</text>
+<text x="126.00" y="265.20" font-family="Arial, Helvetica, sans-serif" font-size="2.00" text-anchor="middle" fill="#000">0,4</text>
+<text x="142.00" y="265.20" font-family="Arial, Helvetica, sans-serif" font-size="2.00" text-anchor="middle" fill="#000">0,8</text>
+<text x="158.00" y="265.20" font-family="Arial, Helvetica, sans-serif" font-size="2.00" text-anchor="middle" fill="#000">1,2</text>
+<text x="174.00" y="265.20" font-family="Arial, Helvetica, sans-serif" font-size="2.00" text-anchor="middle" fill="#000">1,6</text>
+<text x="190.00" y="265.20" font-family="Arial, Helvetica, sans-serif" font-size="2.00" text-anchor="middle" fill="#000">2</text>
+<text x="192.50" y="262.20" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="start" fill="#000">m</text>
+<text x="110.00" y="258.60" font-family="Arial, Helvetica, sans-serif" font-size="2.20" text-anchor="start" fill="#000" font-weight="bold">1:25</text>
+<path d="M20.00 10.00 L410.00 10.00 L410.00 287.00 L20.00 287.00 Z" stroke="#000" stroke-width="0.700" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.00 10.00 L410.00 10.00 L410.00 287.00 L10.00 287.00 Z" stroke="#000" stroke-width="0.180" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M210.00 10.00 L210.00 15.00" stroke="#000" stroke-width="0.350" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M210.00 287.00 L210.00 282.00" stroke="#000" stroke-width="0.350" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.00 148.50 L25.00 148.50" stroke="#000" stroke-width="0.350" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M410.00 148.50 L405.00 148.50" stroke="#000" stroke-width="0.350" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M230.00 253.00 L410.00 253.00 L410.00 287.00 L230.00 287.00 Z" stroke="#000" stroke-width="0.700" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M230.00 265.00 L410.00 265.00" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M230.00 273.00 L410.00 273.00" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M230.00 281.60 L410.00 281.60" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M290.00 273.00 L290.00 281.60" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M350.00 273.00 L350.00 281.60" stroke="#000" stroke-width="0.250" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="233.00" y="260.80" font-family="Arial, Helvetica, sans-serif" font-size="5.00" text-anchor="start" fill="#000" font-weight="bold">Wręg wykreślony łukami</text>
+<text x="233.00" y="270.20" font-family="Arial, Helvetica, sans-serif" font-size="2.60" text-anchor="start" fill="#000">Linia wzniosu dna, łuk obła, łuk szerokości, łuk nadburcia (rozdział 02)</text>
+<text x="233.00" y="275.20" font-family="Arial, Helvetica, sans-serif" font-size="1.80" text-anchor="start" fill="#444">Skala</text>
+<text x="233.00" y="279.30" font-family="Arial, Helvetica, sans-serif" font-size="2.60" text-anchor="start" fill="#000">1:25</text>
+<text x="293.00" y="275.20" font-family="Arial, Helvetica, sans-serif" font-size="1.80" text-anchor="start" fill="#444">Arkusz</text>
+<text x="293.00" y="279.30" font-family="Arial, Helvetica, sans-serif" font-size="2.60" text-anchor="start" fill="#000">3 / 19</text>
+<text x="353.00" y="275.20" font-family="Arial, Helvetica, sans-serif" font-size="1.80" text-anchor="start" fill="#444">Format</text>
+<text x="353.00" y="279.30" font-family="Arial, Helvetica, sans-serif" font-size="2.60" text-anchor="start" fill="#000">A3, wymiary w metrach</text>
+<text x="233.00" y="285.20" font-family="Arial, Helvetica, sans-serif" font-size="2.00" text-anchor="start" fill="#000">Model wzorcowy - snow, ok. 1710 - rysunek ze skryptu, z parametrów modelu</text>
+<text x="408.00" y="251.00" font-family="Arial, Helvetica, sans-serif" font-size="2.10" text-anchor="end" fill="#000" font-style="italic">α dobrany do rzędnych z badań tej stacji (najmniejsze kwadraty).</text>
+<text x="408.00" y="247.80" font-family="Arial, Helvetica, sans-serif" font-size="2.10" text-anchor="end" fill="#000" font-style="italic">Krzyżyki: rzędne z badań dla tej stacji. Kreskowo: wręg generatora po poszyciu.</text>
+</svg>

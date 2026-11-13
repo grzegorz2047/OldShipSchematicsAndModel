@@ -1,0 +1,25 @@
+# totals per rope group; lengths are the sum of segment lengths in rigging-lines.json
+group,kind,material,ropes,segments,total_length_m,d_min_m,d_max_m
+running,running,tarred/untarred,82,161,1121.39,0.01,0.028
+backstays,standing,tarred,12,12,242.69,0.02,0.036
+coils,coil,untarred,54,216,223.28,0.01,0.02
+main_shrouds,standing,tarred,28,28,145.18,0.0392,0.049
+lanyards,standing,untarred,46,276,141.7,0.014,0.024
+stays,standing,tarred/untarred,15,15,134.7,0.02,0.08
+fore_shrouds,standing,tarred,24,24,101.38,0.036,0.045
+topmast_shrouds,standing,tarred,12,12,100.43,0.028,0.028
+footropes,standing,tarred,44,44,92.21,0.02,0.024
+ratlines,standing,tarred,456,456,91.67,0.01,0.01
+topgallant_shrouds,standing,tarred,8,8,40.91,0.016,0.016
+gammoning,standing,tarred,9,9,33.13,0.032,0.032
+futtock_shrouds,standing,tarred,12,12,24.68,0.028,0.028
+gun_tackle,running,untarred,16,24,21.69,0.016,0.045
+slings_and_ties,running/standing,tarred/untarred,4,4,12.95,0.032,0.032
+capstan,running,untarred,1,1,10.35,0.022,0.022
+tiller_rope,running,tarred,2,2,9.6,0.026,0.026
+tiller_tackles,running,untarred,2,4,7.82,0.018,0.018
+catharpins,standing,tarred,4,4,6.91,0.024,0.024
+anchor_gear,running,tarred/untarred,3,3,4.76,0.04,0.16
+boat,running,untarred,1,1,3.88,0.02,0.02
+bell,running,untarred,1,1,0.35,0.014,0.014
+TOTAL,,,836,1317,2571.66,,
