@@ -169,8 +169,9 @@ if __name__=='__main__':
     common=sorted(p.relative_to(ROOT).as_posix() for p in (ROOT/'sailertales/common').glob('v2_*.py'))
     common.append('sailertales/common/rebuild_reference.py')
     common.append('sailertales/common/README.md')
+    common.append('sailertales/common/check_asset.py')
     common.append('sailertales/.gitignore')
-    common.append('.gitattributes')
+    if (ROOT/'.gitattributes').exists():common.append('.gitattributes')
     workflow='.github/workflows/sailertales-model-integrity.yml'
     if (ROOT/workflow).exists():common.append(workflow)
     manifest={'assets':promoted,'common':common,'files':[]}
