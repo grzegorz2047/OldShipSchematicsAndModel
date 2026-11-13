@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "path": "model/ship.blend",
+      "size": 12683186,
+      "sha256": "b82ba89f6a1b2bfb9d4d6b10c295f32e03ae190b64d6e822bb1afe05842ceeda",
+      "parts": [
+        {
+          "path": "model/ship.blend.parts/part-001",
+          "size": 8388608,
+          "sha256": "d92858fc016142c68d7f0ccb70e68a840a05b8094cfc1eb026be2f202f54ca35"
+        },
+        {
+          "path": "model/ship.blend.parts/part-002",
+          "size": 4294578,
+          "sha256": "88660b78975cc21b2af28edddeff9114b84a179b819df6be47d7fde252291ccc"
+        }
+      ]
+    },
+    {
+      "path": "model/ship.glb",
+      "size": 15816188,
+      "sha256": "9c9cdc206a09e399d0833d555aa813b6d21b245cc5786e5e875bd1343cba0377",
+      "parts": [
+        {
+          "path": "model/ship.glb.parts/part-001",
+          "size": 8388608,
+          "sha256": "c95bd9136aded059094c04f4655a3b8beca2446e9eeefdba767abb33d3f7b7b9"
+        },
+        {
+          "path": "model/ship.glb.parts/part-002",
+          "size": 7427580,
+          "sha256": "686e121fe9bf728a829a1207c03e93c6cc1bbe902d1c58963c5d110a97cb20a5"
+        }
+      ]
+    }
+  ]
+}
