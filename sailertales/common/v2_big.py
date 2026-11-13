@@ -592,7 +592,9 @@ def save_scene(ctx,spec,out):
         ground_stations.append({'name':station['nazwa'],'activity':station['czynnosc'],
              'feet_gltf':[x,z,s],'level':'main' if abs(z-main)<=abs(z-quarter) else 'quarterdeck',
              'variant':station.get('wariant'),'scope':'declared source work position; reachability separately measured'})
-    design={'schema':2,'vessel':spec['id'],'source':ctx['_v2_provenance'],
+    design={'schema':2,'vessel':spec['id'],
+            'construction':'Loft kadłuba z tabeli rzędnych, stępka i poszycie z poradnika, proporcje drzewc i pełny takielunek; rzeczywiste wnętrza i przejścia dodane jako rekonstrukcja do gry.',
+            'source':ctx['_v2_provenance'],
             'source_files':[{'path':'blender/'+p.name,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),
                  'reference_commit':'2e6f7e922e95396722376d42f3e2e0a12256029e'}
                  for p in sorted(Path(ctx['_v2_reference_source']).glob('*.py'))],
