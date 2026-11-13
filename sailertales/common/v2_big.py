@@ -569,7 +569,7 @@ def save_scene(ctx,spec,out):
                      'access':'real hollow voids, lowered cabin sole and climbable original-sized hatch'},
             'deviations':['Interior layout and lowered cabin sole are game reconstructions, not surviving period plans.',
                           'The dummy quarterdeck companion is replaced by the real cabin entrance to keep its stair fragments out of the cabin.',
-                          'BRIG is the game identifier; reference historical rig is snow circa 1710.',
+                          'The unarmed prologue vessel uses the reference snow rig circa 1710.' if spec['id']=='night-hull' else 'BRIG is the game identifier; reference historical rig is snow circa 1710.',
                           'A climb controller is required at the hold ladder; no false floor-slope pass is claimed.']}
     design['intended_joints']=[
         {'a':'hold_ladder_*','b':'hold_ladder_*','reason':'rungs and mounting handrails fit into their stringers/posts'},
