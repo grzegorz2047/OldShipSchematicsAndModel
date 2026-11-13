@@ -6,6 +6,9 @@ pozycji roboczych, aktualizuje ich liny i dodaje delikatną animację płótna.
 Nie przedstawia konkretnego, udokumentowanego okrętu. Obrysy żagli są rekonstrukcją
 według rozdziału 08 i `set_sail_estimates`, a nie historycznymi planami.
 
+![Snow pod żaglami — render wygenerowanego modelu](previews/hero.jpg)
+![Pokład i miejsca pracy załogi](previews/deck.jpg)
+
 Wersja do gry skraca fok i grot oraz podcina dolny lik żagla gaflowego i podnosi
 róg grotsztaksla. Wstępne obrysy z planu schodziły do przestrzeni zajmowanej przez
 załogę. Cel konstrukcyjny to 2,25 m nad pokładem; eksport musi przejść kontrolę
@@ -36,10 +39,24 @@ dostarczanych z Blenderem. Nie wymaga pobierania tekstur ani zewnętrznych pakie
 nie są nadpisywane. Kopia skryptu w paczce wynikowej służy do wglądu; do ponownej
 budowy użyj plików z katalogu `game_asset/` w pełnym repozytorium.
 
+Same podglądy można odtworzyć z zapisanej sceny, bez ponownego eksportu GLB:
+
+```sh
+blender -b build/game_ship/snow_sailing.blend --python-exit-code 1 --python game_asset/render_previews.py -- build/game_ship
+```
+
+Opcje `--samples 32 --resolution-percentage 75` przyspieszają roboczy podgląd.
+
 Kontrola wygenerowanych plików bez Blendera: `python game_asset/validate_asset.py build/game_ship`.
 W rozpakowanej paczce: `python validate_asset.py .`. Wynik zapisuje się jako `validation.json`.
-Walidator porównuje również skróty GLB z raportami ponownego importu, aby nie przyjąć
-raportu dotyczącego poprzedniej wersji modelu.
+Walidator porównuje również skróty GLB z raportami ponownego importu i pomiaru
+prześwitu oraz wymaga kompletu 12 żagli i wszystkich próbek pętli, aby nie przyjąć
+niepełnego raportu albo raportu dotyczącego poprzedniej wersji modelu.
+Sprawdza też skróty skryptów zapisane w manifeście: po zmianie źródeł wygeneruj
+model ponownie. [Raport ponownej budowy](validated-reference.json) zapisuje wyniki,
+skróty plików i kontrole odrzucania nieaktualnych raportów. Niewielkie różnice liczby
+trójkątów LOD-ów między uruchomieniami mogą wynikać z triangulacji i decymacji Blendera;
+obowiązują liczniki oraz skróty rzeczywiście dostarczonych plików.
 Generator dodatkowo sprawdza rzeczywistą geometrię wyeksportowanego GLB i zapisuje
 `deck_clearance.json`. Powtórzenie samego pomiaru: `python game_asset/deck_clearance.py build/game_ship`
 (ten dodatkowy skrypt wymaga NumPy). Sprawdzenie dotyczy płótna nad pokładami

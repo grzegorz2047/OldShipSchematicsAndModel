@@ -4,6 +4,7 @@ This checks geometry (including wind morph extremes), not stability or sail load
 Sampling is conservative: even projected areas occupied by deck equipment count.
 """
 from pathlib import Path
+import hashlib
 import json
 import sys
 
@@ -71,7 +72,8 @@ def inspect_glb(path, layout, required=2.2):
     # Five subdivisions of every actual triangle, approximately 0.1–0.2 m
     # between samples at the authored sail mesh resolution.
     bary=np.array([(i/5,j/5,1-(i+j)/5) for i in range(6) for j in range(6-i)])
-    result={"required_clearance_m":required,"walker_height_m":layout["walker"]["height_m"],
+    result={"source_glb_sha256":hashlib.sha256(Path(path).read_bytes()).hexdigest(),
+            "required_clearance_m":required,"walker_height_m":layout["walker"]["height_m"],
             "scope":"canvas above main deck and quarterdeck; equipment footprints included; wind frames 0/24/72", "sails":{}}
     for index,node in enumerate(g["nodes"]):
         if not node.get("name","").endswith("_set"):

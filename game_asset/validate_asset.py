@@ -81,6 +81,9 @@ def validate(path):
 def main(folder):
     folder=Path(folder)
     manifest=json.loads((folder/"asset_manifest.json").read_text())
+    for name,expected in manifest["source_file_sha256"].items():
+        source=Path(__file__).resolve().parent/name
+        assert hashlib.sha256(source.read_bytes()).hexdigest()==expected, "stale generated asset: "+name
     report={}
     for level,filename in (("lod0","snow_sailing.glb"),("lod1","snow_sailing_lod1.glb"),("lod2","snow_sailing_lod2.glb")):
         g,b,tris=validate(folder/filename)
@@ -131,6 +134,7 @@ def main(folder):
     report["collision_meshes"]=sum("mesh" in n for n in cg["nodes"])
     assert report["collision_meshes"]==36
     clearance=json.loads((folder/"deck_clearance.json").read_text())
+    assert clearance["source_glb_sha256"]==hashlib.sha256((folder/"snow_sailing.glb").read_bytes()).hexdigest(), "stale deck-clearance report"
     assert clearance["passed"] and clearance["minimum_clearance_m"]>=2.2
     report["canvas_minimum_deck_clearance_m"]=clearance["minimum_clearance_m"]
     report["cloth_area_m2"]=clearance["cloth_area_m2"]
@@ -138,6 +142,8 @@ def main(folder):
     for level,filename in (("lod0","snow_sailing.glb"),("lod1","snow_sailing_lod1.glb"),("lod2","snow_sailing_lod2.glb")):
         check=json.loads((folder/("export_rigging_collisions_"+level+".json")).read_text())
         assert check["passed"] and not check["hits"], "rope/canvas intersections"
+        assert check["sails"]==12, "incomplete sail audit"
+        assert check["frames"]==(list(range(0,97,12)) if level=="lod0" else [0]), "incomplete cloth-loop audit"
         assert check["source_glb_sha256"]==hashlib.sha256((folder/filename).read_bytes()).hexdigest(), "stale collision report"
         checks[level]={"passed":True,"frames":check["frames"]}
     report["rope_canvas_checks"]=checks
