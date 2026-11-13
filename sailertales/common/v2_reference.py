@@ -140,6 +140,7 @@ def build_reference(spec,out):
     exec(compile(tree,str(SOURCE/'buduj.py'),'exec'),ns)
     provenance=adapter.configure(ns['PR'],spec)
     if spec['id']=='night-hull':
+        scupper_reference_ports=list(ns['PR'].KADLUB['FURTY_S'])
         ns['PR'].UKLAD['DZIALA']['bez_dziala']=list(ns['PR'].KADLUB['FURTY_S'])
         ns['PR'].UKLAD['DZIALKA_RELINGOWE']=[]
         ns['PR'].KADLUB['FURTY_S']=[];ns['PR'].KADLUB['FURTY_ZAMKNIETE_S']=[]
@@ -147,6 +148,18 @@ def build_reference(spec,out):
                                     pas_furt='farba_czarna',pawez='farba_czarna',rzezby='drewno_ciemne')
         provenance['armament']='unarmed prologue vessel'
     parameter_ranges(ns['PR'],spec['length'])
+    if spec['id']=='night-hull':
+        # Scuppers still drain an unarmed deck. The source computes their sites
+        # from gun-port centres and otherwise indexes an empty port list.
+        import poklad
+        reference_scupper_builder=poklad.listwy_i_szpigaty
+        def unarmed_scuppers(ctx,ps):
+            saved=ctx['K']['FURTY_S']
+            ctx['K']['FURTY_S']=scupper_reference_ports
+            try:return reference_scupper_builder(ctx,ps)
+            finally:ctx['K']['FURTY_S']=saved
+        poklad.listwy_i_szpigaty=unarmed_scuppers
+        provenance['scuppers']='Reference inter-port drain spacing retained as drain sites on the unarmed hull; no gun ports are created.'
     import kadlub
     port_boolean=kadlub.otwor_steru
     def deferred_port(ctx):ctx['_v2_deferred_port']=True
@@ -161,6 +174,10 @@ def build_reference(spec,out):
         if sk.nazwa=='kadlub':
             r=stitch_collinear_seams(o);repairs.append(r)
             if r['after']['non_manifold_edges']:
+                bpy.ops.wm.save_as_mainfile(filepath=str(out/'topology-failure.blend'))
+                bm=bmesh.new();bm.from_mesh(o.data)
+                print('NONMANIFOLD',[(tuple(e.verts[0].co),tuple(e.verts[1].co),len(e.link_faces),[f.index for f in e.link_faces]) for e in bm.edges if not e.is_manifold],flush=True)
+                bm.free()
                 raise RuntimeError('Reference hull seam remains non-manifold: '+str(r))
         return o
     N.to_object=to_object
