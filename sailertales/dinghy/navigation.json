@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "units": "metres",
+  "axes": "glTF: X across, Y up, Z forward",
+  "player": {
+    "radius": 0.38,
+    "height": 1.85,
+    "max_slope_deg": 35
+  },
+  "routes": [
+    {
+      "name": "cockpit",
+      "points": [
+        [
+          0.0,
+          0.07999999821186066,
+          -0.6499999761581421
+        ],
+        [
+          0.0,
+          0.07999999821186066,
+          -0.0
+        ],
+        [
+          0.0,
+          0.07999999821186066,
+          0.48750001192092896
+        ]
+      ]
+    }
+  ],
+  "source_commit": "ea77e560ba4668c9dda55433813addbdb2f50176",
+  "limitations": [
+    "Gabaryty wynikaj\u0105 z HULL.L \u00d7 0.5 i pe\u0142nej szeroko\u015bci 2\u00d7HULL.B \u00d7 0.72.",
+    "Tylko lokalne przemieszczanie w ma\u0142ym kokpicie. Nie ma podpok\u0142adu ani kajuty."
+  ]
+}
