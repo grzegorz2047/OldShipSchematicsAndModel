@@ -111,7 +111,7 @@ wszystkie stanowiska załogi albo dowolny ruch takielunku.
 | G5 | PASS | {"exact_duplicate_materials":0} |
 | H1 | PASS | {"bytes":17010880,"budget_bytes":33554432} |
 | H2 | PASS | {"triangles":60568,"budget":280000} |
-| H3 | PASS | {"passed":true,"source_triangles":60568,"export_triangles":60568,"triangle_relative_difference":0.0,"max_bound_error_m":0.0,"missing_source_mesh_nodes":[],"unexpected_export_mesh_nodes":[],"unpacked_used_images":[],"method":"evaluated source visual meshes versus actual GLB mesh names, triangle count and world bounds"} |
+| H3 | PASS | {"passed":true,"source_triangles":60568,"export_triangles":60568,"export_indexed_triangles":60568,"triangle_count_scope":"source and export include every mesh-node instance; indexed count is separate","triangle_relative_difference":0.0,"max_bound_error_m":0.0,"missing_source_mesh_nodes":[],"unexpected_export_mesh_nodes":[],"unpacked_used_images":[] |
 | H4 | PASS | {"distinct_image_role_check":[],"embedded_images":6} |
 | H5 | PASS | {"present":true,"passed":true,"fingerprints_match":true,"review":{"schema":1,"source_triangles":60568,"export_triangles":60568,"triangle_match":true,"views":{"hero":{"foreground_pixels":86136,"source_mean_rgb":[0.40522146224975586,0.35430631041526794,0.297518253326416],"export_mean_rgb":[0.4048696458339691,0.3539886474609375,0.2972297668457031],"br |
 | H6 | PASS | {"primitives_with_tangents":0,"strategy":"provided tangent attribute or engine-derived glTF tangent basis"} |

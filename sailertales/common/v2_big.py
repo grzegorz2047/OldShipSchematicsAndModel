@@ -4,6 +4,7 @@ Original reference shell, stations, spars and fittings are preserved. New spaces
 are explicit game reconstructions, cut into that shell rather than fake floors.
 """
 import argparse
+import fnmatch
 import hashlib
 import importlib
 import json
@@ -163,6 +164,17 @@ def augment_interiors(ctx,spec):
     sq=K['POLPOKLAD_S'];cabin_sole=float(kd.deck_c(sq))+K['POLPOKLAD_H']-2.45
     room=cavity(ctx,'captains_cabin_void',-spec['length']*.44,sq-.05,cabin_sole,K['POLPOKLAD_H'])
     ops.append(cut(hull,room,'hollow_captains_cabin'))
+    # The reference left the stern interior solid. Cut the real steering gear
+    # envelope, rather than allowing a wooden tiller to run through that solid.
+    tiller=bpy.data.objects.get('rumpel_pod_pokladem')
+    if tiller is not None:
+        cutter=tiller.copy();cutter.data=tiller.data.copy();cutter.name='tiller_gear_clearance_void'
+        ctx['_v2_interiors'].objects.link(cutter)
+        world=tiller.matrix_world.copy();cutter.parent=None;cutter.matrix_world=world
+        bm=bmesh.new();bm.from_mesh(cutter.data);bm.normal_update()
+        for v in bm.verts:v.co+=v.normal.normalized()*.045
+        bm.to_mesh(cutter.data);bm.free();cutter.data.update()
+        ops.append(cut(hull,cutter,'underdeck_tiller_clearance'))
     # Open the original main hatch, retaining its documented 2.4 x 1.8 m family.
     L=U['LUK_GLOWNY'];s0,s1,hx=L['s0'],L['s1'],L['pol_x']
     hatch=bpy.data.objects.get('luk_glowny');remove(hatch)
@@ -189,10 +201,13 @@ def augment_interiors(ctx,spec):
         P(1.4,s0-.6,float(kd.deck_z(s0-.6,1.4)))])
     route(ctx,'hold_ladder',[P(1.4,climb_s,float(kd.deck_z(climb_s,1.4))),
         P(1.4,climb_s,zmain+.50),P(0,climb_s,zmain+.50),P(0,climb_s,hold_sole)],'climb')
-    route(ctx,'hold_centre_aisle',[P(0,climb_s,hold_sole),P(-1,climb_s,hold_sole),
+    route(ctx,'hold_aisle',[P(0,climb_s,hold_sole),P(-1,climb_s,hold_sole),
         P(-1,1.2,hold_sole),P(-1,-spec['length']*.10,hold_sole)])
     # Replace decorative sealed reference doors with one real open companionway.
     remove(bpy.data.objects.get('grodz_drzwi'))
+    # The reference quarterdeck companion has dummy steps projecting into the
+    # unmodelled cabin. Its function is replaced by the real side entrance below.
+    remove(bpy.data.objects.get('zejsciowka'))
     door_x=1.45
     ops.append(cut(hull,box_cutter(ctx,'cabin_portal_void',door_x,sq,cabin_sole+1.08,1.30,1.0,2.20),
                    'open_captains_portal'))
@@ -217,27 +232,47 @@ def augment_interiors(ctx,spec):
     bx=-1.6;tx=1.9
     box(ctx,'captain_bunk_frame',P(bx,centre,cabin_sole+.30),(.82,2.0,.40),'drewno')
     box(ctx,'captain_bunk_mattress',P(bx,centre,cabin_sole+.57),(.76,1.9,.14),'plotno')
+    for dx in [-.30,.30]:
+        for ds in [-.8,.8]:
+            box(ctx,'captain_bunk_leg_'+str(dx)+'_'+str(ds),P(bx+dx,centre+ds,cabin_sole+.05),(.10,.10,.10),'drewno')
     box(ctx,'captain_chart_table',P(tx,centre,cabin_sole+.78),(.85,1.3,.08),'drewno')
     for dx in [-.30,.30]:
         for ds in [-.5,.5]:
             rod(ctx,'chart_table_leg_'+str(dx)+'_'+str(ds),P(tx+dx,centre+ds,cabin_sole),
                 P(tx+dx,centre+ds,cabin_sole+.74),.045,physics='solid')
-    # The starboard pump would otherwise stand at the stairwell edge: shift its
-    # complete pump/lever group outboard, as allowed by ch.12 ergonomic checks.
+    # Both complete pump/lever groups move outboard, clearing the real cabin
+    # companion to starboard and quarterdeck companion to port.
     moved=[]
-    for nm in ['pompa_L','pompa_L_dzwignia']:
+    for nm in ['pompa_L','pompa_L_dzwignia','pompa_P','pompa_P_dzwignia']:
         o=bpy.data.objects.get(nm)
-        if o is not None:o.location.x+=1.25;moved.append(nm)
+        if o is not None:o.location.x+=1.25 if nm.startswith('pompa_L') else -1.25;moved.append(nm)
     route(ctx,'captains_cabin',[P(door_x,entry_top+.55,float(kd.deck_z(entry_top+.55,door_x))),
         P(door_x,entry_top,top_z),P(door_x,sq-.25,cabin_sole),
         P(door_x,sq-1.0,cabin_sole),P(0,sq-1.0,cabin_sole),P(0,centre,cabin_sole)])
     # Gentler full-width companionway to quarterdeck, with the same platform.
     remove(bpy.data.objects.get('schody_rufowe'))
+    qx=-1.45
     qbottom=sq+2.55;qtop=sq-.14
-    qz0=float(kd.deck_z(qbottom,0));qz1=float(kd.deck_z(qtop,0))+K['POLPOKLAD_H']+.012
-    plank_ramp(ctx,'quarterdeck_companionway',0,qbottom,qtop,qz0,qz1,1.1)
-    route(ctx,'quarterdeck_access',[P(0,qbottom,qz0),P(0,qtop,qz1),
-        P(0,sq-.9,float(kd.deck_z(sq-.9,0))+K['POLPOKLAD_H'])])
+    qz0=float(kd.deck_z(qbottom,qx));qz1=float(kd.deck_z(qtop,qx))+K['POLPOKLAD_H']+.012
+    # Move the real guard opening with the stairs; the old centre opening is
+    # closed by a rail and balusters so it does not become an unprotected drop.
+    guard=bpy.data.objects.get('balustrada_progu')
+    if guard is not None:
+        zguard=float(kd.deck_z(sq-.08,qx))+K['POLPOKLAD_H']
+        ops.append(cut(guard,box_cutter(ctx,'quarterdeck_guard_opening',qx,sq-.08,zguard+.60,
+            1.34,.50,1.60),'relocate_quarterdeck_guard_opening'))
+        tag(guard,'fitting','solid')
+    qs=sq-.08
+    for height in [.04,.89]:
+        rod(ctx,'quarterdeck_closed_gap_rail_'+str(height),
+            P(-.66,qs,float(kd.deck_z(qs,-.66))+K['POLPOKLAD_H']+height),
+            P(.66,qs,float(kd.deck_z(qs,.66))+K['POLPOKLAD_H']+height),.035,physics='solid')
+    for x in [-.44,0,.44]:
+        z=float(kd.deck_z(qs,x))+K['POLPOKLAD_H']
+        rod(ctx,'quarterdeck_closed_gap_post_'+str(x),P(x,qs,z),P(x,qs,z+.89),.035,physics='solid')
+    plank_ramp(ctx,'quarterdeck_companionway',qx,qbottom,qtop,qz0,qz1,1.1)
+    route(ctx,'quarterdeck_access',[P(qx,qbottom,qz0),P(qx,qtop,qz1),
+        P(qx,sq-.9,float(kd.deck_z(sq-.9,qx))+K['POLPOKLAD_H'])])
     # Fore/aft port-side circulation connects the hatch and both companionways.
     xs=-2.15
     route(ctx,'main_deck_circulation',[P(xs,s,float(kd.deck_z(s,xs)))
@@ -247,6 +282,7 @@ def augment_interiors(ctx,spec):
         'captain_door_width_m':1.30,'captain_door_height_m':2.20,
         'cabin_floor_lowering_m':float(kd.deck_c(sq))-cabin_sole,
         'reference_pump_relocations':moved,'quarterdeck_gradient_deg':math.degrees(math.atan2(qz1-qz0,qbottom-qtop)),
+        'quarterdeck_stair_x_m':qx,'quarterdeck_guard':'opening moved to port stair; old centre gap closed',
         'basis':'Ch.03 hollow framing, Ch.04 decks/cabin, Ch.09 hatch ladders; interior layout is game inference'}
     return ctx['_v2_interior_design']
 
@@ -289,7 +325,8 @@ def stow_capstan(ctx):
         bm.free()
     s=ctx['K']['POLPOKLAD_S']+1.5
     zdeck=float(kd.deck_z(s,-3))
-    side_x=-min(float(kd.H(ss,zdeck+.6)[0]) for ss in [s-.75,s+.75])+.28
+    side_x=-min(float(kd.H(ss,zdeck+.6)[0]) for ss in [s-.75,s+.75])+.70
+    zdeck=float(kd.deck_z(s,side_x))
     length=U['r_draga']-U['r_glowica']
     bars=[]
     for i in range(8):
@@ -301,8 +338,10 @@ def stow_capstan(ctx):
         o=tag(N.to_object(sk,ctx['_v2_interiors'],recalc=True),'fitting','solid')
         bars.append(o.name)
     for ds in [-length*.35,length*.35]:
-        box(ctx,'capstan_bar_rack_post_'+str(ds),P(side_x-.16,s+ds,zdeck+.53),(.10,.10,1.06),'drewno_ciemne')
-        box(ctx,'capstan_bar_rack_shelf_'+str(ds),P(side_x+.01,s+ds,zdeck+.24),(.40,.12,.12),'drewno_ciemne')
+        post_floor=float(kd.deck_z(s+ds,side_x-.16));post_top=zdeck+1.06
+        box(ctx,'capstan_bar_rack_post_'+str(ds),P(side_x-.16,s+ds,(post_floor+post_top)/2),(.10,.10,post_top-post_floor),'drewno_ciemne')
+        for row in range(4):
+            box(ctx,'capstan_bar_rack_shelf_'+str(ds)+'_'+str(row),P(side_x+.01,s+ds,zdeck+.24+row*.13),(.40,.12,.06),'drewno_ciemne')
     result.update({'state':'underway; bars and swifter removed from working circle',
         'stored_bar_objects':bars,'bar_length_m':length,'removed_swifter_geometry':removed,
         'guide_basis':'Ch.09 capstan removable handspikes; rack arrangement is game inference'})
@@ -331,7 +370,7 @@ def connect_deck_routes(ctx,spec):
     from v2_audit import TriangleScene,capsule_triangle_d2
     records=scene_records([o for o in bpy.context.scene.objects if o.get('asset_role')!='collision'
                            and o.get('asset_role')!='presentation' and not o.hide_render])
-    world=TriangleScene(records);kd=ctx['kd'];radius=.39;height=1.85;cos_slope=math.cos(math.radians(35))
+    world=TriangleScene(records);kd=ctx['kd'];radius=.42;height=1.85;cos_slope=math.cos(math.radians(35))
     occupancy={};points={};step=.18
     def point(key):
         if key not in points:
@@ -440,7 +479,7 @@ def physical_colliders(ctx):
         if o is not hull and o.type=='MESH' and o.get('authored_access') and o.get('physics') in ('solid','walk_surface'):
             duplicate(o,'col_'+o.name.lower())
     # Default steering only; inactive deck-tiller variant is never exported.
-    skip=('luk_glowny','main_hatch_open_coaming','schody_rufowe','grodz_drzwi')
+    skip=('luk_glowny','main_hatch_open_coaming','schody_rufowe','grodz_drzwi','zejsciowka')
     for ob in ctx.get('przeszkody',[]):
         if ob['nazwa'].startswith(skip) or ob.get('wariant') not in (None,'naped_kolo'):continue
         if ob['h']<.3 or ob['nazwa'].startswith('maszt'):continue
@@ -451,6 +490,8 @@ def physical_colliders(ctx):
             continue
         if o.name.startswith('pompa_L'):
             x=ob['x']+1.25
+        elif o.name.startswith('pompa_P'):
+            x=ob['x']-1.25
         else:x=ob['x']
         qd=ob.get('poziom')=='rufowy'
         z=float(kd.deck_z(ob['s'],x))+(ctx['K']['POLPOKLAD_H'] if qd else 0)
@@ -514,16 +555,44 @@ def night_lanterns(ctx,spec):
 
 def save_scene(ctx,spec,out):
     out=Path(out);(out/'model').mkdir(parents=True,exist_ok=True)
+    origin=bpy.data.objects.get('asset_origin')
+    if origin is None:
+        origin=bpy.data.objects.new('asset_origin',None)
+        ctx['root'].objects.link(origin)
+    origin.location=(0,0,0)
+    origin['asset_role']='marker'
+    origin['waterline_m']=0.0
+    origin['vessel_id']=spec['id']
     for o in bpy.context.scene.objects:
         if o.type=='MESH' and 'asset_role' not in o:
             o['asset_role']='visual'
             o['kind']='rope' if o.name.startswith('lina_') else ('sail' if o.name.startswith(('zagiel','zagle')) else
                        ('spar' if o.name.startswith(('drzewca','reja_','gafel','bukszpryt')) else 'fitting'))
             o['physics']='none'
+        if spec['id']=='night-hull' and o.type=='MESH' and o.name.startswith(('zagiel','zagle')):
+            # Furled cloth is a closed roll attached to spars, rather than an
+            # open deployed membrane. Audit its solids/joints in E1; the sail
+            # boundary test applies only to the deployed cloth of sailing rigs.
+            o['kind']='fitting';o['cloth_state']='furled'
         if o.type=='MESH' and ('szklo' in o.name or o.get('kind')=='glass'):
             o['kind']='glass';o['physics']='none'
             o['topology_reason']='single-pane glazing; intentionally open double-sided surface'
         if o.get('wariant')=='naped_rumpel':o.hide_render=True;o['asset_role']='presentation'
+    # Static mesh nodes carry applied rotation/scale; their geometry and child
+    # world transforms stay unchanged. Moving nodes retain their actual axes.
+    motion_keys=('motion_axis','range_deg','range_m','os_ruchu','control_type')
+    for o in list(bpy.context.scene.objects):
+        if o.type!='MESH' or o.get('asset_role') in ('collision','presentation') or any(k in o for k in motion_keys):
+            continue
+        basis=o.matrix_basis.copy()
+        linear=basis.to_3x3().to_4x4()
+        if all(abs(linear[i][j]-(1 if i==j else 0))<1e-7 for i in range(4) for j in range(4)):
+            continue
+        child_worlds={child:child.matrix_world.copy() for child in o.children}
+        if o.data.users>1:o.data=o.data.copy()
+        o.data.transform(linear)
+        o.matrix_basis=Matrix.Translation(basis.translation)
+        for child,world in child_worlds.items():child.matrix_world=world
     for im in bpy.data.images:
         if im.source=='FILE' and not im.packed_file:im.pack()
     bpy.ops.wm.save_as_mainfile(filepath=str(out/'model'/'ship.blend'),compress=True)
@@ -540,32 +609,86 @@ def save_scene(ctx,spec,out):
         ground_stations.append({'name':station['nazwa'],'activity':station['czynnosc'],
              'feet_gltf':[x,z,s],'level':'main' if abs(z-main)<=abs(z-quarter) else 'quarterdeck',
              'variant':station.get('wariant'),'scope':'declared source work position; reachability separately measured'})
-    design={'schema':2,'vessel':spec['id'],'source':ctx['_v2_provenance'],
+    design={'schema':2,'vessel':spec['id'],
+            'construction':'Loft kadłuba z tabeli rzędnych, stępka i poszycie z poradnika, proporcje drzewc i pełny takielunek; rzeczywiste wnętrza i przejścia dodane jako rekonstrukcja do gry.',
+            'source':ctx['_v2_provenance'],
             'source_files':[{'path':'blender/'+p.name,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),
                  'reference_commit':'2e6f7e922e95396722376d42f3e2e0a12256029e'}
                  for p in sorted(Path(ctx['_v2_reference_source']).glob('*.py'))],
             'sources':{'guide_repository':'grzegorz2047/OldShipSchematicsAndModel',
                        'chapters':['01','02','03','04','05','06','07','08','09','12','13','14']},
             'interiors':ctx['_v2_interior_design'],
-            'rigging':ctx.get('_v2_rigging_report',{'pose':'furled reference'}),
+            'rigging':ctx.get('_v2_rigging_report',{'pose':'furled reference',
+                 'cloth_audit':'Closed furled cloth rolls are fittings included in E1 solid penetration and reasoned construction joint tests; there are no deployed sail membranes.'}),
             'lanterns':ctx.get('_v2_night_lanterns',[]),
             'capstan':ctx.get('_v2_capstan_state'),
+            'geometry_budget':ctx.get('_v2_geometry_budget'),
+            'working_rig_attachment_contract':ctx.get('_v2_brig_attachment_contract'),
             'source_ground_stations':ground_stations,
             'aloft_station_scope':'Source mast-top/yardarm workstations require a climbing controller and are outside ground walking scope.',
             'rules':{'mast_main':'(length+breadth)/2','mast_fore':'8/9 main',
                      'hull':'reference table of offsets with monotone PCHIP, chapter 02',
                      'access':'real hollow voids, lowered cabin sole and climbable original-sized hatch'},
             'deviations':['Interior layout and lowered cabin sole are game reconstructions, not surviving period plans.',
-                          'BRIG is the game identifier; reference historical rig is snow circa 1710.',
+                          'The dummy quarterdeck companion is replaced by the real cabin entrance to keep its stair fragments out of the cabin.',
+                          'The unarmed prologue vessel uses the reference snow rig circa 1710.' if spec['id']=='night-hull' else 'BRIG is the game identifier; reference historical rig is snow circa 1710.',
                           'A climb controller is required at the hold ladder; no false floor-slope pass is claimed.']}
     design['intended_joints']=[
         {'a':'hold_ladder_*','b':'hold_ladder_*','reason':'rungs and mounting handrails fit into their stringers/posts'},
         {'a':'kadlub','b':'hold_ladder_stringer_*','reason':'ladder feet rest on hold sole and stringers extend through hatch coaming'},
         {'a':'captain_companionway*','b':'captain_companionway*','reason':'planked ramp and its structural handrail posts are joined'},
         {'a':'quarterdeck_companionway*','b':'quarterdeck_companionway*','reason':'companionway planks, stringer slab and rail posts form one structure'},
+        {'a':'quarterdeck_closed_gap_*','b':'quarterdeck_closed_gap_*','reason':'new guard balusters are tenoned into the rails closing the obsolete stair opening'},
+        {'a':'quarterdeck_closed_gap_*','b':'balustrada_progu','reason':'replacement guard rails join the retained centre posts of the original quarterdeck guard'},
         {'a':'captain_door_jamb_*','b':'captain_door_lintel','reason':'lintel is tenoned into jambs'},
         {'a':'captain_chart_table','b':'chart_table_leg_*','reason':'tabletop rests on legs'},
-        {'a':'captain_bunk_frame','b':'captain_bunk_mattress','reason':'mattress rests on bunk frame'}]
+        {'a':'captain_bunk_frame','b':'captain_bunk_mattress','reason':'mattress rests on bunk frame'},
+        {'a':'captain_bunk_frame','b':'captain_bunk_leg_*','reason':'short support legs meet the underside of the bunk frame'},
+        {'a':'capstan_bar_rack_post_*','b':'capstan_bar_rack_shelf_*','reason':'tiered rack shelves are housed into their vertical posts'},
+        {'a':'freshwater_barrel_hold','b':'freshwater_barrel_hold','reason':'Source iron hoops are fitted around the wooden cask body'},
+        {'a':'kadlub','b':'main_hatch_open_coaming*','reason':'Hatch coaming beams are let up to 70 mm into the surrounding deck planking.'},
+        {'a':'kadlub','b':'captain_door_jamb_*','reason':'The jamb timbers are housed into the sides of the real cabin portal.'},
+        {'a':'kadlub','b':'captain_door_lintel','reason':'The portal header is housed 50 mm into the retained upper bulkhead.'},
+        {'a':'kadlub','b':'captain_companionway','reason':'The 140 mm thick companionway slab bears into the main-deck and cabin-sole landings.'},
+        {'a':'kadlub','b':'quarterdeck_companionway','reason':'The quarterdeck stair slab is lodged into the deck and quarterdeck landing edges.'},
+        {'a':'kadlub','b':'captain_companionway_post_*','reason':'Handrail posts are mortised up to 20 mm into the sheered deck and landing.'},
+        {'a':'kadlub','b':'quarterdeck_companionway_post_*','reason':'Handrail posts are mortised up to 20 mm into the sheered deck and landing.'},
+        {'a':'kadlub','b':'captain_companionway_rail_port','reason':'The port handrail end seats 10 mm into the cabin portal side.'},
+        {'a':'pokrywa_trzonu','b':'ster','reason':'The stock head cover fits around the upper rudder stock; overlap is under 6 mm'}]
+    for index in range(1,7):
+        design['intended_joints'].append({'a':f'night_lantern_{index}_support','b':f'night_lantern_{index}_housing',
+            'reason':'The lantern base seats 7.5 mm over its supporting iron socket.'})
+    # Preserve the guide's documented construction joints as concrete object
+    # pairs. Material-limited source exceptions require a separate measurement;
+    # the obsolete "unmodelled cabin" exception does not apply to this interior.
+    from przenikanie import POLACZENIA
+    source_objects=[o for o in bpy.context.scene.objects if o.type=='MESH' and
+                    o.get('asset_role') not in ('collision','presentation')]
+    source_names=[o.name for o in source_objects]
+    source_aliases={o.name:o.get('source_name',o.name) for o in source_objects}
+    declared=set()
+    for a,ma,b,mb,reason in POLACZENIA:
+        if ma!='*' or mb!='*' or 'nie jest modelowane' in reason:
+            continue
+        for name_a in source_names:
+            if not (fnmatch.fnmatchcase(name_a,a) or fnmatch.fnmatchcase(source_aliases[name_a],a)):continue
+            for name_b in source_names:
+                if not (fnmatch.fnmatchcase(name_b,b) or fnmatch.fnmatchcase(source_aliases[name_b],b)):continue
+                pair=tuple(sorted((name_a,name_b)))
+                if pair in declared:continue
+                declared.add(pair)
+                design['intended_joints'].append({'a':name_a,'b':name_b,'reason':reason,
+                    'source':'blender/przenikanie.py:POLACZENIA'})
+    design['intended_joints'].extend(ctx.get('_v2_brig_joint_rules',[]))
+    # Keep source joint matching above in the guide's original names, then give
+    # furled cloth explicit names understood by the shared rig/deck preview.
+    cloth_names={}
+    for o in bpy.context.scene.objects:
+        if o.type=='MESH' and o.get('cloth_state')=='furled' and not o.name.startswith('furled_sail_'):
+            old=o.name;o.name='furled_sail_'+old;cloth_names[old]=o.name
+    if cloth_names:
+        from v2_export import remap
+        design=remap(design,cloth_names)
     (out/'design.json').write_text(json.dumps(design,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
     return nav,design
 
@@ -585,11 +708,27 @@ def main():
     if spec['id']=='brig' and not a.no_rig:
         from v2_rigging import deploy
         deploy(ctx,spec,out)
+        from v2_brig_tags import prepare
+        prepare(ctx)
+        from v2_brig_fittings import finish
+        finish(ctx,out)
     augment_interiors(ctx,spec)
     stow_capstan(ctx)
     if spec['id']=='night-hull':night_lanterns(ctx,spec)
+    from v2_big_fittings import relocate_water_supply,separate_canvas_gaskets
+    relocate_water_supply(ctx)
+    if spec['id']=='night-hull':separate_canvas_gaskets(ctx)
+    from v2_mesh_finish import finish_scene
+    mesh_finish=finish_scene([o for o in bpy.context.scene.objects if o.get('asset_role') not in ('collision','presentation')])
+    if spec['id']=='brig':
+        from v2_big_budget import simplify
+        ctx['_v2_geometry_budget']=simplify([o for o in bpy.context.scene.objects
+            if o.type=='MESH' and not o.hide_render and o.get('asset_role') not in ('collision','presentation')])
     colliders=physical_colliders(ctx)
+    collider_finish=finish_scene(colliders)
     nav,design=save_scene(ctx,spec,out)
+    design['mesh_finish']=mesh_finish
+    design['collision_finish']=collider_finish
     design['route_planning']=connect_deck_routes(ctx,spec)
     nav['routes']=ctx['_v2_routes']
     visual=[o for o in bpy.context.scene.objects if o.type in ('MESH','EMPTY') and
@@ -598,6 +737,26 @@ def main():
         from v2_materials import upgrade_scene
         from v2_export import finalize
         design['materials']=upgrade_scene(visual)
+        from v2_big_uv import finish_uv
+        visual,design['uv_finish']=finish_uv(visual,design)
+        if spec['id']=='night-hull':
+            from v2_big_fittings import add_night_head_joints
+            add_night_head_joints(visual,design)
+        if spec['id']=='brig':
+            design['final_mesh_finish']=finish_scene(visual)
+            from v2_brig_blocks import repair as repair_strop_ends
+            design['strop_end_finish']=repair_strop_ends(bpy.data.objects['rigging_static_blocks'])
+            from v2_brig_attachment import finish as finish_attachments
+            finish_attachments(visual,design,out)
+            from v2_brig_helm import repair_helm
+            design['helm_finish']=repair_helm(visual,colliders)
+            from v2_brig_navigation import finish as finish_navigation
+            finish_navigation(nav,design)
+            from v2_brig_density import fix as finish_density
+            finish_density(visual,design)
+        # Make the finished source contract available for independent checks
+        # as soon as the main GLB is exported, while the static LODs are built.
+        (out/'design.json').write_text(json.dumps(design,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
         finalize(spec,out,visual,colliders,nav,design)
     else:
         (out/'navigation.json').write_text(json.dumps(nav,indent=2)+'\n',encoding='utf-8')
