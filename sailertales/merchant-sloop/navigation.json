@@ -1,0 +1,107 @@
+{
+  "schema": 1,
+  "units": "metres",
+  "axes": "glTF: X across, Y up, Z forward",
+  "player": {
+    "radius": 0.38,
+    "height": 1.85,
+    "max_slope_deg": 35
+  },
+  "routes": [
+    {
+      "name": "deck_to_hold",
+      "points": [
+        [
+          -0.75,
+          1.5,
+          3.799999952316284
+        ],
+        [
+          0.6499999761581421,
+          1.5,
+          3.799999952316284
+        ],
+        [
+          0.6499999761581421,
+          1.5,
+          2.700000047683716
+        ],
+        [
+          0.6499999761581421,
+          -0.8999999761581421,
+          -2.700000047683716
+        ],
+        [
+          0.6499999761581421,
+          -0.8999999761581421,
+          -3.200000047683716
+        ],
+        [
+          -0.699999988079071,
+          -0.8999999761581421,
+          -3.200000047683716
+        ]
+      ]
+    },
+    {
+      "name": "main_deck",
+      "points": [
+        [
+          -0.75,
+          1.5,
+          -4.349999904632568
+        ],
+        [
+          -0.75,
+          1.5,
+          -3.5
+        ],
+        [
+          -0.75,
+          1.5,
+          3.5
+        ],
+        [
+          -0.75,
+          1.5,
+          5.21999979019165
+        ]
+      ]
+    },
+    {
+      "name": "captains_cabin",
+      "points": [
+        [
+          -0.75,
+          1.5,
+          -3.246000051498413
+        ],
+        [
+          -0.75,
+          1.5,
+          -4.395999908447266
+        ],
+        [
+          0.0,
+          1.5,
+          -4.395999908447266
+        ],
+        [
+          0.0,
+          1.5,
+          -5.546000003814697
+        ],
+        [
+          0.0,
+          1.5,
+          -6.263999938964844
+        ]
+      ]
+    }
+  ],
+  "source_commit": "ea77e560ba4668c9dda55433813addbdb2f50176",
+  "limitations": [
+    "Gra u\u017cywa brygu przeskalowanego do 0.6. Nowy jednomasztowy takielunek i wn\u0119trza to \u015bwiadoma rekonstrukcja, nie kopia sylwetki brygu.",
+    "Nie skalowa\u0107 gotowego modelu ponownie przez 0.6; wysoko\u015b\u0107 wn\u0119trz dostosowana do stoj\u0105cej postaci."
+  ]
+}
