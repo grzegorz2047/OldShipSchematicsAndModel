@@ -104,7 +104,7 @@
               "loose_vertices": 0,
               "loose_edges": 0,
               "closed_component_signed_volumes_m3": [
-                2.850456769242349
+                2.850456769242345
               ],
               "reversed_closed_components": 0,
               "nearly_zero_volume_closed_components": 0
@@ -148,7 +148,7 @@
               "loose_vertices": 0,
               "loose_edges": 0,
               "closed_component_signed_volumes_m3": [
-                6.7129460054335755e-06
+                6.712946005433575e-06
               ],
               "reversed_closed_components": 0,
               "nearly_zero_volume_closed_components": 0
@@ -170,7 +170,7 @@
               "loose_vertices": 0,
               "loose_edges": 0,
               "closed_component_signed_volumes_m3": [
-                6.607220586956918e-06
+                6.607220586956917e-06
               ],
               "reversed_closed_components": 0,
               "nearly_zero_volume_closed_components": 0
@@ -222,7 +222,7 @@
               "loose_vertices": 0,
               "loose_edges": 0,
               "closed_component_signed_volumes_m3": [
-                2.8504567692423457
+                2.8504567692423395
               ],
               "reversed_closed_components": 0,
               "nearly_zero_volume_closed_components": 0
@@ -588,12 +588,14 @@
       "passed": true,
       "source_triangles": 3334,
       "export_triangles": 3334,
+      "export_indexed_triangles": 3334,
+      "triangle_count_scope": "source and export include every mesh-node instance; indexed count is separate",
       "triangle_relative_difference": 0.0,
       "max_bound_error_m": 0.0,
       "missing_source_mesh_nodes": [],
       "unexpected_export_mesh_nodes": [],
       "unpacked_used_images": [],
-      "method": "evaluated source visual meshes versus actual GLB mesh names, triangle count and world bounds"
+      "method": "evaluated source visual meshes versus actual GLB mesh names, per-instance triangle count and world bounds"
     },
     "render_parity": {
       "present": true,
@@ -1341,12 +1343,14 @@
         "passed": true,
         "source_triangles": 3334,
         "export_triangles": 3334,
+        "export_indexed_triangles": 3334,
+        "triangle_count_scope": "source and export include every mesh-node instance; indexed count is separate",
         "triangle_relative_difference": 0.0,
         "max_bound_error_m": 0.0,
         "missing_source_mesh_nodes": [],
         "unexpected_export_mesh_nodes": [],
         "unpacked_used_images": [],
-        "method": "evaluated source visual meshes versus actual GLB mesh names, triangle count and world bounds"
+        "method": "evaluated source visual meshes versus actual GLB mesh names, per-instance triangle count and world bounds"
       }
     },
     {
@@ -2038,7 +2042,7 @@
   },
   "source_sha256": {
     "sailertales/common/rebuild_reference.py": "a4e81ab0a7fd921d10ca731c018b3a4abdac5e7ff061118a5b215164905daa77",
-    "sailertales/common/v2_audit.py": "afb2eaef8f0fccb676686a10775f6f3e3ac07010e07dc217852f013c07493275",
+    "sailertales/common/v2_audit.py": "a91bee1e9defe89692e3a32371835523ba94439c3ca0d175637ad1b72eb8d34f",
     "sailertales/common/v2_boats.py": "18cb8784c6fe4c4ba4b8716c81892740dbf5b794242f547b3624296aab2d2a67",
     "sailertales/common/v2_export.py": "821a4b747718064b5e96e05778f90a2bd0263a62a5a2d49fe3f59c60c85df45f",
     "sailertales/common/v2_integrity.py": "92691ed69cd1f00737f5c6e4e85b4df89a9e9b19d336a11a8790b38d0db5cfe9",
