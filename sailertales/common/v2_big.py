@@ -4,6 +4,7 @@ Original reference shell, stations, spars and fittings are preserved. New spaces
 are explicit game reconstructions, cut into that shell rather than fake floors.
 """
 import argparse
+import fnmatch
 import hashlib
 import importlib
 import json
@@ -193,6 +194,9 @@ def augment_interiors(ctx,spec):
         P(-1,1.2,hold_sole),P(-1,-spec['length']*.10,hold_sole)])
     # Replace decorative sealed reference doors with one real open companionway.
     remove(bpy.data.objects.get('grodz_drzwi'))
+    # The reference quarterdeck companion has dummy steps projecting into the
+    # unmodelled cabin. Its function is replaced by the real side entrance below.
+    remove(bpy.data.objects.get('zejsciowka'))
     door_x=1.45
     ops.append(cut(hull,box_cutter(ctx,'cabin_portal_void',door_x,sq,cabin_sole+1.08,1.30,1.0,2.20),
                    'open_captains_portal'))
@@ -440,7 +444,7 @@ def physical_colliders(ctx):
         if o is not hull and o.type=='MESH' and o.get('authored_access') and o.get('physics') in ('solid','walk_surface'):
             duplicate(o,'col_'+o.name.lower())
     # Default steering only; inactive deck-tiller variant is never exported.
-    skip=('luk_glowny','main_hatch_open_coaming','schody_rufowe','grodz_drzwi')
+    skip=('luk_glowny','main_hatch_open_coaming','schody_rufowe','grodz_drzwi','zejsciowka')
     for ob in ctx.get('przeszkody',[]):
         if ob['nazwa'].startswith(skip) or ob.get('wariant') not in (None,'naped_kolo'):continue
         if ob['h']<.3 or ob['nazwa'].startswith('maszt'):continue
@@ -514,6 +518,14 @@ def night_lanterns(ctx,spec):
 
 def save_scene(ctx,spec,out):
     out=Path(out);(out/'model').mkdir(parents=True,exist_ok=True)
+    origin=bpy.data.objects.get('asset_origin')
+    if origin is None:
+        origin=bpy.data.objects.new('asset_origin',None)
+        ctx['root'].objects.link(origin)
+    origin.location=(0,0,0)
+    origin['asset_role']='marker'
+    origin['waterline_m']=0.0
+    origin['vessel_id']=spec['id']
     for o in bpy.context.scene.objects:
         if o.type=='MESH' and 'asset_role' not in o:
             o['asset_role']='visual'
@@ -556,7 +568,8 @@ def save_scene(ctx,spec,out):
                      'hull':'reference table of offsets with monotone PCHIP, chapter 02',
                      'access':'real hollow voids, lowered cabin sole and climbable original-sized hatch'},
             'deviations':['Interior layout and lowered cabin sole are game reconstructions, not surviving period plans.',
-                          'BRIG is the game identifier; reference historical rig is snow circa 1710.',
+                          'The dummy quarterdeck companion is replaced by the real cabin entrance to keep its stair fragments out of the cabin.',
+                          'The unarmed prologue vessel uses the reference snow rig circa 1710.' if spec['id']=='night-hull' else 'BRIG is the game identifier; reference historical rig is snow circa 1710.',
                           'A climb controller is required at the hold ladder; no false floor-slope pass is claimed.']}
     design['intended_joints']=[
         {'a':'hold_ladder_*','b':'hold_ladder_*','reason':'rungs and mounting handrails fit into their stringers/posts'},
@@ -566,6 +579,25 @@ def save_scene(ctx,spec,out):
         {'a':'captain_door_jamb_*','b':'captain_door_lintel','reason':'lintel is tenoned into jambs'},
         {'a':'captain_chart_table','b':'chart_table_leg_*','reason':'tabletop rests on legs'},
         {'a':'captain_bunk_frame','b':'captain_bunk_mattress','reason':'mattress rests on bunk frame'}]
+    # Preserve the guide's documented construction joints as concrete object
+    # pairs. Material-limited source exceptions require a separate measurement;
+    # the obsolete "unmodelled cabin" exception does not apply to this interior.
+    from przenikanie import POLACZENIA
+    source_names=[o.name for o in bpy.context.scene.objects if o.type=='MESH' and
+                  o.get('asset_role') not in ('collision','presentation')]
+    declared=set()
+    for a,ma,b,mb,reason in POLACZENIA:
+        if ma!='*' or mb!='*' or 'nie jest modelowane' in reason:
+            continue
+        for name_a in source_names:
+            if not fnmatch.fnmatchcase(name_a,a):continue
+            for name_b in source_names:
+                if not fnmatch.fnmatchcase(name_b,b):continue
+                pair=tuple(sorted((name_a,name_b)))
+                if pair in declared:continue
+                declared.add(pair)
+                design['intended_joints'].append({'a':name_a,'b':name_b,'reason':reason,
+                    'source':'blender/przenikanie.py:POLACZENIA'})
     (out/'design.json').write_text(json.dumps(design,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
     return nav,design
 
