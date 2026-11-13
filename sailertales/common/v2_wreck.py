@@ -395,7 +395,14 @@ def deck_planks():
     floor0=-7.8;floor1=2.10;sole=SPEC['sole']
     for k in range(-10,10):
         x0=k*plank+.004;x1=(k+1)*plank-.004
-        for j,(a,b) in enumerate([(-7.8,-4.3),(-4.3,-.8),(-.8,2.1)]):
+        # Fit the ceiling boards to the local inner hull. A single 3.5m-long
+        # board was discarded at its narrow after end, leaving a missing floor
+        # beside the ladder even where the hull was wide enough for it.
+        mast_s=-SPEC['length']*.05
+        floor_cuts=sorted(set([*np.linspace(floor0,floor1,23),mast_s-.24,mast_s+.24]))
+        for j,(a,b) in enumerate(zip(floor_cuts,floor_cuts[1:])):
+            if abs((x0+x1)/2)<.22 and mast_s-.24<(a+b)/2<mast_s+.24:
+                continue  # Real opening around the mast, in both visuals and physics.
             w=min(KD.width(s,sole) for s in [a,(a+b)/2,b])-.20
             if x0<-w or x1>w:continue
             o=box('hold_plank_%02d_%d'%(k+10,j),p((x0+x1)/2,(a+b)/2,sole-.045),
@@ -478,7 +485,7 @@ def equipment():
         z=KD.deck(s,-2.17)
         o=box('spar_rest_%d'%i,p(-2.17,s,z+.035),(.38,.22,.07),'oak');collider(o)
     # Salvage cargo is behind/aside the certified route, never across it.
-    for i,(x,s) in enumerate([(-1.00,-4.0),(1.00,-4.0)]):
+    for i,(x,s) in enumerate([(-.48,-4.0),(.48,-4.0)]):
         a=p(x,s,SPEC['sole']);b=p(x,s,SPEC['sole']+.72)
         o=tapered('salvage_cask_%d'%i,a,b,.27,.26,'oak','fitting','solid',16);collider(o)
         for j,z in enumerate([.12,.59]):
@@ -652,7 +659,7 @@ def render():
     scene.render.filepath=str(OUT/'previews'/'interior.jpg');bpy.ops.render.render(write_still=True)
 
 
-def build(spec,out):
+def build(spec,out,no_render=False):
     global SPEC,OUT,KD,HEEL
     VIS.clear();COL.clear();MARKERS.clear();MATERIALS.clear();DECK_RECTS.clear();HOLD_RECTS.clear()
     SPEC=spec;OUT=Path(out).resolve();OUT.mkdir(parents=True,exist_ok=True)
@@ -675,7 +682,7 @@ def build(spec,out):
     d=lambda s,x=0:KD.deck(s,x)
     routes=[
         route_points('aft_deck_to_hatch',[p(.11,-8,d(-8,.11)),p(.11,-4.55,d(-4.55,.11)),
-                     p(1.65,-4.55,d(-4.55,1.65)),p(1.65,-2.15,d(-2.15,1.65)),LADDER['approach'],LADDER['top']]),
+                     p(1.98,-4.55,d(-4.55,1.98)),p(1.98,-2.15,d(-2.15,1.98)),LADDER['approach'],LADDER['top']]),
         route_points('hatch_to_hold',[LADDER['top'],LADDER['shaft_top'],LADDER['bottom']], 'climb'),
         route_points('hold_mast_bypass',[LADDER['bottom'],p(LADDER['bottom'].x,-3.15,spec['sole']),p(-.80,-3.15,spec['sole']),
                                   p(-.80,.05,spec['sole']),p(.10,.05,spec['sole']),p(.10,1.25,spec['sole'])]),
@@ -740,6 +747,7 @@ def build(spec,out):
            {'a':'keelson','b':'hull_strake_*','reason':'Narrow after deadwood and inner bottom planking enclose the keelson seating.'},
            {'a':'fractured_keel','b':'hull_strake_*','reason':'The first planking strake lands in the keel rabbet.'},
            {'a':'frame_*','b':'keelson','reason':'Floor timbers are fastened to the keelson.'},
+           {'a':'keelson','b':'broken_main_mast','reason':'The retained mast heel is housed in its structural step on the keelson.'},
            {'a':'frame_*','b':'hold_plank_*','reason':'Hold ceiling boards are fastened and locally housed over the internal frame faces.'},
            {'a':'frame_*','b':'hold_caulk_*','reason':'Ceiling-board caulking is housed along the same frame seating as its planks.'},
            {'a':'deck_beam_*','b':'deck_plank_*','reason':'Deck planks bed directly on the cambered deck beams.'},
@@ -749,6 +757,7 @@ def build(spec,out):
            {'a':'wale_*','b':'hull_strake_*','reason':'External wales overlap their supporting planking.'},
            {'a':'mast_partner_*','b':'broken_main_mast','reason':'Partners secure the mast stump at deck level.'},
            {'a':'ladder_*','b':'ladder_*','reason':'Ladder rungs, stringers, handrails and boarding tread are fastened joints.'},
+           {'a':'ladder_stringer_*','b':'hold_plank_*','reason':'The plumb salvage ladder feet are seated into shallow mortises in the hold ceiling boards.'},
            {'a':'ladder_beam_seat_*','b':'deck_*','reason':'Hanger beam seats rest on and are fastened to intact deck timber.'},
            {'a':'ladder_boarding_tread','b':'deck_plank_*','reason':'The outer end of the salvage boarding tread is housed into the sloping deck edge.'},
            {'a':'ladder_boarding_tread','b':'deck_caulk_*','reason':'Caulking seals the housed boarding-tread seating at the sloping deck edge.'},
@@ -763,11 +772,12 @@ def build(spec,out):
     lod(1);lod(2)
     for o in COL:o.hide_set(True)
     bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'model'/'ship.blend'),compress=True)
-    render()
+    if not no_render:render()
     print('WRECK_COMPLETE',OUT,flush=True)
 
 
 if __name__=='__main__':
     ap=argparse.ArgumentParser();ap.add_argument('spec');ap.add_argument('--out',required=True)
+    ap.add_argument('--no-render',action='store_true',help='Skip source beauty shots; exported GLB review is a separate step')
     args=ap.parse_args(sys.argv[sys.argv.index('--')+1:])
-    build(json.loads(Path(args.spec).read_text(encoding='utf-8')),args.out)
+    build(json.loads(Path(args.spec).read_text(encoding='utf-8')),args.out,args.no_render)
