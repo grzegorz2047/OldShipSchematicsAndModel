@@ -1,0 +1,28 @@
+{
+  "stage": "construction checkpoint; interiors and exported-asset tests pending",
+  "meshes": 226,
+  "triangles": 235148,
+  "hull": {
+    "vertices": 31261,
+    "faces": 30505,
+    "non_manifold_edges": 6,
+    "zero_area_faces": 0
+  },
+  "bounds": {
+    "minimum": [
+      -8.355555534362793,
+      -24.352930068969727,
+      -3.3016111850738525
+    ],
+    "maximum": [
+      8.355555534362793,
+      16.167179107666016,
+      31.209815979003906
+    ],
+    "size": [
+      16.711111068725586,
+      40.520111083984375,
+      34.51142883300781
+    ]
+  }
+}
