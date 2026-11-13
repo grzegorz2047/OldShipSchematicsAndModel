@@ -7,6 +7,7 @@ Every correction is recorded; the exported asset still faces an independent audi
 import math
 import bpy
 import bmesh
+import numpy as np
 from mathutils import Vector
 from mathutils.kdtree import KDTree
 
@@ -86,6 +87,50 @@ def triangulate_safe(bm,ngon_method):
     bmesh.ops.triangulate(bm,faces=[f for f in bm.faces if len(f.verts)>3],quad_method='BEAUTY',ngon_method=ngon_method)
 
 
+def rebuild_collapsed_rope(bm,verts,faces):
+    pts=np.array([tuple(v.co) for v in verts],dtype=np.float64)
+    center=pts.mean(axis=0);values,axes=np.linalg.eigh(np.cov(pts.T));axis=axes[:,-1]
+    if values[-1]<25*max(values[-2],1e-20):return None
+    t=(pts-center)@axis;span=float(t.max()-t.min())
+    if span<.02:return None
+    order=np.argsort(t);clusters=[]
+    for index in order:
+        if not clusters or t[index]-t[clusters[-1][-1]]>max(1e-4,span*.02):clusters.append([int(index)])
+        else:clusters[-1].append(int(index))
+    if len(clusters)<2:return None
+    centers=[pts[ids].mean(axis=0) for ids in clusters]
+    radii=[]
+    for ids,c in zip(clusters,centers):
+        rr=np.linalg.norm(pts[ids]-c,axis=1);rr=rr[rr>1e-6]
+        if not len(rr):return None
+        radii.append(float(np.median(rr)))
+    if max(radii)>span*.1:return None
+    material=max({f.material_index for f in faces},key=lambda k:sum(f.calc_area() for f in faces if f.material_index==k))
+    uv=bm.loops.layers.uv.active or bm.loops.layers.uv.new('UVMap')
+    rings=[];lengths=[0.]
+    for a,b in zip(centers,centers[1:]):lengths.append(lengths[-1]+float(np.linalg.norm(b-a)))
+    sides=6
+    for i,c in enumerate(centers):
+        p=Vector(c);tangent=Vector(centers[min(i+1,len(centers)-1)]-centers[max(0,i-1)]).normalized()
+        normal=tangent.cross(Vector((0,0,1)))
+        if normal.length<.01:normal=tangent.cross(Vector((1,0,0)))
+        normal.normalize();second=tangent.cross(normal).normalized()
+        rings.append([bm.verts.new(p+radii[i]*(normal*math.cos(2*math.pi*j/sides)+second*math.sin(2*math.pi*j/sides))) for j in range(sides)])
+    diameter=2*float(np.median(radii));pitch=6.6*diameter
+    for i in range(len(rings)-1):
+        for j in range(sides):
+            f=bm.faces.new((rings[i][j],rings[i][(j+1)%sides],rings[i+1][(j+1)%sides],rings[i+1][j]))
+            f.material_index=material;f.smooth=True
+            coords=((lengths[i]/pitch,j/sides),(lengths[i]/pitch,(j+1)/sides),
+                    (lengths[i+1]/pitch,(j+1)/sides),(lengths[i+1]/pitch,j/sides))
+            for loop,q in zip(f.loops,coords):loop[uv].uv=q
+    for rr in (list(reversed(rings[0])),rings[-1]):
+        f=bm.faces.new(rr);f.material_index=material
+        for j,loop in enumerate(f.loops):loop[uv].uv=(.5+.5*math.cos(2*math.pi*j/sides),.5+.5*math.sin(2*math.pi*j/sides))
+    return {'centres_m':[list(c) for c in centers],'radii_m':radii,
+            'method':'Rebuild the collapsed straight rope tube from its existing cross-section centres and measured radii; six consistent frame sides.'}
+
+
 def finish_mesh(o,ngon_method='BEAUTY'):
     dg=bpy.context.evaluated_depsgraph_get()
     old=o.data;me=bpy.data.meshes.new_from_object(o.evaluated_get(dg),preserve_all_data_layers=True,depsgraph=dg)
@@ -112,23 +157,30 @@ def finish_mesh(o,ngon_method='BEAUTY'):
             result=bmesh.ops.holes_fill(bm,edges=edges,sides=16)
             caps=len(result.get('faces',[]))
     bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces))
-    flipped=0;zero_vertices=[];zero_components=0
+    flipped=0;zero_vertices=[];zero_components=0;rebuilt=[]
     for verts,faces in components(bm):
         if not all(e.is_manifold for f in faces for e in f.edges):continue
-        centre=sum((v.co for v in verts),Vector())/len(verts)
+        centre=tuple(float(q) for q in np.mean(np.array([tuple(v.co) for v in verts],dtype=np.float64),axis=0))
         volume=0.
         for f in faces:
-            pp=[v.co-centre for v in f.verts]
-            for i in range(1,len(pp)-1):volume+=pp[0].dot(pp[i].cross(pp[i+1]))/6
+            pp=[(float(v.co.x)-centre[0],float(v.co.y)-centre[1],float(v.co.z)-centre[2]) for v in f.verts]
+            a=pp[0]
+            for i in range(1,len(pp)-1):
+                b,c=pp[i],pp[i+1]
+                volume+=(a[0]*(b[1]*c[2]-b[2]*c[1])+a[1]*(b[2]*c[0]-b[0]*c[2])+a[2]*(b[0]*c[1]-b[1]*c[0]))/6
         if abs(volume)<=1e-12:
-            zero_vertices.extend(verts);zero_components+=1
+            repair=rebuild_collapsed_rope(bm,verts,faces) if tube else None
+            if repair:rebuilt.append(repair)
+            else:zero_components+=1
+            zero_vertices.extend(verts)
         elif volume<0:
             bmesh.ops.reverse_faces(bm,faces=list(faces));flipped+=1
     if zero_vertices:bmesh.ops.delete(bm,geom=zero_vertices,context='VERTS')
+    if rebuilt:bm.normal_update()
     triangulate_safe(bm,ngon_method)
     remove_opposed_duplicate_triangles(bm)
     after=mesh_stats(bm);bm.to_mesh(me);bm.free();me.update()
-    return {'name':o.name,'before':before,'after':after,'capped_tube_ends':caps,'outward_islands_reoriented':flipped,'separated_contact_vertices':separated,'internal_interface_faces_removed':len(interfaces),'zero_volume_components_removed':zero_components}
+    return {'name':o.name,'before':before,'after':after,'capped_tube_ends':caps,'outward_islands_reoriented':flipped,'separated_contact_vertices':separated,'internal_interface_faces_removed':len(interfaces),'zero_volume_components_removed':zero_components,'collapsed_rope_tubes_rebuilt':rebuilt}
 
 
 def finish_scene(objects):
