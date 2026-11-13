@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "units": "metres",
+  "axes": "glTF: X across, Y up, Z forward",
+  "player": {
+    "radius": 0.38,
+    "height": 1.85,
+    "max_slope_deg": 35
+  },
+  "routes": [
+    {
+      "name": "cockpit",
+      "points": [
+        [
+          -0.30000001192092896,
+          -0.11999999731779099,
+          -1.2999999523162842
+        ],
+        [
+          -0.3799999952316284,
+          -0.11999999731779099,
+          -0.15000000596046448
+        ]
+      ]
+    },
+    {
+      "name": "mast_bypass",
+      "points": [
+        [
+          -0.3799999952316284,
+          -0.11999999731779099,
+          -0.15000000596046448
+        ],
+        [
+          -0.3799999952316284,
+          -0.11999999731779099,
+          0.8500000238418579
+        ],
+        [
+          -0.30000001192092896,
+          -0.11999999731779099,
+          1.4500000476837158
+        ]
+      ]
+    }
+  ],
+  "source_commit": "ea77e560ba4668c9dda55433813addbdb2f50176",
+  "limitations": [
+    "Zachowana d\u0142ugo\u015b\u0107 i szeroko\u015b\u0107. Maszt przesuni\u0119ty o 0.22 m w bok, stopa \u017cagla podniesiona dla przej\u015bcia gracza; to odst\u0119pstwa do gry.",
+    "Otwarta \u0142\u00f3d\u017a: brak podpok\u0142adu i kajuty. Pok\u0142ad do chodzenia to pod\u0142oga kokpitu, nie dach."
+  ]
+}
