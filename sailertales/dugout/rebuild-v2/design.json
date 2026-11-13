@@ -1,0 +1,282 @@
+{
+  "schema": 2,
+  "id": "dugout",
+  "construction": "single carved hollow timber; no fabricated frames, strakes or keel",
+  "basis": {
+    "repo": "grzegorz2047/OldShipSchematicsAndModel",
+    "commit": "2e6f7e922e95396722376d42f3e2e0a12256029e",
+    "source": "docs/en/03-hull-construction.md and 13/14 general timber, mesh and game principles",
+    "sha256": "6c0fc58bb6b35197ac50cdf07202b9d8d39d14a9aa3d3a9e13c0d725491d79bc",
+    "chapters": [
+      "03 hull construction",
+      "08 ropes and sails",
+      "09 deck machinery and fittings",
+      "13 quality checklist",
+      "14 game integration"
+    ],
+    "construction_note": "The guide does not supply a dugout plan. The single carved-log profile and retained seats are our inference; no clinker frame/plank recipe is claimed for this boat."
+  },
+  "dimensions_m": {
+    "length": 5.5,
+    "beam": 1.4,
+    "draft_game_bound": 0.35,
+    "standing_sole": 0.04
+  },
+  "rules": {
+    "clinker_plank_m": 0.022,
+    "clinker_lap_m": 0.012,
+    "freeboard_above_sole_m": 0.27,
+    "frame_spacing_m": 0.4,
+    "wood_texture_tile_m": 2,
+    "wood_texture_pixels": 2048,
+    "grain_uv": "physical isometric triangles; axial UV on rods",
+    "mewka_sail_foot_above_sole_m": null
+  },
+  "confidence": "our inference; guide boat recipe adapted to game families, not a claimed period plan",
+  "game_deviations": [
+    "End thwarts and side seats leave a real standing corridor; no solid thwart across that corridor.",
+    "The small craft have no fabricated cabin or lower deck.",
+    "Dimensions specified as game bounds; no hydrostatic seaworthiness certification."
+  ],
+  "materials": {
+    "method": "guide-sized authored PBR atlas upgrade",
+    "materials": [
+      {
+        "source": "drewno",
+        "material": "v2_drewno",
+        "palette_srgb": [
+          0.62,
+          0.46,
+          0.3
+        ],
+        "old_uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "image_px": [
+          2048,
+          2048
+        ],
+        "family": "wood",
+        "metallic": 0
+      },
+      {
+        "source": "lina_jasna",
+        "material": "v2_lina_jasna",
+        "palette_srgb": [
+          0.64,
+          0.57,
+          0.43
+        ],
+        "old_uv_tile_m": [
+          1.0,
+          1.0
+        ],
+        "uv_tile_m": [
+          1.0,
+          1.0
+        ],
+        "image_px": [
+          1024,
+          512
+        ],
+        "family": "rope",
+        "metallic": 0
+      }
+    ],
+    "provenance": {
+      "license": "project-authored procedural textures; no external imagery",
+      "basis": [
+        "docs/en/03-hull-construction.md",
+        "docs/en/04-decks-bulwarks-stern-head.md",
+        "docs/en/08-ropes-blocks-and-sails.md",
+        "docs/en/13-3d-quality-checklist.md"
+      ],
+      "atlas_m": {
+        "deck": [
+          3.52,
+          0.88
+        ],
+        "hull": [
+          4.4,
+          1.1
+        ],
+        "paint": [
+          4.4,
+          1.1
+        ],
+        "wood": [
+          2.0,
+          2.0
+        ],
+        "iron": [
+          1.0,
+          1.0
+        ],
+        "rope": [
+          1.0,
+          1.0
+        ],
+        "canvas": [
+          2.4,
+          2.4
+        ]
+      },
+      "method": "continuous authored grain, physical seams/trunnels, normal from metric height derivatives",
+      "palette_srgb": {
+        "poklad": [
+          0.62,
+          0.575,
+          0.5
+        ],
+        "burta_drewno": [
+          0.46,
+          0.33,
+          0.22
+        ],
+        "drewno": [
+          0.62,
+          0.46,
+          0.3
+        ],
+        "drewno_ciemne": [
+          0.4,
+          0.28,
+          0.17
+        ],
+        "drewno_czarne": [
+          0.23,
+          0.215,
+          0.19
+        ],
+        "laweta": [
+          0.4,
+          0.15,
+          0.09
+        ],
+        "farba_czarna": [
+          0.2,
+          0.19,
+          0.18
+        ],
+        "farba_czarna_gladka": [
+          0.23,
+          0.22,
+          0.21
+        ],
+        "farba_ochra": [
+          0.68,
+          0.52,
+          0.27
+        ],
+        "farba_czerwona": [
+          0.55,
+          0.17,
+          0.1
+        ],
+        "farba_niebieska": [
+          0.16,
+          0.23,
+          0.36
+        ],
+        "farba_dno_biala": [
+          0.84,
+          0.81,
+          0.73
+        ],
+        "farba_dno_czerwona": [
+          0.42,
+          0.18,
+          0.12
+        ],
+        "rzezby_zlote": [
+          0.82,
+          0.63,
+          0.3
+        ],
+        "zelazo": [
+          0.19,
+          0.18,
+          0.17
+        ],
+        "zelazo_lufa": [
+          0.19,
+          0.18,
+          0.17
+        ],
+        "braz": [
+          0.62,
+          0.42,
+          0.2
+        ],
+        "lina_smolowana": [
+          0.23,
+          0.21,
+          0.18
+        ],
+        "lina_jasna": [
+          0.64,
+          0.57,
+          0.43
+        ],
+        "plotno": [
+          0.84,
+          0.8,
+          0.7
+        ],
+        "szklo": [
+          0.18,
+          0.23,
+          0.25
+        ]
+      }
+    }
+  },
+  "spec_sha256": "7aa8e3f7d73e4b792d09f0dea4be737b6e2dd0b38d8b31ed3beb4f609cf4103e",
+  "sources": {
+    "repo": "grzegorz2047/OldShipSchematicsAndModel",
+    "commit": "2e6f7e922e95396722376d42f3e2e0a12256029e",
+    "source": "docs/en/03-hull-construction.md and 13/14 general timber, mesh and game principles",
+    "sha256": "6c0fc58bb6b35197ac50cdf07202b9d8d39d14a9aa3d3a9e13c0d725491d79bc",
+    "chapters": [
+      "03 hull construction",
+      "08 ropes and sails",
+      "09 deck machinery and fittings",
+      "13 quality checklist",
+      "14 game integration"
+    ],
+    "construction_note": "The guide does not supply a dugout plan. The single carved-log profile and retained seats are our inference; no clinker frame/plank recipe is claimed for this boat."
+  },
+  "origin": {
+    "position_gltf_m": [
+      0,
+      0,
+      0
+    ],
+    "meaning": "design waterline at hull mid-length"
+  },
+  "intended_joints": [
+    {
+      "a": "paddle_shaft",
+      "b": "paddle_blade",
+      "reason": "The paddle loom is housed in its blade; the paddle is lashed above the carved rim."
+    }
+  ],
+  "triangles": {
+    "lod0": 3334,
+    "collision": 3230,
+    "lod1": 1672,
+    "lod2": 283
+  },
+  "export": {
+    "units": "metres",
+    "axes": "glTF +X port, +Y up, +Z forward",
+    "animations": "authored static pose; transforms/pivot markers retained",
+    "lods": "static distance meshes with 1024/512 max texture dimension",
+    "collision_mode": "separate static concave meshes; moving parts require engine setup"
+  }
+}
