@@ -1,0 +1,30 @@
+{
+  "schema": 2,
+  "units": "metres",
+  "axes": "glTF X port, Y up, Z bow",
+  "player": {
+    "radius": 0.38,
+    "height": 1.85,
+    "max_slope_deg": 35
+  },
+  "routes": [
+    {
+      "name": "standing_cockpit",
+      "mode": "walk",
+      "points": [
+        [
+          0,
+          0.08,
+          -0.6
+        ],
+        [
+          0,
+          0.08,
+          0.55
+        ]
+      ]
+    }
+  ],
+  "source_commit": "ea77e560ba4668c9dda55433813addbdb2f50176",
+  "requires_engine_controller": true
+}
