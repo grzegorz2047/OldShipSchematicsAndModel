@@ -53,7 +53,6 @@ Ten PR dostarcza statyczny asset i metadane integracji. Kontroler postaci,
 wspinanie, ruch postaci wraz z płynącym statkiem, animowanie mechanizmów,
 maskowanie wody i podłączenie do aktualnej gry wymagają adaptera silnika.
 Należy używać tych samych transformacji modelu, kolizji i punktów tras.
-Przechył wraku jest już zapisany w geometrii — nie nakładać go drugi raz.
 
 ## Źródła i odstępstwa
 
@@ -123,7 +122,7 @@ wszystkie stanowiska załogi albo dowolny ruch takielunku.
 | G5 | PASS | {"exact_duplicate_materials":0} |
 | H1 | PASS | {"bytes":19808504,"budget_bytes":33554432} |
 | H2 | PASS | {"triangles":68812,"budget":280000} |
-| H3 | PASS | {"passed":true,"source_triangles":68812,"export_triangles":68812,"triangle_relative_difference":0.0,"max_bound_error_m":0.0,"missing_source_mesh_nodes":[],"unexpected_export_mesh_nodes":[],"unpacked_used_images":[],"method":"evaluated source visual meshes versus actual GLB mesh names, triangle count and world bounds"} |
+| H3 | PASS | {"passed":true,"source_triangles":68812,"export_triangles":68812,"export_indexed_triangles":68812,"triangle_count_scope":"source and export include every mesh-node instance; indexed count is separate","triangle_relative_difference":0.0,"max_bound_error_m":0.0,"missing_source_mesh_nodes":[],"unexpected_export_mesh_nodes":[],"unpacked_used_images":[] |
 | H4 | PASS | {"distinct_image_role_check":[],"embedded_images":12} |
 | H5 | PASS | {"present":true,"passed":true,"fingerprints_match":true,"review":{"schema":1,"source_triangles":68812,"export_triangles":68812,"triangle_match":true,"views":{"hero":{"foreground_pixels":30384,"source_mean_rgb":[0.556358277797699,0.503974199295044,0.43216565251350403],"export_mean_rgb":[0.5563316941261292,0.5039466619491577,0.43213313817977905],"bri |
 | H6 | PASS | {"primitives_with_tangents":0,"strategy":"provided tangent attribute or engine-derived glTF tangent basis"} |
