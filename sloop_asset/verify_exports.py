@@ -10,6 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from audit import audit_scene
 from glb_io import validate
 from build_sloop import Deck, PR, rzedne, kadlub
+from check_asset import source_hashes, sha256
 
 
 def clearance(deck, frames):
@@ -79,6 +80,8 @@ def main(folder):
         "scope": "Authored sail trim and wind morph loop only. No full boom rotation or dynamic rope simulation.",
     }
     manifest = json.loads((folder / "asset_manifest.json").read_text())
+    assert manifest["source_file_sha256"] == source_hashes(Path(__file__).resolve().parents[1]), "Build sources changed; rebuild before verifying"
+    report["source_file_sha256"] = manifest["source_file_sha256"]
     for key, filename in [
         ("lod0", "sloop_1715.glb"),
         ("lod1", "sloop_1715_lod1.glb"),
@@ -116,6 +119,7 @@ def main(folder):
         )
         assert rig["passed"], ("rope/canvas intersections", key, rig["hits"][:2])
         clear = clearance(deck, frames)
+        clear["source_glb_sha256"] = sha
         (folder / ("export_clearance_" + key + ".json")).write_text(
             json.dumps(clear, indent=2)
         )
@@ -189,6 +193,9 @@ def main(folder):
         > report["models"]["lod2"]["triangles"]
     )
     report["result"] = "passed"
+    data_files = ["asset_manifest.json", "deck_access.json", "deck_layout.json", "workstations.json", "rigging_paths.json", "sail_measurements.json", "build_summary.json"]
+    data_files += ["export_" + kind + "_" + level + ".json" for kind in ("rigging", "clearance") for level in ("lod0", "lod1", "lod2")]
+    report["data_file_sha256"] = {name: sha256(folder / name) for name in data_files}
     (folder / "native_import_validation.json").write_text(json.dumps(report, indent=2))
     print("VERIFIED_SLOOP_EXPORTS", json.dumps(report), flush=True)
 

@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path[:0] = [str(Path(__file__).resolve().parent), str(ROOT / "blender")]
 import geometry as G
 from audit import audit_scene
+from check_asset import source_hashes
 import parametry as PR, rzedne, kadlub
 
 P = lambda x, s, z: Vector((x, -s, z))
@@ -1361,6 +1362,7 @@ def main():
             "armament": "Four illustrative 3-pounders, merchant variant",
             "triangles": {"lod0": n0, "lod1": n1, "lod2": n2},
             "collision_objects": nc,
+            "source_file_sha256": source_hashes(ROOT),
             "controls": [{"name": o.name, **dict(o.items())} for o in CONTROLS],
             "animation": "Pinned-edge cloth wind loop, 4 seconds at 24 fps; LODs static",
             "limits": "Only authored sailing pose and wind morph loop audited; rotating spars requires runtime rig/rope solution. No flotation, navigation, damage or engine controller included.",

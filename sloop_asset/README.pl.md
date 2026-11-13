@@ -30,6 +30,9 @@ Paczka zawiera model GLB z materiałami i teksturami, dwa statyczne LOD-y, osobn
 | `sail_measurements.json` | Zmierzone powierzchnie i geometryczne środki żagli |
 | `native_import_validation.json` | Wynik ponownego importu GLB wraz z SHA-256 plików |
 
+Najnowsze odtworzenie i skróty plików: [verification-2026-11-13.json](verification-2026-11-13.json).
+Sam raport nie zastępuje kontroli dostarczonych plików.
+
 ## Odtworzenie
 
 Uruchom w katalogu głównym repozytorium po przełączeniu na tę gałąź. Sprawdzono w **Blenderze 4.3.2**, z dołączonym NumPy. Nie potrzeba pobierać tekstur ani instalować pakietów do generowania modelu.
@@ -41,11 +44,20 @@ blender -b --factory-startup --python-exit-code 1 \
 blender -b --factory-startup --python-exit-code 1 \
   --python sloop_asset/verify_exports.py -- build/sloop_1715
 
+python sloop_asset/check_asset.py build/sloop_1715
+
 blender -b build/sloop_1715/sloop_1715.blend --python-exit-code 1 \
   --python sloop_asset/render_previews.py -- build/sloop_1715
 ```
 
 Pominięcie `--no-render` w pierwszym poleceniu od razu wykona również cztery rendery. Generator zapisuje wynik wyłącznie do wskazanego katalogu wyjściowego. Nie nadpisuje modelu referencyjnego.
+
+`check_asset.py` działa bez Blendera i dodatkowych pakietów. Porównuje rzeczywiste
+GLB, raporty prześwitu i olinowania oraz dane pokładu ze skrótami z ponownego
+importu; sprawdza też komplet klatek i dziewięć stanowisk. W pełnym repozytorium
+odrzuca również zmianę źródeł od czasu budowy. W paczce można uruchomić
+`python source/check_asset.py .`. Zmienione źródła wymagają ponownej budowy i
+ponownego importu; checker nie powtarza testów geometrii.
 
 ## Integracja z grą
 
