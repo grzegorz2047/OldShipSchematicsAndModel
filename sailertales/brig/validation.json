@@ -1,0 +1,102 @@
+{
+  "schema": 1,
+  "blender": "5.2.3 LTS",
+  "capsule": {
+    "radius": 0.38,
+    "height": 1.85,
+    "max_slope_deg": 35
+  },
+  "step_m": 0.12,
+  "geometric_tolerance_m": 0.015,
+  "rounded_foot_lift_m": 0.08,
+  "negative_controls": [
+    "wall rejects",
+    "low ceiling rejects",
+    "open floor passes"
+  ],
+  "checks": {
+    "model/ship.glb": {
+      "triangles": 14033,
+      "routes": [
+        {
+          "route": "deck_to_hold",
+          "samples": 100,
+          "passed": true,
+          "failures": [],
+          "failure_count": 0
+        },
+        {
+          "route": "main_deck",
+          "samples": 136,
+          "passed": true,
+          "failures": [],
+          "failure_count": 0
+        },
+        {
+          "route": "captains_cabin",
+          "samples": 41,
+          "passed": true,
+          "failures": [],
+          "failure_count": 0
+        },
+        {
+          "route": "quarterdeck",
+          "samples": 85,
+          "passed": true,
+          "failures": [],
+          "failure_count": 0
+        }
+      ]
+    },
+    "model/collision.glb": {
+      "triangles": 4320,
+      "routes": [
+        {
+          "route": "deck_to_hold",
+          "samples": 100,
+          "passed": true,
+          "failures": [],
+          "failure_count": 0
+        },
+        {
+          "route": "main_deck",
+          "samples": 136,
+          "passed": true,
+          "failures": [],
+          "failure_count": 0
+        },
+        {
+          "route": "captains_cabin",
+          "samples": 41,
+          "passed": true,
+          "failures": [],
+          "failure_count": 0
+        },
+        {
+          "route": "quarterdeck",
+          "samples": 85,
+          "passed": true,
+          "failures": [],
+          "failure_count": 0
+        }
+      ]
+    }
+  },
+  "sha256": {
+    "model/ship.glb": "88876f65815752b3b4993dbb16980c9407c94e56f9498f0b1ada0d671369725f",
+    "model/collision.glb": "c0d1a3804d1b1ce163ec2e243f289c6d87dc31d9437c28ece9931d7da57068da",
+    "navigation.json": "269bdff2791dafc0af0315bf6710650820228f4eb98531cef2a5b0a625c85645",
+    "spec.json": "20b7e2682c6dbc00d27252a74c9d7d597e94dec01d7dcc0a2c9b2b1d72926f02",
+    "../common/build.py": "bbf3f79e68eef5ab84efab253bf968ef3c94378a480e202ce090863fc8bf9d13",
+    "../common/verify.py": "142a5fcb4bcfec18e225ab66615b2339fa046e8c40f616f151890c2bd60366f1"
+  },
+  "rig": {
+    "passed": true,
+    "sails": 6,
+    "ropes": 25,
+    "spars": 9,
+    "scope": "authored static pose; bolt ropes are cloth-edge attachments",
+    "intersections": []
+  },
+  "passed": true
+}
