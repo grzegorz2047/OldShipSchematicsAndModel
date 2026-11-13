@@ -710,6 +710,8 @@ def main():
         deploy(ctx,spec,out)
         from v2_brig_tags import prepare
         prepare(ctx)
+        from v2_brig_fittings import finish
+        finish(ctx,out)
     augment_interiors(ctx,spec)
     stow_capstan(ctx)
     if spec['id']=='night-hull':night_lanterns(ctx,spec)

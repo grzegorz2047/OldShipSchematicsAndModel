@@ -163,7 +163,9 @@ def finish_uv(objects,design,split=True):
         linear=o.matrix_world.to_3x3();metric=linear.transposed()@linear
         inverse=o.matrix_world.inverted_safe()
         local_path=tuple(tuple(round(v,8) for v in inverse@q) for q in grain_path(o))
-        cache_key=(o.data.as_pointer(),tuple(round(metric[i][j],8) for i in range(3) for j in range(3)),local_path)
+        # Unit rigid transforms carry float32 noise around 1e-7 in the source.
+        # Six decimals groups the same physical scale across rotated instances.
+        cache_key=(o.data.as_pointer(),tuple(round(metric[i][j],6) for i in range(3) for j in range(3)),local_path)
         if cache_key in instance_cache:
             entry=instance_cache[cache_key];o.data=entry['mesh']
             if entry.get('grain_path_json') and not o.get('grain_path_json'):
