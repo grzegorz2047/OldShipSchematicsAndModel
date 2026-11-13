@@ -731,12 +731,12 @@ def reference_crew():
         ball("head",(0,0,1.61),(.13,.13,.14),skin)
 
 
-def render_setup():
+def render_setup(samples=64, resolution_percentage=100):
     scene=bpy.context.scene
     scene.render.engine="CYCLES"
-    scene.cycles.samples=64
+    scene.cycles.samples=samples
     scene.cycles.use_denoising=False
-    scene.render.resolution_percentage=100
+    scene.render.resolution_percentage=resolution_percentage
     scene.render.image_settings.file_format="PNG"
     if scene.world is None:
         scene.world=bpy.data.worlds.new("ocean_sky")
@@ -875,6 +875,8 @@ def main():
         shutil.copy2(ROOT/"data"/name,OUT/"data"/name)
     manifest={"asset":"snow_sailing","source":"https://github.com/grzegorz2047/OldShipSchematicsAndModel",
         "source_glb_sha256":hashlib.sha256((ROOT/"model"/"snow.glb").read_bytes()).hexdigest(),
+        "source_file_sha256":{p.name:hashlib.sha256(p.read_bytes()).hexdigest()
+            for p in (ROOT/"game_asset").glob("*.py")},
         "blender_version":bpy.app.version_string,"triangles":stats,"sail_count":12,
         "steering_variant":"steering_wheel_variant","rebuilt_dynamic_line_ids":changed,
         "lod_distances_m":[0,75,250],"lod_hysteresis":.15,
@@ -894,6 +896,7 @@ def main():
     shutil.copy2(ROOT/"game_asset"/"deck_clearance.py",OUT/"deck_clearance.py")
     shutil.copy2(ROOT/"game_asset"/"rigging_collisions.py",OUT/"rigging_collisions.py")
     shutil.copy2(ROOT/"game_asset"/"verify_exports.py",OUT/"verify_exports.py")
+    shutil.copy2(ROOT/"game_asset"/"render_previews.py",OUT/"render_previews.py")
     if (ROOT/"game_asset"/"README.pl.md").exists():
         shutil.copy2(ROOT/"game_asset"/"README.pl.md",OUT/"README.pl.md")
     if not args.no_renders:

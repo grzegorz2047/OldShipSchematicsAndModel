@@ -1,23 +1,33 @@
 {
   "reference_commit": "2e6f7e922e95396722376d42f3e2e0a12256029e",
+  "checked_at_utc": "2026-11-13T14:44:33.424615+00:00",
+  "blender": "4.3.2",
   "source_glb_sha256": "9a2cb1d7a9c00b978ae82d2864be3d9d5438fc04bf50a85eb8bda1a414eedb04",
+  "source_file_sha256": {
+    "rigging_collisions.py": "ffcdd13ac3428529e12bcf167e9852a0ae057fdd84e78c8729c7e1f2744fde5d",
+    "validate_asset.py": "03888f5f6ab44192a140401a4e7641ba08d23bdb338559281c8727dbab2f459f",
+    "verify_exports.py": "fa9d549f9b909961bf3b13491c148983d25cf51acc0db557996749cd36a4c325",
+    "deck_clearance.py": "e5886836b59d62fc1491139651d869af4187ba0653e456b50a6229bb83c318eb",
+    "build_ship.py": "6179e55cd0ef746ab7a15ba4da72067099d2ffdda0ef678d71feec596dc1e172",
+    "render_previews.py": "d2b19b2d9b2fbd4a4cb081927c24718ae2a5840f1f9d4a911b8bcd624b63807f"
+  },
   "validation": {
     "lod0": {
       "triangles": 291627,
-      "bytes": 38077404,
+      "bytes": 38076668,
       "nodes": 418
     },
     "sails": 12,
     "animation_seconds": 4.0,
     "stations": 140,
     "lod1": {
-      "triangles": 153239,
-      "bytes": 26682184,
+      "triangles": 153240,
+      "bytes": 26681836,
       "nodes": 1
     },
     "lod2": {
-      "triangles": 22769,
-      "bytes": 5544476,
+      "triangles": 22779,
+      "bytes": 5544240,
       "nodes": 1
     },
     "collision_meshes": 36,
@@ -71,7 +81,7 @@
         ],
         "sails": 12,
         "rope_objects": 148,
-        "source_glb_sha256": "5fe6bdf893ebbbb1935febe09840ca4f79d4b32fedd8ff86ad6027a0fdc3e6e5"
+        "source_glb_sha256": "be46cf1c3c55d9df020d84a91369325ed40c8a5b32468802e80ca05b7806d231"
       },
       "lod1": {
         "passed": true,
@@ -80,7 +90,7 @@
         ],
         "sails": 12,
         "rope_objects": 1,
-        "source_glb_sha256": "ffacdfc73f29d9f71ac54c9e0f7cea2f4c20cf68b8f45116db58824e60c6439e"
+        "source_glb_sha256": "9655ca8d406500690bdd58e005fbed92de5b9479359cd99f37ba9c3964947907"
       },
       "lod2": {
         "passed": true,
@@ -89,7 +99,7 @@
         ],
         "sails": 12,
         "rope_objects": 1,
-        "source_glb_sha256": "752e49811eaac217fe990b43af9929f0d3fc6165c9fa73586a63d4d0df2e5830"
+        "source_glb_sha256": "a4ddd1329d99c62184b7250db97be7eaebf37375dba24805f06a22a6ead5ae75"
       }
     },
     "animation_key_weight_sum_by_frame": {
@@ -113,6 +123,7 @@
     "result": "passed"
   },
   "deck_clearance": {
+    "source_glb_sha256": "be46cf1c3c55d9df020d84a91369325ed40c8a5b32468802e80ca05b7806d231",
     "required_clearance_m": 2.2,
     "walker_height_m": 1.75,
     "scope": "canvas above main deck and quarterdeck; equipment footprints included; wind frames 0/24/72",
@@ -269,7 +280,21 @@
     "hits": [],
     "passed": true
   },
-  "negative_control": {
+  "integrity_negative_controls": {
+    "stale_deck_clearance": {
+      "rejected": true,
+      "reason": "stale deck-clearance report"
+    },
+    "incomplete_animation_audit": {
+      "rejected": true,
+      "reason": "incomplete cloth-loop audit"
+    },
+    "stale_source": {
+      "rejected": true,
+      "reason": "stale generated asset: build_ship.py"
+    }
+  },
+  "historical_rigging_negative_control": {
     "baseline_generator_commit": "c8c93e75ed5d6011860d434c4a23c25af8c827dc",
     "baseline_glb_sha256": "4ea8ea8c949038c4cda3a9d21e3e24b0492432904359558a59a25ad8eb202a40",
     "negative_control_passed": true,
@@ -281,9 +306,16 @@
     }
   },
   "glb_sha256": {
+    "snow_sailing.glb": "be46cf1c3c55d9df020d84a91369325ed40c8a5b32468802e80ca05b7806d231",
+    "snow_sailing_lod1.glb": "9655ca8d406500690bdd58e005fbed92de5b9479359cd99f37ba9c3964947907",
     "snow_collision.glb": "3fb47bab16860a952e3a79bab1012cbd018f6fc62b9cbb946c0065d72b4c3ee8",
-    "snow_sailing_lod2.glb": "752e49811eaac217fe990b43af9929f0d3fc6165c9fa73586a63d4d0df2e5830",
-    "snow_sailing.glb": "5fe6bdf893ebbbb1935febe09840ca4f79d4b32fedd8ff86ad6027a0fdc3e6e5",
-    "snow_sailing_lod1.glb": "ffacdfc73f29d9f71ac54c9e0f7cea2f4c20cf68b8f45116db58824e60c6439e"
-  }
+    "snow_sailing_lod2.glb": "a4ddd1329d99c62184b7250db97be7eaebf37375dba24805f06a22a6ead5ae75"
+  },
+  "scope": "Authored working-yard pose; nine samples of the four-second cloth loop and static LODs. No arbitrary bracing, engine navigation, sailing physics or interiors.",
+  "reproduce_commands": [
+    "blender -t 2 -b --factory-startup --python-exit-code 1 --python game_asset/build_ship.py -- --out build/final_ship --no-renders",
+    "blender -t 2 -b --factory-startup --python-exit-code 1 --python game_asset/verify_exports.py -- build/final_ship",
+    "python game_asset/validate_asset.py build/final_ship",
+    "blender -t 2 -b build/final_ship/snow_sailing.blend --python-exit-code 1 --python game_asset/render_previews.py -- build/final_ship --samples 16 --resolution-percentage 60"
+  ]
 }
