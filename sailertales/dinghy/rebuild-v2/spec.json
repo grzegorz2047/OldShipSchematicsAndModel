@@ -1,0 +1,24 @@
+{
+  "id": "dinghy",
+  "label": "Szalupa szybkiej podróży",
+  "length": 3.25,
+  "beam": 1.2384,
+  "draft": 0.3,
+  "deck": 0.08,
+  "sole": 0.08,
+  "rig": "none",
+  "small": true,
+  "source_paths": [
+    "src/models/boat.js:DINGHY"
+  ],
+  "limitations": [
+    "Gabaryty wynikają z HULL.L × 0.5 i pełnej szerokości 2×HULL.B × 0.72.",
+    "Tylko lokalne przemieszczanie w małym kokpicie. Nie ma podpokładu ani kajuty."
+  ],
+  "source_commit": "ea77e560ba4668c9dda55433813addbdb2f50176",
+  "player": {
+    "radius": 0.38,
+    "height": 1.85
+  },
+  "walk_fraction": 0.12
+}
