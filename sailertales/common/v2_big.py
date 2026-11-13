@@ -517,6 +517,14 @@ def night_lanterns(ctx,spec):
 
 def save_scene(ctx,spec,out):
     out=Path(out);(out/'model').mkdir(parents=True,exist_ok=True)
+    origin=bpy.data.objects.get('asset_origin')
+    if origin is None:
+        origin=bpy.data.objects.new('asset_origin',None)
+        ctx['root'].objects.link(origin)
+    origin.location=(0,0,0)
+    origin['asset_role']='marker'
+    origin['waterline_m']=0.0
+    origin['vessel_id']=spec['id']
     for o in bpy.context.scene.objects:
         if o.type=='MESH' and 'asset_role' not in o:
             o['asset_role']='visual'
