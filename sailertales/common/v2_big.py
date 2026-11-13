@@ -710,6 +710,8 @@ def main():
         deploy(ctx,spec,out)
         from v2_brig_tags import prepare
         prepare(ctx)
+        from v2_brig_fittings import finish
+        finish(ctx,out)
     augment_interiors(ctx,spec)
     stow_capstan(ctx)
     if spec['id']=='night-hull':night_lanterns(ctx,spec)
@@ -741,6 +743,9 @@ def main():
             from v2_big_fittings import add_night_head_joints
             add_night_head_joints(visual,design)
         if spec['id']=='brig':design['final_mesh_finish']=finish_scene(visual)
+        # Make the finished source contract available for independent checks
+        # as soon as the main GLB is exported, while the static LODs are built.
+        (out/'design.json').write_text(json.dumps(design,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
         finalize(spec,out,visual,colliders,nav,design)
     else:
         (out/'navigation.json').write_text(json.dumps(nav,indent=2)+'\n',encoding='utf-8')
