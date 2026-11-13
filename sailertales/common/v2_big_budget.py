@@ -7,6 +7,7 @@ import bmesh
 import bpy
 from mathutils.bvhtree import BVHTree
 from mathutils.kdtree import KDTree
+from v2_mesh_finish import triangulate_safe
 
 
 def samples(mesh):
@@ -66,6 +67,7 @@ def simplify(objects,tolerance=.005,triangle_budget=280000):
                 ee=[e for e in bm.edges if all(v.index not in protected for v in e.verts)]
                 bmesh.ops.dissolve_limit(bm,angle_limit=angle,use_dissolve_boundaries=False,
                     verts=vv,edges=ee,delimit={'MATERIAL','UV'})
+                triangulate_safe(bm,'BEAUTY')
                 if topology(bm)!=original_topology:
                     bm.free();break
                 candidate=bpy.data.meshes.new('_budget_candidate')
