@@ -221,6 +221,9 @@ def augment_interiors(ctx,spec):
     bx=-1.6;tx=1.9
     box(ctx,'captain_bunk_frame',P(bx,centre,cabin_sole+.30),(.82,2.0,.40),'drewno')
     box(ctx,'captain_bunk_mattress',P(bx,centre,cabin_sole+.57),(.76,1.9,.14),'plotno')
+    for dx in [-.30,.30]:
+        for ds in [-.8,.8]:
+            box(ctx,'captain_bunk_leg_'+str(dx)+'_'+str(ds),P(bx+dx,centre+ds,cabin_sole+.05),(.10,.10,.10),'drewno')
     box(ctx,'captain_chart_table',P(tx,centre,cabin_sole+.78),(.85,1.3,.08),'drewno')
     for dx in [-.30,.30]:
         for ds in [-.5,.5]:
@@ -311,7 +314,8 @@ def stow_capstan(ctx):
         bm.free()
     s=ctx['K']['POLPOKLAD_S']+1.5
     zdeck=float(kd.deck_z(s,-3))
-    side_x=-min(float(kd.H(ss,zdeck+.6)[0]) for ss in [s-.75,s+.75])+.28
+    side_x=-min(float(kd.H(ss,zdeck+.6)[0]) for ss in [s-.75,s+.75])+.70
+    zdeck=float(kd.deck_z(s,side_x))
     length=U['r_draga']-U['r_glowica']
     bars=[]
     for i in range(8):
@@ -323,8 +327,10 @@ def stow_capstan(ctx):
         o=tag(N.to_object(sk,ctx['_v2_interiors'],recalc=True),'fitting','solid')
         bars.append(o.name)
     for ds in [-length*.35,length*.35]:
-        box(ctx,'capstan_bar_rack_post_'+str(ds),P(side_x-.16,s+ds,zdeck+.53),(.10,.10,1.06),'drewno_ciemne')
-        box(ctx,'capstan_bar_rack_shelf_'+str(ds),P(side_x+.01,s+ds,zdeck+.24),(.40,.12,.12),'drewno_ciemne')
+        post_floor=float(kd.deck_z(s+ds,side_x-.16));post_top=zdeck+1.06
+        box(ctx,'capstan_bar_rack_post_'+str(ds),P(side_x-.16,s+ds,(post_floor+post_top)/2),(.10,.10,post_top-post_floor),'drewno_ciemne')
+        for row in range(4):
+            box(ctx,'capstan_bar_rack_shelf_'+str(ds)+'_'+str(row),P(side_x+.01,s+ds,zdeck+.24+row*.13),(.40,.12,.06),'drewno_ciemne')
     result.update({'state':'underway; bars and swifter removed from working circle',
         'stored_bar_objects':bars,'bar_length_m':length,'removed_swifter_geometry':removed,
         'guide_basis':'Ch.09 capstan removable handspikes; rack arrangement is game inference'})
@@ -624,7 +630,14 @@ def save_scene(ctx,spec,out):
         {'a':'quarterdeck_closed_gap_*','b':'balustrada_progu','reason':'replacement guard rails join the retained centre posts of the original quarterdeck guard'},
         {'a':'captain_door_jamb_*','b':'captain_door_lintel','reason':'lintel is tenoned into jambs'},
         {'a':'captain_chart_table','b':'chart_table_leg_*','reason':'tabletop rests on legs'},
-        {'a':'captain_bunk_frame','b':'captain_bunk_mattress','reason':'mattress rests on bunk frame'}]
+        {'a':'captain_bunk_frame','b':'captain_bunk_mattress','reason':'mattress rests on bunk frame'},
+        {'a':'captain_bunk_frame','b':'captain_bunk_leg_*','reason':'short support legs meet the underside of the bunk frame'},
+        {'a':'capstan_bar_rack_post_*','b':'capstan_bar_rack_shelf_*','reason':'tiered rack shelves are housed into their vertical posts'},
+        {'a':'freshwater_barrel_hold','b':'freshwater_barrel_hold','reason':'Source iron hoops are fitted around the wooden cask body'},
+        {'a':'ster_glowica','b':'ster','reason':'The stock head cover fits around the upper rudder stock; overlap is under 6 mm'}]
+    for index in range(1,7):
+        design['intended_joints'].append({'a':f'night_lantern_{index}_support','b':f'night_lantern_{index}_housing',
+            'reason':'The lantern base seats 7.5 mm over its supporting iron socket.'})
     # Preserve the guide's documented construction joints as concrete object
     # pairs. Material-limited source exceptions require a separate measurement;
     # the obsolete "unmodelled cabin" exception does not apply to this interior.
@@ -675,12 +688,19 @@ def main():
     augment_interiors(ctx,spec)
     stow_capstan(ctx)
     if spec['id']=='night-hull':night_lanterns(ctx,spec)
+    from v2_big_fittings import relocate_water_supply
+    relocate_water_supply(ctx)
+    from v2_mesh_finish import finish_scene
+    mesh_finish=finish_scene([o for o in bpy.context.scene.objects if o.get('asset_role') not in ('collision','presentation')])
     if spec['id']=='brig':
         from v2_big_budget import simplify
         ctx['_v2_geometry_budget']=simplify([o for o in bpy.context.scene.objects
             if o.type=='MESH' and not o.hide_render and o.get('asset_role') not in ('collision','presentation')])
     colliders=physical_colliders(ctx)
+    collider_finish=finish_scene(colliders)
     nav,design=save_scene(ctx,spec,out)
+    design['mesh_finish']=mesh_finish
+    design['collision_finish']=collider_finish
     design['route_planning']=connect_deck_routes(ctx,spec)
     nav['routes']=ctx['_v2_routes']
     visual=[o for o in bpy.context.scene.objects if o.type in ('MESH','EMPTY') and
