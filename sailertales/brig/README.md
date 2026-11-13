@@ -1,7 +1,7 @@
 # Bryg Mewa
 
 Osobny model jednostki z SailerTales, przebudowany metodą z poradnika
-OldShipSchematicsAndModel. Konstrukcja: Loft kadłuba z tabeli rzędnych, stępka i poszycie z poradnika, proporcje drzewc i pełny takielunek; rzeczywiste wnętrza i przejścia dodane jako rekonstrukcja do gry..
+OldShipSchematicsAndModel. Konstrukcja: Loft kadłuba z tabeli rzędnych, stępka i poszycie z poradnika, proporcje drzewc i pełny takielunek; rzeczywiste wnętrza i przejścia dodane jako rekonstrukcja do gry.
 
 Wymiary profilu: 29 × 8.6 m (profil konstrukcyjny; całkowity obrys z drzewcami jest większy). Pochodzenie liczb, wzory i świadome odstępstwa
 są w [design.json](design.json). Identyfikator `brig` pochodzi z gry;
@@ -48,7 +48,6 @@ Ten PR dostarcza statyczny asset i metadane integracji. Kontroler postaci,
 wspinanie, ruch postaci wraz z płynącym statkiem, animowanie mechanizmów,
 maskowanie wody i podłączenie do aktualnej gry wymagają adaptera silnika.
 Należy używać tych samych transformacji modelu, kolizji i punktów tras.
-Przechył wraku jest już zapisany w geometrii — nie nakładać go drugi raz.
 
 ## Źródła i odstępstwa
 
