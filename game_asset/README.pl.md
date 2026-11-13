@@ -6,6 +6,13 @@ pozycji roboczych, aktualizuje ich liny i dodaje delikatną animację płótna.
 Nie przedstawia konkretnego, udokumentowanego okrętu. Obrysy żagli są rekonstrukcją
 według rozdziału 08 i `set_sail_estimates`, a nie historycznymi planami.
 
+Wersja do gry skraca fok i grot oraz podcina dolny lik żagla gaflowego i podnosi
+róg grotsztaksla. Wstępne obrysy z planu schodziły do przestrzeni zajmowanej przez
+załogę. Cel konstrukcyjny to 2,25 m nad pokładem; eksport musi przejść kontrolę
+prześwitu co najmniej 2,20 m nad pokładem głównym i rufowym, także dla skrajnych
+stanów animacji wiatru. To decyzja ergonomiczna dla gry, nie wartość z epoki.
+Podglądy zawierają manekiny kontrolne wysokości 1,75 m, poza eksportem GLB.
+
 ## Generowanie
 
 Z katalogu głównego **pełnego sklonowanego repozytorium**:
@@ -18,10 +25,15 @@ Sprawdzone w Blenderze 4.3.2. Skrypt korzysta z `bpy`, `bmesh`, `mathutils` i `n
 dostarczanych z Blenderem. Nie wymaga pobierania tekstur ani zewnętrznych pakietów.
 `--no-renders` pomija cztery podglądy. Oryginalne pliki `model/` i `data/` są wejściem,
 nie są nadpisywane. Kopia skryptu w paczce wynikowej służy do wglądu; do ponownej
-budowy umieść ją jako `game_asset/build_ship.py` w pełnym repozytorium.
+budowy użyj plików z katalogu `game_asset/` w pełnym repozytorium.
 
 Kontrola wygenerowanych plików bez Blendera: `python game_asset/validate_asset.py build/game_ship`.
 W rozpakowanej paczce: `python validate_asset.py .`. Wynik zapisuje się jako `validation.json`.
+Generator dodatkowo sprawdza rzeczywistą geometrię wyeksportowanego GLB i zapisuje
+`deck_clearance.json`. Powtórzenie samego pomiaru: `python game_asset/deck_clearance.py build/game_ship`
+(ten dodatkowy skrypt wymaga NumPy). Sprawdzenie dotyczy płótna nad pokładami
+w pozycji roboczej rej; nie jest oceną stateczności, obciążenia wiatrem ani wszystkich
+przejść pomiędzy sprzętem i linami. Gdy zmieniasz brasowanie, trzeba powtórzyć kontrolę.
 
 ## Pliki wynikowe
 
@@ -34,6 +46,7 @@ W rozpakowanej paczce: `python validate_asset.py .`. Wynik zapisuje się jako `v
 | `snow_collision.glb` | oryginalne proste bryły kolizji; importuj oddzielnie i nie renderuj |
 | `data/` | oryginalne dane do stanowisk, ruchomych części, chodzenia i lin |
 | `asset_manifest.json` | rzeczywista liczba trójkątów, wersja Blendera i odcinki lin przebudowane po podniesieniu rej |
+| `deck_clearance.json` | pomiar prześwitu nad oboma pokładami i powierzchni płótna dla 12 żagli |
 | `previews/` | cztery rendery rzeczywistego modelu, jeśli nie użyto `--no-renders` |
 
 ## Import do silnika

@@ -21,6 +21,10 @@ from mathutils import Matrix, Vector
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from deck_clearance import DeckEnvelope, inspect_glb
+
+CANVAS_CLEARANCE_M = 2.25  # Game authoring target; validation allows 2.20 m.
 SQUARES = {
     "fore_course": "fore_yard", "fore_topsail": "fore_topsail_yard",
     "fore_topgallant": "fore_topgallant_yard", "main_course": "main_yard",
@@ -239,6 +243,13 @@ def square_sail(name, yard_name, spec):
     c = yard.matrix_world.translation.copy()
     nx, ny = 32, 24
     head, foot, depth = (spec[k] for k in ("head_m","foot_m","depth_m"))
+    source_depth=depth
+    if name.endswith("_course"):
+        # The chapter-08 outline reaches the rail and is a sail-plan estimate,
+        # not a tested playable mesh. Leave headroom over the deck, not the rail.
+        foot_z=max(DECKS.required_height(0,-c.y+ds,CANVAS_CLEARANCE_M)
+                   for ds in (-.8,0,.8))
+        depth=min(depth,c.z-.06-foot_z)
     verts, uv, weights = [], [], []
     for j in range(ny+1):
         t = j/ny
@@ -248,7 +259,7 @@ def square_sail(name, yard_name, spec):
             x = (u-.5)*width
             # Forward belly in a following wind; foot rises in the centre (roach).
             belly = .12 * head * math.sin(math.pi*u) * math.sin(math.pi*t)
-            roach = .38*math.sin(math.pi*u)*t**5
+            roach = (.75 if name.endswith("_course") else .38)*math.sin(math.pi*u)*t**5
             p = c + Vector((x, -.18-belly-.35*t*math.sin(math.pi*u), -depth*t+roach-.06))
             verts.append(p)
             uv.append((u,1-t))
@@ -257,6 +268,9 @@ def square_sail(name, yard_name, spec):
              for j in range(ny) for i in range(nx)]
     mat = canvas_material(name, max(head,foot), depth, [.9,1.8] if "topsail" in name else [])
     obj = new_mesh(name+"_set", verts, faces, mat, uv)
+    obj["source_depth_m"]=source_depth
+    obj["game_depth_m"]=depth
+    obj["clearance_adjusted"]=name.endswith("_course")
     animate_sail(obj, weights)
     # The mesh is authored in world coordinates, then parented preserving that pose.
     parent_world(obj, yard)
@@ -291,6 +305,10 @@ def square_sail(name, yard_name, spec):
 def panel_sail(name, corners, parent=None):
     """Triangle or four-sided sail, with a pinned perimeter and a leeward belly."""
     corners = [Vector(p) for p in corners]
+    # A loose-footed gaff sail must also clear the raised quarterdeck.
+    # Raising only the aft clew leaves its diagonal foot cutting through the crew.
+    for point in corners:
+        point.z=max(point.z,DECKS.required_height(point.x,-point.y,CANVAS_CLEARANCE_M))
     n = 24
     verts, uv, weights, faces = [], [], [], []
     if len(corners)==3:
@@ -316,7 +334,12 @@ def panel_sail(name, corners, parent=None):
             for i in range(n+1):
                 u=i/n
                 w=math.sin(math.pi*u)*math.sin(math.pi*v)
-                p=(a*(1-u)+b*u)*(1-v)+(d*(1-u)+c*u)*v
+                bottom=a*(1-v)+d*v
+                if name=="gaff_sail":
+                    bottom.z+=2.2*math.sin(math.pi*v)
+                    bottom.z=max(bottom.z,DECKS.required_height(bottom.x,-bottom.y,CANVAS_CLEARANCE_M))
+                top=b*(1-v)+c*v
+                p=bottom*(1-u)+top*u
                 p.x += .65*w
                 verts.append(p); uv.append((u,v)); weights.append(w)
         faces=[(j*(n+1)+i,j*(n+1)+i+1,(j+1)*(n+1)+i+1,(j+1)*(n+1)+i)
@@ -326,8 +349,12 @@ def panel_sail(name, corners, parent=None):
     animate_sail(obj,weights)
     if parent:
         parent_world(obj,parent)
-    for i in range(len(corners)):
-        rope=tube(name+"_bolt_rope_"+str(i),[corners[i],corners[(i+1)%len(corners)]],.023,ROPE)
+    if len(corners)==4:
+        paths=[verts[:n+1],verts[n*(n+1):],verts[::n+1],verts[n::n+1]]
+    else:
+        paths=[[corners[i],corners[(i+1)%len(corners)]] for i in range(len(corners))]
+    for i,path in enumerate(paths):
+        rope=tube(name+"_bolt_rope_"+str(i),path,.023,ROPE)
         if parent:
             parent_world(rope,parent)
     return obj
@@ -360,8 +387,10 @@ def other_sails():
         luff=(head-tack).length
         sc=tack.y-height*luff
         clew=Vector((0,sc,max(tack.z-.1*luff,rail(sc)+1)))
-        panel_sail(name,[ship_point(head),ship_point(tack),ship_point(clew)])
-        tube(name+"_sheet",[ship_point(clew),ship_point([2.5,sc-1,rail(sc)])],.022,ROPE)
+        clew_world=ship_point(clew)
+        clew_world.z=max(clew_world.z,DECKS.required_height(clew_world.x,-clew_world.y,CANVAS_CLEARANCE_M))
+        panel_sail(name,[ship_point(head),ship_point(tack),clew_world])
+        tube(name+"_sheet",[clew_world,ship_point([2.5,sc-1,rail(sc)])],.022,ROPE)
 
 
 def rebuild_dynamic():
@@ -491,6 +520,33 @@ def make_lod(level):
     return count
 
 
+def reference_crew():
+    """1.75 m scale figures for clearance review; never exported to the game GLBs."""
+    cloth=bpy.data.materials.new("preview_crew_blue"); cloth.diffuse_color=(.035,.16,.24,1)
+    skin=bpy.data.materials.new("preview_crew_head"); skin.diffuse_color=(.52,.32,.19,1)
+    def present(obj):
+        for collection in list(obj.users_collection): collection.objects.unlink(obj)
+        PRESENTATION.objects.link(obj)
+        obj["reference_height_m"]=1.75
+        return obj
+    for idx,(x,s) in enumerate(((1.35,-.9),(-1.1,10.3),(1.0,-8.0))):
+        z=float(DECKS.heights(x,s)); base=Vector((x,-s,z))
+        def ball(name,offset,scale,mat):
+            bpy.ops.mesh.primitive_uv_sphere_add(segments=16,ring_count=8,location=base+Vector(offset))
+            obj=bpy.context.object; obj.name="preview_crew_%d_%s"%(idx,name); obj.scale=scale
+            obj.data.materials.append(mat)
+            for p in obj.data.polygons: p.use_smooth=True
+            present(obj)
+        for side in (-1,1):
+            limb=tube("preview_crew_%d_leg_%d"%(idx,side),[base+Vector((side*.10,0,.04)),base+Vector((side*.10,0,.84))],.14,cloth,10)
+            present(limb)
+            limb=tube("preview_crew_%d_arm_%d"%(idx,side),[base+Vector((side*.22,0,1.35)),base+Vector((side*.28,.02,.95))],.11,cloth,10)
+            present(limb)
+        ball("hips",(0,0,.85),(.18,.13,.15),cloth)
+        ball("torso",(0,0,1.14),(.22,.14,.30),cloth)
+        ball("head",(0,0,1.61),(.13,.13,.14),skin)
+
+
 def render_setup():
     scene=bpy.context.scene
     scene.render.engine="CYCLES"
@@ -519,6 +575,7 @@ def render_setup():
     sun=bpy.data.objects.new("sun",data); PRESENTATION.objects.link(sun); sun.rotation_euler=(.45,-.35,-.6)
     scene.view_settings.look="AgX - Medium High Contrast"
     scene.view_settings.exposure=.65
+    reference_crew()
     # Modest geometric waves; this collection is excluded from every exported game mesh.
     n=100; size=240
     vv=[]; ff=[]
@@ -574,7 +631,7 @@ def render_setup():
 
 
 def main():
-    global OUT, ASSET, LODS, PRESENTATION, PARAMETERS, SPARS, RIG, ROPE, TAR
+    global OUT, ASSET, LODS, PRESENTATION, PARAMETERS, SPARS, RIG, ROPE, TAR, DECKS
     parser=argparse.ArgumentParser()
     parser.add_argument("--out",default=str(ROOT/"build"/"game_ship"))
     parser.add_argument("--no-renders",action="store_true")
@@ -583,6 +640,7 @@ def main():
     for name in ("textures","previews","data"):
         (OUT/name).mkdir(exist_ok=True)
     PARAMETERS=load_json(ROOT/"data"/"parameters.json"); RIG=load_json(ROOT/"data"/"rigging-lines.json")
+    DECKS=DeckEnvelope(load_json(ROOT/"data"/"deck-layout.json"))
     with (ROOT/"data"/"spars.csv").open(encoding="utf-8") as f:
         SPARS={r["spar"]:r for r in csv.DictReader(l for l in f if not l.startswith("#"))}
     bpy.ops.wm.read_factory_settings(use_empty=True)
@@ -613,6 +671,10 @@ def main():
     scene.name="Sail_Wind"
     scene.render.fps=24; scene.frame_start=0; scene.frame_end=96; scene.frame_set(0)
     export_glb(OUT/"snow_sailing.glb",list(ASSET.objects),animations=True)
+    clearance=inspect_glb(OUT/"snow_sailing.glb",load_json(ROOT/"data"/"deck-layout.json"))
+    (OUT/"deck_clearance.json").write_text(json.dumps(clearance,indent=2),encoding="utf-8")
+    if not clearance["passed"]:
+        raise ValueError("Canvas intrudes into crew headroom: see deck_clearance.json")
     stats={"lod0":triangles(ASSET.objects),"lod1":make_lod(1),"lod2":make_lod(2)}
     shutil.copy2(ROOT/"model"/"snow_collision.glb",OUT/"snow_collision.glb")
     for name in ("parameters.json","stations.csv","moving-parts.csv","deck-layout.json","rigging-lines.json","names-map.csv","spars.csv"):
@@ -622,6 +684,8 @@ def main():
         "blender_version":bpy.app.version_string,"triangles":stats,"sail_count":12,
         "steering_variant":"steering_wheel_variant","rebuilt_dynamic_line_ids":changed,
         "lod_distances_m":[0,75,250],"lod_hysteresis":.15,
+        "canvas_minimum_deck_clearance_m":clearance["minimum_clearance_m"],
+        "cloth_area_m2":clearance["cloth_area_m2"],
         "notes":["Sail outlines and belly are reconstructions, not period plans.",
           "No hold or cabin interior; original hull fairness limitations remain.",
           "LODs are static sailing poses; animate the close-range asset only.",
@@ -632,6 +696,7 @@ def main():
     shutil.copy2(ROOT/"blender"/"tekstury_cc0_spis.json",OUT/"reference_texture_sources.json")
     shutil.copy2(Path(__file__),OUT/"build_ship.py")
     shutil.copy2(ROOT/"game_asset"/"validate_asset.py",OUT/"validate_asset.py")
+    shutil.copy2(ROOT/"game_asset"/"deck_clearance.py",OUT/"deck_clearance.py")
     if (ROOT/"game_asset"/"README.pl.md").exists():
         shutil.copy2(ROOT/"game_asset"/"README.pl.md",OUT/"README.pl.md")
     if not args.no_renders:
