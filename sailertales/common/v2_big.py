@@ -190,7 +190,7 @@ def augment_interiors(ctx,spec):
         P(1.4,s0-.6,float(kd.deck_z(s0-.6,1.4)))])
     route(ctx,'hold_ladder',[P(1.4,climb_s,float(kd.deck_z(climb_s,1.4))),
         P(1.4,climb_s,zmain+.50),P(0,climb_s,zmain+.50),P(0,climb_s,hold_sole)],'climb')
-    route(ctx,'hold_centre_aisle',[P(0,climb_s,hold_sole),P(-1,climb_s,hold_sole),
+    route(ctx,'hold_aisle',[P(0,climb_s,hold_sole),P(-1,climb_s,hold_sole),
         P(-1,1.2,hold_sole),P(-1,-spec['length']*.10,hold_sole)])
     # Replace decorative sealed reference doors with one real open companionway.
     remove(bpy.data.objects.get('grodz_drzwi'))
@@ -226,22 +226,39 @@ def augment_interiors(ctx,spec):
         for ds in [-.5,.5]:
             rod(ctx,'chart_table_leg_'+str(dx)+'_'+str(ds),P(tx+dx,centre+ds,cabin_sole),
                 P(tx+dx,centre+ds,cabin_sole+.74),.045,physics='solid')
-    # The starboard pump would otherwise stand at the stairwell edge: shift its
-    # complete pump/lever group outboard, as allowed by ch.12 ergonomic checks.
+    # Both complete pump/lever groups move outboard, clearing the real cabin
+    # companion to starboard and quarterdeck companion to port.
     moved=[]
-    for nm in ['pompa_L','pompa_L_dzwignia']:
+    for nm in ['pompa_L','pompa_L_dzwignia','pompa_P','pompa_P_dzwignia']:
         o=bpy.data.objects.get(nm)
-        if o is not None:o.location.x+=1.25;moved.append(nm)
+        if o is not None:o.location.x+=1.25 if nm.startswith('pompa_L') else -1.25;moved.append(nm)
     route(ctx,'captains_cabin',[P(door_x,entry_top+.55,float(kd.deck_z(entry_top+.55,door_x))),
         P(door_x,entry_top,top_z),P(door_x,sq-.25,cabin_sole),
         P(door_x,sq-1.0,cabin_sole),P(0,sq-1.0,cabin_sole),P(0,centre,cabin_sole)])
     # Gentler full-width companionway to quarterdeck, with the same platform.
     remove(bpy.data.objects.get('schody_rufowe'))
+    qx=-1.45
     qbottom=sq+2.55;qtop=sq-.14
-    qz0=float(kd.deck_z(qbottom,0));qz1=float(kd.deck_z(qtop,0))+K['POLPOKLAD_H']+.012
-    plank_ramp(ctx,'quarterdeck_companionway',0,qbottom,qtop,qz0,qz1,1.1)
-    route(ctx,'quarterdeck_access',[P(0,qbottom,qz0),P(0,qtop,qz1),
-        P(0,sq-.9,float(kd.deck_z(sq-.9,0))+K['POLPOKLAD_H'])])
+    qz0=float(kd.deck_z(qbottom,qx));qz1=float(kd.deck_z(qtop,qx))+K['POLPOKLAD_H']+.012
+    # Move the real guard opening with the stairs; the old centre opening is
+    # closed by a rail and balusters so it does not become an unprotected drop.
+    guard=bpy.data.objects.get('balustrada_progu')
+    if guard is not None:
+        zguard=float(kd.deck_z(sq-.08,qx))+K['POLPOKLAD_H']
+        ops.append(cut(guard,box_cutter(ctx,'quarterdeck_guard_opening',qx,sq-.08,zguard+.60,
+            1.34,.50,1.60),'relocate_quarterdeck_guard_opening'))
+        tag(guard,'fitting','solid')
+    qs=sq-.08
+    for height in [.04,.89]:
+        rod(ctx,'quarterdeck_closed_gap_rail_'+str(height),
+            P(-.66,qs,float(kd.deck_z(qs,-.66))+K['POLPOKLAD_H']+height),
+            P(.66,qs,float(kd.deck_z(qs,.66))+K['POLPOKLAD_H']+height),.035,physics='solid')
+    for x in [-.44,0,.44]:
+        z=float(kd.deck_z(qs,x))+K['POLPOKLAD_H']
+        rod(ctx,'quarterdeck_closed_gap_post_'+str(x),P(x,qs,z),P(x,qs,z+.89),.035,physics='solid')
+    plank_ramp(ctx,'quarterdeck_companionway',qx,qbottom,qtop,qz0,qz1,1.1)
+    route(ctx,'quarterdeck_access',[P(qx,qbottom,qz0),P(qx,qtop,qz1),
+        P(qx,sq-.9,float(kd.deck_z(sq-.9,qx))+K['POLPOKLAD_H'])])
     # Fore/aft port-side circulation connects the hatch and both companionways.
     xs=-2.15
     route(ctx,'main_deck_circulation',[P(xs,s,float(kd.deck_z(s,xs)))
@@ -251,6 +268,7 @@ def augment_interiors(ctx,spec):
         'captain_door_width_m':1.30,'captain_door_height_m':2.20,
         'cabin_floor_lowering_m':float(kd.deck_c(sq))-cabin_sole,
         'reference_pump_relocations':moved,'quarterdeck_gradient_deg':math.degrees(math.atan2(qz1-qz0,qbottom-qtop)),
+        'quarterdeck_stair_x_m':qx,'quarterdeck_guard':'opening moved to port stair; old centre gap closed',
         'basis':'Ch.03 hollow framing, Ch.04 decks/cabin, Ch.09 hatch ladders; interior layout is game inference'}
     return ctx['_v2_interior_design']
 
@@ -455,6 +473,8 @@ def physical_colliders(ctx):
             continue
         if o.name.startswith('pompa_L'):
             x=ob['x']+1.25
+        elif o.name.startswith('pompa_P'):
+            x=ob['x']-1.25
         else:x=ob['x']
         qd=ob.get('poziom')=='rufowy'
         z=float(kd.deck_z(ob['s'],x))+(ctx['K']['POLPOKLAD_H'] if qd else 0)
@@ -541,6 +561,21 @@ def save_scene(ctx,spec,out):
             o['kind']='glass';o['physics']='none'
             o['topology_reason']='single-pane glazing; intentionally open double-sided surface'
         if o.get('wariant')=='naped_rumpel':o.hide_render=True;o['asset_role']='presentation'
+    # Static mesh nodes carry applied rotation/scale; their geometry and child
+    # world transforms stay unchanged. Moving nodes retain their actual axes.
+    motion_keys=('motion_axis','range_deg','range_m','os_ruchu','control_type')
+    for o in list(bpy.context.scene.objects):
+        if o.type!='MESH' or o.get('asset_role') in ('collision','presentation') or any(k in o for k in motion_keys):
+            continue
+        basis=o.matrix_basis.copy()
+        linear=basis.to_3x3().to_4x4()
+        if all(abs(linear[i][j]-(1 if i==j else 0))<1e-7 for i in range(4) for j in range(4)):
+            continue
+        child_worlds={child:child.matrix_world.copy() for child in o.children}
+        if o.data.users>1:o.data=o.data.copy()
+        o.data.transform(linear)
+        o.matrix_basis=Matrix.Translation(basis.translation)
+        for child,world in child_worlds.items():child.matrix_world=world
     for im in bpy.data.images:
         if im.source=='FILE' and not im.packed_file:im.pack()
     bpy.ops.wm.save_as_mainfile(filepath=str(out/'model'/'ship.blend'),compress=True)
@@ -582,6 +617,8 @@ def save_scene(ctx,spec,out):
         {'a':'kadlub','b':'hold_ladder_stringer_*','reason':'ladder feet rest on hold sole and stringers extend through hatch coaming'},
         {'a':'captain_companionway*','b':'captain_companionway*','reason':'planked ramp and its structural handrail posts are joined'},
         {'a':'quarterdeck_companionway*','b':'quarterdeck_companionway*','reason':'companionway planks, stringer slab and rail posts form one structure'},
+        {'a':'quarterdeck_closed_gap_*','b':'quarterdeck_closed_gap_*','reason':'new guard balusters are tenoned into the rails closing the obsolete stair opening'},
+        {'a':'quarterdeck_closed_gap_*','b':'balustrada_progu','reason':'replacement guard rails join the retained centre posts of the original quarterdeck guard'},
         {'a':'captain_door_jamb_*','b':'captain_door_lintel','reason':'lintel is tenoned into jambs'},
         {'a':'captain_chart_table','b':'chart_table_leg_*','reason':'tabletop rests on legs'},
         {'a':'captain_bunk_frame','b':'captain_bunk_mattress','reason':'mattress rests on bunk frame'}]
@@ -604,6 +641,15 @@ def save_scene(ctx,spec,out):
                 declared.add(pair)
                 design['intended_joints'].append({'a':name_a,'b':name_b,'reason':reason,
                     'source':'blender/przenikanie.py:POLACZENIA'})
+    # Keep source joint matching above in the guide's original names, then give
+    # furled cloth explicit names understood by the shared rig/deck preview.
+    cloth_names={}
+    for o in bpy.context.scene.objects:
+        if o.type=='MESH' and o.get('cloth_state')=='furled' and not o.name.startswith('furled_sail_'):
+            old=o.name;o.name='furled_sail_'+old;cloth_names[old]=o.name
+    if cloth_names:
+        from v2_export import remap
+        design=remap(design,cloth_names)
     (out/'design.json').write_text(json.dumps(design,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
     return nav,design
 
