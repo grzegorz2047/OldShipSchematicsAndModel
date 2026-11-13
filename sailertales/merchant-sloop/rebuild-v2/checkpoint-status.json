@@ -1,0 +1,50 @@
+{
+  "id": "merchant-sloop",
+  "checkpoint": true,
+  "capturedAt": "2026-11-13T14:20:58.569456+00:00",
+  "auditPassed": false,
+  "assetMismatches": [],
+  "sourceMismatches": [
+    "sailertales/common/v2_audit.py",
+    "sailertales/common/v2_big.py",
+    "sailertales/common/v2_boats.py",
+    "sailertales/common/v2_package.py",
+    "sailertales/common/v2_rigging.py",
+    "sailertales/common/v2_wreck.py"
+  ],
+  "failedRequired": [
+    {
+      "id": "E1",
+      "status": "FAIL"
+    },
+    {
+      "id": "F2",
+      "status": "FAIL"
+    },
+    {
+      "id": "F3",
+      "status": "FAIL"
+    },
+    {
+      "id": "H5",
+      "status": "NA"
+    },
+    {
+      "id": "I3",
+      "status": "FAIL"
+    },
+    {
+      "id": "J3",
+      "status": "FAIL"
+    },
+    {
+      "id": "J4",
+      "status": "FAIL"
+    },
+    {
+      "id": "player_destinations",
+      "status": "FAIL"
+    }
+  ],
+  "reviewPassed": false
+}
