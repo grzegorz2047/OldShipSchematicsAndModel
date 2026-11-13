@@ -1,0 +1,311 @@
+{
+  "passed": false,
+  "player": {
+    "radius": 0.38,
+    "height": 1.85,
+    "max_slope_deg": 35
+  },
+  "sample_step_m": 0.1,
+  "geometry_tolerance_m": 0.015,
+  "rounded_foot_lift_m": 0.08,
+  "controller_step_allowance_m": 0.22,
+  "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+  "routes": [
+    {
+      "name": "main_deck_to_hatch",
+      "mode": "walk",
+      "length_m": 8.528577341323068,
+      "samples": 99,
+      "passed": true,
+      "failure_count": 0,
+      "failures": []
+    },
+    {
+      "name": "main_deck_to_cabin",
+      "mode": "walk",
+      "length_m": 6.4191377540883385,
+      "samples": 74,
+      "passed": true,
+      "failure_count": 0,
+      "failures": []
+    },
+    {
+      "name": "main_deck_to_quarterdeck",
+      "mode": "walk",
+      "length_m": 1.460040368536066,
+      "samples": 18,
+      "passed": false,
+      "failure_count": 3,
+      "failures": [
+        {
+          "sample": 15,
+          "problem": "capsule blocked",
+          "by": "nagielbank_grot",
+          "at": [
+            -1.003333330154419,
+            1.433333396911621,
+            1.1538102626800537
+          ]
+        },
+        {
+          "sample": 16,
+          "problem": "capsule blocked",
+          "by": "nagielbank_grot",
+          "at": [
+            -0.9266667366027832,
+            1.4266666173934937,
+            1.1546354293823242
+          ]
+        },
+        {
+          "sample": 17,
+          "problem": "capsule blocked",
+          "by": "nagielbank_grot",
+          "at": [
+            -0.8500000238418579,
+            1.4199999570846558,
+            1.1554605960845947
+          ]
+        }
+      ]
+    },
+    {
+      "name": "main_deck_forward",
+      "mode": "walk",
+      "length_m": 10.714733625857514,
+      "samples": 120,
+      "passed": true,
+      "failure_count": 0,
+      "failures": []
+    },
+    {
+      "name": "hold_ladder",
+      "mode": "climb",
+      "length_m": 4.9346128618162055,
+      "samples": 52,
+      "passed": true,
+      "failure_count": 0,
+      "failures": []
+    },
+    {
+      "name": "hold_centre_aisle",
+      "mode": "walk",
+      "length_m": 7.5835717365004705,
+      "samples": 78,
+      "passed": true,
+      "failure_count": 0,
+      "failures": []
+    },
+    {
+      "name": "captains_cabin",
+      "mode": "walk",
+      "length_m": 7.2988528180321035,
+      "samples": 76,
+      "passed": false,
+      "failure_count": 7,
+      "failures": [
+        {
+          "sample": 56,
+          "problem": "capsule blocked",
+          "by": "zejsciowka",
+          "at": [
+            0.0,
+            6.518636226654053,
+            0.45340099930763245
+          ]
+        },
+        {
+          "sample": 57,
+          "problem": "capsule blocked",
+          "by": "zejsciowka",
+          "at": [
+            0.0,
+            6.6181817054748535,
+            0.45340096950531006
+          ]
+        },
+        {
+          "sample": 58,
+          "problem": "capsule blocked",
+          "by": "zejsciowka",
+          "at": [
+            0.0,
+            6.717726707458496,
+            0.45340099930763245
+          ]
+        },
+        {
+          "sample": 59,
+          "problem": "capsule blocked",
+          "by": "zejsciowka",
+          "at": [
+            0.0,
+            6.817272186279297,
+            0.45340099930763245
+          ]
+        },
+        {
+          "sample": 60,
+          "problem": "capsule blocked",
+          "by": "zejsciowka",
+          "at": [
+            0.0,
+            6.916818141937256,
+            0.45340099930763245
+          ]
+        },
+        {
+          "sample": 61,
+          "problem": "capsule blocked",
+          "by": "zejsciowka",
+          "at": [
+            0.0,
+            7.016363143920898,
+            0.45340099930763245
+          ]
+        },
+        {
+          "sample": 62,
+          "problem": "capsule blocked",
+          "by": "zejsciowka",
+          "at": [
+            0.0,
+            7.115908622741699,
+            0.45340102910995483
+          ]
+        }
+      ]
+    },
+    {
+      "name": "quarterdeck_access",
+      "mode": "walk",
+      "length_m": 5.9761892564392,
+      "samples": 63,
+      "passed": false,
+      "failure_count": 24,
+      "failures": [
+        {
+          "sample": 0,
+          "problem": "capsule blocked",
+          "by": "nagielbank_grot",
+          "at": [
+            -0.8500000238418579,
+            1.4199999570846558,
+            1.1554605960845947
+          ]
+        },
+        {
+          "sample": 1,
+          "problem": "capsule blocked",
+          "by": "nagielbank_grot",
+          "at": [
+            -0.7555555701255798,
+            1.4199999570846558,
+            1.156522274017334
+          ]
+        },
+        {
+          "sample": 2,
+          "problem": "capsule blocked",
+          "by": "nagielbank_grot",
+          "at": [
+            -0.6611111164093018,
+            1.4199998378753662,
+            1.1575899124145508
+          ]
+        },
+        {
+          "sample": 3,
+          "problem": "capsule blocked",
+          "by": "drzewca",
+          "at": [
+            -0.5666666626930237,
+            1.4199999570846558,
+            1.1586631536483765
+          ]
+        },
+        {
+          "sample": 4,
+          "problem": "capsule blocked",
+          "by": "drzewca",
+          "at": [
+            -0.4722222685813904,
+            1.4199999570846558,
+            1.1594688892364502
+          ]
+        },
+        {
+          "sample": 5,
+          "problem": "capsule blocked",
+          "by": "drzewca",
+          "at": [
+            -0.37777775526046753,
+            1.4199999570846558,
+            1.159825325012207
+          ]
+        },
+        {
+          "sample": 6,
+          "problem": "capsule blocked",
+          "by": "nagielbank_grot",
+          "at": [
+            -0.28333333134651184,
+            1.4199999570846558,
+            1.160183072090149
+          ]
+        },
+        {
+          "sample": 7,
+          "problem": "capsule blocked",
+          "by": "nagielbank_grot",
+          "at": [
+            -0.18888887763023376,
+            1.4199998378753662,
+            1.1605371236801147
+          ]
+        },
+        {
+          "sample": 8,
+          "problem": "capsule blocked",
+          "by": "nagielbank_grot",
+          "at": [
+            -0.09444443881511688,
+            1.4199999570846558,
+            1.160894751548767
+          ]
+        },
+        {
+          "sample": 9,
+          "problem": "capsule blocked",
+          "by": "nagielbank_grot",
+          "at": [
+            0.0,
+            1.4199999570846558,
+            1.1612507104873657
+          ]
+        },
+        {
+          "sample": 10,
+          "problem": "capsule blocked",
+          "by": "nagielbank_grot",
+          "at": [
+            0.0,
+            1.5116666555404663,
+            1.161880373954773
+          ]
+        },
+        {
+          "sample": 11,
+          "problem": "capsule blocked",
+          "by": "drzewca",
+          "at": [
+            0.0,
+            1.6033333539962769,
+            1.1625107526779175
+          ]
+        }
+      ]
+    }
+  ],
+  "disconnected_routes": []
+}
