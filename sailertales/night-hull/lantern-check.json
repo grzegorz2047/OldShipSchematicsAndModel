@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "method": "Read actual delivered GLB nodes and engine-hook extras",
+  "sha256": {
+    "model/ship.glb": "e671f1be619253b3e93b053e883aa2579e24299393d8ee9e4ad9d0ee51650ff7"
+  },
+  "lanterns": [
+    {
+      "name": "night_lantern_0",
+      "index": 0,
+      "default_lit": false,
+      "hook": "setLit/lightUp"
+    },
+    {
+      "name": "night_lantern_1",
+      "index": 1,
+      "default_lit": false,
+      "hook": "setLit/lightUp"
+    },
+    {
+      "name": "night_lantern_2",
+      "index": 2,
+      "default_lit": false,
+      "hook": "setLit/lightUp"
+    },
+    {
+      "name": "night_lantern_3",
+      "index": 3,
+      "default_lit": false,
+      "hook": "setLit/lightUp"
+    },
+    {
+      "name": "night_lantern_4",
+      "index": 4,
+      "default_lit": false,
+      "hook": "setLit/lightUp"
+    },
+    {
+      "name": "night_lantern_5",
+      "index": 5,
+      "default_lit": false,
+      "hook": "setLit/lightUp"
+    },
+    {
+      "name": "night_lantern_6",
+      "index": 6,
+      "default_lit": false,
+      "hook": "setLit/lightUp"
+    }
+  ]
+}

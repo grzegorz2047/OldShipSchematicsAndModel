@@ -1,0 +1,29 @@
+{
+  "id": "night-hull",
+  "label": "Nocny okręt z prologu",
+  "length": 30,
+  "beam": 7.6,
+  "draft": 2.6,
+  "deck": 2.6,
+  "sole": 0.1,
+  "rig": "furled",
+  "small": false,
+  "gun_pairs": 0,
+  "color": [
+    0.1,
+    0.085,
+    0.065
+  ],
+  "source_paths": [
+    "src/models/navy.js"
+  ],
+  "limitations": [
+    "NHULL podaje długość 30 m i szerokość 7.6 m. Zanurzenie i wnętrza są rekonstrukcją.",
+    "Siedem nazwanych latarni wymaga podpięcia sekwencji setLit/lightUp; emisję uruchamia adapter silnika."
+  ],
+  "source_commit": "ea77e560ba4668c9dda55433813addbdb2f50176",
+  "player": {
+    "radius": 0.38,
+    "height": 1.85
+  }
+}
