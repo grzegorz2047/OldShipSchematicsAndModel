@@ -88,3 +88,20 @@ def separate_canvas_gaskets(ctx):
             'source':'blender/zagle.py:na_rei; rectangular 6 x 35 mm gasket loops',
             'reason':'Material-separated gasket straps are rigging, not the furled canvas solid.'})
     ctx['_v2_interior_design']['furled_gasket_parts']=ledger
+
+
+def add_night_head_joints(objects,design):
+    """Record inspected collar/brace housings, after deterministic timber split."""
+    names={o.name for o in objects}
+    head='galion' if 'galion' in names else 'head'
+    if head not in names:raise RuntimeError('Missing bow head structure')
+    for name in ('catheads_timber_002','catheads_timber_003'):
+        if name not in names:raise RuntimeError('Missing inspected hawse collar '+name)
+        design['intended_joints'].append({'a':head,'b':name,
+            'reason':'The wood-and-iron hawse collar is housed 39-41 mm into bow timber; its source axial profile extends 50 mm inward.',
+            'source':'blender/rufa_dziob.py:kotbelki_i_kluzy, hawse-collar axial profile'})
+    name='catheads_timber_005'
+    if name not in names:raise RuntimeError('Missing inspected cathead brace')
+    design['intended_joints'].append({'a':head,'b':name,
+        'reason':'The curved cathead support seats up to 9 mm into the head cheek at its hull fastening, before the free head rail begins.',
+        'source':'blender/rufa_dziob.py:kotbelki_i_kluzy, curved support foot'})
