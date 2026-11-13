@@ -93,6 +93,11 @@ def configure(pr, spec):
     k['WYPUKLOSC'] = beam*0.016
     k['POLPOKLAD_S'] *= sl
     k['POKLAD_GR'] *= sb
+    # Keep the ordered waterline-to-wale rows monotone for low-freeboard
+    # profiles. Original 0.74 m wale depth would fold below the paint line.
+    wale_factor=min(1.0,(min(z for _,z in k['POKLAD_BOK'])-k['LINIA_WODNA_FARBA']-.10)/(.006+original['BERGHOLTY'][-1][1]))
+    if wale_factor<=0:raise ValueError('Insufficient freeboard for structural wales')
+    k['BERGHOLTY']=[(a*wale_factor,b*wale_factor,projection) for a,b,projection in original['BERGHOLTY']]
     k['RELING'] = [(s*sl,h) for s,h in k['RELING']]
     for key in ['FURTY_S','FURTY_ZAMKNIETE_S']:
         k[key] = [s*sl for s in k[key]]
@@ -133,7 +138,8 @@ def configure(pr, spec):
     return {'method':'original reference generator, chapter 12 parameter chain',
             'length_m':length,'breadth_m':beam,'draft_at_dead_flat_m':draft,
             'main_mast_m':d['GROT'],'fore_mast_m':d['FOK'],
-            'depth_breadth_target':0.42,'rig':'snow, c. 1710 reference',
+            'depth_breadth_target':0.42,'wale_vertical_offset_factor':wale_factor,
+            'wale_basis':'Upper and lower wales retain reference protrusion; vertical offsets adapt to freeboard with 0.10 m waterline separation.','rig':'snow, c. 1710 reference',
             'confidence':'our inference adapting the reference model',
             'game_label':spec['label'],'reference_commit':'2e6f7e922e95396722376d42f3e2e0a12256029e'}
 
