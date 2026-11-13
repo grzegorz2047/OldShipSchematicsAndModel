@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "units": "metres",
+  "axes": "glTF: X across, Y up, Z forward",
+  "player": {
+    "radius": 0.38,
+    "height": 1.85,
+    "max_slope_deg": 35
+  },
+  "routes": [
+    {
+      "name": "cockpit",
+      "points": [
+        [
+          0.0,
+          0.07999999821186066,
+          -1.0800000429153442
+        ],
+        [
+          0.0,
+          0.07999999821186066,
+          -0.0
+        ],
+        [
+          0.0,
+          0.07999999821186066,
+          0.8100000023841858
+        ]
+      ]
+    }
+  ],
+  "source_commit": "ea77e560ba4668c9dda55433813addbdb2f50176",
+  "limitations": [
+    "Rekonstrukcja rodziny rowboat; wymiary 5.4\u00d71.9 m s\u0105 decyzj\u0105 projektow\u0105, a nie pomiarem modelu Tripo.",
+    "Podzielone siedziska przy burtach zostawiaj\u0105 \u015brodek do chodzenia; brak kajuty i podpok\u0142adu."
+  ]
+}

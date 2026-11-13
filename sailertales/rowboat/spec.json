@@ -1,0 +1,23 @@
+{
+  "id": "rowboat",
+  "label": "Łódź brzegowa",
+  "length": 5.4,
+  "beam": 1.9,
+  "draft": 0.42,
+  "deck": 0.08,
+  "sole": 0.08,
+  "rig": "none",
+  "small": true,
+  "source_paths": [
+    "assets/models/rowboat.glb"
+  ],
+  "limitations": [
+    "Rekonstrukcja rodziny rowboat; wymiary 5.4×1.9 m są decyzją projektową, a nie pomiarem modelu Tripo.",
+    "Podzielone siedziska przy burtach zostawiają środek do chodzenia; brak kajuty i podpokładu."
+  ],
+  "source_commit": "ea77e560ba4668c9dda55433813addbdb2f50176",
+  "player": {
+    "radius": 0.38,
+    "height": 1.85
+  }
+}
