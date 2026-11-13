@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "units": "metres",
+  "axes": "glTF: X across, Y up, Z forward",
+  "player": {
+    "radius": 0.38,
+    "height": 1.85,
+    "max_slope_deg": 35
+  },
+  "routes": [
+    {
+      "name": "wreck_deck_to_hold",
+      "points": [
+        [
+          1.2465063333511353,
+          2.28171443939209,
+          -8.399999618530273
+        ],
+        [
+          1.2465063333511353,
+          2.28171443939209,
+          -6.800000190734863
+        ],
+        [
+          0.09588511288166046,
+          0.1755165159702301,
+          0.800000011920929
+        ],
+        [
+          0.09588511288166046,
+          0.1755165159702301,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "source_commit": "ea77e560ba4668c9dda55433813addbdb2f50176",
+  "limitations": [
+    "Zachowane: pierwotna d\u0142ugo\u015b\u0107 22 m, szeroko\u015b\u0107 6 m, przechy\u0142 0.5 rad. Rufa i cz\u0119\u015b\u0107 \u015br\u00f3dokr\u0119cia; dzi\u00f3b urwany.",
+    "Pochylona \u0142adownia i nowe zej\u015bcie s\u0105 rekonstrukcj\u0105. Umieszczenie zaspy/po\u0142\u0105czenia z terenem pozostaje zadaniem silnika.",
+    "Nie ma dost\u0119pnej osobnej kajuty, gdy\u017c wrak jej nie zachowa\u0142."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "blender": "5.2.3 LTS",
+  "capsule": {
+    "radius": 0.38,
+    "height": 1.85,
+    "max_slope_deg": 35
+  },
+  "step_m": 0.12,
+  "geometric_tolerance_m": 0.015,
+  "rounded_foot_lift_m": 0.08,
+  "negative_controls": [
+    "wall rejects",
+    "low ceiling rejects",
+    "open floor passes"
+  ],
+  "checks": {
+    "model/ship.glb": {
+      "triangles": 9288,
+      "routes": [
+        {
+          "route": "wreck_deck_to_hold",
+          "samples": 84,
+          "passed": true,
+          "failures": [],
+          "failure_count": 0
+        }
+      ]
+    },
+    "model/collision.glb": {
+      "triangles": 3824,
+      "routes": [
+        {
+          "route": "wreck_deck_to_hold",
+          "samples": 84,
+          "passed": true,
+          "failures": [],
+          "failure_count": 0
+        }
+      ]
+    }
+  },
+  "sha256": {
+    "model/ship.glb": "e1782420193e6ae6d2f27aec869fb78e3f69f44bf91d87f8a8a87063ec02755d",
+    "model/collision.glb": "d29e5c9fb94606113b05a6d7cea463207b99335db728eaafd78bb039d945f851",
+    "navigation.json": "ba40e9a9147be056507247226f1d994d5c56465f0e9ba9a05b72062e620862d2",
+    "spec.json": "63390b9c51c1ac5f6310b9ff0a3cec6eeb076527f534c2eaa3fc0a22690216d0",
+    "../common/build.py": "bbf3f79e68eef5ab84efab253bf968ef3c94378a480e202ce090863fc8bf9d13",
+    "../common/verify.py": "142a5fcb4bcfec18e225ab66615b2339fa046e8c40f616f151890c2bd60366f1"
+  },
+  "rig": {
+    "passed": true,
+    "sails": 0,
+    "ropes": 0,
+    "spars": 0,
+    "scope": "authored static pose; bolt ropes are cloth-edge attachments",
+    "intersections": []
+  },
+  "passed": true
+}
