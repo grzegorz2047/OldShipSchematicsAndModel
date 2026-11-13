@@ -1,7 +1,7 @@
 {
-  "schema": 1,
+  "schema": 2,
   "units": "metres",
-  "axes": "glTF: X across, Y up, Z forward",
+  "axes": "glTF X port, Y up, Z bow",
   "player": {
     "radius": 0.38,
     "height": 1.85,
@@ -9,29 +9,22 @@
   },
   "routes": [
     {
-      "name": "cockpit",
+      "name": "carved_cockpit",
+      "mode": "walk",
       "points": [
         [
-          0.0,
-          0.03999999910593033,
-          -1.100000023841858
+          0,
+          0.04,
+          -0.85
         ],
         [
-          0.0,
-          0.03999999910593033,
-          -0.0
-        ],
-        [
-          0.0,
-          0.03999999910593033,
-          0.824999988079071
+          0,
+          0.04,
+          0.85
         ]
       ]
     }
   ],
   "source_commit": "ea77e560ba4668c9dda55433813addbdb2f50176",
-  "limitations": [
-    "Osobna rekonstrukcja d\u0142ubanki, bez masztu i olinowania; gabaryty to przyj\u0119cie do gry.",
-    "Kr\u00f3tka strefa stania w \u015brodku. Brak kajuty i podpok\u0142adu."
-  ]
+  "requires_engine_controller": true
 }
