@@ -6,8 +6,8 @@ pozycji roboczych, aktualizuje ich liny i dodaje delikatną animację płótna.
 Nie przedstawia konkretnego, udokumentowanego okrętu. Obrysy żagli są rekonstrukcją
 według rozdziału 08 i `set_sail_estimates`, a nie historycznymi planami.
 
-![Snow pod żaglami — render wygenerowanego modelu](previews/hero.jpg)
-![Pokład i miejsca pracy załogi](previews/deck.jpg)
+![Snow pod żaglami — render wygenerowanego modelu](previews/hero.png)
+![Pokład i miejsca pracy załogi](previews/deck.png)
 
 Wersja do gry skraca fok i grot oraz podcina dolny lik żagla gaflowego i podnosi
 róg grotsztaksla. Wstępne obrysy z planu schodziły do przestrzeni zajmowanej przez
