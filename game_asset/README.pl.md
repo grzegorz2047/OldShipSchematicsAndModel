@@ -13,12 +13,21 @@ prześwitu co najmniej 2,20 m nad pokładem głównym i rufowym, także dla skra
 stanów animacji wiatru. To decyzja ergonomiczna dla gry, nie wartość z epoki.
 Podglądy zawierają manekiny kontrolne wysokości 1,75 m, poza eksportem GLB.
 
+Olinowanie jest dopasowane do tej pozy żagli: perty biegną za rejami, topenanty
+mają mocowania po tylnej stronie drzewc, a brasy prowadzą przez bloki poza płótnem
+i dalej pod dolnymi żaglami. Górne żagle mają wyżej podcięte środki lików dolnych,
+żeby omijać sztagi, wanty i osprzęt przy głowicach masztów. Sztaksle mają rogi
+szotowe odchylone na lewą burtę; ich liki przednie podążają za krzywizną sztagów
+i są połączone z nimi hankami. To roboczy trym modelu do gry, nie zachowany plan.
+
 ## Generowanie
 
 Z katalogu głównego **pełnego sklonowanego repozytorium**:
 
 ```sh
-blender -b --factory-startup --python game_asset/build_ship.py -- --out build/game_ship
+blender -b --factory-startup --python-exit-code 1 --python game_asset/build_ship.py -- --out build/game_ship
+blender -b --factory-startup --python-exit-code 1 --python game_asset/verify_exports.py -- build/game_ship
+python game_asset/validate_asset.py build/game_ship
 ```
 
 Sprawdzone w Blenderze 4.3.2. Skrypt korzysta z `bpy`, `bmesh`, `mathutils` i `numpy`
@@ -29,11 +38,21 @@ budowy użyj plików z katalogu `game_asset/` w pełnym repozytorium.
 
 Kontrola wygenerowanych plików bez Blendera: `python game_asset/validate_asset.py build/game_ship`.
 W rozpakowanej paczce: `python validate_asset.py .`. Wynik zapisuje się jako `validation.json`.
+Walidator porównuje również skróty GLB z raportami ponownego importu, aby nie przyjąć
+raportu dotyczącego poprzedniej wersji modelu.
 Generator dodatkowo sprawdza rzeczywistą geometrię wyeksportowanego GLB i zapisuje
 `deck_clearance.json`. Powtórzenie samego pomiaru: `python game_asset/deck_clearance.py build/game_ship`
 (ten dodatkowy skrypt wymaga NumPy). Sprawdzenie dotyczy płótna nad pokładami
 w pozycji roboczej rej; nie jest oceną stateczności, obciążenia wiatrem ani wszystkich
 przejść pomiędzy sprzętem i linami. Gdy zmieniasz brasowanie, trzeba powtórzyć kontrolę.
+
+Przed eksportem generator sprawdza przecięcia lina–płótno i płótno–płótno w klatkach
+0, 12, 24, 36, 48, 60, 72, 84 i 96. Wykryte przecięcie wnętrza płótna przerywa
+budowę. Kontakt do 25 mm od brzegu jest klasyfikowany osobno jako połączenie
+brzegowe; własne likliny są celowym mocowaniem na krawędzi. `verify_exports.py`
+powtarza kontrolę na rzeczywiście wyeksportowanym GLB po imporcie do Blendera,
+również dla statycznych LOD1 i LOD2. Raport dotyczy badanej pozy rej i tych próbek
+animacji, nie dowolnego brasowania ani symulacji zachowania lin na wietrze.
 
 ## Pliki wynikowe
 
@@ -47,6 +66,9 @@ przejść pomiędzy sprzętem i linami. Gdy zmieniasz brasowanie, trzeba powtór
 | `data/` | oryginalne dane do stanowisk, ruchomych części, chodzenia i lin |
 | `asset_manifest.json` | rzeczywista liczba trójkątów, wersja Blendera i odcinki lin przebudowane po podniesieniu rej |
 | `deck_clearance.json` | pomiar prześwitu nad oboma pokładami i powierzchni płótna dla 12 żagli |
+| `rigging_collisions.json` | kontrola modelu przed eksportem, z osobnym wykazem styków przy krawędziach |
+| `export_rigging_collisions_lod*.json` | kontrola trzech GLB po ponownym imporcie, związana ze skrótami plików |
+| `sailing-rigging.json` | aktualne punkty przebiegu wygenerowanych i przeprowadzonych od nowa lin |
 | `previews/` | cztery rendery rzeczywistego modelu, jeśli nie użyto `--no-renders` |
 
 ## Import do silnika
@@ -79,6 +101,8 @@ Zweryfikowanymi wynikami są pliki Blendera i eksport glTF.
   pozostają oryginalne pozycje dla opuszczonych rej; dla tej wersji preferuj węzły GLB.
 - LOD1/LOD2 to statyczne pozy pod żaglami. Przykładowe progi 75 i 250 m, histereza 15%,
   wymagają dostrojenia do kamery i urządzenia. Pełny model zachowuj dla walki i ruchu.
+  Kształty płótna zachowano podczas upraszczania. LOD2 pomija drobne liny ruchome,
+  perty i likliny, zachowując proste odcinki grubego olinowania stałego.
 - Włączenie fizyki statku, sterowanie, walka, załoga, wybór LOD i dynamiczne liny
   są zadaniem kodu gry. Pakiet jest modelem, nie gotowym kontrolerem statku.
 
@@ -88,6 +112,12 @@ Marsreje i bramreje podnoszone są o `working_height_dz_m` z uwzględnieniem poc
 masztów. Końce lin dynamicznych są ponownie liczone z `from_local` / `to_local`
 według rozdziału 14. Podczas dalszego poruszania rejami, działami, gaflem i sterem
 silnik musi ponownie obliczać liny; GLB nie realizuje tej zależności automatycznie.
+`sailing-rigging.json` zawiera poprawione przebiegi i punkty mocowania tej wersji:
+`points_gltf_m` to globalne punkty (x, y, z) glTF, a pola `*_local` nadal używają
+lokalnych osi Blendera jak w danych wzorcowych. Nie nadpisano historycznych danych
+w `data/rigging-lines.json`. Nowe przebiegi mają pierwszeństwo przed odpowiadającymi
+im wierszami wzorca. Scalony węzeł `rigging_running_sailing` przedstawia statyczną
+pozę roboczą; przy przestawianiu rej odtwórz związane z nimi odcinki z danych.
 Gejtawy, gordingi, szoty i gejtawy gafla dla zwiniętych żagli nie są używane jako
 liny postawionego płótna; nowe szoty do rogów szotowych są przybliżeniem wizualnym.
 Nie odtworzono kompletu halsów, bulin ani obsługi refowania.

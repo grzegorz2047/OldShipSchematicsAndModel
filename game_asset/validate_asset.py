@@ -9,6 +9,7 @@ from pathlib import Path
 import math
 import struct
 import sys
+import hashlib
 
 
 def read_glb(path):
@@ -133,6 +134,13 @@ def main(folder):
     assert clearance["passed"] and clearance["minimum_clearance_m"]>=2.2
     report["canvas_minimum_deck_clearance_m"]=clearance["minimum_clearance_m"]
     report["cloth_area_m2"]=clearance["cloth_area_m2"]
+    checks={}
+    for level,filename in (("lod0","snow_sailing.glb"),("lod1","snow_sailing_lod1.glb"),("lod2","snow_sailing_lod2.glb")):
+        check=json.loads((folder/("export_rigging_collisions_"+level+".json")).read_text())
+        assert check["passed"] and not check["hits"], "rope/canvas intersections"
+        assert check["source_glb_sha256"]==hashlib.sha256((folder/filename).read_bytes()).hexdigest(), "stale collision report"
+        checks[level]={"passed":True,"frames":check["frames"]}
+    report["rope_canvas_checks"]=checks
     report["result"]="passed"
     (folder/"validation.json").write_text(json.dumps(report,indent=2))
     print(json.dumps(report,indent=2))
