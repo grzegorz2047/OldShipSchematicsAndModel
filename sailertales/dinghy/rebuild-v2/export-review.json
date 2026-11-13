@@ -1,0 +1,145 @@
+{
+  "schema": 1,
+  "source_triangles": 11456,
+  "export_triangles": 11456,
+  "triangle_match": true,
+  "views": {
+    "hero": {
+      "foreground_pixels": 79171,
+      "source_mean_rgb": [
+        0.5402209758758545,
+        0.40616750717163086,
+        0.28527721762657166
+      ],
+      "export_mean_rgb": [
+        0.5403550267219543,
+        0.40623709559440613,
+        0.2852977216243744
+      ],
+      "brightness_fraction": 0.00018723159723275172,
+      "maximum_channel_share_difference": 2.9027462005615234e-05,
+      "passed": true
+    },
+    "stern": {
+      "foreground_pixels": 143518,
+      "source_mean_rgb": [
+        0.5400318503379822,
+        0.3952825367450714,
+        0.26456451416015625
+      ],
+      "export_mean_rgb": [
+        0.5403222441673279,
+        0.3954165279865265,
+        0.26458123326301575
+      ],
+      "brightness_fraction": 0.00038110506735288685,
+      "maximum_channel_share_difference": 7.653236389160156e-05,
+      "passed": true
+    },
+    "deck": {
+      "foreground_pixels": 63709,
+      "source_mean_rgb": [
+        0.6546309590339661,
+        0.5128794312477112,
+        0.38630637526512146
+      ],
+      "export_mean_rgb": [
+        0.6547142863273621,
+        0.512920081615448,
+        0.3863304555416107
+      ],
+      "brightness_fraction": 9.089565669514931e-05,
+      "maximum_channel_share_difference": 1.3470649719238281e-05,
+      "passed": true
+    },
+    "helm": {
+      "foreground_pixels": 64600,
+      "source_mean_rgb": [
+        0.6760429739952087,
+        0.5322005748748779,
+        0.4046485126018524
+      ],
+      "export_mean_rgb": [
+        0.6761656999588013,
+        0.5322731733322144,
+        0.40468066930770874
+      ],
+      "brightness_fraction": 0.0001451222970622074,
+      "maximum_channel_share_difference": 1.6987323760986328e-05,
+      "passed": true
+    }
+  },
+  "cameras": {
+    "hero": {
+      "target": [
+        0.0,
+        0.0,
+        0.04057908058166504
+      ],
+      "position": [
+        3.918882131576538,
+        5.622744083404541,
+        2.494140148162842
+      ],
+      "ortho": true,
+      "scale": 3.380988413095474,
+      "hide_rig": false
+    },
+    "stern": {
+      "target": [
+        0.0,
+        0.0,
+        0.04057908058166504
+      ],
+      "position": [
+        0.5946957468986511,
+        7.136348724365234,
+        1.3489097356796265
+      ],
+      "ortho": true,
+      "scale": 1.9072123505175111,
+      "hide_rig": false
+    },
+    "deck": {
+      "target": [
+        0.0,
+        0.0,
+        0.07999999821186066
+      ],
+      "position": [
+        2.213836908340454,
+        3.3207552433013916,
+        6.168051242828369
+      ],
+      "ortho": true,
+      "scale": 4.580331839621067,
+      "hide_rig": true
+    },
+    "helm": {
+      "target": [
+        0.0,
+        0.0,
+        0.2800000011920929
+      ],
+      "position": [
+        1.2000000476837158,
+        2.4000000953674316,
+        1.9300000667572021
+      ],
+      "ortho": false,
+      "lens": 24.0,
+      "hide_rig": false
+    }
+  },
+  "thresholds": {
+    "brightness_fraction": 0.1,
+    "channel_share_difference": 0.04
+  },
+  "scope": "Actual exported GLB vs packed source under identical camera/light. Deck view hides tagged rig in both.",
+  "presentation": "review lighting only; interior views include a camera-area fill",
+  "sha256": {
+    "model/ship.blend": "eb2982d5221f7409e74478a6f996e2cfe5ceafdd951d8860b35d5e2b3cb0d30a",
+    "model/ship.glb": "e5d1b88610cddc60fbec03a34b6f0d8ab2abd03c8d9ab61b5239e0efa669a705"
+  },
+  "passed": true
+}
