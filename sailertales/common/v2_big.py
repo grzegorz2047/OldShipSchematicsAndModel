@@ -740,7 +740,7 @@ def main():
         if spec['id']=='night-hull':
             from v2_big_fittings import add_night_head_joints
             add_night_head_joints(visual,design)
-        design['final_mesh_finish']=finish_scene(visual)
+        if spec['id']=='brig':design['final_mesh_finish']=finish_scene(visual)
         finalize(spec,out,visual,colliders,nav,design)
     else:
         (out/'navigation.json').write_text(json.dumps(nav,indent=2)+'\n',encoding='utf-8')
