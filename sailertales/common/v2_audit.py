@@ -6,6 +6,7 @@ The matrix states PASS/FAIL/NA with evidence. NA never means a test passed.
 from __future__ import annotations
 
 import argparse
+import ast
 from collections import defaultdict, deque
 import fnmatch
 import hashlib
@@ -31,6 +32,32 @@ FOOT_LIFT=0.08
 STEP_ALLOWANCE=0.22
 EDGE_CONTACT_TOLERANCE=0.025
 MESH_WELD_TOLERANCE=1e-5
+
+
+def source_dependencies(vessel):
+    """Bind the builder and its transitive local imports, not unrelated vessels.
+
+    Keeping unrelated builders out lets independent ship PRs merge without
+    invalidating evidence for geometry they never construct.
+    """
+    builders={'brig':'v2_big','night-hull':'v2_big','merchant-sloop':'v2_sloop',
+              'wreck':'v2_wreck','mewka':'v2_boats','dinghy':'v2_boats',
+              'rowboat':'v2_boats','dugout':'v2_boats'}
+    here=Path(__file__).resolve().parent
+    pending=[builders[vessel],'v2_audit','v2_review','v2_integrity','v2_package',
+             'rebuild_reference']
+    found=set()
+    while pending:
+        name=pending.pop()
+        path=here/(name+'.py')
+        if path in found or not path.is_file():continue
+        found.add(path)
+        for node in ast.walk(ast.parse(path.read_text(encoding='utf-8'))):
+            modules=([node.module] if isinstance(node,ast.ImportFrom) else
+                     [alias.name for alias in node.names] if isinstance(node,ast.Import) else [])
+            for module in modules:
+                if module and (here/(module+'.py')).is_file():pending.append(module)
+    return sorted(found)
 
 
 def ship_to_blender(q):
@@ -906,8 +933,15 @@ def main():
     fingerprints['spec.json']=digest(spec_path)
     source_root=Path(__file__).resolve().parents[2]
     source_fingerprints={}
-    for script in sorted(Path(__file__).resolve().parent.glob('v2_*.py')):
+    for script in source_dependencies(spec['id']):
         source_fingerprints[script.relative_to(source_root).as_posix()]=digest(script)
+    # The reference generator loads modules dynamically (exec/importlib), and
+    # its texture writer executes tekstury.py. Bind the complete immutable
+    # reference source rather than losing those dependencies in static tracing.
+    reference_source=source_root/'blender'
+    if not reference_source.exists():reference_source=source_root/'upstream'/'blender'
+    for script in sorted(reference_source.glob('*.py')):
+        source_fingerprints['blender/'+script.name]=digest(script)
     legacy_helper=Path(__file__).resolve().parent/'rebuild_reference.py'
     if legacy_helper.is_file():source_fingerprints[legacy_helper.relative_to(source_root).as_posix()]=digest(legacy_helper)
     referenced=design.get('source_files',{})
