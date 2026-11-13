@@ -12,6 +12,11 @@ from pathlib import Path
 def check(spec_path):
     folder = spec_path.resolve().parent
     report = json.loads((folder / 'validation.json').read_text(encoding='utf-8'))
+    if report.get('schema', 0) >= 2:
+        from v2_integrity import check_report
+        result = check_report(folder, Path(__file__).resolve().parents[2])
+        print(f'{folder.name}: PASS ({result["required_checks"]} required checks, matching SHA-256)')
+        return
     required = {
         'model/ship.glb', 'model/collision.glb', 'navigation.json', 'spec.json',
         '../common/build.py', '../common/verify.py',
