@@ -1,0 +1,706 @@
+{
+  "schema": 2,
+  "id": "mewka",
+  "construction": "double-ended 8-strake carvel fishing boat, small square rig and rudder",
+  "basis": {
+    "repo": "grzegorz2047/OldShipSchematicsAndModel",
+    "commit": "2e6f7e922e95396722376d42f3e2e0a12256029e",
+    "source": "blender/wyposazenie.py:lodz_mesh",
+    "sha256": "6c0fc58bb6b35197ac50cdf07202b9d8d39d14a9aa3d3a9e13c0d725491d79bc",
+    "chapters": [
+      "03 hull construction",
+      "08 ropes and sails",
+      "09 deck machinery and fittings",
+      "13 quality checklist",
+      "14 game integration"
+    ]
+  },
+  "dimensions_m": {
+    "length": 6.5,
+    "beam": 1.72,
+    "draft_game_bound": 0.45,
+    "standing_sole": -0.12
+  },
+  "rules": {
+    "clinker_plank_m": 0.022,
+    "clinker_lap_m": 0.012,
+    "freeboard_above_sole_m": 0.43,
+    "frame_spacing_m": 0.4,
+    "wood_texture_tile_m": 2,
+    "wood_texture_pixels": 2048,
+    "grain_uv": "physical isometric triangles; axial UV on rods",
+    "mewka_sail_foot_above_sole_m": 2.22
+  },
+  "confidence": "our inference; guide boat recipe adapted to game families, not a claimed period plan",
+  "game_deviations": [
+    "End thwarts and side seats leave a real standing corridor; no solid thwart across that corridor.",
+    "The small craft have no fabricated cabin or lower deck.",
+    "Dimensions specified as game bounds; no hydrostatic seaworthiness certification.",
+    "Mast partner displaced 0.24m to starboard and sail foot raised to clear standing player."
+  ],
+  "materials": {
+    "method": "guide-sized authored PBR atlas upgrade",
+    "materials": [
+      {
+        "source": "drewno",
+        "material": "v2_drewno",
+        "palette_srgb": [
+          0.62,
+          0.46,
+          0.3
+        ],
+        "old_uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "image_px": [
+          2048,
+          2048
+        ],
+        "family": "wood",
+        "metallic": 0
+      },
+      {
+        "source": "drewno_ciemne",
+        "material": "v2_drewno_ciemne",
+        "palette_srgb": [
+          0.4,
+          0.28,
+          0.17
+        ],
+        "old_uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "image_px": [
+          2048,
+          2048
+        ],
+        "family": "wood",
+        "metallic": 0
+      },
+      {
+        "source": "drewno_czarne",
+        "material": "v2_drewno_czarne",
+        "palette_srgb": [
+          0.23,
+          0.215,
+          0.19
+        ],
+        "old_uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "image_px": [
+          2048,
+          2048
+        ],
+        "family": "wood",
+        "metallic": 0
+      },
+      {
+        "source": "lina_jasna",
+        "material": "v2_lina_jasna",
+        "palette_srgb": [
+          0.64,
+          0.57,
+          0.43
+        ],
+        "old_uv_tile_m": [
+          1.0,
+          1.0
+        ],
+        "uv_tile_m": [
+          1.0,
+          1.0
+        ],
+        "image_px": [
+          1024,
+          512
+        ],
+        "family": "rope",
+        "metallic": 0
+      },
+      {
+        "source": "lina_smolowana",
+        "material": "v2_lina_smolowana",
+        "palette_srgb": [
+          0.23,
+          0.21,
+          0.18
+        ],
+        "old_uv_tile_m": [
+          1.0,
+          1.0
+        ],
+        "uv_tile_m": [
+          1.0,
+          1.0
+        ],
+        "image_px": [
+          1024,
+          512
+        ],
+        "family": "rope",
+        "metallic": 0
+      },
+      {
+        "source": "plotno",
+        "material": "v2_plotno",
+        "palette_srgb": [
+          0.84,
+          0.8,
+          0.7
+        ],
+        "old_uv_tile_m": [
+          2.4,
+          2.4
+        ],
+        "uv_tile_m": [
+          2.4,
+          2.4
+        ],
+        "image_px": [
+          2048,
+          2048
+        ],
+        "family": "canvas",
+        "metallic": 0
+      },
+      {
+        "source": "zelazo",
+        "material": "v2_zelazo",
+        "palette_srgb": [
+          0.19,
+          0.18,
+          0.17
+        ],
+        "old_uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "uv_tile_m": [
+          1.0,
+          1.0
+        ],
+        "image_px": [
+          2048,
+          2048
+        ],
+        "family": "iron",
+        "metallic": 1
+      }
+    ],
+    "provenance": {
+      "license": "project-authored procedural textures; no external imagery",
+      "basis": [
+        "docs/en/03-hull-construction.md",
+        "docs/en/04-decks-bulwarks-stern-head.md",
+        "docs/en/08-ropes-blocks-and-sails.md",
+        "docs/en/13-3d-quality-checklist.md"
+      ],
+      "atlas_m": {
+        "deck": [
+          3.52,
+          0.88
+        ],
+        "hull": [
+          4.4,
+          1.1
+        ],
+        "paint": [
+          4.4,
+          1.1
+        ],
+        "wood": [
+          2.0,
+          2.0
+        ],
+        "iron": [
+          1.0,
+          1.0
+        ],
+        "rope": [
+          1.0,
+          1.0
+        ],
+        "canvas": [
+          2.4,
+          2.4
+        ]
+      },
+      "method": "continuous authored grain, physical seams/trunnels, normal from metric height derivatives",
+      "palette_srgb": {
+        "poklad": [
+          0.62,
+          0.575,
+          0.5
+        ],
+        "burta_drewno": [
+          0.46,
+          0.33,
+          0.22
+        ],
+        "drewno": [
+          0.62,
+          0.46,
+          0.3
+        ],
+        "drewno_ciemne": [
+          0.4,
+          0.28,
+          0.17
+        ],
+        "drewno_czarne": [
+          0.23,
+          0.215,
+          0.19
+        ],
+        "laweta": [
+          0.4,
+          0.15,
+          0.09
+        ],
+        "farba_czarna": [
+          0.2,
+          0.19,
+          0.18
+        ],
+        "farba_czarna_gladka": [
+          0.23,
+          0.22,
+          0.21
+        ],
+        "farba_ochra": [
+          0.68,
+          0.52,
+          0.27
+        ],
+        "farba_czerwona": [
+          0.55,
+          0.17,
+          0.1
+        ],
+        "farba_niebieska": [
+          0.16,
+          0.23,
+          0.36
+        ],
+        "farba_dno_biala": [
+          0.84,
+          0.81,
+          0.73
+        ],
+        "farba_dno_czerwona": [
+          0.42,
+          0.18,
+          0.12
+        ],
+        "rzezby_zlote": [
+          0.82,
+          0.63,
+          0.3
+        ],
+        "zelazo": [
+          0.19,
+          0.18,
+          0.17
+        ],
+        "zelazo_lufa": [
+          0.19,
+          0.18,
+          0.17
+        ],
+        "braz": [
+          0.62,
+          0.42,
+          0.2
+        ],
+        "lina_smolowana": [
+          0.23,
+          0.21,
+          0.18
+        ],
+        "lina_jasna": [
+          0.64,
+          0.57,
+          0.43
+        ],
+        "plotno": [
+          0.84,
+          0.8,
+          0.7
+        ],
+        "szklo": [
+          0.18,
+          0.23,
+          0.25
+        ]
+      }
+    }
+  },
+  "spec_sha256": "341fd9a7d3904c73fee440696c442518e318397f15abc6e9b33f4ffc5c22cb8f",
+  "sources": {
+    "repo": "grzegorz2047/OldShipSchematicsAndModel",
+    "commit": "2e6f7e922e95396722376d42f3e2e0a12256029e",
+    "source": "blender/wyposazenie.py:lodz_mesh",
+    "sha256": "6c0fc58bb6b35197ac50cdf07202b9d8d39d14a9aa3d3a9e13c0d725491d79bc",
+    "chapters": [
+      "03 hull construction",
+      "08 ropes and sails",
+      "09 deck machinery and fittings",
+      "13 quality checklist",
+      "14 game integration"
+    ]
+  },
+  "origin": {
+    "position_gltf_m": [
+      0,
+      0,
+      0
+    ],
+    "meaning": "design waterline at hull mid-length"
+  },
+  "intended_joints": [
+    {
+      "a": "strake_port_01",
+      "b": "strake_port_02",
+      "reason": "Adjacent carvel strakes meet at their sewn/caulked seam."
+    },
+    {
+      "a": "strake_port_02",
+      "b": "strake_port_03",
+      "reason": "Adjacent carvel strakes meet at their sewn/caulked seam."
+    },
+    {
+      "a": "strake_port_03",
+      "b": "strake_port_04",
+      "reason": "Adjacent carvel strakes meet at their sewn/caulked seam."
+    },
+    {
+      "a": "strake_port_04",
+      "b": "strake_port_05",
+      "reason": "Adjacent carvel strakes meet at their sewn/caulked seam."
+    },
+    {
+      "a": "strake_port_05",
+      "b": "strake_port_06",
+      "reason": "Adjacent carvel strakes meet at their sewn/caulked seam."
+    },
+    {
+      "a": "strake_port_06",
+      "b": "strake_port_07",
+      "reason": "Adjacent carvel strakes meet at their sewn/caulked seam."
+    },
+    {
+      "a": "strake_port_07",
+      "b": "strake_port_08",
+      "reason": "Adjacent carvel strakes meet at their sewn/caulked seam."
+    },
+    {
+      "a": "strake_starboard_01",
+      "b": "strake_starboard_02",
+      "reason": "Adjacent carvel strakes meet at their sewn/caulked seam."
+    },
+    {
+      "a": "strake_starboard_02",
+      "b": "strake_starboard_03",
+      "reason": "Adjacent carvel strakes meet at their sewn/caulked seam."
+    },
+    {
+      "a": "strake_starboard_03",
+      "b": "strake_starboard_04",
+      "reason": "Adjacent carvel strakes meet at their sewn/caulked seam."
+    },
+    {
+      "a": "strake_starboard_04",
+      "b": "strake_starboard_05",
+      "reason": "Adjacent carvel strakes meet at their sewn/caulked seam."
+    },
+    {
+      "a": "strake_starboard_05",
+      "b": "strake_starboard_06",
+      "reason": "Adjacent carvel strakes meet at their sewn/caulked seam."
+    },
+    {
+      "a": "strake_starboard_06",
+      "b": "strake_starboard_07",
+      "reason": "Adjacent carvel strakes meet at their sewn/caulked seam."
+    },
+    {
+      "a": "strake_starboard_07",
+      "b": "strake_starboard_08",
+      "reason": "Adjacent carvel strakes meet at their sewn/caulked seam."
+    },
+    {
+      "a": "strake_*",
+      "b": "bent_frame_*",
+      "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+    },
+    {
+      "a": "strake_*",
+      "b": "gunwale_*",
+      "reason": "The sheerstrake is housed in the gunwale."
+    },
+    {
+      "a": "strake_*",
+      "b": "inwale_*",
+      "reason": "The inwale backs the upper planking."
+    },
+    {
+      "a": "bent_frame_*",
+      "b": "inwale_*",
+      "reason": "Frame heads are housed in the inwale."
+    },
+    {
+      "a": "bent_frame_*",
+      "b": "gunwale_*",
+      "reason": "Frame heads support the gunwale cap."
+    },
+    {
+      "a": "strake_*",
+      "b": "keel",
+      "reason": "Garboard strakes are rebated into the keel."
+    },
+    {
+      "a": "strake_*",
+      "b": "stem",
+      "reason": "Strake ends are housed in the stem rabbet."
+    },
+    {
+      "a": "strake_*",
+      "b": "sternpost",
+      "reason": "The after ends meet the sternpost."
+    },
+    {
+      "a": "strake_*",
+      "b": "transom",
+      "reason": "Strake ends are fixed to the transom edge."
+    },
+    {
+      "a": "keel",
+      "b": "stem",
+      "reason": "Keel and stem have a scarfed structural joint."
+    },
+    {
+      "a": "keel",
+      "b": "sternpost",
+      "reason": "Keel and sternpost are scarfed together."
+    },
+    {
+      "a": "keel",
+      "b": "transom",
+      "reason": "The transom lands on the after keel."
+    },
+    {
+      "a": "sternpost",
+      "b": "transom",
+      "reason": "The transom is secured to the sternpost."
+    },
+    {
+      "a": "strake_*",
+      "b": "thwart_riser_*",
+      "reason": "Thwart riser rails are housed against the inner planking."
+    },
+    {
+      "a": "bent_frame_*",
+      "b": "thwart_riser_*",
+      "reason": "Thwart risers land on supporting frames."
+    },
+    {
+      "a": "end_thwart_*",
+      "b": "thwart_riser_*",
+      "reason": "The ends of each thwart rest on timber riser rails."
+    },
+    {
+      "a": "sole_board_*",
+      "b": "bent_frame_*",
+      "reason": "The sole boards rest on the lower frames."
+    },
+    {
+      "a": "thole_*",
+      "b": "gunwale_*",
+      "reason": "Thole pins are fixed into the gunwale."
+    },
+    {
+      "a": "thole_*",
+      "b": "inwale_*",
+      "reason": "The thole socket is supported by the inwale."
+    },
+    {
+      "a": "stowed_oar_shaft_*",
+      "b": "stowed_oar_blade_*",
+      "reason": "The oar loom is housed in its blade; each whole oar is lashed above the gunwale."
+    },
+    {
+      "a": "side_seat_*",
+      "b": "side_seat_knee_*",
+      "reason": "Side seats are supported on timber knees."
+    },
+    {
+      "a": "side_seat_knee_*",
+      "b": "strake_*",
+      "reason": "Seat knees are housed against the inner planking."
+    },
+    {
+      "a": "side_seat_*",
+      "b": "strake_*",
+      "reason": "A side-seat edge is housed against planking."
+    },
+    {
+      "a": "side_seat_knee_*",
+      "b": "bent_frame_*",
+      "reason": "Seat knees land on supporting frames."
+    },
+    {
+      "a": "inwale_*",
+      "b": "gunwale_*",
+      "reason": "The gunwale cap is fastened over the backing inwale."
+    },
+    {
+      "a": "gunwale_*",
+      "b": "stem",
+      "reason": "Gunwale ends meet in the stem-head joint."
+    },
+    {
+      "a": "gunwale_*",
+      "b": "sternpost",
+      "reason": "Gunwale ends meet at the sternpost head."
+    },
+    {
+      "a": "gunwale_*",
+      "b": "transom",
+      "reason": "Gunwale caps are housed over the transom corners."
+    },
+    {
+      "a": "inwale_*",
+      "b": "stem",
+      "reason": "Inwale ends are housed into the stem head."
+    },
+    {
+      "a": "inwale_*",
+      "b": "sternpost",
+      "reason": "Inwale ends are housed at the sternpost head."
+    },
+    {
+      "a": "inwale_*",
+      "b": "transom",
+      "reason": "Inwale ends land against the transom."
+    },
+    {
+      "a": "thole_*",
+      "b": "strake_*",
+      "reason": "Thole pins pass through the gunwale into the backing sheerstrake."
+    },
+    {
+      "a": "gunwale_1_001",
+      "b": "gunwale_1",
+      "reason": "The port and starboard rail ends meet inside the stem-head joint."
+    },
+    {
+      "a": "inwale_1_001",
+      "b": "inwale_1",
+      "reason": "The port and starboard rail ends meet inside the stem-head joint."
+    },
+    {
+      "a": "mast",
+      "b": "mast_step",
+      "reason": "The mast heel passes through the partner and stands in its step."
+    },
+    {
+      "a": "mast",
+      "b": "sole_board_*",
+      "reason": "The mast passes through a fitted partner in the sole."
+    },
+    {
+      "a": "mast_step",
+      "b": "sole_board_*",
+      "reason": "The step is fastened to the sole structure."
+    },
+    {
+      "a": "mast_head_cap",
+      "b": "mast",
+      "reason": "The cap is fitted around the mast head."
+    },
+    {
+      "a": "chainplate_*",
+      "b": "strake_*",
+      "reason": "Chainplates are fastened to the planking."
+    },
+    {
+      "a": "chainplate_*",
+      "b": "gunwale_*",
+      "reason": "Chainplate eyes emerge at the gunwale."
+    },
+    {
+      "a": "halyard_cleat",
+      "b": "mast",
+      "reason": "The halyard cleat is bolted to the mast."
+    },
+    {
+      "a": "rudder",
+      "b": "rudder_stock",
+      "reason": "The rudder blade is housed around the rudder stock."
+    },
+    {
+      "a": "rudder_stock",
+      "b": "tiller",
+      "reason": "The tiller is mortised into the stock head."
+    },
+    {
+      "a": "rudder_pintle_*",
+      "b": "sternpost",
+      "reason": "The iron pintles are fixed to the sternpost."
+    },
+    {
+      "a": "rudder_pintle_*",
+      "b": "rudder_stock",
+      "reason": "The stock is supported by iron pintles."
+    },
+    {
+      "a": "rudder_pintle_*",
+      "b": "rudder",
+      "reason": "The iron pintles support the rudder blade assembly."
+    },
+    {
+      "a": "square_sail",
+      "b": "bolt_rope_*",
+      "reason": "Own bolt ropes are sewn to the canvas perimeter."
+    },
+    {
+      "a": "square_sail",
+      "b": "head_roband_*",
+      "reason": "Robands tie the head of the cloth to the yard; only boundary contact is intentional."
+    },
+    {
+      "a": "square_sail",
+      "b": "sheet_*",
+      "reason": "Sheets attach at the lower clews, not across cloth interiors."
+    }
+  ],
+  "triangles": {
+    "lod0": 16448,
+    "collision": 5688,
+    "lod1": 8536,
+    "lod2": 1830
+  },
+  "export": {
+    "units": "metres",
+    "axes": "glTF +X port, +Y up, +Z forward",
+    "animations": "authored static pose; transforms/pivot markers retained",
+    "lods": "static distance meshes with 1024/512 max texture dimension",
+    "collision_mode": "separate static concave meshes; moving parts require engine setup"
+  }
+}

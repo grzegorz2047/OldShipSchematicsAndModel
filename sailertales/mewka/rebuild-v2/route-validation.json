@@ -1,0 +1,24 @@
+{
+  "scope": "sampled capsule routes only; full guide audit is separate",
+  "checks": {
+    "model/ship.glb": [
+      {
+        "route": "cockpit_and_mast_bypass",
+        "samples": 18,
+        "passed": true,
+        "failures": [],
+        "failure_count": 0
+      }
+    ],
+    "model/collision.glb": [
+      {
+        "route": "cockpit_and_mast_bypass",
+        "samples": 18,
+        "passed": true,
+        "failures": [],
+        "failure_count": 0
+      }
+    ]
+  },
+  "passed": true
+}
