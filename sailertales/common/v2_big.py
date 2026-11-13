@@ -634,7 +634,7 @@ def save_scene(ctx,spec,out):
         {'a':'captain_bunk_frame','b':'captain_bunk_leg_*','reason':'short support legs meet the underside of the bunk frame'},
         {'a':'capstan_bar_rack_post_*','b':'capstan_bar_rack_shelf_*','reason':'tiered rack shelves are housed into their vertical posts'},
         {'a':'freshwater_barrel_hold','b':'freshwater_barrel_hold','reason':'Source iron hoops are fitted around the wooden cask body'},
-        {'a':'ster_glowica','b':'ster','reason':'The stock head cover fits around the upper rudder stock; overlap is under 6 mm'}]
+        {'a':'pokrywa_trzonu','b':'ster','reason':'The stock head cover fits around the upper rudder stock; overlap is under 6 mm'}]
     for index in range(1,7):
         design['intended_joints'].append({'a':f'night_lantern_{index}_support','b':f'night_lantern_{index}_housing',
             'reason':'The lantern base seats 7.5 mm over its supporting iron socket.'})
