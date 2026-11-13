@@ -112,7 +112,7 @@ def finish_mesh(o,ngon_method='BEAUTY'):
             result=bmesh.ops.holes_fill(bm,edges=edges,sides=16)
             caps=len(result.get('faces',[]))
     bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces))
-    flipped=0
+    flipped=0;zero_vertices=[];zero_components=0
     for verts,faces in components(bm):
         if not all(e.is_manifold for f in faces for e in f.edges):continue
         centre=sum((v.co for v in verts),Vector())/len(verts)
@@ -120,12 +120,15 @@ def finish_mesh(o,ngon_method='BEAUTY'):
         for f in faces:
             pp=[v.co-centre for v in f.verts]
             for i in range(1,len(pp)-1):volume+=pp[0].dot(pp[i].cross(pp[i+1]))/6
-        if volume<0:
+        if abs(volume)<=1e-12:
+            zero_vertices.extend(verts);zero_components+=1
+        elif volume<0:
             bmesh.ops.reverse_faces(bm,faces=list(faces));flipped+=1
+    if zero_vertices:bmesh.ops.delete(bm,geom=zero_vertices,context='VERTS')
     triangulate_safe(bm,ngon_method)
     remove_opposed_duplicate_triangles(bm)
     after=mesh_stats(bm);bm.to_mesh(me);bm.free();me.update()
-    return {'name':o.name,'before':before,'after':after,'capped_tube_ends':caps,'outward_islands_reoriented':flipped,'separated_contact_vertices':separated,'internal_interface_faces_removed':len(interfaces)}
+    return {'name':o.name,'before':before,'after':after,'capped_tube_ends':caps,'outward_islands_reoriented':flipped,'separated_contact_vertices':separated,'internal_interface_faces_removed':len(interfaces),'zero_volume_components_removed':zero_components}
 
 
 def finish_scene(objects):

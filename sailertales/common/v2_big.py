@@ -164,6 +164,17 @@ def augment_interiors(ctx,spec):
     sq=K['POLPOKLAD_S'];cabin_sole=float(kd.deck_c(sq))+K['POLPOKLAD_H']-2.45
     room=cavity(ctx,'captains_cabin_void',-spec['length']*.44,sq-.05,cabin_sole,K['POLPOKLAD_H'])
     ops.append(cut(hull,room,'hollow_captains_cabin'))
+    # The reference left the stern interior solid. Cut the real steering gear
+    # envelope, rather than allowing a wooden tiller to run through that solid.
+    tiller=bpy.data.objects.get('rumpel_pod_pokladem')
+    if tiller is not None:
+        cutter=tiller.copy();cutter.data=tiller.data.copy();cutter.name='tiller_gear_clearance_void'
+        ctx['_v2_interiors'].objects.link(cutter)
+        world=tiller.matrix_world.copy();cutter.parent=None;cutter.matrix_world=world
+        bm=bmesh.new();bm.from_mesh(cutter.data);bm.normal_update()
+        for v in bm.verts:v.co+=v.normal.normalized()*.045
+        bm.to_mesh(cutter.data);bm.free();cutter.data.update()
+        ops.append(cut(hull,cutter,'underdeck_tiller_clearance'))
     # Open the original main hatch, retaining its documented 2.4 x 1.8 m family.
     L=U['LUK_GLOWNY'];s0,s1,hx=L['s0'],L['s1'],L['pol_x']
     hatch=bpy.data.objects.get('luk_glowny');remove(hatch)
@@ -634,6 +645,14 @@ def save_scene(ctx,spec,out):
         {'a':'captain_bunk_frame','b':'captain_bunk_leg_*','reason':'short support legs meet the underside of the bunk frame'},
         {'a':'capstan_bar_rack_post_*','b':'capstan_bar_rack_shelf_*','reason':'tiered rack shelves are housed into their vertical posts'},
         {'a':'freshwater_barrel_hold','b':'freshwater_barrel_hold','reason':'Source iron hoops are fitted around the wooden cask body'},
+        {'a':'kadlub','b':'main_hatch_open_coaming*','reason':'Hatch coaming beams are let up to 70 mm into the surrounding deck planking.'},
+        {'a':'kadlub','b':'captain_door_jamb_*','reason':'The jamb timbers are housed into the sides of the real cabin portal.'},
+        {'a':'kadlub','b':'captain_door_lintel','reason':'The portal header is housed 50 mm into the retained upper bulkhead.'},
+        {'a':'kadlub','b':'captain_companionway','reason':'The 140 mm thick companionway slab bears into the main-deck and cabin-sole landings.'},
+        {'a':'kadlub','b':'quarterdeck_companionway','reason':'The quarterdeck stair slab is lodged into the deck and quarterdeck landing edges.'},
+        {'a':'kadlub','b':'captain_companionway_post_*','reason':'Handrail posts are mortised up to 20 mm into the sheered deck and landing.'},
+        {'a':'kadlub','b':'quarterdeck_companionway_post_*','reason':'Handrail posts are mortised up to 20 mm into the sheered deck and landing.'},
+        {'a':'kadlub','b':'captain_companionway_rail_port','reason':'The port handrail end seats 10 mm into the cabin portal side.'},
         {'a':'pokrywa_trzonu','b':'ster','reason':'The stock head cover fits around the upper rudder stock; overlap is under 6 mm'}]
     for index in range(1,7):
         design['intended_joints'].append({'a':f'night_lantern_{index}_support','b':f'night_lantern_{index}_housing',
@@ -688,8 +707,9 @@ def main():
     augment_interiors(ctx,spec)
     stow_capstan(ctx)
     if spec['id']=='night-hull':night_lanterns(ctx,spec)
-    from v2_big_fittings import relocate_water_supply
+    from v2_big_fittings import relocate_water_supply,separate_canvas_gaskets
     relocate_water_supply(ctx)
+    if spec['id']=='night-hull':separate_canvas_gaskets(ctx)
     from v2_mesh_finish import finish_scene
     mesh_finish=finish_scene([o for o in bpy.context.scene.objects if o.get('asset_role') not in ('collision','presentation')])
     if spec['id']=='brig':
