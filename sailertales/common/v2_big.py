@@ -4,6 +4,7 @@ Original reference shell, stations, spars and fittings are preserved. New spaces
 are explicit game reconstructions, cut into that shell rather than fake floors.
 """
 import argparse
+import fnmatch
 import hashlib
 import importlib
 import json
@@ -578,6 +579,25 @@ def save_scene(ctx,spec,out):
         {'a':'captain_door_jamb_*','b':'captain_door_lintel','reason':'lintel is tenoned into jambs'},
         {'a':'captain_chart_table','b':'chart_table_leg_*','reason':'tabletop rests on legs'},
         {'a':'captain_bunk_frame','b':'captain_bunk_mattress','reason':'mattress rests on bunk frame'}]
+    # Preserve the guide's documented construction joints as concrete object
+    # pairs. Material-limited source exceptions require a separate measurement;
+    # the obsolete "unmodelled cabin" exception does not apply to this interior.
+    from przenikanie import POLACZENIA
+    source_names=[o.name for o in bpy.context.scene.objects if o.type=='MESH' and
+                  o.get('asset_role') not in ('collision','presentation')]
+    declared=set()
+    for a,ma,b,mb,reason in POLACZENIA:
+        if ma!='*' or mb!='*' or 'nie jest modelowane' in reason:
+            continue
+        for name_a in source_names:
+            if not fnmatch.fnmatchcase(name_a,a):continue
+            for name_b in source_names:
+                if not fnmatch.fnmatchcase(name_b,b):continue
+                pair=tuple(sorted((name_a,name_b)))
+                if pair in declared:continue
+                declared.add(pair)
+                design['intended_joints'].append({'a':name_a,'b':name_b,'reason':reason,
+                    'source':'blender/przenikanie.py:POLACZENIA'})
     (out/'design.json').write_text(json.dumps(design,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
     return nav,design
 
