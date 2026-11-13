@@ -190,7 +190,7 @@ def augment_interiors(ctx,spec):
         P(1.4,s0-.6,float(kd.deck_z(s0-.6,1.4)))])
     route(ctx,'hold_ladder',[P(1.4,climb_s,float(kd.deck_z(climb_s,1.4))),
         P(1.4,climb_s,zmain+.50),P(0,climb_s,zmain+.50),P(0,climb_s,hold_sole)],'climb')
-    route(ctx,'hold_centre_aisle',[P(0,climb_s,hold_sole),P(-1,climb_s,hold_sole),
+    route(ctx,'hold_aisle',[P(0,climb_s,hold_sole),P(-1,climb_s,hold_sole),
         P(-1,1.2,hold_sole),P(-1,-spec['length']*.10,hold_sole)])
     # Replace decorative sealed reference doors with one real open companionway.
     remove(bpy.data.objects.get('grodz_drzwi'))
@@ -541,6 +541,21 @@ def save_scene(ctx,spec,out):
             o['kind']='glass';o['physics']='none'
             o['topology_reason']='single-pane glazing; intentionally open double-sided surface'
         if o.get('wariant')=='naped_rumpel':o.hide_render=True;o['asset_role']='presentation'
+    # Static mesh nodes carry applied rotation/scale; their geometry and child
+    # world transforms stay unchanged. Moving nodes retain their actual axes.
+    motion_keys=('motion_axis','range_deg','range_m','os_ruchu','control_type')
+    for o in list(bpy.context.scene.objects):
+        if o.type!='MESH' or o.get('asset_role') in ('collision','presentation') or any(k in o for k in motion_keys):
+            continue
+        basis=o.matrix_basis.copy()
+        linear=basis.to_3x3().to_4x4()
+        if all(abs(linear[i][j]-(1 if i==j else 0))<1e-7 for i in range(4) for j in range(4)):
+            continue
+        child_worlds={child:child.matrix_world.copy() for child in o.children}
+        if o.data.users>1:o.data=o.data.copy()
+        o.data.transform(linear)
+        o.matrix_basis=Matrix.Translation(basis.translation)
+        for child,world in child_worlds.items():child.matrix_world=world
     for im in bpy.data.images:
         if im.source=='FILE' and not im.packed_file:im.pack()
     bpy.ops.wm.save_as_mainfile(filepath=str(out/'model'/'ship.blend'),compress=True)
