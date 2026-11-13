@@ -456,7 +456,7 @@
               "loose_vertices": 0,
               "loose_edges": 0,
               "closed_component_signed_volumes_m3": [
-                0.007000876126395291
+                0.007000876126395294
               ],
               "reversed_closed_components": 0,
               "nearly_zero_volume_closed_components": 0
@@ -478,7 +478,7 @@
               "loose_vertices": 0,
               "loose_edges": 0,
               "closed_component_signed_volumes_m3": [
-                0.007000876139798278
+                0.007000876139798272
               ],
               "reversed_closed_components": 0,
               "nearly_zero_volume_closed_components": 0
@@ -544,7 +544,7 @@
               "loose_vertices": 0,
               "loose_edges": 0,
               "closed_component_signed_volumes_m3": [
-                0.01862742837195823
+                0.01862742837195825
               ],
               "reversed_closed_components": 0,
               "nearly_zero_volume_closed_components": 0
@@ -940,7 +940,7 @@
               "loose_vertices": 0,
               "loose_edges": 0,
               "closed_component_signed_volumes_m3": [
-                0.011718829985768411
+                0.011718829985768418
               ],
               "reversed_closed_components": 0,
               "nearly_zero_volume_closed_components": 0
@@ -962,7 +962,7 @@
               "loose_vertices": 0,
               "loose_edges": 0,
               "closed_component_signed_volumes_m3": [
-                0.009156420121187087
+                0.009156420121187081
               ],
               "reversed_closed_components": 0,
               "nearly_zero_volume_closed_components": 0
@@ -984,7 +984,7 @@
               "loose_vertices": 0,
               "loose_edges": 0,
               "closed_component_signed_volumes_m3": [
-                0.009143139261837994
+                0.009143139261837978
               ],
               "reversed_closed_components": 0,
               "nearly_zero_volume_closed_components": 0
@@ -1028,7 +1028,7 @@
               "loose_vertices": 0,
               "loose_edges": 0,
               "closed_component_signed_volumes_m3": [
-                0.011804892421141905
+                0.01180489242114193
               ],
               "reversed_closed_components": 0,
               "nearly_zero_volume_closed_components": 0
@@ -1050,7 +1050,7 @@
               "loose_vertices": 0,
               "loose_edges": 0,
               "closed_component_signed_volumes_m3": [
-                0.01296324159190397
+                0.012963241591903976
               ],
               "reversed_closed_components": 0,
               "nearly_zero_volume_closed_components": 0
@@ -1072,7 +1072,7 @@
               "loose_vertices": 0,
               "loose_edges": 0,
               "closed_component_signed_volumes_m3": [
-                0.011718829985768418
+                0.011718829985768415
               ],
               "reversed_closed_components": 0,
               "nearly_zero_volume_closed_components": 0
@@ -1094,7 +1094,7 @@
               "loose_vertices": 0,
               "loose_edges": 0,
               "closed_component_signed_volumes_m3": [
-                0.009156420121187087
+                0.009156420121187081
               ],
               "reversed_closed_components": 0,
               "nearly_zero_volume_closed_components": 0
@@ -1138,7 +1138,7 @@
               "loose_vertices": 0,
               "loose_edges": 0,
               "closed_component_signed_volumes_m3": [
-                0.010325383618927363
+                0.010325383618927361
               ],
               "reversed_closed_components": 0,
               "nearly_zero_volume_closed_components": 0
@@ -1160,7 +1160,7 @@
               "loose_vertices": 0,
               "loose_edges": 0,
               "closed_component_signed_volumes_m3": [
-                0.011804892421141912
+                0.01180489242114193
               ],
               "reversed_closed_components": 0,
               "nearly_zero_volume_closed_components": 0
@@ -1182,7 +1182,7 @@
               "loose_vertices": 0,
               "loose_edges": 0,
               "closed_component_signed_volumes_m3": [
-                0.012963241591903976
+                0.012963241591903972
               ],
               "reversed_closed_components": 0,
               "nearly_zero_volume_closed_components": 0
@@ -1542,7 +1542,7 @@
               "loose_vertices": 0,
               "loose_edges": 0,
               "closed_component_signed_volumes_m3": [
-                0.007000876126395294
+                0.007000876126395295
               ],
               "reversed_closed_components": 0,
               "nearly_zero_volume_closed_components": 0
@@ -1564,7 +1564,7 @@
               "loose_vertices": 0,
               "loose_edges": 0,
               "closed_component_signed_volumes_m3": [
-                0.007000876139798273
+                0.007000876139798275
               ],
               "reversed_closed_components": 0,
               "nearly_zero_volume_closed_components": 0
@@ -1586,7 +1586,7 @@
               "loose_vertices": 0,
               "loose_edges": 0,
               "closed_component_signed_volumes_m3": [
-                0.09971659354564368
+                0.09971659354564362
               ],
               "reversed_closed_components": 0,
               "nearly_zero_volume_closed_components": 0
@@ -1608,7 +1608,7 @@
               "loose_vertices": 0,
               "loose_edges": 0,
               "closed_component_signed_volumes_m3": [
-                0.018627428371958223
+                0.01862742837195825
               ],
               "reversed_closed_components": 0,
               "nearly_zero_volume_closed_components": 0
@@ -3116,12 +3116,14 @@
       "passed": true,
       "source_triangles": 11456,
       "export_triangles": 11456,
+      "export_indexed_triangles": 11456,
+      "triangle_count_scope": "source and export include every mesh-node instance; indexed count is separate",
       "triangle_relative_difference": 0.0,
       "max_bound_error_m": 0.0,
       "missing_source_mesh_nodes": [],
       "unexpected_export_mesh_nodes": [],
       "unpacked_used_images": [],
-      "method": "evaluated source visual meshes versus actual GLB mesh names, triangle count and world bounds"
+      "method": "evaluated source visual meshes versus actual GLB mesh names, per-instance triangle count and world bounds"
     },
     "render_parity": {
       "present": true,
@@ -4792,12 +4794,14 @@
         "passed": true,
         "source_triangles": 11456,
         "export_triangles": 11456,
+        "export_indexed_triangles": 11456,
+        "triangle_count_scope": "source and export include every mesh-node instance; indexed count is separate",
         "triangle_relative_difference": 0.0,
         "max_bound_error_m": 0.0,
         "missing_source_mesh_nodes": [],
         "unexpected_export_mesh_nodes": [],
         "unpacked_used_images": [],
-        "method": "evaluated source visual meshes versus actual GLB mesh names, triangle count and world bounds"
+        "method": "evaluated source visual meshes versus actual GLB mesh names, per-instance triangle count and world bounds"
       }
     },
     {
@@ -5488,7 +5492,7 @@
   },
   "source_sha256": {
     "sailertales/common/rebuild_reference.py": "a4e81ab0a7fd921d10ca731c018b3a4abdac5e7ff061118a5b215164905daa77",
-    "sailertales/common/v2_audit.py": "afb2eaef8f0fccb676686a10775f6f3e3ac07010e07dc217852f013c07493275",
+    "sailertales/common/v2_audit.py": "a91bee1e9defe89692e3a32371835523ba94439c3ca0d175637ad1b72eb8d34f",
     "sailertales/common/v2_boats.py": "18cb8784c6fe4c4ba4b8716c81892740dbf5b794242f547b3624296aab2d2a67",
     "sailertales/common/v2_export.py": "821a4b747718064b5e96e05778f90a2bd0263a62a5a2d49fe3f59c60c85df45f",
     "sailertales/common/v2_integrity.py": "92691ed69cd1f00737f5c6e4e85b4df89a9e9b19d336a11a8790b38d0db5cfe9",
