@@ -1,0 +1,23 @@
+{
+  "id": "dugout",
+  "label": "Dłubanka",
+  "length": 5.5,
+  "beam": 1.4,
+  "draft": 0.35,
+  "deck": 0.04,
+  "sole": 0.04,
+  "rig": "none",
+  "small": true,
+  "source_paths": [
+    "assets/models/dugout_canoe.glb"
+  ],
+  "limitations": [
+    "Osobna rekonstrukcja dłubanki, bez masztu i olinowania; gabaryty to przyjęcie do gry.",
+    "Krótka strefa stania w środku. Brak kajuty i podpokładu."
+  ],
+  "source_commit": "ea77e560ba4668c9dda55433813addbdb2f50176",
+  "player": {
+    "radius": 0.38,
+    "height": 1.85
+  }
+}
