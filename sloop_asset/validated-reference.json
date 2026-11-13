@@ -1,0 +1,172 @@
+{
+  "source_main_commit": "2e6f7e922e95396722376d42f3e2e0a12256029e",
+  "blender": "4.3.2",
+  "hull_and_counts": {
+    "hull": {
+      "closed_shell_volume_m3": 284.289,
+      "nonmanifold_edges": 0,
+      "deck_length_m": 21.0,
+      "beam_m": 6.45,
+      "scaled_rabbet_depth_midship_m": 2.47
+    },
+    "triangles": [
+      59570,
+      39506,
+      15304
+    ],
+    "collision_objects": 25,
+    "rope_canvas_passed": true,
+    "minimum_canvas_boom_clearance_m": 2.4248
+  },
+  "export_validation": {
+    "blender": "4.3.2",
+    "models": {
+      "lod0": {
+        "sha256": "7840bf39fce4883e2fabe3593f212c540475328f99849f4fe7b1f8f02d1871d7",
+        "triangles": 59570,
+        "embedded_images": 33,
+        "minimum_headroom_m": 2.4248,
+        "audit_frames": [
+          0,
+          12,
+          24,
+          36,
+          48,
+          60,
+          72,
+          84,
+          96
+        ],
+        "result": "passed"
+      },
+      "lod1": {
+        "sha256": "beb84d298d8575bca2c658db0d52cacdd8579d49770df2a99bdcee206b47847b",
+        "triangles": 39506,
+        "embedded_images": 33,
+        "minimum_headroom_m": 2.4325,
+        "audit_frames": [
+          0
+        ],
+        "result": "passed"
+      },
+      "lod2": {
+        "sha256": "1f6b9c6f269e593751b8fce2af1e53783e1856ae966f9df94eaff71cdaa06fab",
+        "triangles": 15304,
+        "embedded_images": 33,
+        "minimum_headroom_m": 2.4325,
+        "audit_frames": [
+          0
+        ],
+        "result": "passed"
+      },
+      "collision": {
+        "sha256": "e5c1c0425bba40fbdf4f2b0c191d2bb36c22cb2976192fea46d6f9f026e0db9a",
+        "triangles": 3778,
+        "result": "passed"
+      }
+    },
+    "scope": "Authored sail trim and wind morph loop only. No full boom rotation or dynamic rope simulation.",
+    "wind_animation_weights": {
+      "0": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "24": [
+        0.95,
+        0.95,
+        0.95
+      ],
+      "72": [
+        0.95,
+        0.95,
+        0.95
+      ],
+      "96": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "result": "passed"
+  },
+  "deck_access": {
+    "scope": "Plan-view connectivity on the closed working deck; closed hatches are walkable 0.185 m steps. No engine navmesh or dynamic obstacles.",
+    "crew_radius_m": 0.28,
+    "grid_spacing_m": 0.15,
+    "reachable_grid_cells": 2929,
+    "stations": {
+      "helm": true,
+      "main_halyards": true,
+      "cargo": true,
+      "anchor": true,
+      "gun_starboard_1": true,
+      "gun_starboard_2": true,
+      "gun_port_1": true,
+      "gun_port_2": true,
+      "jib_sheets": true
+    },
+    "passed": true
+  },
+  "sails": {
+    "status": "Geometric measurements of authored pose, not aerodynamic forces or certified sail balance",
+    "sails": [
+      {
+        "name": "gaff_main_set",
+        "surface_area_m2": 80.14,
+        "side_projection_area_m2": 78.981,
+        "side_projection_centroid_gltf_m": [
+          0.994,
+          8.436,
+          -3.738
+        ]
+      },
+      {
+        "name": "inner_staysail_set",
+        "surface_area_m2": 40.382,
+        "side_projection_area_m2": 39.327,
+        "side_projection_centroid_gltf_m": [
+          0.629,
+          7.133,
+          6.583
+        ]
+      },
+      {
+        "name": "outer_jib_set",
+        "surface_area_m2": 55.421,
+        "side_projection_area_m2": 49.8,
+        "side_projection_centroid_gltf_m": [
+          1.143,
+          9.733,
+          10.367
+        ]
+      }
+    ],
+    "total_surface_area_m2": 175.943
+  },
+  "source_file_sha256": {
+    "audit.py": "b8fe30900c07f3d27c84645d7536b9c661297ac43166750f479c2a436a5de2c2",
+    "render_previews.py": "9866d48a79a55f63f2e57150b55471d5f2efc9eb68338839ddf3e8c3d3a2c989",
+    "verify_exports.py": "dec318f2626f5b55ef8b98721d053ce6f4bc4555091dd612d1cdd3295ce64c78",
+    "build_sloop.py": "eb2e8fdf74efe2d31cec1c4d627b80cf8d9032b6a96f08c7650e5b253e4c1b6f",
+    "glb_io.py": "ec96924c0c238d41e44fbb1c66afc0e328c7ad5d0d536c1f1b3f70af19bfc073",
+    "geometry.py": "cc2cabe917e5ec629dd43237042c3f39ccd8f480c76955928ef701f701a61c9c"
+  },
+  "deliverables": {
+    "Sloop_1715.glb": {
+      "sha256": "7840bf39fce4883e2fabe3593f212c540475328f99849f4fe7b1f8f02d1871d7",
+      "bytes": 18111012,
+      "download": "https://chatgpt.com/library?file_id=libfile_fde3_f-eb3adb58f41c8191a761853cdd34f58c_3e6905c6fccc819193bbe72238597acd&account_id=personal"
+    },
+    "Sloop_1715_preview.png": {
+      "sha256": "f4c9c7fbe7d523b4038faa7a9d16b3ee3159d36df43112f806d74a7d9a19ccb6",
+      "bytes": 2026696,
+      "download": "https://chatgpt.com/library?file_id=libfile_fde3_f-e1964456f0b481919b69c956c93e2000_3e6905c6fccc819193bbe72238597acd&account_id=personal"
+    },
+    "Sloop_1715_Game_Asset.zip": {
+      "sha256": "1445dd7c3588439e92e708404c8fcf32caacc3e532f164d5324640372e93aefe",
+      "bytes": 84477488,
+      "download": "https://chatgpt.com/library?file_id=libfile_fde3_f-7e876056f1848191868dcac00b130733_3e6905c6fccc819193bbe72238597acd&account_id=personal"
+    }
+  }
+}
