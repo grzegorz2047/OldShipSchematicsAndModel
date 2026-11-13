@@ -675,9 +675,10 @@ def main():
     augment_interiors(ctx,spec)
     stow_capstan(ctx)
     if spec['id']=='night-hull':night_lanterns(ctx,spec)
-    from v2_big_budget import simplify
-    ctx['_v2_geometry_budget']=simplify([o for o in bpy.context.scene.objects
-        if o.type=='MESH' and not o.hide_render and o.get('asset_role') not in ('collision','presentation')])
+    if spec['id']=='brig':
+        from v2_big_budget import simplify
+        ctx['_v2_geometry_budget']=simplify([o for o in bpy.context.scene.objects
+            if o.type=='MESH' and not o.hide_render and o.get('asset_role') not in ('collision','presentation')])
     colliders=physical_colliders(ctx)
     nav,design=save_scene(ctx,spec,out)
     design['route_planning']=connect_deck_routes(ctx,spec)
