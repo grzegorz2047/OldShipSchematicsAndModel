@@ -689,6 +689,8 @@ def main():
         from v2_materials import upgrade_scene
         from v2_export import finalize
         design['materials']=upgrade_scene(visual)
+        from v2_big_uv import finish_uv
+        visual,design['uv_finish']=finish_uv(visual,design)
         finalize(spec,out,visual,colliders,nav,design)
     else:
         (out/'navigation.json').write_text(json.dumps(nav,indent=2)+'\n',encoding='utf-8')
