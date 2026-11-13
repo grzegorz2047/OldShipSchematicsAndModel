@@ -623,6 +623,7 @@ def save_scene(ctx,spec,out):
             'lanterns':ctx.get('_v2_night_lanterns',[]),
             'capstan':ctx.get('_v2_capstan_state'),
             'geometry_budget':ctx.get('_v2_geometry_budget'),
+            'working_rig_attachment_contract':ctx.get('_v2_brig_attachment_contract'),
             'source_ground_stations':ground_stations,
             'aloft_station_scope':'Source mast-top/yardarm workstations require a climbing controller and are outside ground walking scope.',
             'rules':{'mast_main':'(length+breadth)/2','mast_fore':'8/9 main',
@@ -661,21 +662,24 @@ def save_scene(ctx,spec,out):
     # pairs. Material-limited source exceptions require a separate measurement;
     # the obsolete "unmodelled cabin" exception does not apply to this interior.
     from przenikanie import POLACZENIA
-    source_names=[o.name for o in bpy.context.scene.objects if o.type=='MESH' and
-                  o.get('asset_role') not in ('collision','presentation')]
+    source_objects=[o for o in bpy.context.scene.objects if o.type=='MESH' and
+                    o.get('asset_role') not in ('collision','presentation')]
+    source_names=[o.name for o in source_objects]
+    source_aliases={o.name:o.get('source_name',o.name) for o in source_objects}
     declared=set()
     for a,ma,b,mb,reason in POLACZENIA:
         if ma!='*' or mb!='*' or 'nie jest modelowane' in reason:
             continue
         for name_a in source_names:
-            if not fnmatch.fnmatchcase(name_a,a):continue
+            if not (fnmatch.fnmatchcase(name_a,a) or fnmatch.fnmatchcase(source_aliases[name_a],a)):continue
             for name_b in source_names:
-                if not fnmatch.fnmatchcase(name_b,b):continue
+                if not (fnmatch.fnmatchcase(name_b,b) or fnmatch.fnmatchcase(source_aliases[name_b],b)):continue
                 pair=tuple(sorted((name_a,name_b)))
                 if pair in declared:continue
                 declared.add(pair)
                 design['intended_joints'].append({'a':name_a,'b':name_b,'reason':reason,
                     'source':'blender/przenikanie.py:POLACZENIA'})
+    design['intended_joints'].extend(ctx.get('_v2_brig_joint_rules',[]))
     # Keep source joint matching above in the guide's original names, then give
     # furled cloth explicit names understood by the shared rig/deck preview.
     cloth_names={}
@@ -704,6 +708,8 @@ def main():
     if spec['id']=='brig' and not a.no_rig:
         from v2_rigging import deploy
         deploy(ctx,spec,out)
+        from v2_brig_tags import prepare
+        prepare(ctx)
     augment_interiors(ctx,spec)
     stow_capstan(ctx)
     if spec['id']=='night-hull':night_lanterns(ctx,spec)
@@ -734,6 +740,7 @@ def main():
         if spec['id']=='night-hull':
             from v2_big_fittings import add_night_head_joints
             add_night_head_joints(visual,design)
+        if spec['id']=='brig':design['final_mesh_finish']=finish_scene(visual)
         finalize(spec,out,visual,colliders,nav,design)
     else:
         (out/'navigation.json').write_text(json.dumps(nav,indent=2)+'\n',encoding='utf-8')
