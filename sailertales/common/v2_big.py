@@ -193,6 +193,9 @@ def augment_interiors(ctx,spec):
         P(-1,1.2,hold_sole),P(-1,-spec['length']*.10,hold_sole)])
     # Replace decorative sealed reference doors with one real open companionway.
     remove(bpy.data.objects.get('grodz_drzwi'))
+    # The reference quarterdeck companion has dummy steps projecting into the
+    # unmodelled cabin. Its function is replaced by the real side entrance below.
+    remove(bpy.data.objects.get('zejsciowka'))
     door_x=1.45
     ops.append(cut(hull,box_cutter(ctx,'cabin_portal_void',door_x,sq,cabin_sole+1.08,1.30,1.0,2.20),
                    'open_captains_portal'))
@@ -440,7 +443,7 @@ def physical_colliders(ctx):
         if o is not hull and o.type=='MESH' and o.get('authored_access') and o.get('physics') in ('solid','walk_surface'):
             duplicate(o,'col_'+o.name.lower())
     # Default steering only; inactive deck-tiller variant is never exported.
-    skip=('luk_glowny','main_hatch_open_coaming','schody_rufowe','grodz_drzwi')
+    skip=('luk_glowny','main_hatch_open_coaming','schody_rufowe','grodz_drzwi','zejsciowka')
     for ob in ctx.get('przeszkody',[]):
         if ob['nazwa'].startswith(skip) or ob.get('wariant') not in (None,'naped_kolo'):continue
         if ob['h']<.3 or ob['nazwa'].startswith('maszt'):continue
@@ -556,6 +559,7 @@ def save_scene(ctx,spec,out):
                      'hull':'reference table of offsets with monotone PCHIP, chapter 02',
                      'access':'real hollow voids, lowered cabin sole and climbable original-sized hatch'},
             'deviations':['Interior layout and lowered cabin sole are game reconstructions, not surviving period plans.',
+                          'The dummy quarterdeck companion is replaced by the real cabin entrance to keep its stair fragments out of the cabin.',
                           'BRIG is the game identifier; reference historical rig is snow circa 1710.',
                           'A climb controller is required at the hold ladder; no false floor-slope pass is claimed.']}
     design['intended_joints']=[
