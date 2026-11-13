@@ -617,16 +617,22 @@ def source_parity(asset,records,export):
     export_hi=Vector(tuple(max(r['max'][k] for r in records) for k in range(3)))
     bound_error=max(abs(source_lo[k]-export_lo[k]) for k in range(3))
     bound_error=max(bound_error,max(abs(source_hi[k]-export_hi[k]) for k in range(3)))
-    count_error=abs(triangles-export['triangles'])/max(triangles,1)
+    # Source evaluation visits every object instance. GLB indexed geometry is
+    # stored once for shared meshes, so compare against reimported node draws;
+    # the distinct indexed count remains the unchanged H2/file-budget metric.
+    exported_draw_triangles=sum(len(r['triangles']) for r in records)
+    count_error=abs(triangles-exported_draw_triangles)/max(triangles,1)
     exported_names={r['name'] for r in records}
     missing=sorted(set(source_names)-exported_names)
     extra=sorted(exported_names-set(source_names))
     return {'passed':bound_error<=.002 and count_error<=.01 and not missing and not extra and not unpacked,
-            'source_triangles':triangles,'export_triangles':export['triangles'],
+            'source_triangles':triangles,'export_triangles':exported_draw_triangles,
+            'export_indexed_triangles':export['triangles'],
+            'triangle_count_scope':'source and export include every mesh-node instance; indexed count is separate',
             'triangle_relative_difference':count_error,'max_bound_error_m':bound_error,
             'missing_source_mesh_nodes':missing,'unexpected_export_mesh_nodes':extra,
             'unpacked_used_images':unpacked,
-            'method':'evaluated source visual meshes versus actual GLB mesh names, triangle count and world bounds'}
+            'method':'evaluated source visual meshes versus actual GLB mesh names, per-instance triangle count and world bounds'}
 
 
 def topology_summary(records):
