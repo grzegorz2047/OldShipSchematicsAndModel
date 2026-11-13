@@ -25,6 +25,8 @@ def prepare(ctx):
                 obj['kind']='rope';obj['edge_attachment']=True;obj['attachment_sail']=sail.name
                 attachments.append({'sail':sail.name,'rope':obj.name,'joint':'sheet fastened to the sail clew'})
     ctx['_v2_brig_attachment_contract']={'clew_attachments':attachments,
+        'parrel_fittings':[o.name for o in bpy.context.scene.objects if o.name.startswith('rak_') or 'yard_parrel' in o.name],
+        'yard_source_aliases':{current:source for source,current in YARD_NAMES.items() if bpy.data.objects.get(current)},
         'scope':'own clew/luff joints only; independent audit still requires all intersections within 25 mm of a cloth boundary'}
     ctx['_v2_brig_joint_rules']=[{'a':'gaff_sail_set','b':'spars',
         'reason':'The gaff sail luff is attached to the snow mast; only measured cloth-boundary contact is allowed.'}]
