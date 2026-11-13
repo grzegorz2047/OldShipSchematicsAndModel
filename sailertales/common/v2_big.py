@@ -532,6 +532,11 @@ def save_scene(ctx,spec,out):
             o['kind']='rope' if o.name.startswith('lina_') else ('sail' if o.name.startswith(('zagiel','zagle')) else
                        ('spar' if o.name.startswith(('drzewca','reja_','gafel','bukszpryt')) else 'fitting'))
             o['physics']='none'
+        if spec['id']=='night-hull' and o.type=='MESH' and o.name.startswith(('zagiel','zagle')):
+            # Furled cloth is a closed roll attached to spars, rather than an
+            # open deployed membrane. Audit its solids/joints in E1; the sail
+            # boundary test applies only to the deployed cloth of sailing rigs.
+            o['kind']='fitting';o['cloth_state']='furled'
         if o.type=='MESH' and ('szklo' in o.name or o.get('kind')=='glass'):
             o['kind']='glass';o['physics']='none'
             o['topology_reason']='single-pane glazing; intentionally open double-sided surface'
@@ -559,7 +564,8 @@ def save_scene(ctx,spec,out):
             'sources':{'guide_repository':'grzegorz2047/OldShipSchematicsAndModel',
                        'chapters':['01','02','03','04','05','06','07','08','09','12','13','14']},
             'interiors':ctx['_v2_interior_design'],
-            'rigging':ctx.get('_v2_rigging_report',{'pose':'furled reference'}),
+            'rigging':ctx.get('_v2_rigging_report',{'pose':'furled reference',
+                 'cloth_audit':'Closed furled cloth rolls are fittings included in E1 solid penetration and reasoned construction joint tests; there are no deployed sail membranes.'}),
             'lanterns':ctx.get('_v2_night_lanterns',[]),
             'capstan':ctx.get('_v2_capstan_state'),
             'source_ground_stations':ground_stations,
