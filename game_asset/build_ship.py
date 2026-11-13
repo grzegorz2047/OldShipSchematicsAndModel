@@ -88,7 +88,11 @@ def tube(name, points, diameter, material, sides=5):
             b = i*sides+(j+1)%sides
             faces.append((a, b, b+sides, a+sides))
     faces += [tuple(reversed(range(sides))), tuple((len(points)-1)*sides+j for j in range(sides))]
-    return new_mesh(name, verts, faces, material)
+    obj=new_mesh(name, verts, faces, material)
+    if material and material.name.startswith(("rope_tarred","rope_untarred")):
+        RIGGING_PATHS[name]={"name":name,"mesh_object":name,"diameter_m":diameter,
+            "points_gltf_m":[[p.x,p.z,-p.y] for p in points]}
+    return obj
 
 
 def parent_world(obj, parent):
@@ -179,6 +183,143 @@ def hoist_yards():
         if obj.name.startswith("station_yardarm_") and obj.get("object") in moved:
             obj.matrix_world = moved[obj["object"]] @ obj.matrix_world
             parent_world(obj, bpy.data.objects[obj["object"]])
+    return moved
+
+
+def join_rope_meshes(objects,name,parent=None):
+    if not objects:
+        return
+    for obj in objects:
+        if obj.name in RIGGING_PATHS: RIGGING_PATHS[obj.name]["mesh_object"]=name
+    bpy.ops.object.select_all(action="DESELECT")
+    for obj in objects: obj.select_set(True)
+    bpy.context.view_layer.objects.active=objects[0]
+    bpy.ops.object.join()
+    obj=objects[0]; obj.name=name
+    if parent: parent_world(obj,parent)
+    return obj
+
+
+def dynamic_ends(line):
+    ends=[]
+    for key in ("from","to"):
+        node=line.get(key+"_object"); local=line.get(key+"_local")
+        if node and local is not None and bpy.data.objects.get(node):
+            p=bpy.data.objects[node].matrix_world@Vector(local)
+            if node in SQUARES.values():p.y=max(p.y,bpy.data.objects[node].matrix_world.translation.y+.12)
+        else:
+            p=ship_point(line[key])
+            if "brace_pendant" in line["rope"] and key=="to" and line.get("from_object") in YARD_MOVES:
+                p=YARD_MOVES[line["from_object"]]@p
+        ends.append(p)
+    return ends
+
+
+def move_point(point):
+    matches=[((point-a).length,b) for a,b in ATTACHMENT_MOVES if (point-a).length<.065]
+    return min(matches,key=lambda x:x[0])[1].copy() if matches else point.copy()
+
+
+def prepare_attachment_moves():
+    global ATTACHMENT_MOVES
+    ATTACHMENT_MOVES=[]
+    for line in RIG["lines"]:
+        if line["dynamic"]:
+            for key,new in zip(("from","to"),dynamic_ends(line)):
+                old=ship_point(line[key])
+                if (new-old).length>.015: ATTACHMENT_MOVES.append((old,new))
+        if line["group"]=="running" and line["rope"].startswith("fore_") and "_brace_" in line["rope"] and line.get("belayed_to"):
+            old=ship_point(line["from"]); new=old.copy()
+            stay_name="main_topgallant_stay" if line["rope"].startswith("fore_topgallant") else "main_topmast_stay" if line["rope"].startswith("fore_topsail") else "main_stay"
+            stay=next(l for l in RIG["lines"] if l["rope"]==stay_name)
+            fraction=.98 if stay_name=="main_topgallant_stay" else .96 if stay_name=="main_topmast_stay" else .90
+            new=ship_point(stay["from"]).lerp(ship_point(stay["to"]),fraction)
+            new.x=.3 if "_port" in line["rope"] else -.3
+            ATTACHMENT_MOVES.append((old,new))
+    # Blocks that belong to the moved pendant ends must follow their attachments.
+    obj=bpy.data.objects["rigging_static"]; mesh=obj.data
+    adjacency=[set() for _ in mesh.vertices]
+    for edge in mesh.edges:
+        a,b=edge.vertices; adjacency[a].add(b);adjacency[b].add(a)
+    seen=set(); inverse=obj.matrix_world.inverted()
+    for start in range(len(mesh.vertices)):
+        if start in seen:continue
+        todo=[start];seen.add(start); component=[]
+        while todo:
+            i=todo.pop();component.append(i)
+            for j in adjacency[i]:
+                if j not in seen:seen.add(j);todo.append(j)
+        points=[obj.matrix_world@mesh.vertices[i].co for i in component]
+        if any(max(p[k] for p in points)-min(p[k] for p in points)>.6 for k in range(3)):continue
+        centre=sum(points,Vector())/len(points)
+        candidates=[((centre-a).length,b-a) for a,b in ATTACHMENT_MOVES if (centre-a).length<.3]
+        if candidates:
+            delta=min(candidates,key=lambda x:x[0])[1]
+            for i in component: mesh.vertices[i].co=inverse@(obj.matrix_world@mesh.vertices[i].co+delta)
+
+
+def rebuild_running_and_footropes(moved):
+    """Replace baked running leads, and keep the crew's footropes abaft each yard."""
+    obj=bpy.data.objects["rigging_static"]
+    obj.data=obj.data.copy(); bm=bmesh.new(); bm.from_mesh(obj.data)
+    bright={i for i,m in enumerate(obj.data.materials) if m and m.name.startswith("rope_untarred")}
+    bmesh.ops.delete(bm,geom=[f for f in bm.faces if f.material_index in bright],context="FACES")
+    bmesh.ops.delete(bm,geom=[v for v in bm.verts if not v.link_faces],context="VERTS")
+    bm.to_mesh(obj.data); bm.free()
+    for obj in list(ASSET.objects):
+        if obj.name.startswith("rope_footropes_"):
+            bpy.data.objects.remove(obj,do_unlink=True)
+    static=[]; perts={}
+    for line in RIG["lines"]:
+        if line.get("variant")=="deck_tiller_variant" or line["dynamic"]:
+            continue
+        path=[ship_point(p) for p in [line["from"],*line["via"],line["to"]]]
+        if line["group"]=="footropes":
+            yard=bpy.data.objects[line["parent"]]
+            delta=moved.get(yard.name,Matrix.Identity(4))
+            path=[delta@p for p in path]
+            c=yard.matrix_world.translation
+            for p in path:
+                drop=max(0.,min(1.,(c.z-p.z)/.7))
+                p.y=c.y+.14+.45*drop
+            rope=tube("rope_footrope_line_%d"%line["id"],path,max(.014,line["diameter_m"]),TAR)
+            RIGGING_PATHS[rope.name].update(source_line_id=line["id"],parent=yard.name)
+            perts.setdefault(yard.name,[]).append(rope)
+            continue
+        if line["material"]!="untarred" or line["parent"]:
+            continue
+        if not line["rope"].startswith("coil_") and any(t in line["rope"] for t in ("clewline","clew_garnet","buntline","sheet","brail")):
+            continue
+        path=[move_point(p) for p in path]
+        if line["group"]=="running" and line["rope"].startswith("fore_") and "_brace_" in line["rope"] and line.get("belayed_to"):
+            # Fixed lead blocks are near the forward end of the intermast stay.
+            # Descend at the fore rail, then lead aft below the course and staysail.
+            turning=path[-1].copy(); turning.y=-9.8;turning.x=math.copysign(2.25,turning.x)
+            turning.z=2.2
+            path=[path[0],turning,path[-1]]
+            anchor=path[0].copy();anchor.x=0
+            tube("brace_block_strop_%d"%line["id"],[anchor,path[0]],.025,TAR)
+            bpy.ops.mesh.primitive_uv_sphere_add(segments=10,ring_count=6,location=turning)
+            block=bpy.context.object; block.name="brace_turning_block_%d"%line["id"]
+            block.scale=(.085,.07,.13); block.data.materials.append(bpy.data.materials["wood_dark"])
+            for col in list(block.users_collection): col.objects.unlink(block)
+            ASSET.objects.link(block)
+        elif line["group"]=="running" and path[0].z>5 and path[-1].z<4 and -3<path[0].y<3:
+            turning=path[-1].copy(); turning.y=max(path[0].y,2.4)
+            turning.z=float(DECKS.heights(turning.x,-turning.y))+.14
+            path=[path[0],turning,path[-1]]
+            bpy.ops.mesh.primitive_uv_sphere_add(segments=10,ring_count=6,location=turning)
+            block=bpy.context.object; block.name="deck_lead_block_%d"%line["id"]
+            block.scale=(.075,.08,.12);block.data.materials.append(bpy.data.materials["wood_dark"])
+            for col in list(block.users_collection):col.objects.unlink(block)
+            ASSET.objects.link(block)
+        rope=tube("rope_static_line_%d"%line["id"],path,max(.014,line["diameter_m"]),ROPE)
+        if rope:
+            RIGGING_PATHS[rope.name]["source_line_id"]=line["id"]
+            static.append(rope)
+    join_rope_meshes(static,"rigging_running_sailing")
+    for name,objects in perts.items():
+        join_rope_meshes(objects,"rope_footropes_"+name+"_glb",bpy.data.objects[name])
 
 
 def canvas_material(name, width, depth, reefs):
@@ -244,6 +385,10 @@ def square_sail(name, yard_name, spec):
     nx, ny = 32, 24
     head, foot, depth = (spec[k] for k in ("head_m","foot_m","depth_m"))
     source_depth=depth
+    lower_y=c.y
+    if name.endswith(("topsail","topgallant")):
+        lower_name=("fore_yard" if name=="fore_topsail" else "main_yard" if name=="main_topsail" else "fore_topsail_yard" if name.startswith("fore") else "main_topsail_yard")
+        lower_y=bpy.data.objects[lower_name].matrix_world.translation.y
     if name.endswith("_course"):
         # The chapter-08 outline reaches the rail and is a sail-plan estimate,
         # not a tested playable mesh. Leave headroom over the deck, not the rail.
@@ -258,9 +403,13 @@ def square_sail(name, yard_name, spec):
             u = i/nx
             x = (u-.5)*width
             # Forward belly in a following wind; foot rises in the centre (roach).
-            belly = .12 * head * math.sin(math.pi*u) * math.sin(math.pi*t)
-            roach = (.75 if name.endswith("_course") else .38)*math.sin(math.pi*u)*t**5
-            p = c + Vector((x, -.18-belly-.35*t*math.sin(math.pi*u), -depth*t+roach-.06))
+            belly = .12 * head * math.sin(math.pi*u) * math.sin(math.pi*t)**2
+            roach_height=.75 if name.endswith("_course") else 2.0 if name.endswith("topsail") else 1.8 if name.endswith("topgallant") else .38
+            # Cut the foot upward in the column layout, rather than curling the
+            # last rows back upward (which would fold a deeply cut topsail).
+            roach = roach_height*math.sin(math.pi*u)*t
+            course_foot=.35*t*math.sin(math.pi*u) if name.endswith("_course") else .35*t if name.endswith(("topsail","topgallant")) else 0
+            p = Vector((c.x+x,c.y*(1-t)+lower_y*t-.18-belly-course_foot,c.z-depth*t+roach-.06))
             verts.append(p)
             uv.append((u,1-t))
             weights.append(math.sin(math.pi*u)*math.sin(math.pi*t))
@@ -302,7 +451,7 @@ def square_sail(name, yard_name, spec):
     return obj
 
 
-def panel_sail(name, corners, parent=None):
+def panel_sail(name, corners, parent=None, luff=None):
     """Triangle or four-sided sail, with a pinned perimeter and a leeward belly."""
     corners = [Vector(p) for p in corners]
     # A loose-footed gaff sail must also clear the raised quarterdeck.
@@ -318,7 +467,7 @@ def panel_sail(name, corners, parent=None):
             for i in range(n+1-j):
                 u,v = i/n,j/n
                 w = max(0., 27*u*v*(1-u-v))
-                p = a*(1-u-v)+b*u+c*v
+                p = (luff(u/(1-v))*(1-v)+c*v) if luff and v<1 else a*(1-u-v)+b*u+c*v
                 p.x += .48*w
                 idx[i,j] = len(verts)
                 verts.append(p); uv.append((u,v)); weights.append(w)
@@ -352,7 +501,9 @@ def panel_sail(name, corners, parent=None):
     if len(corners)==4:
         paths=[verts[:n+1],verts[n*(n+1):],verts[::n+1],verts[n::n+1]]
     else:
-        paths=[[corners[i],corners[(i+1)%len(corners)]] for i in range(len(corners))]
+        paths=[[verts[idx[i,0]] for i in range(n+1)],
+               [verts[idx[n-j,j]] for j in range(n+1)],
+               [verts[idx[0,j]] for j in range(n+1)]]
     for i,path in enumerate(paths):
         rope=tube(name+"_bolt_rope_"+str(i),path,.023,ROPE)
         if parent:
@@ -379,18 +530,43 @@ def other_sails():
         ("jib","jib_stay",.06,.90,.50),
         ("fore_topmast_staysail","fore_topmast_stay",.10,.92,.55),
         ("main_topmast_staysail","main_topmast_stay",.12,.90,.50),
-        ("main_staysail","main_stay",.30,.92,.55),
+        ("main_staysail","main_stay",.30,.82,.55),
     ):
         line=next(l for l in RIG["lines"] if l["rope"]==stay)
-        a,b=Vector(line["from"]),Vector(line["to"])
-        head=a.lerp(b,f0); tack=a.lerp(b,f1)
-        luff=(head-tack).length
-        sc=tack.y-height*luff
-        clew=Vector((0,sc,max(tack.z-.1*luff,rail(sc)+1)))
+        path=[ship_point(p) for p in [line["from"],*line["via"],line["to"]]]
+        distances=[0.]
+        for a,b in zip(path,path[1:]): distances.append(distances[-1]+(b-a).length)
+        def on_stay(f):
+            d=f*distances[-1]
+            i=min(len(path)-2,max(0,int(np.searchsorted(distances,d,side="right")-1)))
+            return path[i].lerp(path[i+1],(d-distances[i])/max(1e-8,distances[i+1]-distances[i]))
+        def luff_edge(t):
+            return on_stay(f0+(f1-f0)*t)+Vector((.14,0,0))
+        head_world,tack_world=luff_edge(0),luff_edge(1)
+        head=Vector((head_world.x,-head_world.y,head_world.z));tack=Vector((tack_world.x,-tack_world.y,tack_world.z))
+        luff_length=(head-tack).length
+        sc=tack.y-height*luff_length
+        if name=="fore_topmast_staysail": sc=max(sc,15.3)
+        if name=="jib": sc=max(sc,16.2)
+        clew=Vector((0,sc,max(tack.z-.1*luff_length,rail(sc)+1)))
         clew_world=ship_point(clew)
+        clew_world.x={"jib":2.8,"fore_topmast_staysail":1.4,"main_topmast_staysail":1.2,"main_staysail":1.2}[name]
         clew_world.z=max(clew_world.z,DECKS.required_height(clew_world.x,-clew_world.y,CANVAS_CLEARANCE_M))
-        panel_sail(name,[ship_point(head),ship_point(tack),clew_world])
-        tube(name+"_sheet",[clew_world,ship_point([2.5,sc-1,rail(sc)])],.022,ROPE)
+        def luff_curve(t):
+            return on_stay(f0+(f1-f0)*t)+Vector((.14,0,0))
+        panel_sail(name,[head_world,tack_world,clew_world],luff=luff_curve)
+        # Hanks bridge the luff offset and keep it visibly attached to its stay.
+        for i,t in enumerate(np.linspace(0,1,max(3,round(luff_length/1.2)))):
+            f=f0+(f1-f0)*float(t); centre=on_stay(f)
+            axis=(on_stay(min(1,f+.002))-on_stay(max(0,f-.002))).normalized()
+            normal=Vector((1,0,0));normal=(normal-axis*normal.dot(axis)).normalized()
+            other=axis.cross(normal).normalized()
+            radius=.12 if line["diameter_m"]>.06 else .095
+            centre+=normal*(.14-radius)
+            ring=[centre+radius*(normal*math.cos(a)+other*math.sin(a)) for a in np.linspace(0,2*math.pi,17)]
+            tube(name+"_hank_%d"%i,ring,.008,bpy.data.materials["iron"],sides=5)
+        anchor_x,anchor_s=(1.65,11.55) if name=="jib" else (1.8,10.9) if name=="fore_topmast_staysail" else (2.5,sc-1)
+        tube(name+"_sheet",[clew_world,ship_point([anchor_x,anchor_s,rail(anchor_s)])],.022,ROPE)
 
 
 def rebuild_dynamic():
@@ -412,14 +588,8 @@ def rebuild_dynamic():
         if any(token in line["rope"] for token in ("clewline", "clew_garnet", "buntline", "sheet", "brail")):
             bpy.data.objects.remove(obj,do_unlink=True)
             continue
-        ends=[]
-        for key in ("from","to"):
-            node=line.get(key+"_object")
-            local=line.get(key+"_local")
-            if node and local is not None and bpy.data.objects.get(node):
-                ends.append(bpy.data.objects[node].matrix_world @ Vector(local))
-            else:
-                ends.append(ship_point(line[key]))
+        ends=dynamic_ends(line)
+        ends=[move_point(p) for p in ends]
         path=[ends[0]]+[ship_point(p) for p in line.get("via",[])]+[ends[1]]
         # Old sag samples would pin a raised rope to its lowered path.
         if any(line.get(k+"_object") in SQUARES.values() for k in ("from","to")):
@@ -432,8 +602,21 @@ def rebuild_dynamic():
         if new:
             for k,v in extras.items():
                 new[k]=v
+            for index,key in enumerate(("from","to")):
+                node=line.get(key+"_object")
+                if node and bpy.data.objects.get(node):
+                    new[key+"_local"]=list(bpy.data.objects[node].matrix_world.inverted()@ends[index])
             new["rebuilt_for_set_sails"]=True
             new["line_id"]=lid
+            if "brace_pendant" in line["rope"] and line.get("from_object") and not line.get("to_object"):
+                node=line["from_object"]
+                new["to_object"]=node
+                new["to_local"]=list(bpy.data.objects[node].matrix_world.inverted()@ends[1])
+            RIGGING_PATHS[new.name].update(source_line_id=lid)
+            for key in ("from_object","to_object","from_local","to_local"):
+                if key in new:
+                    value=new[key]
+                    RIGGING_PATHS[new.name][key]=list(value) if key.endswith("_local") else value
             changed.append(lid)
     return changed
 
@@ -464,7 +647,7 @@ def make_lod(level):
     for src in list(ASSET.objects):
         if src.type!="MESH" or src.name=="boat_water_mask":
             continue
-        if level==2 and (src.name.startswith(("rope_dynamic_","station_")) or "bolt_rope" in src.name or "sheet" in src.name):
+        if level==2 and (src.name.startswith(("rope_dynamic_","station_","rope_footropes_")) or "bolt_rope" in src.name or "sheet" in src.name or src.name=="rigging_running_sailing"):
             continue
         if level==2 and src.name=="rigging_static":
             continue
@@ -473,7 +656,8 @@ def make_lod(level):
         obj.matrix_world=src.matrix_world.copy()
         if obj.data.shape_keys:
             obj.shape_key_clear()
-        if len(obj.data.polygons)>20:
+        preserve=src.name.endswith("_set") or src.name.startswith("rope_") or src.name in ("rigging_static","rigging_running_sailing")
+        if len(obj.data.polygons)>20 and not preserve:
             mod=obj.modifiers.new("distance_simplification","DECIMATE")
             mod.ratio=(.35 if level==1 else .035) if not src.name.endswith("_set") else (.5 if level==1 else .14)
             with bpy.context.temp_override(object=obj,active_object=obj):
@@ -631,7 +815,8 @@ def render_setup():
 
 
 def main():
-    global OUT, ASSET, LODS, PRESENTATION, PARAMETERS, SPARS, RIG, ROPE, TAR, DECKS
+    global OUT, ASSET, LODS, PRESENTATION, PARAMETERS, SPARS, RIG, ROPE, TAR, DECKS, RIGGING_PATHS, YARD_MOVES
+    RIGGING_PATHS={}
     parser=argparse.ArgumentParser()
     parser.add_argument("--out",default=str(ROOT/"build"/"game_ship"))
     parser.add_argument("--no-renders",action="store_true")
@@ -651,8 +836,11 @@ def main():
         ASSET.objects.link(obj)
     LODS=bpy.data.collections.new("LOD export scratch"); bpy.context.scene.collection.children.link(LODS)
     PRESENTATION=bpy.data.collections.new("PRESENTATION | excluded from GLB"); bpy.context.scene.collection.children.link(PRESENTATION)
-    strip_reference(); hoist_yards()
+    strip_reference(); moved=hoist_yards()
+    YARD_MOVES=moved
     ROPE=bpy.data.materials["rope_untarred"]; TAR=bpy.data.materials["rope_tarred"]
+    prepare_attachment_moves()
+    rebuild_running_and_footropes(moved)
     changed=rebuild_dynamic()
     for name,yard in SQUARES.items():
         square_sail(name,yard,values("sails")["set_sail_estimates"][name])
@@ -670,7 +858,13 @@ def main():
     scene=bpy.context.scene; scene.unit_settings.system="METRIC"; scene.unit_settings.scale_length=1
     scene.name="Sail_Wind"
     scene.render.fps=24; scene.frame_start=0; scene.frame_end=96; scene.frame_set(0)
+    from rigging_collisions import audit_scene
+    rigging_check=audit_scene()
+    (OUT/"rigging_collisions.json").write_text(json.dumps(rigging_check,indent=2),encoding="utf-8")
+    if not rigging_check["passed"]:
+        raise ValueError("Ropes or other sails intersect canvas; see rigging_collisions.json")
     export_glb(OUT/"snow_sailing.glb",list(ASSET.objects),animations=True)
+    (OUT/"sailing-rigging.json").write_text(json.dumps({"coordinate_system":"glTF metres: +Y up, +Z bow; *_local points retain Blender local XYZ as in the reference data", "scope":"Generated and rerouted ropes; unchanged standing rigging uses data/rigging-lines.json", "paths":list(RIGGING_PATHS.values())},indent=2),encoding="utf-8")
     clearance=inspect_glb(OUT/"snow_sailing.glb",load_json(ROOT/"data"/"deck-layout.json"))
     (OUT/"deck_clearance.json").write_text(json.dumps(clearance,indent=2),encoding="utf-8")
     if not clearance["passed"]:
@@ -686,6 +880,7 @@ def main():
         "lod_distances_m":[0,75,250],"lod_hysteresis":.15,
         "canvas_minimum_deck_clearance_m":clearance["minimum_clearance_m"],
         "cloth_area_m2":clearance["cloth_area_m2"],
+        "rope_canvas_audit_passed":rigging_check["passed"],"rope_canvas_audit_frames":rigging_check["frames"],
         "notes":["Sail outlines and belly are reconstructions, not period plans.",
           "No hold or cabin interior; original hull fairness limitations remain.",
           "LODs are static sailing poses; animate the close-range asset only.",
@@ -697,6 +892,8 @@ def main():
     shutil.copy2(Path(__file__),OUT/"build_ship.py")
     shutil.copy2(ROOT/"game_asset"/"validate_asset.py",OUT/"validate_asset.py")
     shutil.copy2(ROOT/"game_asset"/"deck_clearance.py",OUT/"deck_clearance.py")
+    shutil.copy2(ROOT/"game_asset"/"rigging_collisions.py",OUT/"rigging_collisions.py")
+    shutil.copy2(ROOT/"game_asset"/"verify_exports.py",OUT/"verify_exports.py")
     if (ROOT/"game_asset"/"README.pl.md").exists():
         shutil.copy2(ROOT/"game_asset"/"README.pl.md",OUT/"README.pl.md")
     if not args.no_renders:

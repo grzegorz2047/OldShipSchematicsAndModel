@@ -3,32 +3,95 @@
   "source_glb_sha256": "9a2cb1d7a9c00b978ae82d2864be3d9d5438fc04bf50a85eb8bda1a414eedb04",
   "validation": {
     "lod0": {
-      "triangles": 249701,
-      "bytes": 37387688,
-      "nodes": 355
+      "triangles": 291627,
+      "bytes": 38077404,
+      "nodes": 418
     },
     "sails": 12,
     "animation_seconds": 4.0,
     "stations": 140,
     "lod1": {
-      "triangles": 89977,
-      "bytes": 24199808,
+      "triangles": 153239,
+      "bytes": 26682184,
       "nodes": 1
     },
     "lod2": {
-      "triangles": 10314,
-      "bytes": 5134572,
+      "triangles": 22769,
+      "bytes": 5544476,
       "nodes": 1
     },
     "collision_meshes": 36,
     "canvas_minimum_deck_clearance_m": 2.25,
-    "cloth_area_m2": 762.43,
+    "cloth_area_m2": 671.78,
+    "rope_canvas_checks": {
+      "lod0": {
+        "passed": true,
+        "frames": [
+          0,
+          12,
+          24,
+          36,
+          48,
+          60,
+          72,
+          84,
+          96
+        ]
+      },
+      "lod1": {
+        "passed": true,
+        "frames": [
+          0
+        ]
+      },
+      "lod2": {
+        "passed": true,
+        "frames": [
+          0
+        ]
+      }
+    },
     "result": "passed"
   },
   "native_import": {
-    "result": "passed",
     "blender": "4.3.2",
-    "sails_imported": 12,
+    "models": {
+      "lod0": {
+        "passed": true,
+        "frames": [
+          0,
+          12,
+          24,
+          36,
+          48,
+          60,
+          72,
+          84,
+          96
+        ],
+        "sails": 12,
+        "rope_objects": 148,
+        "source_glb_sha256": "5fe6bdf893ebbbb1935febe09840ca4f79d4b32fedd8ff86ad6027a0fdc3e6e5"
+      },
+      "lod1": {
+        "passed": true,
+        "frames": [
+          0
+        ],
+        "sails": 12,
+        "rope_objects": 1,
+        "source_glb_sha256": "ffacdfc73f29d9f71ac54c9e0f7cea2f4c20cf68b8f45116db58824e60c6439e"
+      },
+      "lod2": {
+        "passed": true,
+        "frames": [
+          0
+        ],
+        "sails": 12,
+        "rope_objects": 1,
+        "source_glb_sha256": "752e49811eaac217fe990b43af9929f0d3fc6165c9fa73586a63d4d0df2e5830"
+      }
+    },
     "animation_key_weight_sum_by_frame": {
       "0": [
         0.0,
@@ -47,8 +110,7 @@
         0.0
       ]
     },
-    "materials": 47,
-    "textures": 58
+    "result": "passed"
   },
   "deck_clearance": {
     "required_clearance_m": 2.2,
@@ -56,28 +118,28 @@
     "scope": "canvas above main deck and quarterdeck; equipment footprints included; wind frames 0/24/72",
     "sails": {
       "fore_topgallant_set": {
-        "minimum_clearance_m": 17.786,
+        "minimum_clearance_m": 18.814,
         "samples_below_clearance": 0,
-        "samples_over_decks": 60212,
-        "cloth_area_m2": 37.0
+        "samples_over_decks": 60813,
+        "cloth_area_m2": 28.83
       },
       "fore_topmast_staysail_set": {
-        "minimum_clearance_m": 3.864,
+        "minimum_clearance_m": 9.751,
         "samples_below_clearance": 0,
-        "samples_over_decks": 31844,
-        "cloth_area_m2": 47.26
+        "samples_over_decks": 9901,
+        "cloth_area_m2": 12.1
       },
       "fore_topsail_set": {
-        "minimum_clearance_m": 9.51,
+        "minimum_clearance_m": 10.894,
         "samples_below_clearance": 0,
-        "samples_over_decks": 37954,
-        "cloth_area_m2": 89.49
+        "samples_over_decks": 39699,
+        "cloth_area_m2": 76.2
       },
       "fore_course_set": {
         "minimum_clearance_m": 2.966,
         "samples_below_clearance": 0,
-        "samples_over_decks": 31193,
-        "cloth_area_m2": 89.31
+        "samples_over_decks": 32298,
+        "cloth_area_m2": 88.61
       },
       "gaff_sail_set": {
         "minimum_clearance_m": 2.25,
@@ -86,61 +148,142 @@
         "cloth_area_m2": 80.17
       },
       "jib_set": {
-        "minimum_clearance_m": 7.764,
+        "minimum_clearance_m": 13.572,
         "samples_below_clearance": 0,
-        "samples_over_decks": 8546,
-        "cloth_area_m2": 39.78
+        "samples_over_decks": 3513,
+        "cloth_area_m2": 33.87
       },
       "main_staysail_set": {
         "minimum_clearance_m": 2.25,
         "samples_below_clearance": 0,
         "samples_over_decks": 36288,
-        "cloth_area_m2": 18.69
+        "cloth_area_m2": 16.51
       },
       "main_topgallant_set": {
-        "minimum_clearance_m": 20.739,
+        "minimum_clearance_m": 21.384,
         "samples_below_clearance": 0,
-        "samples_over_decks": 85206,
-        "cloth_area_m2": 47.24
+        "samples_over_decks": 85243,
+        "cloth_area_m2": 37.95
       },
       "main_topmast_staysail_set": {
-        "minimum_clearance_m": 10.682,
+        "minimum_clearance_m": 10.694,
         "samples_below_clearance": 0,
         "samples_over_decks": 36288,
-        "cloth_area_m2": 32.32
+        "cloth_area_m2": 32.93
       },
       "main_topsail_set": {
-        "minimum_clearance_m": 11.447,
+        "minimum_clearance_m": 12.593,
         "samples_below_clearance": 0,
-        "samples_over_decks": 57714,
-        "cloth_area_m2": 115.54
+        "samples_over_decks": 57676,
+        "cloth_area_m2": 100.37
       },
       "main_course_set": {
         "minimum_clearance_m": 2.919,
         "samples_below_clearance": 0,
-        "samples_over_decks": 47614,
-        "cloth_area_m2": 130.62
+        "samples_over_decks": 47523,
+        "cloth_area_m2": 129.75
       },
       "spritsail_set": {
         "minimum_clearance_m": null,
         "samples_below_clearance": 0,
         "samples_over_decks": 0,
-        "cloth_area_m2": 35.01
+        "cloth_area_m2": 34.49
       }
     },
     "minimum_clearance_m": 2.25,
-    "cloth_area_m2": 762.43,
+    "cloth_area_m2": 671.78,
     "passed": true
   },
-  "previous_sail_geometry": {
-    "minimum_clearance_m": 0.206,
-    "cloth_area_m2": 821.37,
-    "passed": false
+  "rigging_collisions": {
+    "frames": [
+      0,
+      12,
+      24,
+      36,
+      48,
+      60,
+      72,
+      84,
+      96
+    ],
+    "rope_objects": 148,
+    "sails": 12,
+    "boundary_tolerance_m": 0.025,
+    "scope": "Rope mesh edges versus cloth interior; own bolt ropes are expected edge attachments. Sail edges versus other cloth interiors are checked in both directions.",
+    "per_frame": [
+      {
+        "frame": 0,
+        "rope_canvas_pairs": 0,
+        "canvas_canvas_pairs": 0,
+        "perimeter_contacts": 47
+      },
+      {
+        "frame": 12,
+        "rope_canvas_pairs": 0,
+        "canvas_canvas_pairs": 0,
+        "perimeter_contacts": 47
+      },
+      {
+        "frame": 24,
+        "rope_canvas_pairs": 0,
+        "canvas_canvas_pairs": 0,
+        "perimeter_contacts": 47
+      },
+      {
+        "frame": 36,
+        "rope_canvas_pairs": 0,
+        "canvas_canvas_pairs": 0,
+        "perimeter_contacts": 47
+      },
+      {
+        "frame": 48,
+        "rope_canvas_pairs": 0,
+        "canvas_canvas_pairs": 0,
+        "perimeter_contacts": 47
+      },
+      {
+        "frame": 60,
+        "rope_canvas_pairs": 0,
+        "canvas_canvas_pairs": 0,
+        "perimeter_contacts": 47
+      },
+      {
+        "frame": 72,
+        "rope_canvas_pairs": 0,
+        "canvas_canvas_pairs": 0,
+        "perimeter_contacts": 47
+      },
+      {
+        "frame": 84,
+        "rope_canvas_pairs": 0,
+        "canvas_canvas_pairs": 0,
+        "perimeter_contacts": 47
+      },
+      {
+        "frame": 96,
+        "rope_canvas_pairs": 0,
+        "canvas_canvas_pairs": 0,
+        "perimeter_contacts": 47
+      }
+    ],
+    "hits": [],
+    "passed": true
+  },
+  "negative_control": {
+    "baseline_generator_commit": "c8c93e75ed5d6011860d434c4a23c25af8c827dc",
+    "baseline_glb_sha256": "4ea8ea8c949038c4cda3a9d21e3e24b0492432904359558a59a25ad8eb202a40",
+    "negative_control_passed": true,
+    "baseline_frame_0": {
+      "frame": 0,
+      "rope_canvas_pairs": 27,
+      "canvas_canvas_pairs": 3,
+      "perimeter_contacts": 137
+    }
   },
   "glb_sha256": {
-    "snow_sailing.glb": "4ea8ea8c949038c4cda3a9d21e3e24b0492432904359558a59a25ad8eb202a40",
     "snow_collision.glb": "3fb47bab16860a952e3a79bab1012cbd018f6fc62b9cbb946c0065d72b4c3ee8",
-    "snow_sailing_lod2.glb": "cfea2c33a62f5c781f02587c879718e952bb365147a29dd7f2521d6d065fdc16",
-    "snow_sailing_lod1.glb": "b181acee24aa6d6d4c3ea0bd3d490fb49001a89429a8a3327ce97a651a33f571"
+    "snow_sailing_lod2.glb": "752e49811eaac217fe990b43af9929f0d3fc6165c9fa73586a63d4d0df2e5830",
+    "snow_sailing.glb": "5fe6bdf893ebbbb1935febe09840ca4f79d4b32fedd8ff86ad6027a0fdc3e6e5",
+    "snow_sailing_lod1.glb": "ffacdfc73f29d9f71ac54c9e0f7cea2f4c20cf68b8f45116db58824e60c6439e"
   }
 }
