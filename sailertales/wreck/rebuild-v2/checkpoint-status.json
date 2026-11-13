@@ -1,0 +1,57 @@
+{
+  "id": "wreck",
+  "checkpoint": true,
+  "capturedAt": "2026-11-13T14:20:58.569456+00:00",
+  "auditPassed": false,
+  "assetMismatches": [
+    "design.json",
+    "model/collision.glb",
+    "model/ship.blend",
+    "model/ship.glb",
+    "model/ship_lod1.glb",
+    "model/ship_lod2.glb",
+    "navigation.json",
+    "previews/deck.jpg",
+    "previews/hero.jpg",
+    "previews/interior.jpg",
+    "previews/stern.jpg",
+    "spec.json"
+  ],
+  "sourceMismatches": [
+    "sailertales/common/v2_audit.py",
+    "sailertales/common/v2_big.py",
+    "sailertales/common/v2_boats.py",
+    "sailertales/common/v2_package.py",
+    "sailertales/common/v2_reference.py",
+    "sailertales/common/v2_rigging.py",
+    "sailertales/common/v2_sloop.py",
+    "sailertales/common/v2_wreck.py"
+  ],
+  "failedRequired": [
+    {
+      "id": "E1",
+      "status": "FAIL"
+    },
+    {
+      "id": "H5",
+      "status": "NA"
+    },
+    {
+      "id": "I3",
+      "status": "FAIL"
+    },
+    {
+      "id": "J3",
+      "status": "FAIL"
+    },
+    {
+      "id": "J4",
+      "status": "FAIL"
+    },
+    {
+      "id": "player_destinations",
+      "status": "FAIL"
+    }
+  ],
+  "reviewPassed": false
+}
