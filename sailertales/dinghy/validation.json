@@ -1,60 +1,5545 @@
 {
-  "schema": 1,
+  "schema": 2,
+  "vessel": "dinghy",
   "blender": "5.2.3 LTS",
-  "capsule": {
-    "radius": 0.38,
-    "height": 1.85,
-    "max_slope_deg": 35
-  },
-  "step_m": 0.12,
-  "geometric_tolerance_m": 0.015,
-  "rounded_foot_lift_m": 0.08,
-  "negative_controls": [
-    "wall rejects",
-    "low ceiling rejects",
-    "open floor passes"
-  ],
+  "passed": true,
+  "scope": "authored static assets and declared player routes; per-item matrix contains all untested or inapplicable guide checks",
   "checks": {
-    "model/ship.glb": {
-      "triangles": 5336,
-      "routes": [
+    "export": {
+      "model/ship.glb": {
+        "passed": true,
+        "errors": [],
+        "bytes": 2272108,
+        "triangles": 11456,
+        "nodes": 64,
+        "meshes": 63,
+        "materials": 4,
+        "images": [
+          {
+            "index": 0,
+            "name": "wood_normal",
+            "width": 2048,
+            "height": 2048,
+            "bytes": 403169,
+            "sha256": "e818cbf65c8caf36cc80252ef27a2f3a26511538ff7796342ce591c942af2e73",
+            "power_of_two": true
+          },
+          {
+            "index": 1,
+            "name": "wood_color",
+            "width": 2048,
+            "height": 2048,
+            "bytes": 477556,
+            "sha256": "5d5bfe4670209e8c07413a2d338dd5ee11cc701ab76188d3ade7d51c90a859ad",
+            "power_of_two": true
+          },
+          {
+            "index": 2,
+            "name": "wood_orm",
+            "width": 2048,
+            "height": 2048,
+            "bytes": 230435,
+            "sha256": "59240beea62b0333a595e7e42ea6702293e457d53b8d0a29037b46569755bb2a",
+            "power_of_two": true
+          },
+          {
+            "index": 3,
+            "name": "rope_normal",
+            "width": 1024,
+            "height": 512,
+            "bytes": 20487,
+            "sha256": "9daa03ea6cc3b3e84d8c5c135908eceb05977f489b745cda1088f70a9e93b75e",
+            "power_of_two": true
+          },
+          {
+            "index": 4,
+            "name": "rope_color",
+            "width": 1024,
+            "height": 512,
+            "bytes": 47890,
+            "sha256": "6008f1bf5992b68f2d2eb9f11678ee0cff4cc7e1bb8f815728356af8c0880e6b",
+            "power_of_two": true
+          },
+          {
+            "index": 5,
+            "name": "rope_orm",
+            "width": 1024,
+            "height": 512,
+            "bytes": 84062,
+            "sha256": "a5839af8db1dadfdd0f0409f7d0ed02ca2ee9fca9668c4403e21908175b1523c",
+            "power_of_two": true
+          }
+        ]
+      },
+      "model/collision.glb": {
+        "passed": true,
+        "errors": [],
+        "bytes": 436488,
+        "triangles": 5656,
+        "nodes": 16,
+        "meshes": 16,
+        "materials": 1,
+        "images": []
+      }
+    },
+    "topology": {
+      "model/ship.glb": {
+        "passed": true,
+        "weld_tolerance_m": 1e-05,
+        "seam_vertices_note": "glTF UV/normal seams are welded only in an analysis copy before topology tests",
+        "objects": [
+          {
+            "name": "bent_frame_p_00",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 72,
+              "export_seam_vertices_welded": 286,
+              "edges": 210,
+              "faces": 140,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.0006398577044509434
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "bent_frame_p_01",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 72,
+              "export_seam_vertices_welded": 292,
+              "edges": 210,
+              "faces": 140,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.0006505852950314904
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "bent_frame_p_02",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 72,
+              "export_seam_vertices_welded": 294,
+              "edges": 210,
+              "faces": 140,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.0006594546026409369
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "bent_frame_p_03",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 72,
+              "export_seam_vertices_welded": 284,
+              "edges": 210,
+              "faces": 140,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.0006630357553516241
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "bent_frame_p_04",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 72,
+              "export_seam_vertices_welded": 294,
+              "edges": 210,
+              "faces": 140,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.0006478288010423782
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "bent_frame_p_05",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 72,
+              "export_seam_vertices_welded": 286,
+              "edges": 210,
+              "faces": 140,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.0005988384853373227
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "bent_frame_p_06",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 72,
+              "export_seam_vertices_welded": 289,
+              "edges": 210,
+              "faces": 140,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.0005220556403324403
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "bent_frame_s_00",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 72,
+              "export_seam_vertices_welded": 286,
+              "edges": 210,
+              "faces": 140,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.0006398577044509434
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "bent_frame_s_01",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 72,
+              "export_seam_vertices_welded": 293,
+              "edges": 210,
+              "faces": 140,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.0006505852950314904
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "bent_frame_s_02",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 72,
+              "export_seam_vertices_welded": 294,
+              "edges": 210,
+              "faces": 140,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.0006594546026409369
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "bent_frame_s_03",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 72,
+              "export_seam_vertices_welded": 284,
+              "edges": 210,
+              "faces": 140,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.0006630357553516239
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "bent_frame_s_04",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 72,
+              "export_seam_vertices_welded": 294,
+              "edges": 210,
+              "faces": 140,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.0006478288010423785
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "bent_frame_s_05",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 72,
+              "export_seam_vertices_welded": 286,
+              "edges": 210,
+              "faces": 140,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.0005988384853373226
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "bent_frame_s_06",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 72,
+              "export_seam_vertices_welded": 289,
+              "edges": 210,
+              "faces": 140,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.0005220556403324401
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "end_thwart_00",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 8,
+              "export_seam_vertices_welded": 16,
+              "edges": 18,
+              "faces": 12,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.007563419970464444
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "end_thwart_01",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 8,
+              "export_seam_vertices_welded": 16,
+              "edges": 18,
+              "faces": 12,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.004548934379983766
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "gunwale_1",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 328,
+              "export_seam_vertices_welded": 1222,
+              "edges": 978,
+              "faces": 652,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.007000876126395291
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "gunwale_1_001",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 328,
+              "export_seam_vertices_welded": 1219,
+              "edges": 978,
+              "faces": 652,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.007000876139798278
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "inwale_1",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 246,
+              "export_seam_vertices_welded": 916,
+              "edges": 732,
+              "faces": 488,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.004244332766338839
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "inwale_1_001",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 246,
+              "export_seam_vertices_welded": 916,
+              "edges": 732,
+              "faces": 488,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.004244332799366533
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "keel",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 328,
+              "export_seam_vertices_welded": 916,
+              "edges": 978,
+              "faces": 652,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.01862742837195823
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "oar_lashing_1_0",
+            "kind": "rope",
+            "topology": {
+              "vertices_after_weld": 18,
+              "export_seam_vertices_welded": 69,
+              "edges": 48,
+              "faces": 32,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                8.017989031644551e-06
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "oar_lashing_1_0_001",
+            "kind": "rope",
+            "topology": {
+              "vertices_after_weld": 18,
+              "export_seam_vertices_welded": 69,
+              "edges": 48,
+              "faces": 32,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                5.82938226612896e-06
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "oar_lashing_1_1",
+            "kind": "rope",
+            "topology": {
+              "vertices_after_weld": 18,
+              "export_seam_vertices_welded": 72,
+              "edges": 48,
+              "faces": 32,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                9.34470172549287e-06
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "oar_lashing_1_1_001",
+            "kind": "rope",
+            "topology": {
+              "vertices_after_weld": 18,
+              "export_seam_vertices_welded": 72,
+              "edges": 48,
+              "faces": 32,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                7.187744373954765e-06
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "sole_board_00",
+            "kind": "surface",
+            "topology": {
+              "vertices_after_weld": 140,
+              "export_seam_vertices_welded": 196,
+              "edges": 414,
+              "faces": 276,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.006428824548429763
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "sole_board_01",
+            "kind": "surface",
+            "topology": {
+              "vertices_after_weld": 152,
+              "export_seam_vertices_welded": 164,
+              "edges": 450,
+              "faces": 300,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.008326356832398596
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "sole_board_02",
+            "kind": "surface",
+            "topology": {
+              "vertices_after_weld": 152,
+              "export_seam_vertices_welded": 160,
+              "edges": 450,
+              "faces": 300,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.008383374464035047
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "sole_board_03",
+            "kind": "surface",
+            "topology": {
+              "vertices_after_weld": 152,
+              "export_seam_vertices_welded": 160,
+              "edges": 450,
+              "faces": 300,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.008383374464035023
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "sole_board_04",
+            "kind": "surface",
+            "topology": {
+              "vertices_after_weld": 152,
+              "export_seam_vertices_welded": 160,
+              "edges": 450,
+              "faces": 300,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.008383374464035054
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "sole_board_05",
+            "kind": "surface",
+            "topology": {
+              "vertices_after_weld": 152,
+              "export_seam_vertices_welded": 164,
+              "edges": 450,
+              "faces": 300,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.00832635683239859
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "sole_board_06",
+            "kind": "surface",
+            "topology": {
+              "vertices_after_weld": 140,
+              "export_seam_vertices_welded": 196,
+              "edges": 414,
+              "faces": 276,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.006428824548429764
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "stem",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 24,
+              "export_seam_vertices_welded": 40,
+              "edges": 66,
+              "faces": 44,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.0017667493972021752
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "sternpost",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 24,
+              "export_seam_vertices_welded": 40,
+              "edges": 66,
+              "faces": 44,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.001888249847717795
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "stowed_oar_blade_1",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 8,
+              "export_seam_vertices_welded": 16,
+              "edges": 18,
+              "faces": 12,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.0006079990186690356
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "stowed_oar_blade_1_001",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 8,
+              "export_seam_vertices_welded": 16,
+              "edges": 18,
+              "faces": 12,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.0006079990186690356
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "stowed_oar_shaft_1",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 16,
+              "export_seam_vertices_welded": 50,
+              "edges": 42,
+              "faces": 28,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.002112701751915958
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "stowed_oar_shaft_1_001",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 16,
+              "export_seam_vertices_welded": 48,
+              "edges": 42,
+              "faces": 28,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.00211270184674688
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "strake_port_01",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 164,
+              "export_seam_vertices_welded": 689,
+              "edges": 486,
+              "faces": 324,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.011718829985768411
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "strake_port_02",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 164,
+              "export_seam_vertices_welded": 721,
+              "edges": 486,
+              "faces": 324,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.009156420121187087
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "strake_port_03",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 164,
+              "export_seam_vertices_welded": 721,
+              "edges": 486,
+              "faces": 324,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.009143139261837994
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "strake_port_04",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 164,
+              "export_seam_vertices_welded": 713,
+              "edges": 486,
+              "faces": 324,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.010325383618927361
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "strake_port_05",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 164,
+              "export_seam_vertices_welded": 710,
+              "edges": 486,
+              "faces": 324,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.011804892421141905
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "strake_port_06",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 164,
+              "export_seam_vertices_welded": 695,
+              "edges": 486,
+              "faces": 324,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.01296324159190397
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "strake_starboard_01",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 164,
+              "export_seam_vertices_welded": 670,
+              "edges": 486,
+              "faces": 324,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.011718829985768418
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "strake_starboard_02",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 164,
+              "export_seam_vertices_welded": 725,
+              "edges": 486,
+              "faces": 324,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.009156420121187087
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "strake_starboard_03",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 164,
+              "export_seam_vertices_welded": 715,
+              "edges": 486,
+              "faces": 324,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.009143139261837994
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "strake_starboard_04",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 164,
+              "export_seam_vertices_welded": 719,
+              "edges": 486,
+              "faces": 324,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.010325383618927363
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "strake_starboard_05",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 164,
+              "export_seam_vertices_welded": 712,
+              "edges": 486,
+              "faces": 324,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.011804892421141912
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "strake_starboard_06",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 164,
+              "export_seam_vertices_welded": 699,
+              "edges": 486,
+              "faces": 324,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.012963241591903976
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "thole_1_0_0",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 12,
+              "export_seam_vertices_welded": 24,
+              "edges": 30,
+              "faces": 20,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                2.857881636551014e-05
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "thole_1_0_0_001",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 12,
+              "export_seam_vertices_welded": 24,
+              "edges": 30,
+              "faces": 20,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                2.857881636551014e-05
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "thole_1_0_1",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 12,
+              "export_seam_vertices_welded": 24,
+              "edges": 30,
+              "faces": 20,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                2.857881636551014e-05
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "thole_1_0_1_001",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 12,
+              "export_seam_vertices_welded": 24,
+              "edges": 30,
+              "faces": 20,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                2.857881636551014e-05
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "thole_1_1_0",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 12,
+              "export_seam_vertices_welded": 24,
+              "edges": 30,
+              "faces": 20,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                2.857881636551014e-05
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "thole_1_1_0_001",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 12,
+              "export_seam_vertices_welded": 24,
+              "edges": 30,
+              "faces": 20,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                2.857881636551014e-05
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "thole_1_1_1",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 12,
+              "export_seam_vertices_welded": 24,
+              "edges": 30,
+              "faces": 20,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                2.857881636551014e-05
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "thole_1_1_1_001",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 12,
+              "export_seam_vertices_welded": 24,
+              "edges": 30,
+              "faces": 20,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                2.8578816365510138e-05
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "thwart_riser_0_1",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 8,
+              "export_seam_vertices_welded": 16,
+              "edges": 18,
+              "faces": 12,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.00154700064635275
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "thwart_riser_0_1_001",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 8,
+              "export_seam_vertices_welded": 16,
+              "edges": 18,
+              "faces": 12,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.00154700064635275
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "thwart_riser_1_1",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 8,
+              "export_seam_vertices_welded": 16,
+              "edges": 18,
+              "faces": 12,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.0015469999370574799
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "thwart_riser_1_1_001",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 8,
+              "export_seam_vertices_welded": 16,
+              "edges": 18,
+              "faces": 12,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.0015469999370574799
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "transom",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 50,
+              "export_seam_vertices_welded": 100,
+              "edges": 144,
+              "faces": 96,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.017077352128834992
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          }
+        ],
+        "failures": []
+      },
+      "model/collision.glb": {
+        "passed": true,
+        "weld_tolerance_m": 1e-05,
+        "seam_vertices_note": "glTF UV/normal seams are welded only in an analysis copy before topology tests",
+        "objects": [
+          {
+            "name": "col_end_thwart_00",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 8,
+              "export_seam_vertices_welded": 16,
+              "edges": 18,
+              "faces": 12,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.007563419970464444
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "col_end_thwart_01",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 8,
+              "export_seam_vertices_welded": 16,
+              "edges": 18,
+              "faces": 12,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.004548934379983766
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "col_gunwale_1",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 328,
+              "export_seam_vertices_welded": 1625,
+              "edges": 978,
+              "faces": 652,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.007000876126395294
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "col_gunwale_1_001",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 328,
+              "export_seam_vertices_welded": 1621,
+              "edges": 978,
+              "faces": 652,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.007000876139798273
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "col_hollow_hull",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 722,
+              "export_seam_vertices_welded": 3389,
+              "edges": 2160,
+              "faces": 1440,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.09971659354564368
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "col_keel",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 328,
+              "export_seam_vertices_welded": 1269,
+              "edges": 978,
+              "faces": 652,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.018627428371958223
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "col_sole_board_00",
+            "kind": "surface",
+            "topology": {
+              "vertices_after_weld": 140,
+              "export_seam_vertices_welded": 196,
+              "edges": 414,
+              "faces": 276,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.006428824548429763
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "col_sole_board_01",
+            "kind": "surface",
+            "topology": {
+              "vertices_after_weld": 152,
+              "export_seam_vertices_welded": 164,
+              "edges": 450,
+              "faces": 300,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.00832635683239858
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "col_sole_board_02",
+            "kind": "surface",
+            "topology": {
+              "vertices_after_weld": 152,
+              "export_seam_vertices_welded": 160,
+              "edges": 450,
+              "faces": 300,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.008383374464035044
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "col_sole_board_03",
+            "kind": "surface",
+            "topology": {
+              "vertices_after_weld": 152,
+              "export_seam_vertices_welded": 160,
+              "edges": 450,
+              "faces": 300,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.008383374464035044
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "col_sole_board_04",
+            "kind": "surface",
+            "topology": {
+              "vertices_after_weld": 152,
+              "export_seam_vertices_welded": 160,
+              "edges": 450,
+              "faces": 300,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.008383374464035023
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "col_sole_board_05",
+            "kind": "surface",
+            "topology": {
+              "vertices_after_weld": 152,
+              "export_seam_vertices_welded": 164,
+              "edges": 450,
+              "faces": 300,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.008326356832398595
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "col_sole_board_06",
+            "kind": "surface",
+            "topology": {
+              "vertices_after_weld": 140,
+              "export_seam_vertices_welded": 196,
+              "edges": 414,
+              "faces": 276,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.006428824548429776
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "col_stem",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 24,
+              "export_seam_vertices_welded": 43,
+              "edges": 66,
+              "faces": 44,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.001766749397202175
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "col_sternpost",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 24,
+              "export_seam_vertices_welded": 43,
+              "edges": 66,
+              "faces": 44,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.0018882498477177944
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "col_transom",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 50,
+              "export_seam_vertices_welded": 100,
+              "edges": 144,
+              "faces": 96,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.017077352128834992
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          }
+        ],
+        "failures": []
+      }
+    },
+    "navigation": {
+      "model/ship.glb": {
+        "passed": true,
+        "player": {
+          "radius": 0.38,
+          "height": 1.85,
+          "max_slope_deg": 35
+        },
+        "sample_step_m": 0.1,
+        "geometry_tolerance_m": 0.015,
+        "rounded_foot_lift_m": 0.08,
+        "controller_step_allowance_m": 0.22,
+        "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+        "routes": [
+          {
+            "name": "standing_cockpit",
+            "mode": "walk",
+            "length_m": 1.1500000995138373,
+            "samples": 13,
+            "passed": true,
+            "failure_count": 0,
+            "failures": []
+          }
+        ],
+        "disconnected_routes": []
+      },
+      "model/collision.glb": {
+        "passed": true,
+        "player": {
+          "radius": 0.38,
+          "height": 1.85,
+          "max_slope_deg": 35
+        },
+        "sample_step_m": 0.1,
+        "geometry_tolerance_m": 0.015,
+        "rounded_foot_lift_m": 0.08,
+        "controller_step_allowance_m": 0.22,
+        "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+        "routes": [
+          {
+            "name": "standing_cockpit",
+            "mode": "walk",
+            "length_m": 1.1500000995138373,
+            "samples": 13,
+            "passed": true,
+            "failure_count": 0,
+            "failures": []
+          }
+        ],
+        "disconnected_routes": []
+      }
+    },
+    "walking_width": {
+      "model/ship.glb": {
+        "passed": true,
+        "player": {
+          "radius": 0.4,
+          "height": 1.85,
+          "max_slope_deg": 35
+        },
+        "sample_step_m": 0.1,
+        "geometry_tolerance_m": 0,
+        "rounded_foot_lift_m": 0.08,
+        "controller_step_allowance_m": 0.22,
+        "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+        "routes": [
+          {
+            "name": "standing_cockpit",
+            "mode": "walk",
+            "length_m": 1.1500000995138373,
+            "samples": 13,
+            "passed": true,
+            "failure_count": 0,
+            "failures": []
+          }
+        ],
+        "disconnected_routes": []
+      },
+      "model/collision.glb": {
+        "passed": true,
+        "player": {
+          "radius": 0.4,
+          "height": 1.85,
+          "max_slope_deg": 35
+        },
+        "sample_step_m": 0.1,
+        "geometry_tolerance_m": 0,
+        "rounded_foot_lift_m": 0.08,
+        "controller_step_allowance_m": 0.22,
+        "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+        "routes": [
+          {
+            "name": "standing_cockpit",
+            "mode": "walk",
+            "length_m": 1.1500000995138373,
+            "samples": 13,
+            "passed": true,
+            "failure_count": 0,
+            "failures": []
+          }
+        ],
+        "disconnected_routes": []
+      }
+    },
+    "negative_controls": [
+      "open floor accepted",
+      "wall rejected",
+      "low ceiling rejected",
+      "missing floor rejected",
+      "capsule/triangle crossing detected",
+      "separated capsule/triangle accepted",
+      "deep solid penetration rejected",
+      "reasoned joint recorded",
+      "rope through cloth rejected",
+      "explicit sewn boundary attachment accepted"
+    ],
+    "rig": {
+      "passed": true,
+      "sails": 0,
+      "ropes": 4,
+      "spars": 0,
+      "pairs_tested": 0,
+      "scope": "authored static pose; boundary allowance only for explicit, reasoned attachments",
+      "edge_contact_tolerance_m": 0.025,
+      "edge_contacts": [],
+      "intersections": []
+    },
+    "uv": {
+      "missing_uv_objects": [],
+      "materials": {
+        "v2_wood_ciemne": {
+          "area_m2": 3.6488929589231036,
+          "texel_density_px_m": {
+            "p5": 1023.9992957482517,
+            "median": 1038.490058792029,
+            "p95": 1063.343714489228
+          },
+          "density_p95_p5_ratio": 1.038422310351519,
+          "anisotropy_p95": 1.0951662046136714,
+          "anisotropy_over_1_25_area_share": 0.0,
+          "degenerate_uv_area_m2": 0.0,
+          "wood_grain_measured_area_m2": 3.548896048922569,
+          "wood_grain_aligned_share": 1.0
+        },
+        "v2_wood": {
+          "area_m2": 20.492193962228903,
+          "texel_density_px_m": {
+            "p5": 1023.9989861145873,
+            "median": 1024.0000340226566,
+            "p95": 1024.0013078955042
+          },
+          "density_p95_p5_ratio": 1.0000022673664215,
+          "anisotropy_p95": 1.0000042783947336,
+          "anisotropy_over_1_25_area_share": 0.0,
+          "degenerate_uv_area_m2": 0.0,
+          "wood_grain_measured_area_m2": 19.18411807615659,
+          "wood_grain_aligned_share": 1.0
+        },
+        "v2_wood_czarne": {
+          "area_m2": 1.1309162999062634,
+          "texel_density_px_m": {
+            "p5": 1032.4451652035477,
+            "median": 1037.2761745102678,
+            "p95": 1042.007027289968
+          },
+          "density_p95_p5_ratio": 1.0092613752368487,
+          "anisotropy_p95": 1.0377921073516894,
+          "anisotropy_over_1_25_area_share": 0.0,
+          "degenerate_uv_area_m2": 0.0,
+          "wood_grain_measured_area_m2": 1.1226686071207432,
+          "wood_grain_aligned_share": 1.0
+        },
+        "v2_lina_jasna": {
+          "area_m2": 0.025183370390347275,
+          "texel_density_px_m": {
+            "p5": 16023.639594694694,
+            "median": 16527.405263047593,
+            "p95": 24072.6335126834
+          },
+          "density_p95_p5_ratio": 1.502319954865539,
+          "anisotropy_p95": 4.316124924011803,
+          "anisotropy_over_1_25_area_share": 0.30253442201369535,
+          "degenerate_uv_area_m2": 0.0,
+          "wood_grain_measured_area_m2": 0.0,
+          "wood_grain_aligned_share": null
+        }
+      },
+      "grain_objects_below_94_percent": []
+    },
+    "materials": {
+      "passed": true,
+      "errors": [],
+      "merged_image_role_failures": [],
+      "fractional_plain_metal": [],
+      "double_sided_materials": [],
+      "images_power_of_two": true,
+      "note": "glTF image slots enforce sRGB colour vs linear data semantics; OpenGL normal orientation is an authoring convention"
+    },
+    "penetration": {
+      "passed": true,
+      "overlapping_solid_pairs": 186,
+      "surface_contact_pairs": 6,
+      "intended_joints": [
         {
-          "route": "cockpit",
-          "samples": 12,
+          "a": "gunwale_1_001",
+          "b": "strake_starboard_06",
+          "reason": "The sheerstrake is housed in the gunwale."
+        },
+        {
+          "a": "gunwale_1_001",
+          "b": "thole_1_0_0_001",
+          "reason": "Thole pins are fixed into the gunwale."
+        },
+        {
+          "a": "gunwale_1_001",
+          "b": "thole_1_0_1_001",
+          "reason": "Thole pins are fixed into the gunwale."
+        },
+        {
+          "a": "gunwale_1_001",
+          "b": "inwale_1_001",
+          "reason": "The gunwale cap is fastened over the backing inwale."
+        },
+        {
+          "a": "gunwale_1_001",
+          "b": "thole_1_1_0_001",
+          "reason": "Thole pins are fixed into the gunwale."
+        },
+        {
+          "a": "gunwale_1_001",
+          "b": "thole_1_1_1_001",
+          "reason": "Thole pins are fixed into the gunwale."
+        },
+        {
+          "a": "gunwale_1_001",
+          "b": "transom",
+          "reason": "Gunwale caps are housed over the transom corners."
+        },
+        {
+          "a": "gunwale_1_001",
+          "b": "stem",
+          "reason": "Gunwale ends meet in the stem-head joint."
+        },
+        {
+          "a": "gunwale_1_001",
+          "b": "inwale_1",
+          "reason": "The gunwale cap is fastened over the backing inwale."
+        },
+        {
+          "a": "gunwale_1_001",
+          "b": "gunwale_1",
+          "reason": "The port and starboard rail ends meet inside the stem-head joint."
+        },
+        {
+          "a": "strake_starboard_06",
+          "b": "thole_1_0_0_001",
+          "reason": "Thole pins pass through the gunwale into the backing sheerstrake."
+        },
+        {
+          "a": "strake_starboard_06",
+          "b": "thole_1_0_1_001",
+          "reason": "Thole pins pass through the gunwale into the backing sheerstrake."
+        },
+        {
+          "a": "strake_starboard_06",
+          "b": "strake_starboard_05",
+          "reason": "Adjacent closed clinker strakes intentionally overlap by 12 mm."
+        },
+        {
+          "a": "strake_starboard_06",
+          "b": "bent_frame_s_03",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_06",
+          "b": "inwale_1_001",
+          "reason": "The inwale backs the upper planking."
+        },
+        {
+          "a": "strake_starboard_06",
+          "b": "bent_frame_s_02",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_06",
+          "b": "thole_1_1_0_001",
+          "reason": "Thole pins pass through the gunwale into the backing sheerstrake."
+        },
+        {
+          "a": "strake_starboard_06",
+          "b": "thole_1_1_1_001",
+          "reason": "Thole pins pass through the gunwale into the backing sheerstrake."
+        },
+        {
+          "a": "strake_starboard_06",
+          "b": "bent_frame_s_04",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_06",
+          "b": "bent_frame_s_01",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_06",
+          "b": "thwart_riser_0_1_001",
+          "reason": "Thwart riser rails are housed against the inner planking."
+        },
+        {
+          "a": "strake_starboard_06",
+          "b": "bent_frame_s_00",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_06",
+          "b": "transom",
+          "reason": "Strake ends are fixed to the transom edge."
+        },
+        {
+          "a": "strake_starboard_06",
+          "b": "bent_frame_s_05",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_06",
+          "b": "thwart_riser_1_1_001",
+          "reason": "Thwart riser rails are housed against the inner planking."
+        },
+        {
+          "a": "strake_starboard_06",
+          "b": "bent_frame_s_06",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_06",
+          "b": "stem",
+          "reason": "Strake ends are housed in the stem rabbet."
+        },
+        {
+          "a": "strake_starboard_06",
+          "b": "inwale_1",
+          "reason": "The inwale backs the upper planking."
+        },
+        {
+          "a": "stowed_oar_shaft_1_001",
+          "b": "stowed_oar_blade_1_001",
+          "reason": "The oar loom is housed in its blade; each whole oar is lashed above the gunwale."
+        },
+        {
+          "a": "strake_starboard_05",
+          "b": "bent_frame_s_03",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_05",
+          "b": "bent_frame_s_02",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_05",
+          "b": "bent_frame_s_04",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_05",
+          "b": "bent_frame_s_01",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_05",
+          "b": "strake_starboard_04",
+          "reason": "Adjacent closed clinker strakes intentionally overlap by 12 mm."
+        },
+        {
+          "a": "strake_starboard_05",
+          "b": "bent_frame_s_00",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_05",
+          "b": "transom",
+          "reason": "Strake ends are fixed to the transom edge."
+        },
+        {
+          "a": "strake_starboard_05",
+          "b": "bent_frame_s_05",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_05",
+          "b": "thwart_riser_1_1_001",
+          "reason": "Thwart riser rails are housed against the inner planking."
+        },
+        {
+          "a": "strake_starboard_05",
+          "b": "bent_frame_s_06",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_05",
+          "b": "stem",
+          "reason": "Strake ends are housed in the stem rabbet."
+        },
+        {
+          "a": "bent_frame_s_03",
+          "b": "strake_starboard_04",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "bent_frame_s_03",
+          "b": "strake_starboard_03",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "bent_frame_s_03",
+          "b": "strake_starboard_02",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "bent_frame_s_03",
+          "b": "strake_starboard_01",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "inwale_1_001",
+          "b": "thole_1_1_0_001",
+          "reason": "The thole socket is supported by the inwale."
+        },
+        {
+          "a": "inwale_1_001",
+          "b": "transom",
+          "reason": "Inwale ends land against the transom."
+        },
+        {
+          "a": "inwale_1_001",
+          "b": "stem",
+          "reason": "Inwale ends are housed into the stem head."
+        },
+        {
+          "a": "inwale_1_001",
+          "b": "inwale_1",
+          "reason": "The port and starboard rail ends meet inside the stem-head joint."
+        },
+        {
+          "a": "inwale_1_001",
+          "b": "gunwale_1",
+          "reason": "The gunwale cap is fastened over the backing inwale."
+        },
+        {
+          "a": "inwale_1_001",
+          "b": "strake_port_06",
+          "reason": "The inwale backs the upper planking."
+        },
+        {
+          "a": "bent_frame_s_02",
+          "b": "strake_starboard_04",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "bent_frame_s_02",
+          "b": "strake_starboard_03",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "bent_frame_s_02",
+          "b": "strake_starboard_02",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "bent_frame_s_02",
+          "b": "strake_starboard_01",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "bent_frame_s_04",
+          "b": "strake_starboard_04",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "bent_frame_s_04",
+          "b": "strake_starboard_03",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "bent_frame_s_04",
+          "b": "strake_starboard_02",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "bent_frame_s_04",
+          "b": "strake_starboard_01",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "bent_frame_s_01",
+          "b": "strake_starboard_04",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "bent_frame_s_01",
+          "b": "strake_starboard_03",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "bent_frame_s_01",
+          "b": "strake_starboard_02",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "bent_frame_s_01",
+          "b": "strake_starboard_01",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_04",
+          "b": "bent_frame_s_00",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_04",
+          "b": "transom",
+          "reason": "Strake ends are fixed to the transom edge."
+        },
+        {
+          "a": "strake_starboard_04",
+          "b": "strake_starboard_03",
+          "reason": "Adjacent closed clinker strakes intentionally overlap by 12 mm."
+        },
+        {
+          "a": "strake_starboard_04",
+          "b": "bent_frame_s_05",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_04",
+          "b": "bent_frame_s_06",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_04",
+          "b": "stem",
+          "reason": "Strake ends are housed in the stem rabbet."
+        },
+        {
+          "a": "thwart_riser_0_1_001",
+          "b": "end_thwart_00",
+          "reason": "The ends of each thwart rest on timber riser rails."
+        },
+        {
+          "a": "bent_frame_s_00",
+          "b": "strake_starboard_03",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "bent_frame_s_00",
+          "b": "strake_starboard_02",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "bent_frame_s_00",
+          "b": "strake_starboard_01",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "transom",
+          "b": "strake_starboard_03",
+          "reason": "Strake ends are fixed to the transom edge."
+        },
+        {
+          "a": "transom",
+          "b": "strake_starboard_02",
+          "reason": "Strake ends are fixed to the transom edge."
+        },
+        {
+          "a": "transom",
+          "b": "strake_starboard_01",
+          "reason": "Strake ends are fixed to the transom edge."
+        },
+        {
+          "a": "transom",
+          "b": "keel",
+          "reason": "The transom lands on the after keel."
+        },
+        {
+          "a": "transom",
+          "b": "sternpost",
+          "reason": "The transom is secured to the sternpost."
+        },
+        {
+          "a": "transom",
+          "b": "inwale_1",
+          "reason": "Inwale ends land against the transom."
+        },
+        {
+          "a": "transom",
+          "b": "gunwale_1",
+          "reason": "Gunwale caps are housed over the transom corners."
+        },
+        {
+          "a": "transom",
+          "b": "strake_port_01",
+          "reason": "Strake ends are fixed to the transom edge."
+        },
+        {
+          "a": "transom",
+          "b": "strake_port_02",
+          "reason": "Strake ends are fixed to the transom edge."
+        },
+        {
+          "a": "transom",
+          "b": "strake_port_03",
+          "reason": "Strake ends are fixed to the transom edge."
+        },
+        {
+          "a": "transom",
+          "b": "strake_port_04",
+          "reason": "Strake ends are fixed to the transom edge."
+        },
+        {
+          "a": "transom",
+          "b": "strake_port_05",
+          "reason": "Strake ends are fixed to the transom edge."
+        },
+        {
+          "a": "transom",
+          "b": "strake_port_06",
+          "reason": "Strake ends are fixed to the transom edge."
+        },
+        {
+          "a": "end_thwart_00",
+          "b": "thwart_riser_0_1",
+          "reason": "The ends of each thwart rest on timber riser rails."
+        },
+        {
+          "a": "strake_starboard_03",
+          "b": "bent_frame_s_05",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_03",
+          "b": "strake_starboard_02",
+          "reason": "Adjacent closed clinker strakes intentionally overlap by 12 mm."
+        },
+        {
+          "a": "strake_starboard_03",
+          "b": "bent_frame_s_06",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_03",
+          "b": "stem",
+          "reason": "Strake ends are housed in the stem rabbet."
+        },
+        {
+          "a": "bent_frame_s_05",
+          "b": "strake_starboard_02",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "bent_frame_s_05",
+          "b": "strake_starboard_01",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_02",
+          "b": "bent_frame_s_06",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_starboard_02",
+          "b": "strake_starboard_01",
+          "reason": "Adjacent closed clinker strakes intentionally overlap by 12 mm."
+        },
+        {
+          "a": "strake_starboard_02",
+          "b": "keel",
+          "reason": "Garboard strakes are rebated into the keel."
+        },
+        {
+          "a": "strake_starboard_02",
+          "b": "stem",
+          "reason": "Strake ends are housed in the stem rabbet."
+        },
+        {
+          "a": "thwart_riser_1_1_001",
+          "b": "bent_frame_s_06",
+          "reason": "Thwart risers land on supporting frames."
+        },
+        {
+          "a": "thwart_riser_1_1_001",
+          "b": "end_thwart_01",
+          "reason": "The ends of each thwart rest on timber riser rails."
+        },
+        {
+          "a": "bent_frame_s_06",
+          "b": "strake_starboard_01",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "end_thwart_01",
+          "b": "thwart_riser_1_1",
+          "reason": "The ends of each thwart rest on timber riser rails."
+        },
+        {
+          "a": "strake_starboard_01",
+          "b": "keel",
+          "reason": "Garboard strakes are rebated into the keel."
+        },
+        {
+          "a": "strake_starboard_01",
+          "b": "stem",
+          "reason": "Strake ends are housed in the stem rabbet."
+        },
+        {
+          "a": "strake_starboard_01",
+          "b": "sternpost",
+          "reason": "The after ends meet the sternpost."
+        },
+        {
+          "a": "keel",
+          "b": "stem",
+          "reason": "Keel and stem have a scarfed structural joint."
+        },
+        {
+          "a": "keel",
+          "b": "sternpost",
+          "reason": "Keel and sternpost are scarfed together."
+        },
+        {
+          "a": "keel",
+          "b": "strake_port_01",
+          "reason": "Garboard strakes are rebated into the keel."
+        },
+        {
+          "a": "keel",
+          "b": "strake_port_02",
+          "reason": "Garboard strakes are rebated into the keel."
+        },
+        {
+          "a": "stem",
+          "b": "inwale_1",
+          "reason": "Inwale ends are housed into the stem head."
+        },
+        {
+          "a": "stem",
+          "b": "gunwale_1",
+          "reason": "Gunwale ends meet in the stem-head joint."
+        },
+        {
+          "a": "stem",
+          "b": "strake_port_01",
+          "reason": "Strake ends are housed in the stem rabbet."
+        },
+        {
+          "a": "stem",
+          "b": "strake_port_02",
+          "reason": "Strake ends are housed in the stem rabbet."
+        },
+        {
+          "a": "stem",
+          "b": "strake_port_03",
+          "reason": "Strake ends are housed in the stem rabbet."
+        },
+        {
+          "a": "stem",
+          "b": "strake_port_04",
+          "reason": "Strake ends are housed in the stem rabbet."
+        },
+        {
+          "a": "stem",
+          "b": "strake_port_05",
+          "reason": "Strake ends are housed in the stem rabbet."
+        },
+        {
+          "a": "stem",
+          "b": "strake_port_06",
+          "reason": "Strake ends are housed in the stem rabbet."
+        },
+        {
+          "a": "sternpost",
+          "b": "strake_port_01",
+          "reason": "The after ends meet the sternpost."
+        },
+        {
+          "a": "inwale_1",
+          "b": "gunwale_1",
+          "reason": "The gunwale cap is fastened over the backing inwale."
+        },
+        {
+          "a": "inwale_1",
+          "b": "strake_port_06",
+          "reason": "The inwale backs the upper planking."
+        },
+        {
+          "a": "inwale_1",
+          "b": "thole_1_1_0",
+          "reason": "The thole socket is supported by the inwale."
+        },
+        {
+          "a": "gunwale_1",
+          "b": "strake_port_06",
+          "reason": "The sheerstrake is housed in the gunwale."
+        },
+        {
+          "a": "gunwale_1",
+          "b": "thole_1_1_0",
+          "reason": "Thole pins are fixed into the gunwale."
+        },
+        {
+          "a": "gunwale_1",
+          "b": "thole_1_1_1",
+          "reason": "Thole pins are fixed into the gunwale."
+        },
+        {
+          "a": "gunwale_1",
+          "b": "thole_1_0_0",
+          "reason": "Thole pins are fixed into the gunwale."
+        },
+        {
+          "a": "gunwale_1",
+          "b": "thole_1_0_1",
+          "reason": "Thole pins are fixed into the gunwale."
+        },
+        {
+          "a": "strake_port_01",
+          "b": "strake_port_02",
+          "reason": "Adjacent closed clinker strakes intentionally overlap by 12 mm."
+        },
+        {
+          "a": "strake_port_01",
+          "b": "bent_frame_p_06",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_01",
+          "b": "bent_frame_p_05",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_01",
+          "b": "bent_frame_p_00",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_01",
+          "b": "bent_frame_p_01",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_01",
+          "b": "bent_frame_p_04",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_01",
+          "b": "bent_frame_p_02",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_01",
+          "b": "bent_frame_p_03",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_02",
+          "b": "strake_port_03",
+          "reason": "Adjacent closed clinker strakes intentionally overlap by 12 mm."
+        },
+        {
+          "a": "strake_port_02",
+          "b": "bent_frame_p_06",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_02",
+          "b": "bent_frame_p_05",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_02",
+          "b": "bent_frame_p_00",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_02",
+          "b": "bent_frame_p_01",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_02",
+          "b": "bent_frame_p_04",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_02",
+          "b": "bent_frame_p_02",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_02",
+          "b": "bent_frame_p_03",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_03",
+          "b": "strake_port_04",
+          "reason": "Adjacent closed clinker strakes intentionally overlap by 12 mm."
+        },
+        {
+          "a": "strake_port_03",
+          "b": "bent_frame_p_06",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_03",
+          "b": "bent_frame_p_05",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_03",
+          "b": "bent_frame_p_00",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_03",
+          "b": "bent_frame_p_01",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_03",
+          "b": "bent_frame_p_04",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_03",
+          "b": "bent_frame_p_02",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_03",
+          "b": "bent_frame_p_03",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_04",
+          "b": "strake_port_05",
+          "reason": "Adjacent closed clinker strakes intentionally overlap by 12 mm."
+        },
+        {
+          "a": "strake_port_04",
+          "b": "bent_frame_p_06",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_04",
+          "b": "bent_frame_p_05",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_04",
+          "b": "bent_frame_p_00",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_04",
+          "b": "bent_frame_p_01",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_04",
+          "b": "bent_frame_p_04",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_04",
+          "b": "bent_frame_p_02",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_04",
+          "b": "bent_frame_p_03",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_05",
+          "b": "strake_port_06",
+          "reason": "Adjacent closed clinker strakes intentionally overlap by 12 mm."
+        },
+        {
+          "a": "strake_port_05",
+          "b": "bent_frame_p_06",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_05",
+          "b": "bent_frame_p_05",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_05",
+          "b": "bent_frame_p_00",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_05",
+          "b": "bent_frame_p_01",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_05",
+          "b": "bent_frame_p_04",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_05",
+          "b": "bent_frame_p_02",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_05",
+          "b": "bent_frame_p_03",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_05",
+          "b": "thwart_riser_1_1",
+          "reason": "Thwart riser rails are housed against the inner planking."
+        },
+        {
+          "a": "strake_port_06",
+          "b": "bent_frame_p_06",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_06",
+          "b": "bent_frame_p_05",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_06",
+          "b": "bent_frame_p_00",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_06",
+          "b": "bent_frame_p_01",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_06",
+          "b": "bent_frame_p_04",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_06",
+          "b": "bent_frame_p_02",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_06",
+          "b": "bent_frame_p_03",
+          "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+        },
+        {
+          "a": "strake_port_06",
+          "b": "thwart_riser_1_1",
+          "reason": "Thwart riser rails are housed against the inner planking."
+        },
+        {
+          "a": "strake_port_06",
+          "b": "thwart_riser_0_1",
+          "reason": "Thwart riser rails are housed against the inner planking."
+        },
+        {
+          "a": "strake_port_06",
+          "b": "thole_1_1_0",
+          "reason": "Thole pins pass through the gunwale into the backing sheerstrake."
+        },
+        {
+          "a": "strake_port_06",
+          "b": "thole_1_1_1",
+          "reason": "Thole pins pass through the gunwale into the backing sheerstrake."
+        },
+        {
+          "a": "strake_port_06",
+          "b": "thole_1_0_0",
+          "reason": "Thole pins pass through the gunwale into the backing sheerstrake."
+        },
+        {
+          "a": "strake_port_06",
+          "b": "thole_1_0_1",
+          "reason": "Thole pins pass through the gunwale into the backing sheerstrake."
+        },
+        {
+          "a": "bent_frame_p_06",
+          "b": "thwart_riser_1_1",
+          "reason": "Thwart risers land on supporting frames."
+        },
+        {
+          "a": "stowed_oar_blade_1",
+          "b": "stowed_oar_shaft_1",
+          "reason": "The oar loom is housed in its blade; each whole oar is lashed above the gunwale."
+        }
+      ],
+      "unintended_penetrations": [],
+      "threshold_m": 0.005,
+      "numeric_tolerance_m": 1e-05,
+      "connected_solid_parts": 59,
+      "method": "connected closed islands (including within one mesh), vertices inside counterpart, three-ray majority and nearest-surface depth"
+    },
+    "lods": {
+      "passed": true,
+      "lod0_triangles": 11456,
+      "levels": [
+        {
+          "level": 1,
           "passed": true,
-          "failures": [],
-          "failure_count": 0
+          "errors": [],
+          "bytes": 965760,
+          "triangles": 5856,
+          "nodes": 63,
+          "meshes": 63,
+          "materials": 4,
+          "images": [
+            {
+              "index": 0,
+              "name": "wood_normal",
+              "width": 1024,
+              "height": 1024,
+              "bytes": 25914,
+              "sha256": "1d8eec91b391c2f18542bdc85630177ff5dc21c907bf1bc18ce94b8743708ce7",
+              "power_of_two": true
+            },
+            {
+              "index": 1,
+              "name": "wood_color",
+              "width": 1024,
+              "height": 1024,
+              "bytes": 46542,
+              "sha256": "9ca2e2af2556d9b13333905b90e6ffcf236c2bd3cf6a3c02ceb310a0811498cb",
+              "power_of_two": true
+            },
+            {
+              "index": 2,
+              "name": "wood_orm",
+              "width": 1024,
+              "height": 1024,
+              "bytes": 110857,
+              "sha256": "6f9d8dbd1086fc0504a46e19a8b8c2a2ec3cc01720ff1827530b0fc1f0e489d5",
+              "power_of_two": true
+            },
+            {
+              "index": 3,
+              "name": "rope_normal",
+              "width": 1024,
+              "height": 512,
+              "bytes": 20487,
+              "sha256": "9daa03ea6cc3b3e84d8c5c135908eceb05977f489b745cda1088f70a9e93b75e",
+              "power_of_two": true
+            },
+            {
+              "index": 4,
+              "name": "rope_color",
+              "width": 1024,
+              "height": 512,
+              "bytes": 47890,
+              "sha256": "6008f1bf5992b68f2d2eb9f11678ee0cff4cc7e1bb8f815728356af8c0880e6b",
+              "power_of_two": true
+            },
+            {
+              "index": 5,
+              "name": "rope_orm",
+              "width": 1024,
+              "height": 512,
+              "bytes": 84062,
+              "sha256": "a5839af8db1dadfdd0f0409f7d0ed02ca2ee9fca9668c4403e21908175b1523c",
+              "power_of_two": true
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "passed": true,
+          "errors": [],
+          "bytes": 331408,
+          "triangles": 1114,
+          "nodes": 63,
+          "meshes": 63,
+          "materials": 4,
+          "images": [
+            {
+              "index": 0,
+              "name": "wood_normal",
+              "width": 512,
+              "height": 512,
+              "bytes": 4992,
+              "sha256": "517ea5dde98a961aa2b9b60471d05ed6be3a6b7f6a8580ca3c1a37c525402ab1",
+              "power_of_two": true
+            },
+            {
+              "index": 1,
+              "name": "wood_color",
+              "width": 512,
+              "height": 512,
+              "bytes": 7721,
+              "sha256": "f3e4cb2b8d6417e591aa29c039949011a32b07c575efc4766e4a61fdf54a5d30",
+              "power_of_two": true
+            },
+            {
+              "index": 2,
+              "name": "wood_orm",
+              "width": 512,
+              "height": 512,
+              "bytes": 50406,
+              "sha256": "8424973905f1c7566b206f1f91e13403c224fd52ad4e14d0228f86a35c445991",
+              "power_of_two": true
+            },
+            {
+              "index": 3,
+              "name": "rope_normal",
+              "width": 512,
+              "height": 256,
+              "bytes": 2727,
+              "sha256": "6822a4a645f42d801a76f7af0ecc9d29bab2de9917d3066fa30c91fd6f7f3ee2",
+              "power_of_two": true
+            },
+            {
+              "index": 4,
+              "name": "rope_color",
+              "width": 512,
+              "height": 256,
+              "bytes": 10713,
+              "sha256": "2ebcadf5ff8dae292bb7e2946cacb2b8321aef76aafac7a35f75255d56ac8da1",
+              "power_of_two": true
+            },
+            {
+              "index": 5,
+              "name": "rope_orm",
+              "width": 512,
+              "height": 256,
+              "bytes": 36401,
+              "sha256": "8f5895f6d8f485df03be015f705067c0d1825eb50f459e47f8c13381307f2272",
+              "power_of_two": true
+            }
+          ]
         }
       ]
     },
-    "model/collision.glb": {
-      "triangles": 2976,
-      "routes": [
-        {
-          "route": "cockpit",
-          "samples": 12,
-          "passed": true,
-          "failures": [],
-          "failure_count": 0
-        }
+    "provenance": {
+      "passed": true,
+      "source_evidence": {
+        "repo": "grzegorz2047/OldShipSchematicsAndModel",
+        "commit": "2e6f7e922e95396722376d42f3e2e0a12256029e",
+        "source": "blender/wyposazenie.py:lodz_mesh",
+        "sha256": "6c0fc58bb6b35197ac50cdf07202b9d8d39d14a9aa3d3a9e13c0d725491d79bc",
+        "chapters": [
+          "03 hull construction",
+          "08 ropes and sails",
+          "09 deck machinery and fittings",
+          "13 quality checklist",
+          "14 game integration"
+        ]
+      },
+      "rule_evidence": {
+        "clinker_plank_m": 0.018,
+        "clinker_lap_m": 0.012,
+        "freeboard_above_sole_m": 0.22,
+        "frame_spacing_m": 0.4,
+        "wood_texture_tile_m": 2,
+        "wood_texture_pixels": 2048,
+        "grain_uv": "physical isometric triangles; axial UV on rods",
+        "mewka_sail_foot_above_sole_m": null
+      }
+    },
+    "source_parity": {
+      "passed": true,
+      "source_triangles": 11456,
+      "export_triangles": 11456,
+      "triangle_relative_difference": 0.0,
+      "max_bound_error_m": 0.0,
+      "missing_source_mesh_nodes": [],
+      "unexpected_export_mesh_nodes": [],
+      "unpacked_used_images": [],
+      "method": "evaluated source visual meshes versus actual GLB mesh names, triangle count and world bounds"
+    },
+    "render_parity": {
+      "present": true,
+      "passed": true,
+      "fingerprints_match": true,
+      "review": {
+        "schema": 1,
+        "source_triangles": 11456,
+        "export_triangles": 11456,
+        "triangle_match": true,
+        "views": {
+          "hero": {
+            "foreground_pixels": 79173,
+            "source_mean_rgb": [
+              0.5402182936668396,
+              0.40616855025291443,
+              0.28527727723121643
+            ],
+            "export_mean_rgb": [
+              0.5403536558151245,
+              0.4062374234199524,
+              0.2853010594844818
+            ],
+            "brightness_fraction": 0.00018724072592914641,
+            "maximum_channel_share_difference": 2.8699636459350586e-05,
+            "passed": true
+          },
+          "stern": {
+            "foreground_pixels": 143517,
+            "source_mean_rgb": [
+              0.5400345921516418,
+              0.39528340101242065,
+              0.26456379890441895
+            ],
+            "export_mean_rgb": [
+              0.5403252840042114,
+              0.39541783928871155,
+              0.26458168029785156
+            ],
+            "brightness_fraction": 0.0003822249341314204,
+            "maximum_channel_share_difference": 7.608532905578613e-05,
+            "passed": true
+          },
+          "deck": {
+            "foreground_pixels": 63713,
+            "source_mean_rgb": [
+              0.654609203338623,
+              0.5128658413887024,
+              0.38630425930023193
+            ],
+            "export_mean_rgb": [
+              0.6546968221664429,
+              0.5129121541976929,
+              0.38632646203041077
+            ],
+            "brightness_fraction": 9.993902461104255e-05,
+            "maximum_channel_share_difference": 1.4036893844604492e-05,
+            "passed": true
+          },
+          "helm": {
+            "foreground_pixels": 64599,
+            "source_mean_rgb": [
+              0.6760483384132385,
+              0.5322043299674988,
+              0.4046490788459778
+            ],
+            "export_mean_rgb": [
+              0.6761693358421326,
+              0.5322746634483337,
+              0.40468117594718933
+            ],
+            "brightness_fraction": 0.0001415234018123402,
+            "maximum_channel_share_difference": 1.6927719116210938e-05,
+            "passed": true
+          }
+        },
+        "cameras": {
+          "hero": {
+            "target": [
+              0.0,
+              0.0,
+              0.04057908058166504
+            ],
+            "position": [
+              3.918882131576538,
+              5.622744083404541,
+              2.494140148162842
+            ],
+            "ortho": true,
+            "scale": 3.380988413095474,
+            "hide_rig": false
+          },
+          "stern": {
+            "target": [
+              0.0,
+              0.0,
+              0.04057908058166504
+            ],
+            "position": [
+              0.5946957468986511,
+              7.136348724365234,
+              1.3489097356796265
+            ],
+            "ortho": true,
+            "scale": 1.9072123505175111,
+            "hide_rig": false
+          },
+          "deck": {
+            "target": [
+              0.0,
+              0.0,
+              0.07999999821186066
+            ],
+            "position": [
+              2.213836908340454,
+              3.3207552433013916,
+              6.168051242828369
+            ],
+            "ortho": true,
+            "scale": 4.580331839621067,
+            "hide_rig": true
+          },
+          "helm": {
+            "target": [
+              0.0,
+              0.0,
+              0.2800000011920929
+            ],
+            "position": [
+              1.2000000476837158,
+              2.4000000953674316,
+              1.9300000667572021
+            ],
+            "ortho": false,
+            "lens": 24.0,
+            "hide_rig": false
+          }
+        },
+        "thresholds": {
+          "brightness_fraction": 0.1,
+          "channel_share_difference": 0.04
+        },
+        "scope": "Actual exported GLB vs packed source under identical camera/light. Deck view hides tagged rig in both.",
+        "presentation": "review lighting only; interior views include a camera-area fill",
+        "sha256": {
+          "model/ship.blend": "eb2982d5221f7409e74478a6f996e2cfe5ceafdd951d8860b35d5e2b3cb0d30a",
+          "model/ship.glb": "e5d1b88610cddc60fbec03a34b6f0d8ab2abd03c8d9ab61b5239e0efa669a705"
+        },
+        "passed": true
+      }
+    },
+    "bounds": {
+      "min_blender_m": [
+        -0.6521849632263184,
+        -1.656999945640564,
+        -0.3349999785423279
+      ],
+      "max_blender_m": [
+        0.6521849632263184,
+        1.656999945640564,
+        0.41615813970565796
       ]
+    },
+    "dimensions": {
+      "passed": true,
+      "hull_length_m": 3.313999891281128,
+      "hull_breadth_m": 1.2383701801300049,
+      "nominal_length_m": 3.25,
+      "nominal_breadth_m": 1.2384,
+      "length_acceptance_ratio": [
+        0.8,
+        1.2
+      ],
+      "breadth_acceptance_ratio": [
+        0.8,
+        1.2
+      ],
+      "note": "Scale sanity bounds include real stem/transom structure; wreck retains only part of nominal length, heel removed for measurement"
     }
   },
+  "matrix": [
+    {
+      "id": "A1",
+      "chapter": "A",
+      "title": "Metres and meaningful measured dimensions",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "world_bounds": {
+          "min_blender_m": [
+            -0.6521849632263184,
+            -1.656999945640564,
+            -0.3349999785423279
+          ],
+          "max_blender_m": [
+            0.6521849632263184,
+            1.656999945640564,
+            0.41615813970565796
+          ]
+        },
+        "hull_measurement": {
+          "passed": true,
+          "hull_length_m": 3.313999891281128,
+          "hull_breadth_m": 1.2383701801300049,
+          "nominal_length_m": 3.25,
+          "nominal_breadth_m": 1.2384,
+          "length_acceptance_ratio": [
+            0.8,
+            1.2
+          ],
+          "breadth_acceptance_ratio": [
+            0.8,
+            1.2
+          ],
+          "note": "Scale sanity bounds include real stem/transom structure; wreck retains only part of nominal length, heel removed for measurement"
+        }
+      }
+    },
+    {
+      "id": "A2",
+      "chapter": "A",
+      "title": "Y up, bow +Z, port +X",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "navigation_axis_declaration": "glTF X port, Y up, Z bow"
+      }
+    },
+    {
+      "id": "A3",
+      "chapter": "A",
+      "title": "Meaningful root and waterline",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "origin_node_present": true,
+        "design_origin": {
+          "position_gltf_m": [
+            0,
+            0,
+            0
+          ],
+          "meaning": "design waterline at hull mid-length"
+        }
+      }
+    },
+    {
+      "id": "A4",
+      "chapter": "A",
+      "title": "Applied static transforms",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "unapplied_static_mesh_transforms": []
+      }
+    },
+    {
+      "id": "B1",
+      "chapter": "B",
+      "title": "Stable lowercase node names",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "invalid_names": []
+      }
+    },
+    {
+      "id": "B2",
+      "chapter": "B",
+      "title": "Consistent English names",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "B3",
+      "chapter": "B",
+      "title": "Side and index in paired part names",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "B4",
+      "chapter": "B",
+      "title": "Consistent material names",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "copy_suffix_material_names": []
+      }
+    },
+    {
+      "id": "C1",
+      "chapter": "C",
+      "title": "Moving parts separate nodes",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "No moving-part contract is declared for this static asset release."
+    },
+    {
+      "id": "C2",
+      "chapter": "C",
+      "title": "Correct physical pivots/axes",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "No moving-part contract is declared for this static asset release."
+    },
+    {
+      "id": "C3",
+      "chapter": "C",
+      "title": "Axis/range metadata",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "No moving-part contract is declared for this static asset release."
+    },
+    {
+      "id": "C4",
+      "chapter": "C",
+      "title": "Children follow moving parent",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "No moving-part contract is declared for this static asset release."
+    },
+    {
+      "id": "D1",
+      "chapter": "D",
+      "title": "Closed solids",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "failures": []
+      }
+    },
+    {
+      "id": "D2",
+      "chapter": "D",
+      "title": "No degenerate/duplicate/loose geometry",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "failures": []
+      }
+    },
+    {
+      "id": "D3",
+      "chapter": "D",
+      "title": "Outward normals",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "reversed_objects": []
+      }
+    },
+    {
+      "id": "D4",
+      "chapter": "D",
+      "title": "No coplanar z-fighting",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "D5",
+      "chapter": "D",
+      "title": "Needle triangle shading",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "D6",
+      "chapter": "D",
+      "title": "Appropriate mesh density",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "D7",
+      "chapter": "D",
+      "title": "Fair hull lines",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "D8",
+      "chapter": "D",
+      "title": "Untwisted tube surfaces",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "E1",
+      "chapter": "E",
+      "title": "No unintended deep penetration",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "passed": true,
+        "overlapping_solid_pairs": 186,
+        "surface_contact_pairs": 6,
+        "intended_joints": [
+          {
+            "a": "gunwale_1_001",
+            "b": "strake_starboard_06",
+            "reason": "The sheerstrake is housed in the gunwale."
+          },
+          {
+            "a": "gunwale_1_001",
+            "b": "thole_1_0_0_001",
+            "reason": "Thole pins are fixed into the gunwale."
+          },
+          {
+            "a": "gunwale_1_001",
+            "b": "thole_1_0_1_001",
+            "reason": "Thole pins are fixed into the gunwale."
+          },
+          {
+            "a": "gunwale_1_001",
+            "b": "inwale_1_001",
+            "reason": "The gunwale cap is fastened over the backing inwale."
+          },
+          {
+            "a": "gunwale_1_001",
+            "b": "thole_1_1_0_001",
+            "reason": "Thole pins are fixed into the gunwale."
+          },
+          {
+            "a": "gunwale_1_001",
+            "b": "thole_1_1_1_001",
+            "reason": "Thole pins are fixed into the gunwale."
+          },
+          {
+            "a": "gunwale_1_001",
+            "b": "transom",
+            "reason": "Gunwale caps are housed over the transom corners."
+          },
+          {
+            "a": "gunwale_1_001",
+            "b": "stem",
+            "reason": "Gunwale ends meet in the stem-head joint."
+          },
+          {
+            "a": "gunwale_1_001",
+            "b": "inwale_1",
+            "reason": "The gunwale cap is fastened over the backing inwale."
+          },
+          {
+            "a": "gunwale_1_001",
+            "b": "gunwale_1",
+            "reason": "The port and starboard rail ends meet inside the stem-head joint."
+          },
+          {
+            "a": "strake_starboard_06",
+            "b": "thole_1_0_0_001",
+            "reason": "Thole pins pass through the gunwale into the backing sheerstrake."
+          },
+          {
+            "a": "strake_starboard_06",
+            "b": "thole_1_0_1_001",
+            "reason": "Thole pins pass through the gunwale into the backing sheerstrake."
+          },
+          {
+            "a": "strake_starboard_06",
+            "b": "strake_starboard_05",
+            "reason": "Adjacent closed clinker strakes intentionally overlap by 12 mm."
+          },
+          {
+            "a": "strake_starboard_06",
+            "b": "bent_frame_s_03",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_06",
+            "b": "inwale_1_001",
+            "reason": "The inwale backs the upper planking."
+          },
+          {
+            "a": "strake_starboard_06",
+            "b": "bent_frame_s_02",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_06",
+            "b": "thole_1_1_0_001",
+            "reason": "Thole pins pass through the gunwale into the backing sheerstrake."
+          },
+          {
+            "a": "strake_starboard_06",
+            "b": "thole_1_1_1_001",
+            "reason": "Thole pins pass through the gunwale into the backing sheerstrake."
+          },
+          {
+            "a": "strake_starboard_06",
+            "b": "bent_frame_s_04",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_06",
+            "b": "bent_frame_s_01",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_06",
+            "b": "thwart_riser_0_1_001",
+            "reason": "Thwart riser rails are housed against the inner planking."
+          },
+          {
+            "a": "strake_starboard_06",
+            "b": "bent_frame_s_00",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_06",
+            "b": "transom",
+            "reason": "Strake ends are fixed to the transom edge."
+          },
+          {
+            "a": "strake_starboard_06",
+            "b": "bent_frame_s_05",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_06",
+            "b": "thwart_riser_1_1_001",
+            "reason": "Thwart riser rails are housed against the inner planking."
+          },
+          {
+            "a": "strake_starboard_06",
+            "b": "bent_frame_s_06",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_06",
+            "b": "stem",
+            "reason": "Strake ends are housed in the stem rabbet."
+          },
+          {
+            "a": "strake_starboard_06",
+            "b": "inwale_1",
+            "reason": "The inwale backs the upper planking."
+          },
+          {
+            "a": "stowed_oar_shaft_1_001",
+            "b": "stowed_oar_blade_1_001",
+            "reason": "The oar loom is housed in its blade; each whole oar is lashed above the gunwale."
+          },
+          {
+            "a": "strake_starboard_05",
+            "b": "bent_frame_s_03",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_05",
+            "b": "bent_frame_s_02",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_05",
+            "b": "bent_frame_s_04",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_05",
+            "b": "bent_frame_s_01",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_05",
+            "b": "strake_starboard_04",
+            "reason": "Adjacent closed clinker strakes intentionally overlap by 12 mm."
+          },
+          {
+            "a": "strake_starboard_05",
+            "b": "bent_frame_s_00",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_05",
+            "b": "transom",
+            "reason": "Strake ends are fixed to the transom edge."
+          },
+          {
+            "a": "strake_starboard_05",
+            "b": "bent_frame_s_05",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_05",
+            "b": "thwart_riser_1_1_001",
+            "reason": "Thwart riser rails are housed against the inner planking."
+          },
+          {
+            "a": "strake_starboard_05",
+            "b": "bent_frame_s_06",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_05",
+            "b": "stem",
+            "reason": "Strake ends are housed in the stem rabbet."
+          },
+          {
+            "a": "bent_frame_s_03",
+            "b": "strake_starboard_04",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "bent_frame_s_03",
+            "b": "strake_starboard_03",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "bent_frame_s_03",
+            "b": "strake_starboard_02",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "bent_frame_s_03",
+            "b": "strake_starboard_01",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "inwale_1_001",
+            "b": "thole_1_1_0_001",
+            "reason": "The thole socket is supported by the inwale."
+          },
+          {
+            "a": "inwale_1_001",
+            "b": "transom",
+            "reason": "Inwale ends land against the transom."
+          },
+          {
+            "a": "inwale_1_001",
+            "b": "stem",
+            "reason": "Inwale ends are housed into the stem head."
+          },
+          {
+            "a": "inwale_1_001",
+            "b": "inwale_1",
+            "reason": "The port and starboard rail ends meet inside the stem-head joint."
+          },
+          {
+            "a": "inwale_1_001",
+            "b": "gunwale_1",
+            "reason": "The gunwale cap is fastened over the backing inwale."
+          },
+          {
+            "a": "inwale_1_001",
+            "b": "strake_port_06",
+            "reason": "The inwale backs the upper planking."
+          },
+          {
+            "a": "bent_frame_s_02",
+            "b": "strake_starboard_04",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "bent_frame_s_02",
+            "b": "strake_starboard_03",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "bent_frame_s_02",
+            "b": "strake_starboard_02",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "bent_frame_s_02",
+            "b": "strake_starboard_01",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "bent_frame_s_04",
+            "b": "strake_starboard_04",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "bent_frame_s_04",
+            "b": "strake_starboard_03",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "bent_frame_s_04",
+            "b": "strake_starboard_02",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "bent_frame_s_04",
+            "b": "strake_starboard_01",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "bent_frame_s_01",
+            "b": "strake_starboard_04",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "bent_frame_s_01",
+            "b": "strake_starboard_03",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "bent_frame_s_01",
+            "b": "strake_starboard_02",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "bent_frame_s_01",
+            "b": "strake_starboard_01",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_04",
+            "b": "bent_frame_s_00",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_04",
+            "b": "transom",
+            "reason": "Strake ends are fixed to the transom edge."
+          },
+          {
+            "a": "strake_starboard_04",
+            "b": "strake_starboard_03",
+            "reason": "Adjacent closed clinker strakes intentionally overlap by 12 mm."
+          },
+          {
+            "a": "strake_starboard_04",
+            "b": "bent_frame_s_05",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_04",
+            "b": "bent_frame_s_06",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_04",
+            "b": "stem",
+            "reason": "Strake ends are housed in the stem rabbet."
+          },
+          {
+            "a": "thwart_riser_0_1_001",
+            "b": "end_thwart_00",
+            "reason": "The ends of each thwart rest on timber riser rails."
+          },
+          {
+            "a": "bent_frame_s_00",
+            "b": "strake_starboard_03",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "bent_frame_s_00",
+            "b": "strake_starboard_02",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "bent_frame_s_00",
+            "b": "strake_starboard_01",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "transom",
+            "b": "strake_starboard_03",
+            "reason": "Strake ends are fixed to the transom edge."
+          },
+          {
+            "a": "transom",
+            "b": "strake_starboard_02",
+            "reason": "Strake ends are fixed to the transom edge."
+          },
+          {
+            "a": "transom",
+            "b": "strake_starboard_01",
+            "reason": "Strake ends are fixed to the transom edge."
+          },
+          {
+            "a": "transom",
+            "b": "keel",
+            "reason": "The transom lands on the after keel."
+          },
+          {
+            "a": "transom",
+            "b": "sternpost",
+            "reason": "The transom is secured to the sternpost."
+          },
+          {
+            "a": "transom",
+            "b": "inwale_1",
+            "reason": "Inwale ends land against the transom."
+          },
+          {
+            "a": "transom",
+            "b": "gunwale_1",
+            "reason": "Gunwale caps are housed over the transom corners."
+          },
+          {
+            "a": "transom",
+            "b": "strake_port_01",
+            "reason": "Strake ends are fixed to the transom edge."
+          },
+          {
+            "a": "transom",
+            "b": "strake_port_02",
+            "reason": "Strake ends are fixed to the transom edge."
+          },
+          {
+            "a": "transom",
+            "b": "strake_port_03",
+            "reason": "Strake ends are fixed to the transom edge."
+          },
+          {
+            "a": "transom",
+            "b": "strake_port_04",
+            "reason": "Strake ends are fixed to the transom edge."
+          },
+          {
+            "a": "transom",
+            "b": "strake_port_05",
+            "reason": "Strake ends are fixed to the transom edge."
+          },
+          {
+            "a": "transom",
+            "b": "strake_port_06",
+            "reason": "Strake ends are fixed to the transom edge."
+          },
+          {
+            "a": "end_thwart_00",
+            "b": "thwart_riser_0_1",
+            "reason": "The ends of each thwart rest on timber riser rails."
+          },
+          {
+            "a": "strake_starboard_03",
+            "b": "bent_frame_s_05",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_03",
+            "b": "strake_starboard_02",
+            "reason": "Adjacent closed clinker strakes intentionally overlap by 12 mm."
+          },
+          {
+            "a": "strake_starboard_03",
+            "b": "bent_frame_s_06",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_03",
+            "b": "stem",
+            "reason": "Strake ends are housed in the stem rabbet."
+          },
+          {
+            "a": "bent_frame_s_05",
+            "b": "strake_starboard_02",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "bent_frame_s_05",
+            "b": "strake_starboard_01",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_02",
+            "b": "bent_frame_s_06",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_starboard_02",
+            "b": "strake_starboard_01",
+            "reason": "Adjacent closed clinker strakes intentionally overlap by 12 mm."
+          },
+          {
+            "a": "strake_starboard_02",
+            "b": "keel",
+            "reason": "Garboard strakes are rebated into the keel."
+          },
+          {
+            "a": "strake_starboard_02",
+            "b": "stem",
+            "reason": "Strake ends are housed in the stem rabbet."
+          },
+          {
+            "a": "thwart_riser_1_1_001",
+            "b": "bent_frame_s_06",
+            "reason": "Thwart risers land on supporting frames."
+          },
+          {
+            "a": "thwart_riser_1_1_001",
+            "b": "end_thwart_01",
+            "reason": "The ends of each thwart rest on timber riser rails."
+          },
+          {
+            "a": "bent_frame_s_06",
+            "b": "strake_starboard_01",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "end_thwart_01",
+            "b": "thwart_riser_1_1",
+            "reason": "The ends of each thwart rest on timber riser rails."
+          },
+          {
+            "a": "strake_starboard_01",
+            "b": "keel",
+            "reason": "Garboard strakes are rebated into the keel."
+          },
+          {
+            "a": "strake_starboard_01",
+            "b": "stem",
+            "reason": "Strake ends are housed in the stem rabbet."
+          },
+          {
+            "a": "strake_starboard_01",
+            "b": "sternpost",
+            "reason": "The after ends meet the sternpost."
+          },
+          {
+            "a": "keel",
+            "b": "stem",
+            "reason": "Keel and stem have a scarfed structural joint."
+          },
+          {
+            "a": "keel",
+            "b": "sternpost",
+            "reason": "Keel and sternpost are scarfed together."
+          },
+          {
+            "a": "keel",
+            "b": "strake_port_01",
+            "reason": "Garboard strakes are rebated into the keel."
+          },
+          {
+            "a": "keel",
+            "b": "strake_port_02",
+            "reason": "Garboard strakes are rebated into the keel."
+          },
+          {
+            "a": "stem",
+            "b": "inwale_1",
+            "reason": "Inwale ends are housed into the stem head."
+          },
+          {
+            "a": "stem",
+            "b": "gunwale_1",
+            "reason": "Gunwale ends meet in the stem-head joint."
+          },
+          {
+            "a": "stem",
+            "b": "strake_port_01",
+            "reason": "Strake ends are housed in the stem rabbet."
+          },
+          {
+            "a": "stem",
+            "b": "strake_port_02",
+            "reason": "Strake ends are housed in the stem rabbet."
+          },
+          {
+            "a": "stem",
+            "b": "strake_port_03",
+            "reason": "Strake ends are housed in the stem rabbet."
+          },
+          {
+            "a": "stem",
+            "b": "strake_port_04",
+            "reason": "Strake ends are housed in the stem rabbet."
+          },
+          {
+            "a": "stem",
+            "b": "strake_port_05",
+            "reason": "Strake ends are housed in the stem rabbet."
+          },
+          {
+            "a": "stem",
+            "b": "strake_port_06",
+            "reason": "Strake ends are housed in the stem rabbet."
+          },
+          {
+            "a": "sternpost",
+            "b": "strake_port_01",
+            "reason": "The after ends meet the sternpost."
+          },
+          {
+            "a": "inwale_1",
+            "b": "gunwale_1",
+            "reason": "The gunwale cap is fastened over the backing inwale."
+          },
+          {
+            "a": "inwale_1",
+            "b": "strake_port_06",
+            "reason": "The inwale backs the upper planking."
+          },
+          {
+            "a": "inwale_1",
+            "b": "thole_1_1_0",
+            "reason": "The thole socket is supported by the inwale."
+          },
+          {
+            "a": "gunwale_1",
+            "b": "strake_port_06",
+            "reason": "The sheerstrake is housed in the gunwale."
+          },
+          {
+            "a": "gunwale_1",
+            "b": "thole_1_1_0",
+            "reason": "Thole pins are fixed into the gunwale."
+          },
+          {
+            "a": "gunwale_1",
+            "b": "thole_1_1_1",
+            "reason": "Thole pins are fixed into the gunwale."
+          },
+          {
+            "a": "gunwale_1",
+            "b": "thole_1_0_0",
+            "reason": "Thole pins are fixed into the gunwale."
+          },
+          {
+            "a": "gunwale_1",
+            "b": "thole_1_0_1",
+            "reason": "Thole pins are fixed into the gunwale."
+          },
+          {
+            "a": "strake_port_01",
+            "b": "strake_port_02",
+            "reason": "Adjacent closed clinker strakes intentionally overlap by 12 mm."
+          },
+          {
+            "a": "strake_port_01",
+            "b": "bent_frame_p_06",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_01",
+            "b": "bent_frame_p_05",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_01",
+            "b": "bent_frame_p_00",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_01",
+            "b": "bent_frame_p_01",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_01",
+            "b": "bent_frame_p_04",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_01",
+            "b": "bent_frame_p_02",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_01",
+            "b": "bent_frame_p_03",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_02",
+            "b": "strake_port_03",
+            "reason": "Adjacent closed clinker strakes intentionally overlap by 12 mm."
+          },
+          {
+            "a": "strake_port_02",
+            "b": "bent_frame_p_06",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_02",
+            "b": "bent_frame_p_05",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_02",
+            "b": "bent_frame_p_00",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_02",
+            "b": "bent_frame_p_01",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_02",
+            "b": "bent_frame_p_04",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_02",
+            "b": "bent_frame_p_02",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_02",
+            "b": "bent_frame_p_03",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_03",
+            "b": "strake_port_04",
+            "reason": "Adjacent closed clinker strakes intentionally overlap by 12 mm."
+          },
+          {
+            "a": "strake_port_03",
+            "b": "bent_frame_p_06",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_03",
+            "b": "bent_frame_p_05",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_03",
+            "b": "bent_frame_p_00",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_03",
+            "b": "bent_frame_p_01",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_03",
+            "b": "bent_frame_p_04",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_03",
+            "b": "bent_frame_p_02",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_03",
+            "b": "bent_frame_p_03",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_04",
+            "b": "strake_port_05",
+            "reason": "Adjacent closed clinker strakes intentionally overlap by 12 mm."
+          },
+          {
+            "a": "strake_port_04",
+            "b": "bent_frame_p_06",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_04",
+            "b": "bent_frame_p_05",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_04",
+            "b": "bent_frame_p_00",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_04",
+            "b": "bent_frame_p_01",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_04",
+            "b": "bent_frame_p_04",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_04",
+            "b": "bent_frame_p_02",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_04",
+            "b": "bent_frame_p_03",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_05",
+            "b": "strake_port_06",
+            "reason": "Adjacent closed clinker strakes intentionally overlap by 12 mm."
+          },
+          {
+            "a": "strake_port_05",
+            "b": "bent_frame_p_06",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_05",
+            "b": "bent_frame_p_05",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_05",
+            "b": "bent_frame_p_00",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_05",
+            "b": "bent_frame_p_01",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_05",
+            "b": "bent_frame_p_04",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_05",
+            "b": "bent_frame_p_02",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_05",
+            "b": "bent_frame_p_03",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_05",
+            "b": "thwart_riser_1_1",
+            "reason": "Thwart riser rails are housed against the inner planking."
+          },
+          {
+            "a": "strake_port_06",
+            "b": "bent_frame_p_06",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_06",
+            "b": "bent_frame_p_05",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_06",
+            "b": "bent_frame_p_00",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_06",
+            "b": "bent_frame_p_01",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_06",
+            "b": "bent_frame_p_04",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_06",
+            "b": "bent_frame_p_02",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_06",
+            "b": "bent_frame_p_03",
+            "reason": "Bent frames sit against the inside of planking, with housed timber joints."
+          },
+          {
+            "a": "strake_port_06",
+            "b": "thwart_riser_1_1",
+            "reason": "Thwart riser rails are housed against the inner planking."
+          },
+          {
+            "a": "strake_port_06",
+            "b": "thwart_riser_0_1",
+            "reason": "Thwart riser rails are housed against the inner planking."
+          },
+          {
+            "a": "strake_port_06",
+            "b": "thole_1_1_0",
+            "reason": "Thole pins pass through the gunwale into the backing sheerstrake."
+          },
+          {
+            "a": "strake_port_06",
+            "b": "thole_1_1_1",
+            "reason": "Thole pins pass through the gunwale into the backing sheerstrake."
+          },
+          {
+            "a": "strake_port_06",
+            "b": "thole_1_0_0",
+            "reason": "Thole pins pass through the gunwale into the backing sheerstrake."
+          },
+          {
+            "a": "strake_port_06",
+            "b": "thole_1_0_1",
+            "reason": "Thole pins pass through the gunwale into the backing sheerstrake."
+          },
+          {
+            "a": "bent_frame_p_06",
+            "b": "thwart_riser_1_1",
+            "reason": "Thwart risers land on supporting frames."
+          },
+          {
+            "a": "stowed_oar_blade_1",
+            "b": "stowed_oar_shaft_1",
+            "reason": "The oar loom is housed in its blade; each whole oar is lashed above the gunwale."
+          }
+        ],
+        "unintended_penetrations": [],
+        "threshold_m": 0.005,
+        "numeric_tolerance_m": 1e-05,
+        "connected_solid_parts": 59,
+        "method": "connected closed islands (including within one mesh), vertices inside counterpart, three-ray majority and nearest-surface depth"
+      }
+    },
+    {
+      "id": "E2",
+      "chapter": "E",
+      "title": "Reasoned intended joints",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "declared_rules": 44,
+        "structured_rules_required": true
+      }
+    },
+    {
+      "id": "E3",
+      "chapter": "E",
+      "title": "Full movement ranges tested",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "E4",
+      "chapter": "E",
+      "title": "Fittings supported by deck",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "E5",
+      "chapter": "E",
+      "title": "Rope endpoints attached",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "E6",
+      "chapter": "E",
+      "title": "Blocks held by fittings/strops",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "F1",
+      "chapter": "F",
+      "title": "Texel density",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "materials": {
+          "v2_wood_ciemne": {
+            "area_m2": 3.6488929589231036,
+            "texel_density_px_m": {
+              "p5": 1023.9992957482517,
+              "median": 1038.490058792029,
+              "p95": 1063.343714489228
+            },
+            "density_p95_p5_ratio": 1.038422310351519,
+            "anisotropy_p95": 1.0951662046136714,
+            "anisotropy_over_1_25_area_share": 0.0,
+            "degenerate_uv_area_m2": 0.0,
+            "wood_grain_measured_area_m2": 3.548896048922569,
+            "wood_grain_aligned_share": 1.0
+          },
+          "v2_wood": {
+            "area_m2": 20.492193962228903,
+            "texel_density_px_m": {
+              "p5": 1023.9989861145873,
+              "median": 1024.0000340226566,
+              "p95": 1024.0013078955042
+            },
+            "density_p95_p5_ratio": 1.0000022673664215,
+            "anisotropy_p95": 1.0000042783947336,
+            "anisotropy_over_1_25_area_share": 0.0,
+            "degenerate_uv_area_m2": 0.0,
+            "wood_grain_measured_area_m2": 19.18411807615659,
+            "wood_grain_aligned_share": 1.0
+          },
+          "v2_wood_czarne": {
+            "area_m2": 1.1309162999062634,
+            "texel_density_px_m": {
+              "p5": 1032.4451652035477,
+              "median": 1037.2761745102678,
+              "p95": 1042.007027289968
+            },
+            "density_p95_p5_ratio": 1.0092613752368487,
+            "anisotropy_p95": 1.0377921073516894,
+            "anisotropy_over_1_25_area_share": 0.0,
+            "degenerate_uv_area_m2": 0.0,
+            "wood_grain_measured_area_m2": 1.1226686071207432,
+            "wood_grain_aligned_share": 1.0
+          },
+          "v2_lina_jasna": {
+            "area_m2": 0.025183370390347275,
+            "texel_density_px_m": {
+              "p5": 16023.639594694694,
+              "median": 16527.405263047593,
+              "p95": 24072.6335126834
+            },
+            "density_p95_p5_ratio": 1.502319954865539,
+            "anisotropy_p95": 4.316124924011803,
+            "anisotropy_over_1_25_area_share": 0.30253442201369535,
+            "degenerate_uv_area_m2": 0.0,
+            "wood_grain_measured_area_m2": 0.0,
+            "wood_grain_aligned_share": null
+          }
+        },
+        "below_density_target": [],
+        "targets": "large median>=850,p5>=800px/m (about1k); fittings p5>=450px/m; canvas/rope/glass measured separately"
+      }
+    },
+    {
+      "id": "F2",
+      "chapter": "F",
+      "title": "Even texel density",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "materials_above_p95_p5_1_44": []
+      }
+    },
+    {
+      "id": "F3",
+      "chapter": "F",
+      "title": "Limited UV anisotropy",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "materials_above_8_percent_area_at_anisotropy1_25": []
+      }
+    },
+    {
+      "id": "F4",
+      "chapter": "F",
+      "title": "Wood grain follows timber",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "wood_grain_failures": [],
+        "method": "elongated wooden meshes, side-face U tangent within25deg of major timber axis"
+      }
+    },
+    {
+      "id": "F5",
+      "chapter": "F",
+      "title": "Rope UV scaled by diameter",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "F6",
+      "chapter": "F",
+      "title": "Power-of-two textures",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "images": [
+          {
+            "index": 0,
+            "name": "wood_normal",
+            "width": 2048,
+            "height": 2048,
+            "bytes": 403169,
+            "sha256": "e818cbf65c8caf36cc80252ef27a2f3a26511538ff7796342ce591c942af2e73",
+            "power_of_two": true
+          },
+          {
+            "index": 1,
+            "name": "wood_color",
+            "width": 2048,
+            "height": 2048,
+            "bytes": 477556,
+            "sha256": "5d5bfe4670209e8c07413a2d338dd5ee11cc701ab76188d3ade7d51c90a859ad",
+            "power_of_two": true
+          },
+          {
+            "index": 2,
+            "name": "wood_orm",
+            "width": 2048,
+            "height": 2048,
+            "bytes": 230435,
+            "sha256": "59240beea62b0333a595e7e42ea6702293e457d53b8d0a29037b46569755bb2a",
+            "power_of_two": true
+          },
+          {
+            "index": 3,
+            "name": "rope_normal",
+            "width": 1024,
+            "height": 512,
+            "bytes": 20487,
+            "sha256": "9daa03ea6cc3b3e84d8c5c135908eceb05977f489b745cda1088f70a9e93b75e",
+            "power_of_two": true
+          },
+          {
+            "index": 4,
+            "name": "rope_color",
+            "width": 1024,
+            "height": 512,
+            "bytes": 47890,
+            "sha256": "6008f1bf5992b68f2d2eb9f11678ee0cff4cc7e1bb8f815728356af8c0880e6b",
+            "power_of_two": true
+          },
+          {
+            "index": 5,
+            "name": "rope_orm",
+            "width": 1024,
+            "height": 512,
+            "bytes": 84062,
+            "sha256": "a5839af8db1dadfdd0f0409f7d0ed02ca2ee9fca9668c4403e21908175b1523c",
+            "power_of_two": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "F7",
+      "chapter": "F",
+      "title": "Correct colour/data map roles",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "material_slot_failures": []
+      }
+    },
+    {
+      "id": "F8",
+      "chapter": "F",
+      "title": "AO on dedicated UV",
+      "status": "NA",
+      "required": false,
+      "scope": "not_applicable",
+      "reason": "No baked AO texture is supplied; material AO is not claimed."
+    },
+    {
+      "id": "G1",
+      "chapter": "G",
+      "title": "Physical base colours",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "G2",
+      "chapter": "G",
+      "title": "Metal/nonmetal materials",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "fractional_plain_metallic_factors": []
+      }
+    },
+    {
+      "id": "G3",
+      "chapter": "G",
+      "title": "Linear colour factors",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "linear_glTF_factors_valid_0_1": true,
+        "note": "sRGB-to-linear provenance remains in design/material recipe, glTF factor values are linear by specification"
+      }
+    },
+    {
+      "id": "G4",
+      "chapter": "G",
+      "title": "Double-sided only where needed",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "unjustified_double_sided_materials": []
+      }
+    },
+    {
+      "id": "G5",
+      "chapter": "G",
+      "title": "No duplicate materials",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "exact_duplicate_materials": 0
+      }
+    },
+    {
+      "id": "H1",
+      "chapter": "H",
+      "title": "File size budget",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "bytes": 2272108,
+        "budget_bytes": 33554432
+      }
+    },
+    {
+      "id": "H2",
+      "chapter": "H",
+      "title": "Triangle budget",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "triangles": 11456,
+        "budget": 280000
+      }
+    },
+    {
+      "id": "H3",
+      "chapter": "H",
+      "title": "Exported file matches source",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "passed": true,
+        "source_triangles": 11456,
+        "export_triangles": 11456,
+        "triangle_relative_difference": 0.0,
+        "max_bound_error_m": 0.0,
+        "missing_source_mesh_nodes": [],
+        "unexpected_export_mesh_nodes": [],
+        "unpacked_used_images": [],
+        "method": "evaluated source visual meshes versus actual GLB mesh names, triangle count and world bounds"
+      }
+    },
+    {
+      "id": "H4",
+      "chapter": "H",
+      "title": "Independent texture roles survive export",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "distinct_image_role_check": [],
+        "embedded_images": 6
+      }
+    },
+    {
+      "id": "H5",
+      "chapter": "H",
+      "title": "Source/export control renders",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "present": true,
+        "passed": true,
+        "fingerprints_match": true,
+        "review": {
+          "schema": 1,
+          "source_triangles": 11456,
+          "export_triangles": 11456,
+          "triangle_match": true,
+          "views": {
+            "hero": {
+              "foreground_pixels": 79173,
+              "source_mean_rgb": [
+                0.5402182936668396,
+                0.40616855025291443,
+                0.28527727723121643
+              ],
+              "export_mean_rgb": [
+                0.5403536558151245,
+                0.4062374234199524,
+                0.2853010594844818
+              ],
+              "brightness_fraction": 0.00018724072592914641,
+              "maximum_channel_share_difference": 2.8699636459350586e-05,
+              "passed": true
+            },
+            "stern": {
+              "foreground_pixels": 143517,
+              "source_mean_rgb": [
+                0.5400345921516418,
+                0.39528340101242065,
+                0.26456379890441895
+              ],
+              "export_mean_rgb": [
+                0.5403252840042114,
+                0.39541783928871155,
+                0.26458168029785156
+              ],
+              "brightness_fraction": 0.0003822249341314204,
+              "maximum_channel_share_difference": 7.608532905578613e-05,
+              "passed": true
+            },
+            "deck": {
+              "foreground_pixels": 63713,
+              "source_mean_rgb": [
+                0.654609203338623,
+                0.5128658413887024,
+                0.38630425930023193
+              ],
+              "export_mean_rgb": [
+                0.6546968221664429,
+                0.5129121541976929,
+                0.38632646203041077
+              ],
+              "brightness_fraction": 9.993902461104255e-05,
+              "maximum_channel_share_difference": 1.4036893844604492e-05,
+              "passed": true
+            },
+            "helm": {
+              "foreground_pixels": 64599,
+              "source_mean_rgb": [
+                0.6760483384132385,
+                0.5322043299674988,
+                0.4046490788459778
+              ],
+              "export_mean_rgb": [
+                0.6761693358421326,
+                0.5322746634483337,
+                0.40468117594718933
+              ],
+              "brightness_fraction": 0.0001415234018123402,
+              "maximum_channel_share_difference": 1.6927719116210938e-05,
+              "passed": true
+            }
+          },
+          "cameras": {
+            "hero": {
+              "target": [
+                0.0,
+                0.0,
+                0.04057908058166504
+              ],
+              "position": [
+                3.918882131576538,
+                5.622744083404541,
+                2.494140148162842
+              ],
+              "ortho": true,
+              "scale": 3.380988413095474,
+              "hide_rig": false
+            },
+            "stern": {
+              "target": [
+                0.0,
+                0.0,
+                0.04057908058166504
+              ],
+              "position": [
+                0.5946957468986511,
+                7.136348724365234,
+                1.3489097356796265
+              ],
+              "ortho": true,
+              "scale": 1.9072123505175111,
+              "hide_rig": false
+            },
+            "deck": {
+              "target": [
+                0.0,
+                0.0,
+                0.07999999821186066
+              ],
+              "position": [
+                2.213836908340454,
+                3.3207552433013916,
+                6.168051242828369
+              ],
+              "ortho": true,
+              "scale": 4.580331839621067,
+              "hide_rig": true
+            },
+            "helm": {
+              "target": [
+                0.0,
+                0.0,
+                0.2800000011920929
+              ],
+              "position": [
+                1.2000000476837158,
+                2.4000000953674316,
+                1.9300000667572021
+              ],
+              "ortho": false,
+              "lens": 24.0,
+              "hide_rig": false
+            }
+          },
+          "thresholds": {
+            "brightness_fraction": 0.1,
+            "channel_share_difference": 0.04
+          },
+          "scope": "Actual exported GLB vs packed source under identical camera/light. Deck view hides tagged rig in both.",
+          "presentation": "review lighting only; interior views include a camera-area fill",
+          "sha256": {
+            "model/ship.blend": "eb2982d5221f7409e74478a6f996e2cfe5ceafdd951d8860b35d5e2b3cb0d30a",
+            "model/ship.glb": "e5d1b88610cddc60fbec03a34b6f0d8ab2abd03c8d9ab61b5239e0efa669a705"
+          },
+          "passed": true
+        }
+      }
+    },
+    {
+      "id": "H6",
+      "chapter": "H",
+      "title": "Tangents strategy",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "primitives_with_tangents": 0,
+        "strategy": "provided tangent attribute or engine-derived glTF tangent basis"
+      }
+    },
+    {
+      "id": "I1",
+      "chapter": "I",
+      "title": "LOD levels",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "passed": true,
+        "lod0_triangles": 11456,
+        "levels": [
+          {
+            "level": 1,
+            "passed": true,
+            "errors": [],
+            "bytes": 965760,
+            "triangles": 5856,
+            "nodes": 63,
+            "meshes": 63,
+            "materials": 4,
+            "images": [
+              {
+                "index": 0,
+                "name": "wood_normal",
+                "width": 1024,
+                "height": 1024,
+                "bytes": 25914,
+                "sha256": "1d8eec91b391c2f18542bdc85630177ff5dc21c907bf1bc18ce94b8743708ce7",
+                "power_of_two": true
+              },
+              {
+                "index": 1,
+                "name": "wood_color",
+                "width": 1024,
+                "height": 1024,
+                "bytes": 46542,
+                "sha256": "9ca2e2af2556d9b13333905b90e6ffcf236c2bd3cf6a3c02ceb310a0811498cb",
+                "power_of_two": true
+              },
+              {
+                "index": 2,
+                "name": "wood_orm",
+                "width": 1024,
+                "height": 1024,
+                "bytes": 110857,
+                "sha256": "6f9d8dbd1086fc0504a46e19a8b8c2a2ec3cc01720ff1827530b0fc1f0e489d5",
+                "power_of_two": true
+              },
+              {
+                "index": 3,
+                "name": "rope_normal",
+                "width": 1024,
+                "height": 512,
+                "bytes": 20487,
+                "sha256": "9daa03ea6cc3b3e84d8c5c135908eceb05977f489b745cda1088f70a9e93b75e",
+                "power_of_two": true
+              },
+              {
+                "index": 4,
+                "name": "rope_color",
+                "width": 1024,
+                "height": 512,
+                "bytes": 47890,
+                "sha256": "6008f1bf5992b68f2d2eb9f11678ee0cff4cc7e1bb8f815728356af8c0880e6b",
+                "power_of_two": true
+              },
+              {
+                "index": 5,
+                "name": "rope_orm",
+                "width": 1024,
+                "height": 512,
+                "bytes": 84062,
+                "sha256": "a5839af8db1dadfdd0f0409f7d0ed02ca2ee9fca9668c4403e21908175b1523c",
+                "power_of_two": true
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "passed": true,
+            "errors": [],
+            "bytes": 331408,
+            "triangles": 1114,
+            "nodes": 63,
+            "meshes": 63,
+            "materials": 4,
+            "images": [
+              {
+                "index": 0,
+                "name": "wood_normal",
+                "width": 512,
+                "height": 512,
+                "bytes": 4992,
+                "sha256": "517ea5dde98a961aa2b9b60471d05ed6be3a6b7f6a8580ca3c1a37c525402ab1",
+                "power_of_two": true
+              },
+              {
+                "index": 1,
+                "name": "wood_color",
+                "width": 512,
+                "height": 512,
+                "bytes": 7721,
+                "sha256": "f3e4cb2b8d6417e591aa29c039949011a32b07c575efc4766e4a61fdf54a5d30",
+                "power_of_two": true
+              },
+              {
+                "index": 2,
+                "name": "wood_orm",
+                "width": 512,
+                "height": 512,
+                "bytes": 50406,
+                "sha256": "8424973905f1c7566b206f1f91e13403c224fd52ad4e14d0228f86a35c445991",
+                "power_of_two": true
+              },
+              {
+                "index": 3,
+                "name": "rope_normal",
+                "width": 512,
+                "height": 256,
+                "bytes": 2727,
+                "sha256": "6822a4a645f42d801a76f7af0ecc9d29bab2de9917d3066fa30c91fd6f7f3ee2",
+                "power_of_two": true
+              },
+              {
+                "index": 4,
+                "name": "rope_color",
+                "width": 512,
+                "height": 256,
+                "bytes": 10713,
+                "sha256": "2ebcadf5ff8dae292bb7e2946cacb2b8321aef76aafac7a35f75255d56ac8da1",
+                "power_of_two": true
+              },
+              {
+                "index": 5,
+                "name": "rope_orm",
+                "width": 512,
+                "height": 256,
+                "bytes": 36401,
+                "sha256": "8f5895f6d8f485df03be015f705067c0d1825eb50f459e47f8c13381307f2272",
+                "power_of_two": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "I2",
+      "chapter": "I",
+      "title": "LOD silhouette continuity",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "I3",
+      "chapter": "I",
+      "title": "Collision coverage and geometry",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "topology": true,
+        "route_checks": {
+          "passed": true,
+          "player": {
+            "radius": 0.38,
+            "height": 1.85,
+            "max_slope_deg": 35
+          },
+          "sample_step_m": 0.1,
+          "geometry_tolerance_m": 0.015,
+          "rounded_foot_lift_m": 0.08,
+          "controller_step_allowance_m": 0.22,
+          "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+          "routes": [
+            {
+              "name": "standing_cockpit",
+              "mode": "walk",
+              "length_m": 1.1500000995138373,
+              "samples": 13,
+              "passed": true,
+              "failure_count": 0,
+              "failures": []
+            }
+          ],
+          "disconnected_routes": []
+        }
+      }
+    },
+    {
+      "id": "I4",
+      "chapter": "I",
+      "title": "Variant colliders tagged",
+      "status": "NA",
+      "required": false,
+      "scope": "not_applicable",
+      "reason": "No alternate physics variant is exported."
+    },
+    {
+      "id": "J1",
+      "chapter": "J",
+      "title": "Required destinations reachable",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "No complete floor-grid flood fill against every declared crew workstation has been run; authored player corridors are a separate required gate."
+    },
+    {
+      "id": "J2",
+      "chapter": "J",
+      "title": "Room at work stations",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "J3",
+      "chapter": "J",
+      "title": "Walking corridors",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "minimum_tested_capsule_diameter_m": 0.8,
+        "scope": "declared walk corridors, strict zero geometric shrink",
+        "files": {
+          "model/ship.glb": {
+            "passed": true,
+            "player": {
+              "radius": 0.4,
+              "height": 1.85,
+              "max_slope_deg": 35
+            },
+            "sample_step_m": 0.1,
+            "geometry_tolerance_m": 0,
+            "rounded_foot_lift_m": 0.08,
+            "controller_step_allowance_m": 0.22,
+            "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+            "routes": [
+              {
+                "name": "standing_cockpit",
+                "mode": "walk",
+                "length_m": 1.1500000995138373,
+                "samples": 13,
+                "passed": true,
+                "failure_count": 0,
+                "failures": []
+              }
+            ],
+            "disconnected_routes": []
+          },
+          "model/collision.glb": {
+            "passed": true,
+            "player": {
+              "radius": 0.4,
+              "height": 1.85,
+              "max_slope_deg": 35
+            },
+            "sample_step_m": 0.1,
+            "geometry_tolerance_m": 0,
+            "rounded_foot_lift_m": 0.08,
+            "controller_step_allowance_m": 0.22,
+            "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+            "routes": [
+              {
+                "name": "standing_cockpit",
+                "mode": "walk",
+                "length_m": 1.1500000995138373,
+                "samples": 13,
+                "passed": true,
+                "failure_count": 0,
+                "failures": []
+              }
+            ],
+            "disconnected_routes": []
+          }
+        }
+      }
+    },
+    {
+      "id": "J4",
+      "chapter": "J",
+      "title": "Head clearance",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "capsule_height_m": 1.85,
+        "files": {
+          "model/ship.glb": {
+            "passed": true,
+            "player": {
+              "radius": 0.38,
+              "height": 1.85,
+              "max_slope_deg": 35
+            },
+            "sample_step_m": 0.1,
+            "geometry_tolerance_m": 0.015,
+            "rounded_foot_lift_m": 0.08,
+            "controller_step_allowance_m": 0.22,
+            "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+            "routes": [
+              {
+                "name": "standing_cockpit",
+                "mode": "walk",
+                "length_m": 1.1500000995138373,
+                "samples": 13,
+                "passed": true,
+                "failure_count": 0,
+                "failures": []
+              }
+            ],
+            "disconnected_routes": []
+          },
+          "model/collision.glb": {
+            "passed": true,
+            "player": {
+              "radius": 0.38,
+              "height": 1.85,
+              "max_slope_deg": 35
+            },
+            "sample_step_m": 0.1,
+            "geometry_tolerance_m": 0.015,
+            "rounded_foot_lift_m": 0.08,
+            "controller_step_allowance_m": 0.22,
+            "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+            "routes": [
+              {
+                "name": "standing_cockpit",
+                "mode": "walk",
+                "length_m": 1.1500000995138373,
+                "samples": 13,
+                "passed": true,
+                "failure_count": 0,
+                "failures": []
+              }
+            ],
+            "disconnected_routes": []
+          }
+        }
+      }
+    },
+    {
+      "id": "J5",
+      "chapter": "J",
+      "title": "Access with guns recoiled",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "J6",
+      "chapter": "J",
+      "title": "Paired rope symmetry",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "provenance",
+      "chapter": "source",
+      "title": "Traceable construction design and rules",
+      "required": true,
+      "status": "PASS",
+      "scope": "measured",
+      "evidence": {
+        "passed": true,
+        "source_evidence": {
+          "repo": "grzegorz2047/OldShipSchematicsAndModel",
+          "commit": "2e6f7e922e95396722376d42f3e2e0a12256029e",
+          "source": "blender/wyposazenie.py:lodz_mesh",
+          "sha256": "6c0fc58bb6b35197ac50cdf07202b9d8d39d14a9aa3d3a9e13c0d725491d79bc",
+          "chapters": [
+            "03 hull construction",
+            "08 ropes and sails",
+            "09 deck machinery and fittings",
+            "13 quality checklist",
+            "14 game integration"
+          ]
+        },
+        "rule_evidence": {
+          "clinker_plank_m": 0.018,
+          "clinker_lap_m": 0.012,
+          "freeboard_above_sole_m": 0.22,
+          "frame_spacing_m": 0.4,
+          "wood_texture_tile_m": 2,
+          "wood_texture_pixels": 2048,
+          "grain_uv": "physical isometric triangles; axial UV on rods",
+          "mewka_sail_foot_above_sole_m": null
+        }
+      }
+    },
+    {
+      "id": "rig_clearance",
+      "chapter": "E",
+      "title": "No undeclared canvas/rope/spar crossings",
+      "required": true,
+      "status": "PASS",
+      "scope": "measured",
+      "evidence": {
+        "passed": true,
+        "sails": 0,
+        "ropes": 4,
+        "spars": 0,
+        "pairs_tested": 0,
+        "scope": "authored static pose; boundary allowance only for explicit, reasoned attachments",
+        "edge_contact_tolerance_m": 0.025,
+        "edge_contacts": [],
+        "intersections": []
+      }
+    },
+    {
+      "id": "player_destinations",
+      "chapter": "J",
+      "title": "Declared player destinations and connected routes",
+      "required": true,
+      "status": "PASS",
+      "scope": "measured",
+      "evidence": {
+        "model/ship.glb": {
+          "passed": true,
+          "player": {
+            "radius": 0.38,
+            "height": 1.85,
+            "max_slope_deg": 35
+          },
+          "sample_step_m": 0.1,
+          "geometry_tolerance_m": 0.015,
+          "rounded_foot_lift_m": 0.08,
+          "controller_step_allowance_m": 0.22,
+          "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+          "routes": [
+            {
+              "name": "standing_cockpit",
+              "mode": "walk",
+              "length_m": 1.1500000995138373,
+              "samples": 13,
+              "passed": true,
+              "failure_count": 0,
+              "failures": []
+            }
+          ],
+          "disconnected_routes": []
+        },
+        "model/collision.glb": {
+          "passed": true,
+          "player": {
+            "radius": 0.38,
+            "height": 1.85,
+            "max_slope_deg": 35
+          },
+          "sample_step_m": 0.1,
+          "geometry_tolerance_m": 0.015,
+          "rounded_foot_lift_m": 0.08,
+          "controller_step_allowance_m": 0.22,
+          "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+          "routes": [
+            {
+              "name": "standing_cockpit",
+              "mode": "walk",
+              "length_m": 1.1500000995138373,
+              "samples": 13,
+              "passed": true,
+              "failure_count": 0,
+              "failures": []
+            }
+          ],
+          "disconnected_routes": []
+        }
+      }
+    }
+  ],
+  "coverage": {
+    "PASS": 34,
+    "FAIL": 0,
+    "NA": 24,
+    "not_tested": 22
+  },
   "sha256": {
-    "model/ship.glb": "52417cf2f489177650696f72366bbfba13c37ab8f6b892757e3af0897c848414",
-    "model/collision.glb": "6522c5eeb3935dc3b5904bb9e061c953fe3f969bd4d83d1a428b0de324c68b1d",
-    "navigation.json": "520d1a970c0517b71330236a80d614d5f432d308e045ecbeeba3eab3cff93d24",
-    "spec.json": "2867ed5a39df3651626ab89cee75fa176d8d272df589c955f4613d93454a177f",
-    "../common/build.py": "bbf3f79e68eef5ab84efab253bf968ef3c94378a480e202ce090863fc8bf9d13",
-    "../common/verify.py": "142a5fcb4bcfec18e225ab66615b2339fa046e8c40f616f151890c2bd60366f1"
+    "design.json": "28f46b45403378ab888f4588c149f638bb61789e3a121fd3ba139eceec62387c",
+    "export-review.json": "55b8ff09776471f015619125688ebb2e7be2236a8cf2a63e961e5173aabaef83",
+    "model/collision.glb": "fac1d90b62f060cbb67d2bac575e002d77f7285b4caf6d37b024a656b7f35427",
+    "model/ship.blend": "eb2982d5221f7409e74478a6f996e2cfe5ceafdd951d8860b35d5e2b3cb0d30a",
+    "model/ship.glb": "e5d1b88610cddc60fbec03a34b6f0d8ab2abd03c8d9ab61b5239e0efa669a705",
+    "model/ship_lod1.glb": "e6576e7812ffe253411b5fe0ef7c3c344b79c6dc02ab6b7a3d870f2d4d69098b",
+    "model/ship_lod2.glb": "6d123db47ff342af3252375b2d09fc3be93bbf272b13970c2a62e85140657c92",
+    "name-map.json": "7d5b1bc4f3dd2a8f2a5d9b56a7f483afb9c741dcc4dd472a33240a1f75c89dc0",
+    "navigation.json": "94fb401177ecc309603d473b16755ca58d524fd754947d1387fbf01681f05cca",
+    "previews/deck.png": "06a64961ae53baa3ae7a441547a0e86348ee738bb7f4c8ad4bc159339197837e",
+    "previews/helm.png": "6db0edadca4506a6a5907e86eaea30b17984593630ddc3bc70ca881607166783",
+    "previews/hero.png": "23e7a865d7e2360e9ec850eefea643772f50b4456fd2e880e1c9a53f07c2fbab",
+    "previews/stern.png": "f9dd525d1154e4e030b8214afec2c10722abf20fa6d2e08d1017a23cc4f3f874",
+    "review/source_deck.png": "1e61c3e641a82106f58bffcb94351d5aad3771b01104bae0331330365633c0b4",
+    "review/source_helm.png": "75d8e0f0fc82758ed8a163cbb57ebaa4f0b13000bb5f895c84255306c5014ef7",
+    "review/source_hero.png": "0a49c58c6157d803f7aa13a073fa546d935d479bf88aea9dfbf8baf8f919bf20",
+    "review/source_stern.png": "1d5643c9415df6bb85381be81142291c0ff20f0b1e0d7c061c5dcf4009036ab0",
+    "route-validation.json": "ac3f0ddfd0c9be755e6633a839d6dc87749335dabe6065bcbeff334601922176",
+    "spec.json": "2867ed5a39df3651626ab89cee75fa176d8d272df589c955f4613d93454a177f"
   },
-  "rig": {
-    "passed": true,
-    "sails": 0,
-    "ropes": 0,
-    "spars": 0,
-    "scope": "authored static pose; bolt ropes are cloth-edge attachments",
-    "intersections": []
-  },
-  "passed": true
+  "source_sha256": {
+    "sailertales/common/rebuild_reference.py": "a4e81ab0a7fd921d10ca731c018b3a4abdac5e7ff061118a5b215164905daa77",
+    "sailertales/common/v2_audit.py": "afb2eaef8f0fccb676686a10775f6f3e3ac07010e07dc217852f013c07493275",
+    "sailertales/common/v2_boats.py": "18cb8784c6fe4c4ba4b8716c81892740dbf5b794242f547b3624296aab2d2a67",
+    "sailertales/common/v2_export.py": "821a4b747718064b5e96e05778f90a2bd0263a62a5a2d49fe3f59c60c85df45f",
+    "sailertales/common/v2_integrity.py": "92691ed69cd1f00737f5c6e4e85b4df89a9e9b19d336a11a8790b38d0db5cfe9",
+    "sailertales/common/v2_materials.py": "d5b6150142c62cbc5b6c507bdf8b5cde754355681d24f41eee4d44ec6e28802e",
+    "sailertales/common/v2_package.py": "f3631cc2929e249c4405bc6a55f126e75172fe87b033feac892235ec3164efd2",
+    "sailertales/common/v2_review.py": "91c3f653e22d8e0d06d6b625d82a1b9bc8c3f683737a264d0bfecb3563184081",
+    "blender/arkusze_kadlub.py": "af1df1fee8cef7c12e72b07b217a8e53ada714b71d908b98996a4e21d5b328c0",
+    "blender/arkusze_konstrukcja.py": "9150db3175aaa5806e6f6ab486bbf48da79af2a7a5e431426f8644b9391ab436",
+    "blender/arkusze_poklad.py": "9568cc4b5cace549c42d31c8f67e912b7e9cf2bb2ef2b1cbc4c71ae429beffa8",
+    "blender/arkusze_takielunek.py": "c02ffe0d1f792c9f69a8a063e996bfd103a1b3b1c0850d81dcd0143733e6a65f",
+    "blender/arkusze_wyposazenie.py": "9e27e8964728a51e476364f97f7f1a79d7ea5380f5625640bf59f271008670b0",
+    "blender/buduj.py": "2edf828549a70cb101bfee47aa593faee42c84bd27d5b68b925c4d6e958f4f35",
+    "blender/chodzenie.py": "304a724e04de510226a1a3244da87059b1f324db5d746d1a2d13f7f7034c181c",
+    "blender/dane_publiczne.py": "4c2c089cc0bea8cbb7fbdd168c012f1611b525d84e8ff6332bb0ffa481b049d1",
+    "blender/dane_schemat.py": "3fa34f7d17801f17666d604c50c3ca514844458005abf93b8d592775c8de66a7",
+    "blender/deski.py": "588f9a33a8648291373160dd80e95f1c660461185180631d3536b4984ed1cefc",
+    "blender/drzewca.py": "c8dad43cfd0eb5205308508e49005980b51ea9adf9cc899e4faa20566be06932",
+    "blender/eksport.py": "09840f164ed4ba78a0852431eb47c8164e075e23a1290aba4d59283793a32c62",
+    "blender/geometria.py": "51025aee36d329b8bf5a95420f393a52b5b2638a34ec384310d7752f317ecb17",
+    "blender/kadlub.py": "2dcf54c92ac6cae31d9c3a90946d4221188953f2b46360f893667b3e1a47e6d1",
+    "blender/konsola.py": "35e31943ee23276afb5cef1eae47f291a8375d6650da51db71e0c4130e71cec2",
+    "blender/kontrola.py": "8c827a3ffdf5cd3882ac6d17d70f79c55ce9571275939c7d6c96086dcd9988cb",
+    "blender/kontrola_glb.py": "f5ce251fc5b19f79d3da6b3f9f85980693e39e5a230962f203d2b9ab5595e811",
+    "blender/kontrola_publiczna.py": "94376331fe30e46a5073c5afedc4bf23105122a6a600d234a8ca5d4e41d150ca",
+    "blender/lod.py": "d9fc7e158fac841d63e8a88ebbe3645cc0ca8187850d28f4218ea48ba7dd7c66",
+    "blender/materialy.py": "e44ef683900a511d9f311d9df7012d052d9781630211289b7989e59ccfeb9c8a",
+    "blender/model_rysunkowy.py": "b6de296a604f97d808e840170f2887d37bdf0c9fde87066adf0ec84aa7c831e1",
+    "blender/narzedzia.py": "97ab6930d11cd27cbfcf0d1336da347a646171ec7d8751be363f4b55eb429659",
+    "blender/narzedzia_math.py": "5fd2206e0deef90f915919508536ba31e5f4792883df94b4b91d4b6818524ed5",
+    "blender/nazwy_na_angielskie.py": "6b6622139bb7795a8e7fd70bd9a3280fb9adf37fed74432475169b00a0bd3f00",
+    "blender/nazwy_publiczne.py": "eabc171d6bc442627d364e277a86262563192d2fbe32efff8e5b4926f8fea6be",
+    "blender/olinowanie.py": "ac0f51a9331fcf8dc7df63373ae1e6f82acc6dc4e9d2f0ff5e762e3619f39fd4",
+    "blender/parametry.py": "8c4570feb43cff020bec380863980b76b68b42d0655cce8b665010726cb8e2de",
+    "blender/plan_pokladu.py": "48377e9ae1c89ba6dae508a4ac32bc385776e07bec1f2ed2f3f5ff2f61f27ee4",
+    "blender/plansza.py": "de28c763e2db6139a02b2c7cd6b69d7e8782578b57d37ae0b5e4272620401a93",
+    "blender/poklad.py": "d1f9aee73483a066e52ed315c2c3cf5598869d4888d3ffd8a4d1a489bae909d9",
+    "blender/praktyki.py": "8809978b31beea03c41fa129eee5368d9032beb4144f020a69a60bc243b0b10e",
+    "blender/projekt_rzednych.py": "99137d5180a09f17297b16d85659d24e005b968317a68bf8aba3869c8961b0c8",
+    "blender/przenikanie.py": "04d9a355a70038e307ae685730709a70eee452f698f143a260cac6833d4d348b",
+    "blender/rendery.py": "e678a6b640b37648bee51528f4240add899cba2b916f9e8fa3059577ae9b70ef",
+    "blender/ruchome.py": "a7e202b3a41a930013244e8de3334ad47007cd89ee57b7085d2af799e9f6623f",
+    "blender/rufa_dziob.py": "657d74dc7e95e9c3b24a6f61e629052b9dd92ab2eea88da273d66f7618b2bc1a",
+    "blender/rysunki.py": "f7186a4519182f82dd8a3b293bbd3d8e5dc98c6ac4918f095cca460c0d025bf7",
+    "blender/rysunki_svg.py": "b46f44b728ae77f0de50ebb527df71fd7a11794f8c080cad3f7c3e7ad1df0d78",
+    "blender/rzedne.py": "5dcc82113caa73e296cdbf6f1b1fa9c241392e04a0d8db856a159f5be5b57200",
+    "blender/slownik_rysunkow.py": "529682e851d4e5c2b4cbe1a6a98e6860d4dec21e96288a87c756693df14550e8",
+    "blender/sterowanie.py": "163db2ca7e9f49e39221f9ba8eb0a224e2e7ce70a7c9e8dd3fb0409213688633",
+    "blender/tekstury.py": "eae7dceba47a336393552e59952a05ab3ba38069d97b39f70226fd37a8ba2430",
+    "blender/tekstury_cc0.py": "4bebbcf04abcb08f4da181cf42f75234a509e403b69197f100b6ceb973bdf336",
+    "blender/tekstury_deski.py": "25d3302535d6e3877e3c2e6add61a34659ad46ab56b045194423e88a8a1f7b2d",
+    "blender/wyposazenie.py": "6c0fc58bb6b35197ac50cdf07202b9d8d39d14a9aa3d3a9e13c0d725491d79bc",
+    "blender/zagle.py": "e37f5498bd2645d97fc6dae31de19873b90a9bef767c4c8039fca32e9e088237"
+  }
 }
