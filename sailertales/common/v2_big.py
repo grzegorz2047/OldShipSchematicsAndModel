@@ -353,7 +353,7 @@ def connect_deck_routes(ctx,spec):
     from v2_audit import TriangleScene,capsule_triangle_d2
     records=scene_records([o for o in bpy.context.scene.objects if o.get('asset_role')!='collision'
                            and o.get('asset_role')!='presentation' and not o.hide_render])
-    world=TriangleScene(records);kd=ctx['kd'];radius=.39;height=1.85;cos_slope=math.cos(math.radians(35))
+    world=TriangleScene(records);kd=ctx['kd'];radius=.42;height=1.85;cos_slope=math.cos(math.radians(35))
     occupancy={};points={};step=.18
     def point(key):
         if key not in points:
@@ -603,6 +603,7 @@ def save_scene(ctx,spec,out):
                  'cloth_audit':'Closed furled cloth rolls are fittings included in E1 solid penetration and reasoned construction joint tests; there are no deployed sail membranes.'}),
             'lanterns':ctx.get('_v2_night_lanterns',[]),
             'capstan':ctx.get('_v2_capstan_state'),
+            'geometry_budget':ctx.get('_v2_geometry_budget'),
             'source_ground_stations':ground_stations,
             'aloft_station_scope':'Source mast-top/yardarm workstations require a climbing controller and are outside ground walking scope.',
             'rules':{'mast_main':'(length+breadth)/2','mast_fore':'8/9 main',
@@ -641,6 +642,15 @@ def save_scene(ctx,spec,out):
                 declared.add(pair)
                 design['intended_joints'].append({'a':name_a,'b':name_b,'reason':reason,
                     'source':'blender/przenikanie.py:POLACZENIA'})
+    # Keep source joint matching above in the guide's original names, then give
+    # furled cloth explicit names understood by the shared rig/deck preview.
+    cloth_names={}
+    for o in bpy.context.scene.objects:
+        if o.type=='MESH' and o.get('cloth_state')=='furled' and not o.name.startswith('furled_sail_'):
+            old=o.name;o.name='furled_sail_'+old;cloth_names[old]=o.name
+    if cloth_names:
+        from v2_export import remap
+        design=remap(design,cloth_names)
     (out/'design.json').write_text(json.dumps(design,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
     return nav,design
 
@@ -663,6 +673,10 @@ def main():
     augment_interiors(ctx,spec)
     stow_capstan(ctx)
     if spec['id']=='night-hull':night_lanterns(ctx,spec)
+    if spec['id']=='brig':
+        from v2_big_budget import simplify
+        ctx['_v2_geometry_budget']=simplify([o for o in bpy.context.scene.objects
+            if o.type=='MESH' and not o.hide_render and o.get('asset_role') not in ('collision','presentation')])
     colliders=physical_colliders(ctx)
     nav,design=save_scene(ctx,spec,out)
     design['route_planning']=connect_deck_routes(ctx,spec)
