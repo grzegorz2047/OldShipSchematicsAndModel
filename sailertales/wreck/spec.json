@@ -1,0 +1,31 @@
+{
+  "id": "wreck",
+  "label": "Wrak kupiecki na rafie",
+  "length": 22,
+  "beam": 6,
+  "draft": 1,
+  "deck": 2.6,
+  "sole": 0.2,
+  "rig": "none",
+  "small": false,
+  "wreck": true,
+  "heel_deg": 28.6478897565,
+  "color": [
+    0.46,
+    0.43,
+    0.37
+  ],
+  "source_paths": [
+    "src/models/wreck.js:WRECK"
+  ],
+  "limitations": [
+    "Zachowane: pierwotna długość 22 m, szerokość 6 m, przechył 0.5 rad. Rufa i część śródokręcia; dziób urwany.",
+    "Pochylona ładownia i nowe zejście są rekonstrukcją. Umieszczenie zaspy/połączenia z terenem pozostaje zadaniem silnika.",
+    "Nie ma dostępnej osobnej kajuty, gdyż wrak jej nie zachował."
+  ],
+  "source_commit": "ea77e560ba4668c9dda55433813addbdb2f50176",
+  "player": {
+    "radius": 0.38,
+    "height": 1.85
+  }
+}
