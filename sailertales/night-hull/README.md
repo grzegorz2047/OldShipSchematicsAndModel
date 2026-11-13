@@ -1,7 +1,7 @@
 # Nocny okręt z prologu
 
 Osobny model jednostki z SailerTales, przebudowany metodą z poradnika
-OldShipSchematicsAndModel. Konstrukcja: Loft kadłuba z tabeli rzędnych, stępka i poszycie z poradnika, proporcje drzewc i pełny takielunek; rzeczywiste wnętrza i przejścia dodane jako rekonstrukcja do gry..
+OldShipSchematicsAndModel. Konstrukcja: Loft kadłuba z tabeli rzędnych, stępka i poszycie z poradnika, proporcje drzewc i pełny takielunek; rzeczywiste wnętrza i przejścia dodane jako rekonstrukcja do gry.
 
 Wymiary profilu: 30 × 7.6 m (profil konstrukcyjny; całkowity obrys z drzewcami jest większy). Pochodzenie liczb, wzory i świadome odstępstwa
 są w [design.json](design.json). Identyfikator `night-hull` pochodzi z gry;
@@ -51,7 +51,6 @@ Ten PR dostarcza statyczny asset i metadane integracji. Kontroler postaci,
 wspinanie, ruch postaci wraz z płynącym statkiem, animowanie mechanizmów,
 maskowanie wody i podłączenie do aktualnej gry wymagają adaptera silnika.
 Należy używać tych samych transformacji modelu, kolizji i punktów tras.
-Przechył wraku jest już zapisany w geometrii — nie nakładać go drugi raz.
 
 ## Źródła i odstępstwa
 
@@ -117,7 +116,7 @@ wszystkie stanowiska załogi albo dowolny ruch takielunku.
 | G5 | PASS | {"exact_duplicate_materials":0} |
 | H1 | PASS | {"bytes":23887148,"budget_bytes":33554432} |
 | H2 | PASS | {"triangles":240434,"budget":280000} |
-| H3 | PASS | {"passed":true,"source_triangles":240434,"export_triangles":240434,"triangle_relative_difference":0.0,"max_bound_error_m":0.0,"missing_source_mesh_nodes":[],"unexpected_export_mesh_nodes":[],"unpacked_used_images":[],"method":"evaluated source visual meshes versus actual GLB mesh names, triangle count and world bounds"} |
+| H3 | PASS | {"passed":true,"source_triangles":240434,"export_triangles":240434,"export_indexed_triangles":240434,"triangle_count_scope":"source and export include every mesh-node instance; indexed count is separate","triangle_relative_difference":0.0,"max_bound_error_m":0.0,"missing_source_mesh_nodes":[],"unexpected_export_mesh_nodes":[],"unpacked_used_images" |
 | H4 | PASS | {"distinct_image_role_check":[],"embedded_images":26} |
 | H5 | PASS | {"present":true,"passed":true,"fingerprints_match":true,"review":{"schema":1,"source_triangles":240434,"export_triangles":240434,"triangle_match":true,"views":{"hero":{"foreground_pixels":29728,"source_mean_rgb":[0.4086073338985443,0.36700746417045593,0.32172051072120667],"export_mean_rgb":[0.40847036242485046,0.3668788969516754,0.3215874135494232] |
 | H6 | PASS | {"primitives_with_tangents":0,"strategy":"provided tangent attribute or engine-derived glTF tangent basis"} |

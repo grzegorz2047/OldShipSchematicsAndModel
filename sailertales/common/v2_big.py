@@ -742,7 +742,18 @@ def main():
         if spec['id']=='night-hull':
             from v2_big_fittings import add_night_head_joints
             add_night_head_joints(visual,design)
-        if spec['id']=='brig':design['final_mesh_finish']=finish_scene(visual)
+        if spec['id']=='brig':
+            design['final_mesh_finish']=finish_scene(visual)
+            from v2_brig_blocks import repair as repair_strop_ends
+            design['strop_end_finish']=repair_strop_ends(bpy.data.objects['rigging_static_blocks'])
+            from v2_brig_attachment import finish as finish_attachments
+            finish_attachments(visual,design,out)
+            from v2_brig_helm import repair_helm
+            design['helm_finish']=repair_helm(visual,colliders)
+            from v2_brig_navigation import finish as finish_navigation
+            finish_navigation(nav,design)
+            from v2_brig_density import fix as finish_density
+            finish_density(visual,design)
         # Make the finished source contract available for independent checks
         # as soon as the main GLB is exported, while the static LODs are built.
         (out/'design.json').write_text(json.dumps(design,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
