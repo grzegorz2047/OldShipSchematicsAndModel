@@ -72,6 +72,7 @@ def simplify(objects,tolerance=.005,triangle_budget=280000):
                     bm.free();break
                 candidate=bpy.data.meshes.new('_budget_candidate')
                 bm.to_mesh(candidate);bm.free();candidate.calc_loop_triangles()
+                for material in original.materials:candidate.materials.append(material)
                 count=len(candidate.loop_triangles)
                 if count>=chosen_count:
                     bpy.data.meshes.remove(candidate);candidate=None;break
@@ -101,7 +102,7 @@ def simplify(objects,tolerance=.005,triangle_budget=280000):
             after_total+=chosen_count-before
             changes.append({'object':obj.name,'before_triangles':before,'after_triangles':chosen_count,
                 'angle_limit_rad':chosen_angle,'maximum_sampled_surface_deviation_m':chosen_error,
-                'topology_preserved':True})
+                'topology_preserved':True,'material_slots_preserved':True})
         instances[key]=chosen
         bpy.data.meshes.remove(original)
     result={'before_triangles':before_total,'after_triangles':after_total,
