@@ -1,67 +1,76 @@
-# Reproducible SailerTales vessel reconstructions
+# Budowa i odbiór modeli SailerTales
 
-Each sibling vessel directory is an independent game asset: `spec.json`, the
-visual and collision GLBs in `model/`, a packed Blender scene, preview images,
-authored routes in `navigation.json`, and a `validation.json` report.
+Modele w osobnych PR-ach korzystają z oryginalnej metody konstrukcyjnej
+OldShipSchematicsAndModel: dane kadłuba i interpolacja rzędnych, konstrukcja
+drewniana, proporcje drzewc i ożaglowania oraz wyposażenie. Wnętrza i odstępstwa
+potrzebne graczowi są osobno opisane w `design.json` każdej jednostki.
 
-The profiles refer to SailerTales commit
-[`ea77e560ba4668c9dda55433813addbdb2f50176`](https://github.com/grzegorz2047/SailerTales/tree/ea77e560ba4668c9dda55433813addbdb2f50176).
-Interior layouts, simplified hulls and new sailing rigs are game reconstructions,
-not measured historical plans or replacements already connected to the game.
-See each specification for its source paths and deliberate departures.
+Wymagane narzędzia: Blender 5.2 (sprawdzone na 5.2.3 LTS), jego Python i NumPy.
+Nie są potrzebne dodatki, Tripo, pobieranie fotograficznych tekstur ani Pillow.
+Wariant proceduralny PBR jest jawnie opisany w danych; nie udajemy, że to
+fotograficzne materiały CC0 modelu wzorcowego. Bazowe moduły `blender/` pozostają
+oryginalnymi plikami z commita `2e6f7e922e95396722376d42f3e2e0a12256029e`.
 
-## Rebuild and validate
+## Odtworzenie
 
-From the repository root, with Blender 5.2 and no add-ons (replace `brig` with the
-selected vessel directory):
+Z katalogu głównego repozytorium, zastępując `<id>` identyfikatorem jednostki:
+
+| Identyfikator | Generator |
+|---|---|
+| `brig`, `night-hull` | `sailertales/common/v2_big.py` |
+| `merchant-sloop` | `sailertales/common/v2_sloop.py` |
+| `mewka`, `dinghy`, `rowboat`, `dugout` | `sailertales/common/v2_boats.py` |
+| `wreck` | `sailertales/common/v2_wreck.py` |
+
+Dokładne argumenty CLI są podane przez `--help` danego generatora. Wspólny wzór:
 
 ```sh
-blender -b --factory-startup --python-exit-code 1 --python sailertales/common/build.py -- sailertales/brig/spec.json --render
-blender -b --factory-startup --python-exit-code 1 --python sailertales/common/verify.py -- sailertales/brig/spec.json
-python sailertales/common/check_asset.py
+blender -b --factory-startup --python-exit-code 1 --python sailertales/common/v2_boats.py -- sailertales/dinghy/spec.json --out build/final/dinghy
 ```
 
-The last command requires only standard Python. It rejects missing or failed
-reports and fingerprints that no longer match the GLBs, navigation, specification
-or build/verification scripts. Changing a shared script requires rebuilding and
-verifying every installed vessel.
+`v2_reference.py` uruchamia oryginalny generator i stosuje udokumentowany profil
+konstrukcyjny. `rebuild_reference.py` udostępnia funkcje parametrów i proceduralnych
+tekstur; jego wcześniejszy samodzielny tryb buduje tylko scenę konstrukcji i nie
+zastępuje końcowego generatora. `v2_rigging.py` buduje roboczy takielunek brygu.
 
-## Walking and scope of checks
+`v2_export.py` zapisuje modele wizualne, osobne kolizje, LOD-y oraz spakowany Blender.
+`v2_materials.py` przygotowuje atlasy PBR o wymiarach fizycznych zgodnych z układem
+desek poradnika. Mniejsze jednostki mogą używać oryginalnych materiałów drewna
+2048 px na 2 m, jeżeli pomiar potwierdza ich gęstość i kierunek słojów.
 
-- Metres; glTF axes: X across, Y up, Z forward. Blender uses `(x, -s, height)`.
-- Upright capsule: radius 0.38 m, total height 1.85 m, maximum floor slope 35 degrees.
-- The actual exported visual AND collision GLBs are reimported for checking.
-  Routes are sampled every 0.12 m or less, with 15 mm geometric tolerance, 80 mm
-  rounded-foot lift and a 220 mm controller step allowance. These are sampled
-  clearance checks, not a continuous physics simulation or complete navmesh.
-- Negative controls reject a wall and a low ceiling and accept an open floor.
-- Cloth is checked against other cloth, shrouds, lifts, forestays, masts, yards,
-  booms, gaffs and bowsprit in the authored static pose. Bolt ropes intentionally
-  attach to cloth edges. No claim is made for arbitrary trimming or moving cloth.
-- Companionways are continuous inclined planked surfaces in both GLBs. Their
-  transverse decorative strips are embedded below the walk surface. Rails stay
-  outside the tested capsule, and landings meet the ramp ends at the same height.
-- The wreck retains its 0.5 rad heel. Its longer, wider companionway is checked
-  with world gravity vertical, including the combined longitudinal/transverse slope.
+## Niezależna kontrola
 
-## Engine integration
+```sh
+blender -b --factory-startup --python-exit-code 1 --python sailertales/common/v2_review.py -- build/final/dinghy --resolution 640
+blender -b --factory-startup --python-exit-code 1 --python sailertales/common/v2_audit.py -- sailertales/dinghy/spec.json --asset-dir build/final/dinghy
+python sailertales/common/v2_integrity.py --asset-dir build/final/dinghy --source-root .
+```
 
-Use `model/ship.glb` for rendering and `model/collision.glb` for physics; avoid
-duplicating collision from the visual mesh. Configure static concave mesh
-colliders for decks with real hatch openings and for the hollow hull. A convex
-hull around the entire ship would close these openings. Apply exactly the same
-asset transform to visuals, collision and the navigation points; the wreck's heel
-is already baked in and must not be applied a second time.
+Kolejność ma znaczenie: najpierw końcowy eksport, potem porównawcze rendery, potem
+audyt i jego odciski plików. `v2_package.py` odmawia publikacyjnego przeniesienia
+assetu, jeżeli audyt lub porównanie sceny źródłowej z GLB nie zostały zaliczone.
 
-Provide a character controller with the dimensions, slope and step rules above,
-moving-platform support, water masking and spawn placement. These assets do not
-include that adapter. A walking path is a verified corridor, not an invisible
-barrier restricting movement to the line. Validate additional destinations when
-adding gameplay or moving props.
+`validation.json` ma pełną macierz punktów A–J rozdziału 13. PASS, FAIL i NA nie
+są zamienne. NA zawsze wymaga uzasadnienia; pomiar niewykonany nie staje się PASS.
+Raport tras potwierdza wskazane drogi i miejsca gracza w zapisanym ustawieniu.
+Nie oznacza automatycznie zweryfikowania wszystkich stanowisk załogi, ruchu
+każdego mechanizmu czy całego obszaru dostępnego w przyszłej grze.
 
-The captain's door is a separate open node `Door_Captain_open`; `hinge_Captain`
-records the hinge location. To animate it, parent the door and its matching
-collider under a pivot at that marker; its current mesh origin is not the hinge.
-Small open boats have no fabricated cabin or lower deck. Night-ship lantern nodes
-are named for the engine's lighting sequence. No LODs, sail animations, full
-structural simulation or arbitrary rig trimming are included in this asset set.
+`export-review.json` porównuje rzeczywisty eksport GLB ze spakowaną sceną, przy
+identycznych kamerach i oświetleniu: liczby trójkątów, jasność i udziały kolorów.
+PNG w `previews/` powstają z ponownie zaimportowanego GLB. Deck view ukrywa
+takielunek tylko na potrzeby obejrzenia pokładu; plik modelu pozostaje kompletny.
+
+## Kontrakt integracji
+
+- Metry; glTF X ku lewej burcie, Y w górę, Z ku dziobowi.
+- Postać kontrolna: promień 0,38 m, całkowita wysokość 1,85 m, chodzenie do 35°.
+- Otwory luków są rzeczywistą geometrią. Kolizje muszą pozostać siatkami wklęsłymi.
+- Trasy `climb` wymagają kontrolera drabiny; nie przedstawiamy ich jako chodzenia po łagodnej schodni.
+- Wnętrza mają własne powierzchnie i dostęp; małe otwarte łodzie nie otrzymują fikcyjnych kajut.
+- Drzwi, pokrywy i mechanizmy wymagają podpięcia zachowanych węzłów i punktów obrotu do silnika.
+- Ruch postaci wraz z płynącym statkiem, maskowanie wody, fizyka żeglugi i wykonywanie akcji nie są kodem zawartym w statycznym modelu.
+- Przechył wraku jest zapisany w modelu i trasach; nie nakładać go po raz drugi.
+
+Nie należy łączyć kontroli konstrukcji, ergonomii i eksportu w jedną nieprecyzyjną
+deklarację „model przeszedł testy”. Każdy raport podaje, co dokładnie sprawdzono.

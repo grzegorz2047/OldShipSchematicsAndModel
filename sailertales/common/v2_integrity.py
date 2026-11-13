@@ -188,7 +188,10 @@ def check_report(asset_dir,source_root=None):
     report=json.loads((asset_dir/'validation.json').read_text(encoding='utf-8'))
     if report.get('schema',0)<2 or not report.get('passed'):
         raise ValueError('Missing v2 passing acceptance report')
-    required={'model/ship.glb','model/collision.glb','navigation.json','design.json','spec.json'}
+    required={'model/ship.glb','model/collision.glb','model/ship.blend',
+              'model/ship_lod1.glb','model/ship_lod2.glb',
+              'navigation.json','design.json','spec.json','export-review.json',
+              'previews/hero.png','previews/deck.png'}
     if not required.issubset(report.get('sha256',{})):
         raise ValueError('Incomplete asset fingerprint manifest')
     for rel,expected in report['sha256'].items():
@@ -206,6 +209,24 @@ def check_report(asset_dir,source_root=None):
     matrix=report.get('matrix',[])
     if not matrix or any(c.get('required') and c.get('status')!='PASS' for c in matrix):
         raise ValueError('Required checklist item is not PASS')
+    review=json.loads((asset_dir/'export-review.json').read_text(encoding='utf-8'))
+    if not review.get('passed') or not review.get('triangle_match'):
+        raise ValueError('Source/export render comparison did not pass')
+    if review.get('source_triangles') != review.get('export_triangles'):
+        raise ValueError('Source/export triangle counts differ')
+    for rel in ('model/ship.glb','model/ship.blend'):
+        if review.get('sha256',{}).get(rel) != digest(asset_dir/rel):
+            raise ValueError('Source/export render comparison is stale: '+rel)
+    views=review.get('views',{})
+    if not {'hero','deck'}.issubset(views):
+        raise ValueError('Missing canonical source/export views')
+    for name,view in views.items():
+        brightness=view.get('brightness_fraction',math.inf)
+        channels=view.get('maximum_channel_share_difference',math.inf)
+        if not view.get('passed') or not (0<=brightness<=.10 and 0<=channels<=.04):
+            raise ValueError('Source/export render threshold failed: '+name)
+        if 'previews/'+name+'.png' not in report['sha256']:
+            raise ValueError('Unbound exported preview: '+name)
     return {'passed':True,'asset_files':len(report['sha256']),
             'source_files':len(report.get('source_sha256',{})),
             'required_checks':sum(bool(c.get('required')) for c in matrix)}
