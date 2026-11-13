@@ -731,6 +731,9 @@ def main():
         design['materials']=upgrade_scene(visual)
         from v2_big_uv import finish_uv
         visual,design['uv_finish']=finish_uv(visual,design)
+        if spec['id']=='night-hull':
+            from v2_big_fittings import add_night_head_joints
+            add_night_head_joints(visual,design)
         finalize(spec,out,visual,colliders,nav,design)
     else:
         (out/'navigation.json').write_text(json.dumps(nav,indent=2)+'\n',encoding='utf-8')
