@@ -129,6 +129,10 @@ def main(folder):
     cg,_,_=validate(folder/"snow_collision.glb")
     report["collision_meshes"]=sum("mesh" in n for n in cg["nodes"])
     assert report["collision_meshes"]==36
+    clearance=json.loads((folder/"deck_clearance.json").read_text())
+    assert clearance["passed"] and clearance["minimum_clearance_m"]>=2.2
+    report["canvas_minimum_deck_clearance_m"]=clearance["minimum_clearance_m"]
+    report["cloth_area_m2"]=clearance["cloth_area_m2"]
     report["result"]="passed"
     (folder/"validation.json").write_text(json.dumps(report,indent=2))
     print(json.dumps(report,indent=2))

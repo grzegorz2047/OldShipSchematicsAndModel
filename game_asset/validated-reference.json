@@ -3,24 +3,26 @@
   "source_glb_sha256": "9a2cb1d7a9c00b978ae82d2864be3d9d5438fc04bf50a85eb8bda1a414eedb04",
   "validation": {
     "lod0": {
-      "triangles": 248781,
-      "bytes": 37375928,
+      "triangles": 249701,
+      "bytes": 37387688,
       "nodes": 355
     },
     "sails": 12,
     "animation_seconds": 4.0,
     "stations": 140,
     "lod1": {
-      "triangles": 89696,
-      "bytes": 24189116,
+      "triangles": 89977,
+      "bytes": 24199808,
       "nodes": 1
     },
     "lod2": {
       "triangles": 10314,
-      "bytes": 5133884,
+      "bytes": 5134572,
       "nodes": 1
     },
     "collision_meshes": 36,
+    "canvas_minimum_deck_clearance_m": 2.25,
+    "cloth_area_m2": 762.43,
     "result": "passed"
   },
   "native_import": {
@@ -48,10 +50,97 @@
     "materials": 47,
     "textures": 58
   },
+  "deck_clearance": {
+    "required_clearance_m": 2.2,
+    "walker_height_m": 1.75,
+    "scope": "canvas above main deck and quarterdeck; equipment footprints included; wind frames 0/24/72",
+    "sails": {
+      "fore_topgallant_set": {
+        "minimum_clearance_m": 17.786,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 60212,
+        "cloth_area_m2": 37.0
+      },
+      "fore_topmast_staysail_set": {
+        "minimum_clearance_m": 3.864,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 31844,
+        "cloth_area_m2": 47.26
+      },
+      "fore_topsail_set": {
+        "minimum_clearance_m": 9.51,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 37954,
+        "cloth_area_m2": 89.49
+      },
+      "fore_course_set": {
+        "minimum_clearance_m": 2.966,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 31193,
+        "cloth_area_m2": 89.31
+      },
+      "gaff_sail_set": {
+        "minimum_clearance_m": 2.25,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 72576,
+        "cloth_area_m2": 80.17
+      },
+      "jib_set": {
+        "minimum_clearance_m": 7.764,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 8546,
+        "cloth_area_m2": 39.78
+      },
+      "main_staysail_set": {
+        "minimum_clearance_m": 2.25,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 36288,
+        "cloth_area_m2": 18.69
+      },
+      "main_topgallant_set": {
+        "minimum_clearance_m": 20.739,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 85206,
+        "cloth_area_m2": 47.24
+      },
+      "main_topmast_staysail_set": {
+        "minimum_clearance_m": 10.682,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 36288,
+        "cloth_area_m2": 32.32
+      },
+      "main_topsail_set": {
+        "minimum_clearance_m": 11.447,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 57714,
+        "cloth_area_m2": 115.54
+      },
+      "main_course_set": {
+        "minimum_clearance_m": 2.919,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 47614,
+        "cloth_area_m2": 130.62
+      },
+      "spritsail_set": {
+        "minimum_clearance_m": null,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 0,
+        "cloth_area_m2": 35.01
+      }
+    },
+    "minimum_clearance_m": 2.25,
+    "cloth_area_m2": 762.43,
+    "passed": true
+  },
+  "previous_sail_geometry": {
+    "minimum_clearance_m": 0.206,
+    "cloth_area_m2": 821.37,
+    "passed": false
+  },
   "glb_sha256": {
-    "snow_sailing.glb": "35c7131299be76f9ce900dbdf2ad500c63af6ddbd820c27269a5ec5b50aa2fa8",
+    "snow_sailing.glb": "4ea8ea8c949038c4cda3a9d21e3e24b0492432904359558a59a25ad8eb202a40",
     "snow_collision.glb": "3fb47bab16860a952e3a79bab1012cbd018f6fc62b9cbb946c0065d72b4c3ee8",
-    "snow_sailing_lod2.glb": "f2a008eca80d77b1b18230c0551990a3abcad3d1866d79e2be167d5cabcb4a7a",
-    "snow_sailing_lod1.glb": "574c7015a5c1dbc12c9cd82665f2bfeb6f0678f11f31442c98583ddfc17c4799"
+    "snow_sailing_lod2.glb": "cfea2c33a62f5c781f02587c879718e952bb365147a29dd7f2521d6d065fdc16",
+    "snow_sailing_lod1.glb": "b181acee24aa6d6d4c3ea0bd3d490fb49001a89429a8a3327ce97a651a33f571"
   }
 }
