@@ -317,5 +317,50 @@
     "blender -t 2 -b --factory-startup --python-exit-code 1 --python game_asset/verify_exports.py -- build/final_ship",
     "python game_asset/validate_asset.py build/final_ship",
     "blender -t 2 -b build/final_ship/snow_sailing.blend --python-exit-code 1 --python game_asset/render_previews.py -- build/final_ship --samples 16 --resolution-percentage 60"
-  ]
+  ],
+  "preview_render": {
+    "checked_at_utc": "2026-11-13T14:52:54.981862+00:00",
+    "renderer": "Blender 4.3.2 Cycles CPU",
+    "samples": 16,
+    "resolution_percentage": 60,
+    "denoising": false,
+    "scene_sha256": "ba4f757702a8fe5438d02a26ac35f1f5f3379d9a13e5927c4acde19c9a4a9241",
+    "source_lod0_sha256": "be46cf1c3c55d9df020d84a91369325ed40c8a5b32468802e80ca05b7806d231",
+    "images": {
+      "deck.png": {
+        "sha256": "a762137d5d9b743a210313868fd5188d4862bd5b199d939bcc4006a39c9fa27b",
+        "bytes": 1653047,
+        "pixels": [
+          960,
+          720
+        ]
+      },
+      "hero.png": {
+        "sha256": "78148985031c3504ddd89f0ff813a9165155507a24a52efc92ee6fd177066407",
+        "bytes": 1445069,
+        "pixels": [
+          960,
+          720
+        ]
+      },
+      "side.png": {
+        "sha256": "15ff8ad22f26423044c96956af1d7c1489122a49358cbfa6802b02ed77cccbc4",
+        "bytes": 1334865,
+        "pixels": [
+          960,
+          720
+        ]
+      },
+      "stern.png": {
+        "sha256": "70e3a6e6c0310b59405724e465f8e12d9852cd296804fad61c2142d802fa95a6",
+        "bytes": 1454129,
+        "pixels": [
+          960,
+          720
+        ]
+      }
+    },
+    "visual_review": "All four actual renders inspected: complete rig, cloth/deck clearance, steering wheel, crew scale figures, wooden hull and stern. Render noise remains at the explicitly recorded preview sampling budget."
+  },
+  "native_scene_sha256": "ba4f757702a8fe5438d02a26ac35f1f5f3379d9a13e5927c4acde19c9a4a9241"
 }
