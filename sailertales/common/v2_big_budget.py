@@ -106,7 +106,7 @@ def simplify(objects,tolerance=.005,triangle_budget=280000):
         'count_scope':'distinct source mesh/modifier signatures; delivered GLB indexed counts are independently audited',
         'surface_tolerance_m':tolerance,'sampling':'bidirectional vertices and triangle centroids',
         'preserved_boundaries':['material','UV'],'changes':changes}
-    print('BRIG_GEOMETRY_BUDGET',before_total,after_total,flush=True)
+    print('GUIDE_GEOMETRY_BUDGET',before_total,after_total,flush=True)
     if after_total>triangle_budget:
-        raise RuntimeError('Brig remains above guide triangle budget: '+str(after_total))
+        raise RuntimeError('Vessel remains above guide triangle budget: '+str(after_total))
     return result
