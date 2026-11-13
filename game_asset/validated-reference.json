@@ -1,0 +1,57 @@
+{
+  "reference_commit": "2e6f7e922e95396722376d42f3e2e0a12256029e",
+  "source_glb_sha256": "9a2cb1d7a9c00b978ae82d2864be3d9d5438fc04bf50a85eb8bda1a414eedb04",
+  "validation": {
+    "lod0": {
+      "triangles": 248781,
+      "bytes": 37375928,
+      "nodes": 355
+    },
+    "sails": 12,
+    "animation_seconds": 4.0,
+    "stations": 140,
+    "lod1": {
+      "triangles": 89696,
+      "bytes": 24189116,
+      "nodes": 1
+    },
+    "lod2": {
+      "triangles": 10314,
+      "bytes": 5133884,
+      "nodes": 1
+    },
+    "collision_meshes": 36,
+    "result": "passed"
+  },
+  "native_import": {
+    "result": "passed",
+    "blender": "4.3.2",
+    "sails_imported": 12,
+    "animation_key_weight_sum_by_frame": {
+      "0": [
+        0.0,
+        0.0
+      ],
+      "24": [
+        0.95,
+        0.95
+      ],
+      "72": [
+        0.95,
+        0.95
+      ],
+      "96": [
+        0.0,
+        0.0
+      ]
+    },
+    "materials": 47,
+    "textures": 58
+  },
+  "glb_sha256": {
+    "snow_sailing.glb": "35c7131299be76f9ce900dbdf2ad500c63af6ddbd820c27269a5ec5b50aa2fa8",
+    "snow_collision.glb": "3fb47bab16860a952e3a79bab1012cbd018f6fc62b9cbb946c0065d72b4c3ee8",
+    "snow_sailing_lod2.glb": "f2a008eca80d77b1b18230c0551990a3abcad3d1866d79e2be167d5cabcb4a7a",
+    "snow_sailing_lod1.glb": "574c7015a5c1dbc12c9cd82665f2bfeb6f0678f11f31442c98583ddfc17c4799"
+  }
+}
