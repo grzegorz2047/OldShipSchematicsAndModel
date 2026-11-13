@@ -79,7 +79,6 @@ def split_timbers(objects,design):
                     if any(n!=old and not fnmatch.fnmatchcase(n,rule.get('b','')) for n in names) and pattern not in bb:bb.append(pattern)
             for a in aa:
                 for b in bb:
-                    if a==b:continue
                     copy=dict(rule);copy.update(a=a,b=b);expanded.append(copy)
         design['intended_joints']=expanded
     return result,groups
