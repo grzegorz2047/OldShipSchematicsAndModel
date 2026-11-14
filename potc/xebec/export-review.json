@@ -1,0 +1,178 @@
+{
+  "schema": 4,
+  "passed": true,
+  "palettes": {
+    "ochre": {
+      "passed": true,
+      "source_triangles": 25968,
+      "export_triangles": 25968,
+      "triangle_match": true,
+      "views": {
+        "hero": {
+          "foreground_pixels": 23130,
+          "source_mean_rgb": [
+            0.49980640411376953,
+            0.4285534918308258,
+            0.34511926770210266
+          ],
+          "export_mean_rgb": [
+            0.500056266784668,
+            0.42872413992881775,
+            0.3452052175998688
+          ],
+          "brightness_fraction": 0.00041440041179031294,
+          "maximum_channel_share_difference": 4.029273986816406e-05,
+          "passed": true
+        },
+        "detail": {
+          "foreground_pixels": 22532,
+          "source_mean_rgb": [
+            0.6635428667068481,
+            0.5970028042793274,
+            0.5236940979957581
+          ],
+          "export_mean_rgb": [
+            0.6636604070663452,
+            0.5971100330352783,
+            0.5238029956817627
+          ],
+          "brightness_fraction": 0.0001808044146042714,
+          "maximum_channel_share_difference": 6.139278411865234e-06,
+          "passed": true
+        }
+      },
+      "cameras": {
+        "hero": {
+          "target": [
+            0.3071310520172119,
+            -1.6251235008239746,
+            8.258109092712402
+          ],
+          "position": [
+            43.00138854980469,
+            59.63185501098633,
+            34.988426208496094
+          ],
+          "ortho": true,
+          "scale": 37.49407011270523,
+          "hide_rig": false
+        },
+        "detail": {
+          "target": [
+            0.0,
+            -1.6251235008239746,
+            0.6139755249023438
+          ],
+          "position": [
+            24.118640899658203,
+            34.55284118652344,
+            66.94023895263672
+          ],
+          "ortho": true,
+          "scale": 36.072227239608765,
+          "hide_rig": true
+        }
+      },
+      "resolution": 480,
+      "sha256": {
+        "model/ochre/ship.glb": "a20af36e77c99b937e8ab79211e316031c59d7a4a605460ed8130a74b401203b",
+        "model/ochre/source.blend": "e39f3b40b39ed1bcab4df97983329495ee91ba62164455f65541c41a9f696717"
+      },
+      "output_sha256": {
+        "review/ochre/source_detail.png": "057327616c4149a2bf6c0ba81d77652bee127f59ef6c608989cc2bcc2f75a965",
+        "review/ochre/source_hero.png": "5bde4e164908fd06213c96ee7ce53bc32daaf3434c90be73d46e23aee795dd3c",
+        "previews/ochre/detail.png": "00b8cc043c417e250c9182221e87615b679e9fb589db32c401863764ff674463",
+        "previews/ochre/hero.png": "bb64a850c39f9b078b856294c8a948d3faef73b37c5ffd8bbd53ad730ac84028"
+      },
+      "scope": "Actual GLB versus its own packed colour scene under identical cameras/lights; detail is a hull/deck view with rig hidden, not a walking proof."
+    },
+    "navy": {
+      "passed": true,
+      "source_triangles": 25968,
+      "export_triangles": 25968,
+      "triangle_match": true,
+      "views": {
+        "hero": {
+          "foreground_pixels": 23104,
+          "source_mean_rgb": [
+            0.4326048791408539,
+            0.4062354564666748,
+            0.36633291840553284
+          ],
+          "export_mean_rgb": [
+            0.43269214034080505,
+            0.4063510596752167,
+            0.36648818850517273
+          ],
+          "brightness_fraction": 0.0002749449167542704,
+          "maximum_channel_share_difference": 3.8504600524902344e-05,
+          "passed": true
+        },
+        "detail": {
+          "foreground_pixels": 22454,
+          "source_mean_rgb": [
+            0.6145400404930115,
+            0.5787072777748108,
+            0.5346629023551941
+          ],
+          "export_mean_rgb": [
+            0.6145838499069214,
+            0.5787919163703918,
+            0.5348185300827026
+          ],
+          "brightness_fraction": 0.00013904549039494435,
+          "maximum_channel_share_difference": 3.9190053939819336e-05,
+          "passed": true
+        }
+      },
+      "cameras": {
+        "hero": {
+          "target": [
+            0.3071310520172119,
+            -1.6251235008239746,
+            8.258109092712402
+          ],
+          "position": [
+            43.00138854980469,
+            59.63185501098633,
+            34.988426208496094
+          ],
+          "ortho": true,
+          "scale": 37.49407011270523,
+          "hide_rig": false
+        },
+        "detail": {
+          "target": [
+            0.0,
+            -1.6251235008239746,
+            0.6139755249023438
+          ],
+          "position": [
+            24.118640899658203,
+            34.55284118652344,
+            66.94023895263672
+          ],
+          "ortho": true,
+          "scale": 36.072227239608765,
+          "hide_rig": true
+        }
+      },
+      "resolution": 480,
+      "sha256": {
+        "model/navy/ship.glb": "80c0b217e9b899b6e3ec6a0179972e42cb7e4b1a2a9b229ae9bfd567a5484de2",
+        "model/navy/source.blend": "08d9cdb9050902827ab432af21d47b72d073002cbeac482f5e47b3742fc7ac1c"
+      },
+      "output_sha256": {
+        "review/navy/source_detail.png": "b417d08484d38e67ad3bdd53bb81a5560029f6a6503d1e77e047e597b1c9efe1",
+        "review/navy/source_hero.png": "8e4b8fcc56a15375f53fc8bde53199ddb26479097700351933a8bcc72039c401",
+        "previews/navy/detail.png": "79df38b23776a13ccc8f0f88d2b2d82a1fa0930488f464e536729098ce3acdbe",
+        "previews/navy/hero.png": "c233f75923aad721f370ea3667facf094e9bac5f23a79b22896f4724b4dec7be"
+      },
+      "scope": "Actual GLB versus its own packed colour scene under identical cameras/lights; detail is a hull/deck view with rig hidden, not a walking proof."
+    }
+  },
+  "thresholds": {
+    "brightness_fraction": 0.1,
+    "maximum_channel_share_difference": 0.04
+  }
+}

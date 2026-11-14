@@ -1,0 +1,21 @@
+name: PoTC static ship integrity
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  portable-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Exercise portable positive and negative controls
+        run: python potc/common/v4_integrity.py --self-test
+      - name: Verify all shipped static ship packages
+        run: python potc/common/v4_integrity.py --all --source-root .
