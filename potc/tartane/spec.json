@@ -137,7 +137,9 @@
     }
   },
   "source_paths": [
-    "potc/tartane/stock-evidence.json"
+    "potc/tartane/stock-evidence.json",
+    "potc/tartane/layout-research.json",
+    "potc/common/v5_review.py"
   ],
   "fittings": {
     "steering": "tiller",
@@ -249,6 +251,107 @@
         "linen cloth",
         "iron guns and fittings"
       ]
-    }
-  }
+    },
+    "detailed_layout_research": "potc/tartane/layout-research.json"
+  },
+  "detailed_layout": {
+    "schema": 1,
+    "kind": "open_boat",
+    "frame_spacing_m": 0.42,
+    "hold": {
+      "from": -0.25,
+      "to": 0.25,
+      "floor_z_m": -0.2,
+      "follow_sheer": true,
+      "ceiling_planking": false,
+      "bilge_visible": true,
+      "headroom_m": null
+    },
+    "cabin": null,
+    "hatch": null,
+    "extra_hatches": [],
+    "companionways": [],
+    "lower_decks": [],
+    "partitions": [],
+    "clear_aisle_width_m": 0.8,
+    "passage_width_m": 1.0,
+    "standing_height_m": null,
+    "evidence": [
+      {
+        "url": "https://www.shiplib.org/shipwrecks/sardinaux",
+        "title": "Nautical Archaeology Digital Library: Sardinaux",
+        "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+        "confirmed": [
+          "An approximately 10–12 m coastal vessel is interpreted cautiously as a tartane.",
+          "Surviving floor timbers and futtocks, mast-step recesses and absence of ceiling/deck support suggest an open plan; a partial stern deck is possible."
+        ],
+        "application": [
+          "Open well, visible internal frames and mast-step structure.",
+          "The authored 9 m fishing boat receives removable sole boards, thwarts and fishing gear, rather than a full standing cabin."
+        ]
+      },
+      {
+        "url": "https://ancre.fr/en/monograph/19-monographie-de-la-diligente-tartane-du-roi-1738.html",
+        "title": "ANCRE: La Diligente, royal tartane, 1738",
+        "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+        "confirmed": [
+          "The publisher identifies Mediterranean fishing/coastal-trading use and archival Toulon plans.",
+          "Light ribs and simple fitting-out are identified."
+        ],
+        "application": [
+          "Timber construction vocabulary only; the larger naval tartane is not used as an interior template for this 9 m boat."
+        ]
+      },
+      {
+        "url": "https://voilelatinesete.org/bela-latina/",
+        "title": "Voile Latine de Sète: Bèla Latina restoration",
+        "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+        "confirmed": [
+          "The restoration documents exposed paired wooden frames and bottom repairs on a small lateen craft."
+        ],
+        "application": [
+          "Small-boat framing and repair vocabulary only, not a contemporary POTC prototype."
+        ]
+      }
+    ],
+    "confidence": "Authored reconstruction informed by read source material, not a recovered stock game interior.",
+    "open_well": {
+      "from": -0.25,
+      "to": 0.25,
+      "width_factor": 0.65,
+      "floor_z_m": -0.2
+    },
+    "machinery": {
+      "capstan_at": null
+    },
+    "notes": [
+      "Open central well from -0.25L to +0.25L, narrow sole boards at -0.20 m leaving bilge visible.",
+      "Paired frames at 0.42 m nominal spacing, mast heel/step and thwarts; small fore and aft working platforms.",
+      "One tiller, light anchor, coiled rope, oars, net-rope coil, small planked fishing-tackle boxes and hand cleats.",
+      "Fishing gear is a functional reconstruction, not an archaeological inventory.",
+      "No enclosed hold, cabin, stairs, cannon or capstan; decorative floor boards do not assert continuous historical ceiling."
+    ],
+    "dimension_status": "Dimensions, frame spacing, compartments and fitting positions are authored estimates fitted to the preserved POTC-family hull. These sources do not document the proprietary retail model and do not establish exact stock interiors. No museum image is copied into the model or its textures.",
+    "fittings": [
+      "tiller",
+      "thwarts",
+      "mast_step",
+      "oars",
+      "net_rope_coil",
+      "fishing_tackle_boxes",
+      "light_anchor",
+      "hand_cleats"
+    ],
+    "research_path": "layout-research.json",
+    "compartments": [
+      {
+        "id": "open_fishing_well",
+        "deck_id": "open_boat",
+        "from": -0.25,
+        "to": 0.25,
+        "role": "fishing_gear"
+      }
+    ]
+  },
+  "detail_schema": 5
 }
