@@ -1,0 +1,257 @@
+{
+  "schema": 1,
+  "ship_id": "galeoth",
+  "researched_on": "2026-11-14",
+  "scope": "Dimensions, frame spacing, compartments and fitting positions are authored estimates fitted to the preserved POTC-family hull. These sources do not document the proprietary retail model and do not establish exact stock interiors. No museum image is copied into the model or its textures.",
+  "sources": [
+    {
+      "url": "https://www.rijksmuseum.nl/nl/collectie/object/Model-van-een-polakker--be50c8b05850324bf29aaac85ed74070",
+      "title": "Rijksmuseum NG-MC-674: Model of a Polacre / Daedalus",
+      "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+      "confirmed": [
+        "Museum model has lower/main decks and poop above a panelled cabin, an anchor and capstan.",
+        "Catalogue explicitly notes the same ship was variously registered as galliot, ship and schooner."
+      ],
+      "application": [
+        "A compact panelled merchant cabin and working cargo hold; supports stating historical type-name uncertainty.",
+        "Three-mast polacre rig is not copied: the stock-derived Galeoth keeps its existing two-mast square/lateen arrangement."
+      ],
+      "applies_to": [
+        "A compact panelled merchant cabin and working cargo hold; supports stating historical type-name uncertainty.",
+        "Three-mast polacre rig is not copied: the stock-derived Galeoth keeps its existing two-mast square/lateen arrangement."
+      ]
+    },
+    {
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-66355",
+      "title": "Royal Museums Greenwich SLR0394: small armed vessel construction analogue",
+      "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+      "confirmed": [
+        "Contemporary model is decked/equipped, with distinct raised after accommodation and glazed aft openings."
+      ],
+      "application": [
+        "General small armed-vessel access, structure and separate after compartment only."
+      ],
+      "applies_to": [
+        "General small armed-vessel access, structure and separate after compartment only."
+      ]
+    }
+  ],
+  "plan": [
+    "Broad cargo hold -0.27L to +0.37L, floor -0.90 m; fitted side casks and planked storage outside the center aisle, with the foremost supported boxes and rope coils in a forward cable/stores zone from +0.15L.",
+    "After cabin -0.47L to -0.285L, sole 0.95 m, compact table/bench/berth/locker beneath 1.25 m quarterdeck.",
+    "Main 2.2 \u00d7 1.6 m cargo hatch +0.08L, small fore stores hatch +0.31L, and offset quarterdeck companion.",
+    "Sixteen-gun single battery start moves to -0.24L for bulkhead clearance; no oar benches or rowing gallery are invented."
+  ],
+  "limitations": [
+    "Galeoth/galliot names cover differing historical rigs and hulls; these are explicit construction analogues, not an identified exact prototype.",
+    "The game-derived mixed rig, hull form and count remain decisive.",
+    "The modest aft casements use proportionate segmented timber jambs that follow the actual tapered reveal, leaving every retained glass pane clear through the hull opening. Their lower edges sit above the existing aft main-deck sole strip; no glass is presented as a window through solid deck timber. The exact glazing arrangement is an authored fitting choice informed by small timber-vessel construction, not an inspected plan of this proprietary game interior."
+  ],
+  "authored_layout": {
+    "schema": 1,
+    "kind": "decked",
+    "frame_spacing_m": 0.5,
+    "hold": {
+      "from": -0.27,
+      "to": 0.37,
+      "floor_z_m": -0.9,
+      "follow_sheer": true,
+      "ceiling_planking": true,
+      "bilge_visible": true,
+      "headroom_m": 2.1
+    },
+    "cabin": {
+      "from": -0.47,
+      "to": -0.285,
+      "floor_z_m": 0.95,
+      "ceiling_deck_id": "castle_0",
+      "follow_sheer": true,
+      "door_width_m": 1.0,
+      "door_height_m": 1.85,
+      "clear_height_m": 1.95,
+      "cut_main_deck": true,
+      "furniture": [
+        "table",
+        "bench",
+        "berth",
+        "locker"
+      ],
+      "door_x_m": 1.05,
+      "minimum_headroom_m": 1.85,
+      "aisle_width_m": 0.8,
+      "berth_width_m": 0.72,
+      "berth_length_m": 1.96
+    },
+    "hatch": {
+      "id": "main_hatch",
+      "at": 0.08,
+      "length_m": 2.2,
+      "width_m": 1.6,
+      "x_m": 0.0,
+      "coaming_height_m": 0.25,
+      "deck_id": "main",
+      "access": "stair",
+      "open": true
+    },
+    "extra_hatches": [
+      {
+        "id": "fore_stores_hatch",
+        "at": 0.31,
+        "length_m": 1.15,
+        "width_m": 1.05,
+        "x_m": 0.0,
+        "coaming_height_m": 0.25,
+        "deck_id": "main",
+        "access": "ladder",
+        "open": true
+      }
+    ],
+    "companionways": [],
+    "lower_decks": [],
+    "partitions": [],
+    "clear_aisle_width_m": 1.1,
+    "passage_width_m": 1.0,
+    "standing_height_m": 1.85,
+    "evidence": [
+      {
+        "url": "https://www.rijksmuseum.nl/nl/collectie/object/Model-van-een-polakker--be50c8b05850324bf29aaac85ed74070",
+        "title": "Rijksmuseum NG-MC-674: Model of a Polacre / Daedalus",
+        "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+        "confirmed": [
+          "Museum model has lower/main decks and poop above a panelled cabin, an anchor and capstan.",
+          "Catalogue explicitly notes the same ship was variously registered as galliot, ship and schooner."
+        ],
+        "application": [
+          "A compact panelled merchant cabin and working cargo hold; supports stating historical type-name uncertainty.",
+          "Three-mast polacre rig is not copied: the stock-derived Galeoth keeps its existing two-mast square/lateen arrangement."
+        ]
+      },
+      {
+        "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-66355",
+        "title": "Royal Museums Greenwich SLR0394: small armed vessel construction analogue",
+        "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+        "confirmed": [
+          "Contemporary model is decked/equipped, with distinct raised after accommodation and glazed aft openings."
+        ],
+        "application": [
+          "General small armed-vessel access, structure and separate after compartment only."
+        ]
+      }
+    ],
+    "confidence": "Authored reconstruction informed by read source material, not a recovered stock game interior.",
+    "machinery": {
+      "capstan_at": -0.03
+    },
+    "notes": [
+      "Broad cargo hold -0.27L to +0.37L, floor -0.90 m; fitted side casks and planked storage outside the center aisle, with the foremost supported boxes and rope coils in a forward cable/stores zone from +0.15L.",
+      "After cabin -0.47L to -0.285L, sole 0.95 m, compact table/bench/berth/locker beneath 1.25 m quarterdeck.",
+      "Main 2.2 \u00d7 1.6 m cargo hatch +0.08L, small fore stores hatch +0.31L, and offset quarterdeck companion.",
+      "Sixteen-gun single battery start moves to -0.24L for bulkhead clearance; no oar benches or rowing gallery are invented.",
+      "Galeoth/galliot names cover differing historical rigs and hulls; these are explicit construction analogues, not an identified exact prototype.",
+      "The game-derived mixed rig, hull form and count remain decisive.",
+      "One offset descending companion enters the cabin through its forward door. No redundant hole is cut through the short cabin roof; this preserves useful furniture and working-deck area."
+    ],
+    "dimension_status": "Dimensions, frame spacing, compartments and fitting positions are authored estimates fitted to the preserved POTC-family hull. These sources do not document the proprietary retail model and do not establish exact stock interiors. No museum image is copied into the model or its textures.",
+    "fittings": [
+      "capstan",
+      "bilge_pump",
+      "bitts",
+      "belaying_pins_and_lead_blocks",
+      "catheads",
+      "anchors",
+      "stern_lights",
+      "table",
+      "bench",
+      "berth",
+      "locker"
+    ],
+    "research_path": "layout-research.json",
+    "compartments": [
+      {
+        "id": "merchant_cargo",
+        "deck_id": "hold",
+        "from": -0.27,
+        "to": 0.15,
+        "role": "coastal_cargo"
+      },
+      {
+        "id": "fore_cable_stores",
+        "deck_id": "hold",
+        "from": 0.15,
+        "to": 0.37,
+        "role": "cable_store"
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "feature": "Broad cargo hold -0.27L to +0.37L, floor -0.90 m; fitted side casks and planked storage outside the center aisle, with the foremost supported boxes and rope coils in a forward cable/stores zone from +0.15L.",
+      "basis": "Authored reconstruction fitted to preserved POTC-family hull; arrangement/construction vocabulary follows the read sources, and dimensions are estimates.",
+      "source_urls": [
+        "https://www.rijksmuseum.nl/nl/collectie/object/Model-van-een-polakker--be50c8b05850324bf29aaac85ed74070",
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-66355"
+      ]
+    },
+    {
+      "feature": "After cabin -0.47L to -0.285L, sole 0.95 m, compact table/bench/berth/locker beneath 1.25 m quarterdeck.",
+      "basis": "Authored reconstruction fitted to preserved POTC-family hull; arrangement/construction vocabulary follows the read sources, and dimensions are estimates.",
+      "source_urls": [
+        "https://www.rijksmuseum.nl/nl/collectie/object/Model-van-een-polakker--be50c8b05850324bf29aaac85ed74070",
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-66355"
+      ]
+    },
+    {
+      "feature": "Main 2.2 \u00d7 1.6 m cargo hatch +0.08L, small fore stores hatch +0.31L, and offset quarterdeck companion.",
+      "basis": "Authored reconstruction fitted to preserved POTC-family hull; arrangement/construction vocabulary follows the read sources, and dimensions are estimates.",
+      "source_urls": [
+        "https://www.rijksmuseum.nl/nl/collectie/object/Model-van-een-polakker--be50c8b05850324bf29aaac85ed74070",
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-66355"
+      ]
+    },
+    {
+      "feature": "Sixteen-gun single battery start moves to -0.24L for bulkhead clearance; no oar benches or rowing gallery are invented.",
+      "basis": "Authored reconstruction fitted to preserved POTC-family hull; arrangement/construction vocabulary follows the read sources, and dimensions are estimates.",
+      "source_urls": [
+        "https://www.rijksmuseum.nl/nl/collectie/object/Model-van-een-polakker--be50c8b05850324bf29aaac85ed74070",
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-66355"
+      ]
+    },
+    {
+      "feature": "Single forward-door companion, with no duplicate cabin-roof shaft.",
+      "basis": "Authored small-cabin circulation choice: the offset stair and real forward doorway provide access while retaining enough uninterrupted cabin floor and roof for the documented compact accommodation.",
+      "source_urls": [
+        "https://www.rijksmuseum.nl/nl/collectie/object/Model-van-een-polakker--be50c8b05850324bf29aaac85ed74070"
+      ]
+    },
+    {
+      "feature": "Forward cable/stores role begins at +0.15L, within actual supported fitted storage.",
+      "basis": "Actual raw-GLB inventory places the foremost fitted boxes near +0.1716L. The narrowing fore end does not support the earlier proposed +0.28L storage footprint, so no invisible locker is claimed. This authored functional zone has actual planked storage and cable coils rather than an invented partition.",
+      "source_urls": [
+        "https://www.rijksmuseum.nl/nl/collectie/object/Model-van-een-polakker--be50c8b05850324bf29aaac85ed74070",
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-66355"
+      ]
+    },
+    {
+      "feature": "Proportionate reveal-following stern casements with actual clear glass panes.",
+      "basis": "The modest aft casements use proportionate segmented timber jambs that follow the actual tapered reveal, leaving every retained glass pane clear through the hull opening. Their lower edges sit above the existing aft main-deck sole strip; no glass is presented as a window through solid deck timber. The exact glazing arrangement is an authored fitting choice informed by small timber-vessel construction, not an inspected plan of this proprietary game interior.",
+      "source_urls": [
+        "https://www.rijksmuseum.nl/nl/collectie/object/Model-van-een-polakker--be50c8b05850324bf29aaac85ed74070",
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-66355"
+      ]
+    },
+    {
+      "feature": "Fore stores hatch relocated from +0.36L to +0.31L.",
+      "basis": "Authored geometric fit: the same small hatch and physical ladder now lie between the foremast partners and actual anchor-stock support posts, preserving a genuine open shaft and approach rather than accepting a hatch blocked by cathead timber.",
+      "source_urls": [
+        "https://www.rijksmuseum.nl/nl/collectie/object/Model-van-een-polakker--be50c8b05850324bf29aaac85ed74070",
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-66355"
+      ]
+    }
+  ],
+  "implemented_glazing": {
+    "arrangement": "The modest aft casements use proportionate segmented timber jambs that follow the actual tapered reveal, leaving every retained glass pane clear through the hull opening. Their lower edges sit above the existing aft main-deck sole strip; no glass is presented as a window through solid deck timber.",
+    "window_count": 2,
+    "closed_glass_panes_per_window": 6,
+    "status": "Authored fitting; actual GLB all-pane and physical-intersection proofs govern acceptance."
+  }
+}

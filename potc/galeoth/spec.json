@@ -124,7 +124,7 @@
       {
         "pairs": 8,
         "z_m": 2.47,
-        "from": -0.35,
+        "from": -0.24,
         "to": 0.36,
         "follow_sheer": true
       }
@@ -156,7 +156,9 @@
             "width_m": 5.1,
             "height_m": 2.6
           }
-        ]
+        ],
+        "heel_z_m": -0.7432926174329381,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
       },
       {
         "name": "main",
@@ -177,7 +179,9 @@
             "height_m": 4.3
           }
         ],
-        "shroud_lead_fraction": 0.12
+        "shroud_lead_fraction": 0.12,
+        "heel_z_m": 1.1880396947376919,
+        "heel_basis": "Authored aft mast step reached through the true cabin and raised-deck mortises."
       }
     ],
     "bowsprit": {
@@ -186,7 +190,9 @@
     }
   },
   "source_paths": [
-    "potc/galeoth/stock-evidence.json"
+    "potc/galeoth/stock-evidence.json",
+    "potc/galeoth/layout-research.json",
+    "potc/common/v5_review.py"
   ],
   "game_source": {
     "provenance": {
@@ -293,6 +299,144 @@
         "iron guns and fittings"
       ]
     },
-    "authored_deck_clearance": "Quarterdeck break at-.285L lies between the first two gun carriage footprints. Main shrouds lead forward from their mast so their real iron fastenings clear the transverse bulkhead and the authored canvas. Forecastle starts ahead of the battery."
-  }
+    "authored_deck_clearance": "Quarterdeck break at-.285L lies between the first two gun carriage footprints. Main shrouds lead forward from their mast so their real iron fastenings clear the transverse bulkhead and the authored canvas. Forecastle starts ahead of the battery.",
+    "detailed_layout_research": "potc/galeoth/layout-research.json"
+  },
+  "detailed_layout": {
+    "schema": 1,
+    "kind": "decked",
+    "frame_spacing_m": 0.5,
+    "hold": {
+      "from": -0.27,
+      "to": 0.37,
+      "floor_z_m": -0.9,
+      "follow_sheer": true,
+      "ceiling_planking": true,
+      "bilge_visible": true,
+      "headroom_m": 2.1
+    },
+    "cabin": {
+      "from": -0.47,
+      "to": -0.285,
+      "floor_z_m": 0.95,
+      "ceiling_deck_id": "castle_0",
+      "follow_sheer": true,
+      "door_width_m": 1.0,
+      "door_height_m": 1.85,
+      "clear_height_m": 1.95,
+      "cut_main_deck": true,
+      "furniture": [
+        "table",
+        "bench",
+        "berth",
+        "locker"
+      ],
+      "door_x_m": 1.05,
+      "minimum_headroom_m": 1.85,
+      "aisle_width_m": 0.8,
+      "berth_width_m": 0.72,
+      "berth_length_m": 1.96
+    },
+    "hatch": {
+      "id": "main_hatch",
+      "at": 0.08,
+      "length_m": 2.2,
+      "width_m": 1.6,
+      "x_m": 0.0,
+      "coaming_height_m": 0.25,
+      "deck_id": "main",
+      "access": "stair",
+      "open": true
+    },
+    "extra_hatches": [
+      {
+        "id": "fore_stores_hatch",
+        "at": 0.31,
+        "length_m": 1.15,
+        "width_m": 1.05,
+        "x_m": 0.0,
+        "coaming_height_m": 0.25,
+        "deck_id": "main",
+        "access": "ladder",
+        "open": true
+      }
+    ],
+    "companionways": [],
+    "lower_decks": [],
+    "partitions": [],
+    "clear_aisle_width_m": 1.1,
+    "passage_width_m": 1.0,
+    "standing_height_m": 1.85,
+    "evidence": [
+      {
+        "url": "https://www.rijksmuseum.nl/nl/collectie/object/Model-van-een-polakker--be50c8b05850324bf29aaac85ed74070",
+        "title": "Rijksmuseum NG-MC-674: Model of a Polacre / Daedalus",
+        "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+        "confirmed": [
+          "Museum model has lower/main decks and poop above a panelled cabin, an anchor and capstan.",
+          "Catalogue explicitly notes the same ship was variously registered as galliot, ship and schooner."
+        ],
+        "application": [
+          "A compact panelled merchant cabin and working cargo hold; supports stating historical type-name uncertainty.",
+          "Three-mast polacre rig is not copied: the stock-derived Galeoth keeps its existing two-mast square/lateen arrangement."
+        ]
+      },
+      {
+        "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-66355",
+        "title": "Royal Museums Greenwich SLR0394: small armed vessel construction analogue",
+        "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+        "confirmed": [
+          "Contemporary model is decked/equipped, with distinct raised after accommodation and glazed aft openings."
+        ],
+        "application": [
+          "General small armed-vessel access, structure and separate after compartment only."
+        ]
+      }
+    ],
+    "confidence": "Authored reconstruction informed by read source material, not a recovered stock game interior.",
+    "machinery": {
+      "capstan_at": -0.03
+    },
+    "notes": [
+      "Broad cargo hold -0.27L to +0.37L, floor -0.90 m; fitted side casks and planked storage outside the center aisle, with the foremost supported boxes and rope coils in a forward cable/stores zone from +0.15L.",
+      "After cabin -0.47L to -0.285L, sole 0.95 m, compact table/bench/berth/locker beneath 1.25 m quarterdeck.",
+      "Main 2.2 × 1.6 m cargo hatch +0.08L, small fore stores hatch +0.31L, and offset quarterdeck companion.",
+      "Sixteen-gun single battery start moves to -0.24L for bulkhead clearance; no oar benches or rowing gallery are invented.",
+      "Galeoth/galliot names cover differing historical rigs and hulls; these are explicit construction analogues, not an identified exact prototype.",
+      "The game-derived mixed rig, hull form and count remain decisive.",
+      "One offset descending companion enters the cabin through its forward door. No redundant hole is cut through the short cabin roof; this preserves useful furniture and working-deck area."
+    ],
+    "dimension_status": "Dimensions, frame spacing, compartments and fitting positions are authored estimates fitted to the preserved POTC-family hull. These sources do not document the proprietary retail model and do not establish exact stock interiors. No museum image is copied into the model or its textures.",
+    "fittings": [
+      "capstan",
+      "bilge_pump",
+      "bitts",
+      "belaying_pins_and_lead_blocks",
+      "catheads",
+      "anchors",
+      "stern_lights",
+      "table",
+      "bench",
+      "berth",
+      "locker"
+    ],
+    "research_path": "layout-research.json",
+    "compartments": [
+      {
+        "id": "merchant_cargo",
+        "deck_id": "hold",
+        "from": -0.27,
+        "to": 0.15,
+        "role": "coastal_cargo"
+      },
+      {
+        "id": "fore_cable_stores",
+        "deck_id": "hold",
+        "from": 0.15,
+        "to": 0.37,
+        "role": "cable_store"
+      }
+    ]
+  },
+  "detail_schema": 5
 }
