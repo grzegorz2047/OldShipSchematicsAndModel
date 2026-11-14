@@ -53,3 +53,45 @@ blender --background -t 1 --python potc/schooner/build.py
 ```
 
 Model jest **statycznym zasobem do pojedynków okrętów**. Raport obejmuje rzeczywistą geometrię, materiały, LOD, kolizję, osprzęt i zgodność eksportu z plikiem źródłowym. Nie przyznaje przejść dla sterowania, chodzenia, animacji, symulacji żagli ani nawigacji; te zachowania nie należą do dostarczanego zasobu.
+
+## Wnętrza v5: badania i autorski układ
+
+Układ pokładów, rzeczywiste otwory luków i przejścia, wręgi, ładownia oraz umeblowana kajuta są autorską rekonstrukcją opartą na badaniach. Nie odzyskano oryginalnego wnętrza z siatki gry. [`layout-research.json`](layout-research.json) oddziela twierdzenia źródeł od analogii i decyzji przestrzennych.
+
+Longer, more heavily armed game-family schooner with compact Sultana-inspired lower accommodation.
+
+- Central cargo/stores hold with side crew bunks and a clear fore-and-aft passage; a forward brick-protected galley is adapted from the survey-backed replica.
+- Aft window cabin has a chart desk, single bunk and chest, and is entered through a real companionway and doorway.
+- Octagonal horizontal wooden windlass, main cargo hatch, forward scuttle and twin mainmast pumps; a 3m carried boat is optional where final gun and rig clearance allows it.
+- Stern and bow detail remain modest; a removable-pot close-stool is an authored officer facility. No engines, modern flushing head or gas galley are imported.
+
+Przenośny stołek sanitarny w kajucie ma rzeczywisty otwór siedziska, uniesione wieko i wyjmowane naczynie; jest jawną adaptacją mebla z epoki. Nie poświadcza nieustalonego układu dziobowych ustępów pierwowzoru gry. Koje i palenisko są pełnymi elementami geometrii umieszczonymi w zmierzonych wolnych obszarach; łódź pozostaje opcjonalna.
+
+W tym układzie dwudziestodziałowego szkunera pominięto opcjonalną łódź długości 3 m: pełny kadłub, podkładki oraz wymagane przejścia nie mieszczą się w zmierzonych wolnych miejscach pomiędzy rzeczywistymi stanowiskami dział, takielunkiem i otwartymi lukami. Materiał o mniejszej Sultanie służy jako analogia wyposażenia; nie poświadcza identycznego rozplanowania większej rodziny gry.
+
+Materiały przeczytane dla tej rodziny:
+
+- [A Guide to the 1768 Reproduction Schooner Sultana, Sultana Projects/NPS (2003), pp.22–29](https://sultanaeducation.org/wp-content/uploads/2022/10/PocketGuidetoSultana.pdf): Sultana is much smaller and carried swivel guns. This asset retains the game-family dimensions, two-mast rig and twenty carriage guns. Modern head, engine, gas cooker and life floats are excluded; room positions are adapted.
+- [75ft Schooner-rigged Gun Vessel (1795), RMG ZAZ6174](https://www.rmg.co.uk/collections/objects/rmgc-object-85965): Useful period inboard/platform crosscheck; sliding keels and exact hull are not copied.
+- [Life on Board, Vasa Museum](https://www.vasamuseet.se/en/explore/vasa-history/life-on-board): A 1628 warship analogue for construction and room hierarchy only; no claim that a merchant held Vasa-scale decoration or its exact internal arrangement.
+- [The Vasa Museum in an hour: teacher guide, 2026, p.3](https://www.vasamuseet.se/globalassets/vasamuseet/dokument/skola/2026/t_teachers-guide-to-the-vasa-museum.pdf): Vasa is a 1628 warship. No identical sanitation arrangement or bow-head access is established for the POTC families.
+- [Close stool, Colonial Williamsburg museum 1960-948, England 1700–1725](https://emuseum.colonialwilliamsburg.org/objects/17170/close-stool): A period furniture analogue, not a maritime find or verified stock asset. Its placement in these game-family cabins is authored; it does not establish fifteenth-century caravel equipment.
+- [Geschiedenis van de 17e-eeuwse Batavia, Museum Batavialand](https://www.batavialand.nl/zien-en-doen/het-schip-batavia/geschiedenis-van-de-17e-eeuwse-batavia/): Does not establish stock-family boat dimensions or stowage. The 3m tender is an authored compact boat, not a claim to reproduce Batavia’s larger rescue boat.
+
+Położenia w `detailed_layout` biegną od rufy −0,5 do dziobu +0,5 długości; wysokości są w metrach nad wodnicą. Zachowano rodzinny kadłub, ożaglowanie, liczbę dział i dwa niezależne malowania. Geometria przejść statycznego modelu nie jest poświadczeniem sterowania postacią.
+
+## Widoki z aktualnego GLB
+
+Poniższe obrazy pochodzą z ponownie wczytanego eksportu wariantu `ochre`. Zbliżenie pokładu obejmuje pole 4,5 m; ujęcia zamkniętych wnętrz mają obiektyw 20 mm i kamerę 1,23 m nad miejscową podłogą. [Notatki z oględzin](detail-review.json) wiążą wszystkie sześć widoków z aktualnym modelem i obrazami.
+
+![Pokład, otwarty luk, schody i drewniana winda pozioma](previews/ochre/detail/deck_closeup.png)
+
+![Zamknięta ładownia: koja, wręgi i zejście](previews/ochre/detail/hold_interior.png)
+
+![Zamknięta kajuta z otwartymi drzwiami, koją i stołkiem sanitarnym](previews/ochre/detail/cabin_interior.png)
+
+**Przekrój kontrolny ładowni: wybrane warstwy ukryto wyłącznie w tym ujęciu.**
+
+![Kontrolny przekrój ładowni, koi i paleniska](previews/ochre/detail/hold_cutaway.png)
+
+[Kontrolny przekrój kajuty](previews/ochre/detail/cabin_cutaway.png) pokazuje umeblowanie wśród zachowanych wręg. Jasne oświetlenie kontrolne i ukryte warstwy przekrojów służą oględzinom konstrukcji; zamknięte pomieszczenia pokazano oddzielnie.

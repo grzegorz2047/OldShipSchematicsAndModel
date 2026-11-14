@@ -124,7 +124,9 @@
             "width_m": 6.2,
             "height_m": 4.2
           }
-        ]
+        ],
+        "heel_z_m": -0.6240371129032258,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
       },
       {
         "name": "main",
@@ -139,7 +141,9 @@
             "height_m": 17,
             "yaw_deg": 15
           }
-        ]
+        ],
+        "heel_z_m": -0.6350946504478372,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
       }
     ],
     "bowsprit": {
@@ -273,5 +277,118 @@
       "value": 1.25,
       "reason": "A real continuous head timber above the 0.85m-high gun opening: cannon centre 0.65–0.67m above floor, opening top 1.075–1.095m, leaving at least 0.155m of closed timber below the rail. No disconnected local roof patches."
     }
-  ]
+  ],
+  "detailed_layout": {
+    "kind": "decked",
+    "frame_spacing_m": 0.72,
+    "hold": {
+      "from": -0.295,
+      "to": 0.345,
+      "floor_z_m": -0.75,
+      "headroom_m": 2.4,
+      "minimum_headroom_m": 1.7
+    },
+    "cabin": {
+      "from": -0.46,
+      "to": -0.295,
+      "floor_z_m": -0.75,
+      "ceiling_deck_id": "main",
+      "cut_main_deck": false,
+      "door_width_m": 1.05,
+      "door_height_m": 1.88,
+      "minimum_headroom_m": 1.7
+    },
+    "hatch": {
+      "id": "main_cargo_hatch",
+      "at": 0.025,
+      "length_m": 2.7,
+      "width_m": 1.55,
+      "deck_id": "main",
+      "target_deck_id": "hold"
+    },
+    "extra_hatches": [
+      {
+        "id": "forward_scuttle",
+        "at": 0.295,
+        "length_m": 1.35,
+        "width_m": 1.0,
+        "deck_id": "main",
+        "target_deck_id": "hold"
+      }
+    ],
+    "companionways": [
+      {
+        "id": "aft_companionway",
+        "at": -0.23,
+        "length_m": 1.8,
+        "width_m": 1.1,
+        "deck_id": "main",
+        "target_deck_id": "hold"
+      }
+    ],
+    "lower_decks": [],
+    "partitions": [
+      {
+        "at": 0.265,
+        "deck_id": "hold",
+        "door_width_m": 1.05,
+        "door_height_m": 1.85
+      }
+    ],
+    "notes": [
+      "Central cargo/stores hold with side crew bunks and a clear fore-and-aft passage; a forward brick-protected galley is adapted from the survey-backed replica.",
+      "Aft window cabin has a chart desk, single bunk and chest, and is entered through a real companionway and doorway.",
+      "Octagonal horizontal wooden windlass, main cargo hatch, forward scuttle and twin mainmast pumps; a 3m carried boat is optional where final gun and rig clearance allows it.",
+      "Stern and bow detail remain modest; a removable-pot close-stool is an authored officer facility. No engines, modern flushing head or gas galley are imported."
+    ],
+    "evidence": [
+      {
+        "url": "https://sultanaeducation.org/wp-content/uploads/2022/10/PocketGuidetoSultana.pdf",
+        "supports": [
+          "The guide reproduces 21 June 1768 survey overlays of weather and lower decks.",
+          "It locates a hand-worked wooden windlass, cargo hatch, scuttles, pumps beside the mainmast, and aft companionway.",
+          "The stern cabin had windows, desk and bunk; the central hold had side bunks, with a brick-and-iron galley forward."
+        ],
+        "quality": "replica operator and NPS original-plan guide",
+        "limits": "Sultana is much smaller and carried swivel guns. This asset retains the game-family dimensions, two-mast rig and twenty carriage guns. Modern head, engine, gas cooker and life floats are excluded; room positions are adapted."
+      },
+      {
+        "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-85965",
+        "supports": [
+          "The 16 September 1795 plan records an inboard profile and half of an aft platform, signed by Henslow and Rule."
+        ],
+        "quality": "museum archival inboard plan",
+        "limits": "Useful period inboard/platform crosscheck; sliding keels and exact hull are not copied."
+      },
+      {
+        "url": "https://www.vasamuseet.se/en/explore/vasa-history/life-on-board",
+        "supports": [
+          "The museum identifies provision casks in the hold and a brick-lined cooking hearth forward of the mainmast.",
+          "Senior officers lived in aft sterncastle cabins with glass windows and furniture."
+        ],
+        "quality": "museum archaeological and historical interpretation",
+        "limits": "A 1628 warship analogue for construction and room hierarchy only; no claim that a merchant held Vasa-scale decoration or its exact internal arrangement."
+      }
+    ],
+    "historical_status": "Source-informed authored reconstruction; openings, proportions and furniture placement are not verified original game or historical interiors.",
+    "research_path": "layout-research.json",
+    "machinery": {
+      "windlass_at": 0.095
+    }
+  },
+  "interior_character": {
+    "type_reading": "Longer, more heavily armed game-family schooner with compact Sultana-inspired lower accommodation.",
+    "cargo_character": "coastal mixed provisions, compact lockers and side bunks",
+    "furniture_scope": [
+      "Central cargo/stores hold with side crew bunks and a clear fore-and-aft passage; a forward brick-protected galley is adapted from the survey-backed replica.",
+      "Aft window cabin has a chart desk, single bunk and chest, and is entered through a real companionway and doorway.",
+      "Octagonal horizontal wooden windlass, main cargo hatch, forward scuttle and twin mainmast pumps; a 3m carried boat is optional where final gun and rig clearance allows it.",
+      "Stern and bow detail remain modest; a removable-pot close-stool is an authored officer facility. No engines, modern flushing head or gas galley are imported."
+    ],
+    "modern_equipment_excluded": true
+  },
+  "fittings": {
+    "capstan": false
+  },
+  "detail_schema": 5
 }

@@ -1,0 +1,295 @@
+{
+  "schema": 1,
+  "research_date": "2026-11-14",
+  "scope": "Source-informed authored wooden interiors for five ordinary POTC families; no proprietary game mesh, original interior, or exact historical reconstruction claimed.",
+  "coordinate_convention": "longitudinal fractions -0.5 stern to +0.5 bow; vertical metres above waterline",
+  "family": "schooner",
+  "sources": [
+    {
+      "title": "A Guide to the 1768 Reproduction Schooner Sultana, Sultana Projects/NPS (2003), pp.22–29",
+      "url": "https://sultanaeducation.org/wp-content/uploads/2022/10/PocketGuidetoSultana.pdf",
+      "source_type": "replica operator and NPS original-plan guide",
+      "accessed": "2026-11-14",
+      "read": true,
+      "visual_pages_inspected": [
+        14,
+        15
+      ],
+      "claims": [
+        "The guide reproduces 21 June 1768 survey overlays of weather and lower decks.",
+        "It locates a hand-worked wooden windlass, cargo hatch, scuttles, pumps beside the mainmast, and aft companionway.",
+        "The stern cabin had windows, desk and bunk; the central hold had side bunks, with a brick-and-iron galley forward."
+      ],
+      "limits": "Sultana is much smaller and carried swivel guns. This asset retains the game-family dimensions, two-mast rig and twenty carriage guns. Modern head, engine, gas cooker and life floats are excluded; room positions are adapted.",
+      "applies_to": [
+        "The guide reproduces 21 June 1768 survey overlays of weather and lower decks.",
+        "It locates a hand-worked wooden windlass, cargo hatch, scuttles, pumps beside the mainmast, and aft companionway.",
+        "The stern cabin had windows, desk and bunk; the central hold had side bunks, with a brick-and-iron galley forward."
+      ]
+    },
+    {
+      "title": "75ft Schooner-rigged Gun Vessel (1795), RMG ZAZ6174",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-85965",
+      "source_type": "museum archival inboard plan",
+      "accessed": "2026-11-14",
+      "read": true,
+      "image_inspected": "https://collections.rmg.co.uk/media/415/9/j0808.jpg",
+      "claims": [
+        "The 16 September 1795 plan records an inboard profile and half of an aft platform, signed by Henslow and Rule."
+      ],
+      "limits": "Useful period inboard/platform crosscheck; sliding keels and exact hull are not copied.",
+      "applies_to": [
+        "The 16 September 1795 plan records an inboard profile and half of an aft platform, signed by Henslow and Rule."
+      ]
+    },
+    {
+      "title": "Life on Board, Vasa Museum",
+      "url": "https://www.vasamuseet.se/en/explore/vasa-history/life-on-board",
+      "source_type": "museum archaeological and historical interpretation",
+      "accessed": "2026-11-14",
+      "read": true,
+      "claims": [
+        "The museum identifies provision casks in the hold and a brick-lined cooking hearth forward of the mainmast.",
+        "Senior officers lived in aft sterncastle cabins with glass windows and furniture."
+      ],
+      "limits": "A 1628 warship analogue for construction and room hierarchy only; no claim that a merchant held Vasa-scale decoration or its exact internal arrangement.",
+      "applies_to": [
+        "The museum identifies provision casks in the hold and a brick-lined cooking hearth forward of the mainmast.",
+        "Senior officers lived in aft sterncastle cabins with glass windows and furniture."
+      ]
+    },
+    {
+      "title": "The Vasa Museum in an hour: teacher guide, 2026, p.3",
+      "url": "https://www.vasamuseet.se/globalassets/vasamuseet/dokument/skola/2026/t_teachers-guide-to-the-vasa-museum.pdf",
+      "source_type": "museum archaeology education guide",
+      "accessed": "2026-11-14",
+      "read": true,
+      "claims": [
+        "The museum describes officers using cabin chamber pots and crew using two open-bottom box toilets in the beakhead."
+      ],
+      "applies_to": [
+        "Removable cabin pot and distinction from a true external bow head."
+      ],
+      "limits": "Vasa is a 1628 warship. No identical sanitation arrangement or bow-head access is established for the POTC families."
+    },
+    {
+      "title": "Close stool, Colonial Williamsburg museum 1960-948, England 1700–1725",
+      "url": "https://emuseum.colonialwilliamsburg.org/objects/17170/close-stool",
+      "source_type": "museum furniture catalogue",
+      "accessed": "2026-11-14",
+      "read": true,
+      "claims": [
+        "The early-eighteenth-century stool has a hinged top revealing a pot frame and loose seat."
+      ],
+      "applies_to": [
+        "Authored wooden close-stool with raised lid, real seat void and removable pot."
+      ],
+      "limits": "A period furniture analogue, not a maritime find or verified stock asset. Its placement in these game-family cabins is authored; it does not establish fifteenth-century caravel equipment."
+    },
+    {
+      "title": "Geschiedenis van de 17e-eeuwse Batavia, Museum Batavialand",
+      "url": "https://www.batavialand.nl/zien-en-doen/het-schip-batavia/geschiedenis-van-de-17e-eeuwse-batavia/",
+      "source_type": "museum seventeenth-century merchant history",
+      "accessed": "2026-11-14",
+      "read": true,
+      "claims": [
+        "The museum recounts Pelsaert travelling in a small boat to seek help after Batavia was wrecked."
+      ],
+      "applies_to": [
+        "A small ship boat as period working equipment; the compact model is an authored carried-tender interpretation."
+      ],
+      "limits": "Does not establish stock-family boat dimensions or stowage. The 3m tender is an authored compact boat, not a claim to reproduce Batavia’s larger rescue boat."
+    }
+  ],
+  "type_reading": "Longer, more heavily armed game-family schooner with compact Sultana-inspired lower accommodation.",
+  "inferred_layout": [
+    "Central cargo/stores hold with side crew bunks and a clear fore-and-aft passage; a forward brick-protected galley is adapted from the survey-backed replica.",
+    "Aft window cabin has a chart desk, single bunk and chest, and is entered through a real companionway and doorway.",
+    "Octagonal horizontal wooden windlass, main cargo hatch, forward scuttle and twin mainmast pumps; a 3m carried boat is optional where final gun and rig clearance allows it.",
+    "Stern and bow detail remain modest; a removable-pot close-stool is an authored officer facility. No engines, modern flushing head or gas galley are imported."
+  ],
+  "cargo_character": "coastal mixed provisions, compact lockers and side bunks",
+  "authored_layout": {
+    "kind": "decked",
+    "frame_spacing_m": 0.72,
+    "hold": {
+      "from": -0.295,
+      "to": 0.345,
+      "floor_z_m": -0.75,
+      "headroom_m": 2.4,
+      "minimum_headroom_m": 1.7
+    },
+    "cabin": {
+      "from": -0.46,
+      "to": -0.295,
+      "floor_z_m": -0.75,
+      "ceiling_deck_id": "main",
+      "cut_main_deck": false,
+      "door_width_m": 1.05,
+      "door_height_m": 1.88,
+      "minimum_headroom_m": 1.7
+    },
+    "hatch": {
+      "id": "main_cargo_hatch",
+      "at": 0.025,
+      "length_m": 2.7,
+      "width_m": 1.55,
+      "deck_id": "main",
+      "target_deck_id": "hold"
+    },
+    "extra_hatches": [
+      {
+        "id": "forward_scuttle",
+        "at": 0.295,
+        "length_m": 1.35,
+        "width_m": 1.0,
+        "deck_id": "main",
+        "target_deck_id": "hold"
+      }
+    ],
+    "companionways": [
+      {
+        "id": "aft_companionway",
+        "at": -0.23,
+        "length_m": 1.8,
+        "width_m": 1.1,
+        "deck_id": "main",
+        "target_deck_id": "hold"
+      }
+    ],
+    "lower_decks": [],
+    "partitions": [
+      {
+        "at": 0.265,
+        "deck_id": "hold",
+        "door_width_m": 1.05,
+        "door_height_m": 1.85
+      }
+    ],
+    "notes": [
+      "Central cargo/stores hold with side crew bunks and a clear fore-and-aft passage; a forward brick-protected galley is adapted from the survey-backed replica.",
+      "Aft window cabin has a chart desk, single bunk and chest, and is entered through a real companionway and doorway.",
+      "Octagonal horizontal wooden windlass, main cargo hatch, forward scuttle and twin mainmast pumps; a 3m carried boat is optional where final gun and rig clearance allows it.",
+      "Stern and bow detail remain modest; a removable-pot close-stool is an authored officer facility. No engines, modern flushing head or gas galley are imported."
+    ],
+    "evidence": [
+      {
+        "url": "https://sultanaeducation.org/wp-content/uploads/2022/10/PocketGuidetoSultana.pdf",
+        "supports": [
+          "The guide reproduces 21 June 1768 survey overlays of weather and lower decks.",
+          "It locates a hand-worked wooden windlass, cargo hatch, scuttles, pumps beside the mainmast, and aft companionway.",
+          "The stern cabin had windows, desk and bunk; the central hold had side bunks, with a brick-and-iron galley forward."
+        ],
+        "quality": "replica operator and NPS original-plan guide",
+        "limits": "Sultana is much smaller and carried swivel guns. This asset retains the game-family dimensions, two-mast rig and twenty carriage guns. Modern head, engine, gas cooker and life floats are excluded; room positions are adapted."
+      },
+      {
+        "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-85965",
+        "supports": [
+          "The 16 September 1795 plan records an inboard profile and half of an aft platform, signed by Henslow and Rule."
+        ],
+        "quality": "museum archival inboard plan",
+        "limits": "Useful period inboard/platform crosscheck; sliding keels and exact hull are not copied."
+      },
+      {
+        "url": "https://www.vasamuseet.se/en/explore/vasa-history/life-on-board",
+        "supports": [
+          "The museum identifies provision casks in the hold and a brick-lined cooking hearth forward of the mainmast.",
+          "Senior officers lived in aft sterncastle cabins with glass windows and furniture."
+        ],
+        "quality": "museum archaeological and historical interpretation",
+        "limits": "A 1628 warship analogue for construction and room hierarchy only; no claim that a merchant held Vasa-scale decoration or its exact internal arrangement."
+      }
+    ],
+    "historical_status": "Source-informed authored reconstruction; openings, proportions and furniture placement are not verified original game or historical interiors.",
+    "research_path": "layout-research.json",
+    "machinery": {
+      "windlass_at": 0.095
+    }
+  },
+  "ship_id": "schooner",
+  "decisions": [
+    {
+      "feature": "cargo_and_stores",
+      "basis": "Central cargo/stores hold with side crew bunks and a clear fore-and-aft passage; a forward brick-protected galley is adapted from the survey-backed replica. This is an adapted, authored spatial decision; cited analogues establish the feature class rather than these coordinates.",
+      "source_urls": [
+        "https://sultanaeducation.org/wp-content/uploads/2022/10/PocketGuidetoSultana.pdf"
+      ],
+      "confidence": "inferred authored reconstruction"
+    },
+    {
+      "feature": "aft_accommodation",
+      "basis": "Aft window cabin has a chart desk, single bunk and chest, and is entered through a real companionway and doorway. This is an adapted, authored spatial decision; cited analogues establish the feature class rather than these coordinates.",
+      "source_urls": [
+        "https://sultanaeducation.org/wp-content/uploads/2022/10/PocketGuidetoSultana.pdf"
+      ],
+      "confidence": "inferred authored reconstruction"
+    },
+    {
+      "feature": "access_and_working_levels",
+      "basis": "Octagonal horizontal wooden windlass, main cargo hatch, forward scuttle and twin mainmast pumps; a 3m carried boat is optional where final gun and rig clearance allows it. This is an adapted, authored spatial decision; cited analogues establish the feature class rather than these coordinates.",
+      "source_urls": [
+        "https://sultanaeducation.org/wp-content/uploads/2022/10/PocketGuidetoSultana.pdf",
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-85965"
+      ],
+      "confidence": "inferred authored reconstruction"
+    },
+    {
+      "feature": "period_equipment_and_joinery",
+      "basis": "Stern and bow detail remain modest; a removable-pot close-stool is an authored officer facility. No engines, modern flushing head or gas galley are imported. This is an adapted, authored spatial decision; cited analogues establish the feature class rather than these coordinates.",
+      "source_urls": [
+        "https://sultanaeducation.org/wp-content/uploads/2022/10/PocketGuidetoSultana.pdf"
+      ],
+      "confidence": "inferred authored reconstruction"
+    },
+    {
+      "feature": "officer_sanitation",
+      "basis": "A real open seat frame and removable pot are placed in a measured clear cabin footprint. This is an authored period-furniture adaptation; an inaccessible decorative beakhead seat is not claimed.",
+      "source_urls": [
+        "https://www.vasamuseet.se/globalassets/vasamuseet/dokument/skola/2026/t_teachers-guide-to-the-vasa-museum.pdf",
+        "https://emuseum.colonialwilliamsburg.org/objects/17170/close-stool"
+      ],
+      "confidence": "inferred authored reconstruction"
+    },
+    {
+      "feature": "carried_tender",
+      "basis": "A 3m hollow timber boat with adult-scale thwarts, oars and real skids is an optional authored fitting, accepted only where measured final gun/rig geometry leaves a supported bay clear of access. Its compact dimensions and location are authored against measured clear geometry, not copied from a stock mesh or claimed as Batavia dimensions.",
+      "source_urls": [
+        "https://www.batavialand.nl/zien-en-doen/het-schip-batavia/geschiedenis-van-de-17e-eeuwse-batavia/"
+      ],
+      "confidence": "inferred authored reconstruction"
+    },
+    {
+      "feature": "carried_tender_status",
+      "basis": "The optional three-metre carried tender is omitted on this authored twenty-carriage-gun Schooner: its full supported hull, skids and access clearances do not fit the measured final deck bays between actual gun/rig stations and working hatches. The smaller Sultana survey is an equipment analogue, not evidence that this larger armed game-family deck can retain its exact arrangement.",
+      "source_urls": [
+        "https://sultanaeducation.org/wp-content/uploads/2022/10/PocketGuidetoSultana.pdf",
+        "https://www.batavialand.nl/zien-en-doen/het-schip-batavia/geschiedenis-van-de-17e-eeuwse-batavia/"
+      ]
+    },
+    {
+      "feature": "bearing_end_clearance",
+      "basis": "Selected hold, cabin-sole and forecastle end-bearing stations are inset 0.12 m within the full floor boundaries. This gives separate 140 mm beams and 130 mm knees genuine clearance at adjoining soles and keeps end knees outside the forecastle breakwall. The measured assembly correction is authored; the cited museum/survey source supplies period timber-construction context, not these dimensions or stations.",
+      "source_urls": [
+        "https://sultanaeducation.org/wp-content/uploads/2022/10/PocketGuidetoSultana.pdf"
+      ]
+    },
+    {
+      "feature": "low_forecastle_support",
+      "basis": "The retained game-family forecastle rises only 0.28 m. Its authored compact triangular knees bear on the measured main sole, while actual upper beam ends receive shallow fitted notches around the existing main waterways. This preserves both deck surfaces and gives each timber real clearance; the survey source supports hand-worked timber ship construction rather than these specific dimensions.",
+      "source_urls": [
+        "https://sultanaeducation.org/wp-content/uploads/2022/10/PocketGuidetoSultana.pdf"
+      ]
+    }
+  ],
+  "limitations": [
+    "Source-informed authored wooden interiors for five ordinary POTC families; no proprietary game mesh, original interior, or exact historical reconstruction claimed.",
+    "Longer, more heavily armed game-family schooner with compact Sultana-inspired lower accommodation.",
+    "Sultana is much smaller and carried swivel guns. This asset retains the game-family dimensions, two-mast rig and twenty carriage guns. Modern head, engine, gas cooker and life floats are excluded; room positions are adapted.",
+    "Useful period inboard/platform crosscheck; sliding keels and exact hull are not copied.",
+    "A 1628 warship analogue for construction and room hierarchy only; no claim that a merchant held Vasa-scale decoration or its exact internal arrangement.",
+    "Vasa is a 1628 warship. No identical sanitation arrangement or bow-head access is established for the POTC families.",
+    "A period furniture analogue, not a maritime find or verified stock asset. Its placement in these game-family cabins is authored; it does not establish fifteenth-century caravel equipment.",
+    "Does not establish stock-family boat dimensions or stowage. The 3m tender is an authored compact boat, not a claim to reproduce Batavia’s larger rescue boat."
+  ]
+}
