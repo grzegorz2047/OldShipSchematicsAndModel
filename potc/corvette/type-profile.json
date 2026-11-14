@@ -57,5 +57,10 @@
       "kind": "Repository guide",
       "claim": "Square/lateen/gaff typology and spar proportion starting points; later brig is not the reference Snow."
     }
+  ],
+  "interior_distinction": "Flush main deck with one 32-gun battery, three square-rigged masts and no castles. Main hatch enters a continuous non-battery berth deck whose centered level door opens into the real cabin; framed provision hold remains below.",
+  "interior_sources": [
+    "https://www.rmg.co.uk/collections/objects/rmgc-object-83435",
+    "https://www.rmg.co.uk/collections/objects/rmgc-object-83436"
   ]
 }
