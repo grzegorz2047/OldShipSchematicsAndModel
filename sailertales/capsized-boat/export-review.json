@@ -1,0 +1,116 @@
+{
+  "schema": 1,
+  "source_triangles": 26972,
+  "export_triangles": 26972,
+  "triangle_match": true,
+  "views": {
+    "hero": {
+      "foreground_pixels": 52646,
+      "source_mean_rgb": [
+        0.5147722959518433,
+        0.4172900915145874,
+        0.3205825090408325
+      ],
+      "export_mean_rgb": [
+        0.514773428440094,
+        0.41728994250297546,
+        0.32058224081993103
+      ],
+      "brightness_fraction": 2.664029803762588e-07,
+      "maximum_channel_share_difference": 6.556510925292969e-07,
+      "passed": true
+    },
+    "deck": {
+      "foreground_pixels": 38567,
+      "source_mean_rgb": [
+        0.5336930155754089,
+        0.431110143661499,
+        0.335054486989975
+      ],
+      "export_mean_rgb": [
+        0.5336930751800537,
+        0.4311090409755707,
+        0.3350551426410675
+      ],
+      "brightness_fraction": 1.6337602873713257e-06,
+      "maximum_channel_share_difference": 7.748603820800781e-07,
+      "passed": true
+    },
+    "seat": {
+      "foreground_pixels": 327656,
+      "source_mean_rgb": [
+        0.48454147577285767,
+        0.3925188481807709,
+        0.3068450093269348
+      ],
+      "export_mean_rgb": [
+        0.48454076051712036,
+        0.3925182521343231,
+        0.3068436086177826
+      ],
+      "brightness_fraction": 1.6740371137880498e-06,
+      "maximum_channel_share_difference": 5.960464477539062e-07,
+      "passed": true
+    }
+  },
+  "cameras": {
+    "hero": {
+      "target": [
+        -0.017156273126602173,
+        0.9367068409919739,
+        -0.2550660967826843
+      ],
+      "position": [
+        9.938880920410156,
+        12.31503677368164,
+        14.916040420532227
+      ],
+      "ortho": true,
+      "scale": 8.782833531498909,
+      "hide_rig": false
+    },
+    "deck": {
+      "target": [
+        0.052135616540908813,
+        0.8550496697425842,
+        -0.7361477613449097
+      ],
+      "position": [
+        6.565804958343506,
+        10.625553131103516,
+        17.176443099975586
+      ],
+      "ortho": true,
+      "scale": 10.683674335479736,
+      "hide_rig": false
+    },
+    "seat": {
+      "target": [
+        0.4000000059604645,
+        0.0,
+        0.22250187397003174
+      ],
+      "position": [
+        1.6999999284744263,
+        1.899999976158142,
+        2.0225019454956055
+      ],
+      "ortho": true,
+      "scale": 2.6,
+      "hide_rig": false,
+      "seat_locator": true
+    }
+  },
+  "thresholds": {
+    "brightness_fraction": 0.1,
+    "channel_share_difference": 0.04
+  },
+  "scope": "Actual exported GLB vs packed source under identical camera/light. Deck view hides tagged rig in both.",
+  "presentation": "review lighting only; interior views include a camera-area fill",
+  "sha256": {
+    "model/ship.blend": "9ea38a1dee1d823607cefde487c898f5f63dff03047b0169955487647f822380",
+    "model/ship.glb": "04a1233aa404b4f1a18274a94b44f075e826337d36a0838dae508b765df2837c"
+  },
+  "passed": true,
+  "presentation_overlay": "Orange dot in seat view identifies the actual seat anchor; temporary display locator only, absent from GLBs and packed authoring scene."
+}

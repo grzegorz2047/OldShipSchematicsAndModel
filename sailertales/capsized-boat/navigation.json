@@ -1,0 +1,9 @@
+{
+  "schema": 2,
+  "units": "metres",
+  "axes": "glTF +X port, +Y up, +Z bow",
+  "routes": [],
+  "source_commit": "ea77e560ba4668c9dda55433813addbdb2f50176",
+  "walkable": false,
+  "interaction_mode": "actor rides explicit seat/cling anchors"
+}

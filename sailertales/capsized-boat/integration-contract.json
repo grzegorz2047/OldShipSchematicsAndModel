@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "game_type": "capsized_boat",
+  "root_axes": "metres, +Y up, +Z bow; origin calm water",
+  "capsizing": "already baked; do not apply an additional pi rotation",
+  "actor_branches": {
+    "sit": {
+      "condition": "ctx.vars.ojciec === 'kil'",
+      "node": "seat_anchor",
+      "pose": "sit",
+      "wave": true,
+      "yaw": 1.5707963267948966,
+      "follow_prop_heave": true,
+      "follow_prop_pitch_roll": true
+    },
+    "cling": {
+      "condition": "ctx.vars.ojciec !== 'kil'",
+      "node": "cling_anchor",
+      "pose": "cling",
+      "yaw": -1.5707963267948966,
+      "source_local_gltf": [
+        1.15,
+        -1.05,
+        0
+      ],
+      "follow_prop_heave": false,
+      "follow_prop_pitch_roll": false
+    }
+  },
+  "float": {
+    "lift": 0,
+    "span": 2.4,
+    "beam": 0.7,
+    "bob": 0.03,
+    "sway": 0.09,
+    "tilt": 0.7
+  },
+  "mission_instances": {
+    "a1_3": {
+      "id": "lodz_ojca",
+      "yaw_rad": 0.6,
+      "drift": "windTo * 0.2 m/s"
+    },
+    "dev_plac_zabaw": {
+      "yaw_rad": 0.6
+    }
+  },
+  "adapter_required": [
+    "Expose seat_anchor coordinates relative to the prop root as prop.seat; apply the prop/world transform only through actors.ride.",
+    "Use source floatStep once at the prop root; adjunct oar, rope and cloth move with the same root.",
+    "For sit use actor ride with heave/pitch/roll; for cling follow source horizontal pose without heave/tilt.",
+    "Do not use obsolete seat fallback (0.45,0.85,0).",
+    "The source floating prop is non-solid; delivered collision meshes are optional query/picking geometry, not a standing deck."
+  ]
+}
