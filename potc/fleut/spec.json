@@ -1,0 +1,292 @@
+{
+  "schema": 4,
+  "id": "fleut",
+  "family": "fleut",
+  "label": "Fleut",
+  "asset_type": "static-duel-ship",
+  "game": {
+    "title": "Pirates of the Caribbean",
+    "year": 2003,
+    "class": 4,
+    "guns": 20,
+    "source_model_ids": [
+      "Fleut1",
+      "Fleut2"
+    ]
+  },
+  "game_class": 4,
+  "gun_count": 20,
+  "length": 35.6,
+  "beam": 10.6,
+  "draft": 3.7,
+  "freeboard": 2.9,
+  "dimensions_provenance": "Authored guide-based reconstruction; no retail dimensions or scale have been established.",
+  "hull": {
+    "profile": [
+      [
+        -0.5,
+        0.3,
+        1.02,
+        1.12
+      ],
+      [
+        -0.43,
+        0.64,
+        0.48,
+        0.62
+      ],
+      [
+        -0.26,
+        0.97,
+        0.08,
+        0.22
+      ],
+      [
+        -0.02,
+        1,
+        0,
+        0.02
+      ],
+      [
+        0.22,
+        0.98,
+        0.12,
+        0
+      ],
+      [
+        0.39,
+        0.66,
+        0.56,
+        0.28
+      ],
+      [
+        0.5,
+        0.015,
+        1.5,
+        0.75
+      ]
+    ],
+    "section_power": 0.6,
+    "stern_style": "round",
+    "plank_rows": 22,
+    "bulwark_height": 1.25,
+    "quarterdeck": {
+      "from": -0.5,
+      "to": -0.29,
+      "height_m": 2.45
+    },
+    "forecastle": {
+      "from": 0.36,
+      "to": 0.49,
+      "height_m": 0.65
+    },
+    "deck_beam_factor": 0.72
+  },
+  "guns": {
+    "rows": [
+      {
+        "pairs": 10,
+        "z_m": 3.55,
+        "from": -0.35,
+        "to": 0.33
+      }
+    ]
+  },
+  "rig": {
+    "masts": [
+      {
+        "name": "fore",
+        "at": 0.27,
+        "height_m": 27,
+        "rake": 0.015,
+        "sails": [
+          {
+            "kind": "square",
+            "z": 0.47,
+            "width_m": 13.8,
+            "height_m": 6.4
+          },
+          {
+            "kind": "square",
+            "z": 0.76,
+            "width_m": 10.5,
+            "height_m": 5.2
+          },
+          {
+            "kind": "square",
+            "z": 0.94,
+            "width_m": 7,
+            "height_m": 3.4
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "at": -0.02,
+        "height_m": 30,
+        "rake": 0.025,
+        "sails": [
+          {
+            "kind": "square",
+            "z": 0.47,
+            "width_m": 15.8,
+            "height_m": 7
+          },
+          {
+            "kind": "square",
+            "z": 0.76,
+            "width_m": 12,
+            "height_m": 5.7
+          },
+          {
+            "kind": "square",
+            "z": 0.96,
+            "width_m": 8,
+            "height_m": 3.7
+          }
+        ]
+      },
+      {
+        "name": "mizzen",
+        "at": -0.33,
+        "height_m": 21,
+        "rake": 0.03,
+        "sails": [
+          {
+            "kind": "lateen",
+            "z": 0.84,
+            "width_m": 10.8,
+            "height_m": 11.8,
+            "yaw_deg": 25
+          }
+        ]
+      }
+    ],
+    "bowsprit": {
+      "length_m": 6.2,
+      "angle_deg": 24
+    },
+    "pose_scope": "Single authored static presentation pose; yaw values do not certify a sail-trim range."
+  },
+  "palettes": [
+    {
+      "id": "ochre",
+      "paintHull": [
+        0.38132601143253014,
+        0.20155625379439707,
+        0.03688945040110004,
+        1.0
+      ],
+      "paintTrim": [
+        0.05126945837404324,
+        0.08021982031446832,
+        0.07036009569659588,
+        1.0
+      ]
+    },
+    {
+      "id": "navy",
+      "paintHull": [
+        0.021219010376003555,
+        0.05780543019106723,
+        0.11443537382697373,
+        1.0
+      ],
+      "paintTrim": [
+        0.5711248294648731,
+        0.35153259950043936,
+        0.09758734714186246,
+        1.0
+      ]
+    }
+  ],
+  "paint_materials": [
+    "paint_hull",
+    "paint_trim"
+  ],
+  "family_distinctions": [
+    "Pear-shaped cargo plan, narrow round stern and strong tumblehome to 72 percent deck beam",
+    "High poop above a deep full cargo body",
+    "Square fore/main and lateen mizzen; ten gun pairs"
+  ],
+  "source_evidence": [
+    {
+      "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c#L2732-L2752",
+      "supports": [
+        "family/model ID",
+        "game class",
+        "cannon quantity"
+      ],
+      "quality": "Stock-derived modern script tree, not asserted byte-identical retail dump"
+    },
+    {
+      "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+      "supports": [
+        "ordinary family roster",
+        "game class",
+        "cannon quantity"
+      ],
+      "quality": "Contemporary 2004 player table"
+    },
+    {
+      "url": "https://github.com/grzegorz2047/OldShipSchematicsAndModel/blob/2e6f7e922e95396722376d42f3e2e0a12256029e/docs/en/12-designing-other-ships.md",
+      "supports": [
+        "hull and spar parameter chain",
+        "three-mast and schooner reconstruction method"
+      ],
+      "quality": "Construction guide; no retail model geometry"
+    }
+  ],
+  "interpretation": "The stock Fleut family is interpreted as a rounded-stern cargo fluyt. The deck narrowing, hull shape and rig are original guide-based reconstruction rather than measurements of a retail mesh.",
+  "scope": "Original procedural static duel asset with two authored paint variants. No original proprietary mesh or texture imported. No navigation, controller, ship-motion or historical-certification claim.",
+  "game_source": {
+    "scripts_commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+    "scripts_sha256": {
+      "Ships_init.c": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde",
+      "ships.h": "a267dbc5d3fc901104b86b53ffdab06255545a8a7ee3725801c0d9dc9037ba74"
+    },
+    "evidence": [
+      {
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c#L2732-L2752",
+        "supports": [
+          "family/model ID",
+          "game class",
+          "cannon quantity"
+        ],
+        "quality": "Stock-derived modern script tree, not asserted byte-identical retail dump"
+      },
+      {
+        "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+        "supports": [
+          "ordinary family roster",
+          "game class",
+          "cannon quantity"
+        ],
+        "quality": "Contemporary 2004 player table"
+      },
+      {
+        "url": "https://github.com/grzegorz2047/OldShipSchematicsAndModel/blob/2e6f7e922e95396722376d42f3e2e0a12256029e/docs/en/12-designing-other-ships.md",
+        "supports": [
+          "hull and spar parameter chain",
+          "three-mast and schooner reconstruction method"
+        ],
+        "quality": "Construction guide; no retail model geometry"
+      }
+    ],
+    "retail_dimensions_established": false,
+    "interpretation": "The stock Fleut family is interpreted as a rounded-stern cargo fluyt. The deck narrowing, hull shape and rig are original guide-based reconstruction rather than measurements of a retail mesh.",
+    "source_geometry_imported": false
+  },
+  "construction_adaptations": [
+    {
+      "parameter": "guns.rows.0.to",
+      "value": 0.33,
+      "reason": "Keep the real cannon carriage and wheel envelope clear of the forecastle break; authored construction placement, not a recovered retail dimension."
+    },
+    {
+      "parameter": "hull.bulwark_height",
+      "value": 1.25,
+      "reason": "A real continuous head timber above the 0.85m-high gun opening: cannon centre 0.65–0.67m above floor, opening top 1.075–1.095m, leaving at least 0.155m of closed timber below the rail. No disconnected local roof patches."
+    }
+  ]
+}
