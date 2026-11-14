@@ -1,0 +1,1809 @@
+{
+  "schema": 4,
+  "id": "tartane",
+  "construction": "Authored procedural guide-based reconstruction. Source game stats determine class and gun counts; metre dimensions and hull offsets are estimates, not extracted stock meshes.",
+  "source": {
+    "provenance": {
+      "method": "Original procedural construction from authored offsets following repository guide chapters 02\u201309 and 12\u201313. No binary game meshes or proprietary textures imported.",
+      "dimension_status": "Authored reconstruction: dimensions are design choices, not measured stock POTC2003 model dimensions.",
+      "source_evidence": [
+        {
+          "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c",
+          "kind": "stock-derived public script",
+          "claims": [
+            "Ordinary game family, class and cannon count only."
+          ],
+          "commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+          "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+        },
+        {
+          "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/SEA_AI/walk/Tartane_walk.c",
+          "kind": "stock-derived public locator script",
+          "claims": [
+            "Qualitative deck/mast layout only; no official metre dimensions."
+          ]
+        },
+        {
+          "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+          "kind": "2004 player data table",
+          "claims": [
+            "Contemporary ordinary ship roster and gun counts."
+          ]
+        },
+        {
+          "url": "https://www.piratesahoy.net/threads/ships-and-their-use.2077/",
+          "kind": "contemporary stock/mod discussion",
+          "claims": [
+            "Stock family role and distinction from mod variants."
+          ]
+        },
+        {
+          "url": "https://www.piratesahoy.net/threads/rethinking-ships-in-potc-new-project.2769/",
+          "kind": "2004 stock discussion",
+          "claims": [
+            "Type-name uncertainty and small single-mast Tartane cue; historical dictionary is insufficient to establish game model."
+          ]
+        }
+      ],
+      "limitations": "Stock small fishing-boat role and one-mast status. Sail dimensions, deck arrangement and line offsets are authored reconstruction."
+    },
+    "source_evidence": [
+      {
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c",
+        "kind": "stock-derived public script",
+        "claims": [
+          "Ordinary game family, class and cannon count only."
+        ],
+        "commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+        "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+      },
+      {
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/SEA_AI/walk/Tartane_walk.c",
+        "kind": "stock-derived public locator script",
+        "claims": [
+          "Qualitative deck/mast layout only; no official metre dimensions."
+        ]
+      },
+      {
+        "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+        "kind": "2004 player data table",
+        "claims": [
+          "Contemporary ordinary ship roster and gun counts."
+        ]
+      },
+      {
+        "url": "https://www.piratesahoy.net/threads/ships-and-their-use.2077/",
+        "kind": "contemporary stock/mod discussion",
+        "claims": [
+          "Stock family role and distinction from mod variants."
+        ]
+      },
+      {
+        "url": "https://www.piratesahoy.net/threads/rethinking-ships-in-potc-new-project.2769/",
+        "kind": "2004 stock discussion",
+        "claims": [
+          "Type-name uncertainty and small single-mast Tartane cue; historical dictionary is insufficient to establish game model."
+        ]
+      }
+    ],
+    "distinctive_silhouette": "One lateen mast, low pointed ends, modest sheer and no battery. A real central open well, lowered floor and two thwarts replace the uninterrupted deck.",
+    "static_scope": {
+      "animated_controls": false,
+      "walkability": false,
+      "navigation_routes": false,
+      "collision": "Shared exact static concave hull/deck solids; no playable deck claim."
+    },
+    "palette_contract": {
+      "changed": [
+        "paint_hull",
+        "paint_trim"
+      ],
+      "deliberately_unchanged": [
+        "natural deck timber",
+        "mast and spar timber",
+        "tarred standing rigging",
+        "natural running rope",
+        "linen cloth",
+        "iron guns and fittings"
+      ]
+    }
+  },
+  "authored_profile": {
+    "profile": [
+      [
+        -0.5,
+        0.025,
+        0.95,
+        0.3
+      ],
+      [
+        -0.4,
+        0.52,
+        0.29,
+        0.12
+      ],
+      [
+        -0.25,
+        0.86,
+        0.07,
+        0.025
+      ],
+      [
+        0,
+        1.0,
+        0,
+        0
+      ],
+      [
+        0.25,
+        0.82,
+        0.12,
+        0.08
+      ],
+      [
+        0.4,
+        0.43,
+        0.53,
+        0.28
+      ],
+      [
+        0.5,
+        0.025,
+        1.25,
+        0.58
+      ]
+    ],
+    "section_power": 0.72,
+    "stern_style": "pointed",
+    "plank_rows": 10,
+    "bulwark_height": 0.34,
+    "deck_beam_factor": 0.94,
+    "cockpit": {
+      "from": -0.25,
+      "to": 0.25,
+      "width_factor": 0.65,
+      "floor_z_m": -0.2,
+      "benches": true
+    }
+  },
+  "rig": {
+    "mast_count": 1,
+    "masts": [
+      {
+        "node": "main",
+        "at_fraction": 0.06,
+        "height_above_deck_m": 7.4,
+        "base_blender_m": [
+          0.0,
+          -0.5400000214576721,
+          0.7259636521339417
+        ],
+        "heel_blender_m": [
+          0.0,
+          -0.5770385265350342,
+          -0.20000000298023224
+        ],
+        "top_blender_m": [
+          0.0,
+          -0.24400000274181366,
+          8.12596321105957
+        ]
+      }
+    ],
+    "sails": [
+      {
+        "node": "main_lateen_00",
+        "kind": "lateen",
+        "corners_blender_m": [
+          [
+            -1.162445306777954,
+            -3.868239402770996,
+            2.9419636726379395
+          ],
+          [
+            2.3875482082366943,
+            3.744746208190918,
+            7.533963680267334
+          ],
+          [
+            2.636047601699829,
+            4.277655124664307,
+            1.933963656425476
+          ]
+        ]
+      }
+    ],
+    "spars": [
+      "main",
+      "main_lateen_00_lateen_yard",
+      "bowsprit"
+    ],
+    "ropes": [
+      "main_lateen_00_bolt_0",
+      "main_lateen_00_bolt_1",
+      "main_lateen_00_bolt_2",
+      "main_lateen_00_head_tie_0",
+      "main_lateen_00_head_tie_1",
+      "main_lateen_00_halyard",
+      "main_lateen_00_tack",
+      "main_lateen_00_sheet",
+      "main_shroud_starboard_00",
+      "main_shroud_port_00",
+      "fore_stay",
+      "bowsprit_shroud_starboard",
+      "bowsprit_shroud_port"
+    ],
+    "attachments": [
+      {
+        "rope": "main_lateen_00_bolt_0",
+        "start": "main_lateen_00",
+        "end": "main_lateen_00",
+        "points_blender_m": [
+          [
+            -1.162445306777954,
+            -3.868239402770996,
+            2.9419636726379395
+          ],
+          [
+            -0.8074458837509155,
+            -3.106940507888794,
+            3.4011638164520264
+          ],
+          [
+            -0.4524466395378113,
+            -2.345642566680908,
+            3.860363483428955
+          ],
+          [
+            -0.0974472165107727,
+            -1.5843435525894165,
+            4.319563865661621
+          ],
+          [
+            0.25755202770233154,
+            -0.8230454921722412,
+            4.778763771057129
+          ],
+          [
+            0.6125514507293701,
+            -0.06174659729003906,
+            5.237963676452637
+          ],
+          [
+            0.9675508737564087,
+            0.6995521783828735,
+            5.697164058685303
+          ],
+          [
+            1.3225500583648682,
+            1.460850477218628,
+            6.1563639640808105
+          ],
+          [
+            1.6775496006011963,
+            2.222149133682251,
+            6.615563869476318
+          ],
+          [
+            2.032548666000366,
+            2.983447313308716,
+            7.074763774871826
+          ],
+          [
+            2.3875482082366943,
+            3.744746208190918,
+            7.533963680267334
+          ]
+        ],
+        "reason": "Own sewn bolt rope follows this exact cloth boundary."
+      },
+      {
+        "rope": "main_lateen_00_bolt_1",
+        "start": "main_lateen_00",
+        "end": "main_lateen_00",
+        "points_blender_m": [
+          [
+            2.3875482082366943,
+            3.744746208190918,
+            7.533963680267334
+          ],
+          [
+            2.412398099899292,
+            3.798037052154541,
+            6.973963737487793
+          ],
+          [
+            2.4372479915618896,
+            3.851327896118164,
+            6.413963794708252
+          ],
+          [
+            2.4620981216430664,
+            3.904618978500366,
+            5.853963851928711
+          ],
+          [
+            2.486948013305664,
+            3.9579098224639893,
+            5.29396390914917
+          ],
+          [
+            2.5117979049682617,
+            4.011200904846191,
+            4.733963489532471
+          ],
+          [
+            2.5366477966308594,
+            4.064491271972656,
+            4.17396354675293
+          ],
+          [
+            2.561497688293457,
+            4.1177825927734375,
+            3.6139638423919678
+          ],
+          [
+            2.5863475799560547,
+            4.1710734367370605,
+            3.0539636611938477
+          ],
+          [
+            2.6111977100372314,
+            4.224364280700684,
+            2.4939637184143066
+          ],
+          [
+            2.636047601699829,
+            4.277655124664307,
+            1.933963656425476
+          ]
+        ],
+        "reason": "Own sewn bolt rope follows this exact cloth boundary."
+      },
+      {
+        "rope": "main_lateen_00_bolt_2",
+        "start": "main_lateen_00",
+        "end": "main_lateen_00",
+        "points_blender_m": [
+          [
+            2.636047601699829,
+            4.277655124664307,
+            1.933963656425476
+          ],
+          [
+            2.2561981678009033,
+            3.4630653858184814,
+            2.0347635746002197
+          ],
+          [
+            1.8763489723205566,
+            2.6484763622283936,
+            2.135563611984253
+          ],
+          [
+            1.49649977684021,
+            1.8338866233825684,
+            2.236363649368286
+          ],
+          [
+            1.1166505813598633,
+            1.019297480583191,
+            2.3371634483337402
+          ],
+          [
+            0.7368011474609375,
+            0.20470786094665527,
+            2.4379637241363525
+          ],
+          [
+            0.3569517135620117,
+            -0.6098818778991699,
+            2.5387637615203857
+          ],
+          [
+            -0.02289736270904541,
+            -1.4244709014892578,
+            2.63956356048584
+          ],
+          [
+            -0.4027467966079712,
+            -2.239060640335083,
+            2.740363597869873
+          ],
+          [
+            -0.7825959324836731,
+            -3.053649663925171,
+            2.8411636352539062
+          ],
+          [
+            -1.162445306777954,
+            -3.868239402770996,
+            2.9419636726379395
+          ]
+        ],
+        "reason": "Own sewn bolt rope follows this exact cloth boundary."
+      },
+      {
+        "rope": "main_lateen_00_head_tie_0",
+        "start": "main_lateen_00",
+        "end": "main_lateen_00_lateen_yard",
+        "points_blender_m": [
+          [
+            -1.162445306777954,
+            -3.868239402770996,
+            2.9419636726379395
+          ],
+          [
+            -1.1841766834259033,
+            -3.914842367172241,
+            3.0360260009765625
+          ]
+        ],
+        "reason": "Lateen head corner tied to its own long yard."
+      },
+      {
+        "rope": "main_lateen_00_head_tie_1",
+        "start": "main_lateen_00",
+        "end": "main_lateen_00_lateen_yard",
+        "points_blender_m": [
+          [
+            2.3875482082366943,
+            3.744746208190918,
+            7.533963680267334
+          ],
+          [
+            2.365816831588745,
+            3.698143243789673,
+            7.628026008605957
+          ]
+        ],
+        "reason": "Lateen head corner tied to its own long yard."
+      },
+      {
+        "rope": "main_lateen_00_halyard",
+        "start": "main_lateen_00_lateen_yard",
+        "end": "main",
+        "points_blender_m": [
+          [
+            0.29796573519706726,
+            -0.7363776564598083,
+            5.002992630004883
+          ],
+          [
+            0.0,
+            -0.24400000274181366,
+            8.12596321105957
+          ]
+        ],
+        "reason": "Halyard suspends the lateen yard beside the mast."
+      },
+      {
+        "rope": "main_lateen_00_tack",
+        "start": "main_lateen_00",
+        "end": "main_lateen_00_tack_cleat",
+        "points_blender_m": [
+          [
+            -1.162445306777954,
+            -3.868239402770996,
+            2.9419636726379395
+          ],
+          [
+            0.3816860616207123,
+            -3.868239402770996,
+            1.212467908859253
+          ]
+        ],
+        "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+      },
+      {
+        "rope": "main_lateen_00_sheet",
+        "start": "main_lateen_00",
+        "end": "main_lateen_00_sheet_cleat",
+        "points_blender_m": [
+          [
+            2.636047601699829,
+            4.277655124664307,
+            1.933963656425476
+          ],
+          [
+            0.4720495045185089,
+            3.869999885559082,
+            1.0213136672973633
+          ]
+        ],
+        "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+      },
+      {
+        "rope": "main_shroud_starboard_00",
+        "start": "main",
+        "end": "main_chainplate_starboard_00",
+        "points_blender_m": [
+          [
+            0.0,
+            -0.24400000274181366,
+            8.12596321105957
+          ],
+          [
+            -1.1705906391143799,
+            -0.4950000047683716,
+            0.8650410771369934
+          ]
+        ],
+        "reason": "Standing shroud from mast head to the outboard chainplate location."
+      },
+      {
+        "rope": "main_shroud_port_00",
+        "start": "main",
+        "end": "main_chainplate_port_00",
+        "points_blender_m": [
+          [
+            0.0,
+            -0.24400000274181366,
+            8.12596321105957
+          ],
+          [
+            1.16807222366333,
+            -0.5400000214576721,
+            0.8659636378288269
+          ]
+        ],
+        "reason": "Standing shroud from mast head to the outboard chainplate location."
+      },
+      {
+        "rope": "fore_stay",
+        "start": "main",
+        "end": "bowsprit",
+        "points_blender_m": [
+          [
+            0.0,
+            -0.24400000274181366,
+            8.12596321105957
+          ],
+          [
+            0.0,
+            -5.048888683319092,
+            1.5382285118103027
+          ]
+        ],
+        "reason": "Fore stay connects the foremast head to the bowsprit end."
+      },
+      {
+        "rope": "bowsprit_shroud_starboard",
+        "start": "bowsprit",
+        "end": "bowsprit_chainplate_minus1",
+        "points_blender_m": [
+          [
+            0.0,
+            -5.048888683319092,
+            1.5382285118103027
+          ],
+          [
+            -0.6605536341667175,
+            -3.240000009536743,
+            1.0692429542541504
+          ]
+        ],
+        "reason": "Bowsprit shroud returns to a bow fastening."
+      },
+      {
+        "rope": "bowsprit_shroud_port",
+        "start": "bowsprit",
+        "end": "bowsprit_chainplate_1",
+        "points_blender_m": [
+          [
+            0.0,
+            -5.048888683319092,
+            1.5382285118103027
+          ],
+          [
+            0.6605536341667175,
+            -3.240000009536743,
+            1.0692429542541504
+          ]
+        ],
+        "reason": "Bowsprit shroud returns to a bow fastening."
+      }
+    ],
+    "geometry_scope": "authored static rig pose; no sail-trim or cloth simulation",
+    "sail_area_m2": 24.913735197041678,
+    "sail_area_centroid_blender_m": [
+      1.3274312019348145,
+      1.3651031255722046,
+      4.136545658111572
+    ],
+    "spar_count": 3,
+    "rope_count": 13,
+    "sail_count": 1
+  },
+  "intended_joints": [
+    {
+      "a": "hull_shell_port",
+      "b": "gunwale_port",
+      "reason": "The gunwale caps the upper edge of this timber hull side."
+    },
+    {
+      "a": "hull_shell_starboard",
+      "b": "gunwale_starboard",
+      "reason": "The gunwale caps the upper edge of this timber hull side."
+    },
+    {
+      "a": "hull_shell_port",
+      "b": "keel",
+      "reason": "The port and starboard plank shells are rabbeted onto the longitudinal keel."
+    },
+    {
+      "a": "hull_shell_starboard",
+      "b": "keel",
+      "reason": "The port and starboard plank shells are rabbeted onto the longitudinal keel."
+    },
+    {
+      "a": "hull_shell_port",
+      "b": "stern_closure",
+      "reason": "The hull side and backbone terminate in this real stem or stern closure."
+    },
+    {
+      "a": "hull_shell_starboard",
+      "b": "stern_closure",
+      "reason": "The hull side and backbone terminate in this real stem or stern closure."
+    },
+    {
+      "a": "keel",
+      "b": "stern_closure",
+      "reason": "The hull side and backbone terminate in this real stem or stern closure."
+    },
+    {
+      "a": "hull_shell_port",
+      "b": "bow_closure",
+      "reason": "The hull side and backbone terminate in this real stem or stern closure."
+    },
+    {
+      "a": "hull_shell_starboard",
+      "b": "bow_closure",
+      "reason": "The hull side and backbone terminate in this real stem or stern closure."
+    },
+    {
+      "a": "keel",
+      "b": "bow_closure",
+      "reason": "The hull side and backbone terminate in this real stem or stern closure."
+    },
+    {
+      "a": "stern_closure",
+      "b": "gunwale_port",
+      "reason": "This actual cap rail is housed into its terminal stem or stern timber."
+    },
+    {
+      "a": "stern_closure",
+      "b": "gunwale_starboard",
+      "reason": "This actual cap rail is housed into its terminal stem or stern timber."
+    },
+    {
+      "a": "bow_closure",
+      "b": "gunwale_port",
+      "reason": "This actual cap rail is housed into its terminal stem or stern timber."
+    },
+    {
+      "a": "bow_closure",
+      "b": "gunwale_starboard",
+      "reason": "This actual cap rail is housed into its terminal stem or stern timber."
+    },
+    {
+      "a": "deck_bow",
+      "b": "hull_shell_port",
+      "reason": "This deck slab is housed into the actual closed hull side; the collision is the same concave timber geometry."
+    },
+    {
+      "a": "deck_bow",
+      "b": "hull_shell_starboard",
+      "reason": "This deck slab is housed into the actual closed hull side; the collision is the same concave timber geometry."
+    },
+    {
+      "a": "deck_bow",
+      "b": "bow_closure",
+      "reason": "This deck slab is housed into the actual closed hull side; the collision is the same concave timber geometry."
+    },
+    {
+      "a": "deck_bow_bearing_beam_0",
+      "b": "deck_bow",
+      "reason": "This actual transverse deck beam supports the slab underside."
+    },
+    {
+      "a": "deck_bow_bearing_beam_0",
+      "b": "hull_shell_port",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "deck_bow_bearing_beam_0",
+      "b": "hull_shell_starboard",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "deck_bow_bearing_beam_0",
+      "b": "keel",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "deck_bow_bearing_beam_1",
+      "b": "deck_bow",
+      "reason": "This actual transverse deck beam supports the slab underside."
+    },
+    {
+      "a": "deck_bow_bearing_beam_1",
+      "b": "hull_shell_port",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "deck_bow_bearing_beam_1",
+      "b": "hull_shell_starboard",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "deck_bow_bearing_beam_2",
+      "b": "deck_bow",
+      "reason": "This actual transverse deck beam supports the slab underside."
+    },
+    {
+      "a": "deck_bow_bearing_beam_2",
+      "b": "hull_shell_port",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "deck_bow_bearing_beam_2",
+      "b": "hull_shell_starboard",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "deck_stern",
+      "b": "hull_shell_port",
+      "reason": "This deck slab is housed into the actual closed hull side; the collision is the same concave timber geometry."
+    },
+    {
+      "a": "deck_stern",
+      "b": "hull_shell_starboard",
+      "reason": "This deck slab is housed into the actual closed hull side; the collision is the same concave timber geometry."
+    },
+    {
+      "a": "deck_stern",
+      "b": "keel",
+      "reason": "This deck slab is housed into the actual closed hull side; the collision is the same concave timber geometry."
+    },
+    {
+      "a": "deck_stern",
+      "b": "stern_closure",
+      "reason": "This deck slab is housed into the actual closed hull side; the collision is the same concave timber geometry."
+    },
+    {
+      "a": "deck_stern_bearing_beam_0",
+      "b": "deck_stern",
+      "reason": "This actual transverse deck beam supports the slab underside."
+    },
+    {
+      "a": "deck_stern_bearing_beam_0",
+      "b": "hull_shell_port",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "deck_stern_bearing_beam_0",
+      "b": "hull_shell_starboard",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "deck_stern_bearing_beam_1",
+      "b": "deck_stern",
+      "reason": "This actual transverse deck beam supports the slab underside."
+    },
+    {
+      "a": "deck_stern_bearing_beam_1",
+      "b": "hull_shell_port",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "deck_stern_bearing_beam_1",
+      "b": "hull_shell_starboard",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "deck_stern_bearing_beam_1",
+      "b": "keel",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "deck_stern_bearing_beam_2",
+      "b": "deck_stern",
+      "reason": "This actual transverse deck beam supports the slab underside."
+    },
+    {
+      "a": "deck_stern_bearing_beam_2",
+      "b": "hull_shell_port",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "deck_stern_bearing_beam_2",
+      "b": "hull_shell_starboard",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "deck_stern_bearing_beam_2",
+      "b": "keel",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "deck_port_walkway",
+      "b": "hull_shell_starboard",
+      "reason": "This deck slab is housed into the actual closed hull side; the collision is the same concave timber geometry."
+    },
+    {
+      "a": "deck_port_walkway_bearing_beam_0",
+      "b": "deck_port_walkway",
+      "reason": "This actual transverse deck beam supports the slab underside."
+    },
+    {
+      "a": "deck_port_walkway_bearing_beam_0",
+      "b": "hull_shell_starboard",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "deck_port_walkway_bearing_beam_1",
+      "b": "deck_port_walkway",
+      "reason": "This actual transverse deck beam supports the slab underside."
+    },
+    {
+      "a": "deck_port_walkway_bearing_beam_1",
+      "b": "hull_shell_starboard",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "deck_port_walkway_bearing_beam_2",
+      "b": "deck_port_walkway",
+      "reason": "This actual transverse deck beam supports the slab underside."
+    },
+    {
+      "a": "deck_port_walkway_bearing_beam_2",
+      "b": "hull_shell_starboard",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "deck_starboard_walkway",
+      "b": "hull_shell_port",
+      "reason": "This deck slab is housed into the actual closed hull side; the collision is the same concave timber geometry."
+    },
+    {
+      "a": "deck_starboard_walkway_bearing_beam_0",
+      "b": "deck_starboard_walkway",
+      "reason": "This actual transverse deck beam supports the slab underside."
+    },
+    {
+      "a": "deck_starboard_walkway_bearing_beam_0",
+      "b": "hull_shell_port",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "deck_starboard_walkway_bearing_beam_1",
+      "b": "deck_starboard_walkway",
+      "reason": "This actual transverse deck beam supports the slab underside."
+    },
+    {
+      "a": "deck_starboard_walkway_bearing_beam_1",
+      "b": "hull_shell_port",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "deck_starboard_walkway_bearing_beam_2",
+      "b": "deck_starboard_walkway",
+      "reason": "This actual transverse deck beam supports the slab underside."
+    },
+    {
+      "a": "deck_starboard_walkway_bearing_beam_2",
+      "b": "hull_shell_port",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "cockpit_sole",
+      "b": "hull_shell_port",
+      "reason": "This deck slab is housed into the actual closed hull side; the collision is the same concave timber geometry."
+    },
+    {
+      "a": "cockpit_sole",
+      "b": "hull_shell_starboard",
+      "reason": "This deck slab is housed into the actual closed hull side; the collision is the same concave timber geometry."
+    },
+    {
+      "a": "cockpit_sole",
+      "b": "keel",
+      "reason": "This deck slab is housed into the actual closed hull side; the collision is the same concave timber geometry."
+    },
+    {
+      "a": "cockpit_sole_bearing_beam_0",
+      "b": "cockpit_sole",
+      "reason": "This actual transverse deck beam supports the slab underside."
+    },
+    {
+      "a": "cockpit_sole_bearing_beam_0",
+      "b": "hull_shell_port",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "cockpit_sole_bearing_beam_0",
+      "b": "hull_shell_starboard",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "cockpit_sole_bearing_beam_0",
+      "b": "keel",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "cockpit_sole_bearing_beam_1",
+      "b": "cockpit_sole",
+      "reason": "This actual transverse deck beam supports the slab underside."
+    },
+    {
+      "a": "cockpit_sole_bearing_beam_1",
+      "b": "hull_shell_port",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "cockpit_sole_bearing_beam_1",
+      "b": "hull_shell_starboard",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "cockpit_sole_bearing_beam_1",
+      "b": "keel",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "cockpit_sole_bearing_beam_2",
+      "b": "cockpit_sole",
+      "reason": "This actual transverse deck beam supports the slab underside."
+    },
+    {
+      "a": "cockpit_sole_bearing_beam_2",
+      "b": "hull_shell_port",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "cockpit_sole_bearing_beam_2",
+      "b": "hull_shell_starboard",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "cockpit_sole_bearing_beam_2",
+      "b": "keel",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "thwart_0",
+      "b": "hull_shell_port",
+      "reason": "The open-boat thwart is seated against the inner planking."
+    },
+    {
+      "a": "thwart_0",
+      "b": "hull_shell_starboard",
+      "reason": "The open-boat thwart is seated against the inner planking."
+    },
+    {
+      "a": "thwart_0",
+      "b": "keel",
+      "reason": "The open-boat thwart is seated against the inner planking."
+    },
+    {
+      "a": "thwart_1",
+      "b": "hull_shell_port",
+      "reason": "The open-boat thwart is seated against the inner planking."
+    },
+    {
+      "a": "thwart_1",
+      "b": "hull_shell_starboard",
+      "reason": "The open-boat thwart is seated against the inner planking."
+    },
+    {
+      "a": "thwart_1",
+      "b": "keel",
+      "reason": "The open-boat thwart is seated against the inner planking."
+    },
+    {
+      "a": "anchor_shank_1",
+      "b": "anchor_fluke_1_minus_1",
+      "reason": "The anchor flukes are forged onto the shank crown."
+    },
+    {
+      "a": "anchor_shank_1",
+      "b": "anchor_fluke_1_1",
+      "reason": "The anchor flukes are forged onto the shank crown."
+    },
+    {
+      "a": "anchor_fluke_1_minus_1",
+      "b": "anchor_fluke_1_1",
+      "reason": "The two forged fluke arms meet at their actual common crown."
+    },
+    {
+      "a": "anchor_shank_1",
+      "b": "anchor_stock_1",
+      "reason": "The wooden stock passes through the upper anchor shank."
+    },
+    {
+      "a": "cathead_shoe_1_0",
+      "b": "cathead_post_1_0",
+      "reason": "The stock-support shoe is housed into its actual deck post."
+    },
+    {
+      "a": "cathead_shoe_1_0",
+      "b": "anchor_stock_1",
+      "reason": "The stowed anchor stock rests on this separated shoe, outside the open shank gap."
+    },
+    {
+      "a": "cathead_post_1_0",
+      "b": "deck_bow",
+      "reason": "This stock-support post bears on its actual structural deck."
+    },
+    {
+      "a": "cathead_shoe_1_1",
+      "b": "cathead_post_1_1",
+      "reason": "The stock-support shoe is housed into its actual deck post."
+    },
+    {
+      "a": "cathead_shoe_1_1",
+      "b": "anchor_stock_1",
+      "reason": "The stowed anchor stock rests on this separated shoe, outside the open shank gap."
+    },
+    {
+      "a": "cathead_post_1_1",
+      "b": "deck_bow",
+      "reason": "This stock-support post bears on its actual structural deck."
+    },
+    {
+      "a": "rudder_stock",
+      "b": "rudder_blade",
+      "reason": "The real rudder blade is fixed to its stock."
+    },
+    {
+      "a": "steering_tiller",
+      "b": "rudder_stock",
+      "reason": "The actual tiller is keyed to the actual rudder-stock head."
+    },
+    {
+      "a": "rudder_hinge_0",
+      "b": "rudder_stock",
+      "reason": "The hinge bears on the actual rudder stock."
+    },
+    {
+      "a": "rudder_hinge_0",
+      "b": "keel",
+      "reason": "This real rudder gudgeon is bolted into the actual stern end of the backbone."
+    },
+    {
+      "a": "rudder_hinge_1",
+      "b": "rudder_stock",
+      "reason": "The hinge bears on the actual rudder stock."
+    },
+    {
+      "a": "rudder_hinge_1",
+      "b": "keel",
+      "reason": "This real rudder gudgeon is bolted into the actual stern end of the backbone."
+    },
+    {
+      "a": "rudder_hinge_2",
+      "b": "rudder_stock",
+      "reason": "The hinge bears on the actual rudder stock."
+    },
+    {
+      "a": "rudder_hinge_2",
+      "b": "stern_closure",
+      "reason": "This real rudder hinge mounts to the stern structure."
+    },
+    {
+      "a": "rudder_hinge_2",
+      "b": "keel",
+      "reason": "This real rudder gudgeon is bolted into the actual stern end of the backbone."
+    },
+    {
+      "a": "main_lateen_00_bolt_0",
+      "b": "main_lateen_00",
+      "reason": "Own sewn bolt rope follows this exact cloth boundary."
+    },
+    {
+      "a": "main_lateen_00_bolt_1",
+      "b": "main_lateen_00",
+      "reason": "Own sewn bolt rope follows this exact cloth boundary."
+    },
+    {
+      "a": "main_lateen_00_bolt_2",
+      "b": "main_lateen_00",
+      "reason": "Own sewn bolt rope follows this exact cloth boundary."
+    },
+    {
+      "a": "main_lateen_00_head_tie_0",
+      "b": "main_lateen_00",
+      "reason": "Lateen head corner tied to its own long yard."
+    },
+    {
+      "a": "main_lateen_00_head_tie_0",
+      "b": "main_lateen_00_lateen_yard",
+      "reason": "Lateen head corner tied to its own long yard."
+    },
+    {
+      "a": "main_lateen_00_head_tie_1",
+      "b": "main_lateen_00",
+      "reason": "Lateen head corner tied to its own long yard."
+    },
+    {
+      "a": "main_lateen_00_head_tie_1",
+      "b": "main_lateen_00_lateen_yard",
+      "reason": "Lateen head corner tied to its own long yard."
+    },
+    {
+      "a": "main_lateen_00_halyard",
+      "b": "main_lateen_00_lateen_yard",
+      "reason": "Halyard suspends the lateen yard beside the mast."
+    },
+    {
+      "a": "main_lateen_00_halyard",
+      "b": "main",
+      "reason": "Halyard suspends the lateen yard beside the mast."
+    },
+    {
+      "a": "main_lateen_00_lateen_yard",
+      "b": "main",
+      "reason": "Lateen yard is hoisted beside its mast, not merged into the cloth."
+    },
+    {
+      "a": "main_lateen_00_tack",
+      "b": "main_lateen_00",
+      "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+    },
+    {
+      "a": "main_lateen_00_tack",
+      "b": "main_lateen_00_tack_cleat",
+      "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+    },
+    {
+      "a": "main_lateen_00_sheet",
+      "b": "main_lateen_00",
+      "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+    },
+    {
+      "a": "main_lateen_00_sheet",
+      "b": "main_lateen_00_sheet_cleat",
+      "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+    },
+    {
+      "a": "main_shroud_starboard_00",
+      "b": "main",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "main_shroud_starboard_00",
+      "b": "main_chainplate_starboard_00",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "main_shroud_port_00",
+      "b": "main",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "main_shroud_port_00",
+      "b": "main_chainplate_port_00",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "fore_stay",
+      "b": "main",
+      "reason": "Fore stay connects the foremast head to the bowsprit end."
+    },
+    {
+      "a": "fore_stay",
+      "b": "bowsprit",
+      "reason": "Fore stay connects the foremast head to the bowsprit end."
+    },
+    {
+      "a": "bowsprit_shroud_starboard",
+      "b": "bowsprit",
+      "reason": "Bowsprit shroud returns to a bow fastening."
+    },
+    {
+      "a": "bowsprit_shroud_starboard",
+      "b": "bowsprit_chainplate_minus1",
+      "reason": "Bowsprit shroud returns to a bow fastening."
+    },
+    {
+      "a": "bowsprit_shroud_port",
+      "b": "bowsprit",
+      "reason": "Bowsprit shroud returns to a bow fastening."
+    },
+    {
+      "a": "bowsprit_shroud_port",
+      "b": "bowsprit_chainplate_1",
+      "reason": "Bowsprit shroud returns to a bow fastening."
+    },
+    {
+      "a": "main",
+      "b": "cockpit_sole",
+      "reason": "This mast heel or spar support is housed into a structural deck."
+    },
+    {
+      "a": "bowsprit",
+      "b": "deck_bow",
+      "reason": "This mast heel or spar support is housed into a structural deck."
+    },
+    {
+      "a": "thwart_0",
+      "b": "deck_port_walkway",
+      "reason": "The transverse thwart ends bear on the adjoining side-deck ledges."
+    },
+    {
+      "a": "thwart_0",
+      "b": "deck_starboard_walkway",
+      "reason": "The transverse thwart ends bear on the adjoining side-deck ledges."
+    },
+    {
+      "a": "thwart_1",
+      "b": "deck_port_walkway",
+      "reason": "The transverse thwart ends bear on the adjoining side-deck ledges."
+    },
+    {
+      "a": "thwart_1",
+      "b": "deck_starboard_walkway",
+      "reason": "The transverse thwart ends bear on the adjoining side-deck ledges."
+    },
+    {
+      "a": "bowsprit",
+      "b": "hull_shell_port",
+      "reason": "The bowsprit heel is housed in the actual bow timber socket."
+    },
+    {
+      "a": "bowsprit",
+      "b": "hull_shell_starboard",
+      "reason": "The bowsprit heel is housed in the actual bow timber socket."
+    },
+    {
+      "a": "bowsprit",
+      "b": "bow_closure",
+      "reason": "The bowsprit heel is housed in the actual bow timber socket."
+    },
+    {
+      "a": "main_lateen_00_tack_cleat",
+      "b": "deck_bow",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "main_lateen_00_tack_cleat",
+      "b": "hull_shell_port",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "main_lateen_00_sheet_cleat",
+      "b": "deck_stern",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "main_lateen_00_sheet_cleat",
+      "b": "hull_shell_port",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "main_chainplate_starboard_00",
+      "b": "deck_port_walkway",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "main_chainplate_port_00",
+      "b": "deck_starboard_walkway",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "bowsprit_chainplate_minus1",
+      "b": "deck_bow",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "bowsprit_chainplate_minus1",
+      "b": "hull_shell_starboard",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "bowsprit_chainplate_1",
+      "b": "deck_bow",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "bowsprit_chainplate_1",
+      "b": "hull_shell_port",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    }
+  ],
+  "materials": {
+    "method": "guide-sized authored PBR atlas upgrade",
+    "materials": [
+      {
+        "source": "side_oiled_oak",
+        "material": "v2_burta_drewno",
+        "palette_srgb": [
+          0.46,
+          0.33,
+          0.22
+        ],
+        "old_uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "uv_tile_m": [
+          4.4,
+          1.1
+        ],
+        "image_px": [
+          8192,
+          2048
+        ],
+        "family": "hull",
+        "metallic": 0
+      },
+      {
+        "source": "wood.001",
+        "material": "v2_drewno",
+        "palette_srgb": [
+          0.62,
+          0.46,
+          0.3
+        ],
+        "old_uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "image_px": [
+          2048,
+          2048
+        ],
+        "family": "wood",
+        "metallic": 0
+      },
+      {
+        "source": "wood_dark",
+        "material": "v2_drewno_ciemne",
+        "palette_srgb": [
+          0.4,
+          0.28,
+          0.17
+        ],
+        "old_uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "image_px": [
+          2048,
+          2048
+        ],
+        "family": "wood",
+        "metallic": 0
+      },
+      {
+        "source": "deck_planking",
+        "material": "v2_poklad",
+        "palette_srgb": [
+          0.62,
+          0.575,
+          0.5
+        ],
+        "old_uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "uv_tile_m": [
+          3.52,
+          0.88
+        ],
+        "image_px": [
+          8192,
+          2048
+        ],
+        "family": "deck",
+        "metallic": 0
+      },
+      {
+        "source": "iron",
+        "material": "v2_zelazo",
+        "palette_srgb": [
+          0.19,
+          0.18,
+          0.17
+        ],
+        "old_uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "uv_tile_m": [
+          1.0,
+          1.0
+        ],
+        "image_px": [
+          2048,
+          2048
+        ],
+        "family": "iron",
+        "metallic": 1
+      },
+      {
+        "source": "canvas",
+        "material": "v2_plotno",
+        "palette_srgb": [
+          0.84,
+          0.8,
+          0.7
+        ],
+        "old_uv_tile_m": [
+          2.4,
+          2.4
+        ],
+        "uv_tile_m": [
+          2.4,
+          2.4
+        ],
+        "image_px": [
+          2048,
+          2048
+        ],
+        "family": "canvas",
+        "metallic": 0
+      },
+      {
+        "source": "rope_untarred",
+        "material": "v2_lina_jasna",
+        "palette_srgb": [
+          0.64,
+          0.57,
+          0.43
+        ],
+        "old_uv_tile_m": [
+          1.0,
+          0.5
+        ],
+        "uv_tile_m": [
+          1.0,
+          1.0
+        ],
+        "image_px": [
+          1024,
+          512
+        ],
+        "family": "rope",
+        "metallic": 0
+      }
+    ],
+    "provenance": {
+      "license": "project-authored procedural textures; no external imagery",
+      "basis": [
+        "docs/en/03-hull-construction.md",
+        "docs/en/04-decks-bulwarks-stern-head.md",
+        "docs/en/08-ropes-blocks-and-sails.md",
+        "docs/en/13-3d-quality-checklist.md"
+      ],
+      "atlas_m": {
+        "deck": [
+          3.52,
+          0.88
+        ],
+        "hull": [
+          4.4,
+          1.1
+        ],
+        "paint": [
+          4.4,
+          1.1
+        ],
+        "wood": [
+          2.0,
+          2.0
+        ],
+        "iron": [
+          1.0,
+          1.0
+        ],
+        "rope": [
+          1.0,
+          1.0
+        ],
+        "canvas": [
+          2.4,
+          2.4
+        ]
+      },
+      "method": "continuous authored grain, physical seams/trunnels, normal from metric height derivatives",
+      "palette_srgb": {
+        "poklad": [
+          0.62,
+          0.575,
+          0.5
+        ],
+        "burta_drewno": [
+          0.46,
+          0.33,
+          0.22
+        ],
+        "drewno": [
+          0.62,
+          0.46,
+          0.3
+        ],
+        "drewno_ciemne": [
+          0.4,
+          0.28,
+          0.17
+        ],
+        "drewno_czarne": [
+          0.23,
+          0.215,
+          0.19
+        ],
+        "laweta": [
+          0.4,
+          0.15,
+          0.09
+        ],
+        "farba_czarna": [
+          0.2,
+          0.19,
+          0.18
+        ],
+        "farba_czarna_gladka": [
+          0.23,
+          0.22,
+          0.21
+        ],
+        "farba_ochra": [
+          0.68,
+          0.52,
+          0.27
+        ],
+        "farba_czerwona": [
+          0.55,
+          0.17,
+          0.1
+        ],
+        "farba_niebieska": [
+          0.16,
+          0.23,
+          0.36
+        ],
+        "farba_dno_biala": [
+          0.84,
+          0.81,
+          0.73
+        ],
+        "farba_dno_czerwona": [
+          0.42,
+          0.18,
+          0.12
+        ],
+        "rzezby_zlote": [
+          0.82,
+          0.63,
+          0.3
+        ],
+        "zelazo": [
+          0.19,
+          0.18,
+          0.17
+        ],
+        "zelazo_lufa": [
+          0.19,
+          0.18,
+          0.17
+        ],
+        "braz": [
+          0.62,
+          0.42,
+          0.2
+        ],
+        "lina_smolowana": [
+          0.23,
+          0.21,
+          0.18
+        ],
+        "lina_jasna": [
+          0.64,
+          0.57,
+          0.43
+        ],
+        "plotno": [
+          0.84,
+          0.8,
+          0.7
+        ],
+        "szklo": [
+          0.18,
+          0.23,
+          0.25
+        ]
+      }
+    }
+  },
+  "origin": {
+    "units": "metres",
+    "waterline_y": 0,
+    "axes": "glTF +Y up,+Z bow,+X across"
+  },
+  "collision": {
+    "scope": "Closed hollow hull shell and static deck slabs; excludes rig, fittings and gameplay walking physics. Real ports and open wells remain voids.",
+    "visual_nodes": [
+      "hull_shell_port",
+      "hull_shell_starboard",
+      "keel",
+      "stern_closure",
+      "bow_closure",
+      "deck_bow",
+      "deck_bow_bearing_beam_0",
+      "deck_bow_bearing_beam_1",
+      "deck_bow_bearing_beam_2",
+      "deck_stern",
+      "deck_stern_bearing_beam_0",
+      "deck_stern_bearing_beam_1",
+      "deck_stern_bearing_beam_2",
+      "deck_port_walkway",
+      "deck_port_walkway_bearing_beam_0",
+      "deck_port_walkway_bearing_beam_1",
+      "deck_port_walkway_bearing_beam_2",
+      "deck_starboard_walkway",
+      "deck_starboard_walkway_bearing_beam_0",
+      "deck_starboard_walkway_bearing_beam_1",
+      "deck_starboard_walkway_bearing_beam_2",
+      "cockpit_sole",
+      "cockpit_sole_bearing_beam_0",
+      "cockpit_sole_bearing_beam_1",
+      "cockpit_sole_bearing_beam_2"
+    ]
+  },
+  "type_contract": {
+    "hull_nodes": [
+      "hull_shell_port",
+      "hull_shell_starboard",
+      "keel",
+      "stern_closure",
+      "bow_closure"
+    ],
+    "mast_nodes": [
+      "main"
+    ],
+    "sail_nodes": [
+      "main_lateen_00"
+    ],
+    "gun_nodes": [],
+    "rig_plan": [
+      {
+        "name": "main",
+        "at": 0.06,
+        "height_m": 7.4,
+        "rake": 0.04,
+        "sails": [
+          {
+            "kind": "lateen",
+            "z": 0.92,
+            "width_m": 8.4,
+            "height_m": 5.6
+          }
+        ],
+        "heel_z_m": -0.2
+      }
+    ]
+  },
+  "hull_numeric_finish": [],
+  "counts": {
+    "main_triangles": 9652,
+    "lod1_triangles": 7132,
+    "lod2_triangles": 5212,
+    "collision_triangles": 7372,
+    "actualgun_count": 0
+  },
+  "scope": "Static duel asset. No crew navigation, sailing physics, live cannon controls or complete interiors are claimed.",
+  "provenance": {
+    "method": "Original procedural construction from authored offsets following repository guide chapters 02\u201309 and 12\u201313. No binary game meshes or proprietary textures imported.",
+    "dimension_status": "Authored reconstruction: dimensions are design choices, not measured stock POTC2003 model dimensions.",
+    "source_evidence": [
+      {
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c",
+        "kind": "stock-derived public script",
+        "claims": [
+          "Ordinary game family, class and cannon count only."
+        ],
+        "commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+        "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+      },
+      {
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/SEA_AI/walk/Tartane_walk.c",
+        "kind": "stock-derived public locator script",
+        "claims": [
+          "Qualitative deck/mast layout only; no official metre dimensions."
+        ]
+      },
+      {
+        "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+        "kind": "2004 player data table",
+        "claims": [
+          "Contemporary ordinary ship roster and gun counts."
+        ]
+      },
+      {
+        "url": "https://www.piratesahoy.net/threads/ships-and-their-use.2077/",
+        "kind": "contemporary stock/mod discussion",
+        "claims": [
+          "Stock family role and distinction from mod variants."
+        ]
+      },
+      {
+        "url": "https://www.piratesahoy.net/threads/rethinking-ships-in-potc-new-project.2769/",
+        "kind": "2004 stock discussion",
+        "claims": [
+          "Type-name uncertainty and small single-mast Tartane cue; historical dictionary is insufficient to establish game model."
+        ]
+      }
+    ],
+    "limitations": "Stock small fishing-boat role and one-mast status. Sail dimensions, deck arrangement and line offsets are authored reconstruction."
+  },
+  "source_evidence": [
+    {
+      "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c",
+      "kind": "stock-derived public script",
+      "claims": [
+        "Ordinary game family, class and cannon count only."
+      ],
+      "commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+      "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+    },
+    {
+      "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/SEA_AI/walk/Tartane_walk.c",
+      "kind": "stock-derived public locator script",
+      "claims": [
+        "Qualitative deck/mast layout only; no official metre dimensions."
+      ]
+    },
+    {
+      "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+      "kind": "2004 player data table",
+      "claims": [
+        "Contemporary ordinary ship roster and gun counts."
+      ]
+    },
+    {
+      "url": "https://www.piratesahoy.net/threads/ships-and-their-use.2077/",
+      "kind": "contemporary stock/mod discussion",
+      "claims": [
+        "Stock family role and distinction from mod variants."
+      ]
+    },
+    {
+      "url": "https://www.piratesahoy.net/threads/rethinking-ships-in-potc-new-project.2769/",
+      "kind": "2004 stock discussion",
+      "claims": [
+        "Type-name uncertainty and small single-mast Tartane cue; historical dictionary is insufficient to establish game model."
+      ]
+    }
+  ],
+  "distinctive_silhouette": "One lateen mast, low pointed ends, modest sheer and no battery. A real central open well, lowered floor and two thwarts replace the uninterrupted deck.",
+  "static_scope": {
+    "animated_controls": false,
+    "walkability": false,
+    "navigation_routes": false,
+    "collision": "Shared exact static concave hull/deck solids; no playable deck claim."
+  },
+  "palette_contract": {
+    "changed": [
+      "paint_hull",
+      "paint_trim"
+    ],
+    "deliberately_unchanged": [
+      "natural deck timber",
+      "mast and spar timber",
+      "tarred standing rigging",
+      "natural running rope",
+      "linen cloth",
+      "iron guns and fittings"
+    ]
+  }
+}
