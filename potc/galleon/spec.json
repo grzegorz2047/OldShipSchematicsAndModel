@@ -1,0 +1,307 @@
+{
+  "schema": 4,
+  "id": "galleon",
+  "family": "galleon",
+  "asset_type": "static-duel-ship",
+  "length": 44,
+  "beam": 13.4,
+  "draft": 5,
+  "freeboard": 3.4,
+  "hull": {
+    "profile": [
+      [
+        -0.5,
+        0.68,
+        2.6,
+        0.48
+      ],
+      [
+        -0.45,
+        0.88,
+        1.895,
+        0.389
+      ],
+      [
+        -0.35,
+        1,
+        0.892,
+        0.235
+      ],
+      [
+        -0.2,
+        1,
+        0.166,
+        0.077
+      ],
+      [
+        0,
+        0.98,
+        0.0,
+        0.0
+      ],
+      [
+        0.2,
+        0.91,
+        0.166,
+        0.144
+      ],
+      [
+        0.35,
+        0.71,
+        0.892,
+        0.441
+      ],
+      [
+        0.45,
+        0.4,
+        1.895,
+        0.729
+      ],
+      [
+        0.5,
+        0.025,
+        2.6,
+        0.9
+      ]
+    ],
+    "section_power": 0.66,
+    "stern_style": "transom",
+    "plank_rows": 24,
+    "bulwark_height": 1.25,
+    "quarterdeck": {
+      "from": -0.48,
+      "to": -0.16,
+      "height_m": 1.5
+    },
+    "forecastle": {
+      "from": 0.22,
+      "to": 0.48,
+      "height_m": 1.65
+    },
+    "castles": [
+      {
+        "from": -0.48,
+        "to": -0.31,
+        "height_m": 2.85
+      }
+    ]
+  },
+  "guns": {
+    "rows": [
+      {
+        "pairs": 10,
+        "z_m": 1.65,
+        "from": -0.37,
+        "to": 0.37,
+        "follow_sheer": true
+      },
+      {
+        "pairs": 9,
+        "z_m": 4.07,
+        "from": -0.35,
+        "to": 0.35,
+        "follow_sheer": true
+      }
+    ]
+  },
+  "rig": {
+    "masts": [
+      {
+        "name": "fore",
+        "at": 0.25,
+        "height_m": 36,
+        "rake": 0,
+        "sails": [
+          {
+            "kind": "square",
+            "z": 0.48,
+            "width_m": 22.3,
+            "height_m": 9.72
+          },
+          {
+            "kind": "square",
+            "z": 0.76,
+            "width_m": 15.929,
+            "height_m": 7.56
+          },
+          {
+            "kind": "square",
+            "z": 0.95,
+            "width_m": 9.557,
+            "height_m": 5.04
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "at": -0.035,
+        "height_m": 41,
+        "rake": 0,
+        "sails": [
+          {
+            "kind": "square",
+            "z": 0.48,
+            "width_m": 25.5,
+            "height_m": 11.07
+          },
+          {
+            "kind": "square",
+            "z": 0.76,
+            "width_m": 18.214,
+            "height_m": 8.61
+          },
+          {
+            "kind": "square",
+            "z": 0.95,
+            "width_m": 10.929,
+            "height_m": 5.74
+          }
+        ]
+      },
+      {
+        "name": "mizzen",
+        "at": -0.36,
+        "height_m": 26,
+        "rake": 0,
+        "sails": [
+          {
+            "kind": "lateen",
+            "z": 0.66,
+            "width_m": 14,
+            "height_m": 12
+          },
+          {
+            "kind": "square",
+            "z": 0.93,
+            "width_m": 8.5,
+            "height_m": 4.4
+          }
+        ]
+      }
+    ],
+    "bowsprit": {
+      "length_m": 17.2,
+      "angle_deg": 28
+    },
+    "jibs": [
+      {
+        "head_fraction": 0.6,
+        "bowsprit_fraction": 0.72
+      }
+    ]
+  },
+  "palettes": [
+    {
+      "id": "ochre",
+      "paintHull": [
+        0.38132601143253014,
+        0.11443537382697373,
+        0.017641954488384078,
+        1.0
+      ],
+      "paintTrim": [
+        0.02217388479338738,
+        0.014443843596092545,
+        0.009134058702220787,
+        1.0
+      ]
+    },
+    {
+      "id": "navy",
+      "paintHull": [
+        0.009134058702220787,
+        0.042311410620809675,
+        0.10461648409110419,
+        1.0
+      ],
+      "paintTrim": [
+        0.5972017883637634,
+        0.3613067797835095,
+        0.09305896284668745,
+        1.0
+      ]
+    }
+  ],
+  "paint_materials": [
+    "paint_hull",
+    "paint_trim"
+  ],
+  "game_source": {
+    "id": "SHIP_GALEON_ENGLAND",
+    "model": "Galeon1",
+    "class": 3,
+    "cannons": 38,
+    "source_commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+    "script_sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+  },
+  "provenance": {
+    "status": "Original procedural reconstruction; not a retail mesh reproduction.",
+    "dimensions": "Authored estimates in metres; not measured stock data.",
+    "rig": "Guide-based authored family interpretation. Stock sail-plan/locator geometry was unavailable.",
+    "gun_layout": "Authored symmetric broadside allocation of the verified stock total. z_m is the row centre at zero sheer; the builder adds the authored local deck sheer. This is not a claim about stock gun locators.",
+    "stock_script_caveat": "Pinned stock-derived modern compatibility scripts are not authenticated byte-identical retail source.",
+    "source_evidence": [
+      {
+        "id": "stock-stats",
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c#L3478",
+        "kind": "stock-derived compatibility script",
+        "claim": "Family, model identifier, class and total cannon count only.",
+        "source_commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+        "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+      },
+      {
+        "id": "stock-ids",
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/ships.h",
+        "kind": "stock-derived compatibility enum",
+        "claim": "Ordinary family identity; no dimension or sail-plan data.",
+        "source_commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+        "sha256": "a267dbc5d3fc901104b86b53ffdab06255545a8a7ee3725801c0d9dc9037ba74"
+      },
+      {
+        "id": "stock-2003-visual",
+        "url": "https://www.mobygames.com/game/9613/pirates-of-the-caribbean/screenshots/windows/54679/",
+        "image_url": "https://cdn.mobygames.com/screenshots/10282583-pirates-of-the-caribbean-windows-a-pirate-ship-and-a-sunset-does.jpg",
+        "kind": "Published Windows 2003 screenshot; added 29 November 2003",
+        "claim": "General game visual vocabulary only: pale panelled square canvas, dark wales and ochre hull bands. The pictured family is not authenticated."
+      },
+      {
+        "id": "guide-proportions",
+        "path": "docs/en/12-designing-other-ships.md",
+        "kind": "Repository guide",
+        "claim": "Authored hull/port/mast proportion method and rig distinctions; not stock game dimensions."
+      },
+      {
+        "id": "guide-spars",
+        "path": "docs/en/05-masts-and-spars.md",
+        "kind": "Repository guide",
+        "claim": "Square/lateen/gaff typology and spar proportion starting points; later brig is not the reference Snow."
+      }
+    ]
+  },
+  "type_profile": {
+    "distinction": "Fuller three-masted 38-gun galleon with high forecastle, two stepped stern castles, square fore/main rigs and a long lateen mizzen.",
+    "rationale": "High castles, broad afterbody and lateen mizzen are the authored earlier galleon type cues. Gun-row distribution is an authored allocation of the stock total, not a recovered game-locator list.",
+    "mast_count": 3,
+    "gun_total": 38,
+    "battery_groups": 2,
+    "length_beam_ratio": 3.284,
+    "snow_mast": false,
+    "excluded_specials": [
+      "Manowar",
+      "Black Pearl",
+      "Fearless",
+      "Mefisto"
+    ]
+  },
+  "scope": {
+    "delivered": "Static duel asset with two paint variants and LOD/collision/review assets.",
+    "engine_integration": "Not integrated with an engine: no buoyancy, damage, artillery, sailing or crew controllers.",
+    "walking": "Not applicable: no authored walkable interior or player traversal claim."
+  },
+  "source_paths": [
+    "potc/galleon/type-profile.json",
+    "potc/galleon/type-plan.svg",
+    "docs/en/05-masts-and-spars.md",
+    "docs/en/12-designing-other-ships.md"
+  ]
+}
