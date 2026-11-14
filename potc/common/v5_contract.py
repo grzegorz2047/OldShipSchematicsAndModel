@@ -16,6 +16,7 @@ from pathlib import Path
 import struct
 
 import v4_integrity as V
+import v5_report_codec as REPORT
 
 HERE = Path(__file__).resolve().parent
 PROFILE = 'v5-detailed-pbr-resource-profile'
@@ -30,12 +31,12 @@ AUDIT_SOURCES = {'potc/common/v5_audit.py', 'potc/common/v5_integrity.py',
                  'potc/common/v5_joint_index.py', 'potc/common/v5_contract.py',
                  'potc/common/v5_uv_metrics.py', 'potc/common/v5_glb_pack.py',
                  'potc/common/v5_review_template.py',
-                 'potc/common/v5_dispatch.py', 'potc/common/v5_budget.json',
+                 'potc/common/v5_dispatch.py', 'potc/common/v5_budget.json', 'potc/common/v5_report_codec.py',
                  '.github/workflows/potc-detail-integrity.yml'}
 
 
 def read(path):
-    return json.loads(Path(path).read_text(encoding='utf-8'))
+    return REPORT.read(path)
 
 
 def reviewed_gun_decks(contract, views, rendered):
@@ -150,7 +151,7 @@ def check_base(asset, root):
     """Validate every frozen base invariant, explicitly using the v5 profile."""
     asset,root=Path(asset).resolve(),Path(root).resolve()
     bind_legacy_rows(asset,read(asset/'validation.json'),read(asset/'spec.json'))
-    with resource_contract():
+    with resource_contract(), REPORT.validation_text_boundary(V, asset):
         result=V.check(asset,root)
     return {**result,'validation_profile':PROFILE,'legacy_resource_rows':'SUPERSEDED, not PASS'}
 
@@ -273,6 +274,7 @@ def self_test():
     except ValueError:pass
     else:raise ValueError('Old v4 unexpectedly accepted superseded H1/H2')
     return {'passed':True,'negative_controls':rejected+['pending limits denied','unmodified v4 rejects v5 supersession'],
+            'report_codec_controls':REPORT.self_test(),
             'scope':'Explicit H1/H2 applicability only; every other frozen quality gate remains mandatory.'}
 
 

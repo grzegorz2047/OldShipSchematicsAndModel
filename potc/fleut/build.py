@@ -64,3 +64,9 @@ def fleut_specialization():
 if __name__ == "__main__":
     with fleut_specialization():
         build(HERE / "spec.json", HERE)
+
+# POTC_SURFACE_REPAIR_POST_BUILD
+if __name__ == "__main__":
+    sys.path.insert(0, str(HERE))
+    from gun_surface_repair import repair_package
+    repair_package(HERE)

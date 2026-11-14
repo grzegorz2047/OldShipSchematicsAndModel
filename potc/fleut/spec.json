@@ -408,5 +408,12 @@
     ],
     "modern_equipment_excluded": true
   },
-  "detail_schema": 5
+  "detail_schema": 5,
+  "source_paths": [
+    "potc/fleut/gun_surface_fix.py",
+    "potc/fleut/gun_surface_native.py",
+    "potc/fleut/gun_surface_repair.py",
+    "potc/fleut/gun_surface_bindings.py",
+    "potc/fleut/surface-repair.json"
+  ]
 }

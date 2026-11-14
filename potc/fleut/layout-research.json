@@ -310,5 +310,14 @@
     "wood_density_median_px_m": 1024.0,
     "wood_grain_aligned_share": 0.9984407818613046,
     "scope": "Measured actual target GLB; physical same-bay closed end-seats and original metric timber UV, with unchanged physical and UV audit tolerances."
+  },
+  "surface_revision": {
+    "ledger_path": "surface-repair.json",
+    "scope": "Geometry-preserving cannon casting UV/normal renewal after the original type-owned construction/export pipeline. The 82 fitted frame end-seats and 41 original metric square-frame UVs remain unchanged.",
+    "physical_geometry_materials_images": "Retained; only selected cannon corner normals and continuous UV0/AO1 changed.",
+    "armament": 20,
+    "fresh_review_required": true,
+    "actual_fresh_views": 6,
+    "manual_review_path": "detail-review.json"
   }
 }
