@@ -130,7 +130,9 @@
             "width_m": 9.557,
             "height_m": 5.04
           }
-        ]
+        ],
+        "heel_z_m": -3.023562592592593,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
       },
       {
         "name": "main",
@@ -156,7 +158,9 @@
             "width_m": 10.929,
             "height_m": 5.74
           }
-        ]
+        ],
+        "heel_z_m": -3.098810137396799,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
       },
       {
         "name": "mizzen",
@@ -176,7 +180,9 @@
             "width_m": 8.5,
             "height_m": 4.4
           }
-        ]
+        ],
+        "heel_z_m": -3.0132197327120824,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
       }
     ],
     "bowsprit": {
@@ -296,12 +302,202 @@
   "scope": {
     "delivered": "Static duel asset with two paint variants and LOD/collision/review assets.",
     "engine_integration": "Not integrated with an engine: no buoyancy, damage, artillery, sailing or crew controllers.",
-    "walking": "Not applicable: no authored walkable interior or player traversal claim."
+    "walking": "Authored geometric passage and stair access; no player controller or engine navigation integration. Actual clearance checks are recorded in validation.json after build.",
+    "interiors": "Modelled structural interiors with real planked decks, frames, hatch apertures, stairs and cabin partition openings. Layout is an authored reconstruction, not recovered retail geometry."
   },
   "source_paths": [
     "potc/galleon/type-profile.json",
     "potc/galleon/type-plan.svg",
     "docs/en/05-masts-and-spars.md",
-    "docs/en/12-designing-other-ships.md"
-  ]
+    "docs/en/12-designing-other-ships.md",
+    "potc/galleon/layout-research.json",
+    "potc/galleon/interior-plan.md",
+    "docs/en/04-decks-bulwarks-stern-head.md",
+    "docs/en/13-3d-quality-checklist.md"
+  ],
+  "detailed_layout": {
+    "schema": 1,
+    "coordinate_system": {
+      "longitudinal": "s_fraction of preserved deck length, positive forward",
+      "absolute_plan": "x_m across ship, y_m up, forward_z_m positive bow",
+      "note": "Vertical z_m fields follow the existing Blender builder convention; longitudinal at/from/to are fractions."
+    },
+    "frame_spacing_m": 0.56,
+    "clear_aisle_width_m": 1.2,
+    "passage_width_m": 1.1,
+    "standing_height_m": 1.85,
+    "minimum_headroom_m": 1.85,
+    "kind": "warship",
+    "partitions": [],
+    "companionways": [],
+    "extra_hatches": [
+      {
+        "id": "forecastle_hatch",
+        "at": 0.35,
+        "length_m": 1.65,
+        "width_m": 1.4,
+        "x_m": 0.0,
+        "coaming_height_m": 0.25,
+        "deck_id": "castle_2",
+        "access": "ladder",
+        "open": true,
+        "forward_z_m": 15.4,
+        "target_deck_id": "orlop"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "galleon-vasa",
+        "url": "https://faq.vasamuseet.se/category/45/article/4707?lang=en",
+        "title": "Vasa Museum: precise dimensions and levels of Vasa",
+        "kind": "Museum research interpretation of surviving seventeenth-century ship",
+        "observed": "Vasa has hold, orlop and two gun decks, plus several sterncastle levels. Published clear heights vary by location, and some upper after rooms are low.",
+        "application": "Real separate hold/orlop/lower-battery levels; stepped after accommodation beneath the preserved high castles.",
+        "limit": "Swedish warship analogue, not a Spanish trading galleon or the POTC Galleon. We enlarge authored access passages and do not copy the published clear heights."
+      },
+      {
+        "id": "galleon-cabin",
+        "url": "https://www.vasamuseet.se/en/visit/exhibitions/life-on-board",
+        "title": "Vasa Museum: Life on board",
+        "kind": "Museum exhibit based on surviving archaeological objects",
+        "observed": "The museum distinguishes the upper gun deck, helm and great cabin in its full-scale reconstructions and cross-section model.",
+        "application": "A distinct furnished after cabin, physical helm context and visible gun-deck structure.",
+        "limit": "Room furniture is an original interpretation, not a reconstruction of Vasa or unknown POTC interiors."
+      },
+      {
+        "id": "galleon-replica",
+        "url": "https://www.fundacionnaovictoria.org/history-the-galeon/",
+        "title": "Fundación Nao Victoria: History of the Galleon",
+        "kind": "Replica owner historical interpretation",
+        "observed": "The foundation describes Spanish galleons as armed ocean-going trading ships with several decks; its El Galeón replica interprets that family.",
+        "application": "Preserve high castles and mixed cargo, battery and after-accommodation roles.",
+        "limit": "The modern replica uses a modern construction core; it is an arrangement analogue, not evidence of traditional internal scantlings or exact stock model geometry."
+      }
+    ],
+    "notes": [
+      "Two retained batteries, high aftercastles and lateen mizzen remain distinct from the later frigate. Lower orlop and hold are real planked spaces. Main great cabin sits abaft the last lower battery station; low upper aftercastles are stores/chart spaces rather than invented full-height decks.",
+      "The authored cabin-front partition is placed aft of the preserved mizzen and its complete doorway approach; the centered 1.15 m door and main-hatch connection remain full-size.",
+      "The authored stern joinery uses four symmetric cabin lights around a solid central rudder post, preserving the original rudder hardware; the count and placement are fitted design choices, not recovered retail or museum-plan coordinates."
+    ],
+    "hold": {
+      "from": -0.37,
+      "to": 0.38,
+      "floor_z_m": -3.2,
+      "follow_sheer": true,
+      "ceiling_planking": true,
+      "bilge_visible": true,
+      "forward_z_range_m": [
+        -16.28,
+        16.72
+      ]
+    },
+    "cabin": {
+      "from": -0.48,
+      "to": -0.405,
+      "floor_z_m": 0.98,
+      "follow_sheer": true,
+      "ceiling_deck_id": "main",
+      "cut_main_deck": false,
+      "door_width_m": 1.15,
+      "door_height_m": 1.9,
+      "clear_height_m": 1.9,
+      "furniture": [
+        "table",
+        "bench",
+        "berth",
+        "locker"
+      ],
+      "forward_z_range_m": [
+        -21.12,
+        -17.82
+      ]
+    },
+    "hatch": {
+      "id": "main_hatch",
+      "at": 0.105,
+      "length_m": 3.2,
+      "width_m": 2.35,
+      "x_m": 0.0,
+      "coaming_height_m": 0.25,
+      "deck_id": "main",
+      "access": "stair",
+      "open": true,
+      "forward_z_m": 4.62
+    },
+    "lower_decks": [
+      {
+        "id": "gun_deck_0",
+        "from": -0.42,
+        "to": 0.42,
+        "z_m": 0.98,
+        "follow_sheer": true,
+        "forward_z_range_m": [
+          -18.48,
+          18.48
+        ]
+      },
+      {
+        "id": "orlop",
+        "from": -0.42,
+        "to": 0.42,
+        "z_m": -1.1,
+        "follow_sheer": true,
+        "forward_z_range_m": [
+          -18.48,
+          18.48
+        ]
+      }
+    ],
+    "machinery": {
+      "capstan_at": 0.015
+    },
+    "compartments": [
+      {
+        "id": "cable_store",
+        "role": "cable_store",
+        "from": 0.28,
+        "to": 0.41,
+        "deck_id": "orlop",
+        "forward_z_range_m": [
+          12.32,
+          18.04
+        ]
+      },
+      {
+        "id": "powder_store",
+        "role": "magazine",
+        "from": -0.35,
+        "to": -0.25,
+        "deck_id": "hold",
+        "forward_z_range_m": [
+          -15.4,
+          -11.0
+        ]
+      },
+      {
+        "id": "great_cabin",
+        "role": "cabin",
+        "from": -0.48,
+        "to": -0.405,
+        "deck_id": "gun_deck_0",
+        "forward_z_range_m": [
+          -21.12,
+          -17.82
+        ]
+      },
+      {
+        "id": "cargo_hold",
+        "role": "hold",
+        "from": -0.22,
+        "to": 0.27,
+        "deck_id": "hold",
+        "forward_z_range_m": [
+          -9.68,
+          11.88
+        ]
+      }
+    ],
+    "research_path": "layout-research.json"
+  },
+  "detail_schema": 5
 }

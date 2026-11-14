@@ -1,0 +1,282 @@
+{
+  "schema": 1,
+  "id": "galleon",
+  "accessed_utc": "2026-11-14",
+  "purpose": "Original detailed deck and below-deck reconstruction for the existing ordinary POTC family and both paint variants.",
+  "stock_contract": {
+    "id": "SHIP_GALEON_ENGLAND",
+    "model": "Galeon1",
+    "cannons": 38,
+    "claim": "Existing pinned stock-derived identity and total count only; no game interior coordinates known."
+  },
+  "method": "Museum and primary-plan catalogue research supplies arrangement vocabulary. All metre dimensions, room positions and access clearances are authored to the preserved hull. Public source text is paraphrased; no museum image, plan tracing or proprietary texture is distributed.",
+  "sources": [
+    {
+      "id": "galleon-vasa",
+      "url": "https://faq.vasamuseet.se/category/45/article/4707?lang=en",
+      "title": "Vasa Museum: precise dimensions and levels of Vasa",
+      "kind": "Museum research interpretation of surviving seventeenth-century ship",
+      "observed": "Vasa has hold, orlop and two gun decks, plus several sterncastle levels. Published clear heights vary by location, and some upper after rooms are low.",
+      "application": "Real separate hold/orlop/lower-battery levels; stepped after accommodation beneath the preserved high castles.",
+      "limit": "Swedish warship analogue, not a Spanish trading galleon or the POTC Galleon. We enlarge authored access passages and do not copy the published clear heights.",
+      "applies_to": "Real separate hold/orlop/lower-battery levels; stepped after accommodation beneath the preserved high castles."
+    },
+    {
+      "id": "galleon-cabin",
+      "url": "https://www.vasamuseet.se/en/visit/exhibitions/life-on-board",
+      "title": "Vasa Museum: Life on board",
+      "kind": "Museum exhibit based on surviving archaeological objects",
+      "observed": "The museum distinguishes the upper gun deck, helm and great cabin in its full-scale reconstructions and cross-section model.",
+      "application": "A distinct furnished after cabin, physical helm context and visible gun-deck structure.",
+      "limit": "Room furniture is an original interpretation, not a reconstruction of Vasa or unknown POTC interiors.",
+      "applies_to": "A distinct furnished after cabin, physical helm context and visible gun-deck structure."
+    },
+    {
+      "id": "galleon-replica",
+      "url": "https://www.fundacionnaovictoria.org/history-the-galeon/",
+      "title": "Fundaci\u00f3n Nao Victoria: History of the Galleon",
+      "kind": "Replica owner historical interpretation",
+      "observed": "The foundation describes Spanish galleons as armed ocean-going trading ships with several decks; its El Gale\u00f3n replica interprets that family.",
+      "application": "Preserve high castles and mixed cargo, battery and after-accommodation roles.",
+      "limit": "The modern replica uses a modern construction core; it is an arrangement analogue, not evidence of traditional internal scantlings or exact stock model geometry.",
+      "applies_to": "Preserve high castles and mixed cargo, battery and after-accommodation roles."
+    }
+  ],
+  "decisions": [
+    {
+      "feature": "Preserved battery and deck hierarchy",
+      "basis": "Two retained batteries, high aftercastles and lateen mizzen remain distinct from the later frigate. Lower orlop and hold are real planked spaces. Main great cabin sits abaft the last lower battery station; low upper aftercastles are stores/chart spaces rather than invented full-height decks. This is an authored adaptation of the listed historical analogues to the unchanged game-family gun total.",
+      "source_urls": [
+        "https://faq.vasamuseet.se/category/45/article/4707?lang=en",
+        "https://www.vasamuseet.se/en/visit/exhibitions/life-on-board",
+        "https://www.fundacionnaovictoria.org/history-the-galeon/"
+      ]
+    },
+    {
+      "feature": "Physically separate lower levels and hold",
+      "basis": "The authored hull contains distinct gun_deck_0, orlop and a framed hold. Numerical deck and floor baselines are fitted estimates; the source deck hierarchy supplies arrangement vocabulary rather than retail game coordinates.",
+      "source_urls": [
+        "https://faq.vasamuseet.se/category/45/article/4707?lang=en"
+      ]
+    },
+    {
+      "feature": "After cabin and unobstructed structural access",
+      "basis": "The furnished after cabin has a real centered partition door opening from its own lower deck. The main hatch shaft reaches that level; no side stair crosses a cabin wall or opens into a sealed low quarterdeck space. Cabin dimensions and this access route are authored game-environment choices. The authored front partition is set aft of the unchanged mizzen so its complete centered doorway approach remains clear; this is a fitted spatial choice, not a coordinate taken from a historical plan.",
+      "source_urls": [
+        "https://faq.vasamuseet.se/category/45/article/4707?lang=en",
+        "https://www.vasamuseet.se/en/visit/exhibitions/life-on-board",
+        "https://www.fundacionnaovictoria.org/history-the-galeon/"
+      ]
+    },
+    {
+      "feature": "Authored four-light stern joinery and solid rudder post",
+      "basis": "The sources establish the after-cabin role. Four symmetric glazed lights and a solid central rudder post are an authored period-joinery interpretation fitted around the unchanged rudder hardware, rather than a source claim about a historical or retail-game window count.",
+      "source_urls": [
+        "https://www.vasamuseet.se/en/visit/exhibitions/life-on-board"
+      ]
+    }
+  ],
+  "layout": {
+    "schema": 1,
+    "coordinate_system": {
+      "longitudinal": "s_fraction of preserved deck length, positive forward",
+      "absolute_plan": "x_m across ship, y_m up, forward_z_m positive bow",
+      "note": "Vertical z_m fields follow the existing Blender builder convention; longitudinal at/from/to are fractions."
+    },
+    "frame_spacing_m": 0.56,
+    "clear_aisle_width_m": 1.2,
+    "passage_width_m": 1.1,
+    "standing_height_m": 1.85,
+    "minimum_headroom_m": 1.85,
+    "kind": "warship",
+    "partitions": [],
+    "companionways": [],
+    "extra_hatches": [
+      {
+        "id": "forecastle_hatch",
+        "at": 0.35,
+        "length_m": 1.65,
+        "width_m": 1.4,
+        "x_m": 0.0,
+        "coaming_height_m": 0.25,
+        "deck_id": "castle_2",
+        "access": "ladder",
+        "open": true,
+        "forward_z_m": 15.4,
+        "target_deck_id": "orlop"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "galleon-vasa",
+        "url": "https://faq.vasamuseet.se/category/45/article/4707?lang=en",
+        "title": "Vasa Museum: precise dimensions and levels of Vasa",
+        "kind": "Museum research interpretation of surviving seventeenth-century ship",
+        "observed": "Vasa has hold, orlop and two gun decks, plus several sterncastle levels. Published clear heights vary by location, and some upper after rooms are low.",
+        "application": "Real separate hold/orlop/lower-battery levels; stepped after accommodation beneath the preserved high castles.",
+        "limit": "Swedish warship analogue, not a Spanish trading galleon or the POTC Galleon. We enlarge authored access passages and do not copy the published clear heights."
+      },
+      {
+        "id": "galleon-cabin",
+        "url": "https://www.vasamuseet.se/en/visit/exhibitions/life-on-board",
+        "title": "Vasa Museum: Life on board",
+        "kind": "Museum exhibit based on surviving archaeological objects",
+        "observed": "The museum distinguishes the upper gun deck, helm and great cabin in its full-scale reconstructions and cross-section model.",
+        "application": "A distinct furnished after cabin, physical helm context and visible gun-deck structure.",
+        "limit": "Room furniture is an original interpretation, not a reconstruction of Vasa or unknown POTC interiors."
+      },
+      {
+        "id": "galleon-replica",
+        "url": "https://www.fundacionnaovictoria.org/history-the-galeon/",
+        "title": "Fundaci\u00f3n Nao Victoria: History of the Galleon",
+        "kind": "Replica owner historical interpretation",
+        "observed": "The foundation describes Spanish galleons as armed ocean-going trading ships with several decks; its El Gale\u00f3n replica interprets that family.",
+        "application": "Preserve high castles and mixed cargo, battery and after-accommodation roles.",
+        "limit": "The modern replica uses a modern construction core; it is an arrangement analogue, not evidence of traditional internal scantlings or exact stock model geometry."
+      }
+    ],
+    "notes": [
+      "Two retained batteries, high aftercastles and lateen mizzen remain distinct from the later frigate. Lower orlop and hold are real planked spaces. Main great cabin sits abaft the last lower battery station; low upper aftercastles are stores/chart spaces rather than invented full-height decks.",
+      "The authored cabin-front partition is placed aft of the preserved mizzen and its complete doorway approach; the centered 1.15 m door and main-hatch connection remain full-size.",
+      "The authored stern joinery uses four symmetric cabin lights around a solid central rudder post, preserving the original rudder hardware; the count and placement are fitted design choices, not recovered retail or museum-plan coordinates."
+    ],
+    "hold": {
+      "from": -0.37,
+      "to": 0.38,
+      "floor_z_m": -3.2,
+      "follow_sheer": true,
+      "ceiling_planking": true,
+      "bilge_visible": true,
+      "forward_z_range_m": [
+        -16.28,
+        16.72
+      ]
+    },
+    "cabin": {
+      "from": -0.48,
+      "to": -0.405,
+      "floor_z_m": 0.98,
+      "follow_sheer": true,
+      "ceiling_deck_id": "main",
+      "cut_main_deck": false,
+      "door_width_m": 1.15,
+      "door_height_m": 1.9,
+      "clear_height_m": 1.9,
+      "furniture": [
+        "table",
+        "bench",
+        "berth",
+        "locker"
+      ],
+      "forward_z_range_m": [
+        -21.12,
+        -17.82
+      ]
+    },
+    "hatch": {
+      "id": "main_hatch",
+      "at": 0.105,
+      "length_m": 3.2,
+      "width_m": 2.35,
+      "x_m": 0.0,
+      "coaming_height_m": 0.25,
+      "deck_id": "main",
+      "access": "stair",
+      "open": true,
+      "forward_z_m": 4.62
+    },
+    "lower_decks": [
+      {
+        "id": "gun_deck_0",
+        "from": -0.42,
+        "to": 0.42,
+        "z_m": 0.98,
+        "follow_sheer": true,
+        "forward_z_range_m": [
+          -18.48,
+          18.48
+        ]
+      },
+      {
+        "id": "orlop",
+        "from": -0.42,
+        "to": 0.42,
+        "z_m": -1.1,
+        "follow_sheer": true,
+        "forward_z_range_m": [
+          -18.48,
+          18.48
+        ]
+      }
+    ],
+    "machinery": {
+      "capstan_at": 0.015
+    },
+    "compartments": [
+      {
+        "id": "cable_store",
+        "role": "cable_store",
+        "from": 0.28,
+        "to": 0.41,
+        "deck_id": "orlop",
+        "forward_z_range_m": [
+          12.32,
+          18.04
+        ]
+      },
+      {
+        "id": "powder_store",
+        "role": "magazine",
+        "from": -0.35,
+        "to": -0.25,
+        "deck_id": "hold",
+        "forward_z_range_m": [
+          -15.4,
+          -11.0
+        ]
+      },
+      {
+        "id": "great_cabin",
+        "role": "cabin",
+        "from": -0.48,
+        "to": -0.405,
+        "deck_id": "gun_deck_0",
+        "forward_z_range_m": [
+          -21.12,
+          -17.82
+        ]
+      },
+      {
+        "id": "cargo_hold",
+        "role": "hold",
+        "from": -0.22,
+        "to": 0.27,
+        "deck_id": "hold",
+        "forward_z_range_m": [
+          -9.68,
+          11.88
+        ]
+      }
+    ],
+    "research_path": "layout-research.json"
+  },
+  "reference_quality_bar": {
+    "asset": "sailertales/brig (Bryg Mewa), PR3 detailed reference",
+    "main_triangles": 273032,
+    "features": [
+      "real hollow hold",
+      "furnished lowered cabin",
+      "real cabin door and deck hatch",
+      "physical framing and deck structure",
+      "actual route geometry"
+    ],
+    "rule": "Substantial structural and material detail; triangle count is context, not a substitute for useful geometry."
+  },
+  "ship_id": "galleon",
+  "limitations": [
+    "No authenticated POTC retail interior plan or mesh locators were available. All metre coordinates, room dimensions and passage widths are authored estimates; source museum plans are not traced or redistributed.",
+    "Swedish warship analogue, not a Spanish trading galleon or the POTC Galleon. We enlarge authored access passages and do not copy the published clear heights.",
+    "Room furniture is an original interpretation, not a reconstruction of Vasa or unknown POTC interiors.",
+    "The modern replica uses a modern construction core; it is an arrangement analogue, not evidence of traditional internal scantlings or exact stock model geometry."
+  ]
+}

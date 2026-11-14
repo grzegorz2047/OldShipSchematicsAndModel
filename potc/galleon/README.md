@@ -20,4 +20,10 @@ blender -b --python potc/galleon/build.py
 
 `spec.json` and `type-profile.json` record the family plan, exact stock-stat evidence, guide references and uncertainty. The 2003 published screenshot is used only for general visual vocabulary; its ship family is not authenticated. No proprietary mesh, texture or paid generated asset is included. The stock-derived modern compatibility script is not claimed to be a byte-identical retail dump.
 
-This is a **static duel asset**. Engine sailing, buoyancy, damage, gun logic and crew controllers are absent. Walking and interior navigation are not claimed and are outside this asset's acceptance scope.
+[Interior plan](interior-plan.md) and [research ledger](layout-research.json) document the new framed below-deck spaces, real openings, stairs and furnished after cabin. Historical sources inform the arrangement; the dimensions remain authored.
+
+The authored stern joinery has four symmetric glazed cabin lights around a solid central rudder post. Their count and placement fit the preserved rudder hardware; they are not claimed as recovered retail-game or museum-plan coordinates.
+
+Actual detail views show the [main hatch](previews/ochre/detail/deck_closeup.png), [intact hold](previews/ochre/detail/hold_interior.png) and [intact cabin](previews/ochre/detail/cabin_interior.png). The [lower battery view](previews/ochre/detail/gun_deck_0_interior.png) retains its guns, ports and overhead structure. [Render evidence](detail-render.json) records the cameras, image hashes and explicitly hidden cutaway parts; [manual review](detail-review.json) records the visual observations.
+
+This is a **static detailed ship asset**. Engine sailing, buoyancy, damage, gun logic, player control and crew AI are absent. Geometric access and imported-export checks are recorded in `validation.json`.
