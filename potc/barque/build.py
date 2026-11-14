@@ -32,3 +32,9 @@ def _build_with_bearing_clearance():
 
 if __name__ == "__main__":
     _build_with_bearing_clearance()
+
+# POTC_SURFACE_REPAIR_POST_BUILD
+if __name__ == "__main__":
+    sys.path.insert(0, str(HERE))
+    from gun_surface_repair import repair_package
+    repair_package(HERE)

@@ -416,5 +416,12 @@
     ],
     "modern_equipment_excluded": true
   },
-  "detail_schema": 5
+  "detail_schema": 5,
+  "source_paths": [
+    "potc/barque/gun_surface_fix.py",
+    "potc/barque/gun_surface_native.py",
+    "potc/barque/gun_surface_repair.py",
+    "potc/barque/gun_surface_bindings.py",
+    "potc/barque/surface-repair.json"
+  ]
 }

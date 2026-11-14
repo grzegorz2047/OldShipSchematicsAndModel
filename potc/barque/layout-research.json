@@ -323,5 +323,12 @@
     "Vasa is a 1628 warship. No identical sanitation arrangement or bow-head access is established for the POTC families.",
     "A period furniture analogue, not a maritime find or verified stock asset. Its placement in these game-family cabins is authored; it does not establish fifteenth-century caravel equipment.",
     "Does not establish stock-family boat dimensions or stowage. The 3m tender is an authored compact boat, not a claim to reproduce Batavia’s larger rescue boat."
-  ]
+  ],
+  "surface_revision": {
+    "scope": "Authored texture projection and corner-normal correction of exact cannon castings only; no historical layout claim.",
+    "method": "Continuous profile-band cylindrical UV0/AO1, world-down meridian,20-station snap and authored1.05density compensation; FREE_FLOAT3 source normals and explicit post-export copy-on-write repair.",
+    "invariants": "Positions,indices,non-target objects,material and image payloads,COL unchanged; actual measurements in surface-repair.json.",
+    "visual_limit": "Existing mottled iron patina/reflections remain stylized; no photorealism claim.",
+    "evidence": "surface-repair.json"
+  }
 }

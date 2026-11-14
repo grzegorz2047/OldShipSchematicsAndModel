@@ -98,3 +98,9 @@ Poniższe obrazy pochodzą z ponownie wczytanego eksportu wariantu `ochre`. Zbli
 ![Kontrolny przekrój kajuty](previews/ochre/detail/cabin_cutaway.png)
 
 [Kontrolny przekrój ładowni](previews/ochre/detail/hold_cutaway.png) pokazuje jej połączenia i konstrukcję pod pokładem.
+
+## Powierzchnie luf: jawny etap po eksporcie
+
+Poprawiono wyłącznie normalne narożników i obie mapy UV rzeczywistych luf: gładki obwód każdego pasa odlewu, ostre pierścienie profilu i wylot, ciągła projekcja cylindryczna z jedynym szwem na spodzie oraz jawne zagęszczenie projekcji o 5%. Zachowano pozycje wierzchołków, indeksy, wszystkie pozostałe obiekty, materiały, obrazy tekstur i geometrię kolizji. Barwna patyna i refleksy nadal są stylizowane.
+
+Własne `build.py` uruchamia po dotychczasowej budowie ten sam odtwarzalny etap `repair_package(HERE)`. [Rejestr powierzchni](surface-repair.json) zawiera skróty dwóch plików źródłowych i sześciu GLB, niezmieniony COL oraz pomiary zapisanych i ewaluowanych powierzchni źródła względem dostarczonych eksportów. Ten etap nie jest ponowną budową kadłuba ani źródłem historycznych twierdzeń o wnętrzu. Świeże obrazy i pełny audyt pozostają odrębnymi dowodami końcowej kontroli.
