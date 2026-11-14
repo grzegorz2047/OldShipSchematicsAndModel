@@ -1,31 +1,38 @@
-# Zwykłe typy statków z Pirates of the Caribbean (2003)
+# Statki POTC — pokłady, wnętrza i dwa malowania
 
-Każdy katalog typu dostarcza nową, autorską rekonstrukcję inspirowaną podstawową grą Akelli. Rodzina, klasa i liczba dział pochodzą ze wskazanych źródeł gry. Wymiary w metrach, linie kadłuba, rozplanowanie pokładów i szczegóły takielunku są autorską interpretacją, a nie odzyskanymi modelami gry. Źródła i granice wierności opisują `spec.json` i `design.json` danego typu.
+Modele przedstawiają zwykłe rodziny statków z Pirates of the Caribbean (2003). Każdy typ ma własny PR oraz dwie kompletne wersje: `ochre` i `navy`. Jednostki specjalne pozostają poza serią. Geometria jest autorska; liczby dział i rodziny pochodzą ze źródeł gry. Wymiary w metrach i szczegółowe wnętrza są rekonstrukcją, a nie wydobytymi modelami gry.
 
-Zakres obejmuje Tartane, Yacht, Lugger, Galeoth, Xebec, Barque, Schooner, Caravel, Fleut, Pinnace, Brig, Galleon, Corvette, Frigate i Battleship. Każdy typ trafia do osobnego PR. Istniejąca rodzina Sloop pozostaje we wcześniejszych PR-ach. Nowy Brig ma dwa zasadnicze maszty i gafel na grotmaszcie; wcześniejszy model nazwany w grze „brygiem” korzysta z układu snowa. Jednostki specjalne oraz wersje z modów nie należą do tej serii.
+Każdy katalog typu zawiera `layout-research.json`: przeczytane źródła muzealne i planistyczne, ich zastosowanie, decyzje rekonstrukcyjne oraz ograniczenia. Rozplanowanie jest zapisane w `spec.json` pod `detailed_layout`. Źródła dla późniejszych jednostek porównawczych są oznaczone jako analogie. Nie są dowodem wyglądu niedostępnego wnętrza gry.
 
-Dwie kompletne wersje kolorystyczne, `ochre` i `navy`, zawierają osobne główne GLB, LOD1, LOD2 i spakowane sceny Blender. Zmieniają się farby kadłuba i listew; drewno, płótno, liny i żelazo zachowują materiały naturalne. Wspólna kolizja jest dokładną kopią zadeklarowanych zamkniętych powłok kadłuba i płyt pokładów. Zachowuje rzeczywiste furty i otwarte kokpity, więc wymaga obsługi wklęsłej statycznej siatki kolizji.
+## Konstrukcja i wyposażenie
 
-To statyczne modele do prezentacji jednostek i integracji z grą. Nie zawierają kontrolera żeglugi, załogi, chodzenia ani animacji obsługi dział. Audyt dotyczy dostarczonej pozy żagli. Nie certyfikuje dowolnego przetrymowania ani historycznej zgodności każdego detalu.
+Wnętrza mają rzeczywistą geometrię: klepkowe pokłady, wręgi, belki i kolana, stropy, podłogi ładowni, grodzie, przejścia, luki i zejścia. Otwory przechodzą przez właściwe poziomy pokładów. Przeszklone okna mają otwory w drewnie rufy; szkło nie leży na pełnej ścianie. Wyposażenie obejmuje odpowiednie dla typu koje, ławy, stoły, schowki, zapasy, osprzęt cumowniczy i kotwiczny. Działa mają rzeczywiste wnętrza luf i liny oporowe; takielunek otrzymał jufersy, ściągacze, bloki, kołki i wyblinki.
 
-## Odtwarzanie i kontrola
+Mała tartana pozostaje otwartą łodzią rybacką z widoczną zęzą, wręgami, ławkami, rumplem i odłożonym sprzętem. Nie otrzymuje wymyślonej pełnej kajuty ani ładowni z pionowym dojściem. Fluita, karawela, szkuner, galeon i okręty artyleryjskie zachowują odrębne układy oraz funkcje przestrzeni.
 
-Modele i porównania wykonano w Blenderze **5.2.3 LTS**. Spakowane sceny źródłowe wymagają Blendera 5.2 lub nowszego. Wszystkie tekstury są osadzone w GLB i scenach źródłowych.
+Punktem odniesienia jakości jest szczegółowy Bryg Mewa z wcześniejszego PR #3: rzeczywiste wnętrza i otwarte dojścia oraz materiały oglądane w porównywalnej skali. Liczba trójkątów nie zastępuje oceny jakości. Główne mapy pokładu i malowanego poszycia zachowują 8192 × 2048 pikseli; drewno i metal korzystają z map 2048², podobnie płótno. Osadzone mapy PBR obejmują kolor, normalne i ORM. Malowania zmieniają farby kadłuba i listew, zachowując naturalne materiały oraz identyczną geometrię.
 
-Przykład dla katalogu `potc/tartane`; zastąp identyfikator wybranym dostarczonym typem:
+## Odtwarzanie i weryfikacja
 
-```sh
-blender -b -t 1 --factory-startup --python-exit-code 1 --python potc/tartane/build.py
-blender -b -t 1 --factory-startup --python-exit-code 1 --python potc/common/v4_audit.py -- --asset-dir potc/tartane --source-root .
-python potc/common/v4_integrity.py --asset-dir potc/tartane --source-root .
-```
-
-Samodzielna kontrola wszystkich dostarczonych typów, bez Blendera:
+Zalecany Blender: **5.2.3 LTS**. Spakowane sceny wymagają wersji 5.2 lub nowszej. Przykład dla brygu:
 
 ```sh
-python potc/common/v4_integrity.py --all --source-root .
+blender -b -t 2 --factory-startup --python-exit-code 1 --python potc/brig/build.py
+blender -b -t 2 --factory-startup --python-exit-code 1 --python potc/common/v5_review.py -- --asset-dir potc/brig --resolution 640
 ```
 
-Raporty wiążą modele, spakowane źródła, podglądy i użyty kod przez SHA-256. Pełny audyt ponownie importuje wszystkie siedem GLB, sprawdza rzeczywistą geometrię i mocowania olinowania, oba malowania, LOD-y, materiałowe UV oraz zgodność scen źródłowych z eksportami i ich obrazami. Tryb diagnostyczny `--geometry-only` nie tworzy raportu odbioru.
+Podglądy powstają przez ponowny import dostarczonego GLB. Przekroje mają jawnie zapisane tymczasowo ukryte elementy; nie zmieniają geometrii eksportu. Po obejrzeniu rzeczywistych podglądów `detail-review.json` zapisuje ocenę, konkretne obserwacje i hashe obrazów. Renderer sam nie wystawia oceny PASS.
 
-Wspólny kod tej serii ma osobną przestrzeń `potc/common/v4_*.py`. Wcześniejsze moduły i progi kontroli pozostają identyczne z zamrożoną integracją wcześniejszej floty.
+```sh
+blender -b -t 2 --factory-startup --python-exit-code 1 --python potc/common/v5_audit.py -- --asset-dir potc/brig --source-root .
+python potc/common/v5_integrity.py --asset-dir potc/brig --source-root .
+python potc/common/v5_integrity.py --all --source-root .
+```
+
+Przenośna kontrola wymaga Pythona, NumPy i Pillow. Raport zachowuje dotychczasowe kontrole geometrii, UV, materiałów, takielunku, dwóch malowań, LOD-ów i zgodności scen źródłowych z eksportami. Dodatkowe bramki mierzą rzeczywistą konstrukcję, wolne otwory, dojścia, okna, materiały i wiążą ręczną ocenę obrazów z dokładnym modelem. SHA-256 obejmuje modele, źródła, podglądy oraz użyty kod.
+
+Szczegółowe paczki mają jawny budżet v5 na rozmiar pliku i trójkąty. Dawne limity prostych modeli (32 MiB i 280 000 trójkątów) pozostają zmierzonymi wynikami w raporcie; ich zastąpienie jest oznaczone jako `SUPERSEDED`, bez zamiany nieudanego pomiaru na PASS. Osobna obowiązkowa kontrola egzekwuje stałe limity szczegółowej serii. Eksport współdzieli identyczne bajty map i UV oraz korzysta z odtwarzanego przez glTF układu stycznych; nie zmniejsza głównych map ani nie kwantyzuje geometrii. Powtarzane komentarze i przełączniki procesu budowania pozostają w scenach Blender oraz dokumentacji; GLB zachowuje geometrię, materiały, przebieg słojów, oznaczenia części i rzeczywiste mocowania takielunku.
+
+Dostawa zawiera osobne główne GLB i dwa LOD-y dla każdego malowania, dwie spakowane sceny Blender, źródłowe mapy, wspólną dokładną kolizję kadłuba i pokładów oraz raporty. Kolizja wymaga obsługi statycznych siatek wklęsłych. Kontrole dojść dotyczą fizycznej geometrii w zapisanej pozie. Kontrolery żeglugi, załogi, obsługi dział i ruchu gracza nie są częścią modeli.
+
+Nowy kod pozostaje w `potc/common/v5_*.py`. Wcześniejsze moduły v4, oryginalne skrypty poradnika i modele wcześniejszej floty są zachowane.

@@ -1,0 +1,231 @@
+{
+  "schema": 5,
+  "status": "APPROVED",
+  "legacy_limits": {
+    "H1_bytes": 33554432,
+    "H2_triangles": 280000
+  },
+  "reason": "The requested physical framing, accessible fitted interiors and full PBR maps require an explicitly reviewed v5 resource profile. Original H1/H2 results remain visible as superseded evidence; every other frozen physical gate remains mandatory. Fixed family allocations will be approved only after the Brig and Battleship measurements.",
+  "measured_context": {
+    "brig_initial_full_pbr_bytes": 69487512,
+    "brig_initial_full_pbr_triangles": 225680,
+    "brig_initial_embedded_image_bytes_before_lossless_deduplication": 37009008,
+    "frigate_closed_geometry_probe_triangles": 402948,
+    "note": "Measurements explain why the simple-model H1/H2 profile is superseded. They are evidence, not dynamically generated acceptance limits. Battle measurement and explicit approval are still required.",
+    "battleship_raw_triangles": 619412,
+    "battleship_estimated_full_pbr_mib_before_AO_UV1_and_packing": 95.2277
+  },
+  "families": {
+    "tartane": {
+      "ship": {
+        "max_bytes": 103809024,
+        "max_triangles": 750000
+      },
+      "lod1": {
+        "max_bytes": 103809024,
+        "max_triangles": 700000
+      },
+      "lod2": {
+        "max_bytes": 103809024,
+        "max_triangles": 650000
+      }
+    },
+    "yacht": {
+      "ship": {
+        "max_bytes": 103809024,
+        "max_triangles": 750000
+      },
+      "lod1": {
+        "max_bytes": 103809024,
+        "max_triangles": 700000
+      },
+      "lod2": {
+        "max_bytes": 103809024,
+        "max_triangles": 650000
+      }
+    },
+    "lugger": {
+      "ship": {
+        "max_bytes": 103809024,
+        "max_triangles": 750000
+      },
+      "lod1": {
+        "max_bytes": 103809024,
+        "max_triangles": 700000
+      },
+      "lod2": {
+        "max_bytes": 103809024,
+        "max_triangles": 650000
+      }
+    },
+    "galeoth": {
+      "ship": {
+        "max_bytes": 103809024,
+        "max_triangles": 750000
+      },
+      "lod1": {
+        "max_bytes": 103809024,
+        "max_triangles": 700000
+      },
+      "lod2": {
+        "max_bytes": 103809024,
+        "max_triangles": 650000
+      }
+    },
+    "xebec": {
+      "ship": {
+        "max_bytes": 103809024,
+        "max_triangles": 750000
+      },
+      "lod1": {
+        "max_bytes": 103809024,
+        "max_triangles": 700000
+      },
+      "lod2": {
+        "max_bytes": 103809024,
+        "max_triangles": 650000
+      }
+    },
+    "barque": {
+      "ship": {
+        "max_bytes": 103809024,
+        "max_triangles": 750000
+      },
+      "lod1": {
+        "max_bytes": 103809024,
+        "max_triangles": 700000
+      },
+      "lod2": {
+        "max_bytes": 103809024,
+        "max_triangles": 650000
+      }
+    },
+    "schooner": {
+      "ship": {
+        "max_bytes": 103809024,
+        "max_triangles": 750000
+      },
+      "lod1": {
+        "max_bytes": 103809024,
+        "max_triangles": 700000
+      },
+      "lod2": {
+        "max_bytes": 103809024,
+        "max_triangles": 650000
+      }
+    },
+    "caravel": {
+      "ship": {
+        "max_bytes": 103809024,
+        "max_triangles": 750000
+      },
+      "lod1": {
+        "max_bytes": 103809024,
+        "max_triangles": 700000
+      },
+      "lod2": {
+        "max_bytes": 103809024,
+        "max_triangles": 650000
+      }
+    },
+    "fleut": {
+      "ship": {
+        "max_bytes": 103809024,
+        "max_triangles": 750000
+      },
+      "lod1": {
+        "max_bytes": 103809024,
+        "max_triangles": 700000
+      },
+      "lod2": {
+        "max_bytes": 103809024,
+        "max_triangles": 650000
+      }
+    },
+    "pinnace": {
+      "ship": {
+        "max_bytes": 103809024,
+        "max_triangles": 750000
+      },
+      "lod1": {
+        "max_bytes": 103809024,
+        "max_triangles": 700000
+      },
+      "lod2": {
+        "max_bytes": 103809024,
+        "max_triangles": 650000
+      }
+    },
+    "brig": {
+      "ship": {
+        "max_bytes": 103809024,
+        "max_triangles": 750000
+      },
+      "lod1": {
+        "max_bytes": 103809024,
+        "max_triangles": 700000
+      },
+      "lod2": {
+        "max_bytes": 103809024,
+        "max_triangles": 650000
+      }
+    },
+    "galleon": {
+      "ship": {
+        "max_bytes": 103809024,
+        "max_triangles": 750000
+      },
+      "lod1": {
+        "max_bytes": 103809024,
+        "max_triangles": 700000
+      },
+      "lod2": {
+        "max_bytes": 103809024,
+        "max_triangles": 650000
+      }
+    },
+    "corvette": {
+      "ship": {
+        "max_bytes": 103809024,
+        "max_triangles": 750000
+      },
+      "lod1": {
+        "max_bytes": 103809024,
+        "max_triangles": 700000
+      },
+      "lod2": {
+        "max_bytes": 103809024,
+        "max_triangles": 650000
+      }
+    },
+    "frigate": {
+      "ship": {
+        "max_bytes": 103809024,
+        "max_triangles": 750000
+      },
+      "lod1": {
+        "max_bytes": 103809024,
+        "max_triangles": 700000
+      },
+      "lod2": {
+        "max_bytes": 103809024,
+        "max_triangles": 650000
+      }
+    },
+    "battleship": {
+      "ship": {
+        "max_bytes": 103809024,
+        "max_triangles": 750000
+      },
+      "lod1": {
+        "max_bytes": 103809024,
+        "max_triangles": 700000
+      },
+      "lod2": {
+        "max_bytes": 103809024,
+        "max_triangles": 650000
+      }
+    }
+  },
+  "approval_basis": "Root reviewed measured Brig and Battle resource use before final builds. Fixed limits are independent of build output; every actual file must remain below GitHub's 100 MiB limit and every LOD must also retain the frozen strictly-decreasing triangle invariant."
+}

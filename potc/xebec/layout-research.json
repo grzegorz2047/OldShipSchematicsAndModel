@@ -1,0 +1,280 @@
+{
+  "schema": 1,
+  "ship_id": "xebec",
+  "researched_on": "2026-11-14",
+  "scope": "Dimensions, frame spacing, compartments and fitting positions are authored estimates fitted to the preserved POTC-family hull. These sources do not document the proprietary retail model and do not establish exact stock interiors. No museum image is copied into the model or its textures.",
+  "sources": [
+    {
+      "url": "https://ancre.fr/en/monograph/18-monographie-du-requin-chebec-1750-.html",
+      "title": "ANCRE: Le Requin xebec, 1750",
+      "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+      "confirmed": [
+        "Publisher states period plans and rigging documents support the monograph and its timber/frames/fittings plates."
+      ],
+      "application": [
+        "Mediterranean xebec framing and low single-battery construction vocabulary."
+      ],
+      "applies_to": [
+        "Mediterranean xebec framing and low single-battery construction vocabulary."
+      ]
+    },
+    {
+      "url": "https://ancre.fr/en/index.php?controller=attachment&id_attachment=81",
+      "title": "ANCRE: Le Requin English sample PDF, page 2",
+      "read": "PDF text read; page 2 rendered to 1600 px and visually inspected on 2026-11-14.",
+      "confirmed": [
+        "Inspected sample shows hull sections with floors/frames and beams, anchor and cannon details, and photos of an open gun deck with belaying rails and low ornate stern platform."
+      ],
+      "application": [
+        "Framed shallow hold, restrained low after cabin, open coamed access hatch and anchor/capstan/rope details; exact illustrated dimensions and ornaments are not traced."
+      ],
+      "applies_to": [
+        "Framed shallow hold, restrained low after cabin, open coamed access hatch and anchor/capstan/rope details; exact illustrated dimensions and ornaments are not traced."
+      ]
+    },
+    {
+      "url": "https://collections.museumsvictoria.com.au/items/395808",
+      "title": "Museums Victoria ST34691: Chebec class sailing model",
+      "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+      "confirmed": [
+        "Museum identifies three-masted French armed chebec, raised poop and lateen sail."
+      ],
+      "application": [
+        "Retain three lateen masts, narrow open battery and low raised poop."
+      ],
+      "applies_to": [
+        "Retain three lateen masts, narrow open battery and low raised poop."
+      ]
+    }
+  ],
+  "plan": [
+    "Shallow framed hold -0.30L to +0.38L, sole -0.85 m; an actual fitted water cask and planked provisions box occupy supported side footprints. The narrow forward area stays clear; no invisible cable locker is claimed.",
+    "Low after cabin -0.47L to -0.35L, floor -0.25 m and modest hinged seat locker combining seating and storage, with no unsupported freestanding adult berth; no stacked gun decks.",
+    "2.0 \u00d7 1.4 m centerline hatch at +0.13L, offset poop companion, visible pump and belaying fittings.",
+    "Twenty open-deck guns retain clear working lanes; three lateen yards, detailed lead blocks and restrained stern rail/trim distinguish the fitting-out.",
+    "One high forward-cuddy casement uses a 0.55 \u00d7 0.195 m cut opening above the outside weather deck and below the quarterdeck beam; its two retained panes preserve the pointed stern terminal."
+  ],
+  "limitations": [
+    "Le Requin is a family analogue, not a reproduction or a stock game interior plan.",
+    "Oars are a historical xebec trait but the reconstruction does not invent a full rowing battery or change the POTC armament.",
+    "The raised poop is source-confirmed; a grand after cabin or freestanding adult bed is not. The narrow authored cuddy is fitted with a combined seat locker while retaining its clear aisle.",
+    "The exact forward-casement arrangement is authored, not shown by an inspected historical or stock-game interior plan. The references establish the xebec family, lateen rig, timber vocabulary and low raised poop; the final glazing location follows actual clearance tests.",
+    "Actual full raw-GLB furniture decoding places one fitted water cask and one planked storage box near -0.0076L; the shallow narrow forward end cannot support the previously proposed cable-locker footprint. The hold remains one open framed provisions space, without a fictitious partition or unseen coil."
+  ],
+  "authored_layout": {
+    "schema": 1,
+    "kind": "decked",
+    "frame_spacing_m": 0.48,
+    "hold": {
+      "from": -0.3,
+      "to": 0.38,
+      "floor_z_m": -0.85,
+      "follow_sheer": true,
+      "ceiling_planking": true,
+      "bilge_visible": true,
+      "headroom_m": 2.15
+    },
+    "cabin": {
+      "from": -0.47,
+      "to": -0.35,
+      "floor_z_m": -0.25,
+      "ceiling_deck_id": "castle_0",
+      "follow_sheer": true,
+      "door_width_m": 1.0,
+      "door_height_m": 1.85,
+      "clear_height_m": 1.95,
+      "cut_main_deck": true,
+      "furniture": [
+        "bench",
+        "locker"
+      ],
+      "door_x_m": 0.9,
+      "minimum_headroom_m": 1.85,
+      "aisle_width_m": 0.65,
+      "berth_omission_reason": "The narrow pointed after cuddy cannot support a freestanding adult berth and a clear aisle on the authored sole. A modest hinged seat locker combining seating and storage are inferred; no grand cabin or recovered historical bed arrangement is claimed."
+    },
+    "hatch": {
+      "id": "main_hatch",
+      "at": 0.13,
+      "length_m": 2,
+      "width_m": 1.4,
+      "x_m": 0.0,
+      "coaming_height_m": 0.25,
+      "deck_id": "main",
+      "access": "stair",
+      "open": true
+    },
+    "extra_hatches": [],
+    "companionways": [],
+    "lower_decks": [],
+    "partitions": [],
+    "clear_aisle_width_m": 1.1,
+    "passage_width_m": 1.0,
+    "standing_height_m": 1.85,
+    "evidence": [
+      {
+        "url": "https://ancre.fr/en/monograph/18-monographie-du-requin-chebec-1750-.html",
+        "title": "ANCRE: Le Requin xebec, 1750",
+        "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+        "confirmed": [
+          "Publisher states period plans and rigging documents support the monograph and its timber/frames/fittings plates."
+        ],
+        "application": [
+          "Mediterranean xebec framing and low single-battery construction vocabulary."
+        ]
+      },
+      {
+        "url": "https://ancre.fr/en/index.php?controller=attachment&id_attachment=81",
+        "title": "ANCRE: Le Requin English sample PDF, page 2",
+        "read": "PDF text read; page 2 rendered to 1600 px and visually inspected on 2026-11-14.",
+        "confirmed": [
+          "Inspected sample shows hull sections with floors/frames and beams, anchor and cannon details, and photos of an open gun deck with belaying rails and low ornate stern platform."
+        ],
+        "application": [
+          "Framed shallow hold, restrained low after cabin, open coamed access hatch and anchor/capstan/rope details; exact illustrated dimensions and ornaments are not traced."
+        ]
+      },
+      {
+        "url": "https://collections.museumsvictoria.com.au/items/395808",
+        "title": "Museums Victoria ST34691: Chebec class sailing model",
+        "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+        "confirmed": [
+          "Museum identifies three-masted French armed chebec, raised poop and lateen sail."
+        ],
+        "application": [
+          "Retain three lateen masts, narrow open battery and low raised poop."
+        ]
+      }
+    ],
+    "confidence": "Authored reconstruction informed by read source material, not a recovered stock game interior.",
+    "machinery": {
+      "capstan_at": -0.1
+    },
+    "notes": [
+      "Shallow framed hold -0.30L to +0.38L, sole -0.85 m; an actual fitted water cask and planked provisions box occupy supported side footprints. The narrow forward area stays clear; no invisible cable locker is claimed.",
+      "Low after cabin -0.47L to -0.35L, floor -0.25 m and modest hinged seat locker combining seating and storage, with no unsupported freestanding adult berth; no stacked gun decks.",
+      "2.0 \u00d7 1.4 m centerline hatch at +0.13L, offset poop companion, visible pump and belaying fittings.",
+      "Twenty open-deck guns retain clear working lanes; three lateen yards, detailed lead blocks and restrained stern rail/trim distinguish the fitting-out.",
+      "Le Requin is a family analogue, not a reproduction or a stock game interior plan.",
+      "Oars are a historical xebec trait but the reconstruction does not invent a full rowing battery or change the POTC armament.",
+      "One offset descending companion enters the cabin through its forward door. No redundant hole is cut through the short cabin roof; this preserves useful furniture and working-deck area."
+    ],
+    "dimension_status": "Dimensions, frame spacing, compartments and fitting positions are authored estimates fitted to the preserved POTC-family hull. These sources do not document the proprietary retail model and do not establish exact stock interiors. No museum image is copied into the model or its textures.",
+    "fittings": [
+      "capstan",
+      "bilge_pump",
+      "bitts",
+      "belaying_pins_and_lead_blocks",
+      "anchors",
+      "water_casks",
+      "bench",
+      "locker"
+    ],
+    "research_path": "layout-research.json",
+    "compartments": [
+      {
+        "id": "water_and_provisions",
+        "deck_id": "hold",
+        "from": -0.3,
+        "to": 0.38,
+        "role": "water_provisions"
+      }
+    ]
+  },
+  "decisions": [
+    {
+      "feature": "Shallow framed hold -0.30L to +0.38L, sole -0.85 m; an actual fitted water cask and planked provisions box occupy supported side footprints. The narrow forward area stays clear; no invisible cable locker is claimed.",
+      "basis": "Authored reconstruction fitted to preserved POTC-family hull; arrangement/construction vocabulary follows the read sources, and dimensions are estimates.",
+      "source_urls": [
+        "https://ancre.fr/en/monograph/18-monographie-du-requin-chebec-1750-.html",
+        "https://ancre.fr/en/index.php?controller=attachment&id_attachment=81",
+        "https://collections.museumsvictoria.com.au/items/395808"
+      ]
+    },
+    {
+      "feature": "Low after cabin -0.47L to -0.35L, floor -0.25 m and modest hinged seat locker combining seating and storage, with no freestanding adult berth; no stacked gun decks.",
+      "basis": "Authored reconstruction fitted to preserved POTC-family hull; arrangement/construction vocabulary follows the read sources, and dimensions are estimates.",
+      "source_urls": [
+        "https://ancre.fr/en/monograph/18-monographie-du-requin-chebec-1750-.html",
+        "https://ancre.fr/en/index.php?controller=attachment&id_attachment=81",
+        "https://collections.museumsvictoria.com.au/items/395808"
+      ]
+    },
+    {
+      "feature": "2.0 \u00d7 1.4 m centerline hatch at +0.13L, offset poop companion, visible pump and belaying fittings.",
+      "basis": "Authored reconstruction fitted to preserved POTC-family hull; arrangement/construction vocabulary follows the read sources, and dimensions are estimates.",
+      "source_urls": [
+        "https://ancre.fr/en/monograph/18-monographie-du-requin-chebec-1750-.html",
+        "https://ancre.fr/en/index.php?controller=attachment&id_attachment=81",
+        "https://collections.museumsvictoria.com.au/items/395808"
+      ]
+    },
+    {
+      "feature": "Twenty open-deck guns retain clear working lanes; three lateen yards, detailed lead blocks and restrained stern rail/trim distinguish the fitting-out.",
+      "basis": "Authored reconstruction fitted to preserved POTC-family hull; arrangement/construction vocabulary follows the read sources, and dimensions are estimates.",
+      "source_urls": [
+        "https://ancre.fr/en/monograph/18-monographie-du-requin-chebec-1750-.html",
+        "https://ancre.fr/en/index.php?controller=attachment&id_attachment=81",
+        "https://collections.museumsvictoria.com.au/items/395808"
+      ]
+    },
+    {
+      "feature": "Single forward-door companion, with no duplicate cabin-roof shaft.",
+      "basis": "Authored small-cabin circulation choice: the offset stair and real forward doorway provide access while retaining enough uninterrupted cabin floor and roof for the documented compact accommodation.",
+      "source_urls": [
+        "https://ancre.fr/en/monograph/18-monographie-du-requin-chebec-1750-.html"
+      ]
+    },
+    {
+      "feature": "Modest combined seat-locker cuddy with no freestanding adult berth.",
+      "basis": "The narrow pointed after cuddy cannot support a freestanding adult berth and a clear aisle on the authored sole. A modest hinged seat locker combining seating and storage are inferred; no grand cabin or recovered historical bed arrangement is claimed.",
+      "source_urls": [
+        "https://ancre.fr/en/index.php?controller=attachment&id_attachment=81",
+        "https://collections.museumsvictoria.com.au/items/395808"
+      ]
+    },
+    {
+      "feature": "Real forward-cuddy casement instead of unusably narrow rear lights.",
+      "basis": "Authored inference fitted to the actual pointed hull: its terminal is too narrow for meaningful rear glazing. The forward wall has a small band above the outside deck and below the beam. The opening is cut through the original planks and every closed pane is independently ray-tested with all surrounding timber retained.",
+      "source_urls": [
+        "https://ancre.fr/en/index.php?controller=attachment&id_attachment=81",
+        "https://collections.museumsvictoria.com.au/items/395808"
+      ]
+    },
+    {
+      "feature": "One open framed water/provisions hold with actual fitted stowage.",
+      "basis": "Actual full raw-GLB furniture decoding places one fitted water cask and one planked storage box near -0.0076L; the shallow narrow forward end cannot support the previously proposed cable-locker footprint. The hold remains one open framed provisions space, without a fictitious partition or unseen coil.",
+      "source_urls": [
+        "https://ancre.fr/en/monograph/18-monographie-du-requin-chebec-1750-.html",
+        "https://ancre.fr/en/index.php?controller=attachment&id_attachment=81",
+        "https://collections.museumsvictoria.com.au/items/395808"
+      ]
+    },
+    {
+      "feature": "Supported companion passage beside the actual mizzen.",
+      "basis": "The descending companion uses the supported side of its existing treads to pass beside the mizzen before returning to the cabin doorway. The mast, rails, hull and modest cuddy furniture remain in place. This is an authored clearance-fitted passage, not a recovered historical or stock-game route.",
+      "source_urls": [
+        "https://ancre.fr/en/monograph/18-monographie-du-requin-chebec-1750-.html",
+        "https://ancre.fr/en/index.php?controller=attachment&id_attachment=81",
+        "https://collections.museumsvictoria.com.au/items/395808"
+      ]
+    }
+  ],
+  "implemented_glazing": {
+    "location": "forward cuddy bulkhead",
+    "nominal_cut_opening_m": [
+      0.55,
+      0.195
+    ],
+    "closed_panes": 2,
+    "status": "authored inference; preserves original pointed terminal and uses actual timber aperture"
+  },
+  "implemented_cuddy_furniture": {
+    "arrangement": "One actual hollow planked locker with an iron-hinged timber seat lid; combined one-person seating and storage.",
+    "supported_footprint_m": [
+      0.44,
+      0.52
+    ],
+    "status": "Authored modest fitting demonstrated by actual raw GLB inventory; not a recovered historical accommodation plan."
+  }
+}
