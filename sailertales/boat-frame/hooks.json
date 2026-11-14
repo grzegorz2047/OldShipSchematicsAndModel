@@ -1,0 +1,304 @@
+{
+  "schema": 1,
+  "source_commit": "ea77e560ba4668c9dda55433813addbdb2f50176",
+  "implementation": "declarative source-compatible hooks; no runtime adapter is included",
+  "anchors": {
+    "repair_gap": {
+      "position_gltf_m": [
+        0.7083626985549927,
+        0.8213833570480347,
+        0.0
+      ],
+      "source": "point(gap,0.5)",
+      "hull_u": 0.0,
+      "hull_t": 0.565,
+      "hull_side": 1
+    },
+    "repair_gap_center": {
+      "position_gltf_m": [
+        0.7083626985549927,
+        0.8213833570480347,
+        0.0
+      ],
+      "source": "point(gap,0.5) alias",
+      "hull_u": 0.0,
+      "hull_t": 0.565,
+      "hull_side": 1
+    },
+    "peg_0": {
+      "position_gltf_m": [
+        0.6849387288093567,
+        0.836682915687561,
+        -1.2999999523162842
+      ],
+      "source": "point(peg,0)",
+      "hull_u": -0.4,
+      "hull_t": 0.565,
+      "hull_side": 1
+    },
+    "peg_1": {
+      "position_gltf_m": [
+        0.705474853515625,
+        0.823845624923706,
+        -0.6499999761581421
+      ],
+      "source": "point(peg,1)",
+      "hull_u": -0.2,
+      "hull_t": 0.565,
+      "hull_side": 1
+    },
+    "peg_2": {
+      "position_gltf_m": [
+        0.7083626985549927,
+        0.8213833570480347,
+        0.0
+      ],
+      "source": "point(peg,2)",
+      "hull_u": 0,
+      "hull_t": 0.565,
+      "hull_side": 1
+    },
+    "peg_3": {
+      "position_gltf_m": [
+        0.705474853515625,
+        0.823845624923706,
+        0.6499999761581421
+      ],
+      "source": "point(peg,3)",
+      "hull_u": 0.2,
+      "hull_t": 0.565,
+      "hull_side": 1
+    },
+    "peg_4": {
+      "position_gltf_m": [
+        0.6849387288093567,
+        0.836682915687561,
+        1.2999999523162842
+      ],
+      "source": "point(peg,4)",
+      "hull_u": 0.4,
+      "hull_t": 0.565,
+      "hull_side": 1
+    },
+    "leak_0": {
+      "position_gltf_m": [
+        0.6456509232521057,
+        0.74576336145401,
+        0.9750000238418579
+      ],
+      "source": "point(leak,0)",
+      "hull_u": 0.3,
+      "hull_t": 0.5,
+      "hull_side": 1
+    },
+    "drip_0": {
+      "position_gltf_m": [
+        0.6438783407211304,
+        0.0,
+        0.9750000238418579
+      ],
+      "source": "point(drip,0)"
+    },
+    "leak_1": {
+      "position_gltf_m": [
+        -0.42038747668266296,
+        0.6671812534332275,
+        -2.3399999141693115
+      ],
+      "source": "point(leak,1)",
+      "hull_u": -0.72,
+      "hull_t": 0.375,
+      "hull_side": -1
+    },
+    "drip_1": {
+      "position_gltf_m": [
+        -0.41731375455856323,
+        0.0,
+        -2.3399999141693115
+      ],
+      "source": "point(drip,1)"
+    },
+    "leak_2": {
+      "position_gltf_m": [
+        -0.3874244689941406,
+        0.49182838201522827,
+        0.38999998569488525
+      ],
+      "source": "point(leak,2)",
+      "hull_u": 0.12,
+      "hull_t": 0.25,
+      "hull_side": -1
+    },
+    "drip_2": {
+      "position_gltf_m": [
+        -0.3784981369972229,
+        0.0,
+        0.38999998569488525
+      ],
+      "source": "point(drip,2)"
+    },
+    "stem_mark_0": {
+      "position_gltf_m": [
+        0.0,
+        1.5830254554748535,
+        3.3274571895599365
+      ],
+      "source": "point(stem,0)",
+      "normal_gltf": [
+        0.0,
+        -0.025032680481672287,
+        0.9996867179870605
+      ],
+      "tangent_gltf": [
+        0.0,
+        0.999686598777771,
+        0.02503267675638199
+      ]
+    },
+    "stem_mark_1": {
+      "position_gltf_m": [
+        0.0,
+        1.3167351484298706,
+        3.318213701248169
+      ],
+      "source": "point(stem,1)",
+      "normal_gltf": [
+        0.0,
+        -0.0447780080139637,
+        0.998996913433075
+      ],
+      "tangent_gltf": [
+        0.0,
+        0.9989970326423645,
+        0.044778011739254
+      ]
+    }
+  },
+  "point_gap": {
+    "default_i": 0,
+    "default_position_gltf_m": [
+      0.6811771988868713,
+      0.8389869928359985,
+      -1.3650000095367432
+    ],
+    "centre_anchor": "repair_gap (explicit i=0.5; not the source default)",
+    "formula": "hullPt(-0.42+0.84*i,0.565,workSide,off=-0.02) + KEEL_Y",
+    "parameter_i": [
+      0,
+      1
+    ]
+  },
+  "setGapPlank": {
+    "grain_metadata": "grain_morph_paths_json stores exact fitted/straight section centroids; interpolate with the actual morph weight",
+    "stock_geometry": "orthogonal solid stock cross-section, fixed bow centre, source cant/rise retained",
+    "hide_values": [
+      null,
+      false
+    ],
+    "bend_input": [
+      0,
+      1
+    ],
+    "straight_morph_weight": "1-b*b*(3-2*b)",
+    "collision": "Moving repair plank has no static collision in canonical ship; its separate mesh may become an engine moving collider."
+  },
+  "setPegs": {
+    "prefix": "repair_peg_",
+    "count": 5,
+    "show": "index < clamp(k,0,5)"
+  },
+  "setTrim": {
+    "prefix": "trim_",
+    "collider_prefix": "col_trim_",
+    "effective": "stage>=3 && trimOn",
+    "collision": "Toggle both matching visual and collision nodes; trim_collision.glb is the separate static collision subset."
+  },
+  "setWater": {
+    "height_above_keel_m": 0.27,
+    "world_height_m": 0.69,
+    "geometry": "No water FX mesh supplied; adapter clips its own water surface to the hull."
+  },
+  "setLeak": {
+    "sites": 3,
+    "states": {
+      "0": "off",
+      "1": "wet seam and drops",
+      "2": "chalk mark",
+      "3": "oakum",
+      "4": "tarred seam"
+    },
+    "geometry": "Declared seam and ground-drip anchors; dynamic decals, drops and puddle growth belong to the adapter."
+  },
+  "setMarks": {
+    "father_anchor": "stem_mark_0",
+    "son_anchor": "stem_mark_1",
+    "progress": [
+      0,
+      1
+    ],
+    "strokes_m": [
+      [
+        [
+          -0.034,
+          0.026,
+          -0.017,
+          -0.03
+        ],
+        [
+          -0.017,
+          -0.03,
+          0,
+          0.014
+        ],
+        [
+          0,
+          0.014,
+          0.017,
+          -0.03
+        ],
+        [
+          0.017,
+          -0.03,
+          0.034,
+          0.026
+        ],
+        [
+          -0.036,
+          0.042,
+          0.036,
+          0.042
+        ]
+      ],
+      [
+        [
+          -0.03,
+          0.028,
+          0.031,
+          0.021
+        ],
+        [
+          0.001,
+          0.025,
+          0.008,
+          -0.034
+        ],
+        [
+          0.008,
+          -0.034,
+          0.02,
+          -0.025
+        ]
+      ]
+    ]
+  },
+  "carve": {
+    "default_duration_s": 3,
+    "min_duration_s": 0.1,
+    "progress": "from+(1-from)*clamp(elapsed/sec,0,1)"
+  },
+  "source_work_side": {
+    "1": "canonical selected repair side +X",
+    "-1": "rebuild with --work-side -1; all peg/leak/gap coordinates follow source mirroring",
+    "0": "stage0 uses same spine; a completed non-work boat is canonical stage3 plus the fitted repair_plank, without repair FX"
+  }
+}
