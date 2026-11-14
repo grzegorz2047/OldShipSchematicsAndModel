@@ -1,0 +1,254 @@
+{
+  "schema": 4,
+  "id": "tartane",
+  "family": "tartane",
+  "title": "Small single-mast fishing/coastal craft",
+  "asset_type": "static-duel-ship",
+  "scope": "Static visual duel asset; no animated controls, walkability or engine integration claimed.",
+  "units": "metres",
+  "axes": "glTF +Y up, +Z bow, +X port; origin at midships design waterline",
+  "dimension_status": "Authored reconstruction: dimensions are design choices, not measured stock POTC2003 model dimensions.",
+  "paint_materials": [
+    "paint_hull",
+    "paint_trim"
+  ],
+  "palettes": [
+    {
+      "id": "ochre",
+      "paintHull": [
+        0.38132601143253014,
+        0.14702726649759498,
+        0.03189603307301153,
+        1.0
+      ],
+      "paintTrim": [
+        0.7230551289219693,
+        0.5028864580325687,
+        0.18116424424986022,
+        1.0
+      ],
+      "description": "Warm ochre hull and buff trim; natural timber deck, tarred rigging, linen sails and iron unchanged."
+    },
+    {
+      "id": "navy",
+      "paintHull": [
+        0.00972121732023785,
+        0.043735029256973465,
+        0.0953074666309647,
+        1.0
+      ],
+      "paintTrim": [
+        0.5520114015120001,
+        0.3564001441459435,
+        0.14412847085805777,
+        1.0
+      ],
+      "description": "Deep navy hull and muted gold trim; natural timber deck, tarred rigging, linen sails and iron unchanged."
+    }
+  ],
+  "length": 9.0,
+  "beam": 3.0,
+  "draft": 0.72,
+  "freeboard": 0.72,
+  "game_class": 7,
+  "cannons": 0,
+  "hull": {
+    "profile": [
+      [
+        -0.5,
+        0.025,
+        0.95,
+        0.3
+      ],
+      [
+        -0.4,
+        0.52,
+        0.29,
+        0.12
+      ],
+      [
+        -0.25,
+        0.86,
+        0.07,
+        0.025
+      ],
+      [
+        0,
+        1.0,
+        0,
+        0
+      ],
+      [
+        0.25,
+        0.82,
+        0.12,
+        0.08
+      ],
+      [
+        0.4,
+        0.43,
+        0.53,
+        0.28
+      ],
+      [
+        0.5,
+        0.025,
+        1.25,
+        0.58
+      ]
+    ],
+    "section_power": 0.72,
+    "stern_style": "pointed",
+    "plank_rows": 10,
+    "bulwark_height": 0.34,
+    "deck_beam_factor": 0.94,
+    "cockpit": {
+      "from": -0.25,
+      "to": 0.25,
+      "width_factor": 0.65,
+      "floor_z_m": -0.2,
+      "benches": true
+    }
+  },
+  "guns": {
+    "rows": []
+  },
+  "rig": {
+    "masts": [
+      {
+        "name": "main",
+        "at": 0.06,
+        "height_m": 7.4,
+        "rake": 0.04,
+        "sails": [
+          {
+            "kind": "lateen",
+            "z": 0.92,
+            "width_m": 8.4,
+            "height_m": 5.6
+          }
+        ],
+        "heel_z_m": -0.2
+      }
+    ],
+    "bowsprit": {
+      "length_m": 1.5,
+      "angle_deg": 15
+    }
+  },
+  "source_paths": [
+    "potc/tartane/stock-evidence.json"
+  ],
+  "fittings": {
+    "steering": "tiller",
+    "capstan": false,
+    "anchors": 1,
+    "scale": 0.6
+  },
+  "game_source": {
+    "provenance": {
+      "method": "Original procedural construction from authored offsets following repository guide chapters 02–09 and 12–13. No binary game meshes or proprietary textures imported.",
+      "dimension_status": "Authored reconstruction: dimensions are design choices, not measured stock POTC2003 model dimensions.",
+      "source_evidence": [
+        {
+          "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c",
+          "kind": "stock-derived public script",
+          "claims": [
+            "Ordinary game family, class and cannon count only."
+          ],
+          "commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+          "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+        },
+        {
+          "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/SEA_AI/walk/Tartane_walk.c",
+          "kind": "stock-derived public locator script",
+          "claims": [
+            "Qualitative deck/mast layout only; no official metre dimensions."
+          ]
+        },
+        {
+          "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+          "kind": "2004 player data table",
+          "claims": [
+            "Contemporary ordinary ship roster and gun counts."
+          ]
+        },
+        {
+          "url": "https://www.piratesahoy.net/threads/ships-and-their-use.2077/",
+          "kind": "contemporary stock/mod discussion",
+          "claims": [
+            "Stock family role and distinction from mod variants."
+          ]
+        },
+        {
+          "url": "https://www.piratesahoy.net/threads/rethinking-ships-in-potc-new-project.2769/",
+          "kind": "2004 stock discussion",
+          "claims": [
+            "Type-name uncertainty and small single-mast Tartane cue; historical dictionary is insufficient to establish game model."
+          ]
+        }
+      ],
+      "limitations": "Stock small fishing-boat role and one-mast status. Sail dimensions, deck arrangement and line offsets are authored reconstruction."
+    },
+    "source_evidence": [
+      {
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c",
+        "kind": "stock-derived public script",
+        "claims": [
+          "Ordinary game family, class and cannon count only."
+        ],
+        "commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+        "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+      },
+      {
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/SEA_AI/walk/Tartane_walk.c",
+        "kind": "stock-derived public locator script",
+        "claims": [
+          "Qualitative deck/mast layout only; no official metre dimensions."
+        ]
+      },
+      {
+        "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+        "kind": "2004 player data table",
+        "claims": [
+          "Contemporary ordinary ship roster and gun counts."
+        ]
+      },
+      {
+        "url": "https://www.piratesahoy.net/threads/ships-and-their-use.2077/",
+        "kind": "contemporary stock/mod discussion",
+        "claims": [
+          "Stock family role and distinction from mod variants."
+        ]
+      },
+      {
+        "url": "https://www.piratesahoy.net/threads/rethinking-ships-in-potc-new-project.2769/",
+        "kind": "2004 stock discussion",
+        "claims": [
+          "Type-name uncertainty and small single-mast Tartane cue; historical dictionary is insufficient to establish game model."
+        ]
+      }
+    ],
+    "distinctive_silhouette": "One lateen mast, low pointed ends, modest sheer and no battery. A real central open well, lowered floor and two thwarts replace the uninterrupted deck.",
+    "static_scope": {
+      "animated_controls": false,
+      "walkability": false,
+      "navigation_routes": false,
+      "collision": "Shared exact static concave hull/deck solids; no playable deck claim."
+    },
+    "palette_contract": {
+      "changed": [
+        "paint_hull",
+        "paint_trim"
+      ],
+      "deliberately_unchanged": [
+        "natural deck timber",
+        "mast and spar timber",
+        "tarred standing rigging",
+        "natural running rope",
+        "linen cloth",
+        "iron guns and fittings"
+      ]
+    }
+  }
+}
