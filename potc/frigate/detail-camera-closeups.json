@@ -1,0 +1,161 @@
+{
+  "schema": 1,
+  "ship_id": "frigate",
+  "palette": "ochre",
+  "model_path": "model/ochre/ship.glb",
+  "model_sha256": "87de2ea6777ce7b543f72965366c7ef6479a608a9ab06281178673412983eee8",
+  "renderer_sha256": "c080e1ca7c42ad192fba3e31fc764d68997ab0a4d5ddc60a0f48cd08f4acf586",
+  "resolution": [
+    640,
+    512
+  ],
+  "samples": 12,
+  "additional_views": {
+    "gun_deck_0_gun_closeup": {
+      "category": "interior",
+      "room_id": "gun_deck_0",
+      "room_kind": "gun_deck",
+      "label": "Lower battery gun and carriage close-up",
+      "label_pl": "Działo i laweta · zbliżenie",
+      "position": [
+        1.35,
+        -18.1,
+        3.4
+      ],
+      "target": [
+        3.2,
+        -16.85,
+        2.6
+      ],
+      "lens_mm": 30,
+      "hide_rig": false,
+      "hidden_nodes": [],
+      "reason": "The wide intact battery view honestly retains a dark far end, so this supplementary close camera exposes one real near gun, wheeled carriage, mounted breeching eye and actual rope under the unchanged v5 camera-fill lighting model. It does not replace or improve claims about the distant default view.",
+      "target_components": [
+        "gun_barrel_0_port_15",
+        "gun_carriage_0_port_15",
+        "gun_barrel_0_port_15_breeching_eye_1",
+        "gun_barrel_0_port_15_fixed_breeching"
+      ],
+      "actual_target_bounds": {
+        "gun_barrel_0_port_15": {
+          "min": [
+            2.572160482406616,
+            -16.938430786132812,
+            2.6525678634643555
+          ],
+          "max": [
+            4.752090930938721,
+            -16.66156768798828,
+            2.929431915283203
+          ]
+        },
+        "gun_carriage_0_port_15": {
+          "min": [
+            2.4971604347229004,
+            -17.10999870300293,
+            2.2709999084472656
+          ],
+          "max": [
+            3.3471603393554688,
+            -16.489999771118164,
+            2.571000099182129
+          ]
+        },
+        "gun_barrel_0_port_15_breeching_eye_1": {
+          "min": [
+            3.2569589614868164,
+            -17.50699806213379,
+            2.5739996433258057
+          ],
+          "max": [
+            3.277743339538574,
+            -17.37299919128418,
+            2.7079999446868896
+          ]
+        },
+        "gun_barrel_0_port_15_fixed_breeching": {
+          "min": [
+            2.4597997665405273,
+            -17.45564842224121,
+            2.686117172241211
+          ],
+          "max": [
+            3.7085914611816406,
+            -16.141447067260742,
+            2.880549907684326
+          ]
+        }
+      },
+      "pose_clearance_probe": [
+        {
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "hit": null
+        },
+        {
+          "axis": [
+            -1,
+            0,
+            0
+          ],
+          "hit": null
+        },
+        {
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "hit": null
+        },
+        {
+          "axis": [
+            0,
+            -1,
+            0
+          ],
+          "hit": null
+        },
+        {
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "hit": null
+        },
+        {
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "hit": null
+        }
+      ],
+      "actual_floor_hit": {
+        "distance_m": 1.1558942590569719,
+        "node": "gun_deck_0_plank_039_07",
+        "position": [
+          1.35,
+          -18.1,
+          2.244105740943028
+        ]
+      },
+      "target_first_actual_hit": {
+        "distance_m": 1.8973658723131133,
+        "node": "gun_cheek_0_port_15_1",
+        "position": [
+          2.8299994354248064,
+          -17.100000381469727,
+          2.7600002441406244
+        ]
+      },
+      "scope": "Supplementary intact close-up of the actual lower-battery GLB. Explicit asset-local camera and 30 mm lens; standard frozen v5 interior lights, materials, geometry, 640 px and 12 samples retained. Every actual visual mesh remains visible; the default wide battery views remain separate evidence."
+    }
+  }
+}

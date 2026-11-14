@@ -59,5 +59,11 @@
     }
   ],
   "forecastle_port_note": "The upper fore gun-port after edge lies 0.46 m forward of the forecastle break, keeping the entire rectangular opening within the raised forebody.",
-  "forecastle_port_margin_m": 0.46
+  "forecastle_port_margin_m": 0.46,
+  "interior_distinction": "One principal enclosed battery plus the preserved light upper extremity batteries give exactly 44 guns. The between-deck berth space and hold follow documented frigate hierarchy. The after cabin is abaft the last principal gun station; no second full principal battery is invented.",
+  "interior_sources": [
+    "https://www.rmg.co.uk/collections/objects/rmgc-object-82019",
+    "https://fregate-hermione.com/chirurgie-marine-deuxieme-partie/",
+    "https://fregate-hermione.com/sainte-barbe-3/"
+  ]
 }
