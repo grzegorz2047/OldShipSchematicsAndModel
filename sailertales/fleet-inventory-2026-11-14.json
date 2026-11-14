@@ -1,0 +1,708 @@
+{
+  "schema": 1,
+  "captured_utc": "2026-11-14T01:12:55.480458+00:00",
+  "repository": "https://github.com/grzegorz2047/SailerTales",
+  "head": "ea77e560ba4668c9dda55433813addbdb2f50176",
+  "method": "Read-only source/document inventory. No game code changed; no browser or model generator executed. One canonical seat calculation reproduced directly from the source formula.",
+  "coordinate_system": "game/Three.js: X across hull, +Y up, +Z bow; prop yaw aboutY. Boat work API applies full hull world transform.",
+  "previous_sailertales_asset_ids": [
+    "brig",
+    "dinghy",
+    "dugout",
+    "merchant-sloop",
+    "mewka",
+    "night-hull",
+    "rowboat",
+    "wreck"
+  ],
+  "conclusion": {
+    "additional_active_asset_variants": [
+      "boat-frame",
+      "capsized-boat"
+    ],
+    "new_active_independent_hull_classes_proven": 0,
+    "recommended_current_scope": "Two omitted active prop variants, sharing Mewka profile data; preserve their distinct construction/repair and rescue contracts. Do not claim planned cutter/longboat/smuggler-sloop/raceboat are currently implemented."
+  },
+  "runtime_boundary_evidence": [
+    {
+      "path": "src/campaign/missions/index.js",
+      "start_line": 17,
+      "end_line": 21,
+      "evidence": "Active story registry is prolog,a1_1,a1_2,a1_3 only."
+    },
+    {
+      "path": "src/campaign/props.js",
+      "start_line": 19,
+      "end_line": 32,
+      "evidence": "Current prop registry includes boat_frame,capsized_boat,night_hull; excludes cutter,longboat,sloop,raceboat."
+    },
+    {
+      "path": "src/campaign/props.js",
+      "start_line": 105,
+      "end_line": 123,
+      "evidence": "Unknown prop types use fallback cube; scale defaults1, floating props do not receive normal grounded collision registration."
+    },
+    {
+      "path": "src/campaign/missions/prolog.js",
+      "start_line": 30,
+      "end_line": 33,
+      "evidence": "Current night_hull is explicitly a placeholder because the campaign has no Kapitanat sloop."
+    },
+    {
+      "path": "src/models/navy.js",
+      "start_line": 10,
+      "end_line": 23,
+      "evidence": "Already represented night_hull has fixed NHULL30×7.6×3.2, two masts and furled cloth; it is not a distinct active cutter."
+    },
+    {
+      "path": "src/campaign/missions/prolog.js",
+      "start_line": 501,
+      "end_line": 502,
+      "evidence": "Actual night_hull caller has no scale override."
+    }
+  ],
+  "absence_search": {
+    "scope": "all src and model metadata in assets (JS/JSON/glTF/MD)",
+    "result": "No cutter,longboat,raceboat or Paloma model factory/registeredprop/caller found; only unrelated cave tag smugglers. No src/campaign/patrol.js,raceboats.js,deck.js or missionsa1_4..a1_8 exist at thisHEAD.",
+    "qualification": "String sloop does exist in colony decoration; it is not the planned smuggler prop."
+  },
+  "active_variants": [
+    {
+      "id": "boat-frame",
+      "runtime_prop_type": "boat_frame",
+      "classification": "active omitted construction/repair variant of shared Mewka hull; not a new ship class",
+      "factory": "buildBoatFrame(o)",
+      "factory_path": "src/models/boat.js",
+      "dimensions": {
+        "length_m": 6.5,
+        "half_beam_m": 0.86,
+        "nominal_full_beam_m": 1.72,
+        "midship_side_depth_from_keel_m": 0.92,
+        "strakes_per_side": 8,
+        "frames": 9,
+        "frame_positions_u": [
+          -0.8,
+          -0.6,
+          -0.4,
+          -0.2,
+          0,
+          0.2,
+          0.4,
+          0.6,
+          0.8
+        ],
+        "construction_hull_translation_y_m": 0.42
+      },
+      "bounds_note": "Nominal hull beam excludes trestles: transverse support beams are 1.7m wide and brace feet sit at x=+/-1.25m. Full asset bounds also include stems and the repair plank. No mesh bounding box was measured in this read-only audit.",
+      "construction_stages": [
+        {
+          "stage": 0,
+          "visible": "Keel and both stems, five alternating frames at u=-0.8,-0.4,0,0.4,0.8; trestles remain visible."
+        },
+        {
+          "stage": 1,
+          "visible": "Stage0 plus four remaining frames and strakes j=0,1,2 on both sides."
+        },
+        {
+          "stage": 2,
+          "visible": "Stage1 plus strakes j=3,4,5; j4 contains the selected-side repair gap when work is enabled."
+        },
+        {
+          "stage": 3,
+          "visible": "Stage2 plus strakes j=6,7, caprails and three benches. With work enabled, trim/benches are a separate visibility group. No mast or rudder at any construction stage."
+        }
+      ],
+      "repair_contract": {
+        "work_option": "false/omitted disables repair variant; -1 selects local -X; any other truthy value selects local +X.",
+        "gap": {
+          "strake_index_j": 4,
+          "u0": -0.42,
+          "u1": 0.42,
+          "nominal_projected_length_m": 2.73,
+          "side": "work-selected local +/-X"
+        },
+        "plank_states": "setGapPlank(null/undefined/false) hides plank; numeric0 shows straight plank angled outward0.5rad, numeric1 fits hull; smoothstep interpolates geometry.",
+        "pegs": {
+          "count": 5,
+          "u": [
+            -0.4,
+            -0.2,
+            0,
+            0.2,
+            0.4
+          ],
+          "t": 0.565
+        },
+        "leaks": {
+          "count": 3,
+          "states": {
+            "0": "off",
+            "1": "wet/dripping",
+            "2": "chalk mark",
+            "3": "oakum and chalk",
+            "4": "tar; stops dropping"
+          },
+          "side_mirroring": "LEAKS.sx is multiplied by work-selected side"
+        },
+        "water_plane_hull_local_y_m": 0.27,
+        "water_plane_prop_local_y_m": 0.69,
+        "marks": {
+          "count": 2,
+          "stem_k": [
+            0.8,
+            0.655
+          ],
+          "meaning": [
+            "father",
+            "son"
+          ],
+          "progress_range": [
+            0,
+            1
+          ]
+        },
+        "required_runtime_api": [
+          "setStage",
+          "setTrim",
+          "setGapPlank",
+          "setPegs",
+          "setWater",
+          "setLeak",
+          "setMarks",
+          "carve",
+          "point"
+        ],
+        "point_kinds": [
+          "gap",
+          "peg",
+          "leak",
+          "drip",
+          "stem"
+        ],
+        "point_coordinate_contract": "point() returns world coordinates by applying hull.matrixWorld; hull is translated up KEEL_Y=0.42 inside the prop.",
+        "collision": "Source rectangle half extents hx=0.9 with work, otherwise1.04; hz=3.30. Solid grounded prop, not a floating vessel.",
+        "no_unjustified_walkability": "Source does not promise a standing player route through an open construction frame. Intentional repair gap and incomplete stages must not be reported as accidental damage.",
+        "mirroring_invariants": {
+          "mirrored": [
+            "gap and fitted/straight plank",
+            "five pegs",
+            "three leak/drip positions"
+          ],
+          "unchanged": [
+            "keel, stems and base framing",
+            "two carved stem glyphs",
+            "point(stem,i) coordinates"
+          ],
+          "drip_height": "hull-localY=-KEEL_Y; after hull translation, prop-localY=0, then prop world transform applies."
+        }
+      },
+      "active_callers": [
+        {
+          "path": "src/campaign/missions/a1_1.js",
+          "line": 1157,
+          "id": "lodz",
+          "options": {
+            "at": "wioska.pochylnia",
+            "stage": 3,
+            "work": "(P['a1_1.burta'] || {}).side || 1"
+          },
+          "scale_override": null,
+          "behavior": "Primary construction minigame. sync() continually applies stage3 and repair-state hooks; do not implement only a stage0 skeleton."
+        },
+        {
+          "path": "src/campaign/missions/a1_3.js",
+          "line": 2724,
+          "id": "rama",
+          "options": {
+            "x": "slip.x",
+            "z": "slip.z",
+            "rot": "slip.rot ?? slip.yaw ?? 0",
+            "stage": 0
+          },
+          "scale_override": null,
+          "behavior": "After active story ends, father works on a new bare frame; work option omitted."
+        },
+        {
+          "path": "src/campaign/missions/dev_plac_zabaw.js",
+          "line": 95,
+          "id": "szkielet",
+          "options": {
+            "at": "wioska.pochylnia",
+            "stage": 0
+          },
+          "scale_override": null,
+          "behavior": "Developer mission changes stages0..3 from carried plank counts."
+        }
+      ],
+      "evidence": [
+        {
+          "path": "src/models/hull.js",
+          "start_line": 6,
+          "end_line": 13,
+          "evidence": "HULL.L=6.5, B=0.86 is half breadth, D=0.92, N=8; rising sheer and rocker mean these are nominal profile dimensions, not measured full object bounds."
+        },
+        {
+          "path": "src/models/hull.js",
+          "start_line": 59,
+          "end_line": 64,
+          "evidence": "Nine frame stations; each frame bends around the hull section."
+        },
+        {
+          "path": "src/models/hull.js",
+          "start_line": 76,
+          "end_line": 84,
+          "evidence": "hullTrim includes caprails and three benches; KEEL_Y=0.42."
+        },
+        {
+          "path": "src/models/boat.js",
+          "start_line": 8,
+          "end_line": 51,
+          "evidence": "Construction stage grouping, optional selected-side work, separate trim, no mast/rudder, grounded collision rectangle."
+        },
+        {
+          "path": "src/models/boat_work.js",
+          "start_line": 8,
+          "end_line": 25,
+          "evidence": "Repair gap, five peg locations, three leak locations, two stem marks and hull-local water height."
+        },
+        {
+          "path": "src/models/boat_work.js",
+          "start_line": 52,
+          "end_line": 82,
+          "evidence": "Gap plank morph between angled straight plank and fitted hull plank; null hides it."
+        },
+        {
+          "path": "src/models/boat_work.js",
+          "start_line": 125,
+          "end_line": 134,
+          "evidence": "Leak material state visibility and droplet meshes."
+        },
+        {
+          "path": "src/models/boat_work.js",
+          "start_line": 164,
+          "end_line": 179,
+          "evidence": "Carving and world-space point API."
+        },
+        {
+          "path": "src/models/boat_work.js",
+          "start_line": 205,
+          "end_line": 207,
+          "evidence": "Returned API contract."
+        },
+        {
+          "path": "src/campaign/missions/a1_1.js",
+          "start_line": 95,
+          "end_line": 101,
+          "evidence": "Repair side derives from father position relative to slipway; both sides must be supported."
+        },
+        {
+          "path": "src/campaign/missions/a1_1.js",
+          "start_line": 465,
+          "end_line": 475,
+          "evidence": "Active mission calls all repair-state hooks while keeping stage3."
+        },
+        {
+          "path": "src/campaign/missions/a1_1.js",
+          "start_line": 1151,
+          "end_line": 1157,
+          "evidence": "Primary mission prop caller."
+        },
+        {
+          "path": "src/campaign/missions/a1_3.js",
+          "start_line": 2718,
+          "end_line": 2724,
+          "evidence": "Post-story stage0 construction prop caller."
+        },
+        {
+          "path": "src/campaign/missions/dev_plac_zabaw.js",
+          "start_line": 94,
+          "end_line": 105,
+          "evidence": "Developer caller and stage restoring."
+        }
+      ],
+      "suitable_asset_scope": "One construction/repair asset with four stage visibility groups, optional +/-X work-side configuration, separate fitting plank, trim, five pegs, three repair patches and interaction anchors. Geometry/proof of available state groups can be delivered independently of the engine adapter."
+    },
+    {
+      "id": "capsized-boat",
+      "runtime_prop_type": "capsized_boat",
+      "classification": "active omitted inverted rescue variant of shared Mewka hull; distinct from the existing reef wreck",
+      "factory": "buildCapsized()",
+      "factory_path": "src/models/boat.js",
+      "dimensions": {
+        "length_m": 6.5,
+        "half_beam_m": 0.86,
+        "nominal_full_beam_m": 1.72,
+        "midship_side_depth_from_keel_m": 0.92,
+        "strakes_per_side": 8,
+        "frames": 9,
+        "frame_positions_u": [
+          -0.8,
+          -0.6,
+          -0.4,
+          -0.2,
+          0,
+          0.2,
+          0.4,
+          0.6,
+          0.8
+        ]
+      },
+      "geometry_contract": {
+        "hull_components": [
+          "all8strakes on both sides",
+          "keel and stems",
+          "caprails and three benches from hullTrim"
+        ],
+        "no_added_ribs": "Factory does not call hullRib; no mast/rudder is fitted.",
+        "inversion": {
+          "axis": "local longitudinal +Z",
+          "source_euler_rotation_z_rad": 3.141592653589793,
+          "hull_base_translation_y_m": 0.31,
+          "nominal_keel_top_above_wave_m": 0.38
+        },
+        "attachments": {
+          "algae": "two narrow bands on hull, t0=.74,t1=.98, u range[-.96,.96]",
+          "oar": {
+            "shaft_length_m": 2.6,
+            "blade_dimensions_m": [
+              0.17,
+              0.5,
+              0.025
+            ],
+            "group_position_m": [
+              1.25,
+              0.02,
+              -0.6
+            ],
+            "group_euler_rad": [
+              0,
+              0.35,
+              1.5207963267948965
+            ]
+          },
+          "rope_points_prop_local_m": [
+            [
+              0.1,
+              0.18,
+              -3.15
+            ],
+            [
+              0.3,
+              0.02,
+              -4.05
+            ],
+            [
+              0.8,
+              -0.01,
+              -5.15
+            ],
+            [
+              0.5,
+              0,
+              -6.25
+            ]
+          ],
+          "loose_canvas": {
+            "plane_dimensions_m": [
+              1.5,
+              1.1
+            ],
+            "position_m": [
+              -1.45,
+              0,
+              1.2
+            ],
+            "rotation_rad": [
+              -1.5707963267948966,
+              0,
+              0.5
+            ],
+            "note": "Loose floating cloth, not a deployed sail."
+          }
+        },
+        "bounds_note": "Nominal6.5m length excludes trailing rope to z=-6.25, floating oar and cloth; do not compare these full visual bounds against a6.5m hull-only budget.",
+        "source_comment_geometry_caveat": "The source comment intends keel top0.38m above water, but hullSpine uses0.09×0.15m beams centered about hull-localY=-0.07. Combined with inversion and translationY0.31, the actual midship keel can reach about0.455m. This is an analytical source-code discrepancy, not a measured mesh bounding box. A delivered asset placing its real keel top0.38m must document the scantling/placement change and derive its seat from the delivered support surface."
+      },
+      "rescue_contract": {
+        "api_seat": {
+          "x": 0.4,
+          "y": 0.185,
+          "z": 0
+        },
+        "seat_calculation": "boat.js loops t in0.01 increments until hullPt(0,t,+1).x>=0.4; t=.27, hull surfaceY=.10452324, seatY=round(.38-.07-surfaceY-.02,3)=.185.",
+        "father_seated_branch": {
+          "condition": "ctx.vars.ojciec==='kil'",
+          "pose": "sit",
+          "wave": true,
+          "anchor": "prop.seat",
+          "yaw_rad": 1.5707963267948966,
+          "follows": "prop x/y/z, yaw, pitch and roll"
+        },
+        "father_in_water_branch": {
+          "condition": "ctx.vars.ojciec!=='kil'",
+          "pose": "cling upper body",
+          "anchor_m": [
+            1.15,
+            -1.05,
+            0
+          ],
+          "yaw_rad": -1.5707963267948966,
+          "follows": "prop x/z and yaw, sourceY0 and no pitch/roll"
+        },
+        "obsolete_fallback_seat": {
+          "x": 0.45,
+          "y": 0.85,
+          "z": 0,
+          "note": "Only used when prop.seat is missing; not the canonical hull seat."
+        },
+        "float": {
+          "lift": 0,
+          "span": 2.4,
+          "beam": 0.7,
+          "bob": 0.03,
+          "sway": 0.09,
+          "tilt": 0.7
+        },
+        "no_unjustified_walkability": "Source requires rescue interaction and a seated/clinging actor anchor, not a standing character route on the inverted hull."
+      },
+      "active_callers": [
+        {
+          "path": "src/campaign/missions/a1_3.js",
+          "line": 1339,
+          "id": "lodz_ojca",
+          "options": {
+            "at": "morze.wywrotka",
+            "rot_rad": 0.6,
+            "drift": "windTo(WIND_PM)*0.2m/s"
+          },
+          "scale_override": null,
+          "behavior": "Checkpoint restore prop while father is on hull/in water and has not reached beach."
+        },
+        {
+          "path": "src/campaign/missions/a1_3.js",
+          "line": 1874,
+          "id": "lodz_ojca",
+          "options": {
+            "x": "W.x",
+            "z": "W.z",
+            "rot_rad": 0.6,
+            "drift": "windTo(WIND_PM)*0.2m/s"
+          },
+          "scale_override": null,
+          "behavior": "Scene spawns prop then calls fatherOnHull()."
+        },
+        {
+          "path": "src/campaign/missions/dev_plac_zabaw.js",
+          "line": 99,
+          "id": "lodz_ojca",
+          "options": {
+            "at": "dev.wywrotka",
+            "rot_rad": 0.6
+          },
+          "scale_override": null,
+          "behavior": "Developer rescue target; removed after rescue."
+        }
+      ],
+      "evidence": [
+        {
+          "path": "src/models/hull.js",
+          "start_line": 6,
+          "end_line": 13,
+          "evidence": "HULL.L=6.5, B=0.86 is half breadth, D=0.92, N=8; rising sheer and rocker mean these are nominal profile dimensions, not measured full object bounds."
+        },
+        {
+          "path": "src/models/hull.js",
+          "start_line": 59,
+          "end_line": 64,
+          "evidence": "Nine frame stations; each frame bends around the hull section."
+        },
+        {
+          "path": "src/models/hull.js",
+          "start_line": 76,
+          "end_line": 84,
+          "evidence": "hullTrim includes caprails and three benches; KEEL_Y=0.42."
+        },
+        {
+          "path": "src/models/boat.js",
+          "start_line": 54,
+          "end_line": 104,
+          "evidence": "Inverted hull, algae, floating oar, trailing rope, loose cloth, computed seat and float parameters."
+        },
+        {
+          "path": "src/campaign/missions/a1_3.js",
+          "start_line": 358,
+          "end_line": 371,
+          "evidence": "Actual seated and clinging actor branches and fallback anchor."
+        },
+        {
+          "path": "src/campaign/missions/a1_3.js",
+          "start_line": 1336,
+          "end_line": 1339,
+          "evidence": "Checkpoint-restored runtime prop."
+        },
+        {
+          "path": "src/campaign/missions/a1_3.js",
+          "start_line": 1867,
+          "end_line": 1875,
+          "evidence": "Actual scene spawn and actor attachment."
+        },
+        {
+          "path": "src/campaign/missions/dev_plac_zabaw.js",
+          "start_line": 94,
+          "end_line": 99,
+          "evidence": "Developer prop caller."
+        },
+        {
+          "path": "src/campaign/missions/dev_plac_zabaw.js",
+          "start_line": 195,
+          "end_line": 198,
+          "evidence": "Developer rescue interaction radius20m and max approach speed1.6m/s."
+        },
+        {
+          "path": "src/models/kit.js",
+          "start_line": 56,
+          "end_line": 61,
+          "evidence": "beam() builds a box with real cross-section width/thickness around its centerline; source keel-top comments do not equal the full beam extent."
+        }
+      ],
+      "suitable_asset_scope": "One inverted damaged/flooded small-boat asset with the specified debris, nominal waterline, seat and cling anchors. Keep hull-only dimensions distinct from debris bounds; record source float/drift contract for later integration."
+    }
+  ],
+  "planned_not_runtime": [
+    {
+      "id": "cutter",
+      "runtime": false,
+      "dimensions_m": null,
+      "role": "Customs patrol cutter in future A1.6, with bow lantern, sergeant and two men. Planned detection cone is not a hull dimension.",
+      "evidence": [
+        {
+          "path": "docs/kampania/M2_KONTRAKT.md",
+          "start_line": 3,
+          "end_line": 3,
+          "evidence": "Explicitly draft for approval; nothing in this contract has been built."
+        },
+        {
+          "path": "docs/kampania/M2_KONTRAKT.md",
+          "start_line": 31,
+          "end_line": 37,
+          "evidence": "Lists cutter and new prop types as missing."
+        },
+        {
+          "path": "docs/kampania/M2_KONTRAKT.md",
+          "start_line": 114,
+          "end_line": 129,
+          "evidence": "Proposed createPatrol API: speed2.2m/s, cone60m/half-angle.3rad, hearing90m. No hull dimensions."
+        },
+        {
+          "path": "docs/kampania/M2_SCENARIUSZ.md",
+          "start_line": 538,
+          "end_line": 542,
+          "evidence": "Narrative crew, lantern and route roles; no geometry factory or numerical hull profile."
+        }
+      ]
+    },
+    {
+      "id": "longboat",
+      "runtime": false,
+      "dimensions_m": null,
+      "role": "Future ship launch/szalupa with Skerry at tiller and Halloway aft, used A1.6 and A1.8; not the current3.25m fast-travel dinghy.",
+      "evidence": [
+        {
+          "path": "docs/kampania/M2_KONTRAKT.md",
+          "start_line": 244,
+          "end_line": 245,
+          "evidence": "New procedural/reused-model prop planned, not existing registry entry."
+        },
+        {
+          "path": "docs/kampania/M2_SCENARIUSZ.md",
+          "start_line": 538,
+          "end_line": 542,
+          "evidence": "Distinct from rowboat and smuggler sloop at cargo transfer."
+        },
+        {
+          "path": "docs/kampania/M2_SCENARIUSZ.md",
+          "start_line": 907,
+          "end_line": 911,
+          "evidence": "Returns at village pier for future A1.8."
+        }
+      ]
+    },
+    {
+      "id": "smuggler-sloop",
+      "planned_prop_type": "sloop",
+      "name": "Paloma Negra",
+      "runtime": false,
+      "dimensions_m": null,
+      "role": "Intact unlit Spanish smuggling sloop in future A1.6. Not the active decorative colony createSloop and not the existing reef wreck state.",
+      "evidence": [
+        {
+          "path": "docs/kampania/M2_SCENARIUSZ.md",
+          "start_line": 538,
+          "end_line": 542,
+          "evidence": "Separate intact sloop with Spanish crew in future cargo-transfer scene."
+        },
+        {
+          "path": "docs/kampania/M2_SCENARIUSZ.md",
+          "start_line": 740,
+          "end_line": 746,
+          "evidence": "Future dialogue names Paloma Negra and applies its name to second-atoll wreck after mission."
+        },
+        {
+          "path": "src/colony/fx.js",
+          "start_line": 779,
+          "end_line": 793,
+          "evidence": "Active createSloop clones brig at caller scale0.6 and furls/hides sails; unrelated colony decoration already represented by merchant-sloop asset."
+        },
+        {
+          "path": "src/colony/colony.js",
+          "start_line": 953,
+          "end_line": 956,
+          "evidence": "Actual active decorative colony caller at scale0.6."
+        }
+      ]
+    },
+    {
+      "id": "raceboat",
+      "runtime": false,
+      "dimensions_m": null,
+      "role": "Four future race competitors; plan explicitly says reused dugout_canoe with sail and four sail tones. Variant set rather than four proven separate hull classes.",
+      "evidence": [
+        {
+          "path": "docs/kampania/M2_KONTRAKT.md",
+          "start_line": 135,
+          "end_line": 147,
+          "evidence": "Proposed createRaceBoats module, four rivals and kinematic navigation; module absent from currentsrc."
+        },
+        {
+          "path": "docs/kampania/M2_KONTRAKT.md",
+          "start_line": 244,
+          "end_line": 244,
+          "evidence": "Explicit planned reused dugout model with sail and four tones."
+        },
+        {
+          "path": "docs/kampania/M2_SCENARIUSZ.md",
+          "start_line": 770,
+          "end_line": 770,
+          "evidence": "Four raceboat props listed for future A1.7."
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "docs/kampania/M2_KONTRAKT.md": "851a39f8ce06bc255f2ead6ba2ea63c1916213dd963324f186b1ab1496b4e345",
+    "docs/kampania/M2_SCENARIUSZ.md": "fb8e984e7ccfd87e2a63615137c31dbe5ca642e38f85b0a048495667929b19ed",
+    "src/campaign/missions/a1_1.js": "fe563b001721a4fe20ce5f2095b1537e393e04009e168fbe5f11e6f509df2cbb",
+    "src/campaign/missions/a1_3.js": "ceb48569bcc5f94f088f9bc275e3a94fc7345c34eff397493c3f7a083015914e",
+    "src/campaign/missions/dev_plac_zabaw.js": "27b2418318a0d55abf56c64bf64ae4c52c4ae714a691410a29827c018ab35b39",
+    "src/campaign/missions/index.js": "5dc6054eb40a46209c5e6d8cd7b3847985b38f7668903ebc12882a2d9c95b007",
+    "src/campaign/missions/prolog.js": "f52e2d3c6439c3500fc80caad2623c30aef25418bca2395d826452e3a42b4e21",
+    "src/campaign/props.js": "240da2f4669ccc2d839208404eee3aa81b158aa4308983b6040e1f55ecc9ce2d",
+    "src/colony/colony.js": "13246f3a98d143d0c1d2f34a540348de89f4872184694d9f53165de3f1d43edd",
+    "src/colony/fx.js": "34549090466ac50507c27d048abc7e79ab84c01d278559d00bb6c49ad8927b2a",
+    "src/models/boat.js": "77f5bebff0f16adf7c69e7bba34acda75f2426b660a17c6cc26541b3c2af578c",
+    "src/models/boat_work.js": "daf4823534e0c2af5691e9d58ddad0ed15e1bf926d72603d539d26b56d72de22",
+    "src/models/hull.js": "a9da695038e04a452b15d73065c810ef194018bbdc376e40fd4f09d785ead5e5",
+    "src/models/navy.js": "75c58eea7fa268e9f656b014c5ee580fa51cffa0865ede656282a318e50dac34",
+    "src/models/kit.js": "0a2ab4e011c312e04d36d64dca26215bfb99fd2f92cc82cef532eae6f6685505"
+  }
+}

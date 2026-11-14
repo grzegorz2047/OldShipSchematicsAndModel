@@ -1,0 +1,44 @@
+{
+  "schema": 1,
+  "kind": "capsized-boat",
+  "states": [
+    {
+      "id": "capsized",
+      "model": "model/ship.glb",
+      "collision": "model/collision.glb"
+    }
+  ],
+  "components": [],
+  "anchors": {
+    "seat_anchor": [
+      0.4000000059604645,
+      0.20250187814235687,
+      -0.0
+    ],
+    "cling_anchor": [
+      1.15,
+      -1.05,
+      0
+    ],
+    "keel_top_anchor": [
+      0,
+      0.38,
+      0
+    ]
+  },
+  "seat": {
+    "node": "seat_anchor"
+  },
+  "float": {
+    "lift": 0,
+    "span": 2.4,
+    "beam": 0.7,
+    "bob": 0.03,
+    "sway": 0.09,
+    "tilt": 0.7
+  },
+  "hooks": {
+    "seat": "seat_anchor",
+    "float": "engine-owned"
+  }
+}
