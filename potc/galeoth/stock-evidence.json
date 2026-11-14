@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "family": "galeoth",
+  "source_commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+  "source_sha256": {
+    "Ships_init.c": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde",
+    "ships.h": "a267dbc5d3fc901104b86b53ffdab06255545a8a7ee3725801c0d9dc9037ba74"
+  },
+  "class": 5,
+  "cannons": 16,
+  "matching_stock_rows": [
+    {
+      "id": "SHIP_GALEOTH_ENGLAND",
+      "Name": "\"Galeoth1\"",
+      "Class": "5",
+      "CannonsQuantity": "16",
+      "MaxCaliber": "12",
+      "Capacity": "630",
+      "MaxCrew": "85",
+      "MinCrew": "19",
+      "SpeedRate": "13.65",
+      "TurnRate": "36.75",
+      "HP": "1000",
+      "CanEncounter": "true (inherited default)"
+    }
+  ],
+  "dimension_claim": false,
+  "note": "Only classification/cannon facts are taken from this pinned compatibility source. Hull dimensions and set-sail reconstruction are authored independently."
+}
