@@ -54,3 +54,38 @@ blender --background -t 1 --python potc/fleut/build.py
 ```
 
 Model jest **statycznym zasobem do pojedynków okrętów**. Raport obejmuje rzeczywistą geometrię, materiały, LOD, kolizję, osprzęt i zgodność eksportu z plikiem źródłowym. Nie przyznaje przejść dla sterowania, chodzenia, animacji, symulacji żagli ani nawigacji; te zachowania nie należą do dostarczanego zasobu.
+
+## Wnętrza v5: badania i autorski układ
+
+Układ pokładów, rzeczywiste otwory luków i przejścia, wręgi, ładownia oraz umeblowana kajuta są autorską rekonstrukcją opartą na badaniach. Nie odzyskano oryginalnego wnętrza z siatki gry. [`layout-research.json`](layout-research.json) oddziela twierdzenia źródeł od analogii i decyzji przestrzennych.
+
+Cargo-first Dutch fluit interpretation retains the pear hull, strong tumblehome, 72 percent deck beam, rounded stern and high aft accommodation.
+
+- Broad lower hold carries six tied bulk sacks representing grain/salt and two bundles of three timber baulks on dunnage; cargo bays leave a central inspection path.
+- Long central cargo hatch and smaller forward access serve the hold without filling the narrow deck with warship furniture.
+- Small high aft cabin has plain desk, berth and stores; the number and position of round-stern lights are authored.
+- Wooden hand-worked anchor machinery, paired pumps, optional compact carried boat, removable-pot cabin facility and sparse pin/bitt furniture suit the narrow working deck. Bow-head access is not established.
+
+Przenośny stołek sanitarny w kajucie ma rzeczywisty otwór siedziska, uniesione wieko i wyjmowane naczynie; jest jawną adaptacją mebla z epoki. Nie poświadcza nieustalonego układu dziobowych ustępów pierwowzoru gry. Koja i wyposażenie kajuty są pełnymi elementami geometrii umieszczonymi w zmierzonych wolnych obszarach; łódź pozostaje opcjonalna.
+
+Materiały przeczytane dla tej rodziny:
+
+- [Het fluitschip — vrachtschip van de 17de eeuw, Het Scheepvaartmuseum](https://www.hetscheepvaartmuseum.nl/collectie/artikelen/701/het-fluitschip-vrachtschip-van-de-17e-eeuw): Supports cargo-first form and stores. The twenty game-family guns and cabin/hatch coordinates are authored adaptations; do not turn it into a warship interior.
+- [Model of a Dutch Fluitschip (c.1645), Science Museum Group 1961-85](https://collection.sciencemuseumgroup.org.uk/objects/co41131/model-of-a-dutch-fluitschip): Supports visual type comparison, not a contemporary construction plan or complete interior.
+- [Vraag en antwoord over de Batavia, Museum Batavialand](https://www.batavialand.nl/zien-en-doen/het-schip-batavia/vraag-en-antwoord/): Batavia is a Dutch East Indiaman, not a fluit or the game Pinnace. Use room types and visible timber construction as period analogues; the asset layout remains an authored reconstruction.
+- [Endeavour shipwreck pump well evidence, ANMM (22 November 2023)](https://www.sea.museum/en/about/media/2023/11/museum-releases-further-evidence-to-support-its-case-for-identifying-endeavour-shipwreck): Supports a timber-enclosed pump well as a real working structure; coordinates and pump design in this asset are authored.
+- [The Vasa Museum in an hour: teacher guide, 2026, p.3](https://www.vasamuseet.se/globalassets/vasamuseet/dokument/skola/2026/t_teachers-guide-to-the-vasa-museum.pdf): Vasa is a 1628 warship. No identical sanitation arrangement or bow-head access is established for the POTC families.
+- [Close stool, Colonial Williamsburg museum 1960-948, England 1700–1725](https://emuseum.colonialwilliamsburg.org/objects/17170/close-stool): A period furniture analogue, not a maritime find or verified stock asset. Its placement in these game-family cabins is authored; it does not establish fifteenth-century caravel equipment.
+- [Geschiedenis van de 17e-eeuwse Batavia, Museum Batavialand](https://www.batavialand.nl/zien-en-doen/het-schip-batavia/geschiedenis-van-de-17e-eeuwse-batavia/): Does not establish stock-family boat dimensions or stowage. The 3m tender is an authored compact boat, not a claim to reproduce Batavia’s larger rescue boat.
+
+Położenia w `detailed_layout` biegną od rufy −0,5 do dziobu +0,5 długości; wysokości są w metrach nad wodnicą. Zachowano rodzinny kadłub, ożaglowanie, liczbę dział i dwa niezależne malowania. Geometria przejść statycznego modelu nie jest poświadczeniem sterowania postacią.
+
+## Rzeczywista galeria szczegółów v5
+
+[Cały kadłub i takielunek](previews/ochre/detail/hull_rig.png) · [Pokład w skali 4,5 m](previews/ochre/detail/deck_closeup.png) · [Wnętrze ładowni](previews/ochre/detail/hold_interior.png) · [Wnętrze kajuty](previews/ochre/detail/cabin_interior.png)
+
+[Przekrój ładowni](previews/ochre/detail/hold_cutaway.png) i [przekrój kajuty](previews/ochre/detail/cabin_cutaway.png) są osobnymi widokami kontrolnymi z jawnie ukrytym poszyciem i wybranymi górnymi elementami. Dostarczony GLB zachowuje te elementy; wnętrza pokazano również bez przekroju. [Opis obrazów](detail-render.json) i [ręczna ocena względem Bryga Mewa PR 3](detail-review.json) wiążą widoki z konkretnym eksportem.
+
+Końcowa ładownia zawiera sześć wiązanych worków i dwie wiązki po trzy belki na podkładach. Kajuta ma pełnowymiarową koję, stół, siedzisko, schowek, latarnię i stołek sanitarny z otworem. Opcjonalna łódź 3 m nie weszła do końcowego pakietu: na gotowym pokładzie nie ma zmierzonego wolnego miejsca pozwalającego zachować odstęp od dział, luków, takielunku i osprzętu.
+
+Połączenia górnych końców wręg mają dopasowane gniazda w stopach nadstawek. Zakrzywione wręgi zachowują metryczne, izometryczne mapowanie drewna. W rzeczywistym eksporcie testowym udział powierzchni naturalnego drewna z anizotropią powyżej 1,25 spadł z 10,4693% do 0,005414%, przy niezmienionej granicy 8%; gęstość pozostała około 1024 px/m, a zgodność kierunku słojów wyniosła 99,844%.

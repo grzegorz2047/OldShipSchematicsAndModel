@@ -118,7 +118,9 @@
             "width_m": 7,
             "height_m": 3.4
           }
-        ]
+        ],
+        "heel_z_m": -0.8881925724406847,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
       },
       {
         "name": "main",
@@ -144,7 +146,9 @@
             "width_m": 8,
             "height_m": 3.7
           }
-        ]
+        ],
+        "heel_z_m": -0.893,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
       },
       {
         "name": "mizzen",
@@ -159,7 +163,9 @@
             "height_m": 11.8,
             "yaw_deg": 25
           }
-        ]
+        ],
+        "heel_z_m": 3.3374016449876596,
+        "heel_basis": "Authored aft mast step reached through the true cabin and raised-deck mortises."
       }
     ],
     "bowsprit": {
@@ -288,5 +294,119 @@
       "value": 1.25,
       "reason": "A real continuous head timber above the 0.85m-high gun opening: cannon centre 0.65–0.67m above floor, opening top 1.075–1.095m, leaving at least 0.155m of closed timber below the rail. No disconnected local roof patches."
     }
-  ]
+  ],
+  "detailed_layout": {
+    "kind": "decked",
+    "frame_spacing_m": 0.8,
+    "hold": {
+      "from": -0.31,
+      "to": 0.36,
+      "floor_z_m": -1.0,
+      "headroom_m": 3.7,
+      "minimum_headroom_m": 1.7
+    },
+    "cabin": {
+      "from": -0.465,
+      "to": -0.29,
+      "floor_z_m": 2.9,
+      "ceiling_deck_id": "castle_0",
+      "cut_main_deck": false,
+      "door_width_m": 1.1,
+      "door_height_m": 1.88,
+      "minimum_headroom_m": 1.7
+    },
+    "hatch": {
+      "id": "main_cargo_hatch",
+      "at": 0.13,
+      "length_m": 3.45,
+      "width_m": 1.85,
+      "deck_id": "main",
+      "target_deck_id": "hold"
+    },
+    "extra_hatches": [
+      {
+        "id": "forward_bulk_scuttle",
+        "at": 0.325,
+        "length_m": 1.5,
+        "width_m": 1.2,
+        "deck_id": "main",
+        "target_deck_id": "hold"
+      }
+    ],
+    "companionways": [
+      {
+        "id": "aft_hold_companionway",
+        "at": -0.2,
+        "length_m": 2.1,
+        "width_m": 1.15,
+        "deck_id": "main",
+        "target_deck_id": "hold"
+      }
+    ],
+    "lower_decks": [],
+    "partitions": [
+      {
+        "at": 0.2,
+        "deck_id": "hold",
+        "door_width_m": 1.1,
+        "door_height_m": 1.85
+      }
+    ],
+    "notes": [
+      "Broad lower hold carries sacks representing grain/salt, timber bundles and trade casks on dunnage; cargo bays leave a central inspection path.",
+      "Long central cargo hatch and smaller forward access serve the hold without filling the narrow deck with warship furniture.",
+      "Small high aft cabin has plain desk, berth and stores; the number and position of round-stern lights are authored.",
+      "Wooden hand-worked anchor machinery, paired pumps, optional compact carried boat, removable-pot cabin facility and sparse pin/bitt furniture suit the narrow working deck. Bow-head access is not established."
+    ],
+    "evidence": [
+      {
+        "url": "https://www.hetscheepvaartmuseum.nl/collectie/artikelen/701/het-fluitschip-vrachtschip-van-de-17e-eeuw",
+        "supports": [
+          "The museum describes a broad hull beneath a narrow deck, producing a pear silhouette.",
+          "The type carried bulk grain, salt and timber and was economical with a small crew."
+        ],
+        "quality": "maritime museum type history",
+        "limits": "Supports cargo-first form and stores. The twenty game-family guns and cabin/hatch coordinates are authored adaptations; do not turn it into a warship interior."
+      },
+      {
+        "url": "https://collection.sciencemuseumgroup.org.uk/objects/co41131/model-of-a-dutch-fluitschip",
+        "supports": [
+          "The catalogue identifies a rigged representation of a c.1645 Dutch cargo vessel, made by R.W.M. Nance in 1917–1927."
+        ],
+        "quality": "museum representation model",
+        "limits": "Supports visual type comparison, not a contemporary construction plan or complete interior."
+      },
+      {
+        "url": "https://www.batavialand.nl/zien-en-doen/het-schip-batavia/vraag-en-antwoord/",
+        "supports": [
+          "The museum lists a hold, powder room, great cabin, bread room, smaller cabins, heads and furniture within its wooden seventeenth-century merchant reconstruction.",
+          "The builders consulted Witsen, Van Yk, VOC documents, paintings and wrecks; the museum explicitly acknowledges incomplete evidence for the interior."
+        ],
+        "quality": "museum reconstruction methods and interior inventory",
+        "limits": "Batavia is a Dutch East Indiaman, not a fluit or the game Pinnace. Use room types and visible timber construction as period analogues; the asset layout remains an authored reconstruction."
+      },
+      {
+        "url": "https://www.sea.museum/en/about/media/2023/11/museum-releases-further-evidence-to-support-its-case-for-identifying-endeavour-shipwreck",
+        "supports": [
+          "The museum compares a surviving pump-shaft stump and pump-well partitions with the 1768 lower-hold plan."
+        ],
+        "quality": "museum archaeological research",
+        "limits": "Supports a timber-enclosed pump well as a real working structure; coordinates and pump design in this asset are authored."
+      }
+    ],
+    "historical_status": "Source-informed authored reconstruction; openings, proportions and furniture placement are not verified original game or historical interiors.",
+    "research_path": "layout-research.json"
+  },
+  "interior_character": {
+    "type_reading": "Cargo-first Dutch fluit interpretation retains the pear hull, strong tumblehome, 72 percent deck beam, rounded stern and high aft accommodation.",
+    "cargo_character": "bulk sacks, timber bundles and trade casks; restrained military stores",
+    "furniture_scope": [
+      "Broad lower hold carries sacks representing grain/salt, timber bundles and trade casks on dunnage; cargo bays leave a central inspection path.",
+      "Long central cargo hatch and smaller forward access serve the hold without filling the narrow deck with warship furniture.",
+      "Small high aft cabin has plain desk, berth and stores; the number and position of round-stern lights are authored.",
+      "Wooden hand-worked anchor machinery, paired pumps, optional compact carried boat, removable-pot cabin facility and sparse pin/bitt furniture suit the narrow working deck. Bow-head access is not established."
+    ],
+    "modern_equipment_excluded": true
+  },
+  "detail_schema": 5
 }

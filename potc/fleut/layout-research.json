@@ -1,0 +1,314 @@
+{
+  "schema": 1,
+  "research_date": "2026-11-14",
+  "scope": "Source-informed authored wooden interiors for five ordinary POTC families; no proprietary game mesh, original interior, or exact historical reconstruction claimed.",
+  "coordinate_convention": "longitudinal fractions -0.5 stern to +0.5 bow; vertical metres above waterline",
+  "family": "fleut",
+  "sources": [
+    {
+      "title": "Het fluitschip \u2014 vrachtschip van de 17de eeuw, Het Scheepvaartmuseum",
+      "url": "https://www.hetscheepvaartmuseum.nl/collectie/artikelen/701/het-fluitschip-vrachtschip-van-de-17e-eeuw",
+      "source_type": "maritime museum type history",
+      "accessed": "2026-11-14",
+      "read": true,
+      "claims": [
+        "The museum describes a broad hull beneath a narrow deck, producing a pear silhouette.",
+        "The type carried bulk grain, salt and timber and was economical with a small crew."
+      ],
+      "limits": "Supports cargo-first form and stores. The twenty game-family guns and cabin/hatch coordinates are authored adaptations; do not turn it into a warship interior.",
+      "applies_to": [
+        "The museum describes a broad hull beneath a narrow deck, producing a pear silhouette.",
+        "The type carried bulk grain, salt and timber and was economical with a small crew."
+      ]
+    },
+    {
+      "title": "Model of a Dutch Fluitschip (c.1645), Science Museum Group 1961-85",
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co41131/model-of-a-dutch-fluitschip",
+      "source_type": "museum representation model",
+      "accessed": "2026-11-14",
+      "read": true,
+      "image_inspected": "https://coimages.sciencemuseumgroup.org.uk/33/730/small_thumbnail_1961_0085__0002_.jpg",
+      "claims": [
+        "The catalogue identifies a rigged representation of a c.1645 Dutch cargo vessel, made by R.W.M. Nance in 1917\u20131927."
+      ],
+      "limits": "Supports visual type comparison, not a contemporary construction plan or complete interior.",
+      "applies_to": [
+        "The catalogue identifies a rigged representation of a c.1645 Dutch cargo vessel, made by R.W.M. Nance in 1917\u20131927."
+      ]
+    },
+    {
+      "title": "Vraag en antwoord over de Batavia, Museum Batavialand",
+      "url": "https://www.batavialand.nl/zien-en-doen/het-schip-batavia/vraag-en-antwoord/",
+      "source_type": "museum reconstruction methods and interior inventory",
+      "accessed": "2026-11-14",
+      "read": true,
+      "claims": [
+        "The museum lists a hold, powder room, great cabin, bread room, smaller cabins, heads and furniture within its wooden seventeenth-century merchant reconstruction.",
+        "The builders consulted Witsen, Van Yk, VOC documents, paintings and wrecks; the museum explicitly acknowledges incomplete evidence for the interior."
+      ],
+      "limits": "Batavia is a Dutch East Indiaman, not a fluit or the game Pinnace. Use room types and visible timber construction as period analogues; the asset layout remains an authored reconstruction.",
+      "applies_to": [
+        "The museum lists a hold, powder room, great cabin, bread room, smaller cabins, heads and furniture within its wooden seventeenth-century merchant reconstruction.",
+        "The builders consulted Witsen, Van Yk, VOC documents, paintings and wrecks; the museum explicitly acknowledges incomplete evidence for the interior."
+      ]
+    },
+    {
+      "title": "Endeavour shipwreck pump well evidence, ANMM (22 November 2023)",
+      "url": "https://www.sea.museum/en/about/media/2023/11/museum-releases-further-evidence-to-support-its-case-for-identifying-endeavour-shipwreck",
+      "source_type": "museum archaeological research",
+      "accessed": "2026-11-14",
+      "read": true,
+      "claims": [
+        "The museum compares a surviving pump-shaft stump and pump-well partitions with the 1768 lower-hold plan."
+      ],
+      "limits": "Supports a timber-enclosed pump well as a real working structure; coordinates and pump design in this asset are authored.",
+      "applies_to": [
+        "The museum compares a surviving pump-shaft stump and pump-well partitions with the 1768 lower-hold plan."
+      ]
+    },
+    {
+      "title": "The Vasa Museum in an hour: teacher guide, 2026, p.3",
+      "url": "https://www.vasamuseet.se/globalassets/vasamuseet/dokument/skola/2026/t_teachers-guide-to-the-vasa-museum.pdf",
+      "source_type": "museum archaeology education guide",
+      "accessed": "2026-11-14",
+      "read": true,
+      "claims": [
+        "The museum describes officers using cabin chamber pots and crew using two open-bottom box toilets in the beakhead."
+      ],
+      "applies_to": [
+        "Removable cabin pot and distinction from a true external bow head."
+      ],
+      "limits": "Vasa is a 1628 warship. No identical sanitation arrangement or bow-head access is established for the POTC families."
+    },
+    {
+      "title": "Close stool, Colonial Williamsburg museum 1960-948, England 1700\u20131725",
+      "url": "https://emuseum.colonialwilliamsburg.org/objects/17170/close-stool",
+      "source_type": "museum furniture catalogue",
+      "accessed": "2026-11-14",
+      "read": true,
+      "claims": [
+        "The early-eighteenth-century stool has a hinged top revealing a pot frame and loose seat."
+      ],
+      "applies_to": [
+        "Authored wooden close-stool with raised lid, real seat void and removable pot."
+      ],
+      "limits": "A period furniture analogue, not a maritime find or verified stock asset. Its placement in these game-family cabins is authored; it does not establish fifteenth-century caravel equipment."
+    },
+    {
+      "title": "Geschiedenis van de 17e-eeuwse Batavia, Museum Batavialand",
+      "url": "https://www.batavialand.nl/zien-en-doen/het-schip-batavia/geschiedenis-van-de-17e-eeuwse-batavia/",
+      "source_type": "museum seventeenth-century merchant history",
+      "accessed": "2026-11-14",
+      "read": true,
+      "claims": [
+        "The museum recounts Pelsaert travelling in a small boat to seek help after Batavia was wrecked."
+      ],
+      "applies_to": [
+        "A small ship boat as period working equipment; the compact model is an authored carried-tender interpretation."
+      ],
+      "limits": "Does not establish stock-family boat dimensions or stowage. The 3m tender is an authored compact boat, not a claim to reproduce Batavia\u2019s larger rescue boat."
+    }
+  ],
+  "type_reading": "Cargo-first Dutch fluit interpretation retains the pear hull, strong tumblehome, 72 percent deck beam, rounded stern and high aft accommodation.",
+  "inferred_layout": [
+    "Broad lower hold carries sacks representing grain/salt, timber bundles and trade casks on dunnage; cargo bays leave a central inspection path.",
+    "Long central cargo hatch and smaller forward access serve the hold without filling the narrow deck with warship furniture.",
+    "Small high aft cabin has plain desk, berth and stores; the number and position of round-stern lights are authored.",
+    "Wooden hand-worked anchor machinery, paired pumps, optional compact carried boat, removable-pot cabin facility and sparse pin/bitt furniture suit the narrow working deck. Bow-head access is not established."
+  ],
+  "cargo_character": "bulk sacks, timber bundles and trade casks; restrained military stores",
+  "authored_layout": {
+    "kind": "decked",
+    "frame_spacing_m": 0.8,
+    "hold": {
+      "from": -0.31,
+      "to": 0.36,
+      "floor_z_m": -1.0,
+      "headroom_m": 3.7,
+      "minimum_headroom_m": 1.7
+    },
+    "cabin": {
+      "from": -0.465,
+      "to": -0.29,
+      "floor_z_m": 2.9,
+      "ceiling_deck_id": "castle_0",
+      "cut_main_deck": false,
+      "door_width_m": 1.1,
+      "door_height_m": 1.88,
+      "minimum_headroom_m": 1.7
+    },
+    "hatch": {
+      "id": "main_cargo_hatch",
+      "at": 0.13,
+      "length_m": 3.45,
+      "width_m": 1.85,
+      "deck_id": "main",
+      "target_deck_id": "hold"
+    },
+    "extra_hatches": [
+      {
+        "id": "forward_bulk_scuttle",
+        "at": 0.325,
+        "length_m": 1.5,
+        "width_m": 1.2,
+        "deck_id": "main",
+        "target_deck_id": "hold"
+      }
+    ],
+    "companionways": [
+      {
+        "id": "aft_hold_companionway",
+        "at": -0.2,
+        "length_m": 2.1,
+        "width_m": 1.15,
+        "deck_id": "main",
+        "target_deck_id": "hold"
+      }
+    ],
+    "lower_decks": [],
+    "partitions": [
+      {
+        "at": 0.2,
+        "deck_id": "hold",
+        "door_width_m": 1.1,
+        "door_height_m": 1.85
+      }
+    ],
+    "notes": [
+      "Broad lower hold carries sacks representing grain/salt, timber bundles and trade casks on dunnage; cargo bays leave a central inspection path.",
+      "Long central cargo hatch and smaller forward access serve the hold without filling the narrow deck with warship furniture.",
+      "Small high aft cabin has plain desk, berth and stores; the number and position of round-stern lights are authored.",
+      "Wooden hand-worked anchor machinery, paired pumps, optional compact carried boat, removable-pot cabin facility and sparse pin/bitt furniture suit the narrow working deck. Bow-head access is not established."
+    ],
+    "evidence": [
+      {
+        "url": "https://www.hetscheepvaartmuseum.nl/collectie/artikelen/701/het-fluitschip-vrachtschip-van-de-17e-eeuw",
+        "supports": [
+          "The museum describes a broad hull beneath a narrow deck, producing a pear silhouette.",
+          "The type carried bulk grain, salt and timber and was economical with a small crew."
+        ],
+        "quality": "maritime museum type history",
+        "limits": "Supports cargo-first form and stores. The twenty game-family guns and cabin/hatch coordinates are authored adaptations; do not turn it into a warship interior."
+      },
+      {
+        "url": "https://collection.sciencemuseumgroup.org.uk/objects/co41131/model-of-a-dutch-fluitschip",
+        "supports": [
+          "The catalogue identifies a rigged representation of a c.1645 Dutch cargo vessel, made by R.W.M. Nance in 1917\u20131927."
+        ],
+        "quality": "museum representation model",
+        "limits": "Supports visual type comparison, not a contemporary construction plan or complete interior."
+      },
+      {
+        "url": "https://www.batavialand.nl/zien-en-doen/het-schip-batavia/vraag-en-antwoord/",
+        "supports": [
+          "The museum lists a hold, powder room, great cabin, bread room, smaller cabins, heads and furniture within its wooden seventeenth-century merchant reconstruction.",
+          "The builders consulted Witsen, Van Yk, VOC documents, paintings and wrecks; the museum explicitly acknowledges incomplete evidence for the interior."
+        ],
+        "quality": "museum reconstruction methods and interior inventory",
+        "limits": "Batavia is a Dutch East Indiaman, not a fluit or the game Pinnace. Use room types and visible timber construction as period analogues; the asset layout remains an authored reconstruction."
+      },
+      {
+        "url": "https://www.sea.museum/en/about/media/2023/11/museum-releases-further-evidence-to-support-its-case-for-identifying-endeavour-shipwreck",
+        "supports": [
+          "The museum compares a surviving pump-shaft stump and pump-well partitions with the 1768 lower-hold plan."
+        ],
+        "quality": "museum archaeological research",
+        "limits": "Supports a timber-enclosed pump well as a real working structure; coordinates and pump design in this asset are authored."
+      }
+    ],
+    "historical_status": "Source-informed authored reconstruction; openings, proportions and furniture placement are not verified original game or historical interiors.",
+    "research_path": "layout-research.json"
+  },
+  "ship_id": "fleut",
+  "decisions": [
+    {
+      "feature": "cargo_and_stores",
+      "basis": "Broad lower hold carries six tied bulk sacks representing grain/salt and two bundles of three timber baulks on dunnage; cargo bays leave a central inspection path. This is an adapted, authored spatial decision; cited analogues establish the feature class rather than these coordinates.",
+      "source_urls": [
+        "https://www.hetscheepvaartmuseum.nl/collectie/artikelen/701/het-fluitschip-vrachtschip-van-de-17e-eeuw",
+        "https://collection.sciencemuseumgroup.org.uk/objects/co41131/model-of-a-dutch-fluitschip"
+      ],
+      "confidence": "inferred authored reconstruction"
+    },
+    {
+      "feature": "aft_accommodation",
+      "basis": "Long central cargo hatch and smaller forward access serve the hold without filling the narrow deck with warship furniture. This is an adapted, authored spatial decision; cited analogues establish the feature class rather than these coordinates.",
+      "source_urls": [
+        "https://www.batavialand.nl/zien-en-doen/het-schip-batavia/vraag-en-antwoord/"
+      ],
+      "confidence": "inferred authored reconstruction"
+    },
+    {
+      "feature": "access_and_working_levels",
+      "basis": "Small high aft cabin has plain desk, berth and stores; the number and position of round-stern lights are authored. This is an adapted, authored spatial decision; cited analogues establish the feature class rather than these coordinates.",
+      "source_urls": [
+        "https://www.hetscheepvaartmuseum.nl/collectie/artikelen/701/het-fluitschip-vrachtschip-van-de-17e-eeuw",
+        "https://www.batavialand.nl/zien-en-doen/het-schip-batavia/vraag-en-antwoord/"
+      ],
+      "confidence": "inferred authored reconstruction"
+    },
+    {
+      "feature": "period_equipment_and_joinery",
+      "basis": "Wooden hand-worked anchor machinery, paired pumps, optional compact carried boat, removable-pot cabin facility and sparse pin/bitt furniture suit the narrow working deck. Bow-head access is not established. This is an adapted, authored spatial decision; cited analogues establish the feature class rather than these coordinates.",
+      "source_urls": [
+        "https://www.batavialand.nl/zien-en-doen/het-schip-batavia/vraag-en-antwoord/",
+        "https://www.sea.museum/en/about/media/2023/11/museum-releases-further-evidence-to-support-its-case-for-identifying-endeavour-shipwreck"
+      ],
+      "confidence": "inferred authored reconstruction"
+    },
+    {
+      "feature": "officer_sanitation",
+      "basis": "A real open seat frame and removable pot are placed in a measured clear cabin footprint. This is an authored period-furniture adaptation; an inaccessible decorative beakhead seat is not claimed.",
+      "source_urls": [
+        "https://www.vasamuseet.se/globalassets/vasamuseet/dokument/skola/2026/t_teachers-guide-to-the-vasa-museum.pdf",
+        "https://emuseum.colonialwilliamsburg.org/objects/17170/close-stool"
+      ],
+      "confidence": "inferred authored reconstruction"
+    },
+    {
+      "feature": "carried_tender",
+      "basis": "A 3m hollow timber boat with adult-scale thwarts, oars and real skids is an optional authored fitting, accepted only where measured final gun/rig geometry leaves a supported bay clear of access. Its compact dimensions and location are authored against measured clear geometry, not copied from a stock mesh or claimed as Batavia dimensions.",
+      "source_urls": [
+        "https://www.batavialand.nl/zien-en-doen/het-schip-batavia/geschiedenis-van-de-17e-eeuwse-batavia/"
+      ],
+      "confidence": "inferred authored reconstruction"
+    },
+    {
+      "feature": "fore_hold_partition_station",
+      "basis": "The authored forward store partition lies at +0.20 L, between the main cargo access and the preserved foremast. Its planks, open doorway and sill remain outside the actual mast, partners and fore-shroud chainplate hardware. The museum establishes the bulk-cargo fluit; this internal division and coordinate are an authored reconstruction.",
+      "source_urls": [
+        "https://www.hetscheepvaartmuseum.nl/collectie/artikelen/701/het-fluitschip-vrachtschip-van-de-17e-eeuw"
+      ]
+    }
+  ],
+  "limitations": [
+    "Source-informed authored wooden interiors for five ordinary POTC families; no proprietary game mesh, original interior, or exact historical reconstruction claimed.",
+    "Cargo-first Dutch fluit interpretation retains the pear hull, strong tumblehome, 72 percent deck beam, rounded stern and high aft accommodation.",
+    "Supports cargo-first form and stores. The twenty game-family guns and cabin/hatch coordinates are authored adaptations; do not turn it into a warship interior.",
+    "Supports visual type comparison, not a contemporary construction plan or complete interior.",
+    "Batavia is a Dutch East Indiaman, not a fluit or the game Pinnace. Use room types and visible timber construction as period analogues; the asset layout remains an authored reconstruction.",
+    "Supports a timber-enclosed pump well as a real working structure; coordinates and pump design in this asset are authored.",
+    "Vasa is a 1628 warship. No identical sanitation arrangement or bow-head access is established for the POTC families.",
+    "A period furniture analogue, not a maritime find or verified stock asset. Its placement in these game-family cabins is authored; it does not establish fifteenth-century caravel equipment.",
+    "Does not establish stock-family boat dimensions or stowage. The 3m tender is an authored compact boat, not a claim to reproduce Batavia\u2019s larger rescue boat."
+  ],
+  "implemented_equipment": {
+    "hold_cargo": "Six tied bulk sacks and two bundles of three timber baulks on actual dunnage.",
+    "carried_boat": {
+      "included": false,
+      "reason": "The final measured deck has no supported three-metre footprint clear of the retained gun stations, hatches, rig and fittings."
+    },
+    "cabin": "Adult berth, table, seating, fitted storage, lantern and open-seat removable-pot facility."
+  },
+  "implementation_measurements": {
+    "upper_futtock_end_seats": 82,
+    "curved_square_frames_with_original_metric_uv": 41,
+    "wood_uv_anisotropy_area_share_before": 0.10469289591423772,
+    "wood_uv_anisotropy_area_share_after": 5.4141102495531094e-05,
+    "anisotropy_ratio_cutoff": 1.25,
+    "unchanged_area_share_limit": 0.08,
+    "wood_density_median_px_m": 1024.0,
+    "wood_grain_aligned_share": 0.9984407818613046,
+    "scope": "Measured actual target GLB; physical same-bay closed end-seats and original metric timber UV, with unchanged physical and UV audit tolerances."
+  }
+}
