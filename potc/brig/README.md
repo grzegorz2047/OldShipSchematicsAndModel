@@ -24,4 +24,6 @@ blender -b --python potc/brig/build.py
 
 Actual detail views show the [main hatch](previews/ochre/detail/deck_closeup.png), [intact hold](previews/ochre/detail/hold_interior.png) and [intact cabin](previews/ochre/detail/cabin_interior.png). [Render evidence](detail-render.json) records the cameras, image hashes and explicitly hidden cutaway parts; [manual review](detail-review.json) records the visual observations.
 
+The owned [surface repair ledger](surface-repair.json) records continuous barrel UVs, analytic side normals and measured native/export parity. The canonical builder preserves the construction and then runs the same sealed `repair_package` stage; positions, indices, other surfaces and collision are retained. Fresh images and the full audit assess the repaired delivery.
+
 This is a **static detailed ship asset**. Engine sailing, buoyancy, damage, gun logic, player control and crew AI are absent. Geometric access and imported-export checks are recorded in `validation.json`.

@@ -2,19 +2,19 @@
   "schema": 5,
   "reference": "Bryg Mewa PR 3",
   "decision": "PASS",
-  "reviewer": "Codex war owner, actual six images inspected",
+  "reviewer": "Codex war owner, all six fresh corrected-model images inspected against matched Bryg references",
   "model_path": "model/ochre/ship.glb",
-  "model_sha256": "269b1e44aabf13a0f90678193aafc427c77c7d0a5ef639d8b44a5945d369e988",
+  "model_sha256": "a7bd59adf6da6a04f457081c1d16768dce5667a509264d4da4d07b74dfd5af15",
   "renderer_sha256": "c080e1ca7c42ad192fba3e31fc764d68997ab0a4d5ddc60a0f48cd08f4acf586",
   "views": [
     {
       "category": "hull_rig",
       "path": "previews/ochre/detail/hull_rig.png",
-      "sha256": "50579627ea8cf70eebf45248da92f49c6a3ea6c867d0d8b40a599284b17790c6",
+      "sha256": "7a3dce667855f6b1ea6e564dd34eb1092cb76c07402cee7dd31f06592d78f79e",
       "name": "hull_rig",
       "findings": [
-        "Two principal masts carry stacked square courses, with the fore-and-aft sail directly on the mainmast and no separate Snow pole.",
-        "The visible broadside has one gun row; the ochre hull, pale panelled canvas, open central hatch and distinct deck fittings remain readable in the whole-ship field."
+        "The corrected actual GLB retains the two-mast square-rigged brig silhouette, forward triangular cloth and aft fore-and-aft sail, with one side battery and stepped weather decks.",
+        "Distinct hatches, rails and deck fittings are visible at whole-ship scale; this field cannot resolve small deadeye bores, rope ends or detailed barrel surfaces."
       ],
       "scope": "Whole actual GLB with all visible hull, rig and sails.",
       "hidden_nodes": [],
@@ -23,11 +23,11 @@
     {
       "category": "deck",
       "path": "previews/ochre/detail/deck_closeup.png",
-      "sha256": "d8f8b7b17ea18cb2d7bf21784666f7d7de922eaa4affff25937499025d7f6d1d",
+      "sha256": "87ebc47f015935abebfaf22e45a071ab6a427888d38fe86ebf3be4ccd39872f5",
       "name": "deck_closeup",
       "findings": [
-        "The coaming surrounds a real opening through individual planks, and a stair flight with treads, stringers and side rails descends below the main deck.",
-        "At the matched 4.5 m reference field, longitudinal wood grain and staggered plank joints remain readable; the framed stair flight adds distinct joinery beyond the reference ladder rungs."
+        "At the fixed 4.5 m field, the thick coaming surrounds a real hatch with separate stair treads, stringers, rope handrails and a lower planked landing.",
+        "Directional grain and staggered joints read clearly across the retained deck and joinery; the near gun is cropped at the edge, so its complete surface and tackle cannot be assessed here."
       ],
       "scope": "Actual deck and fitting close-up at a fixed 4.5 metre physical field; rig hidden for visibility.",
       "hidden_nodes": [],
@@ -192,11 +192,11 @@
     {
       "category": "interior",
       "path": "previews/ochre/detail/hold_interior.png",
-      "sha256": "d3336135d7c82b578298848019ffdcd78b05b596f9b2ff5bf282dc89e00f85a6",
+      "sha256": "3f80be015ee5cbbd650ce0158d07c7c64b8c5b7703596f5c8852663e0a7411e5",
       "name": "hold_interior",
       "findings": [
-        "The intact view retains curved ribs, longitudinal ceiling planks, overhead beams, a jointed planked sole and the mast seated in its timber step.",
-        "Fitted storage and a lantern sit to the sides while an exposed working strip remains beside the mast; this has substantially more visible internal structure than the smooth-walled reference hold."
+        "The intact hold shows repeated angled side frames, separately planked floor and ceiling, cross-beams and a substantial mast step, richer construction than the matched old smooth-walled hold.",
+        "A timber locker and part of a lantern remain visible beside a clear near-floor strip; the far aisle is dark and this camera does not inventory every stored object."
       ],
       "room_id": "hold",
       "scope": "Camera inside the actual enclosed GLB room; auxiliary camera fill reveals timber and furniture.",
@@ -206,11 +206,11 @@
     {
       "category": "interior",
       "path": "previews/ochre/detail/hold_cutaway.png",
-      "sha256": "68621f6ddede638e49293f8b70d21664b213aea4e825e98ab2a3793fefe2a1fa",
+      "sha256": "834208f454704c03ab15707cca6dc4e654a73c2dbab0e6671015a611bd13ba4a",
       "name": "hold_cutaway",
       "findings": [
-        "The declared hidden outer hull and upper timbers expose a continuous sequence of curved frames and longitudinal stringers around the lower hull.",
-        "Access flights and retained stores remain identifiable within the framing; guns and rig fittings appear exposed because their named surrounding covers are temporarily hidden in this supplementary view."
+        "The explicitly opened structural view exposes a dense continuous run of curved hull ribs and distinct lower levels beneath the hatch/stair network.",
+        "Guns remain on the weather level and the after berth/helm furniture are distinguishable; removed hull/deck parts and the wide field make this supplementary structural evidence rather than an intact-room or fine-hardware inspection."
       ],
       "room_id": "hold",
       "scope": "Read-only cutaway: named outer hull, upper deck timbers and bulkheads temporarily hidden; delivered GLB unchanged.",
@@ -3441,11 +3441,11 @@
     {
       "category": "interior",
       "path": "previews/ochre/detail/cabin_interior.png",
-      "sha256": "cf9303f1c7381e23a58a450595cd6e21204e443cd44c7b749a95c86d077cf66a",
+      "sha256": "433f2a965d8f81c7dfd71f1c159d3652510a6a3756fe5f8a5387c40b574467b9",
       "name": "cabin_interior",
       "findings": [
-        "The intact cabin shows a full table, separate bench and metal-framed lantern, with actual closed legs and supports seated on the planked floor.",
-        "The doorway, side ribs and overhead beams remain present; readable timber grain and fitted joinery add detail at the same 20 mm lens and eye height as the reference cabin."
+        "The intact cabin retains a framed open doorway, planked floor/roof, repeated overhead beams, a separate chart table, bench and lantern.",
+        "The doorway is a real visible opening into the darker adjoining space; the berth is outside this camera crop and is checked in the separate cutaway."
       ],
       "room_id": "cabin",
       "scope": "Camera inside the actual enclosed GLB room; auxiliary camera fill reveals timber and furniture.",
@@ -3455,11 +3455,11 @@
     {
       "category": "interior",
       "path": "previews/ochre/detail/cabin_cutaway.png",
-      "sha256": "79d815b6ca66feb38827b85abdabde7519278a3c46d01c9b13ff171d6177d994",
+      "sha256": "783f29ca349cf83c405aa91c8f98f69eaa10f50246b0123167ae3757cd809570",
       "name": "cabin_cutaway",
       "findings": [
-        "A long mattress on a raised timber berth and a separate bedside cabinet are visible beside the retained aft planked sole.",
-        "The supplementary cutaway exposes the cabin floor edge, curved stern framing and adjacent gun stations after its named enclosing timbers are hidden; the delivered model is unchanged."
+        "The after cutaway exposes a framed raised berth with mattress, a separate lantern and helm pedestal, adjacent gun carriages and retained stern structure.",
+        "Separate planks, frames and fittings read more clearly than the old reference’s smooth panels; enclosing parts are deliberately removed and small metal surfaces remain too distant for a uniform-finish claim."
       ],
       "room_id": "cabin",
       "scope": "Read-only cutaway: named outer hull, upper deck timbers and bulkheads temporarily hidden; delivered GLB unchanged.",
@@ -5756,16 +5756,10 @@
   ],
   "required_intact_gun_decks": [],
   "limitations": [
-    "Static geometry and PBR inspection only; gameplay controllers and historical exactness are not certified.",
-    "The 640 by 512, twelve-sample images soften tiny bolts, deadeye bores and rope fibres in the whole-ship field; numerical fitting and clearance checks remain separate.",
-    "The wood uses repeating authored grain maps; the review assesses readable physical grain and joinery, without certifying exact historical timber species or unique wear.",
-    "The intact hold has a dark distant end, and the berth is outside the intact cabin camera field; the separate declared cutaways reveal those structural and furnishing details."
+    "Static geometric and PBR review only; gameplay, crew, gun logic and exact retail/historical interiors are not certified.",
+    "The matched old Bryg deck field is 4.5 m. New timber framing, joinery and grain are readable; whole-ship and cutaway fields do not resolve every small rig or gun fitting.",
+    "The intact hold has dark distant areas; cabin berth evidence is supplied by the explicit cutaway, which does not replace the separate intact interior.",
+    "Barrel surface continuity and native/export parity are measured in surface-repair.json. The cropped/distant gun surfaces in these six views do not justify claiming uniformly realistic metal."
   ],
-  "instructions": "Inspect every listed actual image and the matched old Brig reference views. Add at least two concrete observations per view. Set decision PASS only after inspection. A cutaway remains supplementary to the separate intact interior view.",
-  "reference_comparison": [
-    "Reference deck field: 4.5 m orthographic, matched view direction and area lighting.",
-    "Reference enclosed rooms: 20 mm lens, camera 1.23 m above sole, matched auxiliary area lighting.",
-    "The new hatch, hull framing, deck seams, room joinery and furnished berth are visibly at least as detailed as the reviewed reference at those disclosed scales."
-  ],
-  "reviewed_utc": "2026-11-14T14:25:09.460695+00:00"
+  "instructions": "Inspect every listed actual image and the matched old Brig reference views. Add at least two concrete observations per view. Set decision PASS only after inspection. A cutaway remains supplementary to the separate intact interior view."
 }

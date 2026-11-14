@@ -3,7 +3,7 @@
   "ship_id": "brig",
   "palette": "ochre",
   "model_path": "model/ochre/ship.glb",
-  "model_sha256": "269b1e44aabf13a0f90678193aafc427c77c7d0a5ef639d8b44a5945d369e988",
+  "model_sha256": "a7bd59adf6da6a04f457081c1d16768dce5667a509264d4da4d07b74dfd5af15",
   "renderer_sha256": "c080e1ca7c42ad192fba3e31fc764d68997ab0a4d5ddc60a0f48cd08f4acf586",
   "resolution": [
     640,
@@ -14,7 +14,7 @@
     {
       "name": "hull_rig",
       "path": "previews/ochre/detail/hull_rig.png",
-      "sha256": "50579627ea8cf70eebf45248da92f49c6a3ea6c867d0d8b40a599284b17790c6",
+      "sha256": "7a3dce667855f6b1ea6e564dd34eb1092cb76c07402cee7dd31f06592d78f79e",
       "category": "hull_rig",
       "position": [
         66.25782775878906,
@@ -35,7 +35,7 @@
     {
       "name": "deck_closeup",
       "path": "previews/ochre/detail/deck_closeup.png",
-      "sha256": "d8f8b7b17ea18cb2d7bf21784666f7d7de922eaa4affff25937499025d7f6d1d",
+      "sha256": "87ebc47f015935abebfaf22e45a071ab6a427888d38fe86ebf3be4ccd39872f5",
       "category": "deck",
       "position": [
         4.299999713897705,
@@ -213,7 +213,7 @@
     {
       "name": "hold_interior",
       "path": "previews/ochre/detail/hold_interior.png",
-      "sha256": "d3336135d7c82b578298848019ffdcd78b05b596f9b2ff5bf282dc89e00f85a6",
+      "sha256": "3f80be015ee5cbbd650ce0158d07c7c64b8c5b7703596f5c8852663e0a7411e5",
       "category": "interior",
       "position": [
         0.5400000214576721,
@@ -235,7 +235,7 @@
     {
       "name": "hold_cutaway",
       "path": "previews/ochre/detail/hold_cutaway.png",
-      "sha256": "68621f6ddede638e49293f8b70d21664b213aea4e825e98ab2a3793fefe2a1fa",
+      "sha256": "834208f454704c03ab15707cca6dc4e654a73c2dbab0e6671015a611bd13ba4a",
       "category": "interior",
       "position": [
         9.899999618530273,
@@ -3478,7 +3478,7 @@
     {
       "name": "cabin_interior",
       "path": "previews/ochre/detail/cabin_interior.png",
-      "sha256": "cf9303f1c7381e23a58a450595cd6e21204e443cd44c7b749a95c86d077cf66a",
+      "sha256": "433f2a965d8f81c7dfd71f1c159d3652510a6a3756fe5f8a5387c40b574467b9",
       "category": "interior",
       "position": [
         0.0,
@@ -3500,7 +3500,7 @@
     {
       "name": "cabin_cutaway",
       "path": "previews/ochre/detail/cabin_cutaway.png",
-      "sha256": "79d815b6ca66feb38827b85abdabde7519278a3c46d01c9b13ff171d6177d994",
+      "sha256": "783f29ca349cf83c405aa91c8f98f69eaa10f50246b0123167ae3757cd809570",
       "category": "interior",
       "position": [
         9.899999618530273,

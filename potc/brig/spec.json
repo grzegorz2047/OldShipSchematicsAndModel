@@ -283,7 +283,12 @@
     "potc/brig/layout-research.json",
     "potc/brig/interior-plan.md",
     "docs/en/04-decks-bulwarks-stern-head.md",
-    "docs/en/13-3d-quality-checklist.md"
+    "docs/en/13-3d-quality-checklist.md",
+    "potc/brig/gun_surface_fix.py",
+    "potc/brig/gun_surface_native.py",
+    "potc/brig/gun_surface_repair.py",
+    "potc/brig/gun_surface_bindings.py",
+    "potc/brig/surface-repair.json"
   ],
   "detailed_layout": {
     "schema": 1,
