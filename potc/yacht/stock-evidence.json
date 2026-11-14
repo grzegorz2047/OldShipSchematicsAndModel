@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "family": "yacht",
+  "source_commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+  "source_sha256": {
+    "Ships_init.c": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde",
+    "ships.h": "a267dbc5d3fc901104b86b53ffdab06255545a8a7ee3725801c0d9dc9037ba74"
+  },
+  "class": 6,
+  "cannons": 16,
+  "matching_stock_rows": [
+    {
+      "id": "SHIP_YACHT_ENGLAND",
+      "Name": "\"Yacht1\"",
+      "Class": "6",
+      "CannonsQuantity": "16",
+      "MaxCaliber": "12",
+      "Capacity": "720",
+      "MaxCrew": "57",
+      "MinCrew": "13",
+      "SpeedRate": "9.45",
+      "TurnRate": "31.5",
+      "HP": "700",
+      "CanEncounter": "true (inherited default)"
+    }
+  ],
+  "dimension_claim": false,
+  "note": "Only classification/cannon facts are taken from this pinned compatibility source. Hull dimensions and set-sail reconstruction are authored independently."
+}
