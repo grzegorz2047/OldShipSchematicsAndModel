@@ -79,10 +79,10 @@
         "model/ochre/source.blend": "664fc549e45b4fbca4e1462ce29c1900ce67733afb489df2e143fa2e09e3bca4"
       },
       "output_sha256": {
-        "review/ochre/source_detail.png": "a68dd482dbd249d81f5044705545c22e705110ba39373987cda0bea68ca033ae",
-        "review/ochre/source_hero.png": "6f9e6c65fdd62d0c5adb2edf40f187a8a44d3886bd66d111c1e6fb1dec67c6fc",
-        "previews/ochre/detail.png": "0e9a2ace95f888b748f157cf1247d781ab2f3e32a3c3570cfc6719f37c4d9225",
-        "previews/ochre/hero.png": "a2a883cd43a2e5b76b6dfa30bd9204f0567fc446d960319df44e863e9d9e5b31"
+        "review/ochre/source_detail.png": "bf5b2fc8aa21e6510effa4defd5c02be4eadfa9df3649d09e8eee76e4401a07e",
+        "review/ochre/source_hero.png": "f702067d0259306e001b115edb269ff8c3dd153ce748379e4d69f5e581a61ff0",
+        "previews/ochre/detail.png": "a2c8a7d5872005747de6f703330a5aa38b4aa75ad095208dd1bf47da6d723802",
+        "previews/ochre/hero.png": "939f40805bbcc859b7647dc84c0ffccbd9fff5b2e34a02661ee4dcdadf5f59ff"
       },
       "scope": "Actual GLB versus its own packed colour scene under identical cameras/lights; detail is a hull/deck view with rig hidden, not a walking proof."
     },
@@ -163,10 +163,10 @@
         "model/navy/source.blend": "9bcab7b8a47da99d651b68024765541211a164ca2d178aeabfad6a90eb523dd0"
       },
       "output_sha256": {
-        "review/navy/source_detail.png": "434ed76bb2eacfae17e2f5e0e63f3f0d8971d6e9312674bbbc7d092b512a584f",
-        "review/navy/source_hero.png": "b0b09c83b00f47d944145a0b89f9327380994d82c183dc4ce6c6829bac4bf766",
-        "previews/navy/detail.png": "54b43fb078b07d4fabbcea616d72aced27cc9dc99919f21a024828419800fd51",
-        "previews/navy/hero.png": "bb0cb156729906663cda81f1ac4e8875fbb1eade992ddfbffd1397b163157650"
+        "review/navy/source_detail.png": "dddb8f279997419f18048a7a92bb74f580232c509593eeaa2ddfe701411e72f4",
+        "review/navy/source_hero.png": "e5e4d1ac792e8e33e1eb1435d2a7a955acc8e1bb1a72a6bedc6de29e216dd40d",
+        "previews/navy/detail.png": "c0f956d776a651101779d47b4bf2e18acc141280677350ff14507b97c300b729",
+        "previews/navy/hero.png": "eb9873cade6429c0fe9cfd5ef8d46b9a8c932b65e4aea7833d04ea1c19d893c0"
       },
       "scope": "Actual GLB versus its own packed colour scene under identical cameras/lights; detail is a hull/deck view with rig hidden, not a walking proof."
     }
