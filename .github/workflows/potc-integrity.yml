@@ -18,4 +18,4 @@ jobs:
       - name: Exercise portable positive and negative controls
         run: python potc/common/v4_integrity.py --self-test
       - name: Verify all shipped static ship packages
-        run: python potc/common/v4_integrity.py --all --source-root .
+        run: python potc/common/v5_dispatch.py --all --source-root .
