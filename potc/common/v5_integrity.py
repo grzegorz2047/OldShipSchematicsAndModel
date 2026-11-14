@@ -22,6 +22,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import v4_integrity as V
 import v5_contract as C
+import v5_report_codec as REPORT
 
 GATES = C.DETAIL_GATES
 FEATURES = {"deck_planking", "internal_frames", "hatch_joinery", "access_stairs",
@@ -33,7 +34,7 @@ AUDIT_SOURCES = C.AUDIT_SOURCES
 
 
 def read(path):
-    return json.loads(Path(path).read_text(encoding="utf-8"))
+    return REPORT.read(path)
 
 
 def safe(root, path):

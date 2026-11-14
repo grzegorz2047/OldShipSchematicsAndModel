@@ -219,7 +219,12 @@
   "source_paths": [
     "potc/yacht/stock-evidence.json",
     "potc/yacht/layout-research.json",
-    "potc/common/v5_review.py"
+    "potc/common/v5_review.py",
+    "potc/yacht/gun_surface_fix.py",
+    "potc/yacht/gun_surface_native.py",
+    "potc/yacht/gun_surface_repair.py",
+    "potc/yacht/gun_surface_bindings.py",
+    "potc/yacht/surface-repair.json"
   ],
   "game_source": {
     "provenance": {

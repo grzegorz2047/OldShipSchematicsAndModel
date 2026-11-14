@@ -36,3 +36,15 @@ Szczegółowe paczki mają jawny budżet v5 na rozmiar pliku i trójkąty. Dawne
 Dostawa zawiera osobne główne GLB i dwa LOD-y dla każdego malowania, dwie spakowane sceny Blender, źródłowe mapy, wspólną dokładną kolizję kadłuba i pokładów oraz raporty. Kolizja wymaga obsługi statycznych siatek wklęsłych. Kontrole dojść dotyczą fizycznej geometrii w zapisanej pozie. Kontrolery żeglugi, załogi, obsługi dział i ruchu gracza nie są częścią modeli.
 
 Nowy kod pozostaje w `potc/common/v5_*.py`. Wcześniejsze moduły v4, oryginalne skrypty poradnika i modele wcześniejszej floty są zachowane.
+
+## Bezstratne pakowanie dużego raportu
+
+`validation.json` może pozostać zwykłym JSON-em albo zawierać jawny kontener `potc-validation-zlib-base64-v1`. Kontener przechowuje pełne oryginalne bajty JSON, skompresowane zlib i zapisane base64, wraz z rozmiarem oraz SHA-256 rozpakowanej treści. Nie usuwa pomiarów, wierszy bramek, źródeł ani oryginalnych wyników `SUPERSEDED`; nie zawiera zastępczego wyniku PASS. Jest to nadal jeden plik raportu, bez dodatkowego pliku tworzącego zależność skrótów od samego siebie.
+
+```sh
+python potc/common/v5_report_codec.py --encode potc/battleship/validation.json
+python potc/common/v5_report_codec.py --decode potc/battleship/validation.json --output /tmp/battleship-validation.full.json
+python potc/common/v5_report_codec.py --self-test
+```
+
+Pierwsze polecenie pakuje raport w miejscu; drugie odtwarza dokładny pełny JSON do odczytu poza katalogiem dostawy. Przenośne adaptery v5 odczytują oba formaty. Na czas kontroli v5 wyłącznie odczyt dokładnego `validation.json` danej paczki w oryginalnym kontrolerze v4 dostaje pełny rozpakowany tekst. Alias ścieżki jest zawsze przywracany. Żaden predykat ani próg v4 nie jest zmieniany. Dekoder sprawdza format, ścisłe base64, pełny pojedynczy strumień zlib, rozmiar (maksymalnie 512 MiB) i SHA-256; odrzuca dane ucięte, dopisane i uszkodzone. Zwykłe raporty JSON zachowują swoje wartości i typy.

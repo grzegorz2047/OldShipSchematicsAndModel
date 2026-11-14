@@ -44,7 +44,7 @@ def command(root, asset, flag):
 def audit(asset, root, resolution=480, render=True, detail_only=False):
     asset, root = Path(asset).resolve(), Path(root).resolve()
     if detail_only:
-        report = json.loads((asset/"validation.json").read_text())
+        report = C.read(asset/"validation.json")
         # Changing a review record must not invalidate inventory completeness.
         # Frozen geometry rows and old acceptance matrices stay untouched.
         report["sha256"] = {p.relative_to(asset).as_posix(): V.digest(p) for p in sorted(asset.rglob("*"))

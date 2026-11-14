@@ -16,6 +16,8 @@ The builder writes the delivered asset folder. Run acceptance again after every 
 blender -b -t 1 --factory-startup --python-exit-code 1 --python potc/yacht/build.py
 ```
 
+The local builder finishes with the explicit [cannon surface repair](gun_surface_repair.py). Its [measured ledger](surface-repair.json) binds both packed scenes and all six visual exports: continuous barrel UV0/AO1 charts with one underside seam, a documented 5% density compensation, and matching native FREE corner normals plus the final post-export normal correction. This stage preserves positions, triangle indices, the remaining objects, material/image data and collision bytes; it does not claim a new architecture build. Photography, manual review and the full audit are renewed after the surface revision.
+
 ## Delivered files
 
 | Palette | Main model | Distance levels | Packed source | Actual GLB views |
