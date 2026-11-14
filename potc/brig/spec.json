@@ -116,7 +116,9 @@
             "width_m": 7.157,
             "height_m": 4.06
           }
-        ]
+        ],
+        "heel_z_m": -2.3235625925925927,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
       },
       {
         "name": "main",
@@ -148,7 +150,9 @@
             "width_m": 8.8,
             "height_m": 10.4
           }
-        ]
+        ],
+        "heel_z_m": -2.388220445422943,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
       }
     ],
     "bowsprit": {
@@ -268,12 +272,171 @@
   "scope": {
     "delivered": "Static duel asset with two paint variants and LOD/collision/review assets.",
     "engine_integration": "Not integrated with an engine: no buoyancy, damage, artillery, sailing or crew controllers.",
-    "walking": "Not applicable: no authored walkable interior or player traversal claim."
+    "walking": "Authored geometric passage and stair access; no player controller or engine navigation integration. Actual clearance checks are recorded in validation.json after build.",
+    "interiors": "Modelled structural interiors with real planked decks, frames, hatch apertures, stairs and cabin partition openings. Layout is an authored reconstruction, not recovered retail geometry."
   },
   "source_paths": [
     "potc/brig/type-profile.json",
     "potc/brig/type-plan.svg",
     "docs/en/05-masts-and-spars.md",
-    "docs/en/12-designing-other-ships.md"
-  ]
+    "docs/en/12-designing-other-ships.md",
+    "potc/brig/layout-research.json",
+    "potc/brig/interior-plan.md",
+    "docs/en/04-decks-bulwarks-stern-head.md",
+    "docs/en/13-3d-quality-checklist.md"
+  ],
+  "detailed_layout": {
+    "schema": 1,
+    "coordinate_system": {
+      "longitudinal": "s_fraction of preserved deck length, positive forward",
+      "absolute_plan": "x_m across ship, y_m up, forward_z_m positive bow",
+      "note": "Vertical z_m fields follow the existing Blender builder convention; longitudinal at/from/to are fractions."
+    },
+    "frame_spacing_m": 0.52,
+    "clear_aisle_width_m": 1.2,
+    "passage_width_m": 1.1,
+    "standing_height_m": 1.85,
+    "minimum_headroom_m": 1.85,
+    "kind": "decked",
+    "partitions": [],
+    "companionways": [],
+    "extra_hatches": [
+      {
+        "id": "fore_stores_hatch",
+        "at": 0.365,
+        "length_m": 1.4,
+        "width_m": 1.2,
+        "x_m": 0.0,
+        "coaming_height_m": 0.25,
+        "deck_id": "main",
+        "access": "ladder",
+        "open": true,
+        "forward_z_m": 12.41,
+        "target_deck_id": "berth_lower"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "brig-gannet",
+        "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-84156",
+        "title": "Royal Museums Greenwich: Gannet (1800), ZAZ4365",
+        "date": "circa March 1800",
+        "kind": "Primary Admiralty plan catalogue",
+        "observed": "The catalogue identifies a 1:48 drawing of the upper deck, lower deck and hold of the 16-gun brig-sloop Gannet, initialled by Surveyor John Henslow.",
+        "application": "Separate main battery, lower berth/storage deck and hold, accessed by physical companion openings; compact after accommodation.",
+        "limit": "Sixteen-gun historical analogue, not the 24-gun game Brig; exact gun positions, dimensions and internal partitions are authored."
+      },
+      {
+        "id": "brig-cruizer",
+        "url": "https://prints.rmg.co.uk/products/the-deck-plan-of-the-cruizer-1797-j4868",
+        "title": "Royal Museums Greenwich: deck plan of Cruizer (1797)",
+        "date": "1797",
+        "kind": "Primary naval plan catalogue",
+        "observed": "A museum-held deck plan exists for the later brig-sloop Cruizer.",
+        "application": "Late two-masted brig arrangement vocabulary and a clear working deck.",
+        "limit": "No museum plan image is copied; later brig analogue is not evidence of POTC retail geometry or a Snow mast."
+      }
+    ],
+    "notes": [
+      "One continuous 24-gun main battery, separate berth deck, framed hold and a furnished cabin on the lower after deck. The low preserved quarterdeck does not falsely promise a full standing room above the main gun deck. No Snow/trysail pole."
+    ],
+    "hold": {
+      "from": -0.37,
+      "to": 0.38,
+      "floor_z_m": -2.5,
+      "follow_sheer": true,
+      "ceiling_planking": true,
+      "bilge_visible": true,
+      "forward_z_range_m": [
+        -12.58,
+        12.92
+      ]
+    },
+    "cabin": {
+      "from": -0.46,
+      "to": -0.24,
+      "floor_z_m": -0.35,
+      "follow_sheer": true,
+      "ceiling_deck_id": "main",
+      "cut_main_deck": false,
+      "door_width_m": 1.15,
+      "door_height_m": 1.9,
+      "clear_height_m": 1.9,
+      "furniture": [
+        "table",
+        "bench",
+        "berth",
+        "locker"
+      ],
+      "forward_z_range_m": [
+        -15.64,
+        -8.16
+      ]
+    },
+    "hatch": {
+      "id": "main_hatch",
+      "at": 0.075,
+      "length_m": 2.8,
+      "width_m": 1.9,
+      "x_m": 0.0,
+      "coaming_height_m": 0.25,
+      "deck_id": "main",
+      "access": "stair",
+      "open": true,
+      "forward_z_m": 2.55
+    },
+    "lower_decks": [
+      {
+        "id": "berth_lower",
+        "from": -0.42,
+        "to": 0.42,
+        "z_m": -0.35,
+        "follow_sheer": true,
+        "forward_z_range_m": [
+          -14.28,
+          14.28
+        ]
+      }
+    ],
+    "machinery": {
+      "capstan_at": 0.165
+    },
+    "compartments": [
+      {
+        "id": "cable_store",
+        "role": "cable_store",
+        "from": 0.31,
+        "to": 0.41,
+        "deck_id": "berth_lower",
+        "forward_z_range_m": [
+          10.54,
+          13.94
+        ]
+      },
+      {
+        "id": "after_cabin",
+        "role": "cabin",
+        "from": -0.46,
+        "to": -0.24,
+        "deck_id": "berth_lower",
+        "forward_z_range_m": [
+          -15.64,
+          -8.16
+        ]
+      },
+      {
+        "id": "provision_hold",
+        "role": "hold",
+        "from": -0.25,
+        "to": 0.3,
+        "deck_id": "hold",
+        "forward_z_range_m": [
+          -8.5,
+          10.2
+        ]
+      }
+    ],
+    "research_path": "layout-research.json"
+  },
+  "detail_schema": 5
 }
