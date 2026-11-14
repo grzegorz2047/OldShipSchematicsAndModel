@@ -1,0 +1,277 @@
+{
+  "schema": 4,
+  "id": "schooner",
+  "family": "schooner",
+  "label": "Schooner",
+  "asset_type": "static-duel-ship",
+  "game": {
+    "title": "Pirates of the Caribbean",
+    "year": 2003,
+    "class": 4,
+    "guns": 20,
+    "source_model_ids": [
+      "Schooner1",
+      "Schooner2"
+    ]
+  },
+  "game_class": 4,
+  "gun_count": 20,
+  "length": 30.5,
+  "beam": 7.4,
+  "draft": 2.7,
+  "freeboard": 1.8,
+  "dimensions_provenance": "Authored guide-based reconstruction; no retail dimensions or scale have been established.",
+  "hull": {
+    "profile": [
+      [
+        -0.5,
+        0.36,
+        0.54,
+        0.42
+      ],
+      [
+        -0.4,
+        0.69,
+        0.25,
+        0.2
+      ],
+      [
+        -0.22,
+        0.95,
+        0.04,
+        0.06
+      ],
+      [
+        0.04,
+        1,
+        0,
+        0
+      ],
+      [
+        0.24,
+        0.81,
+        0.12,
+        0.08
+      ],
+      [
+        0.41,
+        0.38,
+        0.48,
+        0.26
+      ],
+      [
+        0.5,
+        0.01,
+        1.12,
+        0.48
+      ]
+    ],
+    "section_power": 0.85,
+    "stern_style": "transom",
+    "plank_rows": 18,
+    "bulwark_height": 1.25,
+    "quarterdeck": {
+      "from": -0.49,
+      "to": -0.3,
+      "height_m": 0.72
+    },
+    "forecastle": {
+      "from": 0.35,
+      "to": 0.48,
+      "height_m": 0.28
+    }
+  },
+  "guns": {
+    "rows": [
+      {
+        "pairs": 1,
+        "z_m": 3.19,
+        "from": -0.36,
+        "to": -0.36
+      },
+      {
+        "pairs": 8,
+        "z_m": 2.45,
+        "from": -0.279,
+        "to": 0.289
+      },
+      {
+        "pairs": 1,
+        "z_m": 2.75,
+        "from": 0.37,
+        "to": 0.37
+      }
+    ]
+  },
+  "rig": {
+    "masts": [
+      {
+        "name": "fore",
+        "at": 0.23,
+        "height_m": 24,
+        "rake": 0.055,
+        "sails": [
+          {
+            "kind": "gaff",
+            "z": 0.78,
+            "width_m": 9,
+            "height_m": 13.5,
+            "yaw_deg": 15
+          },
+          {
+            "kind": "square",
+            "z": 0.94,
+            "width_m": 6.2,
+            "height_m": 4.2
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "at": -0.17,
+        "height_m": 26.5,
+        "rake": 0.07,
+        "sails": [
+          {
+            "kind": "gaff",
+            "z": 0.88,
+            "width_m": 12.5,
+            "height_m": 17,
+            "yaw_deg": 15
+          }
+        ]
+      }
+    ],
+    "bowsprit": {
+      "length_m": 7,
+      "angle_deg": 24
+    },
+    "jibs": [
+      {
+        "head_fraction": 0.82,
+        "bowsprit_fraction": 0.9
+      }
+    ],
+    "pose_scope": "Single authored static presentation pose; yaw values do not certify a sail-trim range."
+  },
+  "palettes": [
+    {
+      "id": "ochre",
+      "paintHull": [
+        0.38132601143253014,
+        0.20155625379439707,
+        0.03688945040110004,
+        1.0
+      ],
+      "paintTrim": [
+        0.05126945837404324,
+        0.08021982031446832,
+        0.07036009569659588,
+        1.0
+      ]
+    },
+    {
+      "id": "navy",
+      "paintHull": [
+        0.021219010376003555,
+        0.05780543019106723,
+        0.11443537382697373,
+        1.0
+      ],
+      "paintTrim": [
+        0.5711248294648731,
+        0.35153259950043936,
+        0.09758734714186246,
+        1.0
+      ]
+    }
+  ],
+  "paint_materials": [
+    "paint_hull",
+    "paint_trim"
+  ],
+  "family_distinctions": [
+    "Fine low hull and shallow raised ends",
+    "Two raked masts with fore-and-aft gaff canvas, fore square topsail and jib",
+    "Ten gun pairs on a long waist with one raised aft pair and one raised fore pair"
+  ],
+  "source_evidence": [
+    {
+      "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c#L2031-L2051",
+      "supports": [
+        "family/model ID",
+        "game class",
+        "cannon quantity"
+      ],
+      "quality": "Stock-derived modern script tree, not asserted byte-identical retail dump"
+    },
+    {
+      "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+      "supports": [
+        "ordinary family roster",
+        "game class",
+        "cannon quantity"
+      ],
+      "quality": "Contemporary 2004 player table"
+    },
+    {
+      "url": "https://github.com/grzegorz2047/OldShipSchematicsAndModel/blob/2e6f7e922e95396722376d42f3e2e0a12256029e/docs/en/12-designing-other-ships.md",
+      "supports": [
+        "hull and spar parameter chain",
+        "three-mast and schooner reconstruction method"
+      ],
+      "quality": "Construction guide; no retail model geometry"
+    }
+  ],
+  "interpretation": "A two-masted gaff schooner interpretation follows the repository guide. Rig and hull proportions are authored; the original name and gun total are source-backed.",
+  "scope": "Original procedural static duel asset with two authored paint variants. No original proprietary mesh or texture imported. No navigation, controller, ship-motion or historical-certification claim.",
+  "game_source": {
+    "scripts_commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+    "scripts_sha256": {
+      "Ships_init.c": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde",
+      "ships.h": "a267dbc5d3fc901104b86b53ffdab06255545a8a7ee3725801c0d9dc9037ba74"
+    },
+    "evidence": [
+      {
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c#L2031-L2051",
+        "supports": [
+          "family/model ID",
+          "game class",
+          "cannon quantity"
+        ],
+        "quality": "Stock-derived modern script tree, not asserted byte-identical retail dump"
+      },
+      {
+        "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+        "supports": [
+          "ordinary family roster",
+          "game class",
+          "cannon quantity"
+        ],
+        "quality": "Contemporary 2004 player table"
+      },
+      {
+        "url": "https://github.com/grzegorz2047/OldShipSchematicsAndModel/blob/2e6f7e922e95396722376d42f3e2e0a12256029e/docs/en/12-designing-other-ships.md",
+        "supports": [
+          "hull and spar parameter chain",
+          "three-mast and schooner reconstruction method"
+        ],
+        "quality": "Construction guide; no retail model geometry"
+      }
+    ],
+    "retail_dimensions_established": false,
+    "interpretation": "A two-masted gaff schooner interpretation follows the repository guide. Rig and hull proportions are authored; the original name and gun total are source-backed.",
+    "source_geometry_imported": false
+  },
+  "construction_adaptations": [
+    {
+      "parameter": "guns.rows",
+      "reason": "Twenty guns retained as 1 aft, 8 waist and 1 fore pair. Raised-end gun heights follow their actual quarterdeck/forecastle floor plus 0.67m and local sheer; cannon barrels and wheels do not intersect the raised structural decks."
+    },
+    {
+      "parameter": "hull.bulwark_height",
+      "value": 1.25,
+      "reason": "A real continuous head timber above the 0.85m-high gun opening: cannon centre 0.65–0.67m above floor, opening top 1.075–1.095m, leaving at least 0.155m of closed timber below the rail. No disconnected local roof patches."
+    }
+  ]
+}
