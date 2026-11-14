@@ -1,0 +1,314 @@
+{
+  "schema": 4,
+  "id": "frigate",
+  "family": "frigate",
+  "asset_type": "static-duel-ship",
+  "length": 48,
+  "beam": 11.2,
+  "draft": 4.5,
+  "freeboard": 3.8,
+  "hull": {
+    "profile": [
+      [
+        -0.5,
+        0.38,
+        2.34,
+        0.48
+      ],
+      [
+        -0.45,
+        0.62,
+        1.706,
+        0.389
+      ],
+      [
+        -0.35,
+        0.85,
+        0.803,
+        0.235
+      ],
+      [
+        -0.2,
+        0.98,
+        0.15,
+        0.077
+      ],
+      [
+        0,
+        1,
+        0.0,
+        0.0
+      ],
+      [
+        0.2,
+        0.93,
+        0.15,
+        0.144
+      ],
+      [
+        0.35,
+        0.73,
+        0.803,
+        0.441
+      ],
+      [
+        0.45,
+        0.38,
+        1.706,
+        0.729
+      ],
+      [
+        0.5,
+        0.025,
+        2.34,
+        0.9
+      ]
+    ],
+    "section_power": 0.81,
+    "stern_style": "transom",
+    "plank_rows": 20,
+    "bulwark_height": 1.25,
+    "quarterdeck": {
+      "from": -0.48,
+      "to": -0.2,
+      "height_m": 0.95
+    },
+    "forecastle": {
+      "from": 0.23,
+      "to": 0.48,
+      "height_m": 0.7
+    }
+  },
+  "guns": {
+    "rows": [
+      {
+        "pairs": 17,
+        "z_m": 2.35,
+        "from": -0.4,
+        "to": 0.4,
+        "follow_sheer": true
+      },
+      {
+        "pairs": 3,
+        "z_m": 5.42,
+        "from": -0.41,
+        "to": -0.22,
+        "follow_sheer": true
+      },
+      {
+        "pairs": 2,
+        "z_m": 5.17,
+        "from": 0.25,
+        "to": 0.35,
+        "follow_sheer": true
+      }
+    ]
+  },
+  "rig": {
+    "masts": [
+      {
+        "name": "fore",
+        "at": 0.29,
+        "height_m": 42,
+        "rake": 0,
+        "sails": [
+          {
+            "kind": "square",
+            "z": 0.48,
+            "width_m": 23.0,
+            "height_m": 11.34
+          },
+          {
+            "kind": "square",
+            "z": 0.76,
+            "width_m": 16.429,
+            "height_m": 8.82
+          },
+          {
+            "kind": "square",
+            "z": 0.95,
+            "width_m": 9.857,
+            "height_m": 5.88
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "at": -0.035,
+        "height_m": 47,
+        "rake": 0,
+        "sails": [
+          {
+            "kind": "square",
+            "z": 0.48,
+            "width_m": 26.3,
+            "height_m": 12.69
+          },
+          {
+            "kind": "square",
+            "z": 0.76,
+            "width_m": 18.786,
+            "height_m": 9.87
+          },
+          {
+            "kind": "square",
+            "z": 0.95,
+            "width_m": 11.271,
+            "height_m": 6.58
+          }
+        ]
+      },
+      {
+        "name": "mizzen",
+        "at": -0.32,
+        "height_m": 36.5,
+        "rake": 0,
+        "sails": [
+          {
+            "kind": "square",
+            "z": 0.76,
+            "width_m": 11.143,
+            "height_m": 7.665
+          },
+          {
+            "kind": "square",
+            "z": 0.95,
+            "width_m": 6.686,
+            "height_m": 5.11
+          },
+          {
+            "kind": "gaff",
+            "z": 0.43,
+            "width_m": 10,
+            "height_m": 11.68
+          }
+        ]
+      }
+    ],
+    "bowsprit": {
+      "length_m": 17.8,
+      "angle_deg": 22
+    },
+    "jibs": [
+      {
+        "head_fraction": 0.75,
+        "bowsprit_fraction": 0.95
+      }
+    ]
+  },
+  "palettes": [
+    {
+      "id": "ochre",
+      "paintHull": [
+        0.38132601143253014,
+        0.11443537382697373,
+        0.017641954488384078,
+        1.0
+      ],
+      "paintTrim": [
+        0.02217388479338738,
+        0.014443843596092545,
+        0.009134058702220787,
+        1.0
+      ]
+    },
+    {
+      "id": "navy",
+      "paintHull": [
+        0.009134058702220787,
+        0.042311410620809675,
+        0.10461648409110419,
+        1.0
+      ],
+      "paintTrim": [
+        0.5972017883637634,
+        0.3613067797835095,
+        0.09305896284668745,
+        1.0
+      ]
+    }
+  ],
+  "paint_materials": [
+    "paint_hull",
+    "paint_trim"
+  ],
+  "game_source": {
+    "id": "SHIP_FRIGATE_ENGLAND",
+    "model": "Frigate1",
+    "class": 2,
+    "cannons": 44,
+    "source_commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+    "script_sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+  },
+  "provenance": {
+    "status": "Original procedural reconstruction; not a retail mesh reproduction.",
+    "dimensions": "Authored estimates in metres; not measured stock data.",
+    "rig": "Guide-based authored family interpretation. Stock sail-plan/locator geometry was unavailable.",
+    "gun_layout": "Authored symmetric broadside allocation of the verified stock total. z_m is the row centre at zero sheer; the builder adds the authored local deck sheer. This is not a claim about stock gun locators.",
+    "stock_script_caveat": "Pinned stock-derived modern compatibility scripts are not authenticated byte-identical retail source.",
+    "source_evidence": [
+      {
+        "id": "stock-stats",
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c#L4148",
+        "kind": "stock-derived compatibility script",
+        "claim": "Family, model identifier, class and total cannon count only.",
+        "source_commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+        "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+      },
+      {
+        "id": "stock-ids",
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/ships.h",
+        "kind": "stock-derived compatibility enum",
+        "claim": "Ordinary family identity; no dimension or sail-plan data.",
+        "source_commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+        "sha256": "a267dbc5d3fc901104b86b53ffdab06255545a8a7ee3725801c0d9dc9037ba74"
+      },
+      {
+        "id": "stock-2003-visual",
+        "url": "https://www.mobygames.com/game/9613/pirates-of-the-caribbean/screenshots/windows/54679/",
+        "image_url": "https://cdn.mobygames.com/screenshots/10282583-pirates-of-the-caribbean-windows-a-pirate-ship-and-a-sunset-does.jpg",
+        "kind": "Published Windows 2003 screenshot; added 29 November 2003",
+        "claim": "General game visual vocabulary only: pale panelled square canvas, dark wales and ochre hull bands. The pictured family is not authenticated."
+      },
+      {
+        "id": "guide-proportions",
+        "path": "docs/en/12-designing-other-ships.md",
+        "kind": "Repository guide",
+        "claim": "Authored hull/port/mast proportion method and rig distinctions; not stock game dimensions."
+      },
+      {
+        "id": "guide-spars",
+        "path": "docs/en/05-masts-and-spars.md",
+        "kind": "Repository guide",
+        "claim": "Square/lateen/gaff typology and spar proportion starting points; later brig is not the reference Snow."
+      }
+    ]
+  },
+  "type_profile": {
+    "distinction": "Three-masted 44-gun frigate with one complete enclosed battery and partial guns on the raised quarterdeck/forecastle; long fine hull, moderate castles.",
+    "rationale": "The guide links port spacing and working length to gun count. The main enclosed row plus separate upper castle groups makes this 44-gun frigate structurally distinct from the corvette and two-battery battleship.",
+    "mast_count": 3,
+    "gun_total": 44,
+    "battery_groups": 3,
+    "length_beam_ratio": 4.286,
+    "snow_mast": false,
+    "excluded_specials": [
+      "Manowar",
+      "Black Pearl",
+      "Fearless",
+      "Mefisto"
+    ],
+    "forecastle_port_note": "The upper fore gun-port after edge lies 0.46 m forward of the forecastle break, keeping the entire rectangular opening within the raised forebody."
+  },
+  "scope": {
+    "delivered": "Static duel asset with two paint variants and LOD/collision/review assets.",
+    "engine_integration": "Not integrated with an engine: no buoyancy, damage, artillery, sailing or crew controllers.",
+    "walking": "Not applicable: no authored walkable interior or player traversal claim."
+  },
+  "source_paths": [
+    "potc/frigate/type-profile.json",
+    "potc/frigate/type-plan.svg",
+    "docs/en/05-masts-and-spars.md",
+    "docs/en/12-designing-other-ships.md"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "id": "frigate",
+  "distinction": "Three-masted 44-gun frigate with one complete enclosed battery and partial guns on the raised quarterdeck/forecastle; long fine hull, moderate castles.",
+  "rationale": "The guide links port spacing and working length to gun count. The main enclosed row plus separate upper castle groups makes this 44-gun frigate structurally distinct from the corvette and two-battery battleship.",
+  "mast_count": 3,
+  "gun_total": 44,
+  "battery_groups": 3,
+  "length_beam_ratio": 4.286,
+  "snow_mast": false,
+  "excluded_specials": [
+    "Manowar",
+    "Black Pearl",
+    "Fearless",
+    "Mefisto"
+  ],
+  "dimensions_m": {
+    "length": 48,
+    "beam": 11.2,
+    "draft": 4.5,
+    "freeboard": 3.8
+  },
+  "confidence": "Authored reconstruction; stock stats separately evidenced.",
+  "source_evidence": [
+    {
+      "id": "stock-stats",
+      "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c#L4148",
+      "kind": "stock-derived compatibility script",
+      "claim": "Family, model identifier, class and total cannon count only.",
+      "source_commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+      "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+    },
+    {
+      "id": "stock-ids",
+      "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/ships.h",
+      "kind": "stock-derived compatibility enum",
+      "claim": "Ordinary family identity; no dimension or sail-plan data.",
+      "source_commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+      "sha256": "a267dbc5d3fc901104b86b53ffdab06255545a8a7ee3725801c0d9dc9037ba74"
+    },
+    {
+      "id": "stock-2003-visual",
+      "url": "https://www.mobygames.com/game/9613/pirates-of-the-caribbean/screenshots/windows/54679/",
+      "image_url": "https://cdn.mobygames.com/screenshots/10282583-pirates-of-the-caribbean-windows-a-pirate-ship-and-a-sunset-does.jpg",
+      "kind": "Published Windows 2003 screenshot; added 29 November 2003",
+      "claim": "General game visual vocabulary only: pale panelled square canvas, dark wales and ochre hull bands. The pictured family is not authenticated."
+    },
+    {
+      "id": "guide-proportions",
+      "path": "docs/en/12-designing-other-ships.md",
+      "kind": "Repository guide",
+      "claim": "Authored hull/port/mast proportion method and rig distinctions; not stock game dimensions."
+    },
+    {
+      "id": "guide-spars",
+      "path": "docs/en/05-masts-and-spars.md",
+      "kind": "Repository guide",
+      "claim": "Square/lateen/gaff typology and spar proportion starting points; later brig is not the reference Snow."
+    }
+  ],
+  "forecastle_port_note": "The upper fore gun-port after edge lies 0.46 m forward of the forecastle break, keeping the entire rectangular opening within the raised forebody.",
+  "forecastle_port_margin_m": 0.46
+}

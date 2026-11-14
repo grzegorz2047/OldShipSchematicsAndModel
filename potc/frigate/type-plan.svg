@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="850" viewBox="0 0 1100 850"><style>text{font-family:DejaVu Sans,sans-serif;fill:#192832} .thin{stroke:#72858e;stroke-width:1} .wood{stroke:#775534;stroke-width:3;fill:none} .cloth{fill:#eee8d5;stroke:#776f58;stroke-width:1} .gun{fill:#283a46}</style><rect width="1100" height="850" fill="#f7f9fa"/>
+<text x="30.0" y="35.0" font-size="22">POTC2003 Frigate — authored type and sail plan</text>
+<text x="30.0" y="60.0" font-size="16">48 × 11.2 m; class 2; 44 guns; 3 main masts</text>
+<text x="30.0" y="83.0" font-size="12">Metres are authored estimates. Sails and station shapes are guide-based interpretations, not stock mesh measurements.</text>
+<polyline points="80.00,539.69 97.00,540.33 130.99,541.42 181.99,542.54 249.98,543.09 317.98,542.07 368.97,539.96 402.97,537.92 419.97,536.71 419.97,585.30 402.97,589.79 368.97,596.18 317.98,600.81 249.98,601.87 181.99,600.81 130.99,596.18 97.00,589.79 80.00,585.30 80.00,539.69" fill="#a46a37" stroke="#443c30" stroke-width="2"/>
+<polyline points="63.00,570.00 508.36,570.00" fill="none" stroke="#6d9bae" stroke-dasharray="7 5"/>
+<text x="83.0" y="588.0" font-size="11">waterline / origin z=0</text>
+<polyline points="86.80,543.09 86.80,536.36 181.99,536.36 181.99,543.09" fill="#af7c43" stroke="#443c30"/>
+<polyline points="328.18,543.09 328.18,538.13 413.17,538.13 413.17,543.09" fill="#af7c43" stroke="#443c30"/>
+<rect x="110.00" y="550.36" width="8" height="6" class="gun"/>
+<rect x="126.99" y="550.36" width="8" height="6" class="gun"/>
+<rect x="143.99" y="550.36" width="8" height="6" class="gun"/>
+<rect x="160.99" y="550.36" width="8" height="6" class="gun"/>
+<rect x="177.99" y="550.36" width="8" height="6" class="gun"/>
+<rect x="194.99" y="550.36" width="8" height="6" class="gun"/>
+<rect x="211.99" y="550.36" width="8" height="6" class="gun"/>
+<rect x="228.98" y="550.36" width="8" height="6" class="gun"/>
+<rect x="245.98" y="550.36" width="8" height="6" class="gun"/>
+<rect x="262.98" y="550.36" width="8" height="6" class="gun"/>
+<rect x="279.98" y="550.36" width="8" height="6" class="gun"/>
+<rect x="296.98" y="550.36" width="8" height="6" class="gun"/>
+<rect x="313.98" y="550.36" width="8" height="6" class="gun"/>
+<rect x="330.97" y="550.36" width="8" height="6" class="gun"/>
+<rect x="347.97" y="550.36" width="8" height="6" class="gun"/>
+<rect x="364.97" y="550.36" width="8" height="6" class="gun"/>
+<rect x="381.97" y="550.36" width="8" height="6" class="gun"/>
+<rect x="106.60" y="528.61" width="8" height="6" class="gun"/>
+<rect x="138.89" y="528.61" width="8" height="6" class="gun"/>
+<rect x="171.19" y="528.61" width="8" height="6" class="gun"/>
+<rect x="330.97" y="530.38" width="8" height="6" class="gun"/>
+<rect x="364.97" y="530.38" width="8" height="6" class="gun"/>
+<polyline points="348.57,538.13 348.57,240.66" class="wood"/>
+<text x="328.6" y="231.5" font-size="12">fore</text>
+<polyline points="317.62,395.34 379.52,395.34 386.04,475.66 311.11,475.66 317.62,395.34" class="cloth"/>
+<polyline points="317.62,395.34 379.52,395.34" class="wood"/>
+<polyline points="326.46,312.05 370.68,312.05 375.34,374.52 321.81,374.52 326.46,312.05" class="cloth"/>
+<polyline points="326.46,312.05 370.68,312.05" class="wood"/>
+<polyline points="335.31,255.53 361.84,255.53 364.63,297.18 332.52,297.18 335.31,255.53" class="cloth"/>
+<polyline points="335.31,255.53 361.84,255.53" class="wood"/>
+<polyline points="238.08,543.09 238.08,210.20" class="wood"/>
+<text x="218.1" y="201.0" font-size="12">main</text>
+<polyline points="202.69,383.30 273.48,383.30 280.93,473.18 195.24,473.18 202.69,383.30" class="cloth"/>
+<polyline points="202.69,383.30 273.48,383.30" class="wood"/>
+<polyline points="212.80,290.09 263.36,290.09 268.69,360.00 207.48,360.00 212.80,290.09" class="cloth"/>
+<polyline points="212.80,290.09 263.36,290.09" class="wood"/>
+<polyline points="222.92,226.85 253.25,226.85 256.44,273.45 219.72,273.45 222.92,226.85" class="cloth"/>
+<polyline points="222.92,226.85 253.25,226.85" class="wood"/>
+<polyline points="141.19,536.36 141.19,277.84" class="wood"/>
+<text x="121.2" y="268.6" font-size="12">mizzen</text>
+<polyline points="126.20,339.89 156.19,339.89 159.35,394.17 123.04,394.17 126.20,339.89" class="cloth"/>
+<polyline points="126.20,339.89 156.19,339.89" class="wood"/>
+<polyline points="132.20,290.77 150.19,290.77 152.09,326.96 130.30,326.96 132.20,290.77" class="cloth"/>
+<polyline points="132.20,290.77 150.19,290.77" class="wood"/>
+<polyline points="141.19,507.92 141.19,425.20 90.20,415.27 70.37,507.92 141.19,507.92" class="cloth"/>
+<polyline points="141.19,507.92 141.19,425.20" class="wood"/>
+<polyline points="385.97,539.54 502.86,492.32" class="wood"/>
+<polyline points="348.57,315.03 497.02,494.68 360.47,526.23 348.57,315.03" class="cloth"/>
+<text x="30.0" y="650.0" font-size="15">Half-breadth stations (authored hull profile)</text>
+<polyline points="80.00,714.93 97.00,705.41 130.99,696.29 181.99,691.13 249.98,690.34 317.98,693.11 368.97,701.05 402.97,714.93 419.97,729.01" fill="none" stroke="#775534" stroke-width="2"/>
+<polyline points="80.00,730.00 419.97,730.00" fill="none" stroke="#72858e"/>
+<polyline points="80.00,730.00 80.00,714.93" fill="none" stroke="#b5c3c9"/>
+<polyline points="97.00,730.00 97.00,705.41" fill="none" stroke="#b5c3c9"/>
+<polyline points="130.99,730.00 130.99,696.29" fill="none" stroke="#b5c3c9"/>
+<polyline points="181.99,730.00 181.99,691.13" fill="none" stroke="#b5c3c9"/>
+<polyline points="249.98,730.00 249.98,690.34" fill="none" stroke="#b5c3c9"/>
+<polyline points="317.98,730.00 317.98,693.11" fill="none" stroke="#b5c3c9"/>
+<polyline points="368.97,730.00 368.97,701.05" fill="none" stroke="#b5c3c9"/>
+<polyline points="402.97,730.00 402.97,714.93" fill="none" stroke="#b5c3c9"/>
+<polyline points="419.97,730.00 419.97,729.01" fill="none" stroke="#b5c3c9"/>
+<text x="30.0" y="785.0" font-size="12">Schematic elevation: square canvas is deliberately narrowed in side projection. Exact 3D geometry comes from spec.json.</text>
+<text x="30.0" y="809.0" font-size="12">Sources: pinned Ships_init.c/ships.h (class and total guns); published Windows2003 screenshot (general visual vocabulary);</text>
+<text x="30.0" y="830.0" font-size="12">repository guide chapters05 and12 (type and proportion method). No retail hull/sail offsets were recovered.</text>
+</svg>
