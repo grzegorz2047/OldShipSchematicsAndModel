@@ -1,0 +1,19 @@
+name: Construction and rescue boat prop integrity
+
+on:
+  pull_request:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-boat-props:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify prop states, reports and source fingerprints
+        run: python sailertales/common/v3_prop_integrity.py --all --source-root .
