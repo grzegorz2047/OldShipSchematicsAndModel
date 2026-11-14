@@ -1,0 +1,28 @@
+{
+  "id": "boat-frame",
+  "kind": "boat-frame",
+  "asset_type": "construction-prop",
+  "label": "Mewka — łódź w budowie",
+  "length": 6.5,
+  "beam": 1.72,
+  "depth": 0.92,
+  "strakes": 8,
+  "frame_count": 9,
+  "work_side": 1,
+  "source_commit": "ea77e560ba4668c9dda55433813addbdb2f50176",
+  "source_files": {
+    "src/models/boat.js": "77f5bebff0f16adf7c69e7bba34acda75f2426b660a17c6cc26541b3c2af578c",
+    "src/models/hull.js": "a9da695038e04a452b15d73065c810ef194018bbdc376e40fd4f09d785ead5e5",
+    "src/models/boat_work.js": "daf4823534e0c2af5691e9d58ddad0ed15e1bf926d72603d539d26b56d72de22"
+  },
+  "no_player_interior": true,
+  "limitations": [
+    "Oddzielny model i kontrakt punktów misji; integracja z Three.js wymaga adaptera.",
+    "Etap 3 pozostawia naprawczą lukę w pasie 4; dopasowana deska i kołki są osobnymi komponentami."
+  ],
+  "source_paths": [
+    "src/models/boat.js",
+    "src/models/hull.js",
+    "src/models/boat_work.js"
+  ]
+}

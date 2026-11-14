@@ -1,0 +1,1878 @@
+{
+  "schema": 3,
+  "construction": "Source-parametric clinker-built construction/repair boat on two real timber trestles.",
+  "basis": {
+    "game_commit": "ea77e560ba4668c9dda55433813addbdb2f50176",
+    "game_files": {
+      "src/models/boat.js": "77f5bebff0f16adf7c69e7bba34acda75f2426b660a17c6cc26541b3c2af578c",
+      "src/models/hull.js": "a9da695038e04a452b15d73065c810ef194018bbdc376e40fd4f09d785ead5e5",
+      "src/models/boat_work.js": "daf4823534e0c2af5691e9d58ddad0ed15e1bf926d72603d539d26b56d72de22"
+    },
+    "guide": [
+      "docs/en/03-hull-construction.md",
+      "docs/en/09-deck-machinery.md",
+      "docs/en/13-3d-quality-checklist.md"
+    ],
+    "source_dimensions": {
+      "length_m": 6.5,
+      "half_beam_m": 0.86,
+      "depth_m": 0.92,
+      "strakes_per_side": 8,
+      "keel_ground_lift_m": 0.42
+    }
+  },
+  "frame_stations_u": [
+    -0.8,
+    -0.6,
+    -0.4,
+    -0.2,
+    0,
+    0.2,
+    0.4,
+    0.6,
+    0.8
+  ],
+  "scantlings_m": {
+    "plank_thickness": 0.022,
+    "frame_section": [
+      0.055,
+      0.07
+    ],
+    "keel_section": [
+      0.09,
+      0.15
+    ],
+    "stem_section": [
+      0.09,
+      0.13
+    ],
+    "gunwale_section": [
+      0.06,
+      0.07
+    ]
+  },
+  "construction_stages": [
+    {
+      "id": "stage0",
+      "stage": 0,
+      "model": "model/stage_0.glb",
+      "collision": "model/collision_0.glb",
+      "mesh_nodes": 20,
+      "triangles": 3056,
+      "adds": "spine and alternating frames"
+    },
+    {
+      "id": "stage1",
+      "stage": 1,
+      "model": "model/stage_1.glb",
+      "collision": "model/collision_1.glb",
+      "mesh_nodes": 30,
+      "triangles": 8056,
+      "adds": "remaining frames and strakes 0–2"
+    },
+    {
+      "id": "stage2",
+      "stage": 2,
+      "model": "model/stage_2.glb",
+      "collision": "model/collision_2.glb",
+      "mesh_nodes": 37,
+      "triangles": 11028,
+      "adds": "strakes 3–5 with repair gap"
+    },
+    {
+      "id": "stage3",
+      "stage": 3,
+      "model": "model/ship.glb",
+      "collision": "model/collision.glb",
+      "mesh_nodes": 52,
+      "triangles": 14328,
+      "adds": "strakes 6–7, trim and three seats"
+    }
+  ],
+  "intended_joints": [
+    {
+      "a": "trestle_0_foot",
+      "b": "trestle_0_keel_block",
+      "reason": "The trestle brace and keel block are housed into the cross-foot and retained by its bearing shoe."
+    },
+    {
+      "a": "trestle_0_foot",
+      "b": "trestle_0_brace_port",
+      "reason": "The trestle brace and keel block are housed into the cross-foot and retained by its bearing shoe."
+    },
+    {
+      "a": "trestle_0_foot",
+      "b": "trestle_0_shoe_port",
+      "reason": "The trestle brace and keel block are housed into the cross-foot and retained by its bearing shoe."
+    },
+    {
+      "a": "trestle_0_foot",
+      "b": "trestle_0_brace_starboard",
+      "reason": "The trestle brace and keel block are housed into the cross-foot and retained by its bearing shoe."
+    },
+    {
+      "a": "trestle_0_foot",
+      "b": "trestle_0_shoe_starboard",
+      "reason": "The trestle brace and keel block are housed into the cross-foot and retained by its bearing shoe."
+    },
+    {
+      "a": "trestle_0_keel_block",
+      "b": "spine_keel",
+      "reason": "This specific trestle member is the physical bearing under the keel or lower bilge, rather than an unrelated object crossing the hull."
+    },
+    {
+      "a": "trestle_0_brace_port",
+      "b": "trestle_0_shoe_port",
+      "reason": "The trestle brace and keel block are housed into the cross-foot and retained by its bearing shoe."
+    },
+    {
+      "a": "trestle_0_brace_port",
+      "b": "hull_strake_03_port_0",
+      "reason": "This specific trestle member is the physical bearing under the keel or lower bilge, rather than an unrelated object crossing the hull."
+    },
+    {
+      "a": "trestle_0_brace_port",
+      "b": "hull_strake_04_port_0",
+      "reason": "This specific trestle member is the physical bearing under the keel or lower bilge, rather than an unrelated object crossing the hull."
+    },
+    {
+      "a": "trestle_0_brace_starboard",
+      "b": "trestle_0_shoe_starboard",
+      "reason": "The trestle brace and keel block are housed into the cross-foot and retained by its bearing shoe."
+    },
+    {
+      "a": "trestle_0_brace_starboard",
+      "b": "hull_strake_03_starboard_0",
+      "reason": "This specific trestle member is the physical bearing under the keel or lower bilge, rather than an unrelated object crossing the hull."
+    },
+    {
+      "a": "trestle_0_brace_starboard",
+      "b": "hull_strake_04_starboard_0",
+      "reason": "This specific trestle member is the physical bearing under the keel or lower bilge, rather than an unrelated object crossing the hull."
+    },
+    {
+      "a": "trestle_1_foot",
+      "b": "trestle_1_keel_block",
+      "reason": "The trestle brace and keel block are housed into the cross-foot and retained by its bearing shoe."
+    },
+    {
+      "a": "trestle_1_foot",
+      "b": "trestle_1_brace_port",
+      "reason": "The trestle brace and keel block are housed into the cross-foot and retained by its bearing shoe."
+    },
+    {
+      "a": "trestle_1_foot",
+      "b": "trestle_1_shoe_port",
+      "reason": "The trestle brace and keel block are housed into the cross-foot and retained by its bearing shoe."
+    },
+    {
+      "a": "trestle_1_foot",
+      "b": "trestle_1_brace_starboard",
+      "reason": "The trestle brace and keel block are housed into the cross-foot and retained by its bearing shoe."
+    },
+    {
+      "a": "trestle_1_foot",
+      "b": "trestle_1_shoe_starboard",
+      "reason": "The trestle brace and keel block are housed into the cross-foot and retained by its bearing shoe."
+    },
+    {
+      "a": "trestle_1_keel_block",
+      "b": "spine_keel",
+      "reason": "This specific trestle member is the physical bearing under the keel or lower bilge, rather than an unrelated object crossing the hull."
+    },
+    {
+      "a": "trestle_1_brace_port",
+      "b": "trestle_1_shoe_port",
+      "reason": "The trestle brace and keel block are housed into the cross-foot and retained by its bearing shoe."
+    },
+    {
+      "a": "trestle_1_brace_port",
+      "b": "hull_strake_03_port_0",
+      "reason": "This specific trestle member is the physical bearing under the keel or lower bilge, rather than an unrelated object crossing the hull."
+    },
+    {
+      "a": "trestle_1_brace_port",
+      "b": "hull_strake_04_port_0",
+      "reason": "This specific trestle member is the physical bearing under the keel or lower bilge, rather than an unrelated object crossing the hull."
+    },
+    {
+      "a": "trestle_1_brace_starboard",
+      "b": "trestle_1_shoe_starboard",
+      "reason": "The trestle brace and keel block are housed into the cross-foot and retained by its bearing shoe."
+    },
+    {
+      "a": "trestle_1_brace_starboard",
+      "b": "hull_strake_03_starboard_0",
+      "reason": "This specific trestle member is the physical bearing under the keel or lower bilge, rather than an unrelated object crossing the hull."
+    },
+    {
+      "a": "trestle_1_brace_starboard",
+      "b": "hull_strake_04_starboard_1",
+      "reason": "This specific trestle member is the physical bearing under the keel or lower bilge, rather than an unrelated object crossing the hull."
+    },
+    {
+      "a": "spine_keel",
+      "b": "spine_stern_stem",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_keel",
+      "b": "spine_bow_stem",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_keel",
+      "b": "frame_00",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_keel",
+      "b": "frame_01",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_keel",
+      "b": "frame_02",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_keel",
+      "b": "frame_03",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_keel",
+      "b": "frame_04",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_keel",
+      "b": "frame_05",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_keel",
+      "b": "frame_06",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_keel",
+      "b": "frame_07",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_keel",
+      "b": "frame_08",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_keel",
+      "b": "hull_strake_00_port_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_keel",
+      "b": "hull_strake_00_starboard_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_keel",
+      "b": "hull_strake_01_port_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_keel",
+      "b": "hull_strake_01_starboard_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_keel",
+      "b": "hull_strake_02_port_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_keel",
+      "b": "hull_strake_02_starboard_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_stern_stem",
+      "b": "hull_strake_00_port_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_stern_stem",
+      "b": "hull_strake_00_starboard_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_stern_stem",
+      "b": "hull_strake_01_port_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_stern_stem",
+      "b": "hull_strake_01_starboard_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_stern_stem",
+      "b": "hull_strake_02_port_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_stern_stem",
+      "b": "hull_strake_02_starboard_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_stern_stem",
+      "b": "hull_strake_03_port_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_stern_stem",
+      "b": "hull_strake_03_starboard_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_stern_stem",
+      "b": "hull_strake_04_port_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_stern_stem",
+      "b": "hull_strake_04_starboard_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_stern_stem",
+      "b": "hull_strake_05_port_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_stern_stem",
+      "b": "hull_strake_05_starboard_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_stern_stem",
+      "b": "hull_strake_06_port_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_stern_stem",
+      "b": "hull_strake_06_starboard_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_stern_stem",
+      "b": "hull_strake_07_port_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_stern_stem",
+      "b": "hull_strake_07_starboard_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_bow_stem",
+      "b": "hull_strake_00_port_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_bow_stem",
+      "b": "hull_strake_00_starboard_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_bow_stem",
+      "b": "hull_strake_01_port_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_bow_stem",
+      "b": "hull_strake_01_starboard_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_bow_stem",
+      "b": "hull_strake_02_port_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_bow_stem",
+      "b": "hull_strake_02_starboard_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_bow_stem",
+      "b": "hull_strake_03_port_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_bow_stem",
+      "b": "hull_strake_03_starboard_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_bow_stem",
+      "b": "hull_strake_04_port_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_bow_stem",
+      "b": "hull_strake_04_starboard_1",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_bow_stem",
+      "b": "hull_strake_05_port_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_bow_stem",
+      "b": "hull_strake_05_starboard_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_bow_stem",
+      "b": "hull_strake_06_port_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_bow_stem",
+      "b": "hull_strake_06_starboard_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_bow_stem",
+      "b": "hull_strake_07_port_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "spine_bow_stem",
+      "b": "hull_strake_07_starboard_0",
+      "reason": "Keel/stem scarf, frame heel seating or plank-end rabbet in the actual boat backbone."
+    },
+    {
+      "a": "frame_00",
+      "b": "hull_strake_00_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_00",
+      "b": "hull_strake_00_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_00",
+      "b": "hull_strake_01_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_00",
+      "b": "hull_strake_01_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_00",
+      "b": "hull_strake_02_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_00",
+      "b": "hull_strake_02_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_00",
+      "b": "hull_strake_03_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_00",
+      "b": "hull_strake_03_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_00",
+      "b": "hull_strake_04_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_00",
+      "b": "hull_strake_04_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_00",
+      "b": "hull_strake_05_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_00",
+      "b": "hull_strake_05_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_00",
+      "b": "hull_strake_06_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_00",
+      "b": "hull_strake_06_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_00",
+      "b": "hull_strake_07_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_00",
+      "b": "hull_strake_07_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_00",
+      "b": "trim_gunwale_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "frame_00",
+      "b": "trim_gunwale_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "frame_01",
+      "b": "hull_strake_00_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_01",
+      "b": "hull_strake_00_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_01",
+      "b": "hull_strake_01_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_01",
+      "b": "hull_strake_01_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_01",
+      "b": "hull_strake_02_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_01",
+      "b": "hull_strake_02_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_01",
+      "b": "hull_strake_03_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_01",
+      "b": "hull_strake_03_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_01",
+      "b": "hull_strake_04_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_01",
+      "b": "hull_strake_04_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_01",
+      "b": "hull_strake_05_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_01",
+      "b": "hull_strake_05_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_01",
+      "b": "hull_strake_06_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_01",
+      "b": "hull_strake_06_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_01",
+      "b": "hull_strake_07_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_01",
+      "b": "hull_strake_07_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_01",
+      "b": "trim_gunwale_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "frame_01",
+      "b": "trim_gunwale_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "frame_02",
+      "b": "hull_strake_00_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_02",
+      "b": "hull_strake_00_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_02",
+      "b": "hull_strake_01_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_02",
+      "b": "hull_strake_01_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_02",
+      "b": "hull_strake_02_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_02",
+      "b": "hull_strake_02_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_02",
+      "b": "hull_strake_03_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_02",
+      "b": "hull_strake_03_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_02",
+      "b": "hull_strake_04_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_02",
+      "b": "hull_strake_05_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_02",
+      "b": "hull_strake_05_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_02",
+      "b": "hull_strake_06_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_02",
+      "b": "hull_strake_06_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_02",
+      "b": "hull_strake_07_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_02",
+      "b": "hull_strake_07_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_02",
+      "b": "trim_gunwale_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "frame_02",
+      "b": "trim_gunwale_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "frame_03",
+      "b": "hull_strake_00_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_03",
+      "b": "hull_strake_00_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_03",
+      "b": "hull_strake_01_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_03",
+      "b": "hull_strake_01_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_03",
+      "b": "hull_strake_02_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_03",
+      "b": "hull_strake_02_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_03",
+      "b": "hull_strake_03_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_03",
+      "b": "hull_strake_03_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_03",
+      "b": "hull_strake_04_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_03",
+      "b": "hull_strake_05_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_03",
+      "b": "hull_strake_05_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_03",
+      "b": "hull_strake_06_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_03",
+      "b": "hull_strake_06_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_03",
+      "b": "hull_strake_07_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_03",
+      "b": "hull_strake_07_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_03",
+      "b": "trim_gunwale_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "frame_03",
+      "b": "trim_gunwale_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "frame_04",
+      "b": "hull_strake_00_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_04",
+      "b": "hull_strake_00_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_04",
+      "b": "hull_strake_01_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_04",
+      "b": "hull_strake_01_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_04",
+      "b": "hull_strake_02_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_04",
+      "b": "hull_strake_02_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_04",
+      "b": "hull_strake_03_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_04",
+      "b": "hull_strake_03_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_04",
+      "b": "hull_strake_04_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_04",
+      "b": "hull_strake_05_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_04",
+      "b": "hull_strake_05_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_04",
+      "b": "hull_strake_06_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_04",
+      "b": "hull_strake_06_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_04",
+      "b": "hull_strake_07_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_04",
+      "b": "hull_strake_07_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_04",
+      "b": "trim_gunwale_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "frame_04",
+      "b": "trim_gunwale_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "frame_04",
+      "b": "trim_seat_1",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "frame_04",
+      "b": "trim_seat_1_cleat_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "frame_04",
+      "b": "trim_seat_1_cleat_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "frame_05",
+      "b": "hull_strake_00_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_05",
+      "b": "hull_strake_00_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_05",
+      "b": "hull_strake_01_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_05",
+      "b": "hull_strake_01_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_05",
+      "b": "hull_strake_02_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_05",
+      "b": "hull_strake_02_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_05",
+      "b": "hull_strake_03_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_05",
+      "b": "hull_strake_03_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_05",
+      "b": "hull_strake_04_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_05",
+      "b": "hull_strake_05_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_05",
+      "b": "hull_strake_05_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_05",
+      "b": "hull_strake_06_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_05",
+      "b": "hull_strake_06_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_05",
+      "b": "hull_strake_07_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_05",
+      "b": "hull_strake_07_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_05",
+      "b": "trim_gunwale_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "frame_05",
+      "b": "trim_gunwale_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "frame_06",
+      "b": "hull_strake_00_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_06",
+      "b": "hull_strake_00_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_06",
+      "b": "hull_strake_01_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_06",
+      "b": "hull_strake_01_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_06",
+      "b": "hull_strake_02_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_06",
+      "b": "hull_strake_02_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_06",
+      "b": "hull_strake_03_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_06",
+      "b": "hull_strake_03_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_06",
+      "b": "hull_strake_04_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_06",
+      "b": "hull_strake_05_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_06",
+      "b": "hull_strake_05_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_06",
+      "b": "hull_strake_06_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_06",
+      "b": "hull_strake_06_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_06",
+      "b": "hull_strake_07_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_06",
+      "b": "hull_strake_07_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_06",
+      "b": "trim_gunwale_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "frame_06",
+      "b": "trim_gunwale_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "frame_07",
+      "b": "hull_strake_00_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_07",
+      "b": "hull_strake_00_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_07",
+      "b": "hull_strake_01_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_07",
+      "b": "hull_strake_01_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_07",
+      "b": "hull_strake_02_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_07",
+      "b": "hull_strake_02_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_07",
+      "b": "hull_strake_03_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_07",
+      "b": "hull_strake_03_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_07",
+      "b": "hull_strake_04_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_07",
+      "b": "hull_strake_04_starboard_1",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_07",
+      "b": "hull_strake_05_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_07",
+      "b": "hull_strake_05_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_07",
+      "b": "hull_strake_06_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_07",
+      "b": "hull_strake_06_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_07",
+      "b": "hull_strake_07_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_07",
+      "b": "hull_strake_07_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_07",
+      "b": "trim_gunwale_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "frame_07",
+      "b": "trim_gunwale_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "frame_08",
+      "b": "hull_strake_00_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_08",
+      "b": "hull_strake_00_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_08",
+      "b": "hull_strake_01_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_08",
+      "b": "hull_strake_01_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_08",
+      "b": "hull_strake_02_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_08",
+      "b": "hull_strake_02_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_08",
+      "b": "hull_strake_03_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_08",
+      "b": "hull_strake_03_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_08",
+      "b": "hull_strake_04_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_08",
+      "b": "hull_strake_04_starboard_1",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_08",
+      "b": "hull_strake_05_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_08",
+      "b": "hull_strake_05_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_08",
+      "b": "hull_strake_06_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_08",
+      "b": "hull_strake_06_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_08",
+      "b": "hull_strake_07_port_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_08",
+      "b": "hull_strake_07_starboard_0",
+      "reason": "The steam-bent frame bears against the inner face of this solid clinker plank; the small frame heel is seated on the keel."
+    },
+    {
+      "a": "frame_08",
+      "b": "trim_gunwale_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "frame_08",
+      "b": "trim_gunwale_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_00_port_0",
+      "b": "hull_strake_01_port_0",
+      "reason": "Adjacent clinker strakes have the source 0.012 transverse lap and 14 mm lower-edge flare; this local structural lap is intentional."
+    },
+    {
+      "a": "hull_strake_00_starboard_0",
+      "b": "hull_strake_01_starboard_0",
+      "reason": "Adjacent clinker strakes have the source 0.012 transverse lap and 14 mm lower-edge flare; this local structural lap is intentional."
+    },
+    {
+      "a": "hull_strake_01_port_0",
+      "b": "hull_strake_02_port_0",
+      "reason": "Adjacent clinker strakes have the source 0.012 transverse lap and 14 mm lower-edge flare; this local structural lap is intentional."
+    },
+    {
+      "a": "hull_strake_01_starboard_0",
+      "b": "hull_strake_02_starboard_0",
+      "reason": "Adjacent clinker strakes have the source 0.012 transverse lap and 14 mm lower-edge flare; this local structural lap is intentional."
+    },
+    {
+      "a": "hull_strake_02_port_0",
+      "b": "hull_strake_03_port_0",
+      "reason": "Adjacent clinker strakes have the source 0.012 transverse lap and 14 mm lower-edge flare; this local structural lap is intentional."
+    },
+    {
+      "a": "hull_strake_02_starboard_0",
+      "b": "hull_strake_03_starboard_0",
+      "reason": "Adjacent clinker strakes have the source 0.012 transverse lap and 14 mm lower-edge flare; this local structural lap is intentional."
+    },
+    {
+      "a": "hull_strake_03_port_0",
+      "b": "hull_strake_04_port_0",
+      "reason": "Adjacent clinker strakes have the source 0.012 transverse lap and 14 mm lower-edge flare; this local structural lap is intentional."
+    },
+    {
+      "a": "hull_strake_03_starboard_0",
+      "b": "hull_strake_04_starboard_0",
+      "reason": "Adjacent clinker strakes have the source 0.012 transverse lap and 14 mm lower-edge flare; this local structural lap is intentional."
+    },
+    {
+      "a": "hull_strake_03_starboard_0",
+      "b": "hull_strake_04_starboard_1",
+      "reason": "Adjacent clinker strakes have the source 0.012 transverse lap and 14 mm lower-edge flare; this local structural lap is intentional."
+    },
+    {
+      "a": "hull_strake_04_port_0",
+      "b": "hull_strake_05_port_0",
+      "reason": "Adjacent clinker strakes have the source 0.012 transverse lap and 14 mm lower-edge flare; this local structural lap is intentional."
+    },
+    {
+      "a": "hull_strake_04_port_0",
+      "b": "trim_seat_0",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_04_port_0",
+      "b": "trim_seat_0_cleat_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_04_port_0",
+      "b": "trim_seat_1",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_04_port_0",
+      "b": "trim_seat_1_cleat_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_04_port_0",
+      "b": "trim_seat_2",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_04_port_0",
+      "b": "trim_seat_2_cleat_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_04_starboard_0",
+      "b": "hull_strake_05_starboard_0",
+      "reason": "Adjacent clinker strakes have the source 0.012 transverse lap and 14 mm lower-edge flare; this local structural lap is intentional."
+    },
+    {
+      "a": "hull_strake_04_starboard_0",
+      "b": "trim_seat_0",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_04_starboard_0",
+      "b": "trim_seat_0_cleat_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_04_starboard_1",
+      "b": "hull_strake_05_starboard_0",
+      "reason": "Adjacent clinker strakes have the source 0.012 transverse lap and 14 mm lower-edge flare; this local structural lap is intentional."
+    },
+    {
+      "a": "hull_strake_04_starboard_1",
+      "b": "trim_seat_2",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_04_starboard_1",
+      "b": "trim_seat_2_cleat_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_05_port_0",
+      "b": "hull_strake_06_port_0",
+      "reason": "Adjacent clinker strakes have the source 0.012 transverse lap and 14 mm lower-edge flare; this local structural lap is intentional."
+    },
+    {
+      "a": "hull_strake_05_port_0",
+      "b": "trim_gunwale_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_05_port_0",
+      "b": "trim_seat_0",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_05_port_0",
+      "b": "trim_seat_0_cleat_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_05_port_0",
+      "b": "trim_seat_1",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_05_port_0",
+      "b": "trim_seat_1_cleat_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_05_port_0",
+      "b": "trim_seat_2",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_05_port_0",
+      "b": "trim_seat_2_cleat_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_05_starboard_0",
+      "b": "hull_strake_06_starboard_0",
+      "reason": "Adjacent clinker strakes have the source 0.012 transverse lap and 14 mm lower-edge flare; this local structural lap is intentional."
+    },
+    {
+      "a": "hull_strake_05_starboard_0",
+      "b": "trim_gunwale_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_05_starboard_0",
+      "b": "trim_seat_0",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_05_starboard_0",
+      "b": "trim_seat_0_cleat_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_05_starboard_0",
+      "b": "trim_seat_1",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_05_starboard_0",
+      "b": "trim_seat_1_cleat_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_05_starboard_0",
+      "b": "trim_seat_2",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_05_starboard_0",
+      "b": "trim_seat_2_cleat_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_06_port_0",
+      "b": "hull_strake_07_port_0",
+      "reason": "Adjacent clinker strakes have the source 0.012 transverse lap and 14 mm lower-edge flare; this local structural lap is intentional."
+    },
+    {
+      "a": "hull_strake_06_port_0",
+      "b": "trim_gunwale_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_06_port_0",
+      "b": "trim_seat_0",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_06_port_0",
+      "b": "trim_seat_0_cleat_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_06_port_0",
+      "b": "trim_seat_1",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_06_port_0",
+      "b": "trim_seat_1_cleat_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_06_port_0",
+      "b": "trim_seat_2",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_06_port_0",
+      "b": "trim_seat_2_cleat_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_06_starboard_0",
+      "b": "hull_strake_07_starboard_0",
+      "reason": "Adjacent clinker strakes have the source 0.012 transverse lap and 14 mm lower-edge flare; this local structural lap is intentional."
+    },
+    {
+      "a": "hull_strake_06_starboard_0",
+      "b": "trim_gunwale_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_06_starboard_0",
+      "b": "trim_seat_0",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_06_starboard_0",
+      "b": "trim_seat_0_cleat_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_06_starboard_0",
+      "b": "trim_seat_1",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_06_starboard_0",
+      "b": "trim_seat_1_cleat_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_06_starboard_0",
+      "b": "trim_seat_2",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_06_starboard_0",
+      "b": "trim_seat_2_cleat_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_07_port_0",
+      "b": "trim_gunwale_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "hull_strake_07_starboard_0",
+      "b": "trim_gunwale_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "trim_seat_0",
+      "b": "trim_seat_0_cleat_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "trim_seat_0",
+      "b": "trim_seat_0_cleat_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "trim_seat_1",
+      "b": "trim_seat_1_cleat_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "trim_seat_1",
+      "b": "trim_seat_1_cleat_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "trim_seat_2",
+      "b": "trim_seat_2_cleat_port",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    },
+    {
+      "a": "trim_seat_2",
+      "b": "trim_seat_2_cleat_starboard",
+      "reason": "Gunwale caps the upper strake; seat ends and their cleats are housed into the upper inside planking."
+    }
+  ],
+  "materials": {
+    "method": "guide-sized authored PBR atlas upgrade",
+    "materials": [
+      {
+        "source": "wood_black",
+        "material": "v2_drewno_czarne",
+        "palette_srgb": [
+          0.23,
+          0.215,
+          0.19
+        ],
+        "old_uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "image_px": [
+          2048,
+          2048
+        ],
+        "family": "wood",
+        "metallic": 0
+      },
+      {
+        "source": "wood_dark",
+        "material": "v2_drewno_ciemne",
+        "palette_srgb": [
+          0.4,
+          0.28,
+          0.17
+        ],
+        "old_uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "image_px": [
+          2048,
+          2048
+        ],
+        "family": "wood",
+        "metallic": 0
+      },
+      {
+        "source": "wood",
+        "material": "v2_drewno",
+        "palette_srgb": [
+          0.62,
+          0.46,
+          0.3
+        ],
+        "old_uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "image_px": [
+          2048,
+          2048
+        ],
+        "family": "wood",
+        "metallic": 0
+      }
+    ],
+    "provenance": {
+      "license": "project-authored procedural textures; no external imagery",
+      "basis": [
+        "docs/en/03-hull-construction.md",
+        "docs/en/04-decks-bulwarks-stern-head.md",
+        "docs/en/08-ropes-blocks-and-sails.md",
+        "docs/en/13-3d-quality-checklist.md"
+      ],
+      "atlas_m": {
+        "deck": [
+          3.52,
+          0.88
+        ],
+        "hull": [
+          4.4,
+          1.1
+        ],
+        "paint": [
+          4.4,
+          1.1
+        ],
+        "wood": [
+          2.0,
+          2.0
+        ],
+        "iron": [
+          1.0,
+          1.0
+        ],
+        "rope": [
+          1.0,
+          1.0
+        ],
+        "canvas": [
+          2.4,
+          2.4
+        ]
+      },
+      "method": "continuous authored grain, physical seams/trunnels, normal from metric height derivatives",
+      "palette_srgb": {
+        "poklad": [
+          0.62,
+          0.575,
+          0.5
+        ],
+        "burta_drewno": [
+          0.46,
+          0.33,
+          0.22
+        ],
+        "drewno": [
+          0.62,
+          0.46,
+          0.3
+        ],
+        "drewno_ciemne": [
+          0.4,
+          0.28,
+          0.17
+        ],
+        "drewno_czarne": [
+          0.23,
+          0.215,
+          0.19
+        ],
+        "laweta": [
+          0.4,
+          0.15,
+          0.09
+        ],
+        "farba_czarna": [
+          0.2,
+          0.19,
+          0.18
+        ],
+        "farba_czarna_gladka": [
+          0.23,
+          0.22,
+          0.21
+        ],
+        "farba_ochra": [
+          0.68,
+          0.52,
+          0.27
+        ],
+        "farba_czerwona": [
+          0.55,
+          0.17,
+          0.1
+        ],
+        "farba_niebieska": [
+          0.16,
+          0.23,
+          0.36
+        ],
+        "farba_dno_biala": [
+          0.84,
+          0.81,
+          0.73
+        ],
+        "farba_dno_czerwona": [
+          0.42,
+          0.18,
+          0.12
+        ],
+        "rzezby_zlote": [
+          0.82,
+          0.63,
+          0.3
+        ],
+        "zelazo": [
+          0.19,
+          0.18,
+          0.17
+        ],
+        "zelazo_lufa": [
+          0.19,
+          0.18,
+          0.17
+        ],
+        "braz": [
+          0.62,
+          0.42,
+          0.2
+        ],
+        "lina_smolowana": [
+          0.23,
+          0.21,
+          0.18
+        ],
+        "lina_jasna": [
+          0.64,
+          0.57,
+          0.43
+        ],
+        "plotno": [
+          0.84,
+          0.8,
+          0.7
+        ],
+        "szklo": [
+          0.18,
+          0.23,
+          0.25
+        ]
+      }
+    }
+  },
+  "triangles": {
+    "lod0": 14328,
+    "collision": 14328,
+    "lod1": 7290,
+    "lod2": 1362
+  },
+  "deviations": [
+    "The game uses zero-thickness plank sheets. This asset closes every plank into a 22 mm wooden solid, including end grain.",
+    "The last body station moves from |u|=0.985 to 0.965 before the same stem rabbet cap, preventing a folded solid at the end.",
+    "The straight repair stock rotates its constant cross-section into the real straight centreline plane instead of shearing the original game sheet; the bow centre, 0.5 rad cant and 0.08 m/m rise are retained.",
+    "Frame heels are seated 7 mm lower at the keel. Seat cleats and wider 2.60 m trestle cross-feet replace unsupported source contacts with physical bearing.",
+    "This is an independent authored asset and hook contract. Three.js loading, live visibility, morph control, leak effects, water and carving progression still require a game adapter."
+  ],
+  "export": {
+    "units": "metres",
+    "axes": "glTF +X source local right / repair side when work=1, +Y up, +Z bow",
+    "collision_mode": "one concave static collider per actual timber; state exports exclude later members",
+    "no_full_hull_proxy": true,
+    "packed_scene": "stage3 visible, repair plank/pegs and all collision objects hidden; markers retained",
+    "morph": "repair_plank: Basis fitted, straight target weight=1-b*b*(3-2*b)"
+  },
+  "runtime_contract": {
+    "source_hooks": {
+      "setStage": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "setGapPlank": [
+        0,
+        1
+      ],
+      "setPegs": [
+        0,
+        5
+      ],
+      "setTrim": [
+        false,
+        true
+      ],
+      "setWater": [
+        false,
+        true
+      ],
+      "setLeak": {
+        "index": [
+          0,
+          1,
+          2
+        ],
+        "state": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "setMarks": {
+        "father": [
+          0,
+          1
+        ],
+        "son": [
+          0,
+          1
+        ]
+      },
+      "carve": {
+        "mark": [
+          0,
+          1
+        ],
+        "seconds_default": 3
+      },
+      "point": [
+        "gap",
+        "peg",
+        "leak",
+        "drip",
+        "stem"
+      ]
+    },
+    "hook_implementation_delivered": false,
+    "adapter_required": true,
+    "no_mast_or_rudder": true
+  }
+}
