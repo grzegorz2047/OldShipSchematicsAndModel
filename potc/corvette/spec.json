@@ -1,0 +1,289 @@
+{
+  "schema": 4,
+  "id": "corvette",
+  "family": "corvette",
+  "asset_type": "static-duel-ship",
+  "length": 42,
+  "beam": 10,
+  "draft": 3.8,
+  "freeboard": 2.15,
+  "hull": {
+    "profile": [
+      [
+        -0.5,
+        0.32,
+        1.976,
+        0.48
+      ],
+      [
+        -0.45,
+        0.55,
+        1.441,
+        0.389
+      ],
+      [
+        -0.35,
+        0.82,
+        0.678,
+        0.235
+      ],
+      [
+        -0.2,
+        0.96,
+        0.126,
+        0.077
+      ],
+      [
+        0,
+        1,
+        0.0,
+        0.0
+      ],
+      [
+        0.2,
+        0.92,
+        0.126,
+        0.144
+      ],
+      [
+        0.35,
+        0.7,
+        0.678,
+        0.441
+      ],
+      [
+        0.45,
+        0.36,
+        1.441,
+        0.729
+      ],
+      [
+        0.5,
+        0.025,
+        1.976,
+        0.9
+      ]
+    ],
+    "section_power": 0.84,
+    "stern_style": "transom",
+    "plank_rows": 20,
+    "bulwark_height": 1.25
+  },
+  "guns": {
+    "rows": [
+      {
+        "pairs": 16,
+        "z_m": 2.82,
+        "from": -0.41,
+        "to": 0.41,
+        "follow_sheer": true
+      }
+    ]
+  },
+  "rig": {
+    "masts": [
+      {
+        "name": "fore",
+        "at": 0.285,
+        "height_m": 38,
+        "rake": 0,
+        "sails": [
+          {
+            "kind": "square",
+            "z": 0.48,
+            "width_m": 20.2,
+            "height_m": 10.26
+          },
+          {
+            "kind": "square",
+            "z": 0.76,
+            "width_m": 14.429,
+            "height_m": 7.98
+          },
+          {
+            "kind": "square",
+            "z": 0.95,
+            "width_m": 8.657,
+            "height_m": 5.32
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "at": -0.04,
+        "height_m": 42,
+        "rake": 0,
+        "sails": [
+          {
+            "kind": "square",
+            "z": 0.48,
+            "width_m": 23.1,
+            "height_m": 11.34
+          },
+          {
+            "kind": "square",
+            "z": 0.76,
+            "width_m": 16.5,
+            "height_m": 8.82
+          },
+          {
+            "kind": "square",
+            "z": 0.95,
+            "width_m": 9.9,
+            "height_m": 5.88
+          }
+        ]
+      },
+      {
+        "name": "mizzen",
+        "at": -0.32,
+        "height_m": 32,
+        "rake": 0,
+        "sails": [
+          {
+            "kind": "square",
+            "z": 0.76,
+            "width_m": 9.786,
+            "height_m": 6.72
+          },
+          {
+            "kind": "square",
+            "z": 0.95,
+            "width_m": 5.871,
+            "height_m": 4.48
+          },
+          {
+            "kind": "gaff",
+            "z": 0.43,
+            "width_m": 8.5,
+            "height_m": 10.24
+          }
+        ]
+      }
+    ],
+    "bowsprit": {
+      "length_m": 15.6,
+      "angle_deg": 28
+    },
+    "jibs": [
+      {
+        "head_fraction": 0.75,
+        "bowsprit_fraction": 0.95
+      }
+    ]
+  },
+  "palettes": [
+    {
+      "id": "ochre",
+      "paintHull": [
+        0.38132601143253014,
+        0.11443537382697373,
+        0.017641954488384078,
+        1.0
+      ],
+      "paintTrim": [
+        0.02217388479338738,
+        0.014443843596092545,
+        0.009134058702220787,
+        1.0
+      ]
+    },
+    {
+      "id": "navy",
+      "paintHull": [
+        0.009134058702220787,
+        0.042311410620809675,
+        0.10461648409110419,
+        1.0
+      ],
+      "paintTrim": [
+        0.5972017883637634,
+        0.3613067797835095,
+        0.09305896284668745,
+        1.0
+      ]
+    }
+  ],
+  "paint_materials": [
+    "paint_hull",
+    "paint_trim"
+  ],
+  "game_source": {
+    "id": "SHIP_CORVETTE_ENGLAND",
+    "model": "Corvette1",
+    "class": 2,
+    "cannons": 32,
+    "source_commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+    "script_sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+  },
+  "provenance": {
+    "status": "Original procedural reconstruction; not a retail mesh reproduction.",
+    "dimensions": "Authored estimates in metres; not measured stock data.",
+    "rig": "Guide-based authored family interpretation. Stock sail-plan/locator geometry was unavailable.",
+    "gun_layout": "Authored symmetric broadside allocation of the verified stock total. z_m is the row centre at zero sheer; the builder adds the authored local deck sheer. This is not a claim about stock gun locators.",
+    "stock_script_caveat": "Pinned stock-derived modern compatibility scripts are not authenticated byte-identical retail source.",
+    "source_evidence": [
+      {
+        "id": "stock-stats",
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c#L4557",
+        "kind": "stock-derived compatibility script",
+        "claim": "Family, model identifier, class and total cannon count only.",
+        "source_commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+        "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+      },
+      {
+        "id": "stock-ids",
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/ships.h",
+        "kind": "stock-derived compatibility enum",
+        "claim": "Ordinary family identity; no dimension or sail-plan data.",
+        "source_commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+        "sha256": "a267dbc5d3fc901104b86b53ffdab06255545a8a7ee3725801c0d9dc9037ba74"
+      },
+      {
+        "id": "stock-2003-visual",
+        "url": "https://www.mobygames.com/game/9613/pirates-of-the-caribbean/screenshots/windows/54679/",
+        "image_url": "https://cdn.mobygames.com/screenshots/10282583-pirates-of-the-caribbean-windows-a-pirate-ship-and-a-sunset-does.jpg",
+        "kind": "Published Windows 2003 screenshot; added 29 November 2003",
+        "claim": "General game visual vocabulary only: pale panelled square canvas, dark wales and ochre hull bands. The pictured family is not authenticated."
+      },
+      {
+        "id": "guide-proportions",
+        "path": "docs/en/12-designing-other-ships.md",
+        "kind": "Repository guide",
+        "claim": "Authored hull/port/mast proportion method and rig distinctions; not stock game dimensions."
+      },
+      {
+        "id": "guide-spars",
+        "path": "docs/en/05-masts-and-spars.md",
+        "kind": "Repository guide",
+        "claim": "Square/lateen/gaff typology and spar proportion starting points; later brig is not the reference Snow."
+      }
+    ]
+  },
+  "type_profile": {
+    "distinction": "Slender three-masted, 32-gun corvette with a flush main deck and single open battery; square fore/main and square upper mizzen with a gaff spanker.",
+    "rationale": "Stock-derived scripts give the Corvette 32 guns and higher speed/turn rates than the Frigate. A single battery, low superstructure and finer lines distinguish the authored corvette from the frigate.",
+    "mast_count": 3,
+    "gun_total": 32,
+    "battery_groups": 1,
+    "length_beam_ratio": 4.2,
+    "snow_mast": false,
+    "excluded_specials": [
+      "Manowar",
+      "Black Pearl",
+      "Fearless",
+      "Mefisto"
+    ]
+  },
+  "scope": {
+    "delivered": "Static duel asset with two paint variants and LOD/collision/review assets.",
+    "engine_integration": "Not integrated with an engine: no buoyancy, damage, artillery, sailing or crew controllers.",
+    "walking": "Not applicable: no authored walkable interior or player traversal claim."
+  },
+  "source_paths": [
+    "potc/corvette/type-profile.json",
+    "potc/corvette/type-plan.svg",
+    "docs/en/05-masts-and-spars.md",
+    "docs/en/12-designing-other-ships.md"
+  ]
+}
