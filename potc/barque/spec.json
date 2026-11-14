@@ -117,7 +117,9 @@
             "width_m": 5.4,
             "height_m": 2.8
           }
-        ]
+        ],
+        "heel_z_m": -0.501655720704354,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
       },
       {
         "name": "main",
@@ -143,7 +145,9 @@
             "width_m": 6,
             "height_m": 3
           }
-        ]
+        ],
+        "heel_z_m": -0.5497291666666667,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
       },
       {
         "name": "mizzen",
@@ -158,7 +162,9 @@
             "height_m": 9,
             "yaw_deg": 25
           }
-        ]
+        ],
+        "heel_z_m": -0.38572512820512816,
+        "heel_basis": "Authored aft mast step reached through the true cabin and raised-deck mortises."
       }
     ],
     "bowsprit": {
@@ -287,5 +293,128 @@
       "value": 1.25,
       "reason": "A real continuous head timber above the 0.85m-high gun opening: cannon centre 0.65–0.67m above floor, opening top 1.075–1.095m, leaving at least 0.155m of closed timber below the rail. No disconnected local roof patches."
     }
-  ]
+  ],
+  "detailed_layout": {
+    "kind": "decked",
+    "frame_spacing_m": 0.75,
+    "hold": {
+      "from": -0.29,
+      "to": 0.35,
+      "floor_z_m": -0.65,
+      "headroom_m": 2.5,
+      "minimum_headroom_m": 1.7
+    },
+    "cabin": {
+      "from": -0.46,
+      "to": -0.29,
+      "floor_z_m": -0.65,
+      "ceiling_deck_id": "main",
+      "cut_main_deck": false,
+      "door_width_m": 1.05,
+      "door_height_m": 1.88,
+      "minimum_headroom_m": 1.7
+    },
+    "hatch": {
+      "id": "main_cargo_hatch",
+      "at": 0.115,
+      "length_m": 2.65,
+      "width_m": 1.65,
+      "deck_id": "main",
+      "target_deck_id": "hold"
+    },
+    "extra_hatches": [
+      {
+        "id": "forward_cargo_scuttle",
+        "at": 0.325,
+        "length_m": 1.3,
+        "width_m": 1.1,
+        "deck_id": "main",
+        "target_deck_id": "hold"
+      }
+    ],
+    "companionways": [
+      {
+        "id": "aft_personnel_descent",
+        "at": -0.185,
+        "length_m": 1.9,
+        "width_m": 1.15,
+        "deck_id": "main",
+        "target_deck_id": "hold"
+      }
+    ],
+    "lower_decks": [],
+    "partitions": [
+      {
+        "at": 0.29,
+        "deck_id": "hold",
+        "door_width_m": 1.1,
+        "door_height_m": 1.9
+      }
+    ],
+    "notes": [
+      "Framed cargo hold with timber ceiling planks, dunnage, provision casks and crate lashings, retaining a central clear route.",
+      "Aft modest cabin with desk, bunk, bench and chest below its stern accommodation; windows are authored at that room level.",
+      "Two timber-coamed cargo accesses and a separate personnel descent, hand-worked wooden capstan, twin pumps; a 3m boat is an optional authored fitting only where final gun and rig clearance allows it.",
+      "Bitts, pin rails and an officer close-stool with an actual seat opening and removable pot are authored period fittings. External bow-head access is not established in the preserved hull."
+    ],
+    "evidence": [
+      {
+        "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-244406",
+        "supports": [
+          "The 11 July 1768 drawing records quarterdeck, upper deck, forecastle, lower deck and fore-and-aft platforms of the purchased collier fitted for exploration."
+        ],
+        "quality": "museum archival plan",
+        "limits": "A wooden period merchant-hull analogue; Endeavour was ship-rigged. This does not identify the POTC Barque or prove its rig, dimensions or exact cabin plan."
+      },
+      {
+        "url": "https://www.sea.museum/en/learn/resource/life-aboard-hmb-endeavour",
+        "supports": [
+          "The original bulk coal carrier used oak frames/planks/deck beams and pine decks and masts.",
+          "Conversion added a mess deck on the cargo-hold beams; stores included wooden casks, and cooking used an iron hearth protected from the timber deck.",
+          "The aft great cabin served work and eating, with smaller officers cabins on the lower deck."
+        ],
+        "quality": "museum reconstruction and historical interpretation",
+        "limits": "Use timber construction, cask storage and spatial hierarchy as analogues. Do not copy the special exploration conversion or modern replica machinery."
+      },
+      {
+        "url": "https://www.sea.museum/en/about/media/2023/11/museum-releases-further-evidence-to-support-its-case-for-identifying-endeavour-shipwreck",
+        "supports": [
+          "The museum compares a surviving pump-shaft stump and pump-well partitions with the 1768 lower-hold plan."
+        ],
+        "quality": "museum archaeological research",
+        "limits": "Supports a timber-enclosed pump well as a real working structure; coordinates and pump design in this asset are authored."
+      },
+      {
+        "url": "https://www.vasamuseet.se/en/explore/vasa-history/life-on-board",
+        "supports": [
+          "The museum identifies provision casks in the hold and a brick-lined cooking hearth forward of the mainmast.",
+          "Senior officers lived in aft sterncastle cabins with glass windows and furniture."
+        ],
+        "quality": "museum archaeological and historical interpretation",
+        "limits": "A 1628 warship analogue for construction and room hierarchy only; no claim that a merchant held Vasa-scale decoration or its exact internal arrangement."
+      },
+      {
+        "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-67057",
+        "supports": [
+          "The model has three cargo hatches accessing the hold and an aft fore-and-aft-rigged mizzen."
+        ],
+        "quality": "later museum model comparator",
+        "limits": "Later generic cargo-access/rig comparator only. Iron/steel construction, whaleback quarterdeck, passenger deckhouse and nineteenth-century machinery are not copied."
+      }
+    ],
+    "historical_status": "Source-informed authored reconstruction; openings, proportions and furniture placement are not verified original game or historical interiors.",
+    "research_path": "layout-research.json"
+  },
+  "interior_character": {
+    "type_reading": "Compact armed wooden merchant interpretation. Endeavour is a period collier analogue for structure, not proof of the stock model identity or rig.",
+    "cargo_character": "mixed merchant casks, timber boxes and rope stores",
+    "furniture_scope": [
+      "Framed cargo hold with timber ceiling planks, dunnage, provision casks and crate lashings, retaining a central clear route.",
+      "Aft modest cabin with desk, bunk, bench and chest below its stern accommodation; windows are authored at that room level.",
+      "Two timber-coamed cargo accesses and a separate personnel descent, hand-worked wooden capstan, twin pumps; a 3m boat is an optional authored fitting only where final gun and rig clearance allows it.",
+      "Bitts, pin rails and an officer close-stool with an actual seat opening and removable pot are authored period fittings. External bow-head access is not established in the preserved hull."
+    ],
+    "modern_equipment_excluded": true
+  },
+  "detail_schema": 5
 }
