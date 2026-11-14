@@ -1,0 +1,4540 @@
+{
+  "schema": 4,
+  "id": "xebec",
+  "construction": "Authored procedural guide-based reconstruction. Source game stats determine class and gun counts; metre dimensions and hull offsets are estimates, not extracted stock meshes.",
+  "source": {
+    "provenance": {
+      "method": "Original procedural construction from authored offsets following repository guide chapters 02\u201309 and 12\u201313. No binary game meshes or proprietary textures imported.",
+      "dimension_status": "Authored reconstruction: dimensions are design choices, not measured stock POTC2003 model dimensions.",
+      "source_evidence": [
+        {
+          "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c",
+          "kind": "stock-derived public script",
+          "claims": [
+            "Ordinary game family, class and cannon count only."
+          ],
+          "commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+          "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+        },
+        {
+          "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/SEA_AI/walk/Xebec_walk.c",
+          "kind": "stock-derived public locator script",
+          "claims": [
+            "Qualitative deck/mast layout only; no official metre dimensions."
+          ]
+        },
+        {
+          "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+          "kind": "2004 player data table",
+          "claims": [
+            "Contemporary ordinary ship roster and gun counts."
+          ]
+        },
+        {
+          "url": "https://www.piratesahoy.net/threads/ships-and-their-use.2077/",
+          "kind": "contemporary stock/mod discussion",
+          "claims": [
+            "Stock family role and distinction from mod variants."
+          ]
+        }
+      ],
+      "limitations": "Contemporary stock-game discussion explicitly calls Xebec fully fore-and-aft rigged; game wiki notes overhanging bowsprit and aft mizzen. Our three-lateen reconstruction follows these cues and historical type, with authored hull proportions and sail sizes."
+    },
+    "source_evidence": [
+      {
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c",
+        "kind": "stock-derived public script",
+        "claims": [
+          "Ordinary game family, class and cannon count only."
+        ],
+        "commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+        "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+      },
+      {
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/SEA_AI/walk/Xebec_walk.c",
+        "kind": "stock-derived public locator script",
+        "claims": [
+          "Qualitative deck/mast layout only; no official metre dimensions."
+        ]
+      },
+      {
+        "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+        "kind": "2004 player data table",
+        "claims": [
+          "Contemporary ordinary ship roster and gun counts."
+        ]
+      },
+      {
+        "url": "https://www.piratesahoy.net/threads/ships-and-their-use.2077/",
+        "kind": "contemporary stock/mod discussion",
+        "claims": [
+          "Stock family role and distinction from mod variants."
+        ]
+      }
+    ],
+    "distinctive_silhouette": "Long fine pointed hull, strongly raked fore/mizzen, three lateens and long low bowsprit.",
+    "static_scope": {
+      "animated_controls": false,
+      "walkability": false,
+      "navigation_routes": false,
+      "collision": "Shared exact static concave hull/deck solids; no playable deck claim."
+    },
+    "palette_contract": {
+      "changed": [
+        "paint_hull",
+        "paint_trim"
+      ],
+      "deliberately_unchanged": [
+        "natural deck timber",
+        "mast and spar timber",
+        "tarred standing rigging",
+        "natural running rope",
+        "linen cloth",
+        "iron guns and fittings"
+      ]
+    },
+    "authored_deck_clearance": "Aft deck break ends at-.35L, clear of actual mizzen chainplate at-.3364L and first gun at-.31L. No fastening is embedded in the transverse bulkhead."
+  },
+  "authored_profile": {
+    "profile": [
+      [
+        -0.5,
+        0.025,
+        1.8,
+        0.78
+      ],
+      [
+        -0.43,
+        0.36,
+        0.88,
+        0.43
+      ],
+      [
+        -0.27,
+        0.77,
+        0.2,
+        0.11
+      ],
+      [
+        -0.06,
+        1.0,
+        0,
+        0
+      ],
+      [
+        0.15,
+        0.94,
+        0.13,
+        0.03
+      ],
+      [
+        0.32,
+        0.69,
+        0.57,
+        0.19
+      ],
+      [
+        0.44,
+        0.3,
+        1.36,
+        0.48
+      ],
+      [
+        0.5,
+        0.02,
+        2.45,
+        0.85
+      ]
+    ],
+    "section_power": 0.85,
+    "stern_style": "pointed",
+    "plank_rows": 14,
+    "bulwark_height": 0.48,
+    "deck_beam_factor": 0.96,
+    "quarterdeck": {
+      "from": -0.5,
+      "to": -0.35,
+      "height_m": 0.52
+    }
+  },
+  "rig": {
+    "mast_count": 3,
+    "masts": [
+      {
+        "node": "fore",
+        "at_fraction": 0.25,
+        "height_above_deck_m": 14.5,
+        "base_blender_m": [
+          0.0,
+          -7.0,
+          1.4023486375808716
+        ],
+        "heel_blender_m": [
+          0.0,
+          -6.97599983215332,
+          1.2023487091064453
+        ],
+        "top_blender_m": [
+          0.0,
+          -8.739999771118164,
+          15.902348518371582
+        ]
+      },
+      {
+        "node": "main",
+        "at_fraction": 0,
+        "height_above_deck_m": 17.0,
+        "base_blender_m": [
+          0.0,
+          -0.0,
+          1.3029099702835083
+        ],
+        "heel_blender_m": [
+          0.0,
+          -0.004999999888241291,
+          1.102910041809082
+        ],
+        "top_blender_m": [
+          0.0,
+          0.42500001192092896,
+          18.30290985107422
+        ]
+      },
+      {
+        "node": "mizzen",
+        "at_fraction": -0.3,
+        "height_above_deck_m": 11.0,
+        "base_blender_m": [
+          0.0,
+          8.399999618530273,
+          1.4429148435592651
+        ],
+        "heel_blender_m": [
+          0.0,
+          8.368000030517578,
+          1.2429147958755493
+        ],
+        "top_blender_m": [
+          0.0,
+          10.15999984741211,
+          12.442914962768555
+        ]
+      }
+    ],
+    "sails": [
+      {
+        "node": "fore_lateen_00",
+        "kind": "lateen",
+        "corners_blender_m": [
+          [
+            -2.1200332641601562,
+            -13.923294067382812,
+            5.192348480224609
+          ],
+          [
+            3.0781712532043457,
+            -2.7757081985473633,
+            15.0323486328125
+          ],
+          [
+            3.4420456886291504,
+            -1.9953771829605103,
+            3.0323486328125
+          ]
+        ]
+      },
+      {
+        "node": "main_lateen_00",
+        "kind": "lateen",
+        "corners_blender_m": [
+          [
+            -2.1470389366149902,
+            -6.0058207511901855,
+            5.802909851074219
+          ],
+          [
+            4.192234992980957,
+            7.588796138763428,
+            17.282909393310547
+          ],
+          [
+            4.635984420776367,
+            8.540419578552246,
+            3.282910108566284
+          ]
+        ]
+      },
+      {
+        "node": "mizzen_lateen_00",
+        "kind": "lateen",
+        "corners_blender_m": [
+          [
+            -0.09485666453838348,
+            5.980169296264648,
+            4.292914867401123
+          ],
+          [
+            3.5396602153778076,
+            13.774415969848633,
+            11.672914505004883
+          ],
+          [
+            3.794076442718506,
+            14.320013046264648,
+            2.672914743423462
+          ]
+        ]
+      }
+    ],
+    "spars": [
+      "fore",
+      "main",
+      "mizzen",
+      "fore_lateen_00_lateen_yard",
+      "main_lateen_00_lateen_yard",
+      "mizzen_lateen_00_lateen_yard",
+      "bowsprit"
+    ],
+    "ropes": [
+      "fore_lateen_00_bolt_0",
+      "fore_lateen_00_bolt_1",
+      "fore_lateen_00_bolt_2",
+      "fore_lateen_00_head_tie_0",
+      "fore_lateen_00_head_tie_1",
+      "fore_lateen_00_halyard",
+      "fore_lateen_00_tack",
+      "fore_lateen_00_sheet",
+      "fore_shroud_starboard_00",
+      "fore_shroud_starboard_01",
+      "fore_shroud_starboard_02",
+      "fore_shroud_port_00",
+      "fore_shroud_port_01",
+      "fore_shroud_port_02",
+      "main_lateen_00_bolt_0",
+      "main_lateen_00_bolt_1",
+      "main_lateen_00_bolt_2",
+      "main_lateen_00_head_tie_0",
+      "main_lateen_00_head_tie_1",
+      "main_lateen_00_halyard",
+      "main_lateen_00_tack",
+      "main_lateen_00_sheet",
+      "main_shroud_starboard_00",
+      "main_shroud_starboard_01",
+      "main_shroud_starboard_02",
+      "main_shroud_port_00",
+      "main_shroud_port_01",
+      "main_shroud_port_02",
+      "mizzen_lateen_00_bolt_0",
+      "mizzen_lateen_00_bolt_1",
+      "mizzen_lateen_00_bolt_2",
+      "mizzen_lateen_00_head_tie_0",
+      "mizzen_lateen_00_head_tie_1",
+      "mizzen_lateen_00_halyard",
+      "mizzen_lateen_00_tack",
+      "mizzen_lateen_00_sheet",
+      "mizzen_shroud_starboard_00",
+      "mizzen_shroud_starboard_01",
+      "mizzen_shroud_starboard_02",
+      "mizzen_shroud_port_00",
+      "mizzen_shroud_port_01",
+      "mizzen_shroud_port_02",
+      "mizzen_head_stay",
+      "main_head_stay",
+      "fore_stay",
+      "bowsprit_shroud_starboard",
+      "bowsprit_shroud_port"
+    ],
+    "attachments": [
+      {
+        "rope": "fore_lateen_00_bolt_0",
+        "start": "fore_lateen_00",
+        "end": "fore_lateen_00",
+        "points_blender_m": [
+          [
+            -2.1200332641601562,
+            -13.923294067382812,
+            5.192348480224609
+          ],
+          [
+            -1.6002126932144165,
+            -12.808534622192383,
+            6.176348686218262
+          ],
+          [
+            -1.0803924798965454,
+            -11.693777084350586,
+            7.160347938537598
+          ],
+          [
+            -0.5605717897415161,
+            -10.579017639160156,
+            8.14434814453125
+          ],
+          [
+            -0.04075157642364502,
+            -9.46426010131836,
+            9.128348350524902
+          ],
+          [
+            0.4790689945220947,
+            -8.34950065612793,
+            10.112348556518555
+          ],
+          [
+            0.9988895654678345,
+            -7.234742164611816,
+            11.096348762512207
+          ],
+          [
+            1.5187098979949951,
+            -6.119984149932861,
+            12.08034896850586
+          ],
+          [
+            2.0385303497314453,
+            -5.00522518157959,
+            13.064348220825195
+          ],
+          [
+            2.5583505630493164,
+            -3.8904669284820557,
+            14.048348426818848
+          ],
+          [
+            3.0781712532043457,
+            -2.7757081985473633,
+            15.0323486328125
+          ]
+        ],
+        "reason": "Own sewn bolt rope follows this exact cloth boundary."
+      },
+      {
+        "rope": "fore_lateen_00_bolt_1",
+        "start": "fore_lateen_00",
+        "end": "fore_lateen_00",
+        "points_blender_m": [
+          [
+            3.0781712532043457,
+            -2.7757081985473633,
+            15.0323486328125
+          ],
+          [
+            3.114558696746826,
+            -2.6976749897003174,
+            13.832348823547363
+          ],
+          [
+            3.1509461402893066,
+            -2.6196420192718506,
+            12.632349014282227
+          ],
+          [
+            3.187333583831787,
+            -2.5416088104248047,
+            11.432348251342773
+          ],
+          [
+            3.2237210273742676,
+            -2.463575839996338,
+            10.232348442077637
+          ],
+          [
+            3.260108470916748,
+            -2.385542631149292,
+            9.0323486328125
+          ],
+          [
+            3.2964959144592285,
+            -2.307509660720825,
+            7.832348346710205
+          ],
+          [
+            3.332883358001709,
+            -2.2294764518737793,
+            6.632348537445068
+          ],
+          [
+            3.3692708015441895,
+            -2.1514434814453125,
+            5.432348251342773
+          ],
+          [
+            3.40565824508667,
+            -2.0734102725982666,
+            4.232348918914795
+          ],
+          [
+            3.4420456886291504,
+            -1.9953771829605103,
+            3.0323486328125
+          ]
+        ],
+        "reason": "Own sewn bolt rope follows this exact cloth boundary."
+      },
+      {
+        "rope": "fore_lateen_00_bolt_2",
+        "start": "fore_lateen_00",
+        "end": "fore_lateen_00",
+        "points_blender_m": [
+          [
+            3.4420456886291504,
+            -1.9953771829605103,
+            3.0323486328125
+          ],
+          [
+            2.8858375549316406,
+            -3.188169002532959,
+            3.2483484745025635
+          ],
+          [
+            2.329629898071289,
+            -4.380960464477539,
+            3.464348793029785
+          ],
+          [
+            1.7734220027923584,
+            -5.573752403259277,
+            3.6803483963012695
+          ],
+          [
+            1.2172142267227173,
+            -6.766543865203857,
+            3.896348476409912
+          ],
+          [
+            0.6610062122344971,
+            -7.959335803985596,
+            4.112348556518555
+          ],
+          [
+            0.10479819774627686,
+            -9.152128219604492,
+            4.328348636627197
+          ],
+          [
+            -0.4514094591140747,
+            -10.344918251037598,
+            4.544348239898682
+          ],
+          [
+            -1.0076175928115845,
+            -11.537711143493652,
+            4.760348320007324
+          ],
+          [
+            -1.563825249671936,
+            -12.730502128601074,
+            4.976348400115967
+          ],
+          [
+            -2.1200332641601562,
+            -13.923294067382812,
+            5.192348480224609
+          ]
+        ],
+        "reason": "Own sewn bolt rope follows this exact cloth boundary."
+      },
+      {
+        "rope": "fore_lateen_00_head_tie_0",
+        "start": "fore_lateen_00",
+        "end": "fore_lateen_00_lateen_yard",
+        "points_blender_m": [
+          [
+            -2.1200332641601562,
+            -13.923294067382812,
+            5.192348480224609
+          ],
+          [
+            -2.156571865081787,
+            -14.001651763916016,
+            5.300420761108398
+          ]
+        ],
+        "reason": "Lateen head corner tied to its own long yard."
+      },
+      {
+        "rope": "fore_lateen_00_head_tie_1",
+        "start": "fore_lateen_00",
+        "end": "fore_lateen_00_lateen_yard",
+        "points_blender_m": [
+          [
+            3.0781712532043457,
+            -2.7757081985473633,
+            15.0323486328125
+          ],
+          [
+            3.041632652282715,
+            -2.8540656566619873,
+            15.140420913696289
+          ]
+        ],
+        "reason": "Lateen head corner tied to its own long yard."
+      },
+      {
+        "rope": "fore_lateen_00_halyard",
+        "start": "fore_lateen_00_lateen_yard",
+        "end": "fore",
+        "points_blender_m": [
+          [
+            0.9454650282859802,
+            -7.349311828613281,
+            11.254365921020508
+          ],
+          [
+            0.0,
+            -8.739999771118164,
+            15.902348518371582
+          ]
+        ],
+        "reason": "Halyard suspends the lateen yard beside the mast."
+      },
+      {
+        "rope": "fore_lateen_00_tack",
+        "start": "fore_lateen_00",
+        "end": "fore_lateen_00_tack_cleat",
+        "points_blender_m": [
+          [
+            -2.1200332641601562,
+            -13.923294067382812,
+            5.192348480224609
+          ],
+          [
+            0.9003173112869263,
+            -12.039999961853027,
+            1.8861502408981323
+          ]
+        ],
+        "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+      },
+      {
+        "rope": "fore_lateen_00_sheet",
+        "start": "fore_lateen_00",
+        "end": "fore_lateen_00_sheet_cleat",
+        "points_blender_m": [
+          [
+            3.4420456886291504,
+            -1.9953771829605103,
+            3.0323486328125
+          ],
+          [
+            2.56758189201355,
+            -2.637777805328369,
+            1.457309365272522
+          ]
+        ],
+        "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+      },
+      {
+        "rope": "fore_shroud_starboard_00",
+        "start": "fore",
+        "end": "fore_chainplate_starboard_00",
+        "points_blender_m": [
+          [
+            0.0,
+            -8.739999771118164,
+            15.902348518371582
+          ],
+          [
+            -2.213046073913574,
+            -6.860000133514404,
+            1.5369094610214233
+          ]
+        ],
+        "reason": "Standing shroud from mast head to the outboard chainplate location."
+      },
+      {
+        "rope": "fore_shroud_starboard_01",
+        "start": "fore",
+        "end": "fore_chainplate_starboard_01",
+        "points_blender_m": [
+          [
+            0.0,
+            -8.739999771118164,
+            15.902348518371582
+          ],
+          [
+            -2.410121202468872,
+            -5.388888835906982,
+            1.490107536315918
+          ]
+        ],
+        "reason": "Standing shroud from mast head to the outboard chainplate location."
+      },
+      {
+        "rope": "fore_shroud_starboard_02",
+        "start": "fore",
+        "end": "fore_chainplate_starboard_02",
+        "points_blender_m": [
+          [
+            0.0,
+            -8.739999771118164,
+            15.902348518371582
+          ],
+          [
+            -2.1676506996154785,
+            -7.139999866485596,
+            1.547928810119629
+          ]
+        ],
+        "reason": "Standing shroud from mast head to the outboard chainplate location."
+      },
+      {
+        "rope": "fore_shroud_port_00",
+        "start": "fore",
+        "end": "fore_chainplate_port_00",
+        "points_blender_m": [
+          [
+            0.0,
+            -8.739999771118164,
+            15.902348518371582
+          ],
+          [
+            2.213046073913574,
+            -6.860000133514404,
+            1.5369094610214233
+          ]
+        ],
+        "reason": "Standing shroud from mast head to the outboard chainplate location."
+      },
+      {
+        "rope": "fore_shroud_port_01",
+        "start": "fore",
+        "end": "fore_chainplate_port_01",
+        "points_blender_m": [
+          [
+            0.0,
+            -8.739999771118164,
+            15.902348518371582
+          ],
+          [
+            2.1442112922668457,
+            -7.28000020980835,
+            1.553642749786377
+          ]
+        ],
+        "reason": "Standing shroud from mast head to the outboard chainplate location."
+      },
+      {
+        "rope": "fore_shroud_port_02",
+        "start": "fore",
+        "end": "fore_chainplate_port_02",
+        "points_blender_m": [
+          [
+            0.0,
+            -8.739999771118164,
+            15.902348518371582
+          ],
+          [
+            1.7782623767852783,
+            -9.239999771118164,
+            1.6444370746612549
+          ]
+        ],
+        "reason": "Standing shroud from mast head to the outboard chainplate location."
+      },
+      {
+        "rope": "main_lateen_00_bolt_0",
+        "start": "main_lateen_00",
+        "end": "main_lateen_00",
+        "points_blender_m": [
+          [
+            -2.1470389366149902,
+            -6.0058207511901855,
+            5.802909851074219
+          ],
+          [
+            -1.5131113529205322,
+            -4.646358966827393,
+            6.9509100914001465
+          ],
+          [
+            -0.8791842460632324,
+            -3.2868974208831787,
+            8.098909378051758
+          ],
+          [
+            -0.24525666236877441,
+            -1.9274353981018066,
+            9.246910095214844
+          ],
+          [
+            0.38867056369781494,
+            -0.567974328994751,
+            10.394908905029297
+          ],
+          [
+            1.0225980281829834,
+            0.7914876937866211,
+            11.542909622192383
+          ],
+          [
+            1.6565254926681519,
+            2.150949716567993,
+            12.690910339355469
+          ],
+          [
+            2.290452718734741,
+            3.510410785675049,
+            13.838910102844238
+          ],
+          [
+            2.924380302429199,
+            4.869872570037842,
+            14.986908912658691
+          ],
+          [
+            3.558307409286499,
+            6.229334354400635,
+            16.13490867614746
+          ],
+          [
+            4.192234992980957,
+            7.588796138763428,
+            17.282909393310547
+          ]
+        ],
+        "reason": "Own sewn bolt rope follows this exact cloth boundary."
+      },
+      {
+        "rope": "main_lateen_00_bolt_1",
+        "start": "main_lateen_00",
+        "end": "main_lateen_00",
+        "points_blender_m": [
+          [
+            4.192234992980957,
+            7.588796138763428,
+            17.282909393310547
+          ],
+          [
+            4.236609935760498,
+            7.683958530426025,
+            15.882908821105957
+          ],
+          [
+            4.280984878540039,
+            7.779120445251465,
+            14.482909202575684
+          ],
+          [
+            4.32535982131958,
+            7.8742828369140625,
+            13.08290958404541
+          ],
+          [
+            4.369734764099121,
+            7.969445705413818,
+            11.682909965515137
+          ],
+          [
+            4.414109706878662,
+            8.064607620239258,
+            10.282909393310547
+          ],
+          [
+            4.458484649658203,
+            8.159770011901855,
+            8.882909774780273
+          ],
+          [
+            4.502859592437744,
+            8.254932403564453,
+            7.48291015625
+          ],
+          [
+            4.547234535217285,
+            8.35009479522705,
+            6.08290958404541
+          ],
+          [
+            4.591609477996826,
+            8.445257186889648,
+            4.682910442352295
+          ],
+          [
+            4.635984420776367,
+            8.540419578552246,
+            3.282910108566284
+          ]
+        ],
+        "reason": "Own sewn bolt rope follows this exact cloth boundary."
+      },
+      {
+        "rope": "main_lateen_00_bolt_2",
+        "start": "main_lateen_00",
+        "end": "main_lateen_00",
+        "points_blender_m": [
+          [
+            4.635984420776367,
+            8.540419578552246,
+            3.282910108566284
+          ],
+          [
+            3.957681655883789,
+            7.0857954025268555,
+            3.534910202026367
+          ],
+          [
+            3.2793798446655273,
+            5.631171703338623,
+            3.786910057067871
+          ],
+          [
+            2.6010773181915283,
+            4.176547050476074,
+            4.038909912109375
+          ],
+          [
+            1.922775149345398,
+            2.721923589706421,
+            4.290909767150879
+          ],
+          [
+            1.2444727420806885,
+            1.2672994136810303,
+            4.542910099029541
+          ],
+          [
+            0.5661702156066895,
+            -0.18732476234436035,
+            4.794909954071045
+          ],
+          [
+            -0.11213183403015137,
+            -1.6419484615325928,
+            5.046910285949707
+          ],
+          [
+            -0.7904344201087952,
+            -3.0965726375579834,
+            5.298909664154053
+          ],
+          [
+            -1.4687364101409912,
+            -4.551196575164795,
+            5.550909519195557
+          ],
+          [
+            -2.1470389366149902,
+            -6.0058207511901855,
+            5.802909851074219
+          ]
+        ],
+        "reason": "Own sewn bolt rope follows this exact cloth boundary."
+      },
+      {
+        "rope": "main_lateen_00_head_tie_0",
+        "start": "main_lateen_00",
+        "end": "main_lateen_00_lateen_yard",
+        "points_blender_m": [
+          [
+            -2.1470389366149902,
+            -6.0058207511901855,
+            5.802909851074219
+          ],
+          [
+            -2.1881353855133057,
+            -6.093952178955078,
+            5.92996883392334
+          ]
+        ],
+        "reason": "Lateen head corner tied to its own long yard."
+      },
+      {
+        "rope": "main_lateen_00_head_tie_1",
+        "start": "main_lateen_00",
+        "end": "main_lateen_00_lateen_yard",
+        "points_blender_m": [
+          [
+            4.192234992980957,
+            7.588796138763428,
+            17.282909393310547
+          ],
+          [
+            4.151138782501221,
+            7.500664710998535,
+            17.40996742248535
+          ]
+        ],
+        "reason": "Lateen head corner tied to its own long yard."
+      },
+      {
+        "rope": "main_lateen_00_halyard",
+        "start": "main_lateen_00_lateen_yard",
+        "end": "main",
+        "points_blender_m": [
+          [
+            0.5811106562614441,
+            -0.15528474748134613,
+            11.043109893798828
+          ],
+          [
+            0.0,
+            0.42500001192092896,
+            18.30290985107422
+          ]
+        ],
+        "reason": "Halyard suspends the lateen yard beside the mast."
+      },
+      {
+        "rope": "main_lateen_00_tack",
+        "start": "main_lateen_00",
+        "end": "main_lateen_00_tack_cleat",
+        "points_blender_m": [
+          [
+            -2.1470389366149902,
+            -6.0058207511901855,
+            5.802909851074219
+          ],
+          [
+            2.410121202468872,
+            -5.388888835906982,
+            1.490107536315918
+          ]
+        ],
+        "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+      },
+      {
+        "rope": "main_lateen_00_sheet",
+        "start": "main_lateen_00",
+        "end": "main_lateen_00_sheet_cleat",
+        "points_blender_m": [
+          [
+            4.635984420776367,
+            8.540419578552246,
+            3.282910108566284
+          ],
+          [
+            1.989783525466919,
+            7.940000057220459,
+            1.5629428625106812
+          ]
+        ],
+        "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+      },
+      {
+        "rope": "main_shroud_starboard_00",
+        "start": "main",
+        "end": "main_chainplate_starboard_00",
+        "points_blender_m": [
+          [
+            0.0,
+            0.42500001192092896,
+            18.30290985107422
+          ],
+          [
+            -2.6580238342285156,
+            0.9577777981758118,
+            1.4405572414398193
+          ]
+        ],
+        "reason": "Standing shroud from mast head to the outboard chainplate location."
+      },
+      {
+        "rope": "main_shroud_starboard_01",
+        "start": "main",
+        "end": "main_chainplate_starboard_01",
+        "points_blender_m": [
+          [
+            0.0,
+            0.42500001192092896,
+            18.30290985107422
+          ],
+          [
+            -2.6332812309265137,
+            -0.5600000023841858,
+            1.4450640678405762
+          ]
+        ],
+        "reason": "Standing shroud from mast head to the outboard chainplate location."
+      },
+      {
+        "rope": "main_shroud_starboard_02",
+        "start": "main",
+        "end": "main_chainplate_starboard_02",
+        "points_blender_m": [
+          [
+            0.0,
+            0.42500001192092896,
+            18.30290985107422
+          ],
+          [
+            -2.626340866088867,
+            -0.8399999737739563,
+            1.4463400840759277
+          ]
+        ],
+        "reason": "Standing shroud from mast head to the outboard chainplate location."
+      },
+      {
+        "rope": "main_shroud_port_00",
+        "start": "main",
+        "end": "main_chainplate_port_00",
+        "points_blender_m": [
+          [
+            0.0,
+            0.42500001192092896,
+            18.30290985107422
+          ],
+          [
+            2.6580238342285156,
+            0.9577777981758118,
+            1.4405572414398193
+          ]
+        ],
+        "reason": "Standing shroud from mast head to the outboard chainplate location."
+      },
+      {
+        "rope": "main_shroud_port_01",
+        "start": "main",
+        "end": "main_chainplate_port_01",
+        "points_blender_m": [
+          [
+            0.0,
+            0.42500001192092896,
+            18.30290985107422
+          ],
+          [
+            2.6332812309265137,
+            -0.5600000023841858,
+            1.4450640678405762
+          ]
+        ],
+        "reason": "Standing shroud from mast head to the outboard chainplate location."
+      },
+      {
+        "rope": "main_shroud_port_02",
+        "start": "main",
+        "end": "main_chainplate_port_02",
+        "points_blender_m": [
+          [
+            0.0,
+            0.42500001192092896,
+            18.30290985107422
+          ],
+          [
+            2.626340866088867,
+            -0.8399999737739563,
+            1.4463400840759277
+          ]
+        ],
+        "reason": "Standing shroud from mast head to the outboard chainplate location."
+      },
+      {
+        "rope": "mizzen_lateen_00_bolt_0",
+        "start": "mizzen_lateen_00",
+        "end": "mizzen_lateen_00",
+        "points_blender_m": [
+          [
+            -0.09485666453838348,
+            5.980169296264648,
+            4.292914867401123
+          ],
+          [
+            0.2685951292514801,
+            6.759593963623047,
+            5.030915260314941
+          ],
+          [
+            0.632046639919281,
+            7.539018630981445,
+            5.768914699554443
+          ],
+          [
+            0.9954984188079834,
+            8.318443298339844,
+            6.506915092468262
+          ],
+          [
+            1.3589500188827515,
+            9.097867965698242,
+            7.244914531707764
+          ],
+          [
+            1.722401738166809,
+            9.87729263305664,
+            7.982914924621582
+          ],
+          [
+            2.0858535766601562,
+            10.656718254089355,
+            8.720914840698242
+          ],
+          [
+            2.449305295944214,
+            11.436141967773438,
+            9.458913803100586
+          ],
+          [
+            2.8127567768096924,
+            12.215566635131836,
+            10.196914672851562
+          ],
+          [
+            3.17620849609375,
+            12.994990348815918,
+            10.934914588928223
+          ],
+          [
+            3.5396602153778076,
+            13.774415969848633,
+            11.672914505004883
+          ]
+        ],
+        "reason": "Own sewn bolt rope follows this exact cloth boundary."
+      },
+      {
+        "rope": "mizzen_lateen_00_bolt_1",
+        "start": "mizzen_lateen_00",
+        "end": "mizzen_lateen_00",
+        "points_blender_m": [
+          [
+            3.5396602153778076,
+            13.774415969848633,
+            11.672914505004883
+          ],
+          [
+            3.5651018619537354,
+            13.828975677490234,
+            10.77291488647461
+          ],
+          [
+            3.590543508529663,
+            13.883535385131836,
+            9.872915267944336
+          ],
+          [
+            3.615985155105591,
+            13.938095092773438,
+            8.97291374206543
+          ],
+          [
+            3.6414265632629395,
+            13.992654800415039,
+            8.072915077209473
+          ],
+          [
+            3.666868209838867,
+            14.04721450805664,
+            7.172914505004883
+          ],
+          [
+            3.692309856414795,
+            14.101774215698242,
+            6.272914409637451
+          ],
+          [
+            3.7177515029907227,
+            14.156333923339844,
+            5.372914791107178
+          ],
+          [
+            3.7431931495666504,
+            14.210893630981445,
+            4.472914695739746
+          ],
+          [
+            3.768634796142578,
+            14.265453338623047,
+            3.5729150772094727
+          ],
+          [
+            3.794076442718506,
+            14.320013046264648,
+            2.672914743423462
+          ]
+        ],
+        "reason": "Own sewn bolt rope follows this exact cloth boundary."
+      },
+      {
+        "rope": "mizzen_lateen_00_bolt_2",
+        "start": "mizzen_lateen_00",
+        "end": "mizzen_lateen_00",
+        "points_blender_m": [
+          [
+            3.794076442718506,
+            14.320013046264648,
+            2.672914743423462
+          ],
+          [
+            3.4051830768585205,
+            13.486027717590332,
+            2.8349146842956543
+          ],
+          [
+            3.016289710998535,
+            12.652044296264648,
+            2.996914863586426
+          ],
+          [
+            2.627396583557129,
+            11.818059921264648,
+            3.158914804458618
+          ],
+          [
+            2.2385032176971436,
+            10.984076499938965,
+            3.3209147453308105
+          ],
+          [
+            1.8496098518371582,
+            10.150091171264648,
+            3.482914924621582
+          ],
+          [
+            1.4607164859771729,
+            9.316106796264648,
+            3.6449146270751953
+          ],
+          [
+            1.071823239326477,
+            8.482122421264648,
+            3.806914806365967
+          ],
+          [
+            0.6829298734664917,
+            7.648138046264648,
+            3.968914747238159
+          ],
+          [
+            0.29403674602508545,
+            6.814153671264648,
+            4.130914688110352
+          ],
+          [
+            -0.09485666453838348,
+            5.980169296264648,
+            4.292914867401123
+          ]
+        ],
+        "reason": "Own sewn bolt rope follows this exact cloth boundary."
+      },
+      {
+        "rope": "mizzen_lateen_00_head_tie_0",
+        "start": "mizzen_lateen_00",
+        "end": "mizzen_lateen_00_lateen_yard",
+        "points_blender_m": [
+          [
+            -0.09485666453838348,
+            5.980169296264648,
+            4.292914867401123
+          ],
+          [
+            -0.1248006597161293,
+            5.915954113006592,
+            4.375481128692627
+          ]
+        ],
+        "reason": "Lateen head corner tied to its own long yard."
+      },
+      {
+        "rope": "mizzen_lateen_00_head_tie_1",
+        "start": "mizzen_lateen_00",
+        "end": "mizzen_lateen_00_lateen_yard",
+        "points_blender_m": [
+          [
+            3.5396602153778076,
+            13.774415969848633,
+            11.672914505004883
+          ],
+          [
+            3.509716272354126,
+            13.710201263427734,
+            11.755480766296387
+          ]
+        ],
+        "reason": "Lateen head corner tied to its own long yard."
+      },
+      {
+        "rope": "mizzen_lateen_00_halyard",
+        "start": "mizzen_lateen_00_lateen_yard",
+        "end": "mizzen",
+        "points_blender_m": [
+          [
+            0.8805561065673828,
+            8.071949005126953,
+            6.475818157196045
+          ],
+          [
+            0.0,
+            10.15999984741211,
+            12.442914962768555
+          ]
+        ],
+        "reason": "Halyard suspends the lateen yard beside the mast."
+      },
+      {
+        "rope": "mizzen_lateen_00_tack",
+        "start": "mizzen_lateen_00",
+        "end": "mizzen_lateen_00_tack_cleat",
+        "points_blender_m": [
+          [
+            -0.09485666453838348,
+            5.980169296264648,
+            4.292914867401123
+          ],
+          [
+            2.30330491065979,
+            5.82444429397583,
+            1.501343011856079
+          ]
+        ],
+        "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+      },
+      {
+        "rope": "mizzen_lateen_00_sheet",
+        "start": "mizzen_lateen_00",
+        "end": "mizzen_lateen_00_sheet_cleat",
+        "points_blender_m": [
+          [
+            3.794076442718506,
+            14.320013046264648,
+            2.672914743423462
+          ],
+          [
+            0.9580032229423523,
+            12.039999961853027,
+            2.390000104904175
+          ]
+        ],
+        "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+      },
+      {
+        "rope": "mizzen_shroud_starboard_00",
+        "start": "mizzen",
+        "end": "mizzen_chainplate_starboard_00",
+        "points_blender_m": [
+          [
+            0.0,
+            10.15999984741211,
+            12.442914962768555
+          ],
+          [
+            -2.3905246257781982,
+            5.188889026641846,
+            1.4857289791107178
+          ]
+        ],
+        "reason": "Standing shroud from mast head to the outboard chainplate location."
+      },
+      {
+        "rope": "mizzen_shroud_starboard_01",
+        "start": "mizzen",
+        "end": "mizzen_chainplate_starboard_01",
+        "points_blender_m": [
+          [
+            0.0,
+            10.15999984741211,
+            12.442914962768555
+          ],
+          [
+            -2.3347926139831543,
+            5.599999904632568,
+            1.4956533908843994
+          ]
+        ],
+        "reason": "Standing shroud from mast head to the outboard chainplate location."
+      },
+      {
+        "rope": "mizzen_shroud_starboard_02",
+        "start": "mizzen",
+        "end": "mizzen_chainplate_starboard_02",
+        "points_blender_m": [
+          [
+            0.0,
+            10.15999984741211,
+            12.442914962768555
+          ],
+          [
+            -2.0865328311920166,
+            7.304444313049316,
+            1.54246187210083
+          ]
+        ],
+        "reason": "Standing shroud from mast head to the outboard chainplate location."
+      },
+      {
+        "rope": "mizzen_shroud_port_00",
+        "start": "mizzen",
+        "end": "mizzen_chainplate_port_00",
+        "points_blender_m": [
+          [
+            0.0,
+            10.15999984741211,
+            12.442914962768555
+          ],
+          [
+            2.3905246257781982,
+            5.188889026641846,
+            1.4857289791107178
+          ]
+        ],
+        "reason": "Standing shroud from mast head to the outboard chainplate location."
+      },
+      {
+        "rope": "mizzen_shroud_port_01",
+        "start": "mizzen",
+        "end": "mizzen_lateen_00_tack_cleat",
+        "points_blender_m": [
+          [
+            0.0,
+            10.15999984741211,
+            12.442914962768555
+          ],
+          [
+            2.30330491065979,
+            5.82444429397583,
+            1.501343011856079
+          ]
+        ],
+        "reason": "Standing shroud from mast head to the outboard chainplate location."
+      },
+      {
+        "rope": "mizzen_shroud_port_02",
+        "start": "mizzen",
+        "end": "mizzen_chainplate_port_02",
+        "points_blender_m": [
+          [
+            0.0,
+            10.15999984741211,
+            12.442914962768555
+          ],
+          [
+            1.6915024518966675,
+            9.420000076293945,
+            1.6424543857574463
+          ]
+        ],
+        "reason": "Standing shroud from mast head to the outboard chainplate location."
+      },
+      {
+        "rope": "mizzen_head_stay",
+        "start": "mizzen",
+        "end": "main",
+        "points_blender_m": [
+          [
+            0.0,
+            10.15999984741211,
+            12.442914962768555
+          ],
+          [
+            0.0,
+            0.42500001192092896,
+            18.30290985107422
+          ]
+        ],
+        "reason": "Triatic stay connects the mast heads above the sail heads."
+      },
+      {
+        "rope": "main_head_stay",
+        "start": "main",
+        "end": "fore",
+        "points_blender_m": [
+          [
+            0.0,
+            0.42500001192092896,
+            18.30290985107422
+          ],
+          [
+            0.0,
+            -8.739999771118164,
+            15.902348518371582
+          ]
+        ],
+        "reason": "Triatic stay connects the mast heads above the sail heads."
+      },
+      {
+        "rope": "fore_stay",
+        "start": "fore",
+        "end": "bowsprit",
+        "points_blender_m": [
+          [
+            0.0,
+            -8.739999771118164,
+            15.902348518371582
+          ],
+          [
+            0.0,
+            -18.13187599182129,
+            2.7793354988098145
+          ]
+        ],
+        "reason": "Fore stay connects the foremast head to the bowsprit end."
+      },
+      {
+        "rope": "bowsprit_shroud_starboard",
+        "start": "bowsprit",
+        "end": "bowsprit_chainplate_minus1",
+        "points_blender_m": [
+          [
+            0.0,
+            -18.13187599182129,
+            2.7793354988098145
+          ],
+          [
+            -1.6876909732818604,
+            -9.619999885559082,
+            1.6668727397918701
+          ]
+        ],
+        "reason": "Bowsprit shroud returns to a bow fastening."
+      },
+      {
+        "rope": "bowsprit_shroud_port",
+        "start": "bowsprit",
+        "end": "bowsprit_chainplate_1",
+        "points_blender_m": [
+          [
+            0.0,
+            -18.13187599182129,
+            2.7793354988098145
+          ],
+          [
+            1.6876909732818604,
+            -9.619999885559082,
+            1.6668727397918701
+          ]
+        ],
+        "reason": "Bowsprit shroud returns to a bow fastening."
+      }
+    ],
+    "geometry_scope": "authored static rig pose; no sail-trim or cloth simulation",
+    "sail_area_m2": 230.4942753809251,
+    "sail_area_centroid_blender_m": [
+      2.0871994495391846,
+      1.498159646987915,
+      7.978550434112549
+    ],
+    "spar_count": 7,
+    "rope_count": 47,
+    "sail_count": 3
+  },
+  "intended_joints": [
+    {
+      "a": "hull_shell_port",
+      "b": "gunwale_port",
+      "reason": "The gunwale caps the upper edge of this timber hull side."
+    },
+    {
+      "a": "hull_shell_starboard",
+      "b": "gunwale_starboard",
+      "reason": "The gunwale caps the upper edge of this timber hull side."
+    },
+    {
+      "a": "hull_shell_port",
+      "b": "keel",
+      "reason": "The port and starboard plank shells are rabbeted onto the longitudinal keel."
+    },
+    {
+      "a": "hull_shell_starboard",
+      "b": "keel",
+      "reason": "The port and starboard plank shells are rabbeted onto the longitudinal keel."
+    },
+    {
+      "a": "hull_shell_port",
+      "b": "stern_closure",
+      "reason": "The hull side and backbone terminate in this real stem or stern closure."
+    },
+    {
+      "a": "hull_shell_starboard",
+      "b": "stern_closure",
+      "reason": "The hull side and backbone terminate in this real stem or stern closure."
+    },
+    {
+      "a": "keel",
+      "b": "stern_closure",
+      "reason": "The hull side and backbone terminate in this real stem or stern closure."
+    },
+    {
+      "a": "hull_shell_port",
+      "b": "bow_closure",
+      "reason": "The hull side and backbone terminate in this real stem or stern closure."
+    },
+    {
+      "a": "hull_shell_starboard",
+      "b": "bow_closure",
+      "reason": "The hull side and backbone terminate in this real stem or stern closure."
+    },
+    {
+      "a": "keel",
+      "b": "bow_closure",
+      "reason": "The hull side and backbone terminate in this real stem or stern closure."
+    },
+    {
+      "a": "stern_closure",
+      "b": "gunwale_port",
+      "reason": "This actual cap rail is housed into its terminal stem or stern timber."
+    },
+    {
+      "a": "stern_closure",
+      "b": "gunwale_starboard",
+      "reason": "This actual cap rail is housed into its terminal stem or stern timber."
+    },
+    {
+      "a": "bow_closure",
+      "b": "gunwale_port",
+      "reason": "This actual cap rail is housed into its terminal stem or stern timber."
+    },
+    {
+      "a": "bow_closure",
+      "b": "gunwale_starboard",
+      "reason": "This actual cap rail is housed into its terminal stem or stern timber."
+    },
+    {
+      "a": "main_deck",
+      "b": "hull_shell_port",
+      "reason": "This deck slab is housed into the actual closed hull side; the collision is the same concave timber geometry."
+    },
+    {
+      "a": "main_deck",
+      "b": "hull_shell_starboard",
+      "reason": "This deck slab is housed into the actual closed hull side; the collision is the same concave timber geometry."
+    },
+    {
+      "a": "main_deck",
+      "b": "stern_closure",
+      "reason": "This deck slab is housed into the actual closed hull side; the collision is the same concave timber geometry."
+    },
+    {
+      "a": "main_deck",
+      "b": "bow_closure",
+      "reason": "This deck slab is housed into the actual closed hull side; the collision is the same concave timber geometry."
+    },
+    {
+      "a": "main_deck_bearing_beam_0",
+      "b": "main_deck",
+      "reason": "This actual transverse deck beam supports the slab underside."
+    },
+    {
+      "a": "main_deck_bearing_beam_0",
+      "b": "hull_shell_port",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "main_deck_bearing_beam_0",
+      "b": "hull_shell_starboard",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "main_deck_bearing_beam_1",
+      "b": "main_deck",
+      "reason": "This actual transverse deck beam supports the slab underside."
+    },
+    {
+      "a": "main_deck_bearing_beam_1",
+      "b": "hull_shell_port",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "main_deck_bearing_beam_1",
+      "b": "hull_shell_starboard",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "main_deck_bearing_beam_2",
+      "b": "main_deck",
+      "reason": "This actual transverse deck beam supports the slab underside."
+    },
+    {
+      "a": "main_deck_bearing_beam_2",
+      "b": "hull_shell_port",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "main_deck_bearing_beam_2",
+      "b": "hull_shell_starboard",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "castle_deck_0",
+      "b": "hull_shell_port",
+      "reason": "This deck slab is housed into the actual closed hull side; the collision is the same concave timber geometry."
+    },
+    {
+      "a": "castle_deck_0",
+      "b": "hull_shell_starboard",
+      "reason": "This deck slab is housed into the actual closed hull side; the collision is the same concave timber geometry."
+    },
+    {
+      "a": "castle_deck_0",
+      "b": "stern_closure",
+      "reason": "This deck slab is housed into the actual closed hull side; the collision is the same concave timber geometry."
+    },
+    {
+      "a": "castle_deck_0_bearing_beam_0",
+      "b": "castle_deck_0",
+      "reason": "This actual transverse deck beam supports the slab underside."
+    },
+    {
+      "a": "castle_deck_0_bearing_beam_0",
+      "b": "hull_shell_port",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "castle_deck_0_bearing_beam_0",
+      "b": "hull_shell_starboard",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "castle_deck_0_bearing_beam_1",
+      "b": "castle_deck_0",
+      "reason": "This actual transverse deck beam supports the slab underside."
+    },
+    {
+      "a": "castle_deck_0_bearing_beam_1",
+      "b": "hull_shell_port",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "castle_deck_0_bearing_beam_1",
+      "b": "hull_shell_starboard",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "castle_deck_0_bearing_beam_2",
+      "b": "castle_deck_0",
+      "reason": "This actual transverse deck beam supports the slab underside."
+    },
+    {
+      "a": "castle_deck_0_bearing_beam_2",
+      "b": "hull_shell_port",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "castle_deck_0_bearing_beam_2",
+      "b": "hull_shell_starboard",
+      "reason": "The deck beam ends are housed into the inner hull planking."
+    },
+    {
+      "a": "castle_bulkhead_0_1",
+      "b": "main_deck",
+      "reason": "The castle end bulkhead meets its main and raised structural decks."
+    },
+    {
+      "a": "castle_bulkhead_0_1",
+      "b": "castle_deck_0",
+      "reason": "The castle end bulkhead meets its main and raised structural decks."
+    },
+    {
+      "a": "gun_carriage_0_port_00",
+      "b": "gun_cheek_0_port_00_minus_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_port_00_minus_1",
+      "b": "gun_carriage_0_port_00",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_port_00_minus_1",
+      "b": "gun_wheel_0_port_00_minus_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_port_00_minus_1",
+      "b": "gun_carriage_0_port_00",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_port_00_minus_1",
+      "b": "gun_cheek_0_port_00_minus_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_port_00_minus_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_port_00",
+      "b": "gun_cheek_0_port_00_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_port_00_1",
+      "b": "gun_carriage_0_port_00",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_port_00_1",
+      "b": "gun_wheel_0_port_00_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_port_00_1",
+      "b": "gun_carriage_0_port_00",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_port_00_1",
+      "b": "gun_cheek_0_port_00_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_port_00_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_port_00",
+      "b": "main_deck",
+      "reason": "The carriage feet bear on their structural gun deck or main deck."
+    },
+    {
+      "a": "gun_carriage_0_starboard_00",
+      "b": "gun_cheek_0_starboard_00_minus_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_starboard_00_minus_1",
+      "b": "gun_carriage_0_starboard_00",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_starboard_00_minus_1",
+      "b": "gun_wheel_0_starboard_00_minus_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_starboard_00_minus_1",
+      "b": "gun_carriage_0_starboard_00",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_starboard_00_minus_1",
+      "b": "gun_cheek_0_starboard_00_minus_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_starboard_00_minus_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_starboard_00",
+      "b": "gun_cheek_0_starboard_00_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_starboard_00_1",
+      "b": "gun_carriage_0_starboard_00",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_starboard_00_1",
+      "b": "gun_wheel_0_starboard_00_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_starboard_00_1",
+      "b": "gun_carriage_0_starboard_00",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_starboard_00_1",
+      "b": "gun_cheek_0_starboard_00_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_starboard_00_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_starboard_00",
+      "b": "main_deck",
+      "reason": "The carriage feet bear on their structural gun deck or main deck."
+    },
+    {
+      "a": "gun_carriage_0_port_01",
+      "b": "gun_cheek_0_port_01_minus_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_port_01_minus_1",
+      "b": "gun_carriage_0_port_01",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_port_01_minus_1",
+      "b": "gun_wheel_0_port_01_minus_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_port_01_minus_1",
+      "b": "gun_carriage_0_port_01",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_port_01_minus_1",
+      "b": "gun_cheek_0_port_01_minus_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_port_01_minus_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_port_01",
+      "b": "gun_cheek_0_port_01_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_axle_0_port_01_1",
+      "b": "gun_wheel_0_port_01_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_port_01_1",
+      "b": "gun_carriage_0_port_01",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_port_01_1",
+      "b": "gun_cheek_0_port_01_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_port_01_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_port_01",
+      "b": "main_deck",
+      "reason": "The carriage feet bear on their structural gun deck or main deck."
+    },
+    {
+      "a": "gun_carriage_0_starboard_01",
+      "b": "gun_cheek_0_starboard_01_minus_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_starboard_01_minus_1",
+      "b": "gun_carriage_0_starboard_01",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_starboard_01_minus_1",
+      "b": "gun_wheel_0_starboard_01_minus_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_starboard_01_minus_1",
+      "b": "gun_carriage_0_starboard_01",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_starboard_01_minus_1",
+      "b": "gun_cheek_0_starboard_01_minus_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_starboard_01_minus_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_starboard_01",
+      "b": "gun_cheek_0_starboard_01_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_axle_0_starboard_01_1",
+      "b": "gun_wheel_0_starboard_01_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_starboard_01_1",
+      "b": "gun_carriage_0_starboard_01",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_starboard_01_1",
+      "b": "gun_cheek_0_starboard_01_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_starboard_01_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_starboard_01",
+      "b": "main_deck",
+      "reason": "The carriage feet bear on their structural gun deck or main deck."
+    },
+    {
+      "a": "gun_carriage_0_port_02",
+      "b": "gun_cheek_0_port_02_minus_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_axle_0_port_02_minus_1",
+      "b": "gun_wheel_0_port_02_minus_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_port_02_minus_1",
+      "b": "gun_carriage_0_port_02",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_port_02_minus_1",
+      "b": "gun_cheek_0_port_02_minus_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_port_02_minus_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_port_02",
+      "b": "gun_cheek_0_port_02_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_port_02_1",
+      "b": "gun_carriage_0_port_02",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_port_02_1",
+      "b": "gun_wheel_0_port_02_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_port_02_1",
+      "b": "gun_carriage_0_port_02",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_port_02_1",
+      "b": "gun_cheek_0_port_02_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_port_02_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_port_02",
+      "b": "main_deck",
+      "reason": "The carriage feet bear on their structural gun deck or main deck."
+    },
+    {
+      "a": "gun_carriage_0_starboard_02",
+      "b": "gun_cheek_0_starboard_02_minus_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_axle_0_starboard_02_minus_1",
+      "b": "gun_wheel_0_starboard_02_minus_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_starboard_02_minus_1",
+      "b": "gun_carriage_0_starboard_02",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_starboard_02_minus_1",
+      "b": "gun_cheek_0_starboard_02_minus_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_starboard_02_minus_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_starboard_02",
+      "b": "gun_cheek_0_starboard_02_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_starboard_02_1",
+      "b": "gun_carriage_0_starboard_02",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_starboard_02_1",
+      "b": "gun_wheel_0_starboard_02_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_starboard_02_1",
+      "b": "gun_carriage_0_starboard_02",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_starboard_02_1",
+      "b": "gun_cheek_0_starboard_02_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_starboard_02_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_starboard_02",
+      "b": "main_deck",
+      "reason": "The carriage feet bear on their structural gun deck or main deck."
+    },
+    {
+      "a": "gun_carriage_0_port_03",
+      "b": "gun_cheek_0_port_03_minus_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_axle_0_port_03_minus_1",
+      "b": "gun_wheel_0_port_03_minus_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_port_03_minus_1",
+      "b": "gun_carriage_0_port_03",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_port_03_minus_1",
+      "b": "gun_cheek_0_port_03_minus_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_port_03_minus_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_port_03",
+      "b": "gun_cheek_0_port_03_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_port_03_1",
+      "b": "gun_carriage_0_port_03",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_port_03_1",
+      "b": "gun_wheel_0_port_03_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_port_03_1",
+      "b": "gun_carriage_0_port_03",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_port_03_1",
+      "b": "gun_cheek_0_port_03_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_port_03_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_port_03",
+      "b": "main_deck",
+      "reason": "The carriage feet bear on their structural gun deck or main deck."
+    },
+    {
+      "a": "gun_carriage_0_starboard_03",
+      "b": "gun_cheek_0_starboard_03_minus_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_axle_0_starboard_03_minus_1",
+      "b": "gun_wheel_0_starboard_03_minus_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_starboard_03_minus_1",
+      "b": "gun_carriage_0_starboard_03",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_starboard_03_minus_1",
+      "b": "gun_cheek_0_starboard_03_minus_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_starboard_03_minus_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_starboard_03",
+      "b": "gun_cheek_0_starboard_03_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_starboard_03_1",
+      "b": "gun_carriage_0_starboard_03",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_starboard_03_1",
+      "b": "gun_wheel_0_starboard_03_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_starboard_03_1",
+      "b": "gun_carriage_0_starboard_03",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_starboard_03_1",
+      "b": "gun_cheek_0_starboard_03_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_starboard_03_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_starboard_03",
+      "b": "main_deck",
+      "reason": "The carriage feet bear on their structural gun deck or main deck."
+    },
+    {
+      "a": "gun_carriage_0_port_04",
+      "b": "gun_cheek_0_port_04_minus_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_port_04_minus_1",
+      "b": "gun_carriage_0_port_04",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_port_04_minus_1",
+      "b": "gun_wheel_0_port_04_minus_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_port_04_minus_1",
+      "b": "gun_carriage_0_port_04",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_port_04_minus_1",
+      "b": "gun_cheek_0_port_04_minus_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_port_04_minus_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_port_04",
+      "b": "gun_cheek_0_port_04_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_port_04_1",
+      "b": "gun_carriage_0_port_04",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_port_04_1",
+      "b": "gun_wheel_0_port_04_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_port_04_1",
+      "b": "gun_carriage_0_port_04",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_port_04_1",
+      "b": "gun_cheek_0_port_04_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_port_04_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_port_04",
+      "b": "main_deck",
+      "reason": "The carriage feet bear on their structural gun deck or main deck."
+    },
+    {
+      "a": "gun_carriage_0_starboard_04",
+      "b": "gun_cheek_0_starboard_04_minus_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_starboard_04_minus_1",
+      "b": "gun_carriage_0_starboard_04",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_starboard_04_minus_1",
+      "b": "gun_wheel_0_starboard_04_minus_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_starboard_04_minus_1",
+      "b": "gun_carriage_0_starboard_04",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_starboard_04_minus_1",
+      "b": "gun_cheek_0_starboard_04_minus_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_starboard_04_minus_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_starboard_04",
+      "b": "gun_cheek_0_starboard_04_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_starboard_04_1",
+      "b": "gun_carriage_0_starboard_04",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_starboard_04_1",
+      "b": "gun_wheel_0_starboard_04_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_starboard_04_1",
+      "b": "gun_carriage_0_starboard_04",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_starboard_04_1",
+      "b": "gun_cheek_0_starboard_04_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_starboard_04_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_starboard_04",
+      "b": "main_deck",
+      "reason": "The carriage feet bear on their structural gun deck or main deck."
+    },
+    {
+      "a": "gun_carriage_0_port_05",
+      "b": "gun_cheek_0_port_05_minus_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_axle_0_port_05_minus_1",
+      "b": "gun_wheel_0_port_05_minus_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_port_05_minus_1",
+      "b": "gun_carriage_0_port_05",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_port_05_minus_1",
+      "b": "gun_cheek_0_port_05_minus_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_port_05_minus_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_port_05",
+      "b": "gun_cheek_0_port_05_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_port_05_1",
+      "b": "gun_carriage_0_port_05",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_port_05_1",
+      "b": "gun_wheel_0_port_05_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_port_05_1",
+      "b": "gun_carriage_0_port_05",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_port_05_1",
+      "b": "gun_cheek_0_port_05_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_port_05_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_port_05",
+      "b": "main_deck",
+      "reason": "The carriage feet bear on their structural gun deck or main deck."
+    },
+    {
+      "a": "gun_carriage_0_starboard_05",
+      "b": "gun_cheek_0_starboard_05_minus_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_axle_0_starboard_05_minus_1",
+      "b": "gun_wheel_0_starboard_05_minus_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_starboard_05_minus_1",
+      "b": "gun_carriage_0_starboard_05",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_starboard_05_minus_1",
+      "b": "gun_cheek_0_starboard_05_minus_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_starboard_05_minus_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_starboard_05",
+      "b": "gun_cheek_0_starboard_05_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_starboard_05_1",
+      "b": "gun_carriage_0_starboard_05",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_starboard_05_1",
+      "b": "gun_wheel_0_starboard_05_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_starboard_05_1",
+      "b": "gun_carriage_0_starboard_05",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_starboard_05_1",
+      "b": "gun_cheek_0_starboard_05_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_starboard_05_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_starboard_05",
+      "b": "main_deck",
+      "reason": "The carriage feet bear on their structural gun deck or main deck."
+    },
+    {
+      "a": "gun_carriage_0_port_06",
+      "b": "gun_cheek_0_port_06_minus_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_port_06_minus_1",
+      "b": "gun_carriage_0_port_06",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_port_06_minus_1",
+      "b": "gun_wheel_0_port_06_minus_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_port_06_minus_1",
+      "b": "gun_carriage_0_port_06",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_port_06_minus_1",
+      "b": "gun_cheek_0_port_06_minus_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_port_06_minus_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_port_06",
+      "b": "gun_cheek_0_port_06_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_axle_0_port_06_1",
+      "b": "gun_wheel_0_port_06_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_port_06_1",
+      "b": "gun_carriage_0_port_06",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_port_06_1",
+      "b": "gun_cheek_0_port_06_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_port_06_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_port_06",
+      "b": "main_deck",
+      "reason": "The carriage feet bear on their structural gun deck or main deck."
+    },
+    {
+      "a": "gun_carriage_0_starboard_06",
+      "b": "gun_cheek_0_starboard_06_minus_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_starboard_06_minus_1",
+      "b": "gun_carriage_0_starboard_06",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_starboard_06_minus_1",
+      "b": "gun_wheel_0_starboard_06_minus_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_starboard_06_minus_1",
+      "b": "gun_carriage_0_starboard_06",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_starboard_06_minus_1",
+      "b": "gun_cheek_0_starboard_06_minus_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_starboard_06_minus_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_starboard_06",
+      "b": "gun_cheek_0_starboard_06_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_axle_0_starboard_06_1",
+      "b": "gun_wheel_0_starboard_06_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_starboard_06_1",
+      "b": "gun_carriage_0_starboard_06",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_starboard_06_1",
+      "b": "gun_cheek_0_starboard_06_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_starboard_06_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_starboard_06",
+      "b": "main_deck",
+      "reason": "The carriage feet bear on their structural gun deck or main deck."
+    },
+    {
+      "a": "gun_carriage_0_port_07",
+      "b": "gun_cheek_0_port_07_minus_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_axle_0_port_07_minus_1",
+      "b": "gun_wheel_0_port_07_minus_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_port_07_minus_1",
+      "b": "gun_carriage_0_port_07",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_port_07_minus_1",
+      "b": "gun_cheek_0_port_07_minus_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_port_07_minus_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_port_07",
+      "b": "gun_cheek_0_port_07_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_port_07_1",
+      "b": "gun_carriage_0_port_07",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_port_07_1",
+      "b": "gun_wheel_0_port_07_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_port_07_1",
+      "b": "gun_carriage_0_port_07",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_port_07_1",
+      "b": "gun_cheek_0_port_07_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_port_07_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_port_07",
+      "b": "main_deck",
+      "reason": "The carriage feet bear on their structural gun deck or main deck."
+    },
+    {
+      "a": "gun_carriage_0_starboard_07",
+      "b": "gun_cheek_0_starboard_07_minus_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_axle_0_starboard_07_minus_1",
+      "b": "gun_wheel_0_starboard_07_minus_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_starboard_07_minus_1",
+      "b": "gun_carriage_0_starboard_07",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_starboard_07_minus_1",
+      "b": "gun_cheek_0_starboard_07_minus_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_starboard_07_minus_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_starboard_07",
+      "b": "gun_cheek_0_starboard_07_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_starboard_07_1",
+      "b": "gun_carriage_0_starboard_07",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_starboard_07_1",
+      "b": "gun_wheel_0_starboard_07_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_starboard_07_1",
+      "b": "gun_carriage_0_starboard_07",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_starboard_07_1",
+      "b": "gun_cheek_0_starboard_07_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_starboard_07_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_starboard_07",
+      "b": "main_deck",
+      "reason": "The carriage feet bear on their structural gun deck or main deck."
+    },
+    {
+      "a": "gun_carriage_0_port_08",
+      "b": "gun_cheek_0_port_08_minus_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_axle_0_port_08_minus_1",
+      "b": "gun_wheel_0_port_08_minus_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_port_08_minus_1",
+      "b": "gun_carriage_0_port_08",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_port_08_minus_1",
+      "b": "gun_cheek_0_port_08_minus_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_port_08_minus_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_port_08",
+      "b": "gun_cheek_0_port_08_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_port_08_1",
+      "b": "gun_carriage_0_port_08",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_port_08_1",
+      "b": "gun_wheel_0_port_08_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_port_08_1",
+      "b": "gun_carriage_0_port_08",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_port_08_1",
+      "b": "gun_cheek_0_port_08_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_port_08_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_port_08",
+      "b": "main_deck",
+      "reason": "The carriage feet bear on their structural gun deck or main deck."
+    },
+    {
+      "a": "gun_carriage_0_starboard_08",
+      "b": "gun_cheek_0_starboard_08_minus_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_axle_0_starboard_08_minus_1",
+      "b": "gun_wheel_0_starboard_08_minus_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_starboard_08_minus_1",
+      "b": "gun_carriage_0_starboard_08",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_starboard_08_minus_1",
+      "b": "gun_cheek_0_starboard_08_minus_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_starboard_08_minus_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_starboard_08",
+      "b": "gun_cheek_0_starboard_08_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_starboard_08_1",
+      "b": "gun_carriage_0_starboard_08",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_starboard_08_1",
+      "b": "gun_wheel_0_starboard_08_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_starboard_08_1",
+      "b": "gun_carriage_0_starboard_08",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_starboard_08_1",
+      "b": "gun_cheek_0_starboard_08_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_starboard_08_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_starboard_08",
+      "b": "main_deck",
+      "reason": "The carriage feet bear on their structural gun deck or main deck."
+    },
+    {
+      "a": "gun_carriage_0_port_09",
+      "b": "gun_cheek_0_port_09_minus_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_port_09_minus_1",
+      "b": "gun_carriage_0_port_09",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_port_09_minus_1",
+      "b": "gun_wheel_0_port_09_minus_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_port_09_minus_1",
+      "b": "gun_carriage_0_port_09",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_port_09_minus_1",
+      "b": "gun_cheek_0_port_09_minus_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_port_09_minus_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_port_09",
+      "b": "gun_cheek_0_port_09_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_port_09_1",
+      "b": "gun_carriage_0_port_09",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_port_09_1",
+      "b": "gun_wheel_0_port_09_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_port_09_1",
+      "b": "gun_carriage_0_port_09",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_port_09_1",
+      "b": "gun_cheek_0_port_09_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_port_09_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_port_09",
+      "b": "main_deck",
+      "reason": "The carriage feet bear on their structural gun deck or main deck."
+    },
+    {
+      "a": "gun_carriage_0_starboard_09",
+      "b": "gun_cheek_0_starboard_09_minus_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_starboard_09_minus_1",
+      "b": "gun_carriage_0_starboard_09",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_starboard_09_minus_1",
+      "b": "gun_wheel_0_starboard_09_minus_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_starboard_09_minus_1",
+      "b": "gun_carriage_0_starboard_09",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_starboard_09_minus_1",
+      "b": "gun_cheek_0_starboard_09_minus_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_starboard_09_minus_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_starboard_09",
+      "b": "gun_cheek_0_starboard_09_1",
+      "reason": "The carriage cheek is mortised into its base."
+    },
+    {
+      "a": "gun_wheel_0_starboard_09_1",
+      "b": "gun_carriage_0_starboard_09",
+      "reason": "The carriage wheel is fixed to the axle and side cheek."
+    },
+    {
+      "a": "gun_axle_0_starboard_09_1",
+      "b": "gun_wheel_0_starboard_09_1",
+      "reason": "This axle passes through the actual wheel hub."
+    },
+    {
+      "a": "gun_axle_0_starboard_09_1",
+      "b": "gun_carriage_0_starboard_09",
+      "reason": "The axle is held in the carriage side cheek."
+    },
+    {
+      "a": "gun_trunnion_0_starboard_09_1",
+      "b": "gun_cheek_0_starboard_09_1",
+      "reason": "The trunnion bears in the actual carriage cheek."
+    },
+    {
+      "a": "gun_wheel_0_starboard_09_1",
+      "b": "main_deck",
+      "reason": "The wheel bears on this structural gun-deck surface."
+    },
+    {
+      "a": "gun_carriage_0_starboard_09",
+      "b": "main_deck",
+      "reason": "The carriage feet bear on their structural gun deck or main deck."
+    },
+    {
+      "a": "anchor_shank_1",
+      "b": "anchor_fluke_1_minus_1",
+      "reason": "The anchor flukes are forged onto the shank crown."
+    },
+    {
+      "a": "anchor_shank_1",
+      "b": "anchor_fluke_1_1",
+      "reason": "The anchor flukes are forged onto the shank crown."
+    },
+    {
+      "a": "anchor_fluke_1_minus_1",
+      "b": "anchor_fluke_1_1",
+      "reason": "The two forged fluke arms meet at their actual common crown."
+    },
+    {
+      "a": "anchor_shank_1",
+      "b": "anchor_stock_1",
+      "reason": "The wooden stock passes through the upper anchor shank."
+    },
+    {
+      "a": "cathead_shoe_1_0",
+      "b": "cathead_post_1_0",
+      "reason": "The stock-support shoe is housed into its actual deck post."
+    },
+    {
+      "a": "cathead_shoe_1_0",
+      "b": "anchor_stock_1",
+      "reason": "The stowed anchor stock rests on this separated shoe, outside the open shank gap."
+    },
+    {
+      "a": "cathead_shoe_1_0",
+      "b": "hull_shell_port",
+      "reason": "This stock-support shoe passes through the real upper planking at its mounting."
+    },
+    {
+      "a": "cathead_post_1_0",
+      "b": "main_deck",
+      "reason": "This stock-support post bears on its actual structural deck."
+    },
+    {
+      "a": "cathead_shoe_1_1",
+      "b": "cathead_post_1_1",
+      "reason": "The stock-support shoe is housed into its actual deck post."
+    },
+    {
+      "a": "cathead_shoe_1_1",
+      "b": "anchor_stock_1",
+      "reason": "The stowed anchor stock rests on this separated shoe, outside the open shank gap."
+    },
+    {
+      "a": "cathead_shoe_1_1",
+      "b": "hull_shell_port",
+      "reason": "This stock-support shoe passes through the real upper planking at its mounting."
+    },
+    {
+      "a": "cathead_post_1_1",
+      "b": "main_deck",
+      "reason": "This stock-support post bears on its actual structural deck."
+    },
+    {
+      "a": "anchor_shank_minus_1",
+      "b": "anchor_fluke_minus_1_minus_1",
+      "reason": "The anchor flukes are forged onto the shank crown."
+    },
+    {
+      "a": "anchor_shank_minus_1",
+      "b": "anchor_fluke_minus_1_1",
+      "reason": "The anchor flukes are forged onto the shank crown."
+    },
+    {
+      "a": "anchor_fluke_minus_1_minus_1",
+      "b": "anchor_fluke_minus_1_1",
+      "reason": "The two forged fluke arms meet at their actual common crown."
+    },
+    {
+      "a": "anchor_shank_minus_1",
+      "b": "anchor_stock_minus_1",
+      "reason": "The wooden stock passes through the upper anchor shank."
+    },
+    {
+      "a": "cathead_shoe_minus_1_0",
+      "b": "cathead_post_minus_1_0",
+      "reason": "The stock-support shoe is housed into its actual deck post."
+    },
+    {
+      "a": "cathead_shoe_minus_1_0",
+      "b": "anchor_stock_minus_1",
+      "reason": "The stowed anchor stock rests on this separated shoe, outside the open shank gap."
+    },
+    {
+      "a": "cathead_shoe_minus_1_0",
+      "b": "hull_shell_starboard",
+      "reason": "This stock-support shoe passes through the real upper planking at its mounting."
+    },
+    {
+      "a": "cathead_post_minus_1_0",
+      "b": "main_deck",
+      "reason": "This stock-support post bears on its actual structural deck."
+    },
+    {
+      "a": "cathead_shoe_minus_1_1",
+      "b": "cathead_post_minus_1_1",
+      "reason": "The stock-support shoe is housed into its actual deck post."
+    },
+    {
+      "a": "cathead_shoe_minus_1_1",
+      "b": "anchor_stock_minus_1",
+      "reason": "The stowed anchor stock rests on this separated shoe, outside the open shank gap."
+    },
+    {
+      "a": "cathead_shoe_minus_1_1",
+      "b": "hull_shell_starboard",
+      "reason": "This stock-support shoe passes through the real upper planking at its mounting."
+    },
+    {
+      "a": "cathead_post_minus_1_1",
+      "b": "main_deck",
+      "reason": "This stock-support post bears on its actual structural deck."
+    },
+    {
+      "a": "steering_post",
+      "b": "steering_rim",
+      "reason": "The wheel spindle is supported by this deck pedestal."
+    },
+    {
+      "a": "steering_spoke_0",
+      "b": "steering_rim",
+      "reason": "The spoke is housed into the actual wheel rim."
+    },
+    {
+      "a": "steering_spoke_0",
+      "b": "steering_post",
+      "reason": "The spoke joins the steering wheel hub."
+    },
+    {
+      "a": "steering_spoke_1",
+      "b": "steering_rim",
+      "reason": "The spoke is housed into the actual wheel rim."
+    },
+    {
+      "a": "steering_spoke_1",
+      "b": "steering_post",
+      "reason": "The spoke joins the steering wheel hub."
+    },
+    {
+      "a": "steering_spoke_2",
+      "b": "steering_rim",
+      "reason": "The spoke is housed into the actual wheel rim."
+    },
+    {
+      "a": "steering_spoke_2",
+      "b": "steering_post",
+      "reason": "The spoke joins the steering wheel hub."
+    },
+    {
+      "a": "steering_spoke_3",
+      "b": "steering_rim",
+      "reason": "The spoke is housed into the actual wheel rim."
+    },
+    {
+      "a": "steering_spoke_3",
+      "b": "steering_post",
+      "reason": "The spoke joins the steering wheel hub."
+    },
+    {
+      "a": "steering_spoke_4",
+      "b": "steering_rim",
+      "reason": "The spoke is housed into the actual wheel rim."
+    },
+    {
+      "a": "steering_spoke_4",
+      "b": "steering_post",
+      "reason": "The spoke joins the steering wheel hub."
+    },
+    {
+      "a": "steering_spoke_5",
+      "b": "steering_rim",
+      "reason": "The spoke is housed into the actual wheel rim."
+    },
+    {
+      "a": "steering_spoke_5",
+      "b": "steering_post",
+      "reason": "The spoke joins the steering wheel hub."
+    },
+    {
+      "a": "steering_spoke_6",
+      "b": "steering_rim",
+      "reason": "The spoke is housed into the actual wheel rim."
+    },
+    {
+      "a": "steering_spoke_6",
+      "b": "steering_post",
+      "reason": "The spoke joins the steering wheel hub."
+    },
+    {
+      "a": "steering_spoke_7",
+      "b": "steering_rim",
+      "reason": "The spoke is housed into the actual wheel rim."
+    },
+    {
+      "a": "steering_spoke_7",
+      "b": "steering_post",
+      "reason": "The spoke joins the steering wheel hub."
+    },
+    {
+      "a": "steering_post",
+      "b": "main_deck",
+      "reason": "The steering pedestal is seated on the aft deck."
+    },
+    {
+      "a": "steering_post",
+      "b": "castle_deck_0",
+      "reason": "The steering pedestal is seated on the aft deck."
+    },
+    {
+      "a": "capstan",
+      "b": "main_deck",
+      "reason": "The capstan spindle is seated in the main deck bearing."
+    },
+    {
+      "a": "rudder_stock",
+      "b": "rudder_blade",
+      "reason": "The real rudder blade is fixed to its stock."
+    },
+    {
+      "a": "rudder_hinge_0",
+      "b": "rudder_stock",
+      "reason": "The hinge bears on the actual rudder stock."
+    },
+    {
+      "a": "rudder_hinge_0",
+      "b": "keel",
+      "reason": "This real rudder gudgeon is bolted into the actual stern end of the backbone."
+    },
+    {
+      "a": "rudder_hinge_1",
+      "b": "rudder_stock",
+      "reason": "The hinge bears on the actual rudder stock."
+    },
+    {
+      "a": "rudder_hinge_1",
+      "b": "keel",
+      "reason": "This real rudder gudgeon is bolted into the actual stern end of the backbone."
+    },
+    {
+      "a": "rudder_hinge_2",
+      "b": "rudder_stock",
+      "reason": "The hinge bears on the actual rudder stock."
+    },
+    {
+      "a": "rudder_hinge_2",
+      "b": "stern_closure",
+      "reason": "This real rudder hinge mounts to the stern structure."
+    },
+    {
+      "a": "fore_lateen_00_bolt_0",
+      "b": "fore_lateen_00",
+      "reason": "Own sewn bolt rope follows this exact cloth boundary."
+    },
+    {
+      "a": "fore_lateen_00_bolt_1",
+      "b": "fore_lateen_00",
+      "reason": "Own sewn bolt rope follows this exact cloth boundary."
+    },
+    {
+      "a": "fore_lateen_00_bolt_2",
+      "b": "fore_lateen_00",
+      "reason": "Own sewn bolt rope follows this exact cloth boundary."
+    },
+    {
+      "a": "fore_lateen_00_head_tie_0",
+      "b": "fore_lateen_00",
+      "reason": "Lateen head corner tied to its own long yard."
+    },
+    {
+      "a": "fore_lateen_00_head_tie_0",
+      "b": "fore_lateen_00_lateen_yard",
+      "reason": "Lateen head corner tied to its own long yard."
+    },
+    {
+      "a": "fore_lateen_00_head_tie_1",
+      "b": "fore_lateen_00",
+      "reason": "Lateen head corner tied to its own long yard."
+    },
+    {
+      "a": "fore_lateen_00_head_tie_1",
+      "b": "fore_lateen_00_lateen_yard",
+      "reason": "Lateen head corner tied to its own long yard."
+    },
+    {
+      "a": "fore_lateen_00_halyard",
+      "b": "fore_lateen_00_lateen_yard",
+      "reason": "Halyard suspends the lateen yard beside the mast."
+    },
+    {
+      "a": "fore_lateen_00_halyard",
+      "b": "fore",
+      "reason": "Halyard suspends the lateen yard beside the mast."
+    },
+    {
+      "a": "fore_lateen_00_lateen_yard",
+      "b": "fore",
+      "reason": "Lateen yard is hoisted beside its mast, not merged into the cloth."
+    },
+    {
+      "a": "fore_lateen_00_tack",
+      "b": "fore_lateen_00",
+      "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+    },
+    {
+      "a": "fore_lateen_00_tack",
+      "b": "fore_lateen_00_tack_cleat",
+      "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+    },
+    {
+      "a": "fore_lateen_00_sheet",
+      "b": "fore_lateen_00",
+      "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+    },
+    {
+      "a": "fore_lateen_00_sheet",
+      "b": "fore_lateen_00_sheet_cleat",
+      "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+    },
+    {
+      "a": "fore_shroud_starboard_00",
+      "b": "fore",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "fore_shroud_starboard_00",
+      "b": "fore_chainplate_starboard_00",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "fore_shroud_starboard_01",
+      "b": "fore",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "fore_shroud_starboard_01",
+      "b": "fore_chainplate_starboard_01",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "fore_shroud_starboard_02",
+      "b": "fore",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "fore_shroud_starboard_02",
+      "b": "fore_chainplate_starboard_02",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "fore_shroud_port_00",
+      "b": "fore",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "fore_shroud_port_00",
+      "b": "fore_chainplate_port_00",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "fore_shroud_port_01",
+      "b": "fore",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "fore_shroud_port_01",
+      "b": "fore_chainplate_port_01",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "fore_shroud_port_02",
+      "b": "fore",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "fore_shroud_port_02",
+      "b": "fore_chainplate_port_02",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "main_lateen_00_bolt_0",
+      "b": "main_lateen_00",
+      "reason": "Own sewn bolt rope follows this exact cloth boundary."
+    },
+    {
+      "a": "main_lateen_00_bolt_1",
+      "b": "main_lateen_00",
+      "reason": "Own sewn bolt rope follows this exact cloth boundary."
+    },
+    {
+      "a": "main_lateen_00_bolt_2",
+      "b": "main_lateen_00",
+      "reason": "Own sewn bolt rope follows this exact cloth boundary."
+    },
+    {
+      "a": "main_lateen_00_head_tie_0",
+      "b": "main_lateen_00",
+      "reason": "Lateen head corner tied to its own long yard."
+    },
+    {
+      "a": "main_lateen_00_head_tie_0",
+      "b": "main_lateen_00_lateen_yard",
+      "reason": "Lateen head corner tied to its own long yard."
+    },
+    {
+      "a": "main_lateen_00_head_tie_1",
+      "b": "main_lateen_00",
+      "reason": "Lateen head corner tied to its own long yard."
+    },
+    {
+      "a": "main_lateen_00_head_tie_1",
+      "b": "main_lateen_00_lateen_yard",
+      "reason": "Lateen head corner tied to its own long yard."
+    },
+    {
+      "a": "main_lateen_00_halyard",
+      "b": "main_lateen_00_lateen_yard",
+      "reason": "Halyard suspends the lateen yard beside the mast."
+    },
+    {
+      "a": "main_lateen_00_halyard",
+      "b": "main",
+      "reason": "Halyard suspends the lateen yard beside the mast."
+    },
+    {
+      "a": "main_lateen_00_lateen_yard",
+      "b": "main",
+      "reason": "Lateen yard is hoisted beside its mast, not merged into the cloth."
+    },
+    {
+      "a": "main_lateen_00_tack",
+      "b": "main_lateen_00",
+      "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+    },
+    {
+      "a": "main_lateen_00_tack",
+      "b": "main_lateen_00_tack_cleat",
+      "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+    },
+    {
+      "a": "main_lateen_00_sheet",
+      "b": "main_lateen_00",
+      "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+    },
+    {
+      "a": "main_lateen_00_sheet",
+      "b": "main_lateen_00_sheet_cleat",
+      "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+    },
+    {
+      "a": "main_shroud_starboard_00",
+      "b": "main",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "main_shroud_starboard_00",
+      "b": "main_chainplate_starboard_00",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "main_shroud_starboard_01",
+      "b": "main",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "main_shroud_starboard_01",
+      "b": "main_chainplate_starboard_01",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "main_shroud_starboard_02",
+      "b": "main",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "main_shroud_starboard_02",
+      "b": "main_chainplate_starboard_02",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "main_shroud_port_00",
+      "b": "main",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "main_shroud_port_00",
+      "b": "main_chainplate_port_00",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "main_shroud_port_01",
+      "b": "main",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "main_shroud_port_01",
+      "b": "main_chainplate_port_01",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "main_shroud_port_02",
+      "b": "main",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "main_shroud_port_02",
+      "b": "main_chainplate_port_02",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "mizzen_lateen_00_bolt_0",
+      "b": "mizzen_lateen_00",
+      "reason": "Own sewn bolt rope follows this exact cloth boundary."
+    },
+    {
+      "a": "mizzen_lateen_00_bolt_1",
+      "b": "mizzen_lateen_00",
+      "reason": "Own sewn bolt rope follows this exact cloth boundary."
+    },
+    {
+      "a": "mizzen_lateen_00_bolt_2",
+      "b": "mizzen_lateen_00",
+      "reason": "Own sewn bolt rope follows this exact cloth boundary."
+    },
+    {
+      "a": "mizzen_lateen_00_head_tie_0",
+      "b": "mizzen_lateen_00",
+      "reason": "Lateen head corner tied to its own long yard."
+    },
+    {
+      "a": "mizzen_lateen_00_head_tie_0",
+      "b": "mizzen_lateen_00_lateen_yard",
+      "reason": "Lateen head corner tied to its own long yard."
+    },
+    {
+      "a": "mizzen_lateen_00_head_tie_1",
+      "b": "mizzen_lateen_00",
+      "reason": "Lateen head corner tied to its own long yard."
+    },
+    {
+      "a": "mizzen_lateen_00_head_tie_1",
+      "b": "mizzen_lateen_00_lateen_yard",
+      "reason": "Lateen head corner tied to its own long yard."
+    },
+    {
+      "a": "mizzen_lateen_00_halyard",
+      "b": "mizzen_lateen_00_lateen_yard",
+      "reason": "Halyard suspends the lateen yard beside the mast."
+    },
+    {
+      "a": "mizzen_lateen_00_halyard",
+      "b": "mizzen",
+      "reason": "Halyard suspends the lateen yard beside the mast."
+    },
+    {
+      "a": "mizzen_lateen_00_lateen_yard",
+      "b": "mizzen",
+      "reason": "Lateen yard is hoisted beside its mast, not merged into the cloth."
+    },
+    {
+      "a": "mizzen_lateen_00_tack",
+      "b": "mizzen_lateen_00",
+      "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+    },
+    {
+      "a": "mizzen_lateen_00_tack",
+      "b": "mizzen_lateen_00_tack_cleat",
+      "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+    },
+    {
+      "a": "mizzen_lateen_00_sheet",
+      "b": "mizzen_lateen_00",
+      "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+    },
+    {
+      "a": "mizzen_lateen_00_sheet",
+      "b": "mizzen_lateen_00_sheet_cleat",
+      "reason": "Tack or sheet runs below the corresponding boundary corner to the deck."
+    },
+    {
+      "a": "mizzen_shroud_starboard_00",
+      "b": "mizzen",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "mizzen_shroud_starboard_00",
+      "b": "mizzen_chainplate_starboard_00",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "mizzen_shroud_starboard_01",
+      "b": "mizzen",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "mizzen_shroud_starboard_01",
+      "b": "mizzen_chainplate_starboard_01",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "mizzen_shroud_starboard_02",
+      "b": "mizzen",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "mizzen_shroud_starboard_02",
+      "b": "mizzen_chainplate_starboard_02",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "mizzen_shroud_port_00",
+      "b": "mizzen",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "mizzen_shroud_port_00",
+      "b": "mizzen_chainplate_port_00",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "mizzen_shroud_port_01",
+      "b": "mizzen",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "mizzen_shroud_port_01",
+      "b": "mizzen_lateen_00_tack_cleat",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "mizzen_shroud_port_02",
+      "b": "mizzen",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "mizzen_shroud_port_02",
+      "b": "mizzen_chainplate_port_02",
+      "reason": "Standing shroud from mast head to the outboard chainplate location."
+    },
+    {
+      "a": "mizzen_head_stay",
+      "b": "mizzen",
+      "reason": "Triatic stay connects the mast heads above the sail heads."
+    },
+    {
+      "a": "mizzen_head_stay",
+      "b": "main",
+      "reason": "Triatic stay connects the mast heads above the sail heads."
+    },
+    {
+      "a": "main_head_stay",
+      "b": "main",
+      "reason": "Triatic stay connects the mast heads above the sail heads."
+    },
+    {
+      "a": "main_head_stay",
+      "b": "fore",
+      "reason": "Triatic stay connects the mast heads above the sail heads."
+    },
+    {
+      "a": "fore_stay",
+      "b": "fore",
+      "reason": "Fore stay connects the foremast head to the bowsprit end."
+    },
+    {
+      "a": "fore_stay",
+      "b": "bowsprit",
+      "reason": "Fore stay connects the foremast head to the bowsprit end."
+    },
+    {
+      "a": "bowsprit_shroud_starboard",
+      "b": "bowsprit",
+      "reason": "Bowsprit shroud returns to a bow fastening."
+    },
+    {
+      "a": "bowsprit_shroud_starboard",
+      "b": "bowsprit_chainplate_minus1",
+      "reason": "Bowsprit shroud returns to a bow fastening."
+    },
+    {
+      "a": "bowsprit_shroud_port",
+      "b": "bowsprit",
+      "reason": "Bowsprit shroud returns to a bow fastening."
+    },
+    {
+      "a": "bowsprit_shroud_port",
+      "b": "bowsprit_chainplate_1",
+      "reason": "Bowsprit shroud returns to a bow fastening."
+    },
+    {
+      "a": "fore",
+      "b": "main_deck",
+      "reason": "This mast heel or spar support is housed into a structural deck."
+    },
+    {
+      "a": "main",
+      "b": "main_deck",
+      "reason": "This mast heel or spar support is housed into a structural deck."
+    },
+    {
+      "a": "mizzen",
+      "b": "main_deck",
+      "reason": "This mast heel or spar support is housed into a structural deck."
+    },
+    {
+      "a": "mizzen",
+      "b": "castle_deck_0",
+      "reason": "This mast heel or spar support is housed into a structural deck."
+    },
+    {
+      "a": "bowsprit",
+      "b": "main_deck",
+      "reason": "This mast heel or spar support is housed into a structural deck."
+    },
+    {
+      "a": "castle_bulkhead_0_1",
+      "b": "hull_shell_port",
+      "reason": "The castle end bulkhead is seated in the actual upper hull planking."
+    },
+    {
+      "a": "castle_bulkhead_0_1",
+      "b": "hull_shell_starboard",
+      "reason": "The castle end bulkhead is seated in the actual upper hull planking."
+    },
+    {
+      "a": "fore",
+      "b": "main_deck_bearing_beam_2",
+      "reason": "The mast heel is seated in the actual supporting deck beam."
+    },
+    {
+      "a": "main",
+      "b": "main_deck_bearing_beam_1",
+      "reason": "The mast heel is seated in the actual supporting deck beam."
+    },
+    {
+      "a": "mizzen",
+      "b": "main_deck_bearing_beam_0",
+      "reason": "The mast heel is seated in the actual supporting deck beam."
+    },
+    {
+      "a": "bowsprit",
+      "b": "hull_shell_port",
+      "reason": "The bowsprit heel is housed in the actual bow timber socket."
+    },
+    {
+      "a": "bowsprit",
+      "b": "hull_shell_starboard",
+      "reason": "The bowsprit heel is housed in the actual bow timber socket."
+    },
+    {
+      "a": "bowsprit",
+      "b": "bow_closure",
+      "reason": "The bowsprit heel is housed in the actual bow timber socket."
+    },
+    {
+      "a": "fore_lateen_00_tack_cleat",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "fore_lateen_00_tack_cleat",
+      "b": "hull_shell_port",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "fore_lateen_00_sheet_cleat",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "fore_chainplate_starboard_00",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "fore_chainplate_starboard_01",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "fore_chainplate_starboard_02",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "fore_chainplate_port_00",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "fore_chainplate_port_01",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "fore_chainplate_port_02",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "main_lateen_00_tack_cleat",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "main_lateen_00_sheet_cleat",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "main_chainplate_starboard_00",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "main_chainplate_starboard_01",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "main_chainplate_starboard_02",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "main_chainplate_port_00",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "main_chainplate_port_01",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "main_chainplate_port_02",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "mizzen_lateen_00_tack_cleat",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "mizzen_lateen_00_sheet_cleat",
+      "b": "castle_deck_0",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "mizzen_lateen_00_sheet_cleat",
+      "b": "hull_shell_port",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "mizzen_chainplate_starboard_00",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "mizzen_chainplate_starboard_01",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "mizzen_chainplate_starboard_02",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "mizzen_chainplate_port_00",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "mizzen_chainplate_port_02",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "bowsprit_chainplate_minus1",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    },
+    {
+      "a": "bowsprit_chainplate_1",
+      "b": "main_deck",
+      "reason": "This actual iron fastening is through-bolted into the intersected timber mounting surface."
+    }
+  ],
+  "materials": {
+    "method": "guide-sized authored PBR atlas upgrade",
+    "materials": [
+      {
+        "source": "side_oiled_oak",
+        "material": "v2_burta_drewno",
+        "palette_srgb": [
+          0.46,
+          0.33,
+          0.22
+        ],
+        "old_uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "uv_tile_m": [
+          4.4,
+          1.1
+        ],
+        "image_px": [
+          8192,
+          2048
+        ],
+        "family": "hull",
+        "metallic": 0
+      },
+      {
+        "source": "wood.001",
+        "material": "v2_drewno",
+        "palette_srgb": [
+          0.62,
+          0.46,
+          0.3
+        ],
+        "old_uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "image_px": [
+          2048,
+          2048
+        ],
+        "family": "wood",
+        "metallic": 0
+      },
+      {
+        "source": "wood_dark",
+        "material": "v2_drewno_ciemne",
+        "palette_srgb": [
+          0.4,
+          0.28,
+          0.17
+        ],
+        "old_uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "image_px": [
+          2048,
+          2048
+        ],
+        "family": "wood",
+        "metallic": 0
+      },
+      {
+        "source": "deck_planking",
+        "material": "v2_poklad",
+        "palette_srgb": [
+          0.62,
+          0.575,
+          0.5
+        ],
+        "old_uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "uv_tile_m": [
+          3.52,
+          0.88
+        ],
+        "image_px": [
+          8192,
+          2048
+        ],
+        "family": "deck",
+        "metallic": 0
+      },
+      {
+        "source": "iron",
+        "material": "v2_zelazo",
+        "palette_srgb": [
+          0.19,
+          0.18,
+          0.17
+        ],
+        "old_uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "uv_tile_m": [
+          1.0,
+          1.0
+        ],
+        "image_px": [
+          2048,
+          2048
+        ],
+        "family": "iron",
+        "metallic": 1
+      },
+      {
+        "source": "canvas",
+        "material": "v2_plotno",
+        "palette_srgb": [
+          0.84,
+          0.8,
+          0.7
+        ],
+        "old_uv_tile_m": [
+          2.4,
+          2.4
+        ],
+        "uv_tile_m": [
+          2.4,
+          2.4
+        ],
+        "image_px": [
+          2048,
+          2048
+        ],
+        "family": "canvas",
+        "metallic": 0
+      },
+      {
+        "source": "rope_untarred",
+        "material": "v2_lina_jasna",
+        "palette_srgb": [
+          0.64,
+          0.57,
+          0.43
+        ],
+        "old_uv_tile_m": [
+          1.0,
+          0.5
+        ],
+        "uv_tile_m": [
+          1.0,
+          1.0
+        ],
+        "image_px": [
+          1024,
+          512
+        ],
+        "family": "rope",
+        "metallic": 0
+      }
+    ],
+    "provenance": {
+      "license": "project-authored procedural textures; no external imagery",
+      "basis": [
+        "docs/en/03-hull-construction.md",
+        "docs/en/04-decks-bulwarks-stern-head.md",
+        "docs/en/08-ropes-blocks-and-sails.md",
+        "docs/en/13-3d-quality-checklist.md"
+      ],
+      "atlas_m": {
+        "deck": [
+          3.52,
+          0.88
+        ],
+        "hull": [
+          4.4,
+          1.1
+        ],
+        "paint": [
+          4.4,
+          1.1
+        ],
+        "wood": [
+          2.0,
+          2.0
+        ],
+        "iron": [
+          1.0,
+          1.0
+        ],
+        "rope": [
+          1.0,
+          1.0
+        ],
+        "canvas": [
+          2.4,
+          2.4
+        ]
+      },
+      "method": "continuous authored grain, physical seams/trunnels, normal from metric height derivatives",
+      "palette_srgb": {
+        "poklad": [
+          0.62,
+          0.575,
+          0.5
+        ],
+        "burta_drewno": [
+          0.46,
+          0.33,
+          0.22
+        ],
+        "drewno": [
+          0.62,
+          0.46,
+          0.3
+        ],
+        "drewno_ciemne": [
+          0.4,
+          0.28,
+          0.17
+        ],
+        "drewno_czarne": [
+          0.23,
+          0.215,
+          0.19
+        ],
+        "laweta": [
+          0.4,
+          0.15,
+          0.09
+        ],
+        "farba_czarna": [
+          0.2,
+          0.19,
+          0.18
+        ],
+        "farba_czarna_gladka": [
+          0.23,
+          0.22,
+          0.21
+        ],
+        "farba_ochra": [
+          0.68,
+          0.52,
+          0.27
+        ],
+        "farba_czerwona": [
+          0.55,
+          0.17,
+          0.1
+        ],
+        "farba_niebieska": [
+          0.16,
+          0.23,
+          0.36
+        ],
+        "farba_dno_biala": [
+          0.84,
+          0.81,
+          0.73
+        ],
+        "farba_dno_czerwona": [
+          0.42,
+          0.18,
+          0.12
+        ],
+        "rzezby_zlote": [
+          0.82,
+          0.63,
+          0.3
+        ],
+        "zelazo": [
+          0.19,
+          0.18,
+          0.17
+        ],
+        "zelazo_lufa": [
+          0.19,
+          0.18,
+          0.17
+        ],
+        "braz": [
+          0.62,
+          0.42,
+          0.2
+        ],
+        "lina_smolowana": [
+          0.23,
+          0.21,
+          0.18
+        ],
+        "lina_jasna": [
+          0.64,
+          0.57,
+          0.43
+        ],
+        "plotno": [
+          0.84,
+          0.8,
+          0.7
+        ],
+        "szklo": [
+          0.18,
+          0.23,
+          0.25
+        ]
+      }
+    }
+  },
+  "origin": {
+    "units": "metres",
+    "waterline_y": 0,
+    "axes": "glTF +Y up,+Z bow,+X across"
+  },
+  "collision": {
+    "scope": "Closed hollow hull shell and static deck slabs; excludes rig, fittings and gameplay walking physics. Real ports and open wells remain voids.",
+    "visual_nodes": [
+      "hull_shell_port",
+      "hull_shell_starboard",
+      "keel",
+      "stern_closure",
+      "bow_closure",
+      "main_deck",
+      "main_deck_bearing_beam_0",
+      "main_deck_bearing_beam_1",
+      "main_deck_bearing_beam_2",
+      "castle_deck_0",
+      "castle_deck_0_bearing_beam_0",
+      "castle_deck_0_bearing_beam_1",
+      "castle_deck_0_bearing_beam_2"
+    ]
+  },
+  "type_contract": {
+    "hull_nodes": [
+      "hull_shell_port",
+      "hull_shell_starboard",
+      "keel",
+      "stern_closure",
+      "bow_closure"
+    ],
+    "mast_nodes": [
+      "fore",
+      "main",
+      "mizzen"
+    ],
+    "sail_nodes": [
+      "fore_lateen_00",
+      "main_lateen_00",
+      "mizzen_lateen_00"
+    ],
+    "gun_nodes": [
+      "gun_barrel_0_port_00",
+      "gun_barrel_0_starboard_00",
+      "gun_barrel_0_port_01",
+      "gun_barrel_0_starboard_01",
+      "gun_barrel_0_port_02",
+      "gun_barrel_0_starboard_02",
+      "gun_barrel_0_port_03",
+      "gun_barrel_0_starboard_03",
+      "gun_barrel_0_port_04",
+      "gun_barrel_0_starboard_04",
+      "gun_barrel_0_port_05",
+      "gun_barrel_0_starboard_05",
+      "gun_barrel_0_port_06",
+      "gun_barrel_0_starboard_06",
+      "gun_barrel_0_port_07",
+      "gun_barrel_0_starboard_07",
+      "gun_barrel_0_port_08",
+      "gun_barrel_0_starboard_08",
+      "gun_barrel_0_port_09",
+      "gun_barrel_0_starboard_09"
+    ],
+    "rig_plan": [
+      {
+        "name": "fore",
+        "at": 0.25,
+        "height_m": 14.5,
+        "rake": -0.12,
+        "sails": [
+          {
+            "kind": "lateen",
+            "z": 0.94,
+            "width_m": 12.3,
+            "height_m": 12
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "at": 0,
+        "height_m": 17.0,
+        "rake": 0.025,
+        "sails": [
+          {
+            "kind": "lateen",
+            "z": 0.94,
+            "width_m": 15.0,
+            "height_m": 14
+          }
+        ]
+      },
+      {
+        "name": "mizzen",
+        "at": -0.3,
+        "height_m": 11.0,
+        "rake": 0.16,
+        "sails": [
+          {
+            "kind": "lateen",
+            "z": 0.93,
+            "width_m": 8.6,
+            "height_m": 9
+          }
+        ],
+        "shroud_lead_fraction": 0.12
+      }
+    ]
+  },
+  "hull_numeric_finish": [
+    {
+      "method": "evaluate valid authored modifiers, weld10um, remove collinear/opposed fragments, explicit tube-end caps, outward closed islands",
+      "objects": [
+        {
+          "name": "hull_shell_port",
+          "before": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "zero_area_faces": 2,
+            "faces": 6976,
+            "vertices": 3490
+          },
+          "after": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "zero_area_faces": 0,
+            "faces": 6976,
+            "vertices": 3490
+          },
+          "capped_tube_ends": 0,
+          "outward_islands_reoriented": 0,
+          "separated_contact_vertices": 0,
+          "internal_interface_faces_removed": 0,
+          "zero_volume_components_removed": 0,
+          "collapsed_rope_tubes_rebuilt": [],
+          "triangulation": "BEAUTY",
+          "authored_modifiers_applied": true,
+          "attempts": [
+            {
+              "score": 0,
+              "triangulation": "BEAUTY",
+              "authored_modifiers_applied": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "method": "evaluate valid authored modifiers, weld10um, remove collinear/opposed fragments, explicit tube-end caps, outward closed islands",
+      "objects": [
+        {
+          "name": "hull_shell_starboard",
+          "before": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "zero_area_faces": 1,
+            "faces": 6976,
+            "vertices": 3490
+          },
+          "after": {
+            "non_manifold_edges": 0,
+            "boundary_edges": 0,
+            "zero_area_faces": 0,
+            "faces": 6976,
+            "vertices": 3490
+          },
+          "capped_tube_ends": 0,
+          "outward_islands_reoriented": 0,
+          "separated_contact_vertices": 0,
+          "internal_interface_faces_removed": 0,
+          "zero_volume_components_removed": 0,
+          "collapsed_rope_tubes_rebuilt": [],
+          "triangulation": "BEAUTY",
+          "authored_modifiers_applied": true,
+          "attempts": [
+            {
+              "score": 0,
+              "triangulation": "BEAUTY",
+              "authored_modifiers_applied": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "main_triangles": 25968,
+    "lod1_triangles": 20364,
+    "lod2_triangles": 15728,
+    "collision_triangles": 15412,
+    "actualgun_count": 20
+  },
+  "scope": "Static duel asset. No crew navigation, sailing physics, live cannon controls or complete interiors are claimed.",
+  "provenance": {
+    "method": "Original procedural construction from authored offsets following repository guide chapters 02\u201309 and 12\u201313. No binary game meshes or proprietary textures imported.",
+    "dimension_status": "Authored reconstruction: dimensions are design choices, not measured stock POTC2003 model dimensions.",
+    "source_evidence": [
+      {
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c",
+        "kind": "stock-derived public script",
+        "claims": [
+          "Ordinary game family, class and cannon count only."
+        ],
+        "commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+        "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+      },
+      {
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/SEA_AI/walk/Xebec_walk.c",
+        "kind": "stock-derived public locator script",
+        "claims": [
+          "Qualitative deck/mast layout only; no official metre dimensions."
+        ]
+      },
+      {
+        "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+        "kind": "2004 player data table",
+        "claims": [
+          "Contemporary ordinary ship roster and gun counts."
+        ]
+      },
+      {
+        "url": "https://www.piratesahoy.net/threads/ships-and-their-use.2077/",
+        "kind": "contemporary stock/mod discussion",
+        "claims": [
+          "Stock family role and distinction from mod variants."
+        ]
+      }
+    ],
+    "limitations": "Contemporary stock-game discussion explicitly calls Xebec fully fore-and-aft rigged; game wiki notes overhanging bowsprit and aft mizzen. Our three-lateen reconstruction follows these cues and historical type, with authored hull proportions and sail sizes."
+  },
+  "source_evidence": [
+    {
+      "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c",
+      "kind": "stock-derived public script",
+      "claims": [
+        "Ordinary game family, class and cannon count only."
+      ],
+      "commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+      "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+    },
+    {
+      "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/SEA_AI/walk/Xebec_walk.c",
+      "kind": "stock-derived public locator script",
+      "claims": [
+        "Qualitative deck/mast layout only; no official metre dimensions."
+      ]
+    },
+    {
+      "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+      "kind": "2004 player data table",
+      "claims": [
+        "Contemporary ordinary ship roster and gun counts."
+      ]
+    },
+    {
+      "url": "https://www.piratesahoy.net/threads/ships-and-their-use.2077/",
+      "kind": "contemporary stock/mod discussion",
+      "claims": [
+        "Stock family role and distinction from mod variants."
+      ]
+    }
+  ],
+  "distinctive_silhouette": "Long fine pointed hull, strongly raked fore/mizzen, three lateens and long low bowsprit.",
+  "static_scope": {
+    "animated_controls": false,
+    "walkability": false,
+    "navigation_routes": false,
+    "collision": "Shared exact static concave hull/deck solids; no playable deck claim."
+  },
+  "palette_contract": {
+    "changed": [
+      "paint_hull",
+      "paint_trim"
+    ],
+    "deliberately_unchanged": [
+      "natural deck timber",
+      "mast and spar timber",
+      "tarred standing rigging",
+      "natural running rope",
+      "linen cloth",
+      "iron guns and fittings"
+    ]
+  },
+  "authored_deck_clearance": "Aft deck break ends at-.35L, clear of actual mizzen chainplate at-.3364L and first gun at-.31L. No fastening is embedded in the transverse bulkhead."
+}
