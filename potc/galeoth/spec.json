@@ -1,0 +1,298 @@
+{
+  "schema": 4,
+  "id": "galeoth",
+  "family": "galeoth",
+  "title": "Armed mixed-rig fast trader",
+  "asset_type": "static-duel-ship",
+  "scope": "Static visual duel asset; no animated controls, walkability or engine integration claimed.",
+  "units": "metres",
+  "axes": "glTF +Y up, +Z bow, +X port; origin at midships design waterline",
+  "dimension_status": "Authored reconstruction: dimensions are design choices, not measured stock POTC2003 model dimensions.",
+  "paint_materials": [
+    "paint_hull",
+    "paint_trim"
+  ],
+  "palettes": [
+    {
+      "id": "ochre",
+      "paintHull": [
+        0.38132601143253014,
+        0.14702726649759498,
+        0.03189603307301153,
+        1.0
+      ],
+      "paintTrim": [
+        0.7230551289219693,
+        0.5028864580325687,
+        0.18116424424986022,
+        1.0
+      ],
+      "description": "Warm ochre hull and buff trim; natural timber deck, tarred rigging, linen sails and iron unchanged."
+    },
+    {
+      "id": "navy",
+      "paintHull": [
+        0.00972121732023785,
+        0.043735029256973465,
+        0.0953074666309647,
+        1.0
+      ],
+      "paintTrim": [
+        0.5520114015120001,
+        0.3564001441459435,
+        0.14412847085805777,
+        1.0
+      ],
+      "description": "Deep navy hull and muted gold trim; natural timber deck, tarred rigging, linen sails and iron unchanged."
+    }
+  ],
+  "length": 26.0,
+  "beam": 7.2,
+  "draft": 2.1,
+  "freeboard": 1.8,
+  "game_class": 5,
+  "cannons": 16,
+  "hull": {
+    "profile": [
+      [
+        -0.5,
+        0.22,
+        1.9,
+        0.58
+      ],
+      [
+        -0.43,
+        0.63,
+        0.72,
+        0.35
+      ],
+      [
+        -0.28,
+        0.95,
+        0.14,
+        0.12
+      ],
+      [
+        -0.05,
+        1.0,
+        0,
+        0
+      ],
+      [
+        0.16,
+        0.97,
+        0.13,
+        0.07
+      ],
+      [
+        0.33,
+        0.74,
+        0.61,
+        0.29
+      ],
+      [
+        0.45,
+        0.34,
+        1.49,
+        0.59
+      ],
+      [
+        0.5,
+        0.025,
+        2.7,
+        0.95
+      ]
+    ],
+    "section_power": 0.6,
+    "stern_style": "round",
+    "plank_rows": 18,
+    "bulwark_height": 1.25,
+    "deck_beam_factor": 0.89,
+    "quarterdeck": {
+      "from": -0.5,
+      "to": -0.285,
+      "height_m": 1.25
+    },
+    "forecastle": {
+      "from": 0.42,
+      "to": 0.5,
+      "height_m": 0.55
+    }
+  },
+  "guns": {
+    "rows": [
+      {
+        "pairs": 8,
+        "z_m": 2.47,
+        "from": -0.35,
+        "to": 0.36,
+        "follow_sheer": true
+      }
+    ]
+  },
+  "rig": {
+    "masts": [
+      {
+        "name": "fore",
+        "at": 0.25,
+        "height_m": 18.0,
+        "rake": 0.02,
+        "sails": [
+          {
+            "kind": "square",
+            "z": 0.45,
+            "width_m": 10.4,
+            "height_m": 5.7
+          },
+          {
+            "kind": "square",
+            "z": 0.76,
+            "width_m": 8.0,
+            "height_m": 4.5
+          },
+          {
+            "kind": "square",
+            "z": 0.95,
+            "width_m": 5.1,
+            "height_m": 2.6
+          }
+        ]
+      },
+      {
+        "name": "main",
+        "at": -0.3,
+        "height_m": 19.0,
+        "rake": 0.05,
+        "sails": [
+          {
+            "kind": "lateen",
+            "z": 0.56,
+            "width_m": 9.0,
+            "height_m": 9.5
+          },
+          {
+            "kind": "square",
+            "z": 0.87,
+            "width_m": 7.2,
+            "height_m": 4.3
+          }
+        ],
+        "shroud_lead_fraction": 0.12
+      }
+    ],
+    "bowsprit": {
+      "length_m": 5.8,
+      "angle_deg": 24
+    }
+  },
+  "source_paths": [
+    "potc/galeoth/stock-evidence.json"
+  ],
+  "game_source": {
+    "provenance": {
+      "method": "Original procedural construction from authored offsets following repository guide chapters 02–09 and 12–13. No binary game meshes or proprietary textures imported.",
+      "dimension_status": "Authored reconstruction: dimensions are design choices, not measured stock POTC2003 model dimensions.",
+      "source_evidence": [
+        {
+          "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c",
+          "kind": "stock-derived public script",
+          "claims": [
+            "Ordinary game family, class and cannon count only."
+          ],
+          "commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+          "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+        },
+        {
+          "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/SEA_AI/walk/GALEOTH1_walk.c",
+          "kind": "stock-derived public locator script",
+          "claims": [
+            "Qualitative deck/mast layout only; no official metre dimensions."
+          ]
+        },
+        {
+          "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+          "kind": "2004 player data table",
+          "claims": [
+            "Contemporary ordinary ship roster and gun counts."
+          ]
+        },
+        {
+          "url": "https://www.piratesahoy.net/threads/ships-and-their-use.2077/",
+          "kind": "contemporary stock/mod discussion",
+          "claims": [
+            "Stock family role and distinction from mod variants."
+          ]
+        },
+        {
+          "url": "https://www.piratesahoy.net/threads/rethinking-ships-in-potc-new-project.2769/",
+          "kind": "2004 stock discussion",
+          "claims": [
+            "Type-name uncertainty and small single-mast Tartane cue; historical dictionary is insufficient to establish game model."
+          ]
+        }
+      ],
+      "limitations": "Stock-derived walk script has widely separated fore/main climbing groups and high aft deck. Contemporary player discussion describes an armed fast trader and distinguishes the later gaff-boom Galeoth. The mixed square/lateen set rig is our inference, not a claim to recover the proprietary stock mesh."
+    },
+    "source_evidence": [
+      {
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c",
+        "kind": "stock-derived public script",
+        "claims": [
+          "Ordinary game family, class and cannon count only."
+        ],
+        "commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+        "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+      },
+      {
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/SEA_AI/walk/GALEOTH1_walk.c",
+        "kind": "stock-derived public locator script",
+        "claims": [
+          "Qualitative deck/mast layout only; no official metre dimensions."
+        ]
+      },
+      {
+        "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+        "kind": "2004 player data table",
+        "claims": [
+          "Contemporary ordinary ship roster and gun counts."
+        ]
+      },
+      {
+        "url": "https://www.piratesahoy.net/threads/ships-and-their-use.2077/",
+        "kind": "contemporary stock/mod discussion",
+        "claims": [
+          "Stock family role and distinction from mod variants."
+        ]
+      },
+      {
+        "url": "https://www.piratesahoy.net/threads/rethinking-ships-in-potc-new-project.2769/",
+        "kind": "2004 stock discussion",
+        "claims": [
+          "Type-name uncertainty and small single-mast Tartane cue; historical dictionary is insufficient to establish game model."
+        ]
+      }
+    ],
+    "distinctive_silhouette": "Broad round afterbody, pronounced quarterdeck, widely separated fore/main masts with square canvas and an aft lateen.",
+    "static_scope": {
+      "animated_controls": false,
+      "walkability": false,
+      "navigation_routes": false,
+      "collision": "Shared exact static concave hull/deck solids; no playable deck claim."
+    },
+    "palette_contract": {
+      "changed": [
+        "paint_hull",
+        "paint_trim"
+      ],
+      "deliberately_unchanged": [
+        "natural deck timber",
+        "mast and spar timber",
+        "tarred standing rigging",
+        "natural running rope",
+        "linen cloth",
+        "iron guns and fittings"
+      ]
+    },
+    "authored_deck_clearance": "Quarterdeck break at-.285L lies between the first two gun carriage footprints. Main shrouds lead forward from their mast so their real iron fastenings clear the transverse bulkhead and the authored canvas. Forecastle starts ahead of the battery."
+  }
+}
