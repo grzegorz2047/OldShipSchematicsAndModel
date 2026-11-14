@@ -146,7 +146,9 @@
             "width_m": 5.6,
             "height_m": 3.2
           }
-        ]
+        ],
+        "heel_z_m": -0.663075986599514,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
       },
       {
         "name": "main",
@@ -172,7 +174,9 @@
             "width_m": 6.1,
             "height_m": 3.0
           }
-        ]
+        ],
+        "heel_z_m": -0.6996905189882082,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
       }
     ],
     "bowsprit": {
@@ -181,11 +185,15 @@
     }
   },
   "source_paths": [
-    "potc/lugger/stock-evidence.json"
+    "potc/lugger/stock-evidence.json",
+    "potc/lugger/layout-research.json",
+    "potc/common/v5_review.py",
+    "potc/lugger/detail-camera-overrides.json",
+    "potc/lugger/render-detail-overrides.py"
   ],
   "game_source": {
     "provenance": {
-      "method": "Original procedural construction from authored offsets following repository guide chapters 02–09 and 12–13. No binary game meshes or proprietary textures imported.",
+      "method": "Original procedural construction from authored offsets following repository guide chapters 02\u201309 and 12\u201313. No binary game meshes or proprietary textures imported.",
       "dimension_status": "Authored reconstruction: dimensions are design choices, not measured stock POTC2003 model dimensions.",
       "source_evidence": [
         {
@@ -288,6 +296,121 @@
         "iron guns and fittings"
       ]
     },
-    "authored_deck_clearance": "Deck breaks lie between cannon carriage footprints; low forecastles begin ahead of the battery. No gun/carriage is deliberately embedded in a bulkhead or raised deck."
-  }
+    "authored_deck_clearance": "Deck breaks lie between cannon carriage footprints; low forecastles begin ahead of the battery. No gun/carriage is deliberately embedded in a bulkhead or raised deck.",
+    "detailed_layout_research": "potc/lugger/layout-research.json"
+  },
+  "detailed_layout": {
+    "schema": 1,
+    "kind": "decked",
+    "frame_spacing_m": 0.46,
+    "hold": {
+      "from": -0.3,
+      "to": 0.37,
+      "floor_z_m": -0.8,
+      "follow_sheer": true,
+      "ceiling_planking": true,
+      "bilge_visible": true,
+      "headroom_m": 2.1
+    },
+    "cabin": {
+      "from": -0.47,
+      "to": -0.33,
+      "floor_z_m": -0.3,
+      "ceiling_deck_id": "castle_0",
+      "follow_sheer": true,
+      "door_width_m": 1.0,
+      "door_height_m": 1.85,
+      "clear_height_m": 1.95,
+      "cut_main_deck": true,
+      "furniture": [
+        "bench",
+        "locker"
+      ],
+      "door_x_m": 0.85,
+      "minimum_headroom_m": 1.85,
+      "aisle_width_m": 0.65,
+      "berth_omission_reason": "The authored narrow aft cuddy cannot support a freestanding 0.60 \u00d7 1.80 m adult berth while retaining its 0.65 m aisle, supported sole and real descending companion. The read source establishes a modest cuddy but no fixed berth arrangement for this game family; bench and locker are inferred without extending the cabin into the battery."
+    },
+    "hatch": {
+      "id": "main_hatch",
+      "at": 0.12,
+      "length_m": 2,
+      "width_m": 1.35,
+      "x_m": 0.0,
+      "coaming_height_m": 0.25,
+      "deck_id": "main",
+      "access": "stair",
+      "open": true
+    },
+    "extra_hatches": [],
+    "companionways": [],
+    "lower_decks": [],
+    "partitions": [],
+    "clear_aisle_width_m": 1.1,
+    "passage_width_m": 1.0,
+    "standing_height_m": 1.85,
+    "evidence": [
+      {
+        "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-66567",
+        "title": "Royal Museums Greenwich SLR0606: French 8-gun lugger, circa 1800",
+        "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+        "confirmed": [
+          "Contemporary plank-on-frame clinker model is decked, equipped and rigged.",
+          "Inspected stern-quarter image shows a clear working deck, low access coaming, guns, rope and restrained stern."
+        ],
+        "application": [
+          "One low working deck and compact access/cuddy, with no grand cabin suite.",
+          "POTC two-mast square rig and twelve-gun count are retained; this three-mast lugger supplies fitting vocabulary only."
+        ]
+      },
+      {
+        "url": "https://www.maritimeviews.co.uk/west-cornwall-luggers-and-mfv/pz-28-ada/",
+        "title": "National Maritime Museum Cornwall / Tony Pawlyn: PZ.28 Ada",
+        "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+        "confirmed": [
+          "Register-based account distinguishes open/half-decked and later decked states.",
+          "A small fore-deck cuddy is described for crew sleeping on the earlier vessel."
+        ],
+        "application": [
+          "Establishes the modest scale of a crew cuddy; no fixed berth plan is documented for this game family. Our aft bench/locker cuddy is authored to match the preserved quarterdeck, not Ada\u2019s fore-cuddy."
+        ]
+      }
+    ],
+    "confidence": "Authored reconstruction informed by read source material, not a recovered stock game interior.",
+    "machinery": {
+      "capstan_at": 0.02
+    },
+    "notes": [
+      "Large uncluttered working hold -0.30L to +0.37L, floor -0.80 m, cargo laid beside a central aisle.",
+      "Small after cuddy -0.47L to -0.33L, sunk sole -0.30 m, bench and locker, with no freestanding adult berth; no saloon table suite.",
+      "2.0 \u00d7 1.35 m main hatch at +0.12L, low quarterdeck companion and visible ladder/stair.",
+      "Twelve open-battery guns, low bulwarks, compact capstan with messenger rope, and actual fitted planked cargo boxes.",
+      "Later Cornish fishing records constrain accommodation scale, not the chronology or exact rig of the game asset.",
+      "Cargo assortment and compartment dimensions are authored.",
+      "One offset descending companion enters the cabin through its forward door. No redundant hole is cut through the short cabin roof; this preserves useful furniture and working-deck area."
+    ],
+    "dimension_status": "Dimensions, frame spacing, compartments and fitting positions are authored estimates fitted to the preserved POTC-family hull. These sources do not document the proprietary retail model and do not establish exact stock interiors. No museum image is copied into the model or its textures.",
+    "fittings": [
+      "capstan",
+      "bilge_pump",
+      "bitts",
+      "belaying_pins_and_lead_blocks",
+      "anchors",
+      "bench",
+      "locker",
+      "planked_cargo_boxes",
+      "capstan_messenger_rope"
+    ],
+    "research_path": "layout-research.json",
+    "compartments": [
+      {
+        "id": "coastal_working_hold",
+        "deck_id": "hold",
+        "from": -0.3,
+        "to": 0.37,
+        "role": "coastal_cargo"
+      }
+    ]
+  },
+  "detail_schema": 5
 }
