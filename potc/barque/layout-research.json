@@ -1,0 +1,334 @@
+{
+  "schema": 1,
+  "research_date": "2026-11-14",
+  "scope": "Source-informed authored wooden interiors for five ordinary POTC families; no proprietary game mesh, original interior, or exact historical reconstruction claimed.",
+  "coordinate_convention": "longitudinal fractions -0.5 stern to +0.5 bow; vertical metres above waterline",
+  "family": "barque",
+  "sources": [
+    {
+      "title": "Endeavour (1768), RMG ZAZ7845",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-244406",
+      "source_type": "museum archival plan",
+      "accessed": "2026-11-14",
+      "read": true,
+      "claims": [
+        "The 11 July 1768 drawing records quarterdeck, upper deck, forecastle, lower deck and fore-and-aft platforms of the purchased collier fitted for exploration."
+      ],
+      "limits": "A wooden period merchant-hull analogue; Endeavour was ship-rigged. This does not identify the POTC Barque or prove its rig, dimensions or exact cabin plan.",
+      "applies_to": [
+        "The 11 July 1768 drawing records quarterdeck, upper deck, forecastle, lower deck and fore-and-aft platforms of the purchased collier fitted for exploration."
+      ]
+    },
+    {
+      "title": "Life aboard HMB Endeavour, Australian National Maritime Museum",
+      "url": "https://www.sea.museum/en/learn/resource/life-aboard-hmb-endeavour",
+      "source_type": "museum reconstruction and historical interpretation",
+      "accessed": "2026-11-14",
+      "read": true,
+      "claims": [
+        "The original bulk coal carrier used oak frames/planks/deck beams and pine decks and masts.",
+        "Conversion added a mess deck on the cargo-hold beams; stores included wooden casks, and cooking used an iron hearth protected from the timber deck.",
+        "The aft great cabin served work and eating, with smaller officers cabins on the lower deck."
+      ],
+      "limits": "Use timber construction, cask storage and spatial hierarchy as analogues. Do not copy the special exploration conversion or modern replica machinery.",
+      "applies_to": [
+        "The original bulk coal carrier used oak frames/planks/deck beams and pine decks and masts.",
+        "Conversion added a mess deck on the cargo-hold beams; stores included wooden casks, and cooking used an iron hearth protected from the timber deck.",
+        "The aft great cabin served work and eating, with smaller officers cabins on the lower deck."
+      ]
+    },
+    {
+      "title": "Endeavour shipwreck pump well evidence, ANMM (22 November 2023)",
+      "url": "https://www.sea.museum/en/about/media/2023/11/museum-releases-further-evidence-to-support-its-case-for-identifying-endeavour-shipwreck",
+      "source_type": "museum archaeological research",
+      "accessed": "2026-11-14",
+      "read": true,
+      "claims": [
+        "The museum compares a surviving pump-shaft stump and pump-well partitions with the 1768 lower-hold plan."
+      ],
+      "limits": "Supports a timber-enclosed pump well as a real working structure; coordinates and pump design in this asset are authored.",
+      "applies_to": [
+        "The museum compares a surviving pump-shaft stump and pump-well partitions with the 1768 lower-hold plan."
+      ]
+    },
+    {
+      "title": "Life on Board, Vasa Museum",
+      "url": "https://www.vasamuseet.se/en/explore/vasa-history/life-on-board",
+      "source_type": "museum archaeological and historical interpretation",
+      "accessed": "2026-11-14",
+      "read": true,
+      "claims": [
+        "The museum identifies provision casks in the hold and a brick-lined cooking hearth forward of the mainmast.",
+        "Senior officers lived in aft sterncastle cabins with glass windows and furniture."
+      ],
+      "limits": "A 1628 warship analogue for construction and room hierarchy only; no claim that a merchant held Vasa-scale decoration or its exact internal arrangement.",
+      "applies_to": [
+        "The museum identifies provision casks in the hold and a brick-lined cooking hearth forward of the mainmast.",
+        "Senior officers lived in aft sterncastle cabins with glass windows and furniture."
+      ]
+    },
+    {
+      "title": "Cargo vessel; Barque, RMG SLR1096, circa 1880",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-67057",
+      "source_type": "later museum model comparator",
+      "accessed": "2026-11-14",
+      "read": true,
+      "image_inspected": "https://collections.rmg.co.uk/media/499/383/f7831_002.jpg",
+      "claims": [
+        "The model has three cargo hatches accessing the hold and an aft fore-and-aft-rigged mizzen."
+      ],
+      "limits": "Later generic cargo-access/rig comparator only. Iron/steel construction, whaleback quarterdeck, passenger deckhouse and nineteenth-century machinery are not copied.",
+      "applies_to": [
+        "The model has three cargo hatches accessing the hold and an aft fore-and-aft-rigged mizzen."
+      ]
+    },
+    {
+      "title": "The Vasa Museum in an hour: teacher guide, 2026, p.3",
+      "url": "https://www.vasamuseet.se/globalassets/vasamuseet/dokument/skola/2026/t_teachers-guide-to-the-vasa-museum.pdf",
+      "source_type": "museum archaeology education guide",
+      "accessed": "2026-11-14",
+      "read": true,
+      "claims": [
+        "The museum describes officers using cabin chamber pots and crew using two open-bottom box toilets in the beakhead."
+      ],
+      "applies_to": [
+        "Removable cabin pot and distinction from a true external bow head."
+      ],
+      "limits": "Vasa is a 1628 warship. No identical sanitation arrangement or bow-head access is established for the POTC families."
+    },
+    {
+      "title": "Close stool, Colonial Williamsburg museum 1960-948, England 1700–1725",
+      "url": "https://emuseum.colonialwilliamsburg.org/objects/17170/close-stool",
+      "source_type": "museum furniture catalogue",
+      "accessed": "2026-11-14",
+      "read": true,
+      "claims": [
+        "The early-eighteenth-century stool has a hinged top revealing a pot frame and loose seat."
+      ],
+      "applies_to": [
+        "Authored wooden close-stool with raised lid, real seat void and removable pot."
+      ],
+      "limits": "A period furniture analogue, not a maritime find or verified stock asset. Its placement in these game-family cabins is authored; it does not establish fifteenth-century caravel equipment."
+    },
+    {
+      "title": "Geschiedenis van de 17e-eeuwse Batavia, Museum Batavialand",
+      "url": "https://www.batavialand.nl/zien-en-doen/het-schip-batavia/geschiedenis-van-de-17e-eeuwse-batavia/",
+      "source_type": "museum seventeenth-century merchant history",
+      "accessed": "2026-11-14",
+      "read": true,
+      "claims": [
+        "The museum recounts Pelsaert travelling in a small boat to seek help after Batavia was wrecked."
+      ],
+      "applies_to": [
+        "A small ship boat as period working equipment; the compact model is an authored carried-tender interpretation."
+      ],
+      "limits": "Does not establish stock-family boat dimensions or stowage. The 3m tender is an authored compact boat, not a claim to reproduce Batavia’s larger rescue boat."
+    }
+  ],
+  "type_reading": "Compact armed wooden merchant interpretation. Endeavour is a period collier analogue for structure, not proof of the stock model identity or rig.",
+  "inferred_layout": [
+    "Framed cargo hold with timber ceiling planks, dunnage, provision casks and crate lashings, retaining a central clear route.",
+    "Aft modest cabin with desk, bunk, bench and chest below its stern accommodation; windows are authored at that room level.",
+    "Two timber-coamed cargo accesses and a separate personnel descent, hand-worked wooden capstan, twin pumps; a 3m boat is an optional authored fitting only where final gun and rig clearance allows it.",
+    "Bitts, pin rails and an officer close-stool with an actual seat opening and removable pot are authored period fittings. External bow-head access is not established in the preserved hull."
+  ],
+  "cargo_character": "mixed merchant casks, timber boxes and rope stores",
+  "authored_layout": {
+    "kind": "decked",
+    "frame_spacing_m": 0.75,
+    "hold": {
+      "from": -0.29,
+      "to": 0.35,
+      "floor_z_m": -0.65,
+      "headroom_m": 2.5,
+      "minimum_headroom_m": 1.7
+    },
+    "cabin": {
+      "from": -0.46,
+      "to": -0.29,
+      "floor_z_m": -0.65,
+      "ceiling_deck_id": "main",
+      "cut_main_deck": false,
+      "door_width_m": 1.05,
+      "door_height_m": 1.88,
+      "minimum_headroom_m": 1.7
+    },
+    "hatch": {
+      "id": "main_cargo_hatch",
+      "at": 0.115,
+      "length_m": 2.65,
+      "width_m": 1.65,
+      "deck_id": "main",
+      "target_deck_id": "hold"
+    },
+    "extra_hatches": [
+      {
+        "id": "forward_cargo_scuttle",
+        "at": 0.325,
+        "length_m": 1.3,
+        "width_m": 1.1,
+        "deck_id": "main",
+        "target_deck_id": "hold"
+      }
+    ],
+    "companionways": [
+      {
+        "id": "aft_personnel_descent",
+        "at": -0.185,
+        "length_m": 1.9,
+        "width_m": 1.15,
+        "deck_id": "main",
+        "target_deck_id": "hold"
+      }
+    ],
+    "lower_decks": [],
+    "partitions": [
+      {
+        "at": 0.29,
+        "deck_id": "hold",
+        "door_width_m": 1.1,
+        "door_height_m": 1.9
+      }
+    ],
+    "notes": [
+      "Framed cargo hold with timber ceiling planks, dunnage, provision casks and crate lashings, retaining a central clear route.",
+      "Aft modest cabin with desk, bunk, bench and chest below its stern accommodation; windows are authored at that room level.",
+      "Two timber-coamed cargo accesses and a separate personnel descent, hand-worked wooden capstan, twin pumps; a 3m boat is an optional authored fitting only where final gun and rig clearance allows it.",
+      "Bitts, pin rails and an officer close-stool with an actual seat opening and removable pot are authored period fittings. External bow-head access is not established in the preserved hull."
+    ],
+    "evidence": [
+      {
+        "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-244406",
+        "supports": [
+          "The 11 July 1768 drawing records quarterdeck, upper deck, forecastle, lower deck and fore-and-aft platforms of the purchased collier fitted for exploration."
+        ],
+        "quality": "museum archival plan",
+        "limits": "A wooden period merchant-hull analogue; Endeavour was ship-rigged. This does not identify the POTC Barque or prove its rig, dimensions or exact cabin plan."
+      },
+      {
+        "url": "https://www.sea.museum/en/learn/resource/life-aboard-hmb-endeavour",
+        "supports": [
+          "The original bulk coal carrier used oak frames/planks/deck beams and pine decks and masts.",
+          "Conversion added a mess deck on the cargo-hold beams; stores included wooden casks, and cooking used an iron hearth protected from the timber deck.",
+          "The aft great cabin served work and eating, with smaller officers cabins on the lower deck."
+        ],
+        "quality": "museum reconstruction and historical interpretation",
+        "limits": "Use timber construction, cask storage and spatial hierarchy as analogues. Do not copy the special exploration conversion or modern replica machinery."
+      },
+      {
+        "url": "https://www.sea.museum/en/about/media/2023/11/museum-releases-further-evidence-to-support-its-case-for-identifying-endeavour-shipwreck",
+        "supports": [
+          "The museum compares a surviving pump-shaft stump and pump-well partitions with the 1768 lower-hold plan."
+        ],
+        "quality": "museum archaeological research",
+        "limits": "Supports a timber-enclosed pump well as a real working structure; coordinates and pump design in this asset are authored."
+      },
+      {
+        "url": "https://www.vasamuseet.se/en/explore/vasa-history/life-on-board",
+        "supports": [
+          "The museum identifies provision casks in the hold and a brick-lined cooking hearth forward of the mainmast.",
+          "Senior officers lived in aft sterncastle cabins with glass windows and furniture."
+        ],
+        "quality": "museum archaeological and historical interpretation",
+        "limits": "A 1628 warship analogue for construction and room hierarchy only; no claim that a merchant held Vasa-scale decoration or its exact internal arrangement."
+      },
+      {
+        "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-67057",
+        "supports": [
+          "The model has three cargo hatches accessing the hold and an aft fore-and-aft-rigged mizzen."
+        ],
+        "quality": "later museum model comparator",
+        "limits": "Later generic cargo-access/rig comparator only. Iron/steel construction, whaleback quarterdeck, passenger deckhouse and nineteenth-century machinery are not copied."
+      }
+    ],
+    "historical_status": "Source-informed authored reconstruction; openings, proportions and furniture placement are not verified original game or historical interiors.",
+    "research_path": "layout-research.json"
+  },
+  "ship_id": "barque",
+  "decisions": [
+    {
+      "feature": "cargo_and_stores",
+      "basis": "Framed cargo hold with timber ceiling planks, dunnage, provision casks and crate lashings, retaining a central clear route. This is an adapted, authored spatial decision; cited analogues establish the feature class rather than these coordinates.",
+      "source_urls": [
+        "https://www.sea.museum/en/learn/resource/life-aboard-hmb-endeavour"
+      ],
+      "confidence": "inferred authored reconstruction"
+    },
+    {
+      "feature": "aft_accommodation",
+      "basis": "Aft modest cabin with desk, bunk, bench and chest below its stern accommodation; windows are authored at that room level. This is an adapted, authored spatial decision; cited analogues establish the feature class rather than these coordinates.",
+      "source_urls": [
+        "https://www.sea.museum/en/learn/resource/life-aboard-hmb-endeavour",
+        "https://www.vasamuseet.se/en/explore/vasa-history/life-on-board"
+      ],
+      "confidence": "inferred authored reconstruction"
+    },
+    {
+      "feature": "access_and_working_levels",
+      "basis": "Two timber-coamed cargo accesses and a separate personnel descent, hand-worked wooden capstan, twin pumps; a 3m boat is an optional authored fitting only where final gun and rig clearance allows it. This is an adapted, authored spatial decision; cited analogues establish the feature class rather than these coordinates.",
+      "source_urls": [
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-244406"
+      ],
+      "confidence": "inferred authored reconstruction"
+    },
+    {
+      "feature": "period_equipment_and_joinery",
+      "basis": "Bitts, pin rails and an officer close-stool with an actual seat opening and removable pot are authored period fittings. External bow-head access is not established in the preserved hull. This is an adapted, authored spatial decision; cited analogues establish the feature class rather than these coordinates.",
+      "source_urls": [
+        "https://www.sea.museum/en/about/media/2023/11/museum-releases-further-evidence-to-support-its-case-for-identifying-endeavour-shipwreck",
+        "https://www.vasamuseet.se/en/explore/vasa-history/life-on-board"
+      ],
+      "confidence": "inferred authored reconstruction"
+    },
+    {
+      "feature": "officer_sanitation",
+      "basis": "A real open seat frame and removable pot are placed in a measured clear cabin footprint. This is an authored period-furniture adaptation; an inaccessible decorative beakhead seat is not claimed.",
+      "source_urls": [
+        "https://www.vasamuseet.se/globalassets/vasamuseet/dokument/skola/2026/t_teachers-guide-to-the-vasa-museum.pdf",
+        "https://emuseum.colonialwilliamsburg.org/objects/17170/close-stool"
+      ],
+      "confidence": "inferred authored reconstruction"
+    },
+    {
+      "feature": "carried_tender",
+      "basis": "A 3m hollow timber boat with adult-scale thwarts, oars and real skids is an optional authored fitting, accepted only where measured final gun/rig geometry leaves a supported bay clear of access. Its compact dimensions and location are authored against measured clear geometry, not copied from a stock mesh or claimed as Batavia dimensions.",
+      "source_urls": [
+        "https://www.batavialand.nl/zien-en-doen/het-schip-batavia/geschiedenis-van-de-17e-eeuwse-batavia/"
+      ],
+      "confidence": "inferred authored reconstruction"
+    },
+    {
+      "feature": "carried_tender_status",
+      "basis": "The optional three-metre carried tender is omitted in this delivered sixteen-gun Barque configuration: the measured final gun/rig stations, existing fittings and working hatches leave no accepted full supported bay. The period ship-boat analogue establishes equipment context, not stock-family dimensions or a claim that this particular deck carried one.",
+      "source_urls": [
+        "https://www.batavialand.nl/zien-en-doen/het-schip-batavia/geschiedenis-van-de-17e-eeuwse-batavia/"
+      ]
+    },
+    {
+      "feature": "bearing_end_clearance",
+      "basis": "Selected hold, cabin-sole and forecastle end-bearing stations are inset 0.12 m within the full floor boundaries. This gives separate 140 mm beams and 130 mm knees genuine clearance at adjoining soles and keeps end knees outside the forecastle breakwall. The measured assembly correction is authored; the cited museum/survey source supplies period timber-construction context, not these dimensions or stations.",
+      "source_urls": [
+        "https://www.sea.museum/en/learn/resource/life-aboard-hmb-endeavour"
+      ]
+    }
+  ],
+  "limitations": [
+    "Source-informed authored wooden interiors for five ordinary POTC families; no proprietary game mesh, original interior, or exact historical reconstruction claimed.",
+    "Compact armed wooden merchant interpretation. Endeavour is a period collier analogue for structure, not proof of the stock model identity or rig.",
+    "A wooden period merchant-hull analogue; Endeavour was ship-rigged. This does not identify the POTC Barque or prove its rig, dimensions or exact cabin plan.",
+    "Use timber construction, cask storage and spatial hierarchy as analogues. Do not copy the special exploration conversion or modern replica machinery.",
+    "Supports a timber-enclosed pump well as a real working structure; coordinates and pump design in this asset are authored.",
+    "A 1628 warship analogue for construction and room hierarchy only; no claim that a merchant held Vasa-scale decoration or its exact internal arrangement.",
+    "Later generic cargo-access/rig comparator only. Iron/steel construction, whaleback quarterdeck, passenger deckhouse and nineteenth-century machinery are not copied.",
+    "Vasa is a 1628 warship. No identical sanitation arrangement or bow-head access is established for the POTC families.",
+    "A period furniture analogue, not a maritime find or verified stock asset. Its placement in these game-family cabins is authored; it does not establish fifteenth-century caravel equipment.",
+    "Does not establish stock-family boat dimensions or stowage. The 3m tender is an authored compact boat, not a claim to reproduce Batavia’s larger rescue boat."
+  ],
+  "surface_revision": {
+    "scope": "Authored texture projection and corner-normal correction of exact cannon castings only; no historical layout claim.",
+    "method": "Continuous profile-band cylindrical UV0/AO1, world-down meridian,20-station snap and authored1.05density compensation; FREE_FLOAT3 source normals and explicit post-export copy-on-write repair.",
+    "invariants": "Positions,indices,non-target objects,material and image payloads,COL unchanged; actual measurements in surface-repair.json.",
+    "visual_limit": "Existing mottled iron patina/reflections remain stylized; no photorealism claim.",
+    "evidence": "surface-repair.json"
+  }
+}
