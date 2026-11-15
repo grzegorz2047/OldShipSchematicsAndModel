@@ -1,0 +1,406 @@
+{
+  "schema": 4,
+  "id": "xebec",
+  "family": "xebec",
+  "title": "Fine-hulled Mediterranean lateen xebec",
+  "asset_type": "static-duel-ship",
+  "scope": "Static visual duel asset; no animated controls, walkability or engine integration claimed.",
+  "units": "metres",
+  "axes": "glTF +Y up, +Z bow, +X port; origin at midships design waterline",
+  "dimension_status": "Authored reconstruction: dimensions are design choices, not measured stock POTC2003 model dimensions.",
+  "paint_materials": [
+    "paint_hull",
+    "paint_trim"
+  ],
+  "palettes": [
+    {
+      "id": "ochre",
+      "paintHull": [
+        0.38132601143253014,
+        0.14702726649759498,
+        0.03189603307301153,
+        1.0
+      ],
+      "paintTrim": [
+        0.7230551289219693,
+        0.5028864580325687,
+        0.18116424424986022,
+        1.0
+      ],
+      "description": "Warm ochre hull and buff trim; natural timber deck, tarred rigging, linen sails and iron unchanged."
+    },
+    {
+      "id": "navy",
+      "paintHull": [
+        0.00972121732023785,
+        0.043735029256973465,
+        0.0953074666309647,
+        1.0
+      ],
+      "paintTrim": [
+        0.5520114015120001,
+        0.3564001441459435,
+        0.14412847085805777,
+        1.0
+      ],
+      "description": "Deep navy hull and muted gold trim; natural timber deck, tarred rigging, linen sails and iron unchanged."
+    }
+  ],
+  "length": 28.0,
+  "beam": 6.6,
+  "draft": 1.7,
+  "freeboard": 1.3,
+  "game_class": 5,
+  "cannons": 20,
+  "hull": {
+    "profile": [
+      [
+        -0.5,
+        0.025,
+        1.8,
+        0.78
+      ],
+      [
+        -0.43,
+        0.36,
+        0.88,
+        0.43
+      ],
+      [
+        -0.27,
+        0.77,
+        0.2,
+        0.11
+      ],
+      [
+        -0.06,
+        1.0,
+        0,
+        0
+      ],
+      [
+        0.15,
+        0.94,
+        0.13,
+        0.03
+      ],
+      [
+        0.32,
+        0.69,
+        0.57,
+        0.19
+      ],
+      [
+        0.44,
+        0.3,
+        1.36,
+        0.48
+      ],
+      [
+        0.5,
+        0.02,
+        2.45,
+        0.85
+      ]
+    ],
+    "section_power": 0.85,
+    "stern_style": "pointed",
+    "plank_rows": 14,
+    "bulwark_height": 0.48,
+    "deck_beam_factor": 0.96,
+    "quarterdeck": {
+      "from": -0.5,
+      "to": -0.35,
+      "height_m": 0.52
+    }
+  },
+  "guns": {
+    "rows": [
+      {
+        "pairs": 10,
+        "z_m": 1.97,
+        "from": -0.31,
+        "to": 0.37,
+        "follow_sheer": true
+      }
+    ],
+    "open_battery": true
+  },
+  "rig": {
+    "masts": [
+      {
+        "name": "fore",
+        "at": 0.25,
+        "height_m": 14.5,
+        "rake": -0.12,
+        "sails": [
+          {
+            "kind": "lateen",
+            "z": 0.94,
+            "width_m": 12.3,
+            "height_m": 12
+          }
+        ],
+        "heel_z_m": -0.714177968945051,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
+      },
+      {
+        "name": "main",
+        "at": 0,
+        "height_m": 17.0,
+        "rake": 0.025,
+        "sails": [
+          {
+            "kind": "lateen",
+            "z": 0.94,
+            "width_m": 15.0,
+            "height_m": 14
+          }
+        ],
+        "heel_z_m": -0.7489814902705269,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
+      },
+      {
+        "name": "mizzen",
+        "at": -0.3,
+        "height_m": 11.0,
+        "rake": 0.16,
+        "sails": [
+          {
+            "kind": "lateen",
+            "z": 0.93,
+            "width_m": 8.6,
+            "height_m": 9
+          }
+        ],
+        "shroud_lead_fraction": 0.12,
+        "heel_z_m": -0.6999798054245283,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
+      }
+    ],
+    "bowsprit": {
+      "length_m": 7.0,
+      "angle_deg": 8
+    }
+  },
+  "source_paths": [
+    "potc/xebec/stock-evidence.json",
+    "potc/xebec/layout-research.json",
+    "potc/common/v5_review.py"
+  ],
+  "game_source": {
+    "provenance": {
+      "method": "Original procedural construction from authored offsets following repository guide chapters 02–09 and 12–13. No binary game meshes or proprietary textures imported.",
+      "dimension_status": "Authored reconstruction: dimensions are design choices, not measured stock POTC2003 model dimensions.",
+      "source_evidence": [
+        {
+          "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c",
+          "kind": "stock-derived public script",
+          "claims": [
+            "Ordinary game family, class and cannon count only."
+          ],
+          "commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+          "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+        },
+        {
+          "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/SEA_AI/walk/Xebec_walk.c",
+          "kind": "stock-derived public locator script",
+          "claims": [
+            "Qualitative deck/mast layout only; no official metre dimensions."
+          ]
+        },
+        {
+          "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+          "kind": "2004 player data table",
+          "claims": [
+            "Contemporary ordinary ship roster and gun counts."
+          ]
+        },
+        {
+          "url": "https://www.piratesahoy.net/threads/ships-and-their-use.2077/",
+          "kind": "contemporary stock/mod discussion",
+          "claims": [
+            "Stock family role and distinction from mod variants."
+          ]
+        }
+      ],
+      "limitations": "Contemporary stock-game discussion explicitly calls Xebec fully fore-and-aft rigged; game wiki notes overhanging bowsprit and aft mizzen. Our three-lateen reconstruction follows these cues and historical type, with authored hull proportions and sail sizes."
+    },
+    "source_evidence": [
+      {
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c",
+        "kind": "stock-derived public script",
+        "claims": [
+          "Ordinary game family, class and cannon count only."
+        ],
+        "commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+        "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+      },
+      {
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/SEA_AI/walk/Xebec_walk.c",
+        "kind": "stock-derived public locator script",
+        "claims": [
+          "Qualitative deck/mast layout only; no official metre dimensions."
+        ]
+      },
+      {
+        "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+        "kind": "2004 player data table",
+        "claims": [
+          "Contemporary ordinary ship roster and gun counts."
+        ]
+      },
+      {
+        "url": "https://www.piratesahoy.net/threads/ships-and-their-use.2077/",
+        "kind": "contemporary stock/mod discussion",
+        "claims": [
+          "Stock family role and distinction from mod variants."
+        ]
+      }
+    ],
+    "distinctive_silhouette": "Long fine pointed hull, strongly raked fore/mizzen, three lateens and long low bowsprit.",
+    "static_scope": {
+      "animated_controls": false,
+      "walkability": false,
+      "navigation_routes": false,
+      "collision": "Shared exact static concave hull/deck solids; no playable deck claim."
+    },
+    "palette_contract": {
+      "changed": [
+        "paint_hull",
+        "paint_trim"
+      ],
+      "deliberately_unchanged": [
+        "natural deck timber",
+        "mast and spar timber",
+        "tarred standing rigging",
+        "natural running rope",
+        "linen cloth",
+        "iron guns and fittings"
+      ]
+    },
+    "authored_deck_clearance": "Aft deck break ends at-.35L, clear of actual mizzen chainplate at-.3364L and first gun at-.31L. No fastening is embedded in the transverse bulkhead.",
+    "detailed_layout_research": "potc/xebec/layout-research.json"
+  },
+  "detailed_layout": {
+    "schema": 1,
+    "kind": "decked",
+    "frame_spacing_m": 0.48,
+    "hold": {
+      "from": -0.3,
+      "to": 0.38,
+      "floor_z_m": -0.85,
+      "follow_sheer": true,
+      "ceiling_planking": true,
+      "bilge_visible": true,
+      "headroom_m": 2.15
+    },
+    "cabin": {
+      "from": -0.47,
+      "to": -0.35,
+      "floor_z_m": -0.25,
+      "ceiling_deck_id": "castle_0",
+      "follow_sheer": true,
+      "door_width_m": 1.0,
+      "door_height_m": 1.85,
+      "clear_height_m": 1.95,
+      "cut_main_deck": true,
+      "furniture": [
+        "bench",
+        "locker"
+      ],
+      "door_x_m": 0.9,
+      "minimum_headroom_m": 1.85,
+      "aisle_width_m": 0.65,
+      "berth_omission_reason": "The narrow pointed after cuddy cannot support a freestanding adult berth and a clear aisle on the authored sole. A modest hinged seat locker combining seating and storage are inferred; no grand cabin or recovered historical bed arrangement is claimed."
+    },
+    "hatch": {
+      "id": "main_hatch",
+      "at": 0.13,
+      "length_m": 2,
+      "width_m": 1.4,
+      "x_m": 0.0,
+      "coaming_height_m": 0.25,
+      "deck_id": "main",
+      "access": "stair",
+      "open": true
+    },
+    "extra_hatches": [],
+    "companionways": [],
+    "lower_decks": [],
+    "partitions": [],
+    "clear_aisle_width_m": 1.1,
+    "passage_width_m": 1.0,
+    "standing_height_m": 1.85,
+    "evidence": [
+      {
+        "url": "https://ancre.fr/en/monograph/18-monographie-du-requin-chebec-1750-.html",
+        "title": "ANCRE: Le Requin xebec, 1750",
+        "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+        "confirmed": [
+          "Publisher states period plans and rigging documents support the monograph and its timber/frames/fittings plates."
+        ],
+        "application": [
+          "Mediterranean xebec framing and low single-battery construction vocabulary."
+        ]
+      },
+      {
+        "url": "https://ancre.fr/en/index.php?controller=attachment&id_attachment=81",
+        "title": "ANCRE: Le Requin English sample PDF, page 2",
+        "read": "PDF text read; page 2 rendered to 1600 px and visually inspected on 2026-11-14.",
+        "confirmed": [
+          "Inspected sample shows hull sections with floors/frames and beams, anchor and cannon details, and photos of an open gun deck with belaying rails and low ornate stern platform."
+        ],
+        "application": [
+          "Framed shallow hold, restrained low after cabin, open coamed access hatch and anchor/capstan/rope details; exact illustrated dimensions and ornaments are not traced."
+        ]
+      },
+      {
+        "url": "https://collections.museumsvictoria.com.au/items/395808",
+        "title": "Museums Victoria ST34691: Chebec class sailing model",
+        "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+        "confirmed": [
+          "Museum identifies three-masted French armed chebec, raised poop and lateen sail."
+        ],
+        "application": [
+          "Retain three lateen masts, narrow open battery and low raised poop."
+        ]
+      }
+    ],
+    "confidence": "Authored reconstruction informed by read source material, not a recovered stock game interior.",
+    "machinery": {
+      "capstan_at": -0.1
+    },
+    "notes": [
+      "Shallow framed hold -0.30L to +0.38L, sole -0.85 m; an actual fitted water cask and planked provisions box occupy supported side footprints. The narrow forward area stays clear; no invisible cable locker is claimed.",
+      "Low after cabin -0.47L to -0.35L, floor -0.25 m and modest hinged seat locker combining seating and storage, with no unsupported freestanding adult berth; no stacked gun decks.",
+      "2.0 × 1.4 m centerline hatch at +0.13L, offset poop companion, visible pump and belaying fittings.",
+      "Twenty open-deck guns retain clear working lanes; three lateen yards, detailed lead blocks and restrained stern rail/trim distinguish the fitting-out.",
+      "Le Requin is a family analogue, not a reproduction or a stock game interior plan.",
+      "Oars are a historical xebec trait but the reconstruction does not invent a full rowing battery or change the POTC armament.",
+      "One offset descending companion enters the cabin through its forward door. No redundant hole is cut through the short cabin roof; this preserves useful furniture and working-deck area."
+    ],
+    "dimension_status": "Dimensions, frame spacing, compartments and fitting positions are authored estimates fitted to the preserved POTC-family hull. These sources do not document the proprietary retail model and do not establish exact stock interiors. No museum image is copied into the model or its textures.",
+    "fittings": [
+      "capstan",
+      "bilge_pump",
+      "bitts",
+      "belaying_pins_and_lead_blocks",
+      "anchors",
+      "water_casks",
+      "bench",
+      "locker"
+    ],
+    "research_path": "layout-research.json",
+    "compartments": [
+      {
+        "id": "water_and_provisions",
+        "deck_id": "hold",
+        "from": -0.3,
+        "to": 0.38,
+        "role": "water_provisions"
+      }
+    ]
+  },
+  "detail_schema": 5
+}
