@@ -1,0 +1,442 @@
+{
+  "schema": 4,
+  "id": "galeoth",
+  "family": "galeoth",
+  "title": "Armed mixed-rig fast trader",
+  "asset_type": "static-duel-ship",
+  "scope": "Static visual duel asset; no animated controls, walkability or engine integration claimed.",
+  "units": "metres",
+  "axes": "glTF +Y up, +Z bow, +X port; origin at midships design waterline",
+  "dimension_status": "Authored reconstruction: dimensions are design choices, not measured stock POTC2003 model dimensions.",
+  "paint_materials": [
+    "paint_hull",
+    "paint_trim"
+  ],
+  "palettes": [
+    {
+      "id": "ochre",
+      "paintHull": [
+        0.38132601143253014,
+        0.14702726649759498,
+        0.03189603307301153,
+        1.0
+      ],
+      "paintTrim": [
+        0.7230551289219693,
+        0.5028864580325687,
+        0.18116424424986022,
+        1.0
+      ],
+      "description": "Warm ochre hull and buff trim; natural timber deck, tarred rigging, linen sails and iron unchanged."
+    },
+    {
+      "id": "navy",
+      "paintHull": [
+        0.00972121732023785,
+        0.043735029256973465,
+        0.0953074666309647,
+        1.0
+      ],
+      "paintTrim": [
+        0.5520114015120001,
+        0.3564001441459435,
+        0.14412847085805777,
+        1.0
+      ],
+      "description": "Deep navy hull and muted gold trim; natural timber deck, tarred rigging, linen sails and iron unchanged."
+    }
+  ],
+  "length": 26.0,
+  "beam": 7.2,
+  "draft": 2.1,
+  "freeboard": 1.8,
+  "game_class": 5,
+  "cannons": 16,
+  "hull": {
+    "profile": [
+      [
+        -0.5,
+        0.22,
+        1.9,
+        0.58
+      ],
+      [
+        -0.43,
+        0.63,
+        0.72,
+        0.35
+      ],
+      [
+        -0.28,
+        0.95,
+        0.14,
+        0.12
+      ],
+      [
+        -0.05,
+        1.0,
+        0,
+        0
+      ],
+      [
+        0.16,
+        0.97,
+        0.13,
+        0.07
+      ],
+      [
+        0.33,
+        0.74,
+        0.61,
+        0.29
+      ],
+      [
+        0.45,
+        0.34,
+        1.49,
+        0.59
+      ],
+      [
+        0.5,
+        0.025,
+        2.7,
+        0.95
+      ]
+    ],
+    "section_power": 0.6,
+    "stern_style": "round",
+    "plank_rows": 18,
+    "bulwark_height": 1.25,
+    "deck_beam_factor": 0.89,
+    "quarterdeck": {
+      "from": -0.5,
+      "to": -0.285,
+      "height_m": 1.25
+    },
+    "forecastle": {
+      "from": 0.42,
+      "to": 0.5,
+      "height_m": 0.55
+    }
+  },
+  "guns": {
+    "rows": [
+      {
+        "pairs": 8,
+        "z_m": 2.47,
+        "from": -0.24,
+        "to": 0.36,
+        "follow_sheer": true
+      }
+    ]
+  },
+  "rig": {
+    "masts": [
+      {
+        "name": "fore",
+        "at": 0.25,
+        "height_m": 18.0,
+        "rake": 0.02,
+        "sails": [
+          {
+            "kind": "square",
+            "z": 0.45,
+            "width_m": 10.4,
+            "height_m": 5.7
+          },
+          {
+            "kind": "square",
+            "z": 0.76,
+            "width_m": 8.0,
+            "height_m": 4.5
+          },
+          {
+            "kind": "square",
+            "z": 0.95,
+            "width_m": 5.1,
+            "height_m": 2.6
+          }
+        ],
+        "heel_z_m": -0.7432926174329381,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
+      },
+      {
+        "name": "main",
+        "at": -0.3,
+        "height_m": 19.0,
+        "rake": 0.05,
+        "sails": [
+          {
+            "kind": "lateen",
+            "z": 0.56,
+            "width_m": 9.0,
+            "height_m": 9.5
+          },
+          {
+            "kind": "square",
+            "z": 0.87,
+            "width_m": 7.2,
+            "height_m": 4.3
+          }
+        ],
+        "shroud_lead_fraction": 0.12,
+        "heel_z_m": 1.1880396947376919,
+        "heel_basis": "Authored aft mast step reached through the true cabin and raised-deck mortises."
+      }
+    ],
+    "bowsprit": {
+      "length_m": 5.8,
+      "angle_deg": 24
+    }
+  },
+  "source_paths": [
+    "potc/galeoth/stock-evidence.json",
+    "potc/galeoth/layout-research.json",
+    "potc/common/v5_review.py"
+  ],
+  "game_source": {
+    "provenance": {
+      "method": "Original procedural construction from authored offsets following repository guide chapters 02–09 and 12–13. No binary game meshes or proprietary textures imported.",
+      "dimension_status": "Authored reconstruction: dimensions are design choices, not measured stock POTC2003 model dimensions.",
+      "source_evidence": [
+        {
+          "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c",
+          "kind": "stock-derived public script",
+          "claims": [
+            "Ordinary game family, class and cannon count only."
+          ],
+          "commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+          "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+        },
+        {
+          "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/SEA_AI/walk/GALEOTH1_walk.c",
+          "kind": "stock-derived public locator script",
+          "claims": [
+            "Qualitative deck/mast layout only; no official metre dimensions."
+          ]
+        },
+        {
+          "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+          "kind": "2004 player data table",
+          "claims": [
+            "Contemporary ordinary ship roster and gun counts."
+          ]
+        },
+        {
+          "url": "https://www.piratesahoy.net/threads/ships-and-their-use.2077/",
+          "kind": "contemporary stock/mod discussion",
+          "claims": [
+            "Stock family role and distinction from mod variants."
+          ]
+        },
+        {
+          "url": "https://www.piratesahoy.net/threads/rethinking-ships-in-potc-new-project.2769/",
+          "kind": "2004 stock discussion",
+          "claims": [
+            "Type-name uncertainty and small single-mast Tartane cue; historical dictionary is insufficient to establish game model."
+          ]
+        }
+      ],
+      "limitations": "Stock-derived walk script has widely separated fore/main climbing groups and high aft deck. Contemporary player discussion describes an armed fast trader and distinguishes the later gaff-boom Galeoth. The mixed square/lateen set rig is our inference, not a claim to recover the proprietary stock mesh."
+    },
+    "source_evidence": [
+      {
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c",
+        "kind": "stock-derived public script",
+        "claims": [
+          "Ordinary game family, class and cannon count only."
+        ],
+        "commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+        "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+      },
+      {
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/SEA_AI/walk/GALEOTH1_walk.c",
+        "kind": "stock-derived public locator script",
+        "claims": [
+          "Qualitative deck/mast layout only; no official metre dimensions."
+        ]
+      },
+      {
+        "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+        "kind": "2004 player data table",
+        "claims": [
+          "Contemporary ordinary ship roster and gun counts."
+        ]
+      },
+      {
+        "url": "https://www.piratesahoy.net/threads/ships-and-their-use.2077/",
+        "kind": "contemporary stock/mod discussion",
+        "claims": [
+          "Stock family role and distinction from mod variants."
+        ]
+      },
+      {
+        "url": "https://www.piratesahoy.net/threads/rethinking-ships-in-potc-new-project.2769/",
+        "kind": "2004 stock discussion",
+        "claims": [
+          "Type-name uncertainty and small single-mast Tartane cue; historical dictionary is insufficient to establish game model."
+        ]
+      }
+    ],
+    "distinctive_silhouette": "Broad round afterbody, pronounced quarterdeck, widely separated fore/main masts with square canvas and an aft lateen.",
+    "static_scope": {
+      "animated_controls": false,
+      "walkability": false,
+      "navigation_routes": false,
+      "collision": "Shared exact static concave hull/deck solids; no playable deck claim."
+    },
+    "palette_contract": {
+      "changed": [
+        "paint_hull",
+        "paint_trim"
+      ],
+      "deliberately_unchanged": [
+        "natural deck timber",
+        "mast and spar timber",
+        "tarred standing rigging",
+        "natural running rope",
+        "linen cloth",
+        "iron guns and fittings"
+      ]
+    },
+    "authored_deck_clearance": "Quarterdeck break at-.285L lies between the first two gun carriage footprints. Main shrouds lead forward from their mast so their real iron fastenings clear the transverse bulkhead and the authored canvas. Forecastle starts ahead of the battery.",
+    "detailed_layout_research": "potc/galeoth/layout-research.json"
+  },
+  "detailed_layout": {
+    "schema": 1,
+    "kind": "decked",
+    "frame_spacing_m": 0.5,
+    "hold": {
+      "from": -0.27,
+      "to": 0.37,
+      "floor_z_m": -0.9,
+      "follow_sheer": true,
+      "ceiling_planking": true,
+      "bilge_visible": true,
+      "headroom_m": 2.1
+    },
+    "cabin": {
+      "from": -0.47,
+      "to": -0.285,
+      "floor_z_m": 0.95,
+      "ceiling_deck_id": "castle_0",
+      "follow_sheer": true,
+      "door_width_m": 1.0,
+      "door_height_m": 1.85,
+      "clear_height_m": 1.95,
+      "cut_main_deck": true,
+      "furniture": [
+        "table",
+        "bench",
+        "berth",
+        "locker"
+      ],
+      "door_x_m": 1.05,
+      "minimum_headroom_m": 1.85,
+      "aisle_width_m": 0.8,
+      "berth_width_m": 0.72,
+      "berth_length_m": 1.96
+    },
+    "hatch": {
+      "id": "main_hatch",
+      "at": 0.08,
+      "length_m": 2.2,
+      "width_m": 1.6,
+      "x_m": 0.0,
+      "coaming_height_m": 0.25,
+      "deck_id": "main",
+      "access": "stair",
+      "open": true
+    },
+    "extra_hatches": [
+      {
+        "id": "fore_stores_hatch",
+        "at": 0.31,
+        "length_m": 1.15,
+        "width_m": 1.05,
+        "x_m": 0.0,
+        "coaming_height_m": 0.25,
+        "deck_id": "main",
+        "access": "ladder",
+        "open": true
+      }
+    ],
+    "companionways": [],
+    "lower_decks": [],
+    "partitions": [],
+    "clear_aisle_width_m": 1.1,
+    "passage_width_m": 1.0,
+    "standing_height_m": 1.85,
+    "evidence": [
+      {
+        "url": "https://www.rijksmuseum.nl/nl/collectie/object/Model-van-een-polakker--be50c8b05850324bf29aaac85ed74070",
+        "title": "Rijksmuseum NG-MC-674: Model of a Polacre / Daedalus",
+        "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+        "confirmed": [
+          "Museum model has lower/main decks and poop above a panelled cabin, an anchor and capstan.",
+          "Catalogue explicitly notes the same ship was variously registered as galliot, ship and schooner."
+        ],
+        "application": [
+          "A compact panelled merchant cabin and working cargo hold; supports stating historical type-name uncertainty.",
+          "Three-mast polacre rig is not copied: the stock-derived Galeoth keeps its existing two-mast square/lateen arrangement."
+        ]
+      },
+      {
+        "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-66355",
+        "title": "Royal Museums Greenwich SLR0394: small armed vessel construction analogue",
+        "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+        "confirmed": [
+          "Contemporary model is decked/equipped, with distinct raised after accommodation and glazed aft openings."
+        ],
+        "application": [
+          "General small armed-vessel access, structure and separate after compartment only."
+        ]
+      }
+    ],
+    "confidence": "Authored reconstruction informed by read source material, not a recovered stock game interior.",
+    "machinery": {
+      "capstan_at": -0.03
+    },
+    "notes": [
+      "Broad cargo hold -0.27L to +0.37L, floor -0.90 m; fitted side casks and planked storage outside the center aisle, with the foremost supported boxes and rope coils in a forward cable/stores zone from +0.15L.",
+      "After cabin -0.47L to -0.285L, sole 0.95 m, compact table/bench/berth/locker beneath 1.25 m quarterdeck.",
+      "Main 2.2 × 1.6 m cargo hatch +0.08L, small fore stores hatch +0.31L, and offset quarterdeck companion.",
+      "Sixteen-gun single battery start moves to -0.24L for bulkhead clearance; no oar benches or rowing gallery are invented.",
+      "Galeoth/galliot names cover differing historical rigs and hulls; these are explicit construction analogues, not an identified exact prototype.",
+      "The game-derived mixed rig, hull form and count remain decisive.",
+      "One offset descending companion enters the cabin through its forward door. No redundant hole is cut through the short cabin roof; this preserves useful furniture and working-deck area."
+    ],
+    "dimension_status": "Dimensions, frame spacing, compartments and fitting positions are authored estimates fitted to the preserved POTC-family hull. These sources do not document the proprietary retail model and do not establish exact stock interiors. No museum image is copied into the model or its textures.",
+    "fittings": [
+      "capstan",
+      "bilge_pump",
+      "bitts",
+      "belaying_pins_and_lead_blocks",
+      "catheads",
+      "anchors",
+      "stern_lights",
+      "table",
+      "bench",
+      "berth",
+      "locker"
+    ],
+    "research_path": "layout-research.json",
+    "compartments": [
+      {
+        "id": "merchant_cargo",
+        "deck_id": "hold",
+        "from": -0.27,
+        "to": 0.15,
+        "role": "coastal_cargo"
+      },
+      {
+        "id": "fore_cable_stores",
+        "deck_id": "hold",
+        "from": 0.15,
+        "to": 0.37,
+        "role": "cable_store"
+      }
+    ]
+  },
+  "detail_schema": 5
+}

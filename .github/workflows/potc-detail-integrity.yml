@@ -1,0 +1,31 @@
+name: PoTC substantial detail integrity
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  portable-detail-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install portable image and geometry readers
+        run: python -m pip install numpy pillow
+      - name: Retain frozen v4 positive and negative controls
+        run: python potc/common/v4_integrity.py --self-test
+      - name: Exercise real sealed hatch and doorway controls
+        run: python potc/common/v5_integrity.py --self-test
+      - name: Compare joint-index lookup against the frozen function
+        run: python potc/common/v5_joint_index.py --source-root .
+      - name: Reject resource-budget and applicability abuse
+        run: python potc/common/v5_contract.py
+      - name: Preserve old-v4 dispatcher behavior
+        run: python potc/common/v5_dispatch.py --self-test
+      - name: Recompute every delivered detail and material gate
+        run: python potc/common/v5_integrity.py --all --source-root .
