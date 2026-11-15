@@ -1,0 +1,23 @@
+{
+  "schema": 2,
+  "units": "metres",
+  "axes": "glTF X across, Y up, Z forward",
+  "routes": [],
+  "scope": "Construction prop: no walkable boat interior or self-contained terrain; external ground access belongs to the level.",
+  "external_workspace": {
+    "suggested_clearance_box_gltf_m": {
+      "min": [
+        -2.05,
+        0,
+        -3.9
+      ],
+      "max": [
+        2.05,
+        2.2,
+        3.9
+      ]
+    },
+    "tested_as_walk_route": false,
+    "reason": "The delivered support/collision meshes define the actual obstacle. Ground, navmesh and player-controller testing require the game level."
+  }
+}

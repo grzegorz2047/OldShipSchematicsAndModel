@@ -1,0 +1,272 @@
+{
+  "schema": 1,
+  "vessel": "boat-frame",
+  "passed": true,
+  "source_triangles": 14328,
+  "export_triangles": 14328,
+  "triangle_match": true,
+  "geometry_parity": {
+    "passed": true,
+    "missing_nodes": [],
+    "extra_nodes": [],
+    "triangle_mismatch_nodes": [],
+    "maximum_bounds_difference_m": 0.0,
+    "bounds_tolerance_m": 0.0001
+  },
+  "views": {
+    "hero": {
+      "foreground_pixels": 126245,
+      "source_mean_rgb": [
+        0.5171957015991211,
+        0.3781711757183075,
+        0.25510311126708984
+      ],
+      "export_mean_rgb": [
+        0.5171986222267151,
+        0.3781728148460388,
+        0.25510185956954956
+      ],
+      "brightness_fraction": 4.269499803320798e-06,
+      "maximum_channel_share_difference": 1.7285346984863281e-06,
+      "passed": true
+    },
+    "deck": {
+      "foreground_pixels": 83008,
+      "source_mean_rgb": [
+        0.6467064619064331,
+        0.48127561807632446,
+        0.33639296889305115
+      ],
+      "export_mean_rgb": [
+        0.6467126607894897,
+        0.4812735915184021,
+        0.336390882730484
+      ],
+      "brightness_fraction": 5.575901298345088e-07,
+      "maximum_channel_share_difference": 3.6656856536865234e-06,
+      "passed": true
+    },
+    "repair_gap_detail": {
+      "foreground_pixels": 227726,
+      "source_mean_rgb": [
+        0.3656364381313324,
+        0.2574729323387146,
+        0.16257774829864502
+      ],
+      "export_mean_rgb": [
+        0.3656386137008667,
+        0.25747373700141907,
+        0.16257810592651367
+      ],
+      "brightness_fraction": 3.888067417905983e-06,
+      "maximum_channel_share_difference": 7.748603820800781e-07,
+      "passed": true
+    }
+  },
+  "cameras": {
+    "hero": {
+      "position": [
+        8.258465766906738,
+        9.73319149017334,
+        6.593238830566406
+      ],
+      "target": [
+        0.0,
+        0.0,
+        0.9892802238464355
+      ],
+      "ortho": true,
+      "scale": 6.338240280151367,
+      "hide_rig": false
+    },
+    "deck": {
+      "position": [
+        4.662449836730957,
+        6.061184406280518,
+        12.645404815673828
+      ],
+      "target": [
+        0.0,
+        0.0,
+        0.9892802238464355
+      ],
+      "ortho": true,
+      "scale": 8.691918545961379,
+      "hide_rig": false
+    },
+    "repair_gap_detail": {
+      "position": [
+        7.434783458709717,
+        1.4160887002944946,
+        2.1489665508270264
+      ],
+      "target": [
+        0.7083626985549927,
+        0.0,
+        0.8213833570480347
+      ],
+      "ortho": true,
+      "scale": 3.949761343002319,
+      "hide_rig": false
+    }
+  },
+  "view_labels": {
+    "hero": "Canonical construction boat, stage3, trim on, repair gap open",
+    "deck": "Top three-quarter construction workspace overview; no walkable deck or player route is claimed",
+    "repair_gap_detail": "Positive-X repair side; missing plank and its five peg positions"
+  },
+  "thresholds": {
+    "brightness_fraction": 0.1,
+    "channel_share_difference": 0.04
+  },
+  "source_visible_export_states": {
+    "unspecified": 52
+  },
+  "repair_anchor_evidence": "delivered anchor node repair_gap_center",
+  "stage_renders": {
+    "3": {
+      "model": "model/ship.glb",
+      "image": "previews/stage_3.png",
+      "same_actual_render_as": "previews/hero.png",
+      "trim_on": true,
+      "pegs_on": false
+    },
+    "0": {
+      "model": "model/stage_0.glb",
+      "image": "previews/stage_0.png"
+    },
+    "1": {
+      "model": "model/stage_1.glb",
+      "image": "previews/stage_1.png"
+    },
+    "2": {
+      "model": "model/stage_2.glb",
+      "image": "previews/stage_2.png"
+    }
+  },
+  "trim_toggle": {
+    "included_in_main_glb": true,
+    "nodes_hidden_for_off_preview": [
+      "trim_gunwale_port",
+      "trim_gunwale_starboard",
+      "trim_seat_0",
+      "trim_seat_0_cleat_port",
+      "trim_seat_0_cleat_starboard",
+      "trim_seat_1",
+      "trim_seat_1_cleat_port",
+      "trim_seat_1_cleat_starboard",
+      "trim_seat_2",
+      "trim_seat_2_cleat_port",
+      "trim_seat_2_cleat_starboard"
+    ],
+    "off_image": "previews/hero_trim_off.png",
+    "duplicate_trim_imported_for_hero": false
+  },
+  "repair_component": {
+    "model": "model/repair_plank.glb",
+    "fitted_morphs": [
+      {
+        "node": "repair_plank",
+        "morph": "straight",
+        "value": 0.0
+      }
+    ],
+    "straight_morphs": [
+      {
+        "node": "repair_plank",
+        "morph": "straight",
+        "value": 1.0
+      }
+    ],
+    "installed_morphs": [
+      {
+        "node": "repair_plank",
+        "morph": "straight",
+        "value": 0.0
+      }
+    ],
+    "pegs_in_installed_preview": true,
+    "fitted_image": "previews/repair_fitted.png",
+    "straight_image": "previews/repair_straight.png",
+    "installed_image": "previews/repair_installed.png",
+    "installed_detail_image": "previews/repair_installed_detail.png",
+    "camera_policy": "fitted and straight component views are separately centered with identical direction and orthographic scale",
+    "cameras": {
+      "fitted": {
+        "position": [
+          4.925466537475586,
+          2.6753828525543213,
+          3.054502010345459
+        ],
+        "target": [
+          0.6763292551040649,
+          0.0,
+          0.8512455224990845
+        ],
+        "ortho": true,
+        "scale": 3.192169229984283,
+        "hide_rig": false
+      },
+      "straight": {
+        "position": [
+          5.746338844299316,
+          2.6223092079162598,
+          3.2654824256896973
+        ],
+        "target": [
+          1.3163788318634033,
+          -0.16692489385604858,
+          0.9684664011001587
+        ],
+        "ortho": true,
+        "scale": 3.192169229984283,
+        "hide_rig": false
+      }
+    }
+  },
+  "render": {
+    "engine": "Cycles",
+    "samples": 12,
+    "resolution": [
+      800,
+      640
+    ]
+  },
+  "scope": "Source/export parity covers canonical stage3 with trim on and pegs off; every public preview is rendered from delivered GLBs.",
+  "coordinate_system": "Blender X across, -Y forward, Z up; GLB X across, Y up, +Z forward; +X is the repair-gap side.",
+  "sha256": {
+    "model/ship.blend": "1b7c342b4f8b1e35f1fce86fbae956bc6e21fc516462e1fccf50e4dd0f5d30c1",
+    "model/ship.glb": "44d8e2443d580c5a69b9cdcad2a67a995d4d44ca3a2bd4e004f8a214907a6ac4",
+    "model/stage_0.glb": "836e2815d0a76df0f7ade072460e1b6ef3fec8559f4ebc0ff7e40daf14752d00",
+    "model/stage_1.glb": "1c74ce033fb2997fdc6219adf518c48ba6516ae2cea5ef22b3e1186bf5dfebb5",
+    "model/stage_2.glb": "bc2ab089c78c5333c36045d06673a9be00af2c3a16c1cf198fb777c703b94603",
+    "model/repair_plank.glb": "19b76b479c5a9bc92e688b4f9167c938363a0fb7900ccc87e7b2e652973aba5f",
+    "model/trim.glb": "3442a704150a3515e9e460b1684f0e09b36dd661d702917bdf4e09ab0b843ee4",
+    "model/pegs_5.glb": "8efe6e4eefef4f7a5b669b4fcd47fa94920f87d8b7a73717cf4bec2011c51269",
+    "hooks.json": "94d66353a8936a2f2b386868c03e9f7c24b8b36871ffc074fad5e8abdccf7aa6",
+    "states.json": "28ae775bce2b8e0b3d596908622a0d22db48419932a6d81ec628b1473ef1c1bf",
+    "design.json": "447f81e2e9c8574149c24aaaa94cd3b0e5762597baf57f85f3c5479bfd02d233",
+    "spec.json": "9f861e768245ea182b2eefa2e094a5b17ba17605fad8aea9bd4b3a001486fc96"
+  },
+  "output_sha256": {
+    "previews/deck.png": "703d68a85c31c98f724dad0318f86031b9129a72de381368d60d542daddd9d46",
+    "previews/hero.png": "5fb2c7dfeb39160aaf36cb3c2bfe78f3e36ab1e395b66158c324216591c8c337",
+    "previews/hero_trim_off.png": "f127b011e351eeccf342a4944b6915013992e733eb93ca135a3e63d40d4219ce",
+    "previews/repair_fitted.png": "6604a88646a9c19cafed98d8488d98142998bb22051798cfed37226e1c4ed13e",
+    "previews/repair_gap_detail.png": "158b8a18a89ab5625b593f23486ba079c475041683440b0c62b1c638c3ba22d4",
+    "previews/repair_installed.png": "eb24264376472c40c9d7a635f96f97f371087bd6cc33f4a7ada877bc6a81e2be",
+    "previews/repair_installed_detail.png": "24e7c01c110789f9f01a906176f43f4aa2998605f22bc629a7ab5db153be3ccf",
+    "previews/repair_straight.png": "38bad2be226fdae469dc994fd05536251780a97667d11449c48f2a745bdb5200",
+    "previews/stage_0.png": "491abe6ed44f89b6c045518fd46a73e987ac9f725728a9d3855bed4702dd8fcb",
+    "previews/stage_1.png": "18e7fac4fae05b1137abc9c964e231b454e6cb54247d1388cf2112838d83e0b8",
+    "previews/stage_2.png": "e17109fd37fb99354ae4182606305b6d2d942654bc99e42ef78adcdd40daedfa",
+    "previews/stage_3.png": "5fb2c7dfeb39160aaf36cb3c2bfe78f3e36ab1e395b66158c324216591c8c337",
+    "review/source_deck.png": "801f58d1ad7def9e3ed3ed1467531e19f1e12890897a4004096f69d25bfaec65",
+    "review/source_hero.png": "f9005b14615b98f062a508855f495f7576751646a73d657cc39443adcdc88520",
+    "review/source_repair_gap_detail.png": "52ac452e5135e884a7abda1ce2af5e58f653d4b89afa8e5d1cb14f0ae3473362"
+  },
+  "preview_source_sha256": {
+    "sailertales/boat-frame/preview.py": "b94222d34a1b630a0fd62d6a5cd4d2dcf0d130e893449f085f1192cad460f075",
+    "sailertales/common/v2_review.py": "91c3f653e22d8e0d06d6b625d82a1b9bc8c3f683737a264d0bfecb3563184081"
+  }
+}

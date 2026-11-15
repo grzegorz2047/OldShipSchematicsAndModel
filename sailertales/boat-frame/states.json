@@ -1,0 +1,245 @@
+{
+  "schema": 1,
+  "kind": "boat-frame",
+  "states": [
+    {
+      "id": "stage0",
+      "stage": 0,
+      "model": "model/stage_0.glb",
+      "collision": "model/collision_0.glb",
+      "mesh_nodes": 20,
+      "triangles": 3056,
+      "adds": "spine and alternating frames"
+    },
+    {
+      "id": "stage1",
+      "stage": 1,
+      "model": "model/stage_1.glb",
+      "collision": "model/collision_1.glb",
+      "mesh_nodes": 30,
+      "triangles": 8056,
+      "adds": "remaining frames and strakes 0–2"
+    },
+    {
+      "id": "stage2",
+      "stage": 2,
+      "model": "model/stage_2.glb",
+      "collision": "model/collision_2.glb",
+      "mesh_nodes": 37,
+      "triangles": 11028,
+      "adds": "strakes 3–5 with repair gap"
+    },
+    {
+      "id": "stage3",
+      "stage": 3,
+      "model": "model/ship.glb",
+      "collision": "model/collision.glb",
+      "mesh_nodes": 52,
+      "triangles": 14328,
+      "adds": "strakes 6–7, trim and three seats"
+    }
+  ],
+  "components": [
+    {
+      "id": "repair_plank",
+      "model": "model/repair_plank.glb",
+      "morph": "straight",
+      "basis": "fitted",
+      "default_visible": false
+    },
+    {
+      "id": "pegs",
+      "model": "model/pegs_5.glb",
+      "count": 5,
+      "default_visible": false
+    },
+    {
+      "id": "trim",
+      "model": "model/trim.glb",
+      "collision": "model/trim_collision.glb",
+      "included_in_canonical_stage3": true,
+      "toggle_nodes": [
+        "trim_gunwale_port",
+        "trim_gunwale_starboard",
+        "trim_seat_0",
+        "trim_seat_0_cleat_port",
+        "trim_seat_0_cleat_starboard",
+        "trim_seat_1",
+        "trim_seat_1_cleat_port",
+        "trim_seat_1_cleat_starboard",
+        "trim_seat_2",
+        "trim_seat_2_cleat_port",
+        "trim_seat_2_cleat_starboard"
+      ]
+    }
+  ],
+  "anchors": {
+    "repair_gap": [
+      0.7083626985549927,
+      0.8213833570480347,
+      0.0
+    ],
+    "repair_gap_center": [
+      0.7083626985549927,
+      0.8213833570480347,
+      0.0
+    ],
+    "peg_0": [
+      0.6849387288093567,
+      0.836682915687561,
+      -1.2999999523162842
+    ],
+    "peg_1": [
+      0.705474853515625,
+      0.823845624923706,
+      -0.6499999761581421
+    ],
+    "peg_2": [
+      0.7083626985549927,
+      0.8213833570480347,
+      0.0
+    ],
+    "peg_3": [
+      0.705474853515625,
+      0.823845624923706,
+      0.6499999761581421
+    ],
+    "peg_4": [
+      0.6849387288093567,
+      0.836682915687561,
+      1.2999999523162842
+    ],
+    "leak_0": [
+      0.6456509232521057,
+      0.74576336145401,
+      0.9750000238418579
+    ],
+    "drip_0": [
+      0.6438783407211304,
+      0.0,
+      0.9750000238418579
+    ],
+    "leak_1": [
+      -0.42038747668266296,
+      0.6671812534332275,
+      -2.3399999141693115
+    ],
+    "drip_1": [
+      -0.41731375455856323,
+      0.0,
+      -2.3399999141693115
+    ],
+    "leak_2": [
+      -0.3874244689941406,
+      0.49182838201522827,
+      0.38999998569488525
+    ],
+    "drip_2": [
+      -0.3784981369972229,
+      0.0,
+      0.38999998569488525
+    ],
+    "stem_mark_0": [
+      0.0,
+      1.5830254554748535,
+      3.3274571895599365
+    ],
+    "stem_mark_1": [
+      0.0,
+      1.3167351484298706,
+      3.318213701248169
+    ]
+  },
+  "hooks": {
+    "setStage": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "setGapPlank": [
+      0,
+      1
+    ],
+    "setPegs": [
+      0,
+      5
+    ],
+    "setTrim": [
+      false,
+      true
+    ],
+    "setWater": [
+      false,
+      true
+    ],
+    "setLeak": {
+      "index": [
+        0,
+        1,
+        2
+      ],
+      "state": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "setMarks": {
+      "father": [
+        0,
+        1
+      ],
+      "son": [
+        0,
+        1
+      ]
+    },
+    "carve": {
+      "mark": [
+        0,
+        1
+      ],
+      "seconds_default": 3
+    },
+    "point": [
+      "gap",
+      "peg",
+      "leak",
+      "drip",
+      "stem"
+    ]
+  },
+  "gap": {
+    "probe_gltf_m": [
+      [
+        0.8320818543434143,
+        0.7208645343780518,
+        0.32499998807907104
+      ],
+      [
+        0.5529029965400696,
+        0.9481511116027832,
+        0.32499998807907104
+      ]
+    ],
+    "shell_patterns": [
+      "hull_strake_*"
+    ],
+    "strake": 4,
+    "hull_side": 1,
+    "u0": -0.42,
+    "u1": 0.42,
+    "length_parameter_m": 2.73
+  },
+  "visibility": {
+    "stage_members": "construction_stage <= requestedStage; stages are cumulative",
+    "repair_plank": "separate component; hidden initially",
+    "pegs": "show first k of repair_peg_0..4",
+    "trim": "already present at stage3; setTrim(false) hides trim_* in ship.glb, do not add trim.glb a second time"
+  },
+  "work_side": 1,
+  "coordinate_contract": "glTF metres: +X is the selected source work side for work=1, +Y up, +Z bow; KEEL_Y=0.42 already included"
+}
