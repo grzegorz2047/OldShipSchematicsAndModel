@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "scope": "Actual delivered main GLB and contract, static attachment controls",
+  "actual_supported_seat": {
+    "passed": true,
+    "node": "seat_anchor",
+    "position_gltf_m": [
+      0.4000000059604645,
+      0.20250187814235687,
+      -0.0
+    ],
+    "source_x_z_correct": true,
+    "support": {
+      "object": "strake_port_03",
+      "surface_gltf_m": [
+        0.4000000059604645,
+        0.22250185906887054,
+        -0.0
+      ],
+      "vertical_gap_m": 0.019999980926513672,
+      "up_normal": 0.811812162399292
+    },
+    "support_tolerance_m": 0.08,
+    "scope": "Static seated actor attachment on real inverted hull; no standing/walking claim"
+  },
+  "raised_seat_rejected": {
+    "passed": false,
+    "node": "seat_anchor",
+    "position_gltf_m": [
+      0.4000000059604645,
+      0.7025018781423569,
+      -0.0
+    ],
+    "source_x_z_correct": true,
+    "support": null,
+    "support_tolerance_m": 0.08,
+    "scope": "Static seated actor attachment on real inverted hull; no standing/walking claim"
+  },
+  "wrong_lateral_offset_rejected": true,
+  "incorrect_float_span_rejected": true,
+  "models_modified": false
+}

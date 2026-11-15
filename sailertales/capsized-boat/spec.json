@@ -1,0 +1,40 @@
+{
+  "id": "capsized-boat",
+  "label": "Wywrócona Mewka — łódź ojca",
+  "kind": "capsized-boat",
+  "asset_role": "floating_narrative_prop",
+  "game_type": "capsized_boat",
+  "length": 6.5,
+  "beam": 1.72,
+  "depth_amidships": 0.92,
+  "keel_top_above_calm_water": 0.38,
+  "strakes_per_side": 8,
+  "plank_thickness": 0.028,
+  "source_commit": "ea77e560ba4668c9dda55433813addbdb2f50176",
+  "source_paths": [
+    "src/models/boat.js:buildCapsized",
+    "src/models/hull.js:HULL,hullPt,hullSpine,hullTrim",
+    "src/campaign/props.js:floatStep",
+    "src/campaign/missions/a1_3.js:fatherOnHull"
+  ],
+  "builder": "sailertales/capsized-boat/build.py",
+  "source_reference_seat_gltf_m": [
+    0.4,
+    0.185,
+    0
+  ],
+  "seat_hip_inset": 0.02,
+  "walkable": false,
+  "limitations": [
+    "Aktywny rekwizyt sceny ratunkowej: odwrócony wariant tej samej Mewki, nie nowa klasa kadłuba.",
+    "Odwrócenie jest zapisane w wierzchołkach. Korzeń pozostaje w lokalnej spokojnej wodnicy.",
+    "Dokładna wysokość miejsca siedzenia wynika z gotowej powierzchni poszycia. Nie dodano fikcyjnego pokładu ani trasy pieszej.",
+    "Pływanie, dryf i przypięcie aktora wymagają adaptera SailerTales zgodnego ze states.json i integration-contract.json."
+  ],
+  "source_files_sha256": {
+    "src/models/boat.js": "77f5bebff0f16adf7c69e7bba34acda75f2426b660a17c6cc26541b3c2af578c",
+    "src/models/hull.js": "a9da695038e04a452b15d73065c810ef194018bbdc376e40fd4f09d785ead5e5",
+    "src/campaign/props.js": "240da2f4669ccc2d839208404eee3aa81b158aa4308983b6040e1f55ecc9ce2d",
+    "src/campaign/missions/a1_3.js": "ceb48569bcc5f94f088f9bc275e3a94fc7345c34eff397493c3f7a083015914e"
+  }
+}

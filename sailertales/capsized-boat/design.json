@@ -1,0 +1,1925 @@
+{
+  "schema": 2,
+  "id": "capsized-boat",
+  "construction": "eight individually closed lapstrakes per side, curved keel and stems, gunwales and the source three submerged benches; no fabricated ribs, mast or walking deck",
+  "basis": {
+    "guide_commit": "2e6f7e922e95396722376d42f3e2e0a12256029e",
+    "guide_chapters": [
+      "03",
+      "08",
+      "09",
+      "13",
+      "14"
+    ],
+    "game_commit": "ea77e560ba4668c9dda55433813addbdb2f50176",
+    "source_files_sha256": {
+      "src/models/boat.js": "77f5bebff0f16adf7c69e7bba34acda75f2426b660a17c6cc26541b3c2af578c",
+      "src/models/hull.js": "a9da695038e04a452b15d73065c810ef194018bbdc376e40fd4f09d785ead5e5",
+      "src/campaign/props.js": "240da2f4669ccc2d839208404eee3aa81b158aa4308983b6040e1f55ecc9ce2d",
+      "src/campaign/missions/a1_3.js": "ceb48569bcc5f94f088f9bc275e3a94fc7345c34eff397493c3f7a083015914e"
+    },
+    "formulas": "ported HULL/hullB/hullSheer/hullRocker/hullPt/stemAt from SailerTales hull.js"
+  },
+  "source_reference_seat_gltf_m": [
+    0.4,
+    0.185,
+    0
+  ],
+  "delivered_seat_gltf_m": [
+    0.4000000059604645,
+    0.20250187814235687,
+    -0.0
+  ],
+  "seat_support_gltf_m": [
+    0.4000000059604645,
+    0.22250187397003174,
+    -0.0
+  ],
+  "seat_support_normal_blender": [
+    0.5839186310768127,
+    0.0001287918130401522,
+    0.811812162399292
+  ],
+  "seat_hip_inset_m": 0.02,
+  "origin": {
+    "position_gltf_m": [
+      0,
+      0,
+      0
+    ],
+    "meaning": "source calm-water prop root"
+  },
+  "capsize_baked": true,
+  "float": {
+    "lift": 0,
+    "span": 2.4,
+    "beam": 0.7,
+    "bob": 0.03,
+    "sway": 0.09,
+    "tilt": 0.7
+  },
+  "intended_joints": [
+    {
+      "a": "strake_port_01",
+      "b": "strake_port_02",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_02",
+      "b": "strake_port_03",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_03",
+      "b": "strake_port_04",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_04",
+      "b": "strake_port_05",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_05",
+      "b": "strake_port_06",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_06",
+      "b": "strake_port_07",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_07",
+      "b": "strake_port_08",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_01",
+      "b": "keel",
+      "reason": "This flank garboard is housed in the keel rabbet.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_08",
+      "b": "gunwale_port",
+      "reason": "The gunwale cap lands on this flank top sheerstrake.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_01",
+      "b": "stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_02",
+      "b": "stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_03",
+      "b": "stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_04",
+      "b": "stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_05",
+      "b": "stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_06",
+      "b": "stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_07",
+      "b": "stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_08",
+      "b": "stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_01",
+      "b": "stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_02",
+      "b": "stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_03",
+      "b": "stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_04",
+      "b": "stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_05",
+      "b": "stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_06",
+      "b": "stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_07",
+      "b": "stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_08",
+      "b": "stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "submerged_bench_00",
+      "b": "strake_port_07",
+      "reason": "This source submerged bench end bears against the inner seventh strake at its station.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "submerged_bench_01",
+      "b": "strake_port_07",
+      "reason": "This source submerged bench end bears against the inner seventh strake at its station.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "submerged_bench_02",
+      "b": "strake_port_07",
+      "reason": "This source submerged bench end bears against the inner seventh strake at its station.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_01",
+      "b": "strake_starboard_02",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_02",
+      "b": "strake_starboard_03",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_03",
+      "b": "strake_starboard_04",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_04",
+      "b": "strake_starboard_05",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_05",
+      "b": "strake_starboard_06",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_06",
+      "b": "strake_starboard_07",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_07",
+      "b": "strake_starboard_08",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_01",
+      "b": "keel",
+      "reason": "This flank garboard is housed in the keel rabbet.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_08",
+      "b": "gunwale_starboard",
+      "reason": "The gunwale cap lands on this flank top sheerstrake.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_01",
+      "b": "stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_02",
+      "b": "stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_03",
+      "b": "stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_04",
+      "b": "stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_05",
+      "b": "stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_06",
+      "b": "stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_07",
+      "b": "stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_08",
+      "b": "stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_01",
+      "b": "stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_02",
+      "b": "stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_03",
+      "b": "stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_04",
+      "b": "stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_05",
+      "b": "stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_06",
+      "b": "stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_07",
+      "b": "stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_starboard_08",
+      "b": "stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "submerged_bench_00",
+      "b": "strake_starboard_07",
+      "reason": "This source submerged bench end bears against the inner seventh strake at its station.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "submerged_bench_01",
+      "b": "strake_starboard_07",
+      "reason": "This source submerged bench end bears against the inner seventh strake at its station.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "submerged_bench_02",
+      "b": "strake_starboard_07",
+      "reason": "This source submerged bench end bears against the inner seventh strake at its station.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "strake_port_01",
+      "b": "strake_starboard_01",
+      "reason": "The two garboards meet at their housed centreline seam, under the keel.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "keel",
+      "b": "stem_bow",
+      "reason": "This stem heel and the keel end form a structural scarf joint.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "keel",
+      "b": "stem_stern",
+      "reason": "This stem heel and the keel end form a structural scarf joint.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "floating_oar_shaft",
+      "b": "floating_oar_blade",
+      "reason": "This single oar loom is housed in its blade.",
+      "evidence": "specific source construction interface; actual world AABBs meet within2mm"
+    },
+    {
+      "a": "lod1_strake_port_01",
+      "b": "lod1_strake_port_02",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_01",
+        "strake_port_02"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_02",
+      "b": "lod1_strake_port_03",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_02",
+        "strake_port_03"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_03",
+      "b": "lod1_strake_port_04",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_03",
+        "strake_port_04"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_04",
+      "b": "lod1_strake_port_05",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_04",
+        "strake_port_05"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_05",
+      "b": "lod1_strake_port_06",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_05",
+        "strake_port_06"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_06",
+      "b": "lod1_strake_port_07",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_06",
+        "strake_port_07"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_07",
+      "b": "lod1_strake_port_08",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_07",
+        "strake_port_08"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_01",
+      "b": "lod1_keel",
+      "reason": "This flank garboard is housed in the keel rabbet.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_01",
+        "keel"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_08",
+      "b": "lod1_gunwale_port",
+      "reason": "The gunwale cap lands on this flank top sheerstrake.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_08",
+        "gunwale_port"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_01",
+      "b": "lod1_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_01",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_02",
+      "b": "lod1_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_02",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_03",
+      "b": "lod1_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_03",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_04",
+      "b": "lod1_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_04",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_05",
+      "b": "lod1_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_05",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_06",
+      "b": "lod1_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_06",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_07",
+      "b": "lod1_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_07",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_08",
+      "b": "lod1_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_08",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_01",
+      "b": "lod1_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_01",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_02",
+      "b": "lod1_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_02",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_03",
+      "b": "lod1_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_03",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_04",
+      "b": "lod1_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_04",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_05",
+      "b": "lod1_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_05",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_06",
+      "b": "lod1_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_06",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_07",
+      "b": "lod1_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_07",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_08",
+      "b": "lod1_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_08",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod1_submerged_bench_00",
+      "b": "lod1_strake_port_07",
+      "reason": "This source submerged bench end bears against the inner seventh strake at its station.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "submerged_bench_00",
+        "strake_port_07"
+      ]
+    },
+    {
+      "a": "lod1_submerged_bench_01",
+      "b": "lod1_strake_port_07",
+      "reason": "This source submerged bench end bears against the inner seventh strake at its station.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "submerged_bench_01",
+        "strake_port_07"
+      ]
+    },
+    {
+      "a": "lod1_submerged_bench_02",
+      "b": "lod1_strake_port_07",
+      "reason": "This source submerged bench end bears against the inner seventh strake at its station.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "submerged_bench_02",
+        "strake_port_07"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_01",
+      "b": "lod1_strake_starboard_02",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_01",
+        "strake_starboard_02"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_02",
+      "b": "lod1_strake_starboard_03",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_02",
+        "strake_starboard_03"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_03",
+      "b": "lod1_strake_starboard_04",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_03",
+        "strake_starboard_04"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_04",
+      "b": "lod1_strake_starboard_05",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_04",
+        "strake_starboard_05"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_05",
+      "b": "lod1_strake_starboard_06",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_05",
+        "strake_starboard_06"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_06",
+      "b": "lod1_strake_starboard_07",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_06",
+        "strake_starboard_07"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_07",
+      "b": "lod1_strake_starboard_08",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_07",
+        "strake_starboard_08"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_01",
+      "b": "lod1_keel",
+      "reason": "This flank garboard is housed in the keel rabbet.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_01",
+        "keel"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_08",
+      "b": "lod1_gunwale_starboard",
+      "reason": "The gunwale cap lands on this flank top sheerstrake.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_08",
+        "gunwale_starboard"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_01",
+      "b": "lod1_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_01",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_02",
+      "b": "lod1_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_02",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_03",
+      "b": "lod1_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_03",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_04",
+      "b": "lod1_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_04",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_05",
+      "b": "lod1_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_05",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_06",
+      "b": "lod1_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_06",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_07",
+      "b": "lod1_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_07",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_08",
+      "b": "lod1_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_08",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_01",
+      "b": "lod1_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_01",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_02",
+      "b": "lod1_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_02",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_03",
+      "b": "lod1_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_03",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_04",
+      "b": "lod1_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_04",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_05",
+      "b": "lod1_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_05",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_06",
+      "b": "lod1_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_06",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_07",
+      "b": "lod1_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_07",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod1_strake_starboard_08",
+      "b": "lod1_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_08",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod1_submerged_bench_00",
+      "b": "lod1_strake_starboard_07",
+      "reason": "This source submerged bench end bears against the inner seventh strake at its station.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "submerged_bench_00",
+        "strake_starboard_07"
+      ]
+    },
+    {
+      "a": "lod1_submerged_bench_01",
+      "b": "lod1_strake_starboard_07",
+      "reason": "This source submerged bench end bears against the inner seventh strake at its station.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "submerged_bench_01",
+        "strake_starboard_07"
+      ]
+    },
+    {
+      "a": "lod1_submerged_bench_02",
+      "b": "lod1_strake_starboard_07",
+      "reason": "This source submerged bench end bears against the inner seventh strake at its station.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "submerged_bench_02",
+        "strake_starboard_07"
+      ]
+    },
+    {
+      "a": "lod1_strake_port_01",
+      "b": "lod1_strake_starboard_01",
+      "reason": "The two garboards meet at their housed centreline seam, under the keel.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_01",
+        "strake_starboard_01"
+      ]
+    },
+    {
+      "a": "lod1_keel",
+      "b": "lod1_stem_bow",
+      "reason": "This stem heel and the keel end form a structural scarf joint.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "keel",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod1_keel",
+      "b": "lod1_stem_stern",
+      "reason": "This stem heel and the keel end form a structural scarf joint.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "keel",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod1_floating_oar_shaft",
+      "b": "lod1_floating_oar_blade",
+      "reason": "This single oar loom is housed in its blade.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "floating_oar_shaft",
+        "floating_oar_blade"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_01",
+      "b": "lod2_strake_port_02",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_01",
+        "strake_port_02"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_02",
+      "b": "lod2_strake_port_03",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_02",
+        "strake_port_03"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_03",
+      "b": "lod2_strake_port_04",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_03",
+        "strake_port_04"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_04",
+      "b": "lod2_strake_port_05",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_04",
+        "strake_port_05"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_05",
+      "b": "lod2_strake_port_06",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_05",
+        "strake_port_06"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_06",
+      "b": "lod2_strake_port_07",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_06",
+        "strake_port_07"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_07",
+      "b": "lod2_strake_port_08",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_07",
+        "strake_port_08"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_01",
+      "b": "lod2_keel",
+      "reason": "This flank garboard is housed in the keel rabbet.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_01",
+        "keel"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_08",
+      "b": "lod2_gunwale_port",
+      "reason": "The gunwale cap lands on this flank top sheerstrake.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_08",
+        "gunwale_port"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_01",
+      "b": "lod2_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_01",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_02",
+      "b": "lod2_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_02",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_03",
+      "b": "lod2_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_03",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_04",
+      "b": "lod2_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_04",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_05",
+      "b": "lod2_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_05",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_06",
+      "b": "lod2_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_06",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_07",
+      "b": "lod2_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_07",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_08",
+      "b": "lod2_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_08",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_01",
+      "b": "lod2_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_01",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_02",
+      "b": "lod2_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_02",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_03",
+      "b": "lod2_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_03",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_04",
+      "b": "lod2_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_04",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_05",
+      "b": "lod2_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_05",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_06",
+      "b": "lod2_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_06",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_07",
+      "b": "lod2_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_07",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_08",
+      "b": "lod2_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_08",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod2_submerged_bench_00",
+      "b": "lod2_strake_port_07",
+      "reason": "This source submerged bench end bears against the inner seventh strake at its station.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "submerged_bench_00",
+        "strake_port_07"
+      ]
+    },
+    {
+      "a": "lod2_submerged_bench_01",
+      "b": "lod2_strake_port_07",
+      "reason": "This source submerged bench end bears against the inner seventh strake at its station.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "submerged_bench_01",
+        "strake_port_07"
+      ]
+    },
+    {
+      "a": "lod2_submerged_bench_02",
+      "b": "lod2_strake_port_07",
+      "reason": "This source submerged bench end bears against the inner seventh strake at its station.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "submerged_bench_02",
+        "strake_port_07"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_01",
+      "b": "lod2_strake_starboard_02",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_01",
+        "strake_starboard_02"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_02",
+      "b": "lod2_strake_starboard_03",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_02",
+        "strake_starboard_03"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_03",
+      "b": "lod2_strake_starboard_04",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_03",
+        "strake_starboard_04"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_04",
+      "b": "lod2_strake_starboard_05",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_04",
+        "strake_starboard_05"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_05",
+      "b": "lod2_strake_starboard_06",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_05",
+        "strake_starboard_06"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_06",
+      "b": "lod2_strake_starboard_07",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_06",
+        "strake_starboard_07"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_07",
+      "b": "lod2_strake_starboard_08",
+      "reason": "These two adjacent closed lapstrakes share their specified caulked seam on the same flank.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_07",
+        "strake_starboard_08"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_01",
+      "b": "lod2_keel",
+      "reason": "This flank garboard is housed in the keel rabbet.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_01",
+        "keel"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_08",
+      "b": "lod2_gunwale_starboard",
+      "reason": "The gunwale cap lands on this flank top sheerstrake.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_08",
+        "gunwale_starboard"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_01",
+      "b": "lod2_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_01",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_02",
+      "b": "lod2_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_02",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_03",
+      "b": "lod2_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_03",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_04",
+      "b": "lod2_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_04",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_05",
+      "b": "lod2_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_05",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_06",
+      "b": "lod2_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_06",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_07",
+      "b": "lod2_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_07",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_08",
+      "b": "lod2_stem_bow",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_08",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_01",
+      "b": "lod2_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_01",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_02",
+      "b": "lod2_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_02",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_03",
+      "b": "lod2_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_03",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_04",
+      "b": "lod2_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_04",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_05",
+      "b": "lod2_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_05",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_06",
+      "b": "lod2_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_06",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_07",
+      "b": "lod2_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_07",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod2_strake_starboard_08",
+      "b": "lod2_stem_stern",
+      "reason": "This strake end cap lands at this specific stem rabbet, closing the source pointed end.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_starboard_08",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod2_submerged_bench_00",
+      "b": "lod2_strake_starboard_07",
+      "reason": "This source submerged bench end bears against the inner seventh strake at its station.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "submerged_bench_00",
+        "strake_starboard_07"
+      ]
+    },
+    {
+      "a": "lod2_submerged_bench_01",
+      "b": "lod2_strake_starboard_07",
+      "reason": "This source submerged bench end bears against the inner seventh strake at its station.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "submerged_bench_01",
+        "strake_starboard_07"
+      ]
+    },
+    {
+      "a": "lod2_submerged_bench_02",
+      "b": "lod2_strake_starboard_07",
+      "reason": "This source submerged bench end bears against the inner seventh strake at its station.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "submerged_bench_02",
+        "strake_starboard_07"
+      ]
+    },
+    {
+      "a": "lod2_strake_port_01",
+      "b": "lod2_strake_starboard_01",
+      "reason": "The two garboards meet at their housed centreline seam, under the keel.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "strake_port_01",
+        "strake_starboard_01"
+      ]
+    },
+    {
+      "a": "lod2_keel",
+      "b": "lod2_stem_bow",
+      "reason": "This stem heel and the keel end form a structural scarf joint.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "keel",
+        "stem_bow"
+      ]
+    },
+    {
+      "a": "lod2_keel",
+      "b": "lod2_stem_stern",
+      "reason": "This stem heel and the keel end form a structural scarf joint.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "keel",
+        "stem_stern"
+      ]
+    },
+    {
+      "a": "lod2_floating_oar_shaft",
+      "b": "lod2_floating_oar_blade",
+      "reason": "This single oar loom is housed in its blade.",
+      "evidence": "exact LOD node copies of this specific source construction interface; independently checked after import",
+      "source_interface": [
+        "floating_oar_shaft",
+        "floating_oar_blade"
+      ]
+    }
+  ],
+  "materials": {
+    "method": "guide-sized authored PBR atlas upgrade",
+    "materials": [
+      {
+        "source": "drewno_ciemne",
+        "material": "v2_drewno_ciemne",
+        "palette_srgb": [
+          0.4,
+          0.28,
+          0.17
+        ],
+        "old_uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "image_px": [
+          2048,
+          2048
+        ],
+        "family": "wood",
+        "metallic": 0
+      },
+      {
+        "source": "drewno_czarne",
+        "material": "v2_drewno_czarne",
+        "palette_srgb": [
+          0.23,
+          0.215,
+          0.19
+        ],
+        "old_uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "image_px": [
+          2048,
+          2048
+        ],
+        "family": "wood",
+        "metallic": 0
+      },
+      {
+        "source": "drewno",
+        "material": "v2_drewno",
+        "palette_srgb": [
+          0.62,
+          0.46,
+          0.3
+        ],
+        "old_uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "uv_tile_m": [
+          2.0,
+          2.0
+        ],
+        "image_px": [
+          2048,
+          2048
+        ],
+        "family": "wood",
+        "metallic": 0
+      },
+      {
+        "source": "lina_jasna",
+        "material": "v2_lina_jasna",
+        "palette_srgb": [
+          0.64,
+          0.57,
+          0.43
+        ],
+        "old_uv_tile_m": [
+          1.0,
+          1.0
+        ],
+        "uv_tile_m": [
+          1.0,
+          1.0
+        ],
+        "image_px": [
+          1024,
+          512
+        ],
+        "family": "rope",
+        "metallic": 0
+      },
+      {
+        "source": "plotno",
+        "material": "v2_plotno",
+        "palette_srgb": [
+          0.84,
+          0.8,
+          0.7
+        ],
+        "old_uv_tile_m": [
+          2.4,
+          2.4
+        ],
+        "uv_tile_m": [
+          2.4,
+          2.4
+        ],
+        "image_px": [
+          2048,
+          2048
+        ],
+        "family": "canvas",
+        "metallic": 0
+      }
+    ],
+    "provenance": {
+      "license": "project-authored procedural textures; no external imagery",
+      "basis": [
+        "docs/en/03-hull-construction.md",
+        "docs/en/04-decks-bulwarks-stern-head.md",
+        "docs/en/08-ropes-blocks-and-sails.md",
+        "docs/en/13-3d-quality-checklist.md"
+      ],
+      "atlas_m": {
+        "deck": [
+          3.52,
+          0.88
+        ],
+        "hull": [
+          4.4,
+          1.1
+        ],
+        "paint": [
+          4.4,
+          1.1
+        ],
+        "wood": [
+          2.0,
+          2.0
+        ],
+        "iron": [
+          1.0,
+          1.0
+        ],
+        "rope": [
+          1.0,
+          1.0
+        ],
+        "canvas": [
+          2.4,
+          2.4
+        ]
+      },
+      "method": "continuous authored grain, physical seams/trunnels, normal from metric height derivatives",
+      "palette_srgb": {
+        "poklad": [
+          0.62,
+          0.575,
+          0.5
+        ],
+        "burta_drewno": [
+          0.46,
+          0.33,
+          0.22
+        ],
+        "drewno": [
+          0.62,
+          0.46,
+          0.3
+        ],
+        "drewno_ciemne": [
+          0.4,
+          0.28,
+          0.17
+        ],
+        "drewno_czarne": [
+          0.23,
+          0.215,
+          0.19
+        ],
+        "laweta": [
+          0.4,
+          0.15,
+          0.09
+        ],
+        "farba_czarna": [
+          0.2,
+          0.19,
+          0.18
+        ],
+        "farba_czarna_gladka": [
+          0.23,
+          0.22,
+          0.21
+        ],
+        "farba_ochra": [
+          0.68,
+          0.52,
+          0.27
+        ],
+        "farba_czerwona": [
+          0.55,
+          0.17,
+          0.1
+        ],
+        "farba_niebieska": [
+          0.16,
+          0.23,
+          0.36
+        ],
+        "farba_dno_biala": [
+          0.84,
+          0.81,
+          0.73
+        ],
+        "farba_dno_czerwona": [
+          0.42,
+          0.18,
+          0.12
+        ],
+        "rzezby_zlote": [
+          0.82,
+          0.63,
+          0.3
+        ],
+        "zelazo": [
+          0.19,
+          0.18,
+          0.17
+        ],
+        "zelazo_lufa": [
+          0.19,
+          0.18,
+          0.17
+        ],
+        "braz": [
+          0.62,
+          0.42,
+          0.2
+        ],
+        "lina_smolowana": [
+          0.23,
+          0.21,
+          0.18
+        ],
+        "lina_jasna": [
+          0.64,
+          0.57,
+          0.43
+        ],
+        "plotno": [
+          0.84,
+          0.8,
+          0.7
+        ],
+        "szklo": [
+          0.18,
+          0.23,
+          0.25
+        ]
+      }
+    },
+    "additional_materials": [
+      {
+        "material": "algae_coated_wood",
+        "source": "original guide procedural wood PBR",
+        "method": "conformal face coating, linear green-wash multiplier",
+        "linear_multiplier": [
+          0.21,
+          0.57,
+          0.59
+        ],
+        "roughness": 0.96
+      }
+    ]
+  },
+  "spec_sha256": "1cf50392584cf95b23277805169a1564b6eac160d7551465dc35dc77c16d6bd2",
+  "game_deviations": [
+    "Source render surfaces are given real 28mm closed plank thickness, with extra stations for smooth curvature.",
+    "Keel top is geometrically 0.38m, following the source stated intent; the source primitive beam thickness would otherwise place its upper face above that value.",
+    "Seat height is fitted to delivered outer planking at source x=0.4m, with the same 20mm hip inset. Reference source seat is recorded separately.",
+    "Algae is a conformal material coating on the original t=0.74..0.98 band, avoiding a floating or penetrating overlay.",
+    "Oar is turned along the side and cloth moved 0.25m outward to avoid source decorative overlaps; source dimensions, floating character and shared root are retained.",
+    "No cabin, standing route, mast or rudder is invented for this flooded inverted prop."
+  ],
+  "triangles": {
+    "lod0": 26972,
+    "collision": 25456,
+    "lod1": 13520,
+    "lod2": 2208
+  },
+  "export": {
+    "units": "metres",
+    "axes": "glTF +X port, +Y up, +Z forward",
+    "animations": "authored static pose; transforms/pivot markers retained",
+    "lods": "static distance meshes with 1024/512 max texture dimension",
+    "collision_mode": "separate static concave meshes; moving parts require engine setup"
+  }
+}
