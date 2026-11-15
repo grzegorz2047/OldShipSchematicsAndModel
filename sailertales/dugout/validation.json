@@ -1,0 +1,2099 @@
+{
+  "schema": 2,
+  "vessel": "dugout",
+  "blender": "5.2.3 LTS",
+  "passed": true,
+  "scope": "authored static assets and declared player routes; per-item matrix contains all untested or inapplicable guide checks",
+  "checks": {
+    "export": {
+      "model/ship.glb": {
+        "passed": true,
+        "errors": [],
+        "bytes": 1809224,
+        "triangles": 3334,
+        "nodes": 6,
+        "meshes": 5,
+        "materials": 2,
+        "images": [
+          {
+            "index": 0,
+            "name": "wood_normal",
+            "width": 2048,
+            "height": 2048,
+            "bytes": 403169,
+            "sha256": "e818cbf65c8caf36cc80252ef27a2f3a26511538ff7796342ce591c942af2e73",
+            "power_of_two": true
+          },
+          {
+            "index": 1,
+            "name": "wood_color",
+            "width": 2048,
+            "height": 2048,
+            "bytes": 477556,
+            "sha256": "5d5bfe4670209e8c07413a2d338dd5ee11cc701ab76188d3ade7d51c90a859ad",
+            "power_of_two": true
+          },
+          {
+            "index": 2,
+            "name": "wood_orm",
+            "width": 2048,
+            "height": 2048,
+            "bytes": 230435,
+            "sha256": "59240beea62b0333a595e7e42ea6702293e457d53b8d0a29037b46569755bb2a",
+            "power_of_two": true
+          },
+          {
+            "index": 3,
+            "name": "rope_normal",
+            "width": 1024,
+            "height": 512,
+            "bytes": 20487,
+            "sha256": "9daa03ea6cc3b3e84d8c5c135908eceb05977f489b745cda1088f70a9e93b75e",
+            "power_of_two": true
+          },
+          {
+            "index": 4,
+            "name": "rope_color",
+            "width": 1024,
+            "height": 512,
+            "bytes": 47890,
+            "sha256": "6008f1bf5992b68f2d2eb9f11678ee0cff4cc7e1bb8f815728356af8c0880e6b",
+            "power_of_two": true
+          },
+          {
+            "index": 5,
+            "name": "rope_orm",
+            "width": 1024,
+            "height": 512,
+            "bytes": 84062,
+            "sha256": "a5839af8db1dadfdd0f0409f7d0ed02ca2ee9fca9668c4403e21908175b1523c",
+            "power_of_two": true
+          }
+        ]
+      },
+      "model/collision.glb": {
+        "passed": true,
+        "errors": [],
+        "bytes": 531212,
+        "triangles": 3230,
+        "nodes": 1,
+        "meshes": 1,
+        "materials": 1,
+        "images": []
+      }
+    },
+    "topology": {
+      "model/ship.glb": {
+        "passed": true,
+        "weld_tolerance_m": 1e-05,
+        "seam_vertices_note": "glTF UV/normal seams are welded only in an analysis copy before topology tests",
+        "objects": [
+          {
+            "name": "hollowed_log_line",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 1613,
+              "export_seam_vertices_welded": 7492,
+              "edges": 4833,
+              "faces": 3222,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                2.850456769242345
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "paddle_blade",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 8,
+              "export_seam_vertices_welded": 16,
+              "edges": 18,
+              "faces": 12,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.001499998688697645
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "paddle_lashing_0",
+            "kind": "rope",
+            "topology": {
+              "vertices_after_weld": 18,
+              "export_seam_vertices_welded": 66,
+              "edges": 48,
+              "faces": 32,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                6.712946005433575e-06
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "paddle_lashing_1",
+            "kind": "rope",
+            "topology": {
+              "vertices_after_weld": 18,
+              "export_seam_vertices_welded": 66,
+              "edges": 48,
+              "faces": 32,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                6.607220586956917e-06
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          },
+          {
+            "name": "paddle_shaft",
+            "kind": "fitting",
+            "topology": {
+              "vertices_after_weld": 16,
+              "export_seam_vertices_welded": 32,
+              "edges": 42,
+              "faces": 28,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                0.004366975118247495
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          }
+        ],
+        "failures": []
+      },
+      "model/collision.glb": {
+        "passed": true,
+        "weld_tolerance_m": 1e-05,
+        "seam_vertices_note": "glTF UV/normal seams are welded only in an analysis copy before topology tests",
+        "objects": [
+          {
+            "name": "col_hollowed_log_line",
+            "kind": "hull",
+            "topology": {
+              "vertices_after_weld": 1613,
+              "export_seam_vertices_welded": 7492,
+              "edges": 4833,
+              "faces": 3222,
+              "components": 1,
+              "non_manifold_edges": 0,
+              "boundary_edges": 0,
+              "zero_area_faces": 0,
+              "duplicate_faces": 0,
+              "loose_vertices": 0,
+              "loose_edges": 0,
+              "closed_component_signed_volumes_m3": [
+                2.8504567692423395
+              ],
+              "reversed_closed_components": 0,
+              "nearly_zero_volume_closed_components": 0
+            }
+          }
+        ],
+        "failures": []
+      }
+    },
+    "navigation": {
+      "model/ship.glb": {
+        "passed": true,
+        "player": {
+          "radius": 0.38,
+          "height": 1.85,
+          "max_slope_deg": 35
+        },
+        "sample_step_m": 0.1,
+        "geometry_tolerance_m": 0.015,
+        "rounded_foot_lift_m": 0.08,
+        "controller_step_allowance_m": 0.22,
+        "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+        "routes": [
+          {
+            "name": "carved_cockpit",
+            "mode": "walk",
+            "length_m": 1.7000000308541687,
+            "samples": 19,
+            "passed": true,
+            "failure_count": 0,
+            "failures": []
+          }
+        ],
+        "disconnected_routes": []
+      },
+      "model/collision.glb": {
+        "passed": true,
+        "player": {
+          "radius": 0.38,
+          "height": 1.85,
+          "max_slope_deg": 35
+        },
+        "sample_step_m": 0.1,
+        "geometry_tolerance_m": 0.015,
+        "rounded_foot_lift_m": 0.08,
+        "controller_step_allowance_m": 0.22,
+        "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+        "routes": [
+          {
+            "name": "carved_cockpit",
+            "mode": "walk",
+            "length_m": 1.7000000308541687,
+            "samples": 19,
+            "passed": true,
+            "failure_count": 0,
+            "failures": []
+          }
+        ],
+        "disconnected_routes": []
+      }
+    },
+    "walking_width": {
+      "model/ship.glb": {
+        "passed": true,
+        "player": {
+          "radius": 0.4,
+          "height": 1.85,
+          "max_slope_deg": 35
+        },
+        "sample_step_m": 0.1,
+        "geometry_tolerance_m": 0,
+        "rounded_foot_lift_m": 0.08,
+        "controller_step_allowance_m": 0.22,
+        "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+        "routes": [
+          {
+            "name": "carved_cockpit",
+            "mode": "walk",
+            "length_m": 1.7000000308541687,
+            "samples": 19,
+            "passed": true,
+            "failure_count": 0,
+            "failures": []
+          }
+        ],
+        "disconnected_routes": []
+      },
+      "model/collision.glb": {
+        "passed": true,
+        "player": {
+          "radius": 0.4,
+          "height": 1.85,
+          "max_slope_deg": 35
+        },
+        "sample_step_m": 0.1,
+        "geometry_tolerance_m": 0,
+        "rounded_foot_lift_m": 0.08,
+        "controller_step_allowance_m": 0.22,
+        "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+        "routes": [
+          {
+            "name": "carved_cockpit",
+            "mode": "walk",
+            "length_m": 1.7000000308541687,
+            "samples": 19,
+            "passed": true,
+            "failure_count": 0,
+            "failures": []
+          }
+        ],
+        "disconnected_routes": []
+      }
+    },
+    "negative_controls": [
+      "open floor accepted",
+      "wall rejected",
+      "low ceiling rejected",
+      "missing floor rejected",
+      "capsule/triangle crossing detected",
+      "separated capsule/triangle accepted",
+      "deep solid penetration rejected",
+      "reasoned joint recorded",
+      "rope through cloth rejected",
+      "explicit sewn boundary attachment accepted"
+    ],
+    "rig": {
+      "passed": true,
+      "sails": 0,
+      "ropes": 2,
+      "spars": 0,
+      "pairs_tested": 0,
+      "scope": "authored static pose; boundary allowance only for explicit, reasoned attachments",
+      "edge_contact_tolerance_m": 0.025,
+      "edge_contacts": [],
+      "intersections": []
+    },
+    "uv": {
+      "missing_uv_objects": [],
+      "materials": {
+        "v2_wood": {
+          "area_m2": 18.553634513420832,
+          "texel_density_px_m": {
+            "p5": 1023.999038820763,
+            "median": 1024.0000301197324,
+            "p95": 1024.0011602876696
+          },
+          "density_p95_p5_ratio": 1.0000020717469706,
+          "anisotropy_p95": 1.0000038283863584,
+          "anisotropy_over_1_25_area_share": 6.278945457439352e-11,
+          "degenerate_uv_area_m2": 0.0,
+          "wood_grain_measured_area_m2": 17.234746848105647,
+          "wood_grain_aligned_share": 0.9877621366826758
+        },
+        "v2_lina_jasna": {
+          "area_m2": 0.008873393388557747,
+          "texel_density_px_m": {
+            "p5": 16033.412213924825,
+            "median": 16714.362241694078,
+            "p95": 17746.11402123718
+          },
+          "density_p95_p5_ratio": 1.1068207930077973,
+          "anisotropy_p95": 1.9999828532691108,
+          "anisotropy_over_1_25_area_share": 0.41879841778225435,
+          "degenerate_uv_area_m2": 0.0,
+          "wood_grain_measured_area_m2": 0.0,
+          "wood_grain_aligned_share": null
+        }
+      },
+      "grain_objects_below_94_percent": []
+    },
+    "materials": {
+      "passed": true,
+      "errors": [],
+      "merged_image_role_failures": [],
+      "fractional_plain_metal": [],
+      "double_sided_materials": [],
+      "images_power_of_two": true,
+      "note": "glTF image slots enforce sRGB colour vs linear data semantics; OpenGL normal orientation is an authoring convention"
+    },
+    "penetration": {
+      "passed": true,
+      "overlapping_solid_pairs": 1,
+      "surface_contact_pairs": 0,
+      "intended_joints": [
+        {
+          "a": "paddle_blade",
+          "b": "paddle_shaft",
+          "reason": "The paddle loom is housed in its blade; the paddle is lashed above the carved rim."
+        }
+      ],
+      "unintended_penetrations": [],
+      "threshold_m": 0.005,
+      "numeric_tolerance_m": 1e-05,
+      "connected_solid_parts": 3,
+      "method": "connected closed islands (including within one mesh), vertices inside counterpart, three-ray majority and nearest-surface depth"
+    },
+    "lods": {
+      "passed": true,
+      "lod0_triangles": 3334,
+      "levels": [
+        {
+          "level": 1,
+          "passed": true,
+          "errors": [],
+          "bytes": 620520,
+          "triangles": 1672,
+          "nodes": 5,
+          "meshes": 5,
+          "materials": 2,
+          "images": [
+            {
+              "index": 0,
+              "name": "wood_normal",
+              "width": 1024,
+              "height": 1024,
+              "bytes": 25914,
+              "sha256": "1d8eec91b391c2f18542bdc85630177ff5dc21c907bf1bc18ce94b8743708ce7",
+              "power_of_two": true
+            },
+            {
+              "index": 1,
+              "name": "wood_color",
+              "width": 1024,
+              "height": 1024,
+              "bytes": 46542,
+              "sha256": "9ca2e2af2556d9b13333905b90e6ffcf236c2bd3cf6a3c02ceb310a0811498cb",
+              "power_of_two": true
+            },
+            {
+              "index": 2,
+              "name": "wood_orm",
+              "width": 1024,
+              "height": 1024,
+              "bytes": 110857,
+              "sha256": "6f9d8dbd1086fc0504a46e19a8b8c2a2ec3cc01720ff1827530b0fc1f0e489d5",
+              "power_of_two": true
+            },
+            {
+              "index": 3,
+              "name": "rope_normal",
+              "width": 1024,
+              "height": 512,
+              "bytes": 20487,
+              "sha256": "9daa03ea6cc3b3e84d8c5c135908eceb05977f489b745cda1088f70a9e93b75e",
+              "power_of_two": true
+            },
+            {
+              "index": 4,
+              "name": "rope_color",
+              "width": 1024,
+              "height": 512,
+              "bytes": 47890,
+              "sha256": "6008f1bf5992b68f2d2eb9f11678ee0cff4cc7e1bb8f815728356af8c0880e6b",
+              "power_of_two": true
+            },
+            {
+              "index": 5,
+              "name": "rope_orm",
+              "width": 1024,
+              "height": 512,
+              "bytes": 84062,
+              "sha256": "a5839af8db1dadfdd0f0409f7d0ed02ca2ee9fca9668c4403e21908175b1523c",
+              "power_of_two": true
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "passed": true,
+          "errors": [],
+          "bytes": 167960,
+          "triangles": 283,
+          "nodes": 5,
+          "meshes": 5,
+          "materials": 2,
+          "images": [
+            {
+              "index": 0,
+              "name": "wood_normal",
+              "width": 512,
+              "height": 512,
+              "bytes": 4992,
+              "sha256": "517ea5dde98a961aa2b9b60471d05ed6be3a6b7f6a8580ca3c1a37c525402ab1",
+              "power_of_two": true
+            },
+            {
+              "index": 1,
+              "name": "wood_color",
+              "width": 512,
+              "height": 512,
+              "bytes": 7721,
+              "sha256": "f3e4cb2b8d6417e591aa29c039949011a32b07c575efc4766e4a61fdf54a5d30",
+              "power_of_two": true
+            },
+            {
+              "index": 2,
+              "name": "wood_orm",
+              "width": 512,
+              "height": 512,
+              "bytes": 50406,
+              "sha256": "8424973905f1c7566b206f1f91e13403c224fd52ad4e14d0228f86a35c445991",
+              "power_of_two": true
+            },
+            {
+              "index": 3,
+              "name": "rope_normal",
+              "width": 512,
+              "height": 256,
+              "bytes": 2727,
+              "sha256": "6822a4a645f42d801a76f7af0ecc9d29bab2de9917d3066fa30c91fd6f7f3ee2",
+              "power_of_two": true
+            },
+            {
+              "index": 4,
+              "name": "rope_color",
+              "width": 512,
+              "height": 256,
+              "bytes": 10713,
+              "sha256": "2ebcadf5ff8dae292bb7e2946cacb2b8321aef76aafac7a35f75255d56ac8da1",
+              "power_of_two": true
+            },
+            {
+              "index": 5,
+              "name": "rope_orm",
+              "width": 512,
+              "height": 256,
+              "bytes": 36401,
+              "sha256": "8f5895f6d8f485df03be015f705067c0d1825eb50f459e47f8c13381307f2272",
+              "power_of_two": true
+            }
+          ]
+        }
+      ]
+    },
+    "provenance": {
+      "passed": true,
+      "source_evidence": {
+        "repo": "grzegorz2047/OldShipSchematicsAndModel",
+        "commit": "2e6f7e922e95396722376d42f3e2e0a12256029e",
+        "source": "docs/en/03-hull-construction.md and 13/14 general timber, mesh and game principles",
+        "sha256": "6c0fc58bb6b35197ac50cdf07202b9d8d39d14a9aa3d3a9e13c0d725491d79bc",
+        "chapters": [
+          "03 hull construction",
+          "08 ropes and sails",
+          "09 deck machinery and fittings",
+          "13 quality checklist",
+          "14 game integration"
+        ],
+        "construction_note": "The guide does not supply a dugout plan. The single carved-log profile and retained seats are our inference; no clinker frame/plank recipe is claimed for this boat."
+      },
+      "rule_evidence": {
+        "clinker_plank_m": 0.022,
+        "clinker_lap_m": 0.012,
+        "freeboard_above_sole_m": 0.27,
+        "frame_spacing_m": 0.4,
+        "wood_texture_tile_m": 2,
+        "wood_texture_pixels": 2048,
+        "grain_uv": "physical isometric triangles; axial UV on rods",
+        "mewka_sail_foot_above_sole_m": null
+      }
+    },
+    "source_parity": {
+      "passed": true,
+      "source_triangles": 3334,
+      "export_triangles": 3334,
+      "export_indexed_triangles": 3334,
+      "triangle_count_scope": "source and export include every mesh-node instance; indexed count is separate",
+      "triangle_relative_difference": 0.0,
+      "max_bound_error_m": 0.0,
+      "missing_source_mesh_nodes": [],
+      "unexpected_export_mesh_nodes": [],
+      "unpacked_used_images": [],
+      "method": "evaluated source visual meshes versus actual GLB mesh names, per-instance triangle count and world bounds"
+    },
+    "render_parity": {
+      "present": true,
+      "passed": true,
+      "fingerprints_match": true,
+      "review": {
+        "schema": 1,
+        "source_triangles": 3334,
+        "export_triangles": 3334,
+        "triangle_match": true,
+        "views": {
+          "hero": {
+            "foreground_pixels": 54254,
+            "source_mean_rgb": [
+              0.6802076101303101,
+              0.5397926568984985,
+              0.4139840602874756
+            ],
+            "export_mean_rgb": [
+              0.6802067756652832,
+              0.5397940874099731,
+              0.4139849841594696
+            ],
+            "brightness_fraction": 1.62765032486421e-06,
+            "maximum_channel_share_difference": 8.940696716308594e-07,
+            "passed": true
+          },
+          "stern": {
+            "foreground_pixels": 107828,
+            "source_mean_rgb": [
+              0.6704072952270508,
+              0.535200834274292,
+              0.4149553179740906
+            ],
+            "export_mean_rgb": [
+              0.6704064607620239,
+              0.5351999402046204,
+              0.4149525761604309
+            ],
+            "brightness_fraction": 1.8276078355000078e-06,
+            "maximum_channel_share_difference": 9.834766387939453e-07,
+            "passed": true
+          },
+          "deck": {
+            "foreground_pixels": 48244,
+            "source_mean_rgb": [
+              0.7575129270553589,
+              0.6165233850479126,
+              0.4924934506416321
+            ],
+            "export_mean_rgb": [
+              0.757511556148529,
+              0.6165221333503723,
+              0.49249067902565
+            ],
+            "brightness_fraction": 2.175194427473602e-06,
+            "maximum_channel_share_difference": 7.152557373046875e-07,
+            "passed": true
+          },
+          "helm": {
+            "foreground_pixels": 79633,
+            "source_mean_rgb": [
+              0.7990050911903381,
+              0.6649268865585327,
+              0.5494474172592163
+            ],
+            "export_mean_rgb": [
+              0.7990044355392456,
+              0.664928674697876,
+              0.5494478344917297
+            ],
+            "brightness_fraction": 1.70722487652813e-06,
+            "maximum_channel_share_difference": 6.556510925292969e-07,
+            "passed": true
+          }
+        },
+        "cameras": {
+          "hero": {
+            "target": [
+              0.0,
+              0.0,
+              0.05499999225139618
+            ],
+            "position": [
+              6.171720504760742,
+              8.855077743530273,
+              3.919034004211426
+            ],
+            "ortho": true,
+            "scale": 4.937431168556213,
+            "hide_rig": false
+          },
+          "stern": {
+            "target": [
+              0.0,
+              0.0,
+              0.05499999225139618
+            ],
+            "position": [
+              0.9365670680999756,
+              11.238804817199707,
+              2.115447759628296
+            ],
+            "ortho": true,
+            "scale": 2.5846928283572197,
+            "hide_rig": false
+          },
+          "deck": {
+            "target": [
+              0.0,
+              0.0,
+              0.03999999910593033
+            ],
+            "position": [
+              3.4865000247955322,
+              5.229750156402588,
+              9.627874374389648
+            ],
+            "ortho": true,
+            "scale": 7.069793939590453,
+            "hide_rig": true
+          },
+          "helm": {
+            "target": [
+              0.0,
+              0.0,
+              0.24000000953674316
+            ],
+            "position": [
+              1.2000000476837158,
+              2.6500000953674316,
+              1.8899999856948853
+            ],
+            "ortho": false,
+            "lens": 24.0,
+            "hide_rig": false
+          }
+        },
+        "thresholds": {
+          "brightness_fraction": 0.1,
+          "channel_share_difference": 0.04
+        },
+        "scope": "Actual exported GLB vs packed source under identical camera/light. Deck view hides tagged rig in both.",
+        "presentation": "review lighting only; interior views include a camera-area fill",
+        "sha256": {
+          "model/ship.blend": "6cc9c4403eeae989a6a948170a193143eae2513c4d297aefb061f1ac84b06093",
+          "model/ship.glb": "f6781118e489bcf3413df713a9ca9ef900dc8b186f9b74b153fbf4f7fbdc04ed"
+        },
+        "passed": true
+      }
+    },
+    "bounds": {
+      "min_blender_m": [
+        -0.699999988079071,
+        -2.75,
+        -0.34759393334388733
+      ],
+      "max_blender_m": [
+        0.699999988079071,
+        2.75,
+        0.4575939178466797
+      ]
+    },
+    "dimensions": {
+      "passed": true,
+      "hull_length_m": 5.5,
+      "hull_breadth_m": 1.399999976158142,
+      "nominal_length_m": 5.5,
+      "nominal_breadth_m": 1.4,
+      "length_acceptance_ratio": [
+        0.8,
+        1.2
+      ],
+      "breadth_acceptance_ratio": [
+        0.8,
+        1.2
+      ],
+      "note": "Scale sanity bounds include real stem/transom structure; wreck retains only part of nominal length, heel removed for measurement"
+    }
+  },
+  "matrix": [
+    {
+      "id": "A1",
+      "chapter": "A",
+      "title": "Metres and meaningful measured dimensions",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "world_bounds": {
+          "min_blender_m": [
+            -0.699999988079071,
+            -2.75,
+            -0.34759393334388733
+          ],
+          "max_blender_m": [
+            0.699999988079071,
+            2.75,
+            0.4575939178466797
+          ]
+        },
+        "hull_measurement": {
+          "passed": true,
+          "hull_length_m": 5.5,
+          "hull_breadth_m": 1.399999976158142,
+          "nominal_length_m": 5.5,
+          "nominal_breadth_m": 1.4,
+          "length_acceptance_ratio": [
+            0.8,
+            1.2
+          ],
+          "breadth_acceptance_ratio": [
+            0.8,
+            1.2
+          ],
+          "note": "Scale sanity bounds include real stem/transom structure; wreck retains only part of nominal length, heel removed for measurement"
+        }
+      }
+    },
+    {
+      "id": "A2",
+      "chapter": "A",
+      "title": "Y up, bow +Z, port +X",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "navigation_axis_declaration": "glTF X port, Y up, Z bow"
+      }
+    },
+    {
+      "id": "A3",
+      "chapter": "A",
+      "title": "Meaningful root and waterline",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "origin_node_present": true,
+        "design_origin": {
+          "position_gltf_m": [
+            0,
+            0,
+            0
+          ],
+          "meaning": "design waterline at hull mid-length"
+        }
+      }
+    },
+    {
+      "id": "A4",
+      "chapter": "A",
+      "title": "Applied static transforms",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "unapplied_static_mesh_transforms": []
+      }
+    },
+    {
+      "id": "B1",
+      "chapter": "B",
+      "title": "Stable lowercase node names",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "invalid_names": []
+      }
+    },
+    {
+      "id": "B2",
+      "chapter": "B",
+      "title": "Consistent English names",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "B3",
+      "chapter": "B",
+      "title": "Side and index in paired part names",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "B4",
+      "chapter": "B",
+      "title": "Consistent material names",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "copy_suffix_material_names": []
+      }
+    },
+    {
+      "id": "C1",
+      "chapter": "C",
+      "title": "Moving parts separate nodes",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "No moving-part contract is declared for this static asset release."
+    },
+    {
+      "id": "C2",
+      "chapter": "C",
+      "title": "Correct physical pivots/axes",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "No moving-part contract is declared for this static asset release."
+    },
+    {
+      "id": "C3",
+      "chapter": "C",
+      "title": "Axis/range metadata",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "No moving-part contract is declared for this static asset release."
+    },
+    {
+      "id": "C4",
+      "chapter": "C",
+      "title": "Children follow moving parent",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "No moving-part contract is declared for this static asset release."
+    },
+    {
+      "id": "D1",
+      "chapter": "D",
+      "title": "Closed solids",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "failures": []
+      }
+    },
+    {
+      "id": "D2",
+      "chapter": "D",
+      "title": "No degenerate/duplicate/loose geometry",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "failures": []
+      }
+    },
+    {
+      "id": "D3",
+      "chapter": "D",
+      "title": "Outward normals",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "reversed_objects": []
+      }
+    },
+    {
+      "id": "D4",
+      "chapter": "D",
+      "title": "No coplanar z-fighting",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "D5",
+      "chapter": "D",
+      "title": "Needle triangle shading",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "D6",
+      "chapter": "D",
+      "title": "Appropriate mesh density",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "D7",
+      "chapter": "D",
+      "title": "Fair hull lines",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "D8",
+      "chapter": "D",
+      "title": "Untwisted tube surfaces",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "E1",
+      "chapter": "E",
+      "title": "No unintended deep penetration",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "passed": true,
+        "overlapping_solid_pairs": 1,
+        "surface_contact_pairs": 0,
+        "intended_joints": [
+          {
+            "a": "paddle_blade",
+            "b": "paddle_shaft",
+            "reason": "The paddle loom is housed in its blade; the paddle is lashed above the carved rim."
+          }
+        ],
+        "unintended_penetrations": [],
+        "threshold_m": 0.005,
+        "numeric_tolerance_m": 1e-05,
+        "connected_solid_parts": 3,
+        "method": "connected closed islands (including within one mesh), vertices inside counterpart, three-ray majority and nearest-surface depth"
+      }
+    },
+    {
+      "id": "E2",
+      "chapter": "E",
+      "title": "Reasoned intended joints",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "declared_rules": 1,
+        "structured_rules_required": true
+      }
+    },
+    {
+      "id": "E3",
+      "chapter": "E",
+      "title": "Full movement ranges tested",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "E4",
+      "chapter": "E",
+      "title": "Fittings supported by deck",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "E5",
+      "chapter": "E",
+      "title": "Rope endpoints attached",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "E6",
+      "chapter": "E",
+      "title": "Blocks held by fittings/strops",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "F1",
+      "chapter": "F",
+      "title": "Texel density",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "materials": {
+          "v2_wood": {
+            "area_m2": 18.553634513420832,
+            "texel_density_px_m": {
+              "p5": 1023.999038820763,
+              "median": 1024.0000301197324,
+              "p95": 1024.0011602876696
+            },
+            "density_p95_p5_ratio": 1.0000020717469706,
+            "anisotropy_p95": 1.0000038283863584,
+            "anisotropy_over_1_25_area_share": 6.278945457439352e-11,
+            "degenerate_uv_area_m2": 0.0,
+            "wood_grain_measured_area_m2": 17.234746848105647,
+            "wood_grain_aligned_share": 0.9877621366826758
+          },
+          "v2_lina_jasna": {
+            "area_m2": 0.008873393388557747,
+            "texel_density_px_m": {
+              "p5": 16033.412213924825,
+              "median": 16714.362241694078,
+              "p95": 17746.11402123718
+            },
+            "density_p95_p5_ratio": 1.1068207930077973,
+            "anisotropy_p95": 1.9999828532691108,
+            "anisotropy_over_1_25_area_share": 0.41879841778225435,
+            "degenerate_uv_area_m2": 0.0,
+            "wood_grain_measured_area_m2": 0.0,
+            "wood_grain_aligned_share": null
+          }
+        },
+        "below_density_target": [],
+        "targets": "large median>=850,p5>=800px/m (about1k); fittings p5>=450px/m; canvas/rope/glass measured separately"
+      }
+    },
+    {
+      "id": "F2",
+      "chapter": "F",
+      "title": "Even texel density",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "materials_above_p95_p5_1_44": []
+      }
+    },
+    {
+      "id": "F3",
+      "chapter": "F",
+      "title": "Limited UV anisotropy",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "materials_above_8_percent_area_at_anisotropy1_25": []
+      }
+    },
+    {
+      "id": "F4",
+      "chapter": "F",
+      "title": "Wood grain follows timber",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "wood_grain_failures": [],
+        "method": "elongated wooden meshes, side-face U tangent within25deg of major timber axis"
+      }
+    },
+    {
+      "id": "F5",
+      "chapter": "F",
+      "title": "Rope UV scaled by diameter",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "F6",
+      "chapter": "F",
+      "title": "Power-of-two textures",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "images": [
+          {
+            "index": 0,
+            "name": "wood_normal",
+            "width": 2048,
+            "height": 2048,
+            "bytes": 403169,
+            "sha256": "e818cbf65c8caf36cc80252ef27a2f3a26511538ff7796342ce591c942af2e73",
+            "power_of_two": true
+          },
+          {
+            "index": 1,
+            "name": "wood_color",
+            "width": 2048,
+            "height": 2048,
+            "bytes": 477556,
+            "sha256": "5d5bfe4670209e8c07413a2d338dd5ee11cc701ab76188d3ade7d51c90a859ad",
+            "power_of_two": true
+          },
+          {
+            "index": 2,
+            "name": "wood_orm",
+            "width": 2048,
+            "height": 2048,
+            "bytes": 230435,
+            "sha256": "59240beea62b0333a595e7e42ea6702293e457d53b8d0a29037b46569755bb2a",
+            "power_of_two": true
+          },
+          {
+            "index": 3,
+            "name": "rope_normal",
+            "width": 1024,
+            "height": 512,
+            "bytes": 20487,
+            "sha256": "9daa03ea6cc3b3e84d8c5c135908eceb05977f489b745cda1088f70a9e93b75e",
+            "power_of_two": true
+          },
+          {
+            "index": 4,
+            "name": "rope_color",
+            "width": 1024,
+            "height": 512,
+            "bytes": 47890,
+            "sha256": "6008f1bf5992b68f2d2eb9f11678ee0cff4cc7e1bb8f815728356af8c0880e6b",
+            "power_of_two": true
+          },
+          {
+            "index": 5,
+            "name": "rope_orm",
+            "width": 1024,
+            "height": 512,
+            "bytes": 84062,
+            "sha256": "a5839af8db1dadfdd0f0409f7d0ed02ca2ee9fca9668c4403e21908175b1523c",
+            "power_of_two": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "F7",
+      "chapter": "F",
+      "title": "Correct colour/data map roles",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "material_slot_failures": []
+      }
+    },
+    {
+      "id": "F8",
+      "chapter": "F",
+      "title": "AO on dedicated UV",
+      "status": "NA",
+      "required": false,
+      "scope": "not_applicable",
+      "reason": "No baked AO texture is supplied; material AO is not claimed."
+    },
+    {
+      "id": "G1",
+      "chapter": "G",
+      "title": "Physical base colours",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "G2",
+      "chapter": "G",
+      "title": "Metal/nonmetal materials",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "fractional_plain_metallic_factors": []
+      }
+    },
+    {
+      "id": "G3",
+      "chapter": "G",
+      "title": "Linear colour factors",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "linear_glTF_factors_valid_0_1": true,
+        "note": "sRGB-to-linear provenance remains in design/material recipe, glTF factor values are linear by specification"
+      }
+    },
+    {
+      "id": "G4",
+      "chapter": "G",
+      "title": "Double-sided only where needed",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "unjustified_double_sided_materials": []
+      }
+    },
+    {
+      "id": "G5",
+      "chapter": "G",
+      "title": "No duplicate materials",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "exact_duplicate_materials": 0
+      }
+    },
+    {
+      "id": "H1",
+      "chapter": "H",
+      "title": "File size budget",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "bytes": 1809224,
+        "budget_bytes": 33554432
+      }
+    },
+    {
+      "id": "H2",
+      "chapter": "H",
+      "title": "Triangle budget",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "triangles": 3334,
+        "budget": 280000
+      }
+    },
+    {
+      "id": "H3",
+      "chapter": "H",
+      "title": "Exported file matches source",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "passed": true,
+        "source_triangles": 3334,
+        "export_triangles": 3334,
+        "export_indexed_triangles": 3334,
+        "triangle_count_scope": "source and export include every mesh-node instance; indexed count is separate",
+        "triangle_relative_difference": 0.0,
+        "max_bound_error_m": 0.0,
+        "missing_source_mesh_nodes": [],
+        "unexpected_export_mesh_nodes": [],
+        "unpacked_used_images": [],
+        "method": "evaluated source visual meshes versus actual GLB mesh names, per-instance triangle count and world bounds"
+      }
+    },
+    {
+      "id": "H4",
+      "chapter": "H",
+      "title": "Independent texture roles survive export",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "distinct_image_role_check": [],
+        "embedded_images": 6
+      }
+    },
+    {
+      "id": "H5",
+      "chapter": "H",
+      "title": "Source/export control renders",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "present": true,
+        "passed": true,
+        "fingerprints_match": true,
+        "review": {
+          "schema": 1,
+          "source_triangles": 3334,
+          "export_triangles": 3334,
+          "triangle_match": true,
+          "views": {
+            "hero": {
+              "foreground_pixels": 54254,
+              "source_mean_rgb": [
+                0.6802076101303101,
+                0.5397926568984985,
+                0.4139840602874756
+              ],
+              "export_mean_rgb": [
+                0.6802067756652832,
+                0.5397940874099731,
+                0.4139849841594696
+              ],
+              "brightness_fraction": 1.62765032486421e-06,
+              "maximum_channel_share_difference": 8.940696716308594e-07,
+              "passed": true
+            },
+            "stern": {
+              "foreground_pixels": 107828,
+              "source_mean_rgb": [
+                0.6704072952270508,
+                0.535200834274292,
+                0.4149553179740906
+              ],
+              "export_mean_rgb": [
+                0.6704064607620239,
+                0.5351999402046204,
+                0.4149525761604309
+              ],
+              "brightness_fraction": 1.8276078355000078e-06,
+              "maximum_channel_share_difference": 9.834766387939453e-07,
+              "passed": true
+            },
+            "deck": {
+              "foreground_pixels": 48244,
+              "source_mean_rgb": [
+                0.7575129270553589,
+                0.6165233850479126,
+                0.4924934506416321
+              ],
+              "export_mean_rgb": [
+                0.757511556148529,
+                0.6165221333503723,
+                0.49249067902565
+              ],
+              "brightness_fraction": 2.175194427473602e-06,
+              "maximum_channel_share_difference": 7.152557373046875e-07,
+              "passed": true
+            },
+            "helm": {
+              "foreground_pixels": 79633,
+              "source_mean_rgb": [
+                0.7990050911903381,
+                0.6649268865585327,
+                0.5494474172592163
+              ],
+              "export_mean_rgb": [
+                0.7990044355392456,
+                0.664928674697876,
+                0.5494478344917297
+              ],
+              "brightness_fraction": 1.70722487652813e-06,
+              "maximum_channel_share_difference": 6.556510925292969e-07,
+              "passed": true
+            }
+          },
+          "cameras": {
+            "hero": {
+              "target": [
+                0.0,
+                0.0,
+                0.05499999225139618
+              ],
+              "position": [
+                6.171720504760742,
+                8.855077743530273,
+                3.919034004211426
+              ],
+              "ortho": true,
+              "scale": 4.937431168556213,
+              "hide_rig": false
+            },
+            "stern": {
+              "target": [
+                0.0,
+                0.0,
+                0.05499999225139618
+              ],
+              "position": [
+                0.9365670680999756,
+                11.238804817199707,
+                2.115447759628296
+              ],
+              "ortho": true,
+              "scale": 2.5846928283572197,
+              "hide_rig": false
+            },
+            "deck": {
+              "target": [
+                0.0,
+                0.0,
+                0.03999999910593033
+              ],
+              "position": [
+                3.4865000247955322,
+                5.229750156402588,
+                9.627874374389648
+              ],
+              "ortho": true,
+              "scale": 7.069793939590453,
+              "hide_rig": true
+            },
+            "helm": {
+              "target": [
+                0.0,
+                0.0,
+                0.24000000953674316
+              ],
+              "position": [
+                1.2000000476837158,
+                2.6500000953674316,
+                1.8899999856948853
+              ],
+              "ortho": false,
+              "lens": 24.0,
+              "hide_rig": false
+            }
+          },
+          "thresholds": {
+            "brightness_fraction": 0.1,
+            "channel_share_difference": 0.04
+          },
+          "scope": "Actual exported GLB vs packed source under identical camera/light. Deck view hides tagged rig in both.",
+          "presentation": "review lighting only; interior views include a camera-area fill",
+          "sha256": {
+            "model/ship.blend": "6cc9c4403eeae989a6a948170a193143eae2513c4d297aefb061f1ac84b06093",
+            "model/ship.glb": "f6781118e489bcf3413df713a9ca9ef900dc8b186f9b74b153fbf4f7fbdc04ed"
+          },
+          "passed": true
+        }
+      }
+    },
+    {
+      "id": "H6",
+      "chapter": "H",
+      "title": "Tangents strategy",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "primitives_with_tangents": 0,
+        "strategy": "provided tangent attribute or engine-derived glTF tangent basis"
+      }
+    },
+    {
+      "id": "I1",
+      "chapter": "I",
+      "title": "LOD levels",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "passed": true,
+        "lod0_triangles": 3334,
+        "levels": [
+          {
+            "level": 1,
+            "passed": true,
+            "errors": [],
+            "bytes": 620520,
+            "triangles": 1672,
+            "nodes": 5,
+            "meshes": 5,
+            "materials": 2,
+            "images": [
+              {
+                "index": 0,
+                "name": "wood_normal",
+                "width": 1024,
+                "height": 1024,
+                "bytes": 25914,
+                "sha256": "1d8eec91b391c2f18542bdc85630177ff5dc21c907bf1bc18ce94b8743708ce7",
+                "power_of_two": true
+              },
+              {
+                "index": 1,
+                "name": "wood_color",
+                "width": 1024,
+                "height": 1024,
+                "bytes": 46542,
+                "sha256": "9ca2e2af2556d9b13333905b90e6ffcf236c2bd3cf6a3c02ceb310a0811498cb",
+                "power_of_two": true
+              },
+              {
+                "index": 2,
+                "name": "wood_orm",
+                "width": 1024,
+                "height": 1024,
+                "bytes": 110857,
+                "sha256": "6f9d8dbd1086fc0504a46e19a8b8c2a2ec3cc01720ff1827530b0fc1f0e489d5",
+                "power_of_two": true
+              },
+              {
+                "index": 3,
+                "name": "rope_normal",
+                "width": 1024,
+                "height": 512,
+                "bytes": 20487,
+                "sha256": "9daa03ea6cc3b3e84d8c5c135908eceb05977f489b745cda1088f70a9e93b75e",
+                "power_of_two": true
+              },
+              {
+                "index": 4,
+                "name": "rope_color",
+                "width": 1024,
+                "height": 512,
+                "bytes": 47890,
+                "sha256": "6008f1bf5992b68f2d2eb9f11678ee0cff4cc7e1bb8f815728356af8c0880e6b",
+                "power_of_two": true
+              },
+              {
+                "index": 5,
+                "name": "rope_orm",
+                "width": 1024,
+                "height": 512,
+                "bytes": 84062,
+                "sha256": "a5839af8db1dadfdd0f0409f7d0ed02ca2ee9fca9668c4403e21908175b1523c",
+                "power_of_two": true
+              }
+            ]
+          },
+          {
+            "level": 2,
+            "passed": true,
+            "errors": [],
+            "bytes": 167960,
+            "triangles": 283,
+            "nodes": 5,
+            "meshes": 5,
+            "materials": 2,
+            "images": [
+              {
+                "index": 0,
+                "name": "wood_normal",
+                "width": 512,
+                "height": 512,
+                "bytes": 4992,
+                "sha256": "517ea5dde98a961aa2b9b60471d05ed6be3a6b7f6a8580ca3c1a37c525402ab1",
+                "power_of_two": true
+              },
+              {
+                "index": 1,
+                "name": "wood_color",
+                "width": 512,
+                "height": 512,
+                "bytes": 7721,
+                "sha256": "f3e4cb2b8d6417e591aa29c039949011a32b07c575efc4766e4a61fdf54a5d30",
+                "power_of_two": true
+              },
+              {
+                "index": 2,
+                "name": "wood_orm",
+                "width": 512,
+                "height": 512,
+                "bytes": 50406,
+                "sha256": "8424973905f1c7566b206f1f91e13403c224fd52ad4e14d0228f86a35c445991",
+                "power_of_two": true
+              },
+              {
+                "index": 3,
+                "name": "rope_normal",
+                "width": 512,
+                "height": 256,
+                "bytes": 2727,
+                "sha256": "6822a4a645f42d801a76f7af0ecc9d29bab2de9917d3066fa30c91fd6f7f3ee2",
+                "power_of_two": true
+              },
+              {
+                "index": 4,
+                "name": "rope_color",
+                "width": 512,
+                "height": 256,
+                "bytes": 10713,
+                "sha256": "2ebcadf5ff8dae292bb7e2946cacb2b8321aef76aafac7a35f75255d56ac8da1",
+                "power_of_two": true
+              },
+              {
+                "index": 5,
+                "name": "rope_orm",
+                "width": 512,
+                "height": 256,
+                "bytes": 36401,
+                "sha256": "8f5895f6d8f485df03be015f705067c0d1825eb50f459e47f8c13381307f2272",
+                "power_of_two": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "I2",
+      "chapter": "I",
+      "title": "LOD silhouette continuity",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "I3",
+      "chapter": "I",
+      "title": "Collision coverage and geometry",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "topology": true,
+        "route_checks": {
+          "passed": true,
+          "player": {
+            "radius": 0.38,
+            "height": 1.85,
+            "max_slope_deg": 35
+          },
+          "sample_step_m": 0.1,
+          "geometry_tolerance_m": 0.015,
+          "rounded_foot_lift_m": 0.08,
+          "controller_step_allowance_m": 0.22,
+          "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+          "routes": [
+            {
+              "name": "carved_cockpit",
+              "mode": "walk",
+              "length_m": 1.7000000308541687,
+              "samples": 19,
+              "passed": true,
+              "failure_count": 0,
+              "failures": []
+            }
+          ],
+          "disconnected_routes": []
+        }
+      }
+    },
+    {
+      "id": "I4",
+      "chapter": "I",
+      "title": "Variant colliders tagged",
+      "status": "NA",
+      "required": false,
+      "scope": "not_applicable",
+      "reason": "No alternate physics variant is exported."
+    },
+    {
+      "id": "J1",
+      "chapter": "J",
+      "title": "Required destinations reachable",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "No complete floor-grid flood fill against every declared crew workstation has been run; authored player corridors are a separate required gate."
+    },
+    {
+      "id": "J2",
+      "chapter": "J",
+      "title": "Room at work stations",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "J3",
+      "chapter": "J",
+      "title": "Walking corridors",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "minimum_tested_capsule_diameter_m": 0.8,
+        "scope": "declared walk corridors, strict zero geometric shrink",
+        "files": {
+          "model/ship.glb": {
+            "passed": true,
+            "player": {
+              "radius": 0.4,
+              "height": 1.85,
+              "max_slope_deg": 35
+            },
+            "sample_step_m": 0.1,
+            "geometry_tolerance_m": 0,
+            "rounded_foot_lift_m": 0.08,
+            "controller_step_allowance_m": 0.22,
+            "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+            "routes": [
+              {
+                "name": "carved_cockpit",
+                "mode": "walk",
+                "length_m": 1.7000000308541687,
+                "samples": 19,
+                "passed": true,
+                "failure_count": 0,
+                "failures": []
+              }
+            ],
+            "disconnected_routes": []
+          },
+          "model/collision.glb": {
+            "passed": true,
+            "player": {
+              "radius": 0.4,
+              "height": 1.85,
+              "max_slope_deg": 35
+            },
+            "sample_step_m": 0.1,
+            "geometry_tolerance_m": 0,
+            "rounded_foot_lift_m": 0.08,
+            "controller_step_allowance_m": 0.22,
+            "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+            "routes": [
+              {
+                "name": "carved_cockpit",
+                "mode": "walk",
+                "length_m": 1.7000000308541687,
+                "samples": 19,
+                "passed": true,
+                "failure_count": 0,
+                "failures": []
+              }
+            ],
+            "disconnected_routes": []
+          }
+        }
+      }
+    },
+    {
+      "id": "J4",
+      "chapter": "J",
+      "title": "Head clearance",
+      "status": "PASS",
+      "required": true,
+      "scope": "measured",
+      "evidence": {
+        "capsule_height_m": 1.85,
+        "files": {
+          "model/ship.glb": {
+            "passed": true,
+            "player": {
+              "radius": 0.38,
+              "height": 1.85,
+              "max_slope_deg": 35
+            },
+            "sample_step_m": 0.1,
+            "geometry_tolerance_m": 0.015,
+            "rounded_foot_lift_m": 0.08,
+            "controller_step_allowance_m": 0.22,
+            "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+            "routes": [
+              {
+                "name": "carved_cockpit",
+                "mode": "walk",
+                "length_m": 1.7000000308541687,
+                "samples": 19,
+                "passed": true,
+                "failure_count": 0,
+                "failures": []
+              }
+            ],
+            "disconnected_routes": []
+          },
+          "model/collision.glb": {
+            "passed": true,
+            "player": {
+              "radius": 0.38,
+              "height": 1.85,
+              "max_slope_deg": 35
+            },
+            "sample_step_m": 0.1,
+            "geometry_tolerance_m": 0.015,
+            "rounded_foot_lift_m": 0.08,
+            "controller_step_allowance_m": 0.22,
+            "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+            "routes": [
+              {
+                "name": "carved_cockpit",
+                "mode": "walk",
+                "length_m": 1.7000000308541687,
+                "samples": 19,
+                "passed": true,
+                "failure_count": 0,
+                "failures": []
+              }
+            ],
+            "disconnected_routes": []
+          }
+        }
+      }
+    },
+    {
+      "id": "J5",
+      "chapter": "J",
+      "title": "Access with guns recoiled",
+      "status": "NA",
+      "required": false,
+      "scope": "not_applicable",
+      "reason": "No carriage guns in this asset."
+    },
+    {
+      "id": "J6",
+      "chapter": "J",
+      "title": "Paired rope symmetry",
+      "status": "NA",
+      "required": false,
+      "scope": "not_tested",
+      "reason": "This item needs additional authored evidence; it is not counted as a passing test."
+    },
+    {
+      "id": "provenance",
+      "chapter": "source",
+      "title": "Traceable construction design and rules",
+      "required": true,
+      "status": "PASS",
+      "scope": "measured",
+      "evidence": {
+        "passed": true,
+        "source_evidence": {
+          "repo": "grzegorz2047/OldShipSchematicsAndModel",
+          "commit": "2e6f7e922e95396722376d42f3e2e0a12256029e",
+          "source": "docs/en/03-hull-construction.md and 13/14 general timber, mesh and game principles",
+          "sha256": "6c0fc58bb6b35197ac50cdf07202b9d8d39d14a9aa3d3a9e13c0d725491d79bc",
+          "chapters": [
+            "03 hull construction",
+            "08 ropes and sails",
+            "09 deck machinery and fittings",
+            "13 quality checklist",
+            "14 game integration"
+          ],
+          "construction_note": "The guide does not supply a dugout plan. The single carved-log profile and retained seats are our inference; no clinker frame/plank recipe is claimed for this boat."
+        },
+        "rule_evidence": {
+          "clinker_plank_m": 0.022,
+          "clinker_lap_m": 0.012,
+          "freeboard_above_sole_m": 0.27,
+          "frame_spacing_m": 0.4,
+          "wood_texture_tile_m": 2,
+          "wood_texture_pixels": 2048,
+          "grain_uv": "physical isometric triangles; axial UV on rods",
+          "mewka_sail_foot_above_sole_m": null
+        }
+      }
+    },
+    {
+      "id": "rig_clearance",
+      "chapter": "E",
+      "title": "No undeclared canvas/rope/spar crossings",
+      "required": true,
+      "status": "PASS",
+      "scope": "measured",
+      "evidence": {
+        "passed": true,
+        "sails": 0,
+        "ropes": 2,
+        "spars": 0,
+        "pairs_tested": 0,
+        "scope": "authored static pose; boundary allowance only for explicit, reasoned attachments",
+        "edge_contact_tolerance_m": 0.025,
+        "edge_contacts": [],
+        "intersections": []
+      }
+    },
+    {
+      "id": "player_destinations",
+      "chapter": "J",
+      "title": "Declared player destinations and connected routes",
+      "required": true,
+      "status": "PASS",
+      "scope": "measured",
+      "evidence": {
+        "model/ship.glb": {
+          "passed": true,
+          "player": {
+            "radius": 0.38,
+            "height": 1.85,
+            "max_slope_deg": 35
+          },
+          "sample_step_m": 0.1,
+          "geometry_tolerance_m": 0.015,
+          "rounded_foot_lift_m": 0.08,
+          "controller_step_allowance_m": 0.22,
+          "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+          "routes": [
+            {
+              "name": "carved_cockpit",
+              "mode": "walk",
+              "length_m": 1.7000000308541687,
+              "samples": 19,
+              "passed": true,
+              "failure_count": 0,
+              "failures": []
+            }
+          ],
+          "disconnected_routes": []
+        },
+        "model/collision.glb": {
+          "passed": true,
+          "player": {
+            "radius": 0.38,
+            "height": 1.85,
+            "max_slope_deg": 35
+          },
+          "sample_step_m": 0.1,
+          "geometry_tolerance_m": 0.015,
+          "rounded_foot_lift_m": 0.08,
+          "controller_step_allowance_m": 0.22,
+          "scope": "sampled authored corridors; climb mode requires a climb controller and real endpoint landings",
+          "routes": [
+            {
+              "name": "carved_cockpit",
+              "mode": "walk",
+              "length_m": 1.7000000308541687,
+              "samples": 19,
+              "passed": true,
+              "failure_count": 0,
+              "failures": []
+            }
+          ],
+          "disconnected_routes": []
+        }
+      }
+    }
+  ],
+  "coverage": {
+    "PASS": 34,
+    "FAIL": 0,
+    "NA": 24,
+    "not_tested": 21
+  },
+  "sha256": {
+    "design.json": "425804a2f91293d640a877ba6f0cc0bf86779e49efb68fdbe69c2c550ce6683e",
+    "export-review.json": "c4aec2c107392655ab7476607008b9bc85fafbe94a3730c372a1ebc2961e3265",
+    "model/collision.glb": "dc0091813ba1933b900b5ff27747779250a323f20b6b308a13ac17dc5c834eee",
+    "model/ship.blend": "6cc9c4403eeae989a6a948170a193143eae2513c4d297aefb061f1ac84b06093",
+    "model/ship.glb": "f6781118e489bcf3413df713a9ca9ef900dc8b186f9b74b153fbf4f7fbdc04ed",
+    "model/ship_lod1.glb": "c69cc17000f6cfd0cac768e6183800a328d59ed939bfc1570adcaedee110fa74",
+    "model/ship_lod2.glb": "57a3602d584a39075a8acf8d892ae20b97df6f19ae60e7c2722642ef0a5b11e3",
+    "name-map.json": "e59378c348acbc752d247a9a945f6f4ec2081c1023fda1dccd50e9f070e91fd0",
+    "navigation.json": "ec582c6b5bbef0303a2f7f43c92220bbee6f1576e9d6246b4b8e77682cc42d72",
+    "previews/deck.png": "6e43f21434c33c88679a42e974475ea5265201bbded2690f16802e84763676b4",
+    "previews/helm.png": "d5cd6c942a83d8b0297b2e4d8537fc42b7d6638745826c6bcd661357c9b662fc",
+    "previews/hero.png": "4daa480a4748b3fb3bc23652e25df67fb3ee6ec3ca3762d1e421c61df108a515",
+    "previews/stern.png": "1f2e5576945baad588383a95ec24a418d4222f836a865cb9cafe14b031a24a52",
+    "review/source_deck.png": "e691695c04e7a7883091b5be1a9e5fa99dc913299c3c56da6d229894e888e69b",
+    "review/source_helm.png": "eb5b9a96fcc1546ce1f15dd4d3349bb9e77519f7effbfd0e6cab9cb02b050a29",
+    "review/source_hero.png": "e084e4617639d34714be0359a56716f6dfe418cfcb68637c71f3bba293900862",
+    "review/source_stern.png": "892dbaab76949f9e72aab4ef2335dc9bf151b899ed1bb5da81d8117477e13439",
+    "route-validation.json": "5bbc7d85444d8959931685b0329dfd94c70f5f3cb68209d3d65690427f46e3f2",
+    "spec.json": "7aa8e3f7d73e4b792d09f0dea4be737b6e2dd0b38d8b31ed3beb4f609cf4103e"
+  },
+  "source_sha256": {
+    "sailertales/common/rebuild_reference.py": "a4e81ab0a7fd921d10ca731c018b3a4abdac5e7ff061118a5b215164905daa77",
+    "sailertales/common/v2_audit.py": "a91bee1e9defe89692e3a32371835523ba94439c3ca0d175637ad1b72eb8d34f",
+    "sailertales/common/v2_boats.py": "18cb8784c6fe4c4ba4b8716c81892740dbf5b794242f547b3624296aab2d2a67",
+    "sailertales/common/v2_export.py": "821a4b747718064b5e96e05778f90a2bd0263a62a5a2d49fe3f59c60c85df45f",
+    "sailertales/common/v2_integrity.py": "92691ed69cd1f00737f5c6e4e85b4df89a9e9b19d336a11a8790b38d0db5cfe9",
+    "sailertales/common/v2_materials.py": "d5b6150142c62cbc5b6c507bdf8b5cde754355681d24f41eee4d44ec6e28802e",
+    "sailertales/common/v2_package.py": "f3631cc2929e249c4405bc6a55f126e75172fe87b033feac892235ec3164efd2",
+    "sailertales/common/v2_review.py": "91c3f653e22d8e0d06d6b625d82a1b9bc8c3f683737a264d0bfecb3563184081",
+    "blender/arkusze_kadlub.py": "af1df1fee8cef7c12e72b07b217a8e53ada714b71d908b98996a4e21d5b328c0",
+    "blender/arkusze_konstrukcja.py": "9150db3175aaa5806e6f6ab486bbf48da79af2a7a5e431426f8644b9391ab436",
+    "blender/arkusze_poklad.py": "9568cc4b5cace549c42d31c8f67e912b7e9cf2bb2ef2b1cbc4c71ae429beffa8",
+    "blender/arkusze_takielunek.py": "c02ffe0d1f792c9f69a8a063e996bfd103a1b3b1c0850d81dcd0143733e6a65f",
+    "blender/arkusze_wyposazenie.py": "9e27e8964728a51e476364f97f7f1a79d7ea5380f5625640bf59f271008670b0",
+    "blender/buduj.py": "2edf828549a70cb101bfee47aa593faee42c84bd27d5b68b925c4d6e958f4f35",
+    "blender/chodzenie.py": "304a724e04de510226a1a3244da87059b1f324db5d746d1a2d13f7f7034c181c",
+    "blender/dane_publiczne.py": "4c2c089cc0bea8cbb7fbdd168c012f1611b525d84e8ff6332bb0ffa481b049d1",
+    "blender/dane_schemat.py": "3fa34f7d17801f17666d604c50c3ca514844458005abf93b8d592775c8de66a7",
+    "blender/deski.py": "588f9a33a8648291373160dd80e95f1c660461185180631d3536b4984ed1cefc",
+    "blender/drzewca.py": "c8dad43cfd0eb5205308508e49005980b51ea9adf9cc899e4faa20566be06932",
+    "blender/eksport.py": "09840f164ed4ba78a0852431eb47c8164e075e23a1290aba4d59283793a32c62",
+    "blender/geometria.py": "51025aee36d329b8bf5a95420f393a52b5b2638a34ec384310d7752f317ecb17",
+    "blender/kadlub.py": "2dcf54c92ac6cae31d9c3a90946d4221188953f2b46360f893667b3e1a47e6d1",
+    "blender/konsola.py": "35e31943ee23276afb5cef1eae47f291a8375d6650da51db71e0c4130e71cec2",
+    "blender/kontrola.py": "8c827a3ffdf5cd3882ac6d17d70f79c55ce9571275939c7d6c96086dcd9988cb",
+    "blender/kontrola_glb.py": "f5ce251fc5b19f79d3da6b3f9f85980693e39e5a230962f203d2b9ab5595e811",
+    "blender/kontrola_publiczna.py": "94376331fe30e46a5073c5afedc4bf23105122a6a600d234a8ca5d4e41d150ca",
+    "blender/lod.py": "d9fc7e158fac841d63e8a88ebbe3645cc0ca8187850d28f4218ea48ba7dd7c66",
+    "blender/materialy.py": "e44ef683900a511d9f311d9df7012d052d9781630211289b7989e59ccfeb9c8a",
+    "blender/model_rysunkowy.py": "b6de296a604f97d808e840170f2887d37bdf0c9fde87066adf0ec84aa7c831e1",
+    "blender/narzedzia.py": "97ab6930d11cd27cbfcf0d1336da347a646171ec7d8751be363f4b55eb429659",
+    "blender/narzedzia_math.py": "5fd2206e0deef90f915919508536ba31e5f4792883df94b4b91d4b6818524ed5",
+    "blender/nazwy_na_angielskie.py": "6b6622139bb7795a8e7fd70bd9a3280fb9adf37fed74432475169b00a0bd3f00",
+    "blender/nazwy_publiczne.py": "eabc171d6bc442627d364e277a86262563192d2fbe32efff8e5b4926f8fea6be",
+    "blender/olinowanie.py": "ac0f51a9331fcf8dc7df63373ae1e6f82acc6dc4e9d2f0ff5e762e3619f39fd4",
+    "blender/parametry.py": "8c4570feb43cff020bec380863980b76b68b42d0655cce8b665010726cb8e2de",
+    "blender/plan_pokladu.py": "48377e9ae1c89ba6dae508a4ac32bc385776e07bec1f2ed2f3f5ff2f61f27ee4",
+    "blender/plansza.py": "de28c763e2db6139a02b2c7cd6b69d7e8782578b57d37ae0b5e4272620401a93",
+    "blender/poklad.py": "d1f9aee73483a066e52ed315c2c3cf5598869d4888d3ffd8a4d1a489bae909d9",
+    "blender/praktyki.py": "8809978b31beea03c41fa129eee5368d9032beb4144f020a69a60bc243b0b10e",
+    "blender/projekt_rzednych.py": "99137d5180a09f17297b16d85659d24e005b968317a68bf8aba3869c8961b0c8",
+    "blender/przenikanie.py": "04d9a355a70038e307ae685730709a70eee452f698f143a260cac6833d4d348b",
+    "blender/rendery.py": "e678a6b640b37648bee51528f4240add899cba2b916f9e8fa3059577ae9b70ef",
+    "blender/ruchome.py": "a7e202b3a41a930013244e8de3334ad47007cd89ee57b7085d2af799e9f6623f",
+    "blender/rufa_dziob.py": "657d74dc7e95e9c3b24a6f61e629052b9dd92ab2eea88da273d66f7618b2bc1a",
+    "blender/rysunki.py": "f7186a4519182f82dd8a3b293bbd3d8e5dc98c6ac4918f095cca460c0d025bf7",
+    "blender/rysunki_svg.py": "b46f44b728ae77f0de50ebb527df71fd7a11794f8c080cad3f7c3e7ad1df0d78",
+    "blender/rzedne.py": "5dcc82113caa73e296cdbf6f1b1fa9c241392e04a0d8db856a159f5be5b57200",
+    "blender/slownik_rysunkow.py": "529682e851d4e5c2b4cbe1a6a98e6860d4dec21e96288a87c756693df14550e8",
+    "blender/sterowanie.py": "163db2ca7e9f49e39221f9ba8eb0a224e2e7ce70a7c9e8dd3fb0409213688633",
+    "blender/tekstury.py": "eae7dceba47a336393552e59952a05ab3ba38069d97b39f70226fd37a8ba2430",
+    "blender/tekstury_cc0.py": "4bebbcf04abcb08f4da181cf42f75234a509e403b69197f100b6ceb973bdf336",
+    "blender/tekstury_deski.py": "25d3302535d6e3877e3c2e6add61a34659ad46ab56b045194423e88a8a1f7b2d",
+    "blender/wyposazenie.py": "6c0fc58bb6b35197ac50cdf07202b9d8d39d14a9aa3d3a9e13c0d725491d79bc",
+    "blender/zagle.py": "e37f5498bd2645d97fc6dae31de19873b90a9bef767c4c8039fca32e9e088237"
+  }
+}
