@@ -1,0 +1,453 @@
+{
+  "schema": 4,
+  "id": "caravel",
+  "family": "caravel",
+  "label": "Caravel",
+  "asset_type": "static-duel-ship",
+  "game": {
+    "title": "Pirates of the Caribbean",
+    "year": 2003,
+    "class": 4,
+    "guns": 32,
+    "source_model_ids": [
+      "Caravel1",
+      "Caravel2"
+    ]
+  },
+  "game_class": 4,
+  "gun_count": 32,
+  "length": 32.8,
+  "beam": 9.6,
+  "draft": 3.5,
+  "freeboard": 3.6,
+  "dimensions_provenance": "Authored guide-based reconstruction; no retail dimensions or scale have been established.",
+  "hull": {
+    "profile": [
+      [
+        -0.5,
+        0.56,
+        0.82,
+        0.78
+      ],
+      [
+        -0.42,
+        0.83,
+        0.34,
+        0.42
+      ],
+      [
+        -0.25,
+        0.99,
+        0.06,
+        0.12
+      ],
+      [
+        -0.01,
+        1,
+        0,
+        0
+      ],
+      [
+        0.22,
+        0.91,
+        0.12,
+        0.16
+      ],
+      [
+        0.38,
+        0.61,
+        0.58,
+        0.55
+      ],
+      [
+        0.5,
+        0.012,
+        1.54,
+        1
+      ]
+    ],
+    "section_power": 0.68,
+    "stern_style": "transom",
+    "plank_rows": 22,
+    "bulwark_height": 1.25,
+    "quarterdeck": {
+      "from": -0.5,
+      "to": -0.26,
+      "height_m": 2.55
+    },
+    "forecastle": {
+      "from": 0.29,
+      "to": 0.49,
+      "height_m": 1.65
+    },
+    "castles": [
+      {
+        "from": -0.5,
+        "to": -0.39,
+        "height_m": 3.9
+      }
+    ]
+  },
+  "guns": {
+    "rows": [
+      {
+        "pairs": 10,
+        "z_m": 1.95,
+        "from": -0.36,
+        "to": 0.36
+      },
+      {
+        "pairs": 6,
+        "z_m": 4.25,
+        "from": -0.3,
+        "to": 0.27
+      }
+    ]
+  },
+  "rig": {
+    "masts": [
+      {
+        "name": "fore",
+        "at": 0.315,
+        "height_m": 24,
+        "rake": 0.025,
+        "sails": [
+          {
+            "kind": "lateen",
+            "z": 0.85,
+            "width_m": 11,
+            "height_m": 14,
+            "yaw_deg": 25
+          }
+        ],
+        "heel_z_m": -0.8245361775602253,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
+      },
+      {
+        "name": "main",
+        "at": 0,
+        "height_m": 27,
+        "rake": 0.025,
+        "sails": [
+          {
+            "kind": "lateen",
+            "z": 0.87,
+            "width_m": 13,
+            "height_m": 16,
+            "yaw_deg": 25
+          }
+        ],
+        "heel_z_m": -0.9498491755848484,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
+      },
+      {
+        "name": "mizzen",
+        "at": -0.32,
+        "height_m": 19.5,
+        "rake": 0.03,
+        "sails": [
+          {
+            "kind": "lateen",
+            "z": 0.84,
+            "width_m": 9,
+            "height_m": 10.2,
+            "yaw_deg": 25
+          }
+        ],
+        "heel_z_m": -0.8776915406172394,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
+      }
+    ],
+    "bowsprit": {
+      "length_m": 4.8,
+      "angle_deg": 24
+    },
+    "pose_scope": "Single authored static presentation pose; yaw values do not certify a sail-trim range."
+  },
+  "palettes": [
+    {
+      "id": "ochre",
+      "paintHull": [
+        0.38132601143253014,
+        0.20155625379439707,
+        0.03688945040110004,
+        1.0
+      ],
+      "paintTrim": [
+        0.05126945837404324,
+        0.08021982031446832,
+        0.07036009569659588,
+        1.0
+      ]
+    },
+    {
+      "id": "navy",
+      "paintHull": [
+        0.021219010376003555,
+        0.05780543019106723,
+        0.11443537382697373,
+        1.0
+      ],
+      "paintTrim": [
+        0.5711248294648731,
+        0.35153259950043936,
+        0.09758734714186246,
+        1.0
+      ]
+    }
+  ],
+  "paint_materials": [
+    "paint_hull",
+    "paint_trim"
+  ],
+  "family_distinctions": [
+    "Full high-sided hull with distinct forecastle and two-level aft castle",
+    "Three lateen masts; deliberately distinct from square-rigged merchant ships",
+    "Thirty-two guns in two batteries: twenty lower and twelve upper"
+  ],
+  "source_evidence": [
+    {
+      "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c#L2382-L2402",
+      "supports": [
+        "family/model ID",
+        "game class",
+        "cannon quantity"
+      ],
+      "quality": "Stock-derived modern script tree, not asserted byte-identical retail dump"
+    },
+    {
+      "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+      "supports": [
+        "ordinary family roster",
+        "game class",
+        "cannon quantity"
+      ],
+      "quality": "Contemporary 2004 player table"
+    },
+    {
+      "url": "https://github.com/grzegorz2047/OldShipSchematicsAndModel/blob/2e6f7e922e95396722376d42f3e2e0a12256029e/docs/en/12-designing-other-ships.md",
+      "supports": [
+        "hull and spar parameter chain",
+        "three-mast and schooner reconstruction method"
+      ],
+      "quality": "Construction guide; no retail model geometry"
+    },
+    {
+      "url": "https://www.piratesahoy.net/threads/new-complete-guide-for-ships-on-potc-new-horizons.33543/page-2",
+      "supports": [
+        "later community catalogue retaining Caravel1 as lateen Caravela Latina"
+      ],
+      "quality": "Later mod catalogue, not confirmed unchanged retail mesh"
+    },
+    {
+      "url": "https://www.piratesahoy.net/threads/new-complete-guide-for-ships-on-potc-new-horizons.33543/page-6",
+      "supports": [
+        "later catalogue distinction Caravel1 lateen versus Caravel2 square rig"
+      ],
+      "quality": "2022 New Horizons catalogue; original retail rig equivalence not established"
+    }
+  ],
+  "interpretation": "The three-lateen interpretation is supported cautiously by a later community catalogue retaining Caravel1 as Caravela Latina. This is not proof of unchanged retail rig geometry. Castle layout and dimensions are authored. A later New Horizons catalogue distinguishes Caravel1 (lateen) from Caravel2 (square-rigged). This deliverable chooses one authored lateen family reconstruction in two paint palettes; it does not claim to reproduce both original rig variants.",
+  "scope": "Original procedural static duel asset with two authored paint variants. No original proprietary mesh or texture imported. No navigation, controller, ship-motion or historical-certification claim.",
+  "game_source": {
+    "scripts_commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+    "scripts_sha256": {
+      "Ships_init.c": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde",
+      "ships.h": "a267dbc5d3fc901104b86b53ffdab06255545a8a7ee3725801c0d9dc9037ba74"
+    },
+    "evidence": [
+      {
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c#L2382-L2402",
+        "supports": [
+          "family/model ID",
+          "game class",
+          "cannon quantity"
+        ],
+        "quality": "Stock-derived modern script tree, not asserted byte-identical retail dump"
+      },
+      {
+        "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+        "supports": [
+          "ordinary family roster",
+          "game class",
+          "cannon quantity"
+        ],
+        "quality": "Contemporary 2004 player table"
+      },
+      {
+        "url": "https://github.com/grzegorz2047/OldShipSchematicsAndModel/blob/2e6f7e922e95396722376d42f3e2e0a12256029e/docs/en/12-designing-other-ships.md",
+        "supports": [
+          "hull and spar parameter chain",
+          "three-mast and schooner reconstruction method"
+        ],
+        "quality": "Construction guide; no retail model geometry"
+      },
+      {
+        "url": "https://www.piratesahoy.net/threads/new-complete-guide-for-ships-on-potc-new-horizons.33543/page-2",
+        "supports": [
+          "later community catalogue retaining Caravel1 as lateen Caravela Latina"
+        ],
+        "quality": "Later mod catalogue, not confirmed unchanged retail mesh"
+      },
+      {
+        "url": "https://www.piratesahoy.net/threads/new-complete-guide-for-ships-on-potc-new-horizons.33543/page-6",
+        "supports": [
+          "later catalogue distinction Caravel1 lateen versus Caravel2 square rig"
+        ],
+        "quality": "2022 New Horizons catalogue; original retail rig equivalence not established"
+      }
+    ],
+    "retail_dimensions_established": false,
+    "interpretation": "The three-lateen interpretation is supported cautiously by a later community catalogue retaining Caravel1 as Caravela Latina. This is not proof of unchanged retail rig geometry. Castle layout and dimensions are authored. A later New Horizons catalogue distinguishes Caravel1 (lateen) from Caravel2 (square-rigged). This deliverable chooses one authored lateen family reconstruction in two paint palettes; it does not claim to reproduce both original rig variants.",
+    "source_geometry_imported": false
+  },
+  "construction_adaptations": [
+    {
+      "parameter": "guns.rows.1.to",
+      "value": 0.27,
+      "reason": "Keep the real cannon carriage and wheel envelope clear of the forecastle break; authored construction placement, not a recovered retail dimension."
+    },
+    {
+      "parameter": "hull.bulwark_height",
+      "value": 1.25,
+      "reason": "A real continuous head timber above the 0.85m-high gun opening: cannon centre 0.65–0.67m above floor, opening top 1.075–1.095m, leaving at least 0.155m of closed timber below the rail. No disconnected local roof patches."
+    },
+    {
+      "parameter": "rig.masts.fore.at",
+      "value": 0.315,
+      "reason": "Move the foremast 0.492m forward on the same forecastle platform so its real trunk clears the aft forecastle bulkhead. Cannon count32, platforms, mast/sail dimensions and common helpers unchanged."
+    }
+  ],
+  "detailed_layout": {
+    "kind": "decked",
+    "frame_spacing_m": 0.8,
+    "hold": {
+      "from": -0.325,
+      "to": 0.34,
+      "floor_z_m": -1.05,
+      "headroom_m": 2.15,
+      "minimum_headroom_m": 1.7
+    },
+    "cabin": {
+      "from": -0.47,
+      "to": -0.26,
+      "floor_z_m": 3.6,
+      "ceiling_deck_id": "castle_1",
+      "cut_main_deck": false,
+      "door_width_m": 1.1,
+      "door_height_m": 1.88,
+      "minimum_headroom_m": 1.7
+    },
+    "hatch": {
+      "id": "main_cargo_hatch",
+      "at": 0.15,
+      "length_m": 3.0,
+      "width_m": 1.9,
+      "deck_id": "main",
+      "target_deck_id": "hold"
+    },
+    "extra_hatches": [
+      {
+        "id": "forward_stores_hatch",
+        "at": 0.365,
+        "length_m": 1.55,
+        "width_m": 1.15,
+        "deck_id": "castle_2",
+        "target_deck_id": "hold"
+      }
+    ],
+    "companionways": [
+      {
+        "id": "lower_battery_companionway",
+        "at": -0.185,
+        "length_m": 2.0,
+        "width_m": 1.2,
+        "deck_id": "main",
+        "target_deck_id": "gun_deck_0"
+      }
+    ],
+    "lower_decks": [],
+    "partitions": [
+      {
+        "at": -0.26,
+        "deck_id": "hold",
+        "door_width_m": 1.1,
+        "door_height_m": 1.85
+      },
+      {
+        "at": 0.29,
+        "deck_id": "hold",
+        "door_width_m": 1.05,
+        "door_height_m": 1.85
+      }
+    ],
+    "notes": [
+      "Provision casks and planked storage crates occupy a framed lower hold with main hatch access.",
+      "The preserved lower gun deck remains a separate working level with open access from the weather deck and a further descent to the hold.",
+      "Plain aft room below the raised sterncastle uses a chart table, seating, bunk and storage furniture; modest glass stern lights are an explicit inferred adaptation.",
+      "Hand-worked capstan and pump well, rope stowage, optional carried-boat skids and a removable-pot officer facility are authored period-style adaptations to the large armed game family; they do not establish exact early-caravel equipment."
+    ],
+    "evidence": [
+      {
+        "url": "https://cultura.marinha.pt/pt/museumarinha_web/colecoes_web/pecasemdestaque_web/Paginas/caravela-latina.aspx",
+        "supports": [
+          "The museum describes fifteenth-century lateen caravels with two or three masts carrying triangular sails."
+        ],
+        "quality": "museum model catalogue",
+        "limits": "Confirms the rig family. The twentieth-century model is not a surviving caravel and gives no verified POTC interior."
+      },
+      {
+        "url": "https://arquivohistorico.marinha.pt/details?id=33091",
+        "supports": [
+          "The archive holds a photograph identified as a three-mast lateen caravel model on display."
+        ],
+        "quality": "museum-model photographic archive",
+        "limits": "Confirms a recognized three-mast interpretation, with no measured internal arrangement."
+      },
+      {
+        "url": "https://fototeca.cm-lagos.pt/maritimo/caravela-boa-esperanca-2",
+        "supports": [
+          "Boa Esperança is an approximate wooden discovery-era caravel reconstruction with triangular sails.",
+          "The historical type is described with one deck and a small sterncastle."
+        ],
+        "quality": "municipal archive and replica description",
+        "limits": "This is a two-mast modern training replica; its bunks, toilets, kitchen, fuel and other modern safety/comfort equipment are not treated as historical evidence. The larger armed game-family hull and three lateen masts are retained."
+      },
+      {
+        "url": "https://www.vasamuseet.se/en/explore/vasa-history/life-on-board",
+        "supports": [
+          "The museum identifies provision casks in the hold and a brick-lined cooking hearth forward of the mainmast.",
+          "Senior officers lived in aft sterncastle cabins with glass windows and furniture."
+        ],
+        "quality": "museum archaeological and historical interpretation",
+        "limits": "A 1628 warship analogue for construction and room hierarchy only; no claim that a merchant held Vasa-scale decoration or its exact internal arrangement."
+      },
+      {
+        "url": "https://www.batavialand.nl/zien-en-doen/het-schip-batavia/vraag-en-antwoord/",
+        "supports": [
+          "The museum lists a hold, powder room, great cabin, bread room, smaller cabins, heads and furniture within its wooden seventeenth-century merchant reconstruction.",
+          "The builders consulted Witsen, Van Yk, VOC documents, paintings and wrecks; the museum explicitly acknowledges incomplete evidence for the interior."
+        ],
+        "quality": "museum reconstruction methods and interior inventory",
+        "limits": "Batavia is a Dutch East Indiaman, not a fluit or the game Pinnace. Use room types and visible timber construction as period analogues; the asset layout remains an authored reconstruction."
+      }
+    ],
+    "historical_status": "Source-informed authored reconstruction; openings, proportions and furniture placement are not verified original game or historical interiors.",
+    "research_path": "layout-research.json",
+    "machinery": {
+      "capstan_at": -0.07
+    }
+  },
+  "interior_character": {
+    "type_reading": "The stock 32-gun fantasy vessel remains a large three-mast lateen caravel interpretation. Museum evidence supports the lateen type, not the unusual artillery scale.",
+    "cargo_character": "provision casks and planked storage crates",
+    "furniture_scope": [
+      "Provision casks and planked storage crates occupy a framed lower hold with main hatch access.",
+      "The preserved lower gun deck remains a separate working level with open access from the weather deck and a further descent to the hold.",
+      "Plain aft room below the raised sterncastle uses a chart table, seating, bunk and storage furniture; modest glass stern lights are an explicit inferred adaptation.",
+      "Hand-worked capstan and pump well, rope stowage, optional carried-boat skids and a removable-pot officer facility are authored period-style adaptations to the large armed game family; they do not establish exact early-caravel equipment."
+    ],
+    "modern_equipment_excluded": true
+  },
+  "detail_schema": 5
+}
