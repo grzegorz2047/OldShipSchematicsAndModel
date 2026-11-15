@@ -1,0 +1,111 @@
+{
+  "schema": 1,
+  "palette": "ochre",
+  "model_path": "model/ochre/ship.glb",
+  "model_sha256": "119af59271d104ce9d4dfab37cce7ed13b19523ac7a6ffde79085a8c41e4dabe",
+  "renderer_sha256": "c080e1ca7c42ad192fba3e31fc764d68997ab0a4d5ddc60a0f48cd08f4acf586",
+  "resolution": [
+    640,
+    512
+  ],
+  "samples": 12,
+  "overrides": {
+    "hold_interior": {
+      "reason": "The default hold camera lay in the aft companion-stair flight and showed treads at the lens. This explicit pose moves forward of that flight and aims at actual fitted cargo while retaining every visual mesh.",
+      "default_position": [
+        0.3479999899864197,
+        6.450000286102295,
+        0.44759735465049744
+      ],
+      "default_target": [
+        -0.7950000166893005,
+        3.818000078201294,
+        -0.39240264892578125
+      ],
+      "default_image_sha256": "31631a24e0c84093416666a8d80eddf93716c7733e32bb3c14b0d1c89d7f2ebf",
+      "position": [
+        -0.3,
+        0.818000078201294,
+        0.45359613137168964
+      ],
+      "target": [
+        -0.7950000166893005,
+        3.818000078201294,
+        -0.39240264892578125
+      ],
+      "lens_mm": 20,
+      "hide_rig": false,
+      "hidden_nodes": [],
+      "room_id": "hold",
+      "eye_height_m": 1.23,
+      "actual_floor_hit": {
+        "distance_m": 1.2764038686283103,
+        "node": "hold_plank_011_02",
+        "position": [
+          -0.3,
+          0.818000078201294,
+          -0.7764038686283103
+        ]
+      },
+      "pose_clearance_probe": [
+        {
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "hit": null
+        },
+        {
+          "axis": [
+            -1,
+            0,
+            0
+          ],
+          "hit": null
+        },
+        {
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "hit": null
+        },
+        {
+          "axis": [
+            0,
+            -1,
+            0
+          ],
+          "hit": null
+        },
+        {
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "hit": null
+        },
+        {
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "hit": null
+        }
+      ],
+      "target_first_actual_hit": {
+        "distance_m": 2.882538065055887,
+        "node": "hold_locker_minus_1_4_end_1_2",
+        "position": [
+          -0.7520999774773902,
+          3.5579998493194576,
+          -0.3190826900887489
+        ]
+      }
+    }
+  }
+}
