@@ -1,0 +1,24 @@
+{
+  "id": "mewka",
+  "label": "Mewka — łódź rybacka",
+  "length": 6.5,
+  "beam": 1.72,
+  "draft": 0.45,
+  "deck": -0.12,
+  "sole": -0.12,
+  "rig": "small-square",
+  "small": true,
+  "source_paths": [
+    "src/ship/vessels.js:MEWKA",
+    "src/models/hull.js"
+  ],
+  "limitations": [
+    "Zachowana długość i szerokość. Maszt przesunięty o 0.24 m na prawą burtę, dolny lik żagla 2.22 m nad podłogą kokpitu; to odstępstwa do gry.",
+    "Otwarta łódź: brak podpokładu i kajuty. Pokład do chodzenia to podłoga kokpitu, nie dach."
+  ],
+  "source_commit": "ea77e560ba4668c9dda55433813addbdb2f50176",
+  "player": {
+    "radius": 0.38,
+    "height": 1.85
+  }
+}
