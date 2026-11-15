@@ -1,0 +1,366 @@
+{
+  "reference_commit": "2e6f7e922e95396722376d42f3e2e0a12256029e",
+  "checked_at_utc": "2026-11-13T14:44:33.424615+00:00",
+  "blender": "4.3.2",
+  "source_glb_sha256": "9a2cb1d7a9c00b978ae82d2864be3d9d5438fc04bf50a85eb8bda1a414eedb04",
+  "source_file_sha256": {
+    "rigging_collisions.py": "ffcdd13ac3428529e12bcf167e9852a0ae057fdd84e78c8729c7e1f2744fde5d",
+    "validate_asset.py": "03888f5f6ab44192a140401a4e7641ba08d23bdb338559281c8727dbab2f459f",
+    "verify_exports.py": "fa9d549f9b909961bf3b13491c148983d25cf51acc0db557996749cd36a4c325",
+    "deck_clearance.py": "e5886836b59d62fc1491139651d869af4187ba0653e456b50a6229bb83c318eb",
+    "build_ship.py": "6179e55cd0ef746ab7a15ba4da72067099d2ffdda0ef678d71feec596dc1e172",
+    "render_previews.py": "d2b19b2d9b2fbd4a4cb081927c24718ae2a5840f1f9d4a911b8bcd624b63807f"
+  },
+  "validation": {
+    "lod0": {
+      "triangles": 291627,
+      "bytes": 38076668,
+      "nodes": 418
+    },
+    "sails": 12,
+    "animation_seconds": 4.0,
+    "stations": 140,
+    "lod1": {
+      "triangles": 153240,
+      "bytes": 26681836,
+      "nodes": 1
+    },
+    "lod2": {
+      "triangles": 22779,
+      "bytes": 5544240,
+      "nodes": 1
+    },
+    "collision_meshes": 36,
+    "canvas_minimum_deck_clearance_m": 2.25,
+    "cloth_area_m2": 671.78,
+    "rope_canvas_checks": {
+      "lod0": {
+        "passed": true,
+        "frames": [
+          0,
+          12,
+          24,
+          36,
+          48,
+          60,
+          72,
+          84,
+          96
+        ]
+      },
+      "lod1": {
+        "passed": true,
+        "frames": [
+          0
+        ]
+      },
+      "lod2": {
+        "passed": true,
+        "frames": [
+          0
+        ]
+      }
+    },
+    "result": "passed"
+  },
+  "native_import": {
+    "blender": "4.3.2",
+    "models": {
+      "lod0": {
+        "passed": true,
+        "frames": [
+          0,
+          12,
+          24,
+          36,
+          48,
+          60,
+          72,
+          84,
+          96
+        ],
+        "sails": 12,
+        "rope_objects": 148,
+        "source_glb_sha256": "be46cf1c3c55d9df020d84a91369325ed40c8a5b32468802e80ca05b7806d231"
+      },
+      "lod1": {
+        "passed": true,
+        "frames": [
+          0
+        ],
+        "sails": 12,
+        "rope_objects": 1,
+        "source_glb_sha256": "9655ca8d406500690bdd58e005fbed92de5b9479359cd99f37ba9c3964947907"
+      },
+      "lod2": {
+        "passed": true,
+        "frames": [
+          0
+        ],
+        "sails": 12,
+        "rope_objects": 1,
+        "source_glb_sha256": "a4ddd1329d99c62184b7250db97be7eaebf37375dba24805f06a22a6ead5ae75"
+      }
+    },
+    "animation_key_weight_sum_by_frame": {
+      "0": [
+        0.0,
+        0.0
+      ],
+      "24": [
+        0.95,
+        0.95
+      ],
+      "72": [
+        0.95,
+        0.95
+      ],
+      "96": [
+        0.0,
+        0.0
+      ]
+    },
+    "result": "passed"
+  },
+  "deck_clearance": {
+    "source_glb_sha256": "be46cf1c3c55d9df020d84a91369325ed40c8a5b32468802e80ca05b7806d231",
+    "required_clearance_m": 2.2,
+    "walker_height_m": 1.75,
+    "scope": "canvas above main deck and quarterdeck; equipment footprints included; wind frames 0/24/72",
+    "sails": {
+      "fore_topgallant_set": {
+        "minimum_clearance_m": 18.814,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 60813,
+        "cloth_area_m2": 28.83
+      },
+      "fore_topmast_staysail_set": {
+        "minimum_clearance_m": 9.751,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 9901,
+        "cloth_area_m2": 12.1
+      },
+      "fore_topsail_set": {
+        "minimum_clearance_m": 10.894,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 39699,
+        "cloth_area_m2": 76.2
+      },
+      "fore_course_set": {
+        "minimum_clearance_m": 2.966,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 32298,
+        "cloth_area_m2": 88.61
+      },
+      "gaff_sail_set": {
+        "minimum_clearance_m": 2.25,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 72576,
+        "cloth_area_m2": 80.17
+      },
+      "jib_set": {
+        "minimum_clearance_m": 13.572,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 3513,
+        "cloth_area_m2": 33.87
+      },
+      "main_staysail_set": {
+        "minimum_clearance_m": 2.25,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 36288,
+        "cloth_area_m2": 16.51
+      },
+      "main_topgallant_set": {
+        "minimum_clearance_m": 21.384,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 85243,
+        "cloth_area_m2": 37.95
+      },
+      "main_topmast_staysail_set": {
+        "minimum_clearance_m": 10.694,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 36288,
+        "cloth_area_m2": 32.93
+      },
+      "main_topsail_set": {
+        "minimum_clearance_m": 12.593,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 57676,
+        "cloth_area_m2": 100.37
+      },
+      "main_course_set": {
+        "minimum_clearance_m": 2.919,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 47523,
+        "cloth_area_m2": 129.75
+      },
+      "spritsail_set": {
+        "minimum_clearance_m": null,
+        "samples_below_clearance": 0,
+        "samples_over_decks": 0,
+        "cloth_area_m2": 34.49
+      }
+    },
+    "minimum_clearance_m": 2.25,
+    "cloth_area_m2": 671.78,
+    "passed": true
+  },
+  "rigging_collisions": {
+    "frames": [
+      0,
+      12,
+      24,
+      36,
+      48,
+      60,
+      72,
+      84,
+      96
+    ],
+    "rope_objects": 148,
+    "sails": 12,
+    "boundary_tolerance_m": 0.025,
+    "scope": "Rope mesh edges versus cloth interior; own bolt ropes are expected edge attachments. Sail edges versus other cloth interiors are checked in both directions.",
+    "per_frame": [
+      {
+        "frame": 0,
+        "rope_canvas_pairs": 0,
+        "canvas_canvas_pairs": 0,
+        "perimeter_contacts": 47
+      },
+      {
+        "frame": 12,
+        "rope_canvas_pairs": 0,
+        "canvas_canvas_pairs": 0,
+        "perimeter_contacts": 47
+      },
+      {
+        "frame": 24,
+        "rope_canvas_pairs": 0,
+        "canvas_canvas_pairs": 0,
+        "perimeter_contacts": 47
+      },
+      {
+        "frame": 36,
+        "rope_canvas_pairs": 0,
+        "canvas_canvas_pairs": 0,
+        "perimeter_contacts": 47
+      },
+      {
+        "frame": 48,
+        "rope_canvas_pairs": 0,
+        "canvas_canvas_pairs": 0,
+        "perimeter_contacts": 47
+      },
+      {
+        "frame": 60,
+        "rope_canvas_pairs": 0,
+        "canvas_canvas_pairs": 0,
+        "perimeter_contacts": 47
+      },
+      {
+        "frame": 72,
+        "rope_canvas_pairs": 0,
+        "canvas_canvas_pairs": 0,
+        "perimeter_contacts": 47
+      },
+      {
+        "frame": 84,
+        "rope_canvas_pairs": 0,
+        "canvas_canvas_pairs": 0,
+        "perimeter_contacts": 47
+      },
+      {
+        "frame": 96,
+        "rope_canvas_pairs": 0,
+        "canvas_canvas_pairs": 0,
+        "perimeter_contacts": 47
+      }
+    ],
+    "hits": [],
+    "passed": true
+  },
+  "integrity_negative_controls": {
+    "stale_deck_clearance": {
+      "rejected": true,
+      "reason": "stale deck-clearance report"
+    },
+    "incomplete_animation_audit": {
+      "rejected": true,
+      "reason": "incomplete cloth-loop audit"
+    },
+    "stale_source": {
+      "rejected": true,
+      "reason": "stale generated asset: build_ship.py"
+    }
+  },
+  "historical_rigging_negative_control": {
+    "baseline_generator_commit": "c8c93e75ed5d6011860d434c4a23c25af8c827dc",
+    "baseline_glb_sha256": "4ea8ea8c949038c4cda3a9d21e3e24b0492432904359558a59a25ad8eb202a40",
+    "negative_control_passed": true,
+    "baseline_frame_0": {
+      "frame": 0,
+      "rope_canvas_pairs": 27,
+      "canvas_canvas_pairs": 3,
+      "perimeter_contacts": 137
+    }
+  },
+  "glb_sha256": {
+    "snow_sailing.glb": "be46cf1c3c55d9df020d84a91369325ed40c8a5b32468802e80ca05b7806d231",
+    "snow_sailing_lod1.glb": "9655ca8d406500690bdd58e005fbed92de5b9479359cd99f37ba9c3964947907",
+    "snow_collision.glb": "3fb47bab16860a952e3a79bab1012cbd018f6fc62b9cbb946c0065d72b4c3ee8",
+    "snow_sailing_lod2.glb": "a4ddd1329d99c62184b7250db97be7eaebf37375dba24805f06a22a6ead5ae75"
+  },
+  "scope": "Authored working-yard pose; nine samples of the four-second cloth loop and static LODs. No arbitrary bracing, engine navigation, sailing physics or interiors.",
+  "reproduce_commands": [
+    "blender -t 2 -b --factory-startup --python-exit-code 1 --python game_asset/build_ship.py -- --out build/final_ship --no-renders",
+    "blender -t 2 -b --factory-startup --python-exit-code 1 --python game_asset/verify_exports.py -- build/final_ship",
+    "python game_asset/validate_asset.py build/final_ship",
+    "blender -t 2 -b build/final_ship/snow_sailing.blend --python-exit-code 1 --python game_asset/render_previews.py -- build/final_ship --samples 16 --resolution-percentage 60"
+  ],
+  "preview_render": {
+    "checked_at_utc": "2026-11-13T14:52:54.981862+00:00",
+    "renderer": "Blender 4.3.2 Cycles CPU",
+    "samples": 16,
+    "resolution_percentage": 60,
+    "denoising": false,
+    "scene_sha256": "ba4f757702a8fe5438d02a26ac35f1f5f3379d9a13e5927c4acde19c9a4a9241",
+    "source_lod0_sha256": "be46cf1c3c55d9df020d84a91369325ed40c8a5b32468802e80ca05b7806d231",
+    "images": {
+      "deck.png": {
+        "sha256": "a762137d5d9b743a210313868fd5188d4862bd5b199d939bcc4006a39c9fa27b",
+        "bytes": 1653047,
+        "pixels": [
+          960,
+          720
+        ]
+      },
+      "hero.png": {
+        "sha256": "78148985031c3504ddd89f0ff813a9165155507a24a52efc92ee6fd177066407",
+        "bytes": 1445069,
+        "pixels": [
+          960,
+          720
+        ]
+      },
+      "side.png": {
+        "sha256": "15ff8ad22f26423044c96956af1d7c1489122a49358cbfa6802b02ed77cccbc4",
+        "bytes": 1334865,
+        "pixels": [
+          960,
+          720
+        ]
+      },
+      "stern.png": {
+        "sha256": "70e3a6e6c0310b59405724e465f8e12d9852cd296804fad61c2142d802fa95a6",
+        "bytes": 1454129,
+        "pixels": [
+          960,
+          720
+        ]
+      }
+    },
+    "visual_review": "All four actual renders inspected: complete rig, cloth/deck clearance, steering wheel, crew scale figures, wooden hull and stern. Render noise remains at the explicitly recorded preview sampling budget."
+  },
+  "native_scene_sha256": "ba4f757702a8fe5438d02a26ac35f1f5f3379d9a13e5927c4acde19c9a4a9241"
+}
