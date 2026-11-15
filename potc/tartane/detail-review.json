@@ -1,0 +1,101 @@
+{
+  "schema": 5,
+  "reference": "Bryg Mewa PR 3",
+  "decision": "PASS",
+  "reviewer": "Codex light owner, actual images inspected",
+  "model_path": "model/ochre/ship.glb",
+  "model_sha256": "2a3ab710f539e6565981e1030f7d187262f1f6eee887406ae50f63770f3e871c",
+  "renderer_sha256": "c080e1ca7c42ad192fba3e31fc764d68997ab0a4d5ddc60a0f48cd08f4acf586",
+  "views": [
+    {
+      "category": "hull_rig",
+      "path": "previews/ochre/detail/hull_rig.png",
+      "sha256": "f4f5515e76d738356e9ea4e81f78f65f1ce496f38edefc6c9b73daad6fb7f482",
+      "name": "hull_rig",
+      "findings": [
+        "The preserved single lateen mast and sail have visible standing/running lines; the stowed anchor stock/flukes and aft tiller/rudder are actual separate fittings.",
+        "The honey-coloured planked hull has readable longitudinal grain, while its open well exposes frames and thwarts without an invented cabin or gun battery."
+      ],
+      "scope": "Whole actual GLB with all visible hull, rig and sails.",
+      "hidden_nodes": [],
+      "actual_hidden_nodes": []
+    },
+    {
+      "category": "deck",
+      "path": "previews/ochre/detail/deck_closeup.png",
+      "sha256": "e9cf477220d29461d0474bfa30934a2db58bd21fc3a1ef297cc2d0dd16042fb8",
+      "name": "deck_closeup",
+      "findings": [
+        "At the matched 4.5 m field, separate staggered sole/platform boards have readable fine grain, narrow seams and real edge thickness; the construction is more articulated than the old Brig close-up.",
+        "Curved ribs, longitudinal bilge stringers, thwarts and knees remain exposed, with a real rope coil, iron-strapped tackle box, stowed oar and pierced outboard rig fittings visible."
+      ],
+      "scope": "Actual deck and fitting close-up at a fixed 4.5 metre physical field; rig hidden for visibility.",
+      "hidden_nodes": [],
+      "actual_hidden_nodes": [
+        "bowsprit",
+        "bowsprit_chainplate_1",
+        "bowsprit_chainplate_minus1",
+        "bowsprit_shroud_port",
+        "bowsprit_shroud_starboard",
+        "fore_stay",
+        "lanyard_main_shroud_port_00",
+        "lanyard_main_shroud_starboard_00",
+        "main",
+        "main_lateen_00",
+        "main_lateen_00_bolt_0",
+        "main_lateen_00_bolt_1",
+        "main_lateen_00_bolt_2",
+        "main_lateen_00_halyard",
+        "main_lateen_00_head_tie_0",
+        "main_lateen_00_head_tie_1",
+        "main_lateen_00_lateen_yard",
+        "main_lateen_00_sheet",
+        "main_lateen_00_tack",
+        "main_shroud_port_00",
+        "main_shroud_starboard_00"
+      ]
+    },
+    {
+      "category": "interior",
+      "path": "previews/ochre/detail/open_bilge.png",
+      "sha256": "3b07e0163723b81cf98e9a308cc4ccdb0fad1a8e8b683594da401865d029c5b5",
+      "name": "open_bilge",
+      "findings": [
+        "The open well exposes separate sole boards, curved ribs and longitudinal bilge stringers beneath real thwarts; there is no invented roof, enclosed room or painted black opening.",
+        "The rope coil, two planked tackle boxes and stowed oars have physical thickness and joinery. Rig is omitted as recorded while the hull, sole, frames and thwarts remain visible."
+      ],
+      "room_id": "open_boat",
+      "scope": "Open boat well, exposed frames, bilge boards and thwarts; there is no enclosed cabin.",
+      "hidden_nodes": [],
+      "actual_hidden_nodes": [
+        "bowsprit",
+        "bowsprit_chainplate_1",
+        "bowsprit_chainplate_minus1",
+        "bowsprit_shroud_port",
+        "bowsprit_shroud_starboard",
+        "fore_stay",
+        "lanyard_main_shroud_port_00",
+        "lanyard_main_shroud_starboard_00",
+        "main",
+        "main_lateen_00",
+        "main_lateen_00_bolt_0",
+        "main_lateen_00_bolt_1",
+        "main_lateen_00_bolt_2",
+        "main_lateen_00_halyard",
+        "main_lateen_00_head_tie_0",
+        "main_lateen_00_head_tie_1",
+        "main_lateen_00_lateen_yard",
+        "main_lateen_00_sheet",
+        "main_lateen_00_tack",
+        "main_shroud_port_00",
+        "main_shroud_starboard_00"
+      ]
+    }
+  ],
+  "required_intact_gun_decks": [],
+  "limitations": [
+    "Static geometry and PBR inspection only; gameplay controllers and historical exactness are not certified.",
+    "The researched Tartane is an open boat: no enclosed hold or cabin is claimed. Its exposed timber construction and grain were compared with the old Brig deck close-up at the disclosed 4.5 m field.",
+    "The open-bilge and deck close-ups omit rig as recorded in the render manifest; hull, sole boards, frames, thwarts and fishing fittings remain actual delivered geometry."
+  ]
+}

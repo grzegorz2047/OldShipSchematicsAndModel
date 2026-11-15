@@ -1,0 +1,357 @@
+{
+  "schema": 4,
+  "id": "tartane",
+  "family": "tartane",
+  "title": "Small single-mast fishing/coastal craft",
+  "asset_type": "static-duel-ship",
+  "scope": "Static visual duel asset; no animated controls, walkability or engine integration claimed.",
+  "units": "metres",
+  "axes": "glTF +Y up, +Z bow, +X port; origin at midships design waterline",
+  "dimension_status": "Authored reconstruction: dimensions are design choices, not measured stock POTC2003 model dimensions.",
+  "paint_materials": [
+    "paint_hull",
+    "paint_trim"
+  ],
+  "palettes": [
+    {
+      "id": "ochre",
+      "paintHull": [
+        0.38132601143253014,
+        0.14702726649759498,
+        0.03189603307301153,
+        1.0
+      ],
+      "paintTrim": [
+        0.7230551289219693,
+        0.5028864580325687,
+        0.18116424424986022,
+        1.0
+      ],
+      "description": "Warm ochre hull and buff trim; natural timber deck, tarred rigging, linen sails and iron unchanged."
+    },
+    {
+      "id": "navy",
+      "paintHull": [
+        0.00972121732023785,
+        0.043735029256973465,
+        0.0953074666309647,
+        1.0
+      ],
+      "paintTrim": [
+        0.5520114015120001,
+        0.3564001441459435,
+        0.14412847085805777,
+        1.0
+      ],
+      "description": "Deep navy hull and muted gold trim; natural timber deck, tarred rigging, linen sails and iron unchanged."
+    }
+  ],
+  "length": 9.0,
+  "beam": 3.0,
+  "draft": 0.72,
+  "freeboard": 0.72,
+  "game_class": 7,
+  "cannons": 0,
+  "hull": {
+    "profile": [
+      [
+        -0.5,
+        0.025,
+        0.95,
+        0.3
+      ],
+      [
+        -0.4,
+        0.52,
+        0.29,
+        0.12
+      ],
+      [
+        -0.25,
+        0.86,
+        0.07,
+        0.025
+      ],
+      [
+        0,
+        1.0,
+        0,
+        0
+      ],
+      [
+        0.25,
+        0.82,
+        0.12,
+        0.08
+      ],
+      [
+        0.4,
+        0.43,
+        0.53,
+        0.28
+      ],
+      [
+        0.5,
+        0.025,
+        1.25,
+        0.58
+      ]
+    ],
+    "section_power": 0.72,
+    "stern_style": "pointed",
+    "plank_rows": 10,
+    "bulwark_height": 0.34,
+    "deck_beam_factor": 0.94,
+    "cockpit": {
+      "from": -0.25,
+      "to": 0.25,
+      "width_factor": 0.65,
+      "floor_z_m": -0.2,
+      "benches": true
+    }
+  },
+  "guns": {
+    "rows": []
+  },
+  "rig": {
+    "masts": [
+      {
+        "name": "main",
+        "at": 0.06,
+        "height_m": 7.4,
+        "rake": 0.04,
+        "sails": [
+          {
+            "kind": "lateen",
+            "z": 0.92,
+            "width_m": 8.4,
+            "height_m": 5.6
+          }
+        ],
+        "heel_z_m": -0.2
+      }
+    ],
+    "bowsprit": {
+      "length_m": 1.5,
+      "angle_deg": 15
+    }
+  },
+  "source_paths": [
+    "potc/tartane/stock-evidence.json",
+    "potc/tartane/layout-research.json",
+    "potc/common/v5_review.py"
+  ],
+  "fittings": {
+    "steering": "tiller",
+    "capstan": false,
+    "anchors": 1,
+    "scale": 0.6
+  },
+  "game_source": {
+    "provenance": {
+      "method": "Original procedural construction from authored offsets following repository guide chapters 02–09 and 12–13. No binary game meshes or proprietary textures imported.",
+      "dimension_status": "Authored reconstruction: dimensions are design choices, not measured stock POTC2003 model dimensions.",
+      "source_evidence": [
+        {
+          "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c",
+          "kind": "stock-derived public script",
+          "claims": [
+            "Ordinary game family, class and cannon count only."
+          ],
+          "commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+          "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+        },
+        {
+          "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/SEA_AI/walk/Tartane_walk.c",
+          "kind": "stock-derived public locator script",
+          "claims": [
+            "Qualitative deck/mast layout only; no official metre dimensions."
+          ]
+        },
+        {
+          "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+          "kind": "2004 player data table",
+          "claims": [
+            "Contemporary ordinary ship roster and gun counts."
+          ]
+        },
+        {
+          "url": "https://www.piratesahoy.net/threads/ships-and-their-use.2077/",
+          "kind": "contemporary stock/mod discussion",
+          "claims": [
+            "Stock family role and distinction from mod variants."
+          ]
+        },
+        {
+          "url": "https://www.piratesahoy.net/threads/rethinking-ships-in-potc-new-project.2769/",
+          "kind": "2004 stock discussion",
+          "claims": [
+            "Type-name uncertainty and small single-mast Tartane cue; historical dictionary is insufficient to establish game model."
+          ]
+        }
+      ],
+      "limitations": "Stock small fishing-boat role and one-mast status. Sail dimensions, deck arrangement and line offsets are authored reconstruction."
+    },
+    "source_evidence": [
+      {
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c",
+        "kind": "stock-derived public script",
+        "claims": [
+          "Ordinary game family, class and cannon count only."
+        ],
+        "commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+        "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+      },
+      {
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/SEA_AI/walk/Tartane_walk.c",
+        "kind": "stock-derived public locator script",
+        "claims": [
+          "Qualitative deck/mast layout only; no official metre dimensions."
+        ]
+      },
+      {
+        "url": "https://gamefaqs.gamespot.com/pc/914549-pirates-of-the-caribbean/faqs/28651",
+        "kind": "2004 player data table",
+        "claims": [
+          "Contemporary ordinary ship roster and gun counts."
+        ]
+      },
+      {
+        "url": "https://www.piratesahoy.net/threads/ships-and-their-use.2077/",
+        "kind": "contemporary stock/mod discussion",
+        "claims": [
+          "Stock family role and distinction from mod variants."
+        ]
+      },
+      {
+        "url": "https://www.piratesahoy.net/threads/rethinking-ships-in-potc-new-project.2769/",
+        "kind": "2004 stock discussion",
+        "claims": [
+          "Type-name uncertainty and small single-mast Tartane cue; historical dictionary is insufficient to establish game model."
+        ]
+      }
+    ],
+    "distinctive_silhouette": "One lateen mast, low pointed ends, modest sheer and no battery. A real central open well, lowered floor and two thwarts replace the uninterrupted deck.",
+    "static_scope": {
+      "animated_controls": false,
+      "walkability": false,
+      "navigation_routes": false,
+      "collision": "Shared exact static concave hull/deck solids; no playable deck claim."
+    },
+    "palette_contract": {
+      "changed": [
+        "paint_hull",
+        "paint_trim"
+      ],
+      "deliberately_unchanged": [
+        "natural deck timber",
+        "mast and spar timber",
+        "tarred standing rigging",
+        "natural running rope",
+        "linen cloth",
+        "iron guns and fittings"
+      ]
+    },
+    "detailed_layout_research": "potc/tartane/layout-research.json"
+  },
+  "detailed_layout": {
+    "schema": 1,
+    "kind": "open_boat",
+    "frame_spacing_m": 0.42,
+    "hold": {
+      "from": -0.25,
+      "to": 0.25,
+      "floor_z_m": -0.2,
+      "follow_sheer": true,
+      "ceiling_planking": false,
+      "bilge_visible": true,
+      "headroom_m": null
+    },
+    "cabin": null,
+    "hatch": null,
+    "extra_hatches": [],
+    "companionways": [],
+    "lower_decks": [],
+    "partitions": [],
+    "clear_aisle_width_m": 0.8,
+    "passage_width_m": 1.0,
+    "standing_height_m": null,
+    "evidence": [
+      {
+        "url": "https://www.shiplib.org/shipwrecks/sardinaux",
+        "title": "Nautical Archaeology Digital Library: Sardinaux",
+        "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+        "confirmed": [
+          "An approximately 10–12 m coastal vessel is interpreted cautiously as a tartane.",
+          "Surviving floor timbers and futtocks, mast-step recesses and absence of ceiling/deck support suggest an open plan; a partial stern deck is possible."
+        ],
+        "application": [
+          "Open well, visible internal frames and mast-step structure.",
+          "The authored 9 m fishing boat receives removable sole boards, thwarts and fishing gear, rather than a full standing cabin."
+        ]
+      },
+      {
+        "url": "https://ancre.fr/en/monograph/19-monographie-de-la-diligente-tartane-du-roi-1738.html",
+        "title": "ANCRE: La Diligente, royal tartane, 1738",
+        "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+        "confirmed": [
+          "The publisher identifies Mediterranean fishing/coastal-trading use and archival Toulon plans.",
+          "Light ribs and simple fitting-out are identified."
+        ],
+        "application": [
+          "Timber construction vocabulary only; the larger naval tartane is not used as an interior template for this 9 m boat."
+        ]
+      },
+      {
+        "url": "https://voilelatinesete.org/bela-latina/",
+        "title": "Voile Latine de Sète: Bèla Latina restoration",
+        "read": "Full collection text read on 2026-11-14; stated image/plan also inspected where recorded.",
+        "confirmed": [
+          "The restoration documents exposed paired wooden frames and bottom repairs on a small lateen craft."
+        ],
+        "application": [
+          "Small-boat framing and repair vocabulary only, not a contemporary POTC prototype."
+        ]
+      }
+    ],
+    "confidence": "Authored reconstruction informed by read source material, not a recovered stock game interior.",
+    "open_well": {
+      "from": -0.25,
+      "to": 0.25,
+      "width_factor": 0.65,
+      "floor_z_m": -0.2
+    },
+    "machinery": {
+      "capstan_at": null
+    },
+    "notes": [
+      "Open central well from -0.25L to +0.25L, narrow sole boards at -0.20 m leaving bilge visible.",
+      "Paired frames at 0.42 m nominal spacing, mast heel/step and thwarts; small fore and aft working platforms.",
+      "One tiller, light anchor, coiled rope, oars, net-rope coil, small planked fishing-tackle boxes and hand cleats.",
+      "Fishing gear is a functional reconstruction, not an archaeological inventory.",
+      "No enclosed hold, cabin, stairs, cannon or capstan; decorative floor boards do not assert continuous historical ceiling."
+    ],
+    "dimension_status": "Dimensions, frame spacing, compartments and fitting positions are authored estimates fitted to the preserved POTC-family hull. These sources do not document the proprietary retail model and do not establish exact stock interiors. No museum image is copied into the model or its textures.",
+    "fittings": [
+      "tiller",
+      "thwarts",
+      "mast_step",
+      "oars",
+      "net_rope_coil",
+      "fishing_tackle_boxes",
+      "light_anchor",
+      "hand_cleats"
+    ],
+    "research_path": "layout-research.json",
+    "compartments": [
+      {
+        "id": "open_fishing_well",
+        "deck_id": "open_boat",
+        "from": -0.25,
+        "to": 0.25,
+        "role": "fishing_gear"
+      }
+    ]
+  },
+  "detail_schema": 5
+}

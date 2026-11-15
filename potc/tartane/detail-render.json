@@ -1,0 +1,127 @@
+{
+  "schema": 5,
+  "ship_id": "tartane",
+  "palette": "ochre",
+  "model_path": "model/ochre/ship.glb",
+  "model_sha256": "2a3ab710f539e6565981e1030f7d187262f1f6eee887406ae50f63770f3e871c",
+  "renderer_sha256": "c080e1ca7c42ad192fba3e31fc764d68997ab0a4d5ddc60a0f48cd08f4acf586",
+  "resolution": [
+    640,
+    512
+  ],
+  "render_samples": 12,
+  "views": [
+    {
+      "name": "hull_rig",
+      "path": "previews/ochre/detail/hull_rig.png",
+      "sha256": "f4f5515e76d738356e9ea4e81f78f65f1ce496f38edefc6c9b73daad6fb7f482",
+      "category": "hull_rig",
+      "position": [
+        16.02984619140625,
+        22.443382263183594,
+        13.37553596496582
+      ],
+      "target": [
+        0.5044345259666443,
+        0.16779112815856934,
+        3.655277967453003
+      ],
+      "ortho_scale_m": 15.46978658437729,
+      "hide_rig": false,
+      "hidden_nodes": [],
+      "scope": "Whole actual GLB with all visible hull, rig and sails.",
+      "actual_hidden_nodes": []
+    },
+    {
+      "name": "deck_closeup",
+      "path": "previews/ochre/detail/deck_closeup.png",
+      "sha256": "e9cf477220d29461d0474bfa30934a2db58bd21fc3a1ef297cc2d0dd16042fb8",
+      "category": "deck",
+      "position": [
+        3.5999999046325684,
+        3.819999933242798,
+        6.200000286102295
+      ],
+      "target": [
+        0.0,
+        -0.18000000715255737,
+        0.8999999761581421
+      ],
+      "ortho_scale_m": 4.5,
+      "hide_rig": true,
+      "hidden_nodes": [],
+      "physical_scale_reference": "Bryg Mewa PR 3 helm: 4.5 m orthographic field",
+      "scope": "Actual deck and fitting close-up at a fixed 4.5 metre physical field; rig hidden for visibility.",
+      "actual_hidden_nodes": [
+        "bowsprit",
+        "bowsprit_chainplate_1",
+        "bowsprit_chainplate_minus1",
+        "bowsprit_shroud_port",
+        "bowsprit_shroud_starboard",
+        "fore_stay",
+        "lanyard_main_shroud_port_00",
+        "lanyard_main_shroud_starboard_00",
+        "main",
+        "main_lateen_00",
+        "main_lateen_00_bolt_0",
+        "main_lateen_00_bolt_1",
+        "main_lateen_00_bolt_2",
+        "main_lateen_00_halyard",
+        "main_lateen_00_head_tie_0",
+        "main_lateen_00_head_tie_1",
+        "main_lateen_00_lateen_yard",
+        "main_lateen_00_sheet",
+        "main_lateen_00_tack",
+        "main_shroud_port_00",
+        "main_shroud_starboard_00"
+      ]
+    },
+    {
+      "name": "open_bilge",
+      "path": "previews/ochre/detail/open_bilge.png",
+      "sha256": "3b07e0163723b81cf98e9a308cc4ccdb0fad1a8e8b683594da401865d029c5b5",
+      "category": "interior",
+      "position": [
+        2.9000000953674316,
+        2.299999952316284,
+        4.300009727478027
+      ],
+      "target": [
+        0.0,
+        0.0,
+        0.10001000016927719
+      ],
+      "ortho_scale_m": 4.5,
+      "hide_rig": true,
+      "hidden_nodes": [],
+      "room_id": "open_boat",
+      "scope": "Open boat well, exposed frames, bilge boards and thwarts; there is no enclosed cabin.",
+      "actual_hidden_nodes": [
+        "bowsprit",
+        "bowsprit_chainplate_1",
+        "bowsprit_chainplate_minus1",
+        "bowsprit_shroud_port",
+        "bowsprit_shroud_starboard",
+        "fore_stay",
+        "lanyard_main_shroud_port_00",
+        "lanyard_main_shroud_starboard_00",
+        "main",
+        "main_lateen_00",
+        "main_lateen_00_bolt_0",
+        "main_lateen_00_bolt_1",
+        "main_lateen_00_bolt_2",
+        "main_lateen_00_halyard",
+        "main_lateen_00_head_tie_0",
+        "main_lateen_00_head_tie_1",
+        "main_lateen_00_lateen_yard",
+        "main_lateen_00_sheet",
+        "main_lateen_00_tack",
+        "main_shroud_port_00",
+        "main_shroud_starboard_00"
+      ]
+    }
+  ],
+  "review_status": "PENDING_MANUAL_INSPECTION",
+  "presentation": "Actual GLB reimport; auxiliary area lights and temporary visibility only. Cutaways list every hidden mesh. Original materials and geometry are unmodified.",
+  "scope": "One palette supplies natural-material/interior evidence. Both palette heroes and source/export parity remain separate v4 acceptance evidence."
+}
