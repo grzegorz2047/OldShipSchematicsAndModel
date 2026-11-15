@@ -1,0 +1,447 @@
+{
+  "schema": 4,
+  "id": "brig",
+  "family": "brig",
+  "asset_type": "static-duel-ship",
+  "length": 34,
+  "beam": 9,
+  "draft": 3.5,
+  "freeboard": 1.8,
+  "hull": {
+    "profile": [
+      [
+        -0.5,
+        0.48,
+        1.82,
+        0.48
+      ],
+      [
+        -0.45,
+        0.72,
+        1.327,
+        0.389
+      ],
+      [
+        -0.35,
+        0.9,
+        0.624,
+        0.235
+      ],
+      [
+        -0.2,
+        0.99,
+        0.116,
+        0.077
+      ],
+      [
+        0,
+        1,
+        0.0,
+        0.0
+      ],
+      [
+        0.2,
+        0.91,
+        0.116,
+        0.144
+      ],
+      [
+        0.35,
+        0.71,
+        0.624,
+        0.441
+      ],
+      [
+        0.45,
+        0.4,
+        1.327,
+        0.729
+      ],
+      [
+        0.5,
+        0.025,
+        1.82,
+        0.9
+      ]
+    ],
+    "section_power": 0.79,
+    "stern_style": "transom",
+    "plank_rows": 20,
+    "bulwark_height": 1.25,
+    "quarterdeck": {
+      "from": -0.47,
+      "to": -0.24,
+      "height_m": 1.0
+    },
+    "forecastle": {
+      "from": 0.29,
+      "to": 0.48,
+      "height_m": 1.1
+    }
+  },
+  "guns": {
+    "rows": [
+      {
+        "pairs": 12,
+        "z_m": 2.47,
+        "from": -0.4,
+        "to": 0.4,
+        "follow_sheer": true
+      }
+    ]
+  },
+  "rig": {
+    "masts": [
+      {
+        "name": "fore",
+        "at": 0.25,
+        "height_m": 29,
+        "rake": 0,
+        "sails": [
+          {
+            "kind": "square",
+            "z": 0.48,
+            "width_m": 16.7,
+            "height_m": 7.83
+          },
+          {
+            "kind": "square",
+            "z": 0.76,
+            "width_m": 11.929,
+            "height_m": 6.09
+          },
+          {
+            "kind": "square",
+            "z": 0.95,
+            "width_m": 7.157,
+            "height_m": 4.06
+          }
+        ],
+        "heel_z_m": -2.3235625925925927,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
+      },
+      {
+        "name": "main",
+        "at": -0.12,
+        "height_m": 32.5,
+        "rake": 0,
+        "sails": [
+          {
+            "kind": "square",
+            "z": 0.48,
+            "width_m": 19.1,
+            "height_m": 8.775
+          },
+          {
+            "kind": "square",
+            "z": 0.76,
+            "width_m": 13.643,
+            "height_m": 6.825
+          },
+          {
+            "kind": "square",
+            "z": 0.95,
+            "width_m": 8.186,
+            "height_m": 4.55
+          },
+          {
+            "kind": "gaff",
+            "z": 0.43,
+            "width_m": 8.8,
+            "height_m": 10.4
+          }
+        ],
+        "heel_z_m": -2.388220445422943,
+        "heel_basis": "Authored interior mast step above keelson through real deck partner apertures."
+      }
+    ],
+    "bowsprit": {
+      "length_m": 12.9,
+      "angle_deg": 23
+    },
+    "jibs": [
+      {
+        "head_fraction": 0.75,
+        "bowsprit_fraction": 0.95
+      }
+    ]
+  },
+  "palettes": [
+    {
+      "id": "ochre",
+      "paintHull": [
+        0.38132601143253014,
+        0.11443537382697373,
+        0.017641954488384078,
+        1.0
+      ],
+      "paintTrim": [
+        0.02217388479338738,
+        0.014443843596092545,
+        0.009134058702220787,
+        1.0
+      ]
+    },
+    {
+      "id": "navy",
+      "paintHull": [
+        0.009134058702220787,
+        0.042311410620809675,
+        0.10461648409110419,
+        1.0
+      ],
+      "paintTrim": [
+        0.5972017883637634,
+        0.3613067797835095,
+        0.09305896284668745,
+        1.0
+      ]
+    }
+  ],
+  "paint_materials": [
+    "paint_hull",
+    "paint_trim"
+  ],
+  "game_source": {
+    "id": "SHIP_BRIG_ENGLAND",
+    "model": "Brig1",
+    "class": 3,
+    "cannons": 24,
+    "source_commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+    "script_sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+  },
+  "provenance": {
+    "status": "Original procedural reconstruction; not a retail mesh reproduction.",
+    "dimensions": "Authored estimates in metres; not measured stock data.",
+    "rig": "Guide-based authored family interpretation. Stock sail-plan/locator geometry was unavailable.",
+    "gun_layout": "Authored symmetric broadside allocation of the verified stock total. z_m is the row centre at zero sheer; the builder adds the authored local deck sheer. This is not a claim about stock gun locators.",
+    "stock_script_caveat": "Pinned stock-derived modern compatibility scripts are not authenticated byte-identical retail source.",
+    "source_evidence": [
+      {
+        "id": "stock-stats",
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/Ships_init.c#L3108",
+        "kind": "stock-derived compatibility script",
+        "claim": "Family, model identifier, class and total cannon count only.",
+        "source_commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+        "sha256": "e762950c5a96131b0d17452721ee95a9bfee8d921251ae6f368edbe74857bfde"
+      },
+      {
+        "id": "stock-ids",
+        "url": "https://github.com/storm-devs/potc/blob/2af54be0b92840c7c9f68618d02bc8f81dc13145/PROGRAM/Ships/ships.h",
+        "kind": "stock-derived compatibility enum",
+        "claim": "Ordinary family identity; no dimension or sail-plan data.",
+        "source_commit": "2af54be0b92840c7c9f68618d02bc8f81dc13145",
+        "sha256": "a267dbc5d3fc901104b86b53ffdab06255545a8a7ee3725801c0d9dc9037ba74"
+      },
+      {
+        "id": "stock-2003-visual",
+        "url": "https://www.mobygames.com/game/9613/pirates-of-the-caribbean/screenshots/windows/54679/",
+        "image_url": "https://cdn.mobygames.com/screenshots/10282583-pirates-of-the-caribbean-windows-a-pirate-ship-and-a-sunset-does.jpg",
+        "kind": "Published Windows 2003 screenshot; added 29 November 2003",
+        "claim": "General game visual vocabulary only: pale panelled square canvas, dark wales and ochre hull bands. The pictured family is not authenticated."
+      },
+      {
+        "id": "guide-proportions",
+        "path": "docs/en/12-designing-other-ships.md",
+        "kind": "Repository guide",
+        "claim": "Authored hull/port/mast proportion method and rig distinctions; not stock game dimensions."
+      },
+      {
+        "id": "guide-spars",
+        "path": "docs/en/05-masts-and-spars.md",
+        "kind": "Repository guide",
+        "claim": "Square/lateen/gaff typology and spar proportion starting points; later brig is not the reference Snow."
+      }
+    ]
+  },
+  "type_profile": {
+    "distinction": "Two principal masts, both fully square-rigged; boom and gaff directly on mainmast; no separate snow/trysail mast. One 24-gun battery, low castles.",
+    "rationale": "The guide distinguishes the later brig with boom from its reference Snow. This deliberately changes mast structure rather than merely renaming the existing Snow asset.",
+    "mast_count": 2,
+    "gun_total": 24,
+    "battery_groups": 1,
+    "length_beam_ratio": 3.778,
+    "snow_mast": false,
+    "excluded_specials": [
+      "Manowar",
+      "Black Pearl",
+      "Fearless",
+      "Mefisto"
+    ]
+  },
+  "scope": {
+    "delivered": "Static duel asset with two paint variants and LOD/collision/review assets.",
+    "engine_integration": "Not integrated with an engine: no buoyancy, damage, artillery, sailing or crew controllers.",
+    "walking": "Authored geometric passage and stair access; no player controller or engine navigation integration. Actual clearance checks are recorded in validation.json after build.",
+    "interiors": "Modelled structural interiors with real planked decks, frames, hatch apertures, stairs and cabin partition openings. Layout is an authored reconstruction, not recovered retail geometry."
+  },
+  "source_paths": [
+    "potc/brig/type-profile.json",
+    "potc/brig/type-plan.svg",
+    "docs/en/05-masts-and-spars.md",
+    "docs/en/12-designing-other-ships.md",
+    "potc/brig/layout-research.json",
+    "potc/brig/interior-plan.md",
+    "docs/en/04-decks-bulwarks-stern-head.md",
+    "docs/en/13-3d-quality-checklist.md",
+    "potc/brig/gun_surface_fix.py",
+    "potc/brig/gun_surface_native.py",
+    "potc/brig/gun_surface_repair.py",
+    "potc/brig/gun_surface_bindings.py",
+    "potc/brig/surface-repair.json"
+  ],
+  "detailed_layout": {
+    "schema": 1,
+    "coordinate_system": {
+      "longitudinal": "s_fraction of preserved deck length, positive forward",
+      "absolute_plan": "x_m across ship, y_m up, forward_z_m positive bow",
+      "note": "Vertical z_m fields follow the existing Blender builder convention; longitudinal at/from/to are fractions."
+    },
+    "frame_spacing_m": 0.52,
+    "clear_aisle_width_m": 1.2,
+    "passage_width_m": 1.1,
+    "standing_height_m": 1.85,
+    "minimum_headroom_m": 1.85,
+    "kind": "decked",
+    "partitions": [],
+    "companionways": [],
+    "extra_hatches": [
+      {
+        "id": "fore_stores_hatch",
+        "at": 0.365,
+        "length_m": 1.4,
+        "width_m": 1.2,
+        "x_m": 0.0,
+        "coaming_height_m": 0.25,
+        "deck_id": "main",
+        "access": "ladder",
+        "open": true,
+        "forward_z_m": 12.41,
+        "target_deck_id": "berth_lower"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "brig-gannet",
+        "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-84156",
+        "title": "Royal Museums Greenwich: Gannet (1800), ZAZ4365",
+        "date": "circa March 1800",
+        "kind": "Primary Admiralty plan catalogue",
+        "observed": "The catalogue identifies a 1:48 drawing of the upper deck, lower deck and hold of the 16-gun brig-sloop Gannet, initialled by Surveyor John Henslow.",
+        "application": "Separate main battery, lower berth/storage deck and hold, accessed by physical companion openings; compact after accommodation.",
+        "limit": "Sixteen-gun historical analogue, not the 24-gun game Brig; exact gun positions, dimensions and internal partitions are authored."
+      },
+      {
+        "id": "brig-cruizer",
+        "url": "https://prints.rmg.co.uk/products/the-deck-plan-of-the-cruizer-1797-j4868",
+        "title": "Royal Museums Greenwich: deck plan of Cruizer (1797)",
+        "date": "1797",
+        "kind": "Primary naval plan catalogue",
+        "observed": "A museum-held deck plan exists for the later brig-sloop Cruizer.",
+        "application": "Late two-masted brig arrangement vocabulary and a clear working deck.",
+        "limit": "No museum plan image is copied; later brig analogue is not evidence of POTC retail geometry or a Snow mast."
+      }
+    ],
+    "notes": [
+      "One continuous 24-gun main battery, separate berth deck, framed hold and a furnished cabin on the lower after deck. The low preserved quarterdeck does not falsely promise a full standing room above the main gun deck. No Snow/trysail pole."
+    ],
+    "hold": {
+      "from": -0.37,
+      "to": 0.38,
+      "floor_z_m": -2.5,
+      "follow_sheer": true,
+      "ceiling_planking": true,
+      "bilge_visible": true,
+      "forward_z_range_m": [
+        -12.58,
+        12.92
+      ]
+    },
+    "cabin": {
+      "from": -0.46,
+      "to": -0.24,
+      "floor_z_m": -0.35,
+      "follow_sheer": true,
+      "ceiling_deck_id": "main",
+      "cut_main_deck": false,
+      "door_width_m": 1.15,
+      "door_height_m": 1.9,
+      "clear_height_m": 1.9,
+      "furniture": [
+        "table",
+        "bench",
+        "berth",
+        "locker"
+      ],
+      "forward_z_range_m": [
+        -15.64,
+        -8.16
+      ]
+    },
+    "hatch": {
+      "id": "main_hatch",
+      "at": 0.075,
+      "length_m": 2.8,
+      "width_m": 1.9,
+      "x_m": 0.0,
+      "coaming_height_m": 0.25,
+      "deck_id": "main",
+      "access": "stair",
+      "open": true,
+      "forward_z_m": 2.55
+    },
+    "lower_decks": [
+      {
+        "id": "berth_lower",
+        "from": -0.42,
+        "to": 0.42,
+        "z_m": -0.35,
+        "follow_sheer": true,
+        "forward_z_range_m": [
+          -14.28,
+          14.28
+        ]
+      }
+    ],
+    "machinery": {
+      "capstan_at": 0.165
+    },
+    "compartments": [
+      {
+        "id": "cable_store",
+        "role": "cable_store",
+        "from": 0.31,
+        "to": 0.41,
+        "deck_id": "berth_lower",
+        "forward_z_range_m": [
+          10.54,
+          13.94
+        ]
+      },
+      {
+        "id": "after_cabin",
+        "role": "cabin",
+        "from": -0.46,
+        "to": -0.24,
+        "deck_id": "berth_lower",
+        "forward_z_range_m": [
+          -15.64,
+          -8.16
+        ]
+      },
+      {
+        "id": "provision_hold",
+        "role": "hold",
+        "from": -0.25,
+        "to": 0.3,
+        "deck_id": "hold",
+        "forward_z_range_m": [
+          -8.5,
+          10.2
+        ]
+      }
+    ],
+    "research_path": "layout-research.json"
+  },
+  "detail_schema": 5
+}

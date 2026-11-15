@@ -1,0 +1,233 @@
+{
+  "schema": 1,
+  "id": "brig",
+  "accessed_utc": "2026-11-14",
+  "purpose": "Original detailed deck and below-deck reconstruction for the existing ordinary POTC family and both paint variants.",
+  "stock_contract": {
+    "id": "SHIP_BRIG_ENGLAND",
+    "model": "Brig1",
+    "cannons": 24,
+    "claim": "Existing pinned stock-derived identity and total count only; no game interior coordinates known."
+  },
+  "method": "Museum and primary-plan catalogue research supplies arrangement vocabulary. All metre dimensions, room positions and access clearances are authored to the preserved hull. Public source text is paraphrased; no museum image, plan tracing or proprietary texture is distributed.",
+  "sources": [
+    {
+      "id": "brig-gannet",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-84156",
+      "title": "Royal Museums Greenwich: Gannet (1800), ZAZ4365",
+      "date": "circa March 1800",
+      "kind": "Primary Admiralty plan catalogue",
+      "observed": "The catalogue identifies a 1:48 drawing of the upper deck, lower deck and hold of the 16-gun brig-sloop Gannet, initialled by Surveyor John Henslow.",
+      "application": "Separate main battery, lower berth/storage deck and hold, accessed by physical companion openings; compact after accommodation.",
+      "limit": "Sixteen-gun historical analogue, not the 24-gun game Brig; exact gun positions, dimensions and internal partitions are authored.",
+      "applies_to": "Separate main battery, lower berth/storage deck and hold, accessed by physical companion openings; compact after accommodation."
+    },
+    {
+      "id": "brig-cruizer",
+      "url": "https://prints.rmg.co.uk/products/the-deck-plan-of-the-cruizer-1797-j4868",
+      "title": "Royal Museums Greenwich: deck plan of Cruizer (1797)",
+      "date": "1797",
+      "kind": "Primary naval plan catalogue",
+      "observed": "A museum-held deck plan exists for the later brig-sloop Cruizer.",
+      "application": "Late two-masted brig arrangement vocabulary and a clear working deck.",
+      "limit": "No museum plan image is copied; later brig analogue is not evidence of POTC retail geometry or a Snow mast.",
+      "applies_to": "Late two-masted brig arrangement vocabulary and a clear working deck."
+    }
+  ],
+  "decisions": [
+    {
+      "feature": "Preserved battery and deck hierarchy",
+      "basis": "One continuous 24-gun main battery, separate berth deck, framed hold and a furnished cabin on the lower after deck. The low preserved quarterdeck does not falsely promise a full standing room above the main gun deck. No Snow/trysail pole. This is an authored adaptation of the listed historical analogues to the unchanged game-family gun total.",
+      "source_urls": [
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-84156",
+        "https://prints.rmg.co.uk/products/the-deck-plan-of-the-cruizer-1797-j4868"
+      ]
+    },
+    {
+      "feature": "Physically separate lower levels and hold",
+      "basis": "The authored hull contains distinct berth_lower and a framed hold. Numerical deck and floor baselines are fitted estimates; the source deck hierarchy supplies arrangement vocabulary rather than retail game coordinates.",
+      "source_urls": [
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-84156"
+      ]
+    },
+    {
+      "feature": "After cabin and unobstructed structural access",
+      "basis": "The furnished after cabin has a real centered partition door opening from its own lower deck. The main hatch shaft reaches that level; no side stair crosses a cabin wall or opens into a sealed low quarterdeck space. Cabin dimensions and this access route are authored game-environment choices.",
+      "source_urls": [
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-84156",
+        "https://prints.rmg.co.uk/products/the-deck-plan-of-the-cruizer-1797-j4868"
+      ]
+    }
+  ],
+  "layout": {
+    "schema": 1,
+    "coordinate_system": {
+      "longitudinal": "s_fraction of preserved deck length, positive forward",
+      "absolute_plan": "x_m across ship, y_m up, forward_z_m positive bow",
+      "note": "Vertical z_m fields follow the existing Blender builder convention; longitudinal at/from/to are fractions."
+    },
+    "frame_spacing_m": 0.52,
+    "clear_aisle_width_m": 1.2,
+    "passage_width_m": 1.1,
+    "standing_height_m": 1.85,
+    "minimum_headroom_m": 1.85,
+    "kind": "decked",
+    "partitions": [],
+    "companionways": [],
+    "extra_hatches": [
+      {
+        "id": "fore_stores_hatch",
+        "at": 0.365,
+        "length_m": 1.4,
+        "width_m": 1.2,
+        "x_m": 0.0,
+        "coaming_height_m": 0.25,
+        "deck_id": "main",
+        "access": "ladder",
+        "open": true,
+        "forward_z_m": 12.41,
+        "target_deck_id": "berth_lower"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "brig-gannet",
+        "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-84156",
+        "title": "Royal Museums Greenwich: Gannet (1800), ZAZ4365",
+        "date": "circa March 1800",
+        "kind": "Primary Admiralty plan catalogue",
+        "observed": "The catalogue identifies a 1:48 drawing of the upper deck, lower deck and hold of the 16-gun brig-sloop Gannet, initialled by Surveyor John Henslow.",
+        "application": "Separate main battery, lower berth/storage deck and hold, accessed by physical companion openings; compact after accommodation.",
+        "limit": "Sixteen-gun historical analogue, not the 24-gun game Brig; exact gun positions, dimensions and internal partitions are authored."
+      },
+      {
+        "id": "brig-cruizer",
+        "url": "https://prints.rmg.co.uk/products/the-deck-plan-of-the-cruizer-1797-j4868",
+        "title": "Royal Museums Greenwich: deck plan of Cruizer (1797)",
+        "date": "1797",
+        "kind": "Primary naval plan catalogue",
+        "observed": "A museum-held deck plan exists for the later brig-sloop Cruizer.",
+        "application": "Late two-masted brig arrangement vocabulary and a clear working deck.",
+        "limit": "No museum plan image is copied; later brig analogue is not evidence of POTC retail geometry or a Snow mast."
+      }
+    ],
+    "notes": [
+      "One continuous 24-gun main battery, separate berth deck, framed hold and a furnished cabin on the lower after deck. The low preserved quarterdeck does not falsely promise a full standing room above the main gun deck. No Snow/trysail pole."
+    ],
+    "hold": {
+      "from": -0.37,
+      "to": 0.38,
+      "floor_z_m": -2.5,
+      "follow_sheer": true,
+      "ceiling_planking": true,
+      "bilge_visible": true,
+      "forward_z_range_m": [
+        -12.58,
+        12.92
+      ]
+    },
+    "cabin": {
+      "from": -0.46,
+      "to": -0.24,
+      "floor_z_m": -0.35,
+      "follow_sheer": true,
+      "ceiling_deck_id": "main",
+      "cut_main_deck": false,
+      "door_width_m": 1.15,
+      "door_height_m": 1.9,
+      "clear_height_m": 1.9,
+      "furniture": [
+        "table",
+        "bench",
+        "berth",
+        "locker"
+      ],
+      "forward_z_range_m": [
+        -15.64,
+        -8.16
+      ]
+    },
+    "hatch": {
+      "id": "main_hatch",
+      "at": 0.075,
+      "length_m": 2.8,
+      "width_m": 1.9,
+      "x_m": 0.0,
+      "coaming_height_m": 0.25,
+      "deck_id": "main",
+      "access": "stair",
+      "open": true,
+      "forward_z_m": 2.55
+    },
+    "lower_decks": [
+      {
+        "id": "berth_lower",
+        "from": -0.42,
+        "to": 0.42,
+        "z_m": -0.35,
+        "follow_sheer": true,
+        "forward_z_range_m": [
+          -14.28,
+          14.28
+        ]
+      }
+    ],
+    "machinery": {
+      "capstan_at": 0.165
+    },
+    "compartments": [
+      {
+        "id": "cable_store",
+        "role": "cable_store",
+        "from": 0.31,
+        "to": 0.41,
+        "deck_id": "berth_lower",
+        "forward_z_range_m": [
+          10.54,
+          13.94
+        ]
+      },
+      {
+        "id": "after_cabin",
+        "role": "cabin",
+        "from": -0.46,
+        "to": -0.24,
+        "deck_id": "berth_lower",
+        "forward_z_range_m": [
+          -15.64,
+          -8.16
+        ]
+      },
+      {
+        "id": "provision_hold",
+        "role": "hold",
+        "from": -0.25,
+        "to": 0.3,
+        "deck_id": "hold",
+        "forward_z_range_m": [
+          -8.5,
+          10.2
+        ]
+      }
+    ],
+    "research_path": "layout-research.json"
+  },
+  "reference_quality_bar": {
+    "asset": "sailertales/brig (Bryg Mewa), PR3 detailed reference",
+    "main_triangles": 273032,
+    "features": [
+      "real hollow hold",
+      "furnished lowered cabin",
+      "real cabin door and deck hatch",
+      "physical framing and deck structure",
+      "actual route geometry"
+    ],
+    "rule": "Substantial structural and material detail; triangle count is context, not a substitute for useful geometry."
+  },
+  "ship_id": "brig",
+  "limitations": [
+    "No authenticated POTC retail interior plan or mesh locators were available. All metre coordinates, room dimensions and passage widths are authored estimates; source museum plans are not traced or redistributed.",
+    "Sixteen-gun historical analogue, not the 24-gun game Brig; exact gun positions, dimensions and internal partitions are authored.",
+    "No museum plan image is copied; later brig analogue is not evidence of POTC retail geometry or a Snow mast."
+  ]
+}
