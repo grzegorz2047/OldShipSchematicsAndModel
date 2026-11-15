@@ -1,0 +1,159 @@
+{
+  "schema": 1,
+  "ship_id": "corvette",
+  "palette": "ochre",
+  "model_path": "model/ochre/ship.glb",
+  "model_sha256": "6161c636c9f7dc52ff036c338907e9aa22b633bbfb591578c593a8b5df4d998d",
+  "renderer_sha256": "c080e1ca7c42ad192fba3e31fc764d68997ab0a4d5ddc60a0f48cd08f4acf586",
+  "resolution": [
+    640,
+    512
+  ],
+  "samples": 12,
+  "additional_views": {
+    "main_deck_gun_closeup": {
+      "position": [
+        2.367873697280884,
+        -7.039999771118164,
+        3.507596067428589
+      ],
+      "target": [
+        4.215873840332032,
+        -5.789999771118164,
+        2.707596067428589
+      ],
+      "lens_mm": 30,
+      "target_components": [
+        "gun_barrel_0_port_10",
+        "gun_carriage_0_port_10",
+        "gun_barrel_0_port_10_breeching_eye_1",
+        "gun_barrel_0_port_10_fixed_breeching"
+      ],
+      "actual_target_bounds": {
+        "gun_barrel_0_port_10": {
+          "min": [
+            3.587873697280884,
+            -5.86359977722168,
+            2.774996042251587
+          ],
+          "max": [
+            5.587873935699463,
+            -5.616399765014648,
+            3.022196054458618
+          ]
+        },
+        "gun_carriage_0_port_10": {
+          "min": [
+            3.512873649597168,
+            -6.049999713897705,
+            2.378596067428589
+          ],
+          "max": [
+            4.3628740310668945,
+            -5.429999828338623,
+            2.678596258163452
+          ]
+        },
+        "gun_barrel_0_port_10_breeching_eye_1": {
+          "min": [
+            4.365075588226318,
+            -6.446999549865723,
+            2.681595802307129
+          ],
+          "max": [
+            4.385859966278076,
+            -6.312999725341797,
+            2.815596103668213
+          ]
+        },
+        "gun_barrel_0_port_10_fixed_breeching": {
+          "min": [
+            3.4870731830596924,
+            -6.396239280700684,
+            2.7937469482421875
+          ],
+          "max": [
+            4.471608638763428,
+            -5.08293342590332,
+            2.9831905364990234
+          ]
+        }
+      },
+      "pose_clearance_probe": [
+        {
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "hit": null
+        },
+        {
+          "axis": [
+            -1,
+            0,
+            0
+          ],
+          "hit": null
+        },
+        {
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "hit": null
+        },
+        {
+          "axis": [
+            0,
+            -1,
+            0
+          ],
+          "hit": null
+        },
+        {
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "hit": null
+        },
+        {
+          "axis": [
+            0,
+            0,
+            -1
+          ],
+          "hit": null
+        }
+      ],
+      "actual_floor_hit": {
+        "distance_m": 1.200412197330971,
+        "node": "main_plank_045_05",
+        "position": [
+          2.367873697280884,
+          -7.039999771118164,
+          2.307183870097618
+        ]
+      },
+      "target_first_actual_hit": {
+        "distance_m": 1.896118542415945,
+        "node": "gun_cheek_0_port_10_1",
+        "position": [
+          3.846273529739358,
+          -6.039999961853027,
+          2.8675961894989017
+        ]
+      },
+      "category": "deck",
+      "label": "Intact open main-deck gun and carriage close-up",
+      "label_pl": "Działo i laweta · zbliżenie",
+      "hide_rig": false,
+      "hidden_nodes": [],
+      "reason": "The default deck closeup is centered on the real hatch and stairs. This supplementary intact perspective camera documents one actual main-deck gun, wheeled carriage, mounted breeching eye and rope. The ship declares no separate enclosed gun_deck room, so no such room ID is invented.",
+      "scope": "Intaktne zbliżenie rzeczywistego stanowiska działa na głównym pokładzie. Jawna kamera i obiektyw 30 mm; niezmieniony renderer v5, standardowe oświetlenie perspektywiczne 115 W + 35 W, pełna geometria i materiały GLB, 640 × 512 px i 12 próbek. Żaden węzeł modelu ani takielunku nie jest ukryty."
+    }
+  }
+}

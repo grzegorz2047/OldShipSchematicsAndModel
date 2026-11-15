@@ -1,0 +1,245 @@
+{
+  "schema": 1,
+  "id": "corvette",
+  "accessed_utc": "2026-11-14",
+  "purpose": "Original detailed deck and below-deck reconstruction for the existing ordinary POTC family and both paint variants.",
+  "stock_contract": {
+    "id": "SHIP_CORVETTE_ENGLAND",
+    "model": "Corvette1",
+    "cannons": 32,
+    "claim": "Existing pinned stock-derived identity and total count only; no game interior coordinates known."
+  },
+  "method": "Museum and primary-plan catalogue research supplies arrangement vocabulary. All metre dimensions, room positions and access clearances are authored to the preserved hull. Public source text is paraphrased; no museum image, plan tracing or proprietary texture is distributed.",
+  "sources": [
+    {
+      "id": "corvette-lower",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-83435",
+      "title": "Royal Museums Greenwich: Ganymede (captured 1809), ZAZ3644",
+      "date": "circa March 1810",
+      "kind": "Primary Portsmouth Dockyard survey plan catalogue",
+      "observed": "The catalogue identifies the lower-deck plan of the captured French corvette Ganymede before fitting as a 24-gun sixth rate.",
+      "application": "A non-battery lower deck below the flush main gun deck, with aft accommodation and storage.",
+      "limit": "The analogue has a different rating and size. The ordinary POTC Corvette remains 32 guns with the original flush-deck silhouette.",
+      "applies_to": "A non-battery lower deck below the flush main gun deck, with aft accommodation and storage."
+    },
+    {
+      "id": "corvette-upper",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-83436",
+      "title": "Royal Museums Greenwich: Ganymede (captured 1809), ZAZ3645",
+      "date": "circa March 1810",
+      "kind": "Primary Portsmouth Dockyard survey plan catalogue",
+      "observed": "The matching museum record identifies a separate upper-deck survey of the same captured French corvette.",
+      "application": "Keep the working main deck and its single battery visually distinct from the enclosed berth deck.",
+      "limit": "Only deck hierarchy is transferred; no added second battery or borrowed plan coordinates.",
+      "applies_to": "Keep the working main deck and its single battery visually distinct from the enclosed berth deck."
+    }
+  ],
+  "decisions": [
+    {
+      "feature": "Preserved battery and deck hierarchy",
+      "basis": "Flush main deck with one 32-gun battery, three square-rigged masts and no castles. Main hatch enters a continuous non-battery berth deck whose centered level door opens into the real cabin; framed provision hold remains below. This is an authored adaptation of the listed historical analogues to the unchanged game-family gun total.",
+      "source_urls": [
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-83435",
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-83436"
+      ]
+    },
+    {
+      "feature": "Physically separate lower levels and hold",
+      "basis": "The authored hull contains distinct berth_lower and a framed hold. Numerical deck and floor baselines are fitted estimates; the source deck hierarchy supplies arrangement vocabulary rather than retail game coordinates.",
+      "source_urls": [
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-83435"
+      ]
+    },
+    {
+      "feature": "After cabin and unobstructed structural access",
+      "basis": "The furnished after cabin has a real centered partition door opening from its own lower deck. The main hatch shaft reaches that level; no side stair crosses a cabin wall or opens into a sealed low quarterdeck space. Cabin dimensions and this access route are authored game-environment choices. The authored front partition is set aft of the unchanged mizzen so its complete centered doorway approach remains clear; this is a fitted spatial choice, not a coordinate taken from a historical plan.",
+      "source_urls": [
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-83435",
+        "https://www.rmg.co.uk/collections/objects/rmgc-object-83436"
+      ]
+    }
+  ],
+  "layout": {
+    "schema": 1,
+    "coordinate_system": {
+      "longitudinal": "s_fraction of preserved deck length, positive forward",
+      "absolute_plan": "x_m across ship, y_m up, forward_z_m positive bow",
+      "note": "Vertical z_m fields follow the existing Blender builder convention; longitudinal at/from/to are fractions."
+    },
+    "frame_spacing_m": 0.54,
+    "clear_aisle_width_m": 1.2,
+    "passage_width_m": 1.1,
+    "standing_height_m": 1.85,
+    "minimum_headroom_m": 1.85,
+    "kind": "warship",
+    "partitions": [],
+    "companionways": [],
+    "extra_hatches": [
+      {
+        "id": "fore_stores_hatch",
+        "at": 0.36,
+        "length_m": 1.45,
+        "width_m": 1.25,
+        "x_m": 0.0,
+        "coaming_height_m": 0.25,
+        "deck_id": "main",
+        "access": "ladder",
+        "open": true,
+        "forward_z_m": 15.12,
+        "target_deck_id": "berth_lower"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "corvette-lower",
+        "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-83435",
+        "title": "Royal Museums Greenwich: Ganymede (captured 1809), ZAZ3644",
+        "date": "circa March 1810",
+        "kind": "Primary Portsmouth Dockyard survey plan catalogue",
+        "observed": "The catalogue identifies the lower-deck plan of the captured French corvette Ganymede before fitting as a 24-gun sixth rate.",
+        "application": "A non-battery lower deck below the flush main gun deck, with aft accommodation and storage.",
+        "limit": "The analogue has a different rating and size. The ordinary POTC Corvette remains 32 guns with the original flush-deck silhouette."
+      },
+      {
+        "id": "corvette-upper",
+        "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-83436",
+        "title": "Royal Museums Greenwich: Ganymede (captured 1809), ZAZ3645",
+        "date": "circa March 1810",
+        "kind": "Primary Portsmouth Dockyard survey plan catalogue",
+        "observed": "The matching museum record identifies a separate upper-deck survey of the same captured French corvette.",
+        "application": "Keep the working main deck and its single battery visually distinct from the enclosed berth deck.",
+        "limit": "Only deck hierarchy is transferred; no added second battery or borrowed plan coordinates."
+      }
+    ],
+    "notes": [
+      "Flush main deck with one 32-gun battery, three square-rigged masts and no castles. Main hatch enters a continuous non-battery berth deck whose centered level door opens into the real cabin; framed provision hold remains below.",
+      "The authored cabin-front partition is placed aft of the preserved mizzen and its complete doorway approach; the centered 1.15 m door and main-hatch connection remain full-size."
+    ],
+    "hold": {
+      "from": -0.37,
+      "to": 0.38,
+      "floor_z_m": -2.2,
+      "follow_sheer": true,
+      "ceiling_planking": true,
+      "bilge_visible": true,
+      "forward_z_range_m": [
+        -15.54,
+        15.96
+      ]
+    },
+    "cabin": {
+      "from": -0.475,
+      "to": -0.355,
+      "floor_z_m": 0.05,
+      "follow_sheer": true,
+      "ceiling_deck_id": "main",
+      "cut_main_deck": false,
+      "door_width_m": 1.15,
+      "door_height_m": 1.9,
+      "clear_height_m": 1.9,
+      "furniture": [
+        "table",
+        "bench",
+        "berth",
+        "locker"
+      ],
+      "forward_z_range_m": [
+        -19.95,
+        -14.91
+      ]
+    },
+    "hatch": {
+      "id": "main_hatch",
+      "at": 0.13,
+      "length_m": 3.0,
+      "width_m": 2.1,
+      "x_m": 0.0,
+      "coaming_height_m": 0.25,
+      "deck_id": "main",
+      "access": "stair",
+      "open": true,
+      "forward_z_m": 5.46
+    },
+    "lower_decks": [
+      {
+        "id": "berth_lower",
+        "from": -0.42,
+        "to": 0.42,
+        "z_m": 0.05,
+        "follow_sheer": true,
+        "forward_z_range_m": [
+          -17.64,
+          17.64
+        ]
+      }
+    ],
+    "machinery": {
+      "capstan_at": 0.025
+    },
+    "compartments": [
+      {
+        "id": "aft_cabin",
+        "role": "cabin",
+        "from": -0.475,
+        "to": -0.355,
+        "deck_id": "berth_lower",
+        "forward_z_range_m": [
+          -19.95,
+          -14.91
+        ]
+      },
+      {
+        "id": "crew_berths",
+        "role": "berth",
+        "from": -0.28,
+        "to": 0.24,
+        "deck_id": "berth_lower",
+        "forward_z_range_m": [
+          -11.76,
+          10.08
+        ]
+      },
+      {
+        "id": "cable_store",
+        "role": "cable_store",
+        "from": 0.29,
+        "to": 0.41,
+        "deck_id": "berth_lower",
+        "forward_z_range_m": [
+          12.18,
+          17.22
+        ]
+      },
+      {
+        "id": "provision_hold",
+        "role": "hold",
+        "from": -0.28,
+        "to": 0.28,
+        "deck_id": "hold",
+        "forward_z_range_m": [
+          -11.76,
+          11.76
+        ]
+      }
+    ],
+    "research_path": "layout-research.json"
+  },
+  "reference_quality_bar": {
+    "asset": "sailertales/brig (Bryg Mewa), PR3 detailed reference",
+    "main_triangles": 273032,
+    "features": [
+      "real hollow hold",
+      "furnished lowered cabin",
+      "real cabin door and deck hatch",
+      "physical framing and deck structure",
+      "actual route geometry"
+    ],
+    "rule": "Substantial structural and material detail; triangle count is context, not a substitute for useful geometry."
+  },
+  "ship_id": "corvette",
+  "limitations": [
+    "No authenticated POTC retail interior plan or mesh locators were available. All metre coordinates, room dimensions and passage widths are authored estimates; source museum plans are not traced or redistributed.",
+    "The analogue has a different rating and size. The ordinary POTC Corvette remains 32 guns with the original flush-deck silhouette.",
+    "Only deck hierarchy is transferred; no added second battery or borrowed plan coordinates."
+  ]
+}
